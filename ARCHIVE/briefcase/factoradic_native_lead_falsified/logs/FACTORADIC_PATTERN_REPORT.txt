@@ -1,0 +1,156 @@
+================================================================================
+FACTORADIC PATTERN REPORT — 82 known puzzle keys
+================================================================================
+
+Encoding: d = sum a_k * k!  with  0 <= a_k <= k
+(unique representation of every integer)
+
+--------------------------------------------------------------------------------
+   n  bits  max_k a_max    a/k  nnz   dens  leading
+--------------------------------------------------------------------------------
+   1     1      1     1  1.000    1  1.000  1*1!
+   2     2      2     1  0.500    2  1.000  1*2!
+   3     3      3     1  0.333    2  0.667  1*3!
+   4     4      3     1  0.333    2  0.667  1*3!
+   5     5      3     3  1.000    3  1.000  3*3!
+   6     6      4     2  0.500    2  0.500  2*4!
+   7     7      4     3  0.750    2  0.500  3*4!
+   8     8      5     1  0.200    4  0.800  1*5!
+   9     9      5     3  0.600    5  1.000  3*5!
+  10    10      5     4  0.800    4  0.800  4*5!
+  11    11      6     1  0.167    5  0.833  1*6!
+  12    12      6     3  0.500    5  0.833  3*6!
+  13    13      7     1  0.143    5  0.714  1*7!
+  14    14      7     2  0.286    5  0.714  2*7!
+  15    15      7     5  0.714    7  1.000  5*7!
+  16    16      8     1  0.125    6  0.750  1*8!
+  17    17      8     2  0.250    6  0.750  2*8!
+  18    18      8     4  0.500    8  1.000  4*8!
+  19    19      8     8  1.000    7  0.875  8*8!
+  20    20      9     2  0.222    7  0.778  2*9!
+  21    21      9     4  0.444    6  0.667  4*9!
+  22    22      9     8  0.889    8  0.889  8*9!
+  23    23     10     1  0.100    8  0.800  1*10!
+  24    24     10     3  0.300    9  0.900  3*10!
+  25    25     10     9  0.900    8  0.800  9*10!
+  26    26     11     1  0.091    9  0.818  1*11!
+  27    27     11     2  0.182    9  0.818  2*11!
+  28    28     11     5  0.455    8  0.727  5*11!
+  29    29     11    10  0.909    8  0.727  10*11!
+  30    30     12     2  0.167    8  0.667  2*12!
+  31    31     12     4  0.333   11  0.917  4*12!
+  32    32     12     6  0.500    8  0.667  6*12!
+  33    33     13     1  0.077   12  0.923  1*13!
+  34    34     13     2  0.154   11  0.846  2*13!
+  35    35     13     3  0.231   11  0.846  3*13!
+  36    36     13     6  0.462   11  0.846  6*13!
+  37    37     14     1  0.071   13  0.929  1*14!
+  38    38     14     1  0.071   12  0.857  1*14!
+  39    39     14     3  0.214   13  0.929  3*14!
+  40    40     14    11  0.786   12  0.857  11*14!
+  41    41     15     1  0.067   14  0.933  1*15!
+  42    42     15     2  0.133   13  0.867  2*15!
+  43    43     15     5  0.333   14  0.933  5*15!
+  44    44     15    11  0.733   14  0.933  11*15!
+  45    45     15    15  1.000   13  0.867  15*15!
+  46    46     16     2  0.125   14  0.875  2*16!
+  47    47     16     5  0.312   12  0.750  5*16!
+  48    48     16     9  0.562   13  0.812  9*16!
+  49    49     17     1  0.059   16  0.941  1*17!
+  50    50     17     1  0.059   15  0.882  1*17!
+  51    51     17     5  0.294   14  0.824  5*17!
+  52    52     17    11  0.647   15  0.882  11*17!
+  53    53     18     1  0.056   14  0.778  1*18!
+  54    54     18     1  0.056   17  0.944  1*18!
+  55    55     18     4  0.222   12  0.667  4*18!
+  56    56     18     6  0.333   17  0.944  6*18!
+  57    57     19     1  0.053   16  0.842  1*19!
+  58    58     19     1  0.053   18  0.947  1*19!
+  59    59     19     4  0.211   17  0.895  4*19!
+  60    60     19     9  0.474   16  0.842  9*19!
+  61    61     19    11  0.579   16  0.842  11*19!
+  62    62     20     1  0.050   18  0.900  1*20!
+  63    63     20     3  0.150   18  0.900  3*20!
+  64    64     20     7  0.350   15  0.750  7*20!
+  65    65     20    12  0.600   18  0.900  12*20!
+  66    66     20    19  0.950   17  0.850  19*20!
+  67    67     21     2  0.095   17  0.810  2*21!
+  68    68     21     4  0.190   18  0.857  4*21!
+  69    69     21     5  0.238   18  0.857  5*21!
+  70    70     21    18  0.857   21  1.000  18*21!
+  75    75     22    20  0.909   22  1.000  20*22!
+  80    80     24     1  0.042   21  0.875  1*24!
+  85    85     25     1  0.040   24  0.960  1*25!
+  90    90     26     2  0.077   22  0.846  2*26!
+  95    95     27     2  0.074   24  0.889  2*27!
+ 100   100     28     2  0.071   25  0.893  2*28!
+ 105   105     29     3  0.103   26  0.897  3*29!
+ 110   110     30     4  0.133   28  0.933  4*30!
+ 115   115     31     3  0.097   28  0.903  3*31!
+ 120   120     32     3  0.094   29  0.906  3*32!
+ 125   125     33     4  0.121   28  0.848  4*33!
+ 130   130     34     3  0.088   31  0.912  3*34!
+
+================================================================================
+SEMI-PATTERNS (what actually shows up)
+================================================================================
+
+1) max_k tracks bit-length (Stirling): k! ~ 2^bits
+   Roughly max_k ~ bits / log2(k) - grows slower than bits.
+   bits/max_k: min=1.00 median=2.86 max=3.82
+
+2) Leading digit a_max (coeff of max_k!) — should look 'random' in 1..max_k
+   leading_a/max_k decile counts (0=small leading, 9=near max):
+   0:21 1:14 2:10 3:8 4:4 5:7 6:3 7:4 8:3 9:4
+
+3) Nonzero-term density = nnz / max_k
+   dens: min=0.500 median=0.857 max=1.000
+   (random integers tend toward dens ~ 0.63 of digits nonzero in related bases;
+    here nnz/max_k is high because most low digits are used)
+
+4) max_k vs puzzle index n (should rise with n, with plateaus)
+   max_k changes 32 times across the list
+   first few jumps (n_prev -> n, k_prev -> k):
+     puzzle 1->2: max_k 1->2
+     puzzle 2->3: max_k 2->3
+     puzzle 5->6: max_k 3->4
+     puzzle 7->8: max_k 4->5
+     puzzle 10->11: max_k 5->6
+     puzzle 12->13: max_k 6->7
+     puzzle 15->16: max_k 7->8
+     puzzle 19->20: max_k 8->9
+     puzzle 22->23: max_k 9->10
+     puzzle 25->26: max_k 10->11
+     puzzle 29->30: max_k 11->12
+     puzzle 32->33: max_k 12->13
+     puzzle 36->37: max_k 13->14
+     puzzle 40->41: max_k 14->15
+     puzzle 45->46: max_k 15->16
+
+5) Do consecutive puzzles share leading structure? (usually NO — keys are independent)
+   consecutive pairs checked: 69
+   same max_k: 49/69
+   same max_k AND |delta leading_a|<=1: 14/69
+
+6) Band check: puzzle n key should satisfy 2^{n-1} <= d < 2^n (for sequential 1..70)
+   in-band: 82/82
+
+================================================================================
+WHAT COUNTS AS A 'SEMI-PATTERN'
+================================================================================
+YES (structural, expected for ANY integers in growing bands):
+  - max_k rises with puzzle n / bit-length (factorial scale)
+  - unique digits 0..k for each place (factoradic law)
+  - nnz grows roughly with max_k
+
+NO (not a creator recipe / not predictive for unsolved keys):
+  - leading coefficients look scattered, not a simple sequence
+  - consecutive puzzles do not share a simple digit progression
+  - factoradic of random-looking band keys always looks 'patterned'
+    because the *representation* is structured, not the keys
+
+USEFUL framing:
+  factoradic = change of base to mixed radix (1,2,3,...,k+1)
+  Comparing digit vectors across n shows SCALE growth, not a
+  shared secret polynomial. For unsolved n, you still need d first
+  (or a model of the wallet), then factoradic is just a rewrite.

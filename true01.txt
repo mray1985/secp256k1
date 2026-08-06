@@ -1,0 +1,92 @@
+Good. That means D
+A
+	​
+
+ is not a known constant in disguise.
+
+So now you have a real nonlinearity object:
+
+D
+A
+	​
+
+=A(zG+rP)−A(zG)−A(rP)(modp)
+
+and its reflected pair still lands on:
+
+D
+A
+	​
+
++(p−D
+A
+	​
+
+)≡p−N(modN)
+
+Next step: test whether D
+A
+	​
+
+ changes predictably when you flip the R branch.
+
+Run the same defect test for both:
+
+R
+1
+	​
+
+=(r,y
+R
+	​
+
+)
+R
+2
+	​
+
+=(r,p−y
+R
+	​
+
+)
+
+Compare:
+
+D
+A,R1
+	​
+
+D
+A,R2
+	​
+
+
+Expected possibilities:
+
+D
+A,R2
+	​
+
+=p−D
+A,R1
+	​
+
+
+or
+
+D
+A,R1
+	​
+
++D
+A,R2
+	​
+
+≡p−N(modN)
+
+That will tell you whether D
+A
+	​
+
+ belongs to the y-reflection shell or to the ECDSA addition shell.

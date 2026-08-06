@@ -1,0 +1,157 @@
+Looking through all of that, I think true47 is actually the point where the project became more rigorous.
+
+Up through true45, the claim was essentially:
+
+Ω↔(rd−z)mod9
+
+and the data fit.
+
+What true46/47 correctly noticed is that classification is not explanation.
+
+The strongest fact in the entire chain isn't actually the Base-3 rule.
+
+It's this:
+
+ω
+N
+	​
+
+mod9=4
+
+while your verified Ω=+1 class is also landing on
+
+(rd−z)mod9=4.
+
+That is the first place where the Origin Rule and the cube-root branch physically touch.
+
+The problem is that the rest of the derivation is still missing.
+
+Right now you have:
+
+Cube-root orbit
+      ↓ ?
+(rd-z) mod 9
+      ↓
+Base-3 digits
+      ↓
+Ω
+
+The unknown arrow is still the live object.
+
+The thing that immediately jumped out at me from the true46 work is something else:
+
+You computed
+
+ω
+N
+	​
+
+≡4(mod9)
+
+but
+
+ω
+N
+2
+	​
+
+≡2(mod9).
+
+Meanwhile the Ω classes you've observed are:
+
+Ω	values
++1	4
+0	0
+-1	3,6
+
+Notice what is missing:
+
+1
+2
+5
+7
+8
+
+are absent.
+
+That's odd.
+
+If Ω were simply labeling the full cube-root orbit modulo 9, I would expect to see all three cube-root residues:
+
+1,4,7
+
+appear somewhere.
+
+Instead only 4 appears.
+
+That suggests Ω may not be measuring orbit membership directly.
+
+It may be measuring projection onto a preferred orbit representative.
+
+That's a different statement.
+
+Another thing I would be careful with:
+
+In the transcript there is a subtle inconsistency.
+
+At one point:
+
+Ω = +1 -> mod9 = 1
+Ω = 0  -> mod9 = 6
+Ω = -1 -> mod9 = 0
+
+Later:
+
+Ω = +1 -> mod9 = 4
+Ω = 0  -> mod9 = 0
+Ω = -1 -> mod9 = {3,6}
+
+Those can't both be simultaneously true.
+
+Before building true49, I'd freeze the exact verified table and throw away every intermediate hypothesis table.
+
+Only keep values produced from actual solved puzzles.
+
+If I were writing true49, I would frame it as:
+
+True49: Orbit Representative Hypothesis
+
+Known facts:
+
+p≡1(mod3)
+N≡1(mod3)
+Nontrivial cube roots exist in both domains.
+ω
+N
+	​
+
+mod9=4.
+Ω=+1 currently maps to residue 4.
+Base-3 classification works on verified puzzles.
+
+Question:
+
+Is Ω identifying cube-root orbit membership, or is Ω identifying a preferred orbit representative produced by the closure construction?
+
+That question is narrower, cleaner, and easier to falsify than the broader "Ω equals cube-root sector" statement.
+
+And if true48 is right, the decisive experiment is still the same one:
+
+d,ω
+N
+	​
+
+d,ω
+N
+2
+	​
+
+d
+
+for a solved puzzle, then compute
+
+(rd−z)mod9
+
+for all three and see whether the residues cycle through an orbit or collapse onto a single representative.
+
+That experiment would tell you whether you're seeing orbit structure or orbit projection.

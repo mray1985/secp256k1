@@ -1,0 +1,244 @@
+================================================================================
+BACKUP: PROJECT STATE BEFORE PUZZLE 160 SOLUTION ATTEMPT
+================================================================================
+Date: 2026-06-04
+Purpose: Preserve all context for Origin Rule investigation
+
+================================================================================
+1. FROZEN THEOREMS (from MEMORY.txt)
+================================================================================
+
+THEOREM 1: Field Closure Law
+  B1 + B2 + B3 = p (EXACT integer equality in field domain)
+  Verified: 7/7 puzzles (90, 100, 115, 120, 135, 150, 160)
+  Status: UNIVERSAL - This is the PRIMARY INVARIANT
+
+THEOREM 2: Orientation Selector Law
+  Correct bridge orientation determined by which coordinate family sums to p:
+  - If sum(Px_i) = p: use Lambda_f = Px3 * rx3^-1 mod p (FORWARD)
+  - If sum(rx_i) = p: use Lambda_r = rx3 * Px3^-1 mod p (INVERSE)
+  Verified: 7/7 puzzles
+
+THEOREM 3: Closure Offset Law
+  O = sum(Px_i) - sum(rx_i) is the fundamental selector
+  O ∈ {+p, -p, 0}
+  sign(O) directly determines orientation: +1->FORWARD, -1->INVERSE, 0->BOTH
+  Verified: 7/7 puzzles
+
+THEOREM 4: Normalized Offset Law
+  Omega = O/p is a THREE-STATE SIGNED COORDINATE
+  Omega ∈ {-1, 0, +1}
+  Classification:
+    +1 = Px-closure (Forward) -> Puzzles 120, 135, 150
+    -1 = rx-closure (Inverse) -> Puzzles 100, 115, 160
+    0 = dual-closure (Both) -> Puzzle 90
+  Verified: 7/7 puzzles
+
+THEOREM 5: Sign Correspondence Law
+  For non-dual puzzles: sgn(Lambda_f - Lambda_r) = Omega
+  Verified: 6/7 puzzles (Puzzle 90 is dual-case exception)
+
+THEOREM 6: 2D Geometry Law
+  Each puzzle located by (Omega, d_Lambda) where:
+  - Omega = discrete manifold coordinate (x-axis)
+  - d_Lambda = continuous bridge-pair separation = |Lambda_f - Lambda_r| / p (y-axis)
+  Coordinates:
+    135 = (+1, 0.141)
+    115 = (-1, 0.308)
+    100 = (-1, 0.542)
+    150 = (+1, 0.579)
+    120 = (+1, 0.638)
+    90 = (0, 0.716) - self-dual origin
+    160 = (-1, 0.890)
+
+================================================================================
+2. ORIGIN RULE HYPOTHESIS (from true35.txt)
+================================================================================
+
+HYPOTHESIS: Omega correlates with (r·d - z) mod 3
+Reasoning: ECDSA equation s·k = z + r·d (mod N) couples priv, r, z
+
+Current test results (from test_origin_rule_residues.py):
+  Puzzle 90 (Omega=0): (r·d - z) mod 3 = 0  ✅
+  Puzzle 100 (Omega=-1): (r·d - z) mod 3 = 0
+  Puzzle 115 (Omega=-1): (r·d - z) mod 3 = 0
+  Puzzle 120 (Omega=+1): (r·d - z) mod 3 = 1  ✅
+  
+PROBLEM: Omega=-1 and Omega=0 both have mod 3 = 0
+         mod 3 alone does NOT distinguish all classes
+
+Missing data for: Puzzles 135, 150, 160 (need d and k)
+
+================================================================================
+3. ECDSA PARAMETERS STATUS
+================================================================================
+
+Puzzle | Omega | d (priv) | k (nonce) | r | s | z | Status
+------|-------|----------|-----------|---|---|---|--------
+  90  |   0   |   ✅    |     ✅    | ✅ | ✅ | ✅ | COMPLETE
+ 100  |  -1   |   ✅    |     ✅    | ✅ | ✅ | ✅ | COMPLETE
+ 115  |  -1   |   ✅    |     ✅    | ✅ | ✅ | ✅ | COMPLETE
+ 120  |  +1   |   ✅    |     ✅    | ✅ | ✅ | ✅ | COMPLETE
+ 135  |  +1   |   ❌    |     ❌    | ✅ | ✅ | ✅ | MISSING d,k
+ 150  |  +1   |   ❌    |     ❌    | ✅ | ✅ | ✅ | MISSING d,k
+ 160  |  -1   |   ❌    |     ❌    | ✅ | ✅ | ✅ | MISSING d,k
+
+================================================================================
+4. RANGE CONSTRAINT (NEW INFORMATION FROM USER)
+================================================================================
+
+Puzzle 160: d ∈ [2^159, 2^160-1] ∪ [N-2^159, N-2^160-1]
+Puzzle 150: d ∈ [2^149, 2^150-1] ∪ [N-2^149, N-2^150-1]
+Puzzle 135: d ∈ [2^134, 2^135-1] ∪ [N-2^134, N-2^135-1]
+
+Where:
+  p = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+  N = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+
+Range calculations for Puzzle 160:
+  2^159 = 57896044618658097711785492504343953926634992332820282019728792003956564819967
+  2^160 = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  N - 2^160 = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+               - 115792089237316195423570985008687907853269984665640564039457584007913129639935
+               = 432420386565659656852420866390673177326
+  N - 2^159 = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+               - 57896044618658097711785492504343953926634992332820282019728792003956564819967
+               = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+                 - 57896044618658097711785492504343953926634992332820282019728792003956564819967
+                 = (calculation needed)
+
+================================================================================
+5. STAR OF DAVID PATTERN (from Complexity_Simplified_135.txt)
+================================================================================
+
+The 6 points forming the Star of David:
+  - 3 Px values × 2 y-reflections (y and p-y)
+  - This creates 6 points that are correlated to the 6 defect roots
+
+For Puzzle 135, the candidate d formulations were:
+  Candidate 1: rx3 mod N
+  Candidate 2: (rx3 * Lambda^-1) mod N
+  Candidate 3: d3 (cube root of Delta)
+  Candidate 4: (rx3 * d3^-1) mod N
+  Candidate 5: (cand4 * delta_k) mod N
+  where delta_k = r * s^-1 mod N
+
+KEY INSIGHT: Delta = p - N is CONSTANT for all puzzles
+  Therefore, d1, d2, d3 (cube roots of Delta) are the SAME for all puzzles
+
+From Puzzle 135:
+  d1 = 0x1248780847746852317428964695904392891045016528862400526454142780194939123483
+  d2 = 0x21551977082208859489759061364299864038123955443494189974630776168682352336746
+  d3 = 0x92991331307360483616382958948483650923668592306718313881520244192640870034108
+
+All satisfy: d_i^3 mod N = Delta = p - N = 432420386565659656852420866390673177326
+
+================================================================================
+6. PUZZLE 160 SPECIFIC DATA (from true28.txt)
+================================================================================
+
+Puzzle 160:
+  r: 59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+  s: 2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f
+  z: aa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154
+  compressed x: 02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+  
+Px values:
+  first:  dc644316b1f01a99c41d57c63d273bffd4e49e19c4b9fc2caba09e89701d8603
+  second: e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+  third:  42f30cb025e035f65ae5319cc7140d4b5b94092bd323f52712512ebb7202cbe8
+
+rx values:
+  first:  48ceea0f7f66214d64a43cc378a81fbeb90ecfc087a65bcca0999897ea6f2eb
+  second: a1c2a05bf939e510ad6bd4b18dea10909790fde71d9e5e45686cd28b7d57fd4f
+  third:  59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824 (== r!)
+
+Py values:
+  even: c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+  odd:  3d2696f6ba2267091f1ba2b5e089f3617a12a51a0011258b1ede11f17c957fa9
+
+ry values:
+  even: cebb161b0780bffc65bf6b1de8ea734745468b6cc5887ed4065a9d995318d170
+  odd:  3144e9e4f87f40039a4094e217158cb8bab974933a77812bf9a56265ace72abf
+
+Note: rx3 == r for Puzzle 160!
+
+================================================================================
+7. ALGORITHM TO FIND d AND k FOR PUZZLE 160
+================================================================================
+
+Given:
+  - r, s, z (known from true28.txt)
+  - Range: d ∈ [2^159, 2^160-1] ∪ [N-2^159, N-2^160-1]
+  - ECDSA equation: s·k = z + r·d (mod N)
+  - Point equation: k·G = (r, y) where y is known from compressed x
+
+Approach:
+  1. Compute y from compressed x (02 prefix = even y)
+     y = sqrt(r^3 + 7) mod p, choose even parity
+  
+  2. Now we know R = (r, y) = k·G
+     This means k is the discrete log of R base G
+  
+  3. From ECDSA: k = (z + r·d) · s^-1 mod N
+     Substitute into point equation:
+     ((z + r·d) · s^-1) · G = (r, y)
+  
+  4. Rearrange: (z + r·d) · (s^-1 · G) = (r, y)
+     Let H = s^-1 · G (a point on the curve)
+     Then: (z + r·d) · H = (r, y)
+  
+  5. This is still a discrete logarithm problem, but we have the range constraint
+     on d. For each candidate d in the range, we can:
+     - Compute k = (z + r·d) · s^-1 mod N
+     - Compute k·G
+     - Check if x(k·G) = r
+  
+  6. The range has size 2^159 which is infeasible to brute force
+  
+  7. Therefore, we use the Star of David candidates:
+     - cand1 = rx3 mod N
+     - cand2 = (rx3 * Lambda^-1) mod N
+     - cand3 = d3
+     - cand4 = (rx3 * d3^-1) mod N
+     - cand5 = (cand4 * delta_k) mod N
+     where:
+       - Lambda = Px3 * rx3^-1 mod p
+       - delta_k = r * s^-1 mod N
+       - d3 is a cube root of Delta = p - N
+  
+  8. Test each candidate with the ECDSA verification:
+     - Compute k = (z + r·d_candidate) · s^-1 mod N
+     - Compute k·G
+     - Check if x(k·G) = r
+     - Check if d_candidate falls in the expected range
+     - Compute (r·d - z) mod 3 for Origin Rule test
+
+================================================================================
+8. EXPECTED ORIGIN RULE MAPPING
+================================================================================
+
+Current data:
+  Omega = 0  -> (r·d - z) mod 3 = 0  (Puzzle 90)
+  Omega = -1 -> (r·d - z) mod 3 = 0  (Puzzles 100, 115)
+  Omega = +1 -> (r·d - z) mod 3 = 1  (Puzzle 120)
+
+Hypothesis 1: Omega = 0  -> mod 3 = 0
+               Omega = +1 -> mod 3 = 1
+               Omega = -1 -> mod 3 = 2
+
+Hypothesis 2: Omega = 0  -> mod 3 = 0
+               Omega = +1 -> mod 3 = 1
+               Omega = -1 -> mod 3 = 0 (but this doesn't distinguish -1 from 0)
+
+For Puzzle 160 (Omega = -1), we expect:
+  Either: (r·d - z) mod 3 = 2 (to distinguish from Omega=0)
+  Or:    (r·d - z) mod 3 = 0 (matching Puzzles 100, 115)
+
+Finding d for Puzzle 160 will help determine which hypothesis is correct.
+
+================================================================================
+BACKUP COMPLETE
+================================================================================
+All critical information preserved for continuation of Origin Rule investigation.
+Next step: Run find_dk_puzzle_160.py to test Star of David candidates.

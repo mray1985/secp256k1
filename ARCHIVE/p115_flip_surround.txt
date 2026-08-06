@@ -1,0 +1,82 @@
+P115 FLIP -> SURROUNDING PUZZLE d PROXIMITY
+P115 d bits=115 band_frac=0.5149 (51.49%)
+P115 d = 31464123230573852164273674364426950
+
+Known neighbors:
+  P100 frac=0.3698 d...340379183142
+  P105 frac=0.4339 d...788529192435
+  P110 frac=0.6798 d...740458951748
+  P115 frac=0.5149 d...674364426950
+  P120 frac=0.3833 d...050618764323
+  P125 frac=0.7703 d...877315221420
+  P130 frac=0.6220 d...144005829577
+
+=== P100 (true frac=0.3698) ===
+  BEST mirror_msb: delta=7.305e+28 band_err=11.5246% in_band=True ec=False
+    est ...77805237846016
+    tru ...98340379183142
+  mirror_msb             delta_bits= 96 band_err= 11.5246% ec=False
+  complement_frac        delta_bits= 96 band_err= 11.5246% ec=False
+  hinge-same_frac        delta_bits= 97 band_err= 14.5131% ec=False
+
+=== P105 (true frac=0.4339) ===
+  BEST mirror_msb: delta=1.037e+30 band_err=5.1144% in_band=True ec=False
+    est ...89767611072512
+    tru ...06788529192435
+  mirror_msb             delta_bits=100 band_err=  5.1144% ec=False
+  complement_frac        delta_bits=100 band_err=  5.1144% ec=False
+  hinge-same_frac        delta_bits=101 band_err=  8.1028% ec=False
+
+=== P110 (true frac=0.6798) ===
+  BEST hinge+same_frac: delta=1.070e+32 band_err=16.4848% in_band=True ec=False
+    est ...97575559558954
+    tru ...47740458951748
+  hinge+same_frac        delta_bits=107 band_err= 16.4848% ec=False
+  same_frac              delta_bits=107 band_err= 16.4848% ec=False
+  hinge-same_frac        delta_bits=107 band_err= 16.4848% ec=False
+
+=== P120 (true frac=0.3833) ===
+  BEST mirror_msb: delta=6.765e+34 band_err=10.1783% in_band=True ec=False
+    est ...05079624073216
+    tru ...11050618764323
+  mirror_msb             delta_bits=116 band_err= 10.1783% ec=False
+  complement_frac        delta_bits=116 band_err= 10.1783% ec=False
+  hinge-same_frac        delta_bits=117 band_err= 13.1668% ec=False
+
+=== P125 (true frac=0.7703) ===
+  BEST hinge+same_frac: delta=5.431e+36 band_err=25.5378% in_band=True ec=False
+    est ...55628084279082
+    tru ...09877315221420
+  hinge+same_frac        delta_bits=123 band_err= 25.5378% ec=False
+  same_frac              delta_bits=123 band_err= 25.5378% ec=False
+  hinge-same_frac        delta_bits=123 band_err= 25.5378% ec=False
+
+=== P130 (true frac=0.6220) ===
+  BEST hinge+same_frac: delta=7.286e+37 band_err=10.7055% in_band=True ec=False
+    est ...80098405971754
+    tru ...51144005829577
+  hinge+same_frac        delta_bits=126 band_err= 10.7055% ec=False
+  same_frac              delta_bits=126 band_err= 10.7055% ec=False
+  hinge-same_frac        delta_bits=126 band_err= 10.7055% ec=False
+
+=== GLOBAL CLOSEST (any neighbor) ===
+  P100 mirror_msb             delta=7.305e+28 (11.5246% of band) ec=False
+  P100 complement_frac        delta=7.305e+28 (11.5246% of band) ec=False
+  P100 hinge-same_frac        delta=9.199e+28 (14.5131% of band) ec=False
+  P100 same_frac              delta=9.199e+28 (14.5131% of band) ec=False
+  P100 hinge+same_frac        delta=9.199e+28 (14.5131% of band) ec=False
+  P100 flip_decimal           delta=1.826e+29 (28.8165% of band) ec=False
+  P100 height_complement      delta=5.608e+29 (88.4754% of band) ec=False
+  P105 mirror_msb             delta=1.037e+30 (5.1144% of band) ec=False
+  P105 complement_frac        delta=1.037e+30 (5.1144% of band) ec=False
+  P105 hinge-same_frac        delta=1.643e+30 (8.1028% of band) ec=False
+  P105 same_frac              delta=1.643e+30 (8.1028% of band) ec=False
+  P105 hinge+same_frac        delta=1.643e+30 (8.1028% of band) ec=False
+
+=== P135 (unsolved) flip estimates ===
+  same_frac              in_band=True ec=False d...148690751488
+  complement_frac        in_band=True ec=False d...750805848064
+  mirror_msb             in_band=True ec=False d...121631141888
+  flip_decimal           in_band=True ec=False d...136397679597
+  hinge+same_frac        in_band=True ec=False d...148700137258
+  hinge-same_frac        in_band=True ec=False d...148681365718

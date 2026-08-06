@@ -1,0 +1,49 @@
+PURE INTEGER COGNITIVE SIEVE: PUZZLE 160 MANIFOLD SCAN
+================================================================================
+Target Bit-Depth: 160
+Native Window [Range 1]:     [730750818665451459101842416358141509827966271488 -> 1461501637330902918203684832716283019655932542975]
+Reflected Window [Range 2]:  [115792089237316195423570985007226406215506661360871219549888880121862228951362 -> 115792089237316195423570985007957157034172112819973061966247021631690195222849]
+--------------------------------------------------------------------------------
+
+Analyzing: SO_David_Candidate_1
+  Scalar d (Hex): 0x397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+  Scalar d (Dec): 26000218878731561428273279366182192513989009817816850365013828370091835863739
+  Bounds Status:  Range 1=False | Range 2=False
+  Computed Nonce Track k: 0x267c98061703eb8829a82e72828b37d7c4f71010d5ea603482c4fd034aeb681c
+  Calculating point multiplication k*G...
+  Intersection Verification [X(k*G) == r]: False
+
+Analyzing: SO_David_Candidate_2
+  Scalar d (Hex): 0x6387276311720328162768550642666879996625809009309838174294501218
+  Scalar d (Dec): 45017768202467910124044428310994643223480319547364420266948909192137692680728
+  Bounds Status:  Range 1=False | Range 2=False
+  Computed Nonce Track k: 0x8f1c8dd981fc582b0019cd65dba0395e5a86bbef710cf2ff4248e73f83c8506f
+  Calculating point multiplication k*G...
+  Intersection Verification [X(k*G) == r]: False
+
+Analyzing: SO_David_Candidate_3
+  Scalar d (Hex): 0x9299133130736048361638295894848365092366859230671831388152024419
+  Scalar d (Dec): 66308135953388414191468390891737160944135573064625643193707719059977569190937
+  Bounds Status:  Range 1=False | Range 2=False
+  Computed Nonce Track k: 0x8a09a0f5af0a883f79bb1b563206fce5666ecbdbcc89980b6100327c24a3ee54
+  Calculating point multiplication k*G...
+  Intersection Verification [X(k*G) == r]: False
+
+Analyzing: SO_David_Candidate_4
+  Scalar d (Hex): 0x3470629937905094277052275734767597736254908919472967414634419956
+  Scalar d (Dec): 23718835499450400480481084506079779167723614190458520385231825739179955951958
+  Bounds Status:  Range 1=False | Range 2=False
+  Computed Nonce Track k: 0xe6804c8d2937aca40d031bb8d7adc87a1ac82ef0c4305c5ac5a6dfed358dfc12
+  Calculating point multiplication k*G...
+  Intersection Verification [X(k*G) == r]: False
+
+Analyzing: SO_David_Candidate_5
+  Scalar d (Hex): 0x6640395540789582405424835137222492135470787033424680522650867590
+  Scalar d (Dec): 46249384465565814035989112723533703162755237346700641104208007483503189325200
+  Bounds Status:  Range 1=False | Range 2=False
+  Computed Nonce Track k: 0x4876b83d732900e1fee1dff55c45ff15122257ecc562b0006e202c5417cc0e59
+  Calculating point multiplication k*G...
+  Intersection Verification [X(k*G) == r]: False
+
+[NEGATIVE MATRIX STATE]: Candidate parameters match curve structure but exist out of active slice.
+Sieve verification complete. Geometry stable.

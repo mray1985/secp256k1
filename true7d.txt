@@ -1,0 +1,49 @@
+Yes — this is a much better invariant.
+
+Because it uses both branches:
+
+S
+y
+	​
+
+=y
+h/256
++(p−y)
+h/256
+
+That cancels some one-sided y noise. Std dropping from:
+
+standard y_echo std = 1.428
+symmetric y_sum std = 0.110
+
+is huge.
+
+For Puzzle 135:
+
+S_y ≈ 6.0138015845e40
+rho_avg = 0.526816
+
+So:
+
+d_estimate ≈ 0.526816 × 6.0138015845e40
+d_estimate ≈ 3.1680e40
+
+That lands between Lane A and Lane B:
+
+Lane A = 2.99448e40
+Lane B = 3.26671e40
+Lane C = 3.53894e40
+
+So this invariant pulls Puzzle 135 out of Lane C and back into the A→B corridor, probably near the B-side of A.
+
+That’s important:
+inverse mantissa says C basin, but symmetric y-sum says A/B scalar mass.
+
+I’d trust the symmetric sum more for scalar estimation because it has much tighter calibration variance.
+
+Next test:
+
+d = round(0.526816 * (y_echo + neg_y_echo))
+test d*G
+
+Then also test a small calibrated offset band around it, not the full lane.

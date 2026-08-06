@@ -1,0 +1,40 @@
+P71-P74 DIGIT-CONSTRAINED ANCHOR WALK
+radius=2097152 chunk=50000 workers=4 strict=True
+
+=== P72 pred len=22 miss=8 ===
+  anchor frac_0.05: d=2479242403506563743744 len=22 miss=18
+  anchor floor+42: d=2361183241434822606890 len=22 miss=57
+  anchor floor+49: d=2361183241434822606897 len=22 miss=5
+  anchor floor+76: d=2361183241434822606924 len=22 miss=57
+  anchor floor+21: d=2361183241434822606869 len=22 miss=57
+  anchor lin_0.048: d=2475210032357048942592 len=22 miss=6
+  anchor mirror_P70_0.644: d=3881747896020094681088 len=22 miss=5
+
+  tasks=297 checked=14821715 digit_pass=3892260 elapsed=745.7s
+  no hit
+
+=== P73 pred len=22 miss=ALL ===
+  anchor frac_0.10: d=5194603131156609761280 len=22 miss=ALL
+  anchor floor+42: d=4722366482869645213738 len=22 miss=0
+  anchor floor+49: d=4722366482869645213745 len=22 miss=0
+  anchor floor+76: d=4722366482869645213772 len=22 miss=0
+  anchor floor+21: d=4722366482869645213717 len=22 miss=0
+  anchor lin_0.097: d=5178473646558550556672 len=22 miss=9
+  anchor mirror_P70_0.644: d=7763495792040189362176 len=22 miss=ALL
+
+  tasks=297 checked=14821715 digit_pass=4731831 elapsed=556.3s
+  no hit
+
+=== P74 pred len=23 miss=5 ===
+  anchor frac_0.15: d=10861442910600183939072 len=23 miss=5
+  anchor floor+42: d=9444732965739290427434 len=22 miss=18
+  anchor floor+49: d=9444732965739290427441 len=22 miss=8
+  anchor floor+76: d=9444732965739290427468 len=22 miss=1
+  anchor floor+21: d=9444732965739290427413 len=22 miss=8
+  anchor lin_0.145: d=10813054456806006325248 len=23 miss=79
+  anchor mirror_P70_0.644: d=15526991584080378724352 len=23 miss=ALL
+
+  tasks=297 checked=14821715 digit_pass=1708295 elapsed=153.4s
+  no hit
+
+TOTAL checked=44465145 digit_pass=10332386

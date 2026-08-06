@@ -1,0 +1,22 @@
+=== P135 unified lane68 + trailing-1 hunt ===
+lift135=20805bb705259f04672b88c5abccecd3d
+anchors total=10234
+Phase A: 10234 direct checks, 0 hits
+Phase B: scroll +/-12,000,000 on 16 anchors
+  anchor 1/16 trail1 0x6887665705359f04... done
+  anchor 2/16 trail1 0x6887665705359f04... done
+  anchor 3/16 trail1 0x6887665705359f04... done
+  anchor 4/16 mask68 0x6887665705359f04... done
+  anchor 5/16 trail1 0x6887665705359f04... done
+  anchor 6/16 trail1 0x6887665705359f04... done
+  anchor 7/16 trail1 0x6887665705359f04... done
+  anchor 8/16 trail1 0x6887665705359f04... done
+  anchor 9/16 trail1 0x6887665705359f04... done
+  anchor 10/16 mask68 0x6887665705359f04... done
+  anchor 11/16 trail1 0x6887665705359f04... done
+  anchor 12/16 trail1 0x6887665705359f04... done
+  anchor 13/16 trail1 0x6887665705359f04... done
+  anchor 14/16 trail1 0x6887665705359f04... done
+  anchor 15/16 trail1 0x6887665705359f04... done
+  anchor 16/16 trail1 0x6887665705359f04... done
+DONE no hit tested~384010234 elapsed=14218.6s

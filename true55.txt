@@ -1,0 +1,420 @@
+====================================================================================================
+
+TRUE55 WRAP_Q ANALYSIS
+
+====================================================================================================
+
+171 |
+
+p mod 9     = 7
+
+N mod 9     = 7
+
+delta mod 9 = 0
+
+176 |
+
+====================================================================================================
+
+DELTA-INVERSE FLIP SEQUENCE
+
+====================================================================================================
+
+flip  1 | D mod 9 = 4 | |D| mod 9 = 5 | |D|^-1 mod N mod 9 = 7 | |D|^-1 mod p mod 9 = 2
+
+flip  2 | D mod 9 = 4 | |D| mod 9 = 5 | |D|^-1 mod N mod 9 = 0 | |D|^-1 mod p mod 9 = 3
+
+flip  3 | D mod 9 = 3 | |D| mod 9 = 6 | |D|^-1 mod N mod 9 = 3 | |D|^-1 mod p mod 9 = 3
+
+flip  4 | D mod 9 = 0 | |D| mod 9 = 0 | |D|^-1 mod N mod 9 = 7 | |D|^-1 mod p mod 9 = 7
+
+flip  5 | D mod 9 = 0 | |D| mod 9 = 0 | |D|^-1 mod N mod 9 = 8 | |D|^-1 mod p mod 9 = 7
+
+flip  6 | D mod 9 = 1 | |D| mod 9 = 1 | |D|^-1 mod N mod 9 = 1 | |D|^-1 mod p mod 9 = 0
+
+flip  7 | D mod 9 = 1 | |D| mod 9 = 8 | |D|^-1 mod N mod 9 = 1 | |D|^-1 mod p mod 9 = 8
+
+flip  8 | D mod 9 = 7 | |D| mod 9 = 7 | |D|^-1 mod N mod 9 = 0 | |D|^-1 mod p mod 9 = 6
+
+flip  9 | D mod 9 = 3 | |D| mod 9 = 3 | |D|^-1 mod N mod 9 = 3 | |D|^-1 mod p mod 9 = 8
+
+flip 10 | D mod 9 = 4 | |D| mod 9 = 5 | |D|^-1 mod N mod 9 = 2 | |D|^-1 mod p mod 9 = 0
+
+191 |
+
+flip D mod 9 trail: [4, 4, 3, 0, 0, 1, 1, 7, 3, 4]
+
+193 |
+
+====================================================================================================
+
+KNOWN PUZZLE WRAP_Q TABLE
+
+====================================================================================================
+
+No puzzle data filled in yet.
+
+Add verified puzzle rows to PUZZLES and rerun.
+
+278 |
+
+====================================================================================================
+
+NEXT INTERPRETATION
+
+====================================================================================================
+
+If wrap_q mod 9 correlates with the flip sequence, then the projection-defect
+
+cycle is controlling the Origin Rule through the N-reduction wrap count.
+
+284 |
+
+If no correlation appears, D and Omega share residue language but not a direct
+
+predictive map yet.
+
+
+
+Yes. Next step is wrap-count analysis. Not more raw candidate testing yet.
+
+The missing object is now:
+
+wrap_q = floor((r*d - z) / N)
+
+or, more safely in Python:
+
+residue = (r*d - z) % N
+wrap_q = ((r*d - z) - residue) // N
+
+Because the Origin Rule is not just seeing (r*d-z) mod 9; it is seeing:
+
+((r*d - z) mod N) mod 9
+
+and those differ by the amount of N that got subtracted:
+
+((r*d - z) mod N) mod 9
+=
+((r*d - z) mod 9 - wrap_q * (N mod 9)) mod 9
+
+Since:
+
+N mod 9 = 7
+
+the wrap count contributes:
+
+-wrap_q * 7 mod 9
+
+That is the phase correction.
+
+Next script to run
+
+Save this as:
+
+true55_wrapq_analysis.py
+#!/usr/bin/env python3
+# ============================================================
+# TRUE55: wrap_q analysis
+#
+# Goal:
+#   Test whether wrap_q mod 9 is the missing object between:
+#       D = delta^-1 mod N - delta^-1 mod p
+#   and:
+#       Omega = classifier(((r*d - z) mod N) % 9)
+#
+# Core identity:
+#   raw = r*d - z
+#   residue_N = raw % N
+#   wrap_q = (raw - residue_N) // N
+#
+#   residue_N % 9 == (raw % 9 - wrap_q*(N % 9)) % 9
+#
+# Since N mod 9 = 7, wrap_q mod 9 controls the phase shift.
+# ============================================================
+
+p = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F
+N = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
+
+delta = p - N
+
+# ------------------------------------------------------------
+# Delta inverse flip sequence from true53
+# ------------------------------------------------------------
+
+def inv_mod(x, m):
+    return pow(x % m, -1, m)
+
+def delta_inverse_flips(rounds=10):
+    x = delta
+    out = []
+
+    for i in range(1, rounds + 1):
+        inv_N = inv_mod(x, N)
+        inv_p = inv_mod(x, p)
+        D = inv_N - inv_p
+
+        out.append({
+            "flip": i,
+            "D": D,
+            "D_abs": abs(D),
+            "D_mod9": D % 9,
+            "D_abs_mod9": abs(D) % 9,
+            "inv_abs_D_mod_N_mod9": inv_mod(abs(D), N) % 9,
+            "inv_abs_D_mod_p_mod9": inv_mod(abs(D), p) % 9,
+        })
+
+        x = D
+
+    return out
+
+flips = delta_inverse_flips(10)
+flip_mod9 = [row["D_mod9"] for row in flips]
+
+# ------------------------------------------------------------
+# Omega classifier
+# IMPORTANT:
+# Choose ONE rule and freeze it.
+#
+# Current true54 rule per your latest summary:
+#   Omega +1: residues {1,4,7}
+#   Omega  0: residues {0}
+#   Omega -1: residues {2,3,5,6,8}
+# ------------------------------------------------------------
+
+OMEGA_PLUS = {1, 4, 7}
+OMEGA_ZERO = {0}
+OMEGA_MINUS = {2, 3, 5, 6, 8}
+
+def omega_from_residue(res9):
+    if res9 in OMEGA_PLUS:
+        return +1
+    if res9 in OMEGA_ZERO:
+        return 0
+    return -1
+
+def base3_2digit(n):
+    return f"{n // 3}{n % 3}_3"
+
+# ------------------------------------------------------------
+# Known puzzle data
+#
+# Fill these with your verified values.
+# Required:
+#   name, omega, r, d, z
+#
+# Optional:
+#   k, s if available; script checks ECDSA if supplied.
+# ------------------------------------------------------------
+
+PUZZLES = [
+    # Example format:
+    # {
+    #     "name": "90",
+    #     "omega": 0,
+    #     "r": int("...", 16),
+    #     "d": int("...", 16),
+    #     "z": int("...", 16),
+    #     "s": int("...", 16),
+    #     "k": int("...", 16),
+    # },
+]
+
+# ------------------------------------------------------------
+# Analysis helpers
+# ------------------------------------------------------------
+
+def analyze_known_puzzle(item):
+    name = item["name"]
+    omega_expected = item["omega"]
+    r = item["r"]
+    d = item["d"]
+    z = item["z"]
+
+    raw = r * d - z
+    residue_N = raw % N
+    wrap_q = (raw - residue_N) // N
+
+    direct9 = raw % 9
+    afterN9 = residue_N % 9
+    wrap9 = wrap_q % 9
+
+    predicted_afterN9 = (direct9 - wrap9 * (N % 9)) % 9
+
+    omega_pred = omega_from_residue(afterN9)
+
+    row = {
+        "name": name,
+        "omega_expected": omega_expected,
+        "omega_pred": omega_pred,
+        "raw_mod9": direct9,
+        "afterN_mod9": afterN9,
+        "afterN_base3": base3_2digit(afterN9),
+        "wrap_q": wrap_q,
+        "wrap_q_mod9": wrap9,
+        "identity_ok": afterN9 == predicted_afterN9,
+        "omega_ok": omega_pred == omega_expected,
+    }
+
+    if "s" in item and "k" in item:
+        s = item["s"]
+        k = item["k"]
+        row["ecdsa_ok"] = ((s * k - (z + r * d)) % N == 0)
+
+    return row
+
+def find_linear_maps(xs, ys):
+    """
+    Brute force maps y = a*x + b mod 9.
+    Since mod 9 is not a field, brute force all a,b.
+    """
+    hits = []
+    for a in range(9):
+        for b in range(9):
+            ok = all(((a * x + b) % 9) == y for x, y in zip(xs, ys))
+            if ok:
+                hits.append((a, b))
+    return hits
+
+# ------------------------------------------------------------
+# Print constants
+# ------------------------------------------------------------
+
+print("=" * 100)
+print("TRUE55 WRAP_Q ANALYSIS")
+print("=" * 100)
+print()
+
+print("p mod 9     =", p % 9)
+print("N mod 9     =", N % 9)
+print("delta mod 9 =", delta % 9)
+print()
+
+print("=" * 100)
+print("DELTA-INVERSE FLIP SEQUENCE")
+print("=" * 100)
+
+for row in flips:
+    print(
+        f"flip {row['flip']:2d} | "
+        f"D mod 9 = {row['D_mod9']} | "
+        f"|D| mod 9 = {row['D_abs_mod9']} | "
+        f"|D|^-1 mod N mod 9 = {row['inv_abs_D_mod_N_mod9']} | "
+        f"|D|^-1 mod p mod 9 = {row['inv_abs_D_mod_p_mod9']}"
+    )
+
+print()
+print("flip D mod 9 trail:", flip_mod9)
+print()
+
+# ------------------------------------------------------------
+# Analyze known puzzles
+# ------------------------------------------------------------
+
+print("=" * 100)
+print("KNOWN PUZZLE WRAP_Q TABLE")
+print("=" * 100)
+
+if not PUZZLES:
+    print("No puzzle data filled in yet.")
+    print("Add verified puzzle rows to PUZZLES and rerun.")
+else:
+    results = [analyze_known_puzzle(x) for x in PUZZLES]
+
+    print(
+        f"{'Puzzle':8s} {'Omega':>6s} {'raw%9':>6s} "
+        f"{'Nred%9':>7s} {'base3':>6s} {'wrap%9':>7s} "
+        f"{'IdOK':>6s} {'OmOK':>6s} {'ECDSA':>6s}"
+    )
+    print("-" * 100)
+
+    for row in results:
+        ecdsa_str = str(row.get("ecdsa_ok", "NA"))
+        print(
+            f"{row['name']:8s} "
+            f"{row['omega_expected']:6d} "
+            f"{row['raw_mod9']:6d} "
+            f"{row['afterN_mod9']:7d} "
+            f"{row['afterN_base3']:>6s} "
+            f"{row['wrap_q_mod9']:7d} "
+            f"{str(row['identity_ok']):>6s} "
+            f"{str(row['omega_ok']):>6s} "
+            f"{ecdsa_str:>6s}"
+        )
+
+    # --------------------------------------------------------
+    # Correlation tests
+    # --------------------------------------------------------
+
+    print()
+    print("=" * 100)
+    print("CORRELATION TESTS")
+    print("=" * 100)
+
+    wrap9s = [row["wrap_q_mod9"] for row in results]
+    afterN9s = [row["afterN_mod9"] for row in results]
+    omega_vals = [row["omega_pred"] % 9 for row in results]
+
+    print("wrap_q mod 9 values:", wrap9s)
+    print("Origin residues     :", afterN9s)
+    print("Omega residues mod9 :", omega_vals)
+    print()
+
+    # Compare wrap_q mod9 against each flip trail position
+    print("Compare wrap_q mod 9 to delta-inverse flip D mod 9 trail:")
+    for idx, phase in enumerate(flip_mod9, 1):
+        count = sum(1 for w in wrap9s if w == phase)
+        print(f"flip {idx:2d}, phase {phase}: {count}/{len(wrap9s)} wrap_q matches")
+
+    print()
+
+    # Linear maps from wrap_q -> Origin residue
+    maps_wrap_to_origin = find_linear_maps(wrap9s, afterN9s)
+    print("Linear maps afterN9 = a*wrap9 + b mod 9:")
+    if maps_wrap_to_origin:
+        for a, b in maps_wrap_to_origin:
+            print(f"  a={a}, b={b}")
+    else:
+        print("  none")
+
+    print()
+
+    # Linear maps from flip phases -> wrap values only if same count
+    if len(flip_mod9) >= len(wrap9s):
+        for start in range(0, len(flip_mod9) - len(wrap9s) + 1):
+            segment = flip_mod9[start:start + len(wrap9s)]
+            maps = find_linear_maps(segment, wrap9s)
+            if maps:
+                print(f"Flip segment {start+1}-{start+len(wrap9s)} maps to wrap_q:")
+                print("  segment:", segment)
+                for a, b in maps:
+                    print(f"  wrap9 = {a}*flip_phase + {b} mod 9")
+
+print()
+print("=" * 100)
+print("NEXT INTERPRETATION")
+print("=" * 100)
+print("If wrap_q mod 9 correlates with the flip sequence, then the projection-defect")
+print("cycle is controlling the Origin Rule through the N-reduction wrap count.")
+print()
+print("If no correlation appears, D and Omega share residue language but not a direct")
+print("predictive map yet.")
+print()
+print("Run complete.")
+What this tells us
+
+This script answers the next real question:
+
+Does the 10-flip D sequence predict wrap_q mod 9?
+
+If yes, then we finally have:
+
+D flip phase -> wrap_q mod 9 -> Origin residue -> Omega
+
+That would be the missing bridge.
+
+If no, then the honest result is:
+
+D and Omega share the same 3-adic residue system,
+but D does not yet predict the transaction wrap phase.
+
+That’s the clean next move. No vibes. No random multipliers. This tests the one object true54 correctly identified as the missing link.

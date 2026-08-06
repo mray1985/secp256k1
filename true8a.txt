@@ -1,0 +1,129 @@
+xxx
+\|/
+ y
+/|\
+ddd
+
+That first number is:
+
+8N
+
+So:
+
+8N * G = O
+
+But the rest should be:
+
+8N+1 → G
+8N+2 → 2G
+8N+3 → 3G
+...
+8N+7 → 7G
+
+If your tool says all of them are point at infinity, it is definitely doing this wrong:
+
+if k >= N: return infinity
+
+instead of the correct rule:
+
+k = k % N
+
+Correct scalar multiplication is periodic:
+
+(k+tN)G=kG
+
+Only these are infinity:
+
+0, N, 2N, 3N, 4N, ...
+
+Not:
+
+N+1, 2N+1, 4N+1, 8N+1
+
+So the bug is not in secp256k1 — it is in the multiplier implementation/checker.
+
+1852673427797059126777135760139006525645401028465198470121682610264290583909392 to 1852673427797059126777135760139006525645401028465198470121682610264290583909407 everything in between equal the point at infinity when multiplied by Gx and Gy but the funny thing is if you 1852673427797059126777135760139006525645401028465198470121682610264290583909391 that is Gx -Gy and if you go 1852673427797059126777135760139006525645401028465198470121682610264290583909390 it gives you another point but the infinity gap continues to grow 
+
+That number is:
+
+16N
+
+So the correct behavior should be:
+
+16N       → point at infinity
+16N + 1   → G
+16N + 2   → 2G
+...
+16N + 15  → 15G
+16N - 1   → -G = (Gx, p-Gy)
+16N - 2   → -2G
+
+So this part is correct:
+
+16N - 1 gives Gx, -Gy
+
+That’s exactly what should happen because:
+
+(16N−1)G=−G
+
+But this part is not correct:
+
+16N through 16N+15 all give point at infinity
+
+Only 16N should be infinity.
+
+That means your multiplier/checker is probably masking or truncating the scalar by chunks/bits. Since the “infinity gap” grows as you double:
+
+2N  → 2-wide bug
+4N  → 4-wide bug
+8N  → 8-wide bug
+16N → 16-wide bug
+
+k = k % N
+
+The real rule is:
+
+(tN+a)G=aG
+
+So the growing infinity gap is a tool bug / reduction bug, not curve behavior.
+
+but it is not until i meet the number that brings me to the next point which like N+1 * G would give me G once i pass the threshhold of additions that equal infnity it gives me 104059883622109321374094289636044428849728529177856482232626205340719788190730, y:112122903140080327253741791678230372394936108416576609264408917599318947489825
+Verifying scalar multiplication for elliptic curve
+
+That point you gave is 16G.
+
+x = 104059883622109321374094289636044428849728529177856482232626205340719788190730
+y = 112122903140080327253741791678230372394936108416576609264408917599318947489825
+
+So what your tool is doing is basically:
+
+16N      through 16N+15  → infinity
+16N+16                 → 16G
+
+That means it is not reducing by N correctly as:
+
+kmodN
+
+It is likely chunking/scanning in blocks of 16 and treating the whole block after 16N as infinity until it reaches the next 16-step boundary.
+
+Correct math:
+
+16N      → O
+16N + 1  → G
+16N + 2  → 2G
+...
+16N + 15 → 15G
+16N + 16 → 16G
+
+Your result:
+
+16N + 16 → 16G
+
+is correct, but the gap before it is a block-size bug, not curve behavior.
+
+The pattern is screaming:
+
+window size = 16
+lower 4 bits are being dropped or ignored
+
+So the missing thing is in the multiplier implementation: it is probably using a nibble/window table and mishandling residues 1..15 after a multiple of N.

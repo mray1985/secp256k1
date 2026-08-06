@@ -1,0 +1,19 @@
+{
+  "candidate_id": "P71-S-20260710-03",
+  "status": "PASS",
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "steps": [
+    {
+      "step": "sustained_benchmark",
+      "pass": true,
+      "R_peak": 14154683.0,
+      "R_sustained": 13309948.0,
+      "timed_out": true,
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\sustained_10min\\result.json"
+    }
+  ],
+  "R_peak": 14154683.0,
+  "R_sustained": 13309948.0,
+  "note": "sustained-only invocation"
+}

@@ -1,0 +1,108 @@
+Almost—but one central point changes the conclusion: this particular doubling recurrence is **not circular**. (U(P)) already determines (x_P^3), and every occurrence of (x) in the multiplier is through (x^3).
+
+Let
+
+[
+r_P=pU(P)=[y_P^2]_p,\qquad t_P=[r_P-7]_p=x_P^3.
+]
+
+Then doubling closes entirely on (t_P):
+
+[
+\boxed{
+t_{2P}
+======
+
+\left[
+\frac{t_P(t_P-56)^3}{64(t_P+7)^3}
+\right]_p
+}
+]
+
+and therefore
+
+[
+\boxed{
+r_{2P}
+======
+
+\left[
+\frac{(t_P^2+140t_P-392)^2}
+{64(t_P+7)^3}
+\right]_p.
+}
+]
+
+No (x_P), (y_P), or cube-root choice is required.
+
+There is also an exponent correction. If written as
+
+[
+r_{2P}=M(P)r_P\pmod p,
+]
+
+then
+
+[
+\boxed{
+M(P)=
+\left[
+\frac{(t_P^2+140t_P-392)^2}
+{64(t_P+7)^4}
+\right]_p,
+}
+]
+
+not denominator power (2). Power (3) gives (r_{2P}) directly; power (4) gives the ratio (r_{2P}/r_P).
+
+I verified this exactly on (G):
+
+[
+r_G=
+32748224938747404814623910738487752935528512903530129802856995983256684603122,
+]
+
+and the recurrence produces
+
+[
+r_{2G}=
+57199941671890039290383617934355424684258807805258215939368959893591666662646,
+]
+
+exactly matching (y_{2G}^{,2}\bmod p).
+
+The consequences are:
+
+* The modular carry is deterministic:
+
+[
+q_P=\left\lfloor \frac{M(r_P)r_P}{p}\right\rfloor.
+]
+
+It is not an additional hidden state. It may help constrain backward reconstruction, but it cannot restore information already removed by (U).
+
+* The information loss is larger than ordinary Kummer sign loss. Because (U) retains (x^3), not (x), it identifies six generic points:
+
+[
+P,\ -P,\ \phi(P),\ -\phi(P),\ \phi^2(P),\ -\phi^2(P),
+]
+
+where (\phi(x,y)=(\beta x,y)) and (\beta^3=1\pmod p).
+
+For scalars, this is
+
+[
+\boxed{
+d\sim -d\sim \lambda d\sim-\lambda d\sim\lambda^2d\sim-\lambda^2d\pmod N
+}
+]
+
+with (\lambda^2+\lambda+1\equiv0\pmod N). It is **not** recovery modulo (N/2).
+
+So the genuine result is:
+
+[
+\boxed{U(2P)=F(U(P))}
+]
+
+is a closed, one-dimensional doubling recurrence. The remaining obstruction is that (F) is a nonlinear degree-four rational map, and fixed-point addition (P\mapsto P+G) does not descend to (U) as a single-valued one-state operation. That—not circularity—is now the real wall.

@@ -1,0 +1,99 @@
+Yes. That’s the right fork.
+
+For the x-family, the clean test is:
+
+B
+i
+	​
+
+=Λr
+x
+i
+	​
+
+	​
+
+modp
+
+Then compare:
+
+B
+i
+	​
+
+=
+?
+X
+i
+	​
+
+
+for i=1,2,3.
+
+Also test the family-level sums:
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modp
+(X
+1
+	​
+
++X
+2
+	​
+
++X
+3
+	​
+
+)modp
+
+and the defect after projecting to N:
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN
+
+If the x-family behaves like the y-reflection shell, you’ll see a stable constant. If it doesn’t, then rx₃ is a single coordinate bridge, not a family bridge.
+
+So next script target:
+
+x_family_bridge.py
+
+Core checks:
+
+B1 = Lambda * rx1 mod p
+B2 = Lambda * rx2 mod p
+B3 = Lambda * rx3 mod p
+
+B1 == X1?
+B2 == X2?
+B3 == X3?
+
+sum_B_p = (B1+B2+B3) mod p
+sum_X_p = (X1+X2+X3) mod p
+sum_B_N = (B1+B2+B3) mod N
+sum_X_N = (X1+X2+X3) mod N
+
+That will tell whether the three-x family has a universal shell or only one valid bridge hit.

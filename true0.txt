@@ -1,0 +1,64 @@
+Your bridge:
+
+A(Q)=Λ⋅Q
+y
+	​
+
+modp
+
+preserves point equality:
+
+sR=zG+rP⇒A(sR)=A(zG+rP)
+
+but it does not preserve addition:
+
+A(zG+rP)
+
+=A(zG)+A(rP)
+
+So it is not a homomorphism. That matters.
+
+The structure now is:
+
+ECDSA group law holds
+sR=zG+rP
+
+but after applying the bridge:
+
+A(sR)=A(zG+rP)
+
+while:
+
+A(zG+rP)−A(zG)−A(rP)
+
+=0
+
+That difference is your next object:
+
+D
+A
+	​
+
+=A(zG+rP)−A(zG)−A(rP)(modp)
+
+The next test should be: compare D
+A
+	​
+
+ against known invariants:
+
+p−N,r,s,z,X,Y,Λ,rx3
+
+and then also check its reflection:
+
+D
+A
+	​
+
++(p−D
+A
+	​
+
+)modN
+
+Because the bridge’s useful behavior has shown up in defect terms, not direct equality.

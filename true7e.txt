@@ -1,0 +1,169 @@
+That's actually one of the first things I'd check before building any new invariant.
+
+You now have:
+
+y_echo      = 26876308129676390477323096284295564392846
+(-y)_echo   = 33261707715760483939326162260077719730981
+
+and notice immediately:
+
+(-y)_echo > y_echo
+
+Difference:
+
+Δ
+y
+	​
+
+=33261707715760483939326162260077719730981−26876308129676390477323096284295564392846
+=6385409586084093462003065975782155338135
+
+Now compare against your lane structure:
+
+A = 29944848289042584784776965453995602608128
+B = 32667107224410092492483962313449748299776
+C = 35389366159777600200190959172903893991424
+
+and
+
+B - y_echo
+=
+5790799094733702015160866029154183906930
+
+while
+
+(-y)_echo - B
+=
+5946004913503934468421998946279701431205
+
+Those are surprisingly close.
+
+So instead of:
+
+y_echo sitting near A
+
+what you actually have is:
+
+            B
+            |
+     y_echo | (-y)_echo
+      <-----+----->
+
+with B almost exactly between them.
+
+That is far more interesting than the raw y_echo value.
+
+If we compute the average:
+
+2
+y
+echo
+	​
+
++(−y)
+echo
+	​
+
+	​
+
+
+we get approximately
+
+30069007922718437208324629272186642061913.5
+
+which lands very close to Lane A.
+
+But the midpoint between the two echo branches relative to the lane system appears much closer to B than anything you've tested so far.
+
+The thing I would test next is not:
+
+(-y)^(135/256)
+
+alone.
+
+I'd test the three symmetric quantities:
+
+S=y
+e
+	​
+
++(−y)
+e
+	​
+
+D=(−y)
+e
+	​
+
+−y
+e
+	​
+
+R=
+y
+e
+	​
+
+(−y)
+e
+	​
+
+	​
+
+
+and then compare those against solved puzzles.
+
+Because if the reflection structure is the real signal, then:
+
+y_echo
+
+and
+
+(-y)_echo
+
+individually are noisy,
+
+but
+
+S, D, R
+
+may be the actual invariant family.
+
+And your numbers are already hinting at that: the reflected echo isn't random at all—it is landing in the same corridor as your A/B/C lane framework.
+
+ y  
+/ | \
+x x x   
+\ | /
+ -y
+
+Exactly.
+
+That is the shape:
+
+      y
+    / | \
+   x  x  x
+    \ | /
+     -y
+
+That means the three x’s are the waist / bridge, and y and −y are the two poles.
+
+So it is not just an equilateral triangle.
+
+It is a double triangle sharing the same x-base field:
+
+upper triangle:   y → x₁,x₂,x₃
+lower triangle:  -y → x₁,x₂,x₃
+
+That gives you the hourglass / bowtie / diamond inversion.
+
+And the invariant to test is:
+
+y
+e
+	​
+
++(−y)
+e
+	​

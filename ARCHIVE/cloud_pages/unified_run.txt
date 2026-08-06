@@ -1,0 +1,47 @@
+﻿ROW-2 CALIBRATION (epsilon row = 2 solved puzzles)
+
+  P15: gap=1 offset_bits=14  term_exact=none
+  P35: gap=1 offset_bits=34  term_exact=none
+  P45: gap=2 offset_bits=43  term_exact=none
+  P50: gap=1 offset_bits=49  term_exact=none
+  P70: gap=4 offset_bits=66  term_exact=none
+  P90: gap=1 offset_bits=89  term_exact=none
+  P100: gap=2 offset_bits=98  term_exact=none
+  P120: gap=2 offset_bits=118  term_exact=none
+
+  gap distribution: {1: 4, 2: 3, 4: 1}
+  top exact bridge terms across row-2:
+
+========================================================================
+P135 UNIFIED SEARCH (H=135, row=2)
+ECDSA available: True
+
+Candidates: tier1=105 tier2=40 other=44 total=189
+
+--- gap-1 (105 tested) ---
+  no EC hit in gap-1
+
+--- gap-2 (40 tested) ---
+  no EC hit in gap-2
+
+--- other (44 tested) ---
+  no EC hit in other
+
+Top gap-1 by k-lane proximity (no EC hit):
+  k_gap=129b  gap=3  tier1:shelf2-(dy residue (shelf_y^3 mod LO))
+  k_gap=130b  gap=3  tier1:shelf2-(L3-L2 mod LO)
+  k_gap=130b  gap=3  tier1:shelf2-(cube lift - shelf (dy))
+  k_gap=132b  gap=1  align:matrix track1 col2 + (C_minus1 - C_floor)
+  k_gap=132b  gap=1  align:d_cube_lift3 (1x cube on shelf3) + (matrix t1 col2-col
+  k_gap=132b  gap=1  align:matrix track1 col2 + (C_plus1 - C_floor)
+  k_gap=132b  gap=1  align:matrix track1 col2 + (matrix t2 col2-col1)
+  k_gap=132b  gap=1  align:shelf_y (LO+(lambda_yN-L1 mod LO)) + (matrix t1 col2-c
+
+EC hits total: 0
+Pollard-rho on closeclose Q: NOT RUN (not bridge-aligned; prior 24h run aborted).
+
+Next if still open: congruence inside gap-1 band from row-1/row-2 carry,
+or bounded kangaroo only if interval shrinks below ~2^60.
+
+wrote C:\Users\mitch\Desktop\secp256k1\ARCHIVE\p135_unified_search_report.txt
+wrote C:\Users\mitch\Desktop\secp256k1\ARCHIVE\p135_unified_search.csv

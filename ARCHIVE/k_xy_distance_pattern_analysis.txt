@@ -1,0 +1,65 @@
+========================================================================
+PATTERN ANALYSIS (win = stable law across solved puzzles)
+========================================================================
+
+Best column frequency (smallest |d - result|):
+  ky_r2          9/26
+  kx_r2          7/26
+  ky_r1          5/26
+  kx_r1          5/26
+
+kx: r1 closer than r2 in 15/26 puzzles
+
+ky: r1 closer than r2 in 11/26 puzzles
+
+Distance-bit gap from puzzle height n (n - dist_bits):
+  puzzle   kx_r1   kx_r2   ky_r1   ky_r2  best
+       5       2       3       1       3  kx_r2
+      10       4       1       1       4  ky_r2
+      15       3       3       1       4  ky_r2
+      20       1       1       2       1  ky_r1
+      25       6       4       5       2  kx_r1
+      30       1       3       6       2  ky_r1
+      35       1       1       2       2  ky_r2
+      40       2       2       2       7  ky_r2
+      45       2       2       1       1  kx_r2
+      50       3       6       1       1  kx_r2
+      55       4       3       2       2  kx_r1
+      60       4       3       2       3  kx_r1
+      65       2       3       2       3  kx_r2
+      70       3       1       5       2  ky_r1
+      75       2       4       1       2  kx_r2
+      80       4       1       5       1  ky_r1
+      85       1       1       4       6  ky_r2
+      90       3       2       6       5  ky_r1
+      95       1       6       2       1  kx_r2
+     100      10       2       3       2  kx_r1
+     105       4       2       1       2  kx_r1
+     110       3       3       4       5  ky_r2
+     115       4       2       3       5  ky_r2
+     120       1       2       2       3  ky_r2
+     125       3       2       3       4  ky_r2
+     130       2       3       2       2  kx_r2
+
+Gap = n - dist_bits (mean / stdev-ish range):
+  kx_r1   mean=  2.9  min=  1  max= 10  spread=  9  mode=2 (6x)
+  kx_r2   mean=  2.5  min=  1  max=  6  spread=  5  mode=3 (8x)
+  ky_r1   mean=  2.7  min=  1  max=  6  spread=  5  mode=2 (9x)
+  ky_r2   mean=  2.9  min=  1  max=  7  spread=  6  mode=2 (9x)
+
+  n - best_dist_bits == 5: 4/26 puzzles
+
+  n - best_dist_bits == 10: 1/26 puzzles
+
+Exact hits (dist=0): 0/26
+
+Best-column gap = n - best_dist_bits:
+  min=2  max=10  mean=4.6  spread=8
+  histogram: 2:3, 3:4, 4:7, 5:4, 6:6, 7:1, 10:1
+
+Verdict:
+  STABLE best-column gap: n - best_dist_bits in [2, 10] (spread 8) across 26 puzzles.
+  Dominant transform: r2 (height_residue) wins 16/26; r1 (floor_lift) wins 10/26.
+  No exact hits — win condition is this gap law, not dist=0. For P135 expect best_dist_bits ≈ 135 - gap (gap typically 0–6).
+
+CSV: C:\Users\mitch\Desktop\secp256k1\ARCHIVE\k_xy_distance_table_5_135.csv

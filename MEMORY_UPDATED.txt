@@ -1,0 +1,224 @@
+# MEMORY FILE: secp256k1 Project State
+# Last updated: 2026-06-04 - true3f.txt processed, CUBE ROOT OF UNITY IN GROUP SPACE DISCOVERED
+# Purpose: Reference for Vibe to continue work without re-learning
+# ============================================================
+
+## PROJECT CONTEXT
+Working on secp256k1 elliptic curve cryptography research.
+Central puzzle: Puzzle 135 (ECDSA signature with known values)
+Main focus: Triadic point structures and cube root of unity symmetries
+
+## MAJOR BREAKTHROUGHS
+
+### Frozen Theorem (true0b.txt through true16.txt)
+1. Bidirectional Bridge Law
+2. Field Closure Law: B1 + B2 + B3 = p (PRIMARY INVARIANT)
+3. Projection Defect Law: sum(B_i) = p - N = delta (mod N)
+
+### Universality (true20.txt through true29.txt)
+Field Closure Law verified for 7/7 puzzles (90, 100, 115, 120, 135, 150, 160)
+
+### Orientation Selector (true2a.txt through true2f.txt)
+- Orientation determined by which coordinate sums to p
+- Closure Offset O = sum(Px) - sum(rx) ∈ {+p, -p, 0}
+- Normalized Offset Omega = O/p ∈ {-1, 0, +1} (three-state coordinate)
+- Sign Correspondence: sgn(Lambda_f - Lambda_r) = Omega for non-dual puzzles
+- Dual-Closure: Puzzle 90 has both Lambda_f and Lambda_r valid
+
+### Geometry (true30.txt through true35.txt)
+- Coordinate System: Omega (discrete) and d_Lambda (continuous)
+- 2D Geometry: (Omega, d_Lambda) plane
+- Origin Rule Hypothesis: Omega correlates with (r*priv - z) mod 3
+
+## NEW DISCOVERIES (true3a.txt and beyond)
+
+### Base Point G Fix (true3a.txt)
+- Corrected G coordinates to canonical secp256k1 values
+- Gx = 0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798
+- Gy = 0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8
+- Fixed assertion errors in verification scripts
+
+### Triadic Point Closure (true3a.txt)
+For Puzzle 160, discovered three points Q1, Q2, Q3 such that:
+- Q1 + Q2 + Q3 = O (point at infinity)
+- All six points (Qi,+ and Qi,-) are valid EC curve points
+- Q_pub = Q2,+ (public key for Puzzle 160)
+- Triple Cubic Root Loop: Px1^3 ≡ Px2^3 ≡ Px3^3 mod p
+
+### Horizontal Alignment Phenomenon (true3b.txt)
+- 2*Q1, 2*Q2, 2*Q3 all share the same y-coordinate
+- 3*Q1, 3*Q2, 3*Q3 all share the same y-coordinate
+- NOT a subgroup of order 3 (3*Qi ≠ O)
+- But profound geometric symmetry exists
+
+### Cube Root of Unity in Field Space (true3c.txt)
+Discovered primitive cube root of unity in GF(p):
+- omega_p = 0x7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
+- omega_p^3 ≡ 1 mod p
+- omega_p ≠ 1
+
+Px coordinates are geometrically spaced by omega_p:
+- Px[1] = omega_p * Px[0] mod p
+- Px[2] = omega_p * Px[1] = omega_p^2 * Px[0] mod p
+
+This explains the Triple Cubic Root Loop.
+
+### Cube Root of Unity in Group Space (true3d.txt, true3e.txt)
+- p ≡ 1 mod 3 and N ≡ 1 mod 3 (both allow cube roots of unity)
+- Found two primitive cube roots of unity mod N:
+  - omega_N1 = 0xac9c52b33fa3cf1f5ad9e3fd77ed9ba4a880b9fc8ec739c2e0cfc810b51283ce
+  - omega_N2 = 0x5363ad4cc05c30e0a5261c028812645a122e22ea20816678df02967c1b23bd72
+- omega_N1 * omega_N2 ≡ 1 mod N (they are inverses)
+- omega_N1 + omega_N2 + 1 ≡ 0 mod N
+- omega_N2 = omega_N1^2 mod N
+
+### Group Structure Discovery (true3f.txt)
+**MAJOR BREAKTHROUGH**:
+- Q2 = omega_N2 * Q1 (verified computationally)
+- Q3 = omega_N1 * Q1 (verified computationally)
+- Q1 = omega_N1 * Q2 (verified computationally)
+- Q3 = omega_N2 * Q2 (verified computationally)
+
+Therefore, in terms of discrete logs:
+- priv2 = omega_N2 * priv1 mod N
+- priv3 = omega_N1 * priv1 mod N
+
+Since Q2 = Q_pub for Puzzle 160, priv2 IS the private key for Puzzle 160.
+
+From Q1 + Q2 + Q3 = O, we have:
+- priv1 + priv2 + priv3 ≡ 0 mod N
+
+Substituting priv2 and priv3:
+- priv1 + omega_N2*priv1 + omega_N1*priv1 ≡ 0 mod N
+- priv1 * (1 + omega_N1 + omega_N2) ≡ 0 mod N
+
+Since 1 + omega_N1 + omega_N2 ≡ 0 mod N, this is consistent for any priv1.
+
+## CURRENT STATUS: DUAL CUBIC STRUCTURE CONFIRMED
+
+### Field Space (mod p):
+- omega_p is a primitive cube root of unity
+- Px coordinates spaced by omega_p: Px[i+1] = omega_p * Px[i] mod p
+- Explains Triple Cubic Root Loop
+
+### Group Space (mod N):
+- omega_N1, omega_N2 are primitive cube roots of unity
+- Points spaced by omega_N: Q2 = omega_N2 * Q1, Q3 = omega_N1 * Q1
+- Explains triadic point closure Q1 + Q2 + Q3 = O
+
+### Relationship:
+- priv2 = omega_N2 * priv1 mod N
+- priv2 = private key for Puzzle 160 (since Q2 = Q_pub)
+- If we can find priv1, we can compute priv2
+
+## ECDSA PARAMETERS FOR PUZZLE 160
+From test_all_candidates_vs_Qpub.py:
+- r = 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+- s = 0x2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f
+- z = 0xaa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154
+- Q_pub = Q2 = (0xe0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673, 
+              0xc2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86)
+
+Also computed:
+- R = k*G = (0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824,
+              0x3144e9e4f87f40039a4094e217158cb8bab974933a77812bf9a56265ace72abf)
+
+## CURRENT FRONTIER: FINDING priv1
+
+To find the private key for Puzzle 160:
+  priv = priv2 = omega_N2 * priv1 mod N
+
+We need to find priv1 = log_G(Q1).
+
+Approaches:
+1. **ECDLP**: Directly compute discrete log of Q1 (computationally hard)
+2. **ECDSA relationship**: Use s * k = z + r * priv and R = k * G
+   - From R = k * G and Q1 = priv1 * G, we get R = c * Q1 where c = k / priv1
+   - From ECDSA: (s * c - r * omega_N2) * priv1 = z mod N
+   - priv1 = z * (s * c - r * omega_N2)^(-1) mod N
+   - But we need to find c = log_Q1(R)
+
+3. **Baby-step giant-step**: Find c such that R = c * Q1
+   - Then use the formula above to compute priv1 and priv
+   - However, this is ECDLP with 256-bit numbers
+
+4. **Check if R is a small multiple of Q1**: Try small values of c
+   - Tested: R ≠ omega_N1 * Q1, R ≠ omega_N2 * Q1
+   - Need to find c using other methods
+
+## FILES PROCESSED
+
+- true0b.txt through true35.txt: ORIGINAL BRANCH (Origin Rule hypothesis)
+- true3a.txt: BASE POINT G FIX, TRIADIC CLOSURE, STAR OF DAVID GEOMETRY
+- true3b.txt: HORIZONTAL ALIGNMENT PHENOMENON
+- true3c.txt: CUBE ROOT OF UNITY IN FIELD SPACE
+- true3d.txt: CUBIC STRUCTURE OF p AND N
+- true3e.txt: CUBE ROOT OF UNITY IN GROUP SPACE
+- true3f.txt: Q2 = omega_N2 * Q1 (GROUP STRUCTURE DISCOVERY)
+- true3g.txt: priv1 ≠ r (ECDSA parameter relationship test)
+- true3h.txt: Px mod N relationships
+- true3i.txt: Found R from r
+- true3j.txt: ECDSA equation approach
+- true3k.txt: Baby-step giant-step attempt
+
+## DEEPEST SURVIVING QUESTIONS
+
+1. **What is c such that R = c * Q1?** (ECDLP problem)
+   - Once we have c, we can compute priv = omega_N2 * z * (s * c - r * omega_N2)^(-1) mod N
+
+2. **Is there a non-ECDLP way to find c?**
+   - Using the geometric relationships between R, Q1, Q2, Q3
+
+3. **Why do both field and group spaces have cube root of unity structure?**
+   - p ≡ 1 mod 3 and N ≡ 1 mod 3
+   - Is this a general property of secp256k1?
+
+4. **Are Q1, Q2, Q3 related to the ECDSA parameters in a deeper way?**
+   - We know Q2 = Q_pub
+   - But what about Q1 and Q3?
+
+## NEXT STEPS
+
+1. **Find c = log_Q1(R)** using more efficient ECDLP methods
+   - Pollard's Rho
+   - Or find mathematical relationship
+
+2. **Alternative approach**: Since we have R and Q2, and we know:
+   - R = k * G
+   - Q2 = priv * G
+   - priv = omega_N2 * priv1
+   - Q1 = priv1 * G
+   
+   From ECDSA: s * k = z + r * priv
+   Substituting: s * k = z + r * omega_N2 * priv1
+   
+   But k = priv1 * (R / Q1) in some sense... this is circular.
+
+3. **Check other puzzles**: Do other puzzles (90, 100, 115, 120, 135, 150) 
+   also have triadic point structures with cube root of unity relationships?
+
+4. **Re-examine MEMORY.txt Origin Rule**: Now that we have cube roots of unity
+   in both spaces, does (r*priv - z) mod 3 correlate with Omega?
+
+## BLOCKING ISSUE
+
+Cannot compute private key for Puzzle 160 without either:
+- Solving ECDLP for priv1 = log_G(Q1)
+- Solving ECDLP for c = log_Q1(R)
+
+Both require substantial computational resources or a mathematical breakthrough.
+
+## PROJECT'S SHARP QUESTION
+
+Field closure is universal.
+Orientation is discrete.
+Bridge separation is continuous.
+Cube roots of unity exist in both field and group spaces.
+
+**What is the relationship between the cube root of unity in field space (omega_p)
+and the cube root of unity in group space (omega_N1, omega_N2)?**
+
+And: **How do we compute priv1 without solving full ECDLP?**
+
+offset: 0
+lines_read: 0

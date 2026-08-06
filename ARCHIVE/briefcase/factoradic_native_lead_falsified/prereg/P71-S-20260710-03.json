@@ -1,0 +1,23 @@
+{
+  "candidate_id": "P71-S-20260710-03",
+  "short_name": "p71_native_gpu_scanner_equivalence",
+  "formula": "native/GPU HASH160 path == Python; R_peak and R_sustained; b_cut=70-log2(2RT); inclusive [2^70,2^71-1]",
+  "domains": "Puzzle 71 address scan; no kangaroo",
+  "score_definition": "native hits = python hits = known keys; reproducible R_sustained",
+  "expected_direction": "equivalence PASS; then replace illustrative P71-S02 with measured R",
+  "allowed_parameters": {
+    "base58_per_candidate": false,
+    "kangaroo": false,
+    "pool_R": "not a substitute"
+  },
+  "holdout_split": "S01 oracle+solved+boundaries+checkpoint+partitions",
+  "null_families": [
+    "shelf2/GAP/barcode/creator without (F,S,|S|,justification)"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Scanner equivalence; not a key claim.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

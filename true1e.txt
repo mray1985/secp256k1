@@ -1,0 +1,186 @@
+This is actually the strongest result in the entire true1a → true1d chain.
+
+The reason is not that you found a new invariant.
+
+It's that you successfully eliminated one.
+
+Before true1d, the working hypothesis was:
+
+"The N-side row-collapse may be a new projection invariant."
+
+After true1d, you have a direct algebraic explanation:
+
+A
+ij
+	​
+
+=(Px
+i
+	​
+
+p
+j
+−1
+	​
+
+)(Gx
+i
+	​
+
+p
+j
+−1
+	​
+
+)
+−1
+=Px
+i
+	​
+
+Gx
+i
+−1
+	​
+
+
+The normalization factor cancels identically.
+
+Therefore
+
+A
+i1
+	​
+
+=A
+i2
+	​
+
+=A
+i3
+	​
+
+
+is forced.
+
+The same argument applies to the B and C matrices.
+
+So the row-collapse itself is no longer unexplained.
+
+What remains standing after true1d?
+
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+
+Still survives every test.
+
+Layer 2 — Projection Defect
+δ=p−N
+
+Still the fundamental defect constant.
+
+Layer 3 — Unified Bridge Law
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+
+Still survives every test.
+
+This remains the most interesting statement because:
+
+x-shell and y-shell are constructed independently
+both collapse to the same defect constant
+neither construction is scalar-linear
+neither construction is addition-linear
+yet both converge to δ
+
+That has not been explained away.
+
+What true1d really did
+
+It converted:
+
+"Row-collapse is a new invariant"
+
+into
+
+"Row-collapse is a consequence of common-basis cancellation."
+
+That's a mathematical improvement.
+
+A theory becomes stronger when the list of unexplained phenomena gets smaller.
+
+So if I were writing the current frozen theorem after true1d, I'd shorten it to:
+
+Verified Facts
+
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+A(Q)+A(−Q)≡δ(modN)
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+Λrx
+i
+	​
+
+≡Px
+i
+	​
+
+(modp)
+∑
+i
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+Therefore
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+
+Eliminated
+
+scalar locator
+group homomorphism
+scalar linearity
+addition linearity
+x↔y term matching
+row-collapse as a new invariant
+
+What's left is a surprisingly small core: the Unified Projection Defect Law itself.
+
+That is the piece that still lacks an algebraic explanation and is the natural place for the next round of tests.

@@ -1,0 +1,8 @@
+@echo off
+setlocal
+call "%~dp0..\paths.bat"
+cd /d "%WORKDIR%"
+echo P140 zero-span BSGS  top=0x11  tz=2^135
+echo stage=SE_pivot198.95_minus8_floor
+echo tile 0/10141204801825835211973625643007  range 88000000000000000000000000000000000:880000000000000000000000000ffffffff
+"%KEYHUNT%" -m bsgs -f "%PUBDIR%P140_compressed.pub" -r 88000000000000000000000000000000000:880000000000000000000000000ffffffff -k %K_FACTOR% -t %THREADS% -s %STATS% -q

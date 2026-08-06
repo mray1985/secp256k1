@@ -1,0 +1,63 @@
+========================================================================================
+Sales-tax levy: taxed = amount * (1+r),  tax = amount * r
+========================================================================================
+  Targets: does any r map C or layers toward Phi(-P), Phi(lambda P), Phi((n+1)G)?
+
+----------------------------------------------------------------------------------------
+1) Tax whole C: C*(1+r)  vs known transforms  [exact Fraction ==]
+----------------------------------------------------------------------------------------
+  r=10% : vs Phi(-P) 0/64  vs Phi(lam) 0/64  vs Phi((n+1)G) 0/63  vs Phi- 0/64
+  r=1%  : vs Phi(-P) 0/64  vs Phi(lam) 0/64  vs Phi((n+1)G) 0/63  vs Phi- 0/64
+  r=1/p : vs Phi(-P) 0/64  vs Phi(lam) 0/64  vs Phi((n+1)G) 0/63  vs Phi- 0/64
+  r=200%: vs Phi(-P) 0/64  vs Phi(lam) 0/64  vs Phi((n+1)G) 0/63  vs Phi- 0/64
+
+----------------------------------------------------------------------------------------
+2) Tax Fine only: X + Fine*(1+r)   [exact]
+----------------------------------------------------------------------------------------
+  r=10% : X+Fine*(1+r) == Phi(-P)? 0/64
+  r=1%  : X+Fine*(1+r) == Phi(-P)? 0/64
+  r=1/p : X+Fine*(1+r) == Phi(-P)? 0/64
+  r=200%: X+Fine*(1+r) == Phi(-P)? 0/64
+  Exact Fine tax for negation would need r* = p/y - 2  (depends on y, not fixed %)
+    n=1: r*=p/y-2=1.544239e+00  exact-neg=True
+    n=2: r*=p/y-2=7.523629e+00  exact-neg=True
+    n=3: r*=p/y-2=2.526129e+00  exact-neg=True
+    n=4: r*=p/y-2=1.124690e+00  exact-neg=True
+    n=5: r*=p/y-2=-8.184928e-01  exact-neg=True
+    n=6: r*=p/y-2=-5.293453e-01  exact-neg=True
+    n=7: r*=p/y-2=3.942899e-01  exact-neg=True
+    n=8: r*=p/y-2=7.734637e-01  exact-neg=True
+
+----------------------------------------------------------------------------------------
+3) Tax X only: X*(1+r) + Fine  [exact]
+----------------------------------------------------------------------------------------
+  r=10% : vs Phi(lam) 0/64  vs Phi(-P) 0/64
+  r=1%  : vs Phi(lam) 0/64  vs Phi(-P) 0/64
+  r=1/p : vs Phi(lam) 0/64  vs Phi(-P) 0/64
+  r=200%: vs Phi(lam) 0/64  vs Phi(-P) 0/64
+  GLV needs x |-> beta*x mod p, not multiply X by (1+r) in Q.
+
+----------------------------------------------------------------------------------------
+4) '10% of every dollar of X paid into Fine'  X*1.10  [exact]
+----------------------------------------------------------------------------------------
+  X*1.10 == Phi(P)? 0/64
+
+----------------------------------------------------------------------------------------
+5) 10% tax looks 'close' only because x-channel dominates shallow digits
+----------------------------------------------------------------------------------------
+  C*1.10 vs Phi(-P): match first 40 digits 0/64  first 120 0/64
+
+----------------------------------------------------------------------------------------
+6) Metaphor that fits
+----------------------------------------------------------------------------------------
+  Negation on Fine is REFLECT, not VAT: Fine -> 1/p - Fine
+  Fixed % tax would need r = p/y - 2 (a different rate every point).
+  GLV is modular *beta on x, not *(1+r) on the decimal X.
+
+========================================================================================
+VERDICT
+========================================================================================
+  Flat 10% sales tax on C / X / Fine does NOT give negation, GLV, or +G.
+  Shallow digits can look similar (shared x/p); exact compare kills it.
+  Closest 'rate' for neg is r*=p/y-2 — not a store-wide 10%.
+

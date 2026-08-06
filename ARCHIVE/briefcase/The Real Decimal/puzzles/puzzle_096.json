@@ -1,0 +1,23 @@
+{
+  "puzzle": 96,
+  "address": "15ANYzzCp5BFHcCnVFzXqyibpzgPLWaD8b",
+  "hash160": {
+    "name": "hash160",
+    "value": "260611799489884853864223547583164836812465848292",
+    "hex": "0x2da63cbd251d23c7b633cb287c09e6cf888b3fe4",
+    "H": "0000000000000000000000002da63cbd251d23c7b633cb287c09e6cf888b3fe4",
+    "lens_fixed_binary": {
+      "formula": "v / 2^256",
+      "fractional_hex": "0x.0000000000000000000000002da63cbd251d23c7b633cb287c09e6cf888b3fe4",
+      "value": "0.00000000000000000000000000000225068742784112199928706286164534204092469923273925567891763377765222239889894066113187686592245437772644367196542388086"
+    }
+  },
+  "solved": false,
+  "has_pubkey": false,
+  "d_window": "[2^95, 2^96)",
+  "N_mirror": "[N-2^96+1, N-2^95]",
+  "range_lo": "39614081257132168796771975168",
+  "range_hi": "79228162514264337593543950335",
+  "status": "NO_PUBKEY",
+  "note": "No x,y \u2014 only range / address / hash160 lenses"
+}

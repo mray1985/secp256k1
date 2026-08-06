@@ -1,0 +1,132 @@
+[
+  {
+    "file": "160decimals.txt",
+    "chars": 5905,
+    "hex_tokens": 62,
+    "number_tokens": 290,
+    "hex_bytes": 2459,
+    "digit_bytes": 5012,
+    "raw_bytes": 5911,
+    "sha256": "45a35d38304128d2"
+  },
+  {
+    "file": "53125.txt",
+    "chars": 76592,
+    "hex_tokens": 911,
+    "number_tokens": 5585,
+    "hex_bytes": 28003,
+    "digit_bytes": 53510,
+    "raw_bytes": 76817,
+    "sha256": "07385ab343603c96"
+  },
+  {
+    "file": "SUMS_OF_PUZZLES.txt",
+    "chars": 11538,
+    "hex_tokens": 283,
+    "number_tokens": 1183,
+    "hex_bytes": 3272,
+    "digit_bytes": 8628,
+    "raw_bytes": 11538,
+    "sha256": "04340b1be35cabbf"
+  },
+  {
+    "file": "TDADto8.txt",
+    "chars": 15309,
+    "hex_tokens": 649,
+    "number_tokens": 1801,
+    "hex_bytes": 4635,
+    "digit_bytes": 10852,
+    "raw_bytes": 15309,
+    "sha256": "f31efc46efad2347"
+  },
+  {
+    "file": "barcoding.txt",
+    "chars": 70779,
+    "hex_tokens": 1987,
+    "number_tokens": 4858,
+    "hex_bytes": 28750,
+    "digit_bytes": 60249,
+    "raw_bytes": 70779,
+    "sha256": "c8aeb940a58f549d"
+  },
+  {
+    "file": "cryptoshit2.txt",
+    "chars": 41394,
+    "hex_tokens": 372,
+    "number_tokens": 2790,
+    "hex_bytes": 14500,
+    "digit_bytes": 31207,
+    "raw_bytes": 41436,
+    "sha256": "a32aa500646213af"
+  },
+  {
+    "file": "digits.txt",
+    "chars": 1589,
+    "hex_tokens": 53,
+    "number_tokens": 161,
+    "hex_bytes": 376,
+    "digit_bytes": 940,
+    "raw_bytes": 1589,
+    "sha256": "b776372a96bee329"
+  },
+  {
+    "file": "double and add structured.txt",
+    "chars": 28387,
+    "hex_tokens": 1386,
+    "number_tokens": 3395,
+    "hex_bytes": 8631,
+    "digit_bytes": 20231,
+    "raw_bytes": 28387,
+    "sha256": "35bb14f602358ec6"
+  },
+  {
+    "file": "double_and_add.txt",
+    "chars": 20677,
+    "hex_tokens": 670,
+    "number_tokens": 1629,
+    "hex_bytes": 4066,
+    "digit_bytes": 10002,
+    "raw_bytes": 20677,
+    "sha256": "04708d9ec5b699f7"
+  },
+  {
+    "file": "factorials.txt",
+    "chars": 10234,
+    "hex_tokens": 70,
+    "number_tokens": 2186,
+    "hex_bytes": 587,
+    "digit_bytes": 4171,
+    "raw_bytes": 11046,
+    "sha256": "e4d4bf71f0d01832"
+  },
+  {
+    "file": "publicTOnegated.txt",
+    "chars": 980972,
+    "hex_tokens": 10899,
+    "number_tokens": 11771,
+    "hex_bytes": 425773,
+    "digit_bytes": 844733,
+    "raw_bytes": 980972,
+    "sha256": "1f6d627faa037c94"
+  },
+  {
+    "file": "rmd_trinagulation.txt",
+    "chars": 3274,
+    "hex_tokens": 73,
+    "number_tokens": 756,
+    "hex_bytes": 1460,
+    "digit_bytes": 1929,
+    "raw_bytes": 3274,
+    "sha256": "7ae75b0c19fc27a3"
+  },
+  {
+    "file": "thePattern.txt",
+    "chars": 46414,
+    "hex_tokens": 321,
+    "number_tokens": 1840,
+    "hex_bytes": 2187,
+    "digit_bytes": 6459,
+    "raw_bytes": 46414,
+    "sha256": "c91961126ba915a6"
+  }
+]

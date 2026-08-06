@@ -1,0 +1,68 @@
+true5.txt CORRECTNESS CONFIRMED
+
+true5.txt provides the correct clarification of the Lambda bridge relationship:
+
+1. FORWARD BRIDGE (used by Puzzle 135):
+   Px_i ≡ Λ × rx_i mod p
+   where Λ = CP1 × CR1^-1 mod p
+   Λ = 97451685862885086182458552040892158509924235661624603229050850812487253689501
+
+2. REVERSE BRIDGE:
+   rx_i ≡ K × Px_i mod p
+   where K = CR1 × CP1^-1 mod p = Λ^-1 mod p
+   K = 81068098917365752067418111170832400985023864499927122630942305971544277876663
+
+VERIFICATION:
+Lambda mod p = 97451685862885086182458552040892158509924235661624603229050850812487253689501
+K mod p = 81068098917365752067418111170832400985023864499927122630942305971544277876663
+
+Lambda * K mod p = 1  (verified: both are inverses in Fp)
+
+PUZZLE 135 USES FORWARD BRIDGE:
+X_puzzle = Px3 = Λ × rx3 mod p
+
+IMPORTANT: The bridge is in Fp (coordinate field).
+To find d (scalar in FN), we need the map:
+  scalar → scalar*G → point (X,Y)
+
+The coordinate identity Px3 = Λ × rx3 mod p does NOT directly give us d.
+We must find d such that d*G.x = X_puzzle (in Fp).
+
+WHAT WE'VE TESTED (all returned NO MATCH):
+1. 10 lower-135-bit candidates from true3.txt (d1_lower, d3_lower, R1_lower, R2_lower, R3_lower, t1_lower, c2_lower, x1_lower, B_lower, C_lower)
+2. Full candidates from true.txt (d_cand_3, d_cand_4, d_cand_5) = rx3 * R_i * Λ^-1 mod N
+3. Lambda bridge values (Lambda_N, Lambda_inv_N, K_N, K_inv_N)
+4. Latin square constants (A, B, C) and their lower 135 bits
+5. Normalization matrix values and their lower 135 bits
+6. R values and their combinations with rx3
+
+ALL TESTED AS:
+- Private keys (d): d*G.x == X_puzzle? NO
+- Nonces (k): x(k*G) mod N == X_puzzle? NO
+- N-d and N-k mirrors: NO
+
+NEXT EDUCATED STEP:
+The normalization matrix does not collapse, meaning the coordinate
+structure does not directly map to a scalar structure.
+
+We need to use the Mordell curve structure (y² = x³ + 7 mod p) and
+find which scalar d produces X_puzzle as the x-coordinate.
+
+Since direct testing of candidates hasn't worked, we need to:
+1. Generate candidates from the ECDSA scalar equation: s*k ≡ m + r*d mod N
+2. Use the fact that X_puzzle = Px3 = Λ * rx3 mod p
+3. Consider that d might be derived from the relationship between
+   the coordinate bridge (Λ) and the scalar field
+
+KEY INSIGHT FROM true5.txt:
+The bridge has TWO directions. We've been using the forward direction.
+Maybe we need to explore the reverse direction or combinations.
+
+CANDIDATES TO GENERATE NEXT:
+1. d = (X_puzzle * rx3^-1 * Lambda^-1) mod N  (from Px3 = Λ * rx3)
+2. d = (X_puzzle * rx3^-1) mod N
+3. d = (X_puzzle * Lambda^-1) mod N
+4. d = (X_puzzle * K) mod N  (where K = Λ^-1 mod p)
+5. d = (rx3 * Lambda) mod N
+
+All these candidates should be tested in the range [2^134, 2^135).

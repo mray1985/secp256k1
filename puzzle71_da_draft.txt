@@ -1,0 +1,54 @@
+Puzzle 71 — D/A draft (from clean P70, rem=0 template)
+================================================================
+
+P70 ends: A(1)  ->  P71 MUST start: D(68)
+Start puzzle: 71 - 3 = 68
+
+Multiplier area (height / floor):
+  floor  q = 2^70 // P68 = 5
+  height q = (2^71 - 1) // P68 = 10
+
+P71 private key band: [2^70, 2^71 - 1]
+  lo = 1180591620717411303424
+  hi = 2361183241434822606847
+
+P71 is UNSOLVED — below are glitch-free chains that CLOSE EXACTLY (rem=0)
+for specific candidate keys inside the band. When the real P71 is found,
+exactly one q (in 5..10) should match floor(P71/P68).
+
+----------------------------------------------------------------------
+RECOMMENDED (matches P70 using q=7; mid-band candidate)
+----------------------------------------------------------------------
+P71 candidate = 1770887431076116955135
+  (mid-band probe — NOT claimed as the real puzzle key)
+  q = 7   floor=5   height=10   start=D(68)   end=D(1)   rem=0
+
+D(68)A(68)D(68)A(68)D(67)A(67)D(64)A(64)D(56)A(55)D(52)A(50)D(48)A(46)D(45)A(36)D(35)A(33)D(30)A(30)D(29)A(28)D(24)A(24)D(21)A(21)D(18)A(17)D(13)A(13)D(11)A(10)D(5)A(4)D(1)
+
+Opening head only (q=7, weight 6):
+  D(68)A(68)D(68)A(68)
+
+----------------------------------------------------------------------
+BAND FLOOR candidate (smallest P71 = 2^70)
+----------------------------------------------------------------------
+P71 = 1180591620717411303424
+  q = 5   start=D(68)   end=A(6)   rem=0
+
+D(68)A(68)D(68)A(66)D(63)A(63)D(61)A(61)D(61)A(59)D(56)A(55)D(50)A(50)D(45)A(44)D(40)A(39)D(36)A(36)D(30)A(25)D(23)A(22)D(19)A(19)D(17)A(16)D(14)A(13)D(7)A(7)D(6)A(6)
+
+----------------------------------------------------------------------
+BAND CEILING candidate (largest P71 = 2^71 - 1)
+----------------------------------------------------------------------
+P71 = 2361183241434822606847
+  q = 5,6,7,8,9,10 all admit valid tails; example q=10:
+
+D(68)A(68)D(68)A(68)D(68)A(68)D(67)A(66)D(65)A(63)D(57)A(55)D(50)A(50)D(48)A(42)D(38)A(38)D(36)A(35)D(29)A(29)D(25)A(23)D(20)A(20)D(19)A(16)D(14)A(13)D(11)A(11)D(10)A(7)D(5)A(5)D(4)A(4)D(1)A(1)D(1)A(1)D(1)
+
+----------------------------------------------------------------------
+P72 preview (when P71 known)
+----------------------------------------------------------------------
+P72 will start with A(69) if recommended draft end D(1) holds,
+or oppose whatever the true P71 last token is.
+
+After P71 is solved, add to puzzle_da_sequence.py PUZZLE[71] and run:
+  build_chain(71, prev_end='A')   # from clean P70

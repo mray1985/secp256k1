@@ -1,0 +1,70 @@
+Locked in. The key shift is:
+
+Old result: shell collapse to δ=p−N.
+New object: row-constant ratio invariants after N-side cube-root normalization.
+
+Next test is exactly the identity check:
+
+A
+i
+	​
+
+, B
+i
+	​
+
+, C
+i
+	​
+
+
+against:
+
+Λ, K, δ, ω, ω
+2
+, D
+G
+	​
+
+, D
+P
+	​
+
+, D
+R
+	​
+
+
+and also ratios between rows:
+
+A
+1
+	​
+
+A
+2
+−1
+	​
+
+, A
+2
+	​
+
+A
+3
+−1
+	​
+
+, A
+1
+	​
+
+A
+3
+−1
+	​
+
+
+same for B and C.
+
+If the row constants don’t match known values or simple ratios, then this is genuinely a new N-side invariant layer.

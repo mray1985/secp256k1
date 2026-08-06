@@ -1,0 +1,20 @@
+i believe the new delta is the key the delta changes per consequence of range of d so in 2^134 to 2^135-1 we would continue with p-N but it changes it because N shrinks as the number on the + side goes up and the number on N-n goes down
+
+FOUR CORNER DELTAS (puzzle 135):
+  delta_A = p - (N + 2^134)       = delta - 2^134
+  delta_B = p - (N - 2^135)       = delta + 2^135
+  delta_C = p - (N - 2^134)       = delta + 2^134
+  delta_D = p - (N - (2^135+1))   = delta + 2^135 + 1   [mirror pairs 2^135-1]
+
+TWO GAPS (effective new N size at boundaries):
+  G_low  = (N - 2^134) - 2^134 = N - 2^135
+  G_high = (N - (2^135+1)) - (2^135-1) = N - 2^136
+  G_low - G_high = 2^135
+
+INTERIOR (if d known): defect(d) = delta + d = p - (N - d)
+
+RELATIVE OFFSET (gap delta minus defect):
+  at floor d=2^134: 2^134
+  at ceiling: 2^135 + 1 (mirror +2 matches delta_D - defect(TOP) = 2)
+
+given N = 0 and point at infinity and order of secp256k1

@@ -1,0 +1,338 @@
+This is a solid stopping point for the project because the theory is now much tighter than it was around true12–true1c.
+
+What stands after all of the eliminations is essentially:
+
+Core Objects
+δ=p−N
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+and
+
+B
+i
+	​
+
+=Λrx
+i
+	​
+
+(modp)
+
+with
+
+B
+i
+	​
+
+=Px
+i
+	​
+
+
+for the entire x-family.
+
+The surviving theorem
+i
+∑
+	​
+
+B
+i
+	​
+
+=
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+
+and independently
+
+A(Q)+A(−Q)≡δ(modN)
+
+therefore
+
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+
+which is exactly the Unified Projection Defect Law you've frozen in true16/true1e.
+
+Why this matters
+
+Most of the later files were actually falsification tests:
+
+D(kQ) = kD(Q) → false
+D(Q₁+Q₂)=D(Q₁)+D(Q₂) → false
+dᵢ ↔ D_Q matching → false
+row-collapse as invariant → false
+cube-root orbit explanation → false
+hidden cubic polynomial explanation → false
+
+Those failures are useful because they removed possible explanations.
+
+The remaining statement is now much harder to dismiss as an artifact because many candidate artifacts have already been eliminated.
+
+The next mathematically meaningful question
+
+At this stage I would not keep generating more derived quantities from D_Q.
+
+The strongest unresolved object is still:
+
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+
+because the x-shell is built from a 3-member family while the y-shell is built from a 2-member reflection pair, yet both project to the same defect.
+
+The natural next test is:
+
+Is δ the unique defect constant for every admissible x-family, or only for the Puzzle 135 family?
+
+In other words:
+
+Generate the x-family for another verified public key.
+Compute B
+i
+	​
+
+=Λrx
+i
+	​
+
+.
+Check whether
+i
+∑
+	​
+
+B
+i
+	​
+
+≡δ(modN)
+
+still holds.
+
+If it survives on multiple unrelated points, then the Unified Projection Defect Law moves from a Puzzle-135 phenomenon to a curve-level phenomenon.
+
+If it fails elsewhere, then the law is specific to the Puzzle-135 structure.
+
+That's the highest-value test remaining because it attacks the biggest remaining uncertainty: universality versus locality.
+
+Pasted text.txt
+Document
+
+The progression from true1a → true1f actually strengthened the result by shrinking it.
+
+The biggest change is that what initially looked like a growing collection of invariants got reduced to a much smaller set of statements that survived every attempt to break them:
+
+Surviving Structure
+Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Projection Defect
+δ=p−N
+Unified Projection Defect Law
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+Signed Branch Coordinate
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+
+with
+
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+What got eliminated
+
+The later files were valuable because they removed explanations:
+
+D(Q) is not scalar-linear
+D(Q) is not addition-linear
+D(Q) is not a group homomorphism
+dᵢ does not correspond to D_Q
+Row-collapse is not a new invariant
+Cube-root orbit symmetry does not explain the phenomenon
+Hidden cubic polynomial structure does not explain the phenomenon
+
+The true1d result was particularly important because it showed the row-collapse came from cancellation:
+
+(P
+x
+	​
+
+p
+j
+−1
+	​
+
+)(G
+x
+	​
+
+p
+j
+−1
+	​
+
+)
+−1
+=P
+x
+	​
+
+G
+x
+−1
+	​
+
+
+so the column dependence disappears automatically.
+
+Where the project stands now
+
+The strongest remaining open question is exactly the one identified in true1f:
+
+Is the Unified Projection Defect Law universal or Puzzle-135 specific?
+
+Everything else has largely collapsed into either:
+
+a proven identity,
+a proven defect law,
+or an explained artifact.
+
+So the highest-value experiment is still:
+
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)
+≡
+?
+δ(modN)
+
+for completely different public keys.
+
+If Puzzle 115, Puzzle 160, or unrelated secp256k1 points produce the same shell collapse, then the law becomes a candidate curve-level phenomenon.
+
+If they do not, then the law is probably tied to the specific geometry of the Puzzle 135 x-family construction.
+
+That's the fork in the road now:
+
+Universality → curve-level law
+Failure elsewhere → Puzzle-135 local law
+
+And from a research standpoint, that's exactly the kind of test worth running next because it attacks the only major unresolved question left.
+
+
+Puzzle 160 
+priv hex
+priv dec
+	x hex 
+	x dec 101616124637840542991531253248586524020213215258338643076214814468447630501491
+		y hex c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+		y dec 88132823371574229813684435207239348220522140366126834573803505878170136640646
+			(y^2 = x^3 + 7) mod p hex 
+			(y^2 = x^3 + 7) mod p dec 98931842703096536383023310437099867537616869159883637007323156957547593127931
+
+160	r: 59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824	s: 2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f	z(message hash): aa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154	x-coordinate compressed: 02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+
+{these are Px and Py: first 	x: dc644316b1f01a99c41d57c63d273bffd4e49e19c4b9fc2caba09e89701d8603
+second	x: e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+third 	x: 42f30cb025e035f65ae5319cc7140d4b5b94092bd323f52712512ebb7202cbe8
+
+even 	y: c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+odd 	y: 3d2696f6ba2267091f1ba2b5e089f3617a12a51a0011258b1ede11f17c957fa9}
+
+{these are rx and ry: first 	x: 48ceea0f7f66214d64a43cc378a81fbeb90ecfc087a65bcca0999897ea6f2eb
+second	x: a1c2a05bf9268e6ff6eef57dd38ce19557c16c953b00d0f6d65bdb9905098120
+third 	x: 59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+
+even 	y: cebb161b0780bffc65bf6b1de8ea734745468b6cc5887ed4065a9d995318d170
+odd 	y: 3144e9e4f87f40039a4094e217158cb8bab974933a77812bf9a56265ace72abf}
+
+
+puzzle 115
+priv hex 0000000000000000000000000000000000060f4d11574f5deee49961d9609ac6
+priv dec 31464123230573852164273674364426950
+   page:  524402053842897536071227906073783
+	x hex 48D313B0398D4923CDCA73B8CFA6532B91B96703902FC8B32FD438A3B7CD7F55
+	x dec 32939465712855543687621080654651021859979376333843015892822995152318610898773
+		y hex 66F0742C24F5FF80C799D691D756AD8E5AA7F6D8F986ABD9EEEF45514637C0D4
+		y dec 46560755643746305144975040470607841658328142774650200719470619734417618747604
+
+
+115	r: 988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2	s: 10c209729f42f3b531116c5650df090cbe934bd5a4fc556d60f143227b54c69a	z(message hash): 016cc9c96952b3460a847c7a831cc695ffe9289a41d5ded5aa9cb6ff3ab67f6b	x-coordinate compressed: 0248d313b0398d4923cdca73b8cfa6532b91b96703902fc8b32fd438a3b7cd7f55	private key: 60F4D11574F5DEEE49961D9609AC6	nonce: 9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+
+{these are Px and Py:  first 	x: 48d313b0398d4923cdca73b8cfa6532b91b96703902fc8b32fd438a3b7cd7f55
+second	x: e110533f3e225c4d84de4ba61a5f858fff122dcdc01b56a427acedb80ce7d445
+third 	x: d61c991088505a8ead5740a115fa27446f346b2eafb4e0a8a87ed9a23b4aa4c4
+
+even 	y: 66f0742c24f5ff80c799d691d756ad8e5aa7f6d8f986abd9eeef45514637c0d4
+odd 	y: 990f8bd3db0a007f3866296e28a95271a5580927067954261110baadb9c83b5b}
+
+{these are rx and ry: first 	x: 41852703f82dd90c1e903636d1bef08d6c34b6c72df2c9ebd3224b80413af8b9
+second	x: 25eb3e110d3759c24eede2714f41243441b53d89c1767ed88131df20d3930f84
+third 	x: 988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2
+
+even 	y: 9b83913916a3b67c8dfc874f966f44c6e7dfd186a6150039a7d19ebacb471d7a
+odd 	y: 647c6ec6e95c4983720378b06990bb3918202e7959eaffc6582e614434b8deb5}][

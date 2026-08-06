@@ -1,0 +1,28 @@
+====================================================================================================
+EXPANDED SOLVER FOR PUZZLE 135
+====================================================================================================
+
+Base candidates (known to be in range):
+  y_echo: 0x4efb7ca982ce423b271ce0b214abdc798e
+  neg_y_echo: 0x61bf53e39d9fdc07d8820f191356ee3b25
+  S_half: 0x585d684690370f217fcf77e59401655a59
+  A: 0x5800000000000000000000000000000000
+  B: 0x6000000000000000000000000000000000
+  C: 0x6800000000000000000000000000000000
+
+After offsets: 126 candidates
+After interpolation: 227 candidates
+After invariants: 229 candidates
+After additional: 229 candidates
+After neg_y_echo large range: 250 candidates
+Total candidates before dedup: 271
+Unique in-range candidates: 254
+
+====================================================================================================
+Testing All Candidates
+====================================================================================================
+
+[100/254] 39% | ETA: 0.1s
+[200/254] 78% | ETA: 0.0s
+
+No solution found.

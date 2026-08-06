@@ -1,0 +1,12 @@
+https://www.wolframalpha.com/input?i=%28sec%5E%282%5E256-2%5E32-977%29%29%28256k1%29
+
+https://www.wolframalpha.com/input?i=%28sec%5E%282%5E256-2%5E32-977%29%29%28256k135%29
+
+# Analysis (added by Mistral Vibe):
+# 34560 = 256 * 135 folding into prime exponent
+# Candidates tested:
+# - 10^40: out of range [2^134, 2^135)
+# - 433*10^39: out of range
+# - 2^135-2^32-977: in range, does NOT match Puzzle 135
+# 10^n space projection: 3*10^40 mod N, 4*10^40 mod N in range but no match
+# Need clarification on "project to 10^n space"

@@ -1,0 +1,101 @@
+AD RECONSTRUCTION GRAMMAR
+
+1. Use d(n) for puzzle n’s scalar value.
+   Do not use k. k is reserved for ECDSA nonce.
+
+2. Operations:
+   A(n) = add d(n)
+   D(n) = double d(n) = 2·d(n)
+
+3. The AD stream must alternate.
+   Valid: A D A D...
+   Valid: D A D A...
+   Invalid: A A or D D
+
+4. The next puzzle starts opposite the previous puzzle’s ending.
+   If previous ends A, next starts D.
+   If previous ends D, next starts A.
+
+5. Puzzle 1 starts the record:
+   P1 = A(1)
+   d(1)=1
+
+6. Puzzle 2 starts with D because P1 ended A:
+   P2 = D(1)+A(1)
+   d(2)=3
+
+7. Puzzle 4 sets the stable record:
+   P4 = D(1)+A(1)+D(1)+A(1)+D(1)
+   d(4)=8
+
+8. From Puzzle 4 forward, the AD alternation never breaks.
+
+9. For target puzzle n, primary anchor is d(n−3).
+
+10. Compute the target band:
+   floor = 2^(n−1)
+   ceiling = 2^n − 1
+
+11. Divide the target band by d(n−3):
+   min_count = ceil(floor / d(n−3))
+   max_count = floor(ceiling / d(n−3))
+
+12. This count tells how many times d(n−3) can be used without exceeding the band.
+
+13. Only d(n−3), the primary anchor, may repeat across multiple AD or DA pairs.
+
+14. Most other previous puzzle values are used once as a complete pair:
+   D(m)+A(m)
+   or
+   A(m)+D(m)
+
+15. A complete pair contributes:
+   D(m)+A(m)=2·d(m)+d(m)=3·d(m)
+   A(m)+D(m)=d(m)+2·d(m)=3·d(m)
+
+16. The arithmetic value of a pair is the same either way, but the order matters because the global AD stream must alternate.
+
+17. After placing the repeated d(n−3) anchor, fill the remaining gap with lower puzzle values.
+
+18. Use lower puzzle values mostly as complete AD/DA pairs.
+
+19. Use single terminal operations only when necessary to land exactly on the solved value.
+
+20. The sequence is ordered.
+   It is not just an unordered sum.
+
+21. Every candidate must obey:
+   no AA
+   no DD
+   correct starting operation
+   correct ending operation
+   target value inside puzzle band
+
+22. Verification gate:
+   candidate d
+   → [d]G
+   → compressed public key
+   → HASH160
+   → must equal puzzle target
+
+23. Anything before the verification gate is candidate generation.
+   Only the EC/HASH160 match proves the key.
+
+Example P20:
+
+d(20)=863317
+
+D(17)+A(17)
++D(17)+A(17)
++D(17)+A(17)
++D(8)+A(8)
++D(6)+A(6)
++D(5)+A(5)
++D(3)+A(3)
++D(2)
++A(1)
+
+Meaning:
+d(17) is the repeated n−3 anchor.
+d(8), d(6), d(5), d(3) are complete pairs.
+d(2) and d(1) are terminal single operations.

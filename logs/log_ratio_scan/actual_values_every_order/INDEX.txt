@@ -1,0 +1,34 @@
+ACTUAL VALUES — every discussed sort order
+Rows sorted by the named key (ascending). Cells = raw values, not ranks.
+Blank = field not available for that puzzle.
+address_payload_div_2_32 == rmd160 (verified identity).
+
+  VALUES_BY_n.csv / VALUES_BY_n.txt
+  VALUES_BY_d.csv / VALUES_BY_d.txt
+  VALUES_BY_log2d.csv / VALUES_BY_log2d.txt
+  VALUES_BY_Px.csv / VALUES_BY_Px.txt
+  VALUES_BY_Py.csv / VALUES_BY_Py.txt
+  VALUES_BY_Pmy.csv / VALUES_BY_Pmy.txt
+  VALUES_BY_neg_y.csv / VALUES_BY_neg_y.txt
+  VALUES_BY_y2_mod_p.csv / VALUES_BY_y2_mod_p.txt
+  VALUES_BY_x3_plus_7_mod_p.csv / VALUES_BY_x3_plus_7_mod_p.txt
+  VALUES_BY_y2_full.csv / VALUES_BY_y2_full.txt
+  VALUES_BY_x3plus7_full.csv / VALUES_BY_x3plus7_full.txt
+  VALUES_BY_p_carry.csv / VALUES_BY_p_carry.txt
+  VALUES_BY_r.csv / VALUES_BY_r.txt
+  VALUES_BY_s.csv / VALUES_BY_s.txt
+  VALUES_BY_z.csv / VALUES_BY_z.txt
+  VALUES_BY_Ry.csv / VALUES_BY_Ry.txt
+  VALUES_BY_rmd160.csv / VALUES_BY_rmd160.txt
+  VALUES_BY_address_payload.csv / VALUES_BY_address_payload.txt
+  VALUES_BY_address_base58_lex.csv / VALUES_BY_address_base58_lex.txt
+  VALUES_BY_sha256_pubkey.csv / VALUES_BY_sha256_pubkey.txt
+  VALUES_BY_sha256_vh.csv / VALUES_BY_sha256_vh.txt
+  VALUES_BY_sha256_chk.csv / VALUES_BY_sha256_chk.txt
+  VALUES_BY_checksum4.csv / VALUES_BY_checksum4.txt
+  VALUES_BY_rmd160_sq_mod_p.csv / VALUES_BY_rmd160_sq_mod_p.txt
+  VALUES_BY_rmd160_cubed_plus_7_mod_p.csv / VALUES_BY_rmd160_cubed_plus_7_mod_p.txt
+  VALUES_BY_address_payload_sq_mod_p.csv / VALUES_BY_address_payload_sq_mod_p.txt
+  VALUES_BY_address_payload_cubed_plus_7_mod_p.csv / VALUES_BY_address_payload_cubed_plus_7_mod_p.txt
+
+Master (by puzzle n): VALUES_MASTER_BY_n.csv

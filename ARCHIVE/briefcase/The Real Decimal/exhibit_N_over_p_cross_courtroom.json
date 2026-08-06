@@ -1,0 +1,28 @@
+{
+  "exhibit": "N_over_p_cross_courtroom",
+  "H_field": "p / p = 1",
+  "N_over_p": {
+    "formula": "N / p = 1 - (p - N) / p",
+    "value": "0.999999999999999999999999999999999999996265544654959865847240417452019444905994634648294218558727753422408961733806752138",
+    "deficit": "0.000000000000000000000000000000000000003734455345040134152759582547980555094005365351705781441272246577591038266193247862",
+    "meaning": "scalar roof N placed under field roof p"
+  },
+  "p_over_N_raw": {
+    "formula": "p / N",
+    "value": "1.00000000000000000000000000000000000000373445534504013415275958254798055509401931150842988026869982832743380540155450194",
+    "note": "raw > 1; not a unit placement inside FN"
+  },
+  "p_mod_N_over_N": {
+    "formula": "(p mod N) / N = (p - N) / N",
+    "value": "0.000000000000000000000000000000000000003734455345040134152759582547980555094019311508429880268699828327433805401554501935",
+    "meaning": "field defect as a fraction of the scalar roof"
+  },
+  "ladder": {
+    "binary": ["p / 2^256", "N / 2^256"],
+    "field": ["N / p"],
+    "scalar": ["(p - N) / N"]
+  },
+  "DELTA": "432420386565659656852420866390673177326",
+  "ruling": "N/p is the scalar roof seen from the field courtroom.",
+  "judge_popcorn": "p/p is the field ceiling; N/p shows how low the scalar ceiling hangs inside that room."
+}

@@ -1,0 +1,55 @@
+P160 sweep: d = f(h160(P_k), eps)
+band [730750818665451459101842416358141509827966271488, 1461501637330902918203684832716283019655932542976)
+index candidates k: 30
+
+  P  9  h160_bits=159  in_band=False  bf=0.488517  cands=34
+  P 25  h160_bits=158  in_band=False  bf=0.184470  cands=30
+  P 35  h160_bits=160  in_band=True  bf=0.928491  cands=204
+  P 40  h160_bits=160  in_band=True  bf=0.168986  cands=205
+  P 45  h160_bits=160  in_band=True  bf=0.876049  cands=204
+  P 51  h160_bits=160  in_band=True  bf=0.870242  cands=204
+  P 59  h160_bits=160  in_band=True  bf=0.385218  cands=205
+  P 65  h160_bits=159  in_band=False  bf=0.323843  cands=32
+  P 67  h160_bits=159  in_band=False  bf=0.451480  cands=33
+  P 70  h160_bits=159  in_band=False  bf=0.366101  cands=33
+  P 71  h160_bits=160  in_band=True  bf=0.929360  cands=203
+  P 72  h160_bits=160  in_band=True  bf=0.495730  cands=206
+  P 74  h160_bits=160  in_band=True  bf=0.243007  cands=205
+  P 75  h160_bits=160  in_band=True  bf=0.459947  cands=207
+  P 76  h160_bits=160  in_band=True  bf=0.054504  cands=202
+  P 80  h160_bits=159  in_band=False  bf=0.437098  cands=33
+  P 85  h160_bits=160  in_band=True  bf=0.601677  cands=207
+  skip P89 (no h160)
+  P 90  h160_bits=160  in_band=True  bf=0.628279  cands=207
+  P100  h160_bits=160  in_band=True  bf=0.559805  cands=207
+  skip P101 (no h160)
+  P115  h160_bits=160  in_band=True  bf=0.828588  cands=204
+  P125  h160_bits=160  in_band=True  bf=0.929919  cands=204
+  P130  h160_bits=160  in_band=True  bf=0.267857  cands=206
+  P135  h160_bits=158  in_band=False  bf=0.232168  cands=30
+  P140  h160_bits=160  in_band=True  bf=0.997901  cands=204
+  P145  h160_bits=159  in_band=False  bf=0.354480  cands=33
+  P150  h160_bits=160  in_band=True  bf=0.754282  cands=206
+  P155  h160_bits=159  in_band=False  bf=0.420097  cands=34
+  P160  h160_bits=160  in_band=True  bf=0.814700  cands=201
+
+total unique in-band candidates: 4183
+EC verify (d*G == P160)...
+checked 4183 in 1.6s
+
+=== HITS: 0 ===
+  (none)
+
+=== closest band_frac to h160(P160)=0.8147 ===
+  P160:h160                      bf=0.814700  diff=0.000000
+  P160:lo+frac(h)                bf=0.814700  diff=0.000000
+  P160:h+-79228162514264337593543950336 bf=0.814700  diff=0.000000
+  P160:h+-576460752303423488     bf=0.814700  diff=0.000000
+  P160:h+-288230376151711744     bf=0.814700  diff=0.000000
+  P160:h+-144115188075855872     bf=0.814700  diff=0.000000
+  P160:h+-72057594037927936      bf=0.814700  diff=0.000000
+  P160:h+-72057594037927935      bf=0.814700  diff=0.000000
+  P160:h+-281474976710656        bf=0.814700  diff=0.000000
+  P160:h+-1099511627776          bf=0.814700  diff=0.000000
+  P160:h+-5457912602             bf=0.814700  diff=0.000000
+  P160:h+-4294967296             bf=0.814700  diff=0.000000

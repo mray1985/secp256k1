@@ -1,0 +1,45 @@
+Exactly. r correlates on both sides because r is an x-coordinate.
+
+For the nonce point:
+
+R = kG = (x, y)
+
+the mirrored nonce is:
+
+-R = (N-k)G = (x, p-y)
+
+So both scalars:
+
+k
+N-k
+
+produce the same x-coordinate, therefore the same ECDSA r:
+
+x(kG) mod N = r
+x((N-k)G) mod N = r
+
+That means if we test a candidate v as a nonce, we must test both:
+
+v
+N-v
+
+because either side can satisfy the same r.
+
+Then each side gives a different private-key reconstruction:
+
+d1 = (s*v - m) * r^-1 mod N
+d2 = (s*(N-v) - m) * r^-1 mod N
+
+Only one, if either, should pass the final Puzzle 135 public-key check:
+
+dG.x = X_puzzle
+
+So the corrected verification loop is:
+
+for each candidate v:
+    test k = v
+    test k = N-v
+
+    if x(kG) mod N == r:
+        d = (s*k - m) * r^-1 mod N
+        check dG.x == Puzzle135_X

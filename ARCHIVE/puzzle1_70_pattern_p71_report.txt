@@ -1,0 +1,150 @@
+PUZZLE 1-70 PATTERN SCAN -> P71 EXTRAPOLATION
+analyzed: 69/70  errors: 1
+
+=== BRIDGE (corrected lambda) ===
+  LAW-P+LN+regression pass: 69/69
+  Lambda_p unified (RSZ only): 28/2 with RSZ
+  P70 has RSZ: True  unified: False
+
+=== OFFSET / GAP (full 1–70) ===
+  offset_bits: min=0 max=67 median=34
+  gap (H-ob):  min=1 max=5 median=2
+  gap counts: {1: 31, 2: 23, 3: 6, 4: 8, 5: 1}
+  top offset_bits: [(4, 3), (10, 3), (28, 3), (31, 3), (0, 2), (17, 2), (21, 2), (25, 2)]
+
+  H-10 (ob==H-10): 0/69
+  H-1  (ob==H-1):  31/69
+  H-2  (ob==H-2):  23/69
+  gap==1: 31/69
+  gap==2: 23/69
+
+=== ROW LANDING (epsilon) ===
+  row == n mod 3: 21/69
+  row 0: n=27  gap mode=[(1, 12), (2, 8), (4, 4)]  H-10=0/27
+  row 1: n=24  gap mode=[(2, 11), (1, 9), (4, 3)]  H-10=0/24
+  row 2: n=18  gap mode=[(1, 10), (2, 4), (3, 3)]  H-10=0/18
+
+=== RECENT P60–P70 ===
+  puzzles: [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+  rows:    [0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 2]
+  gaps:    [1, 2, 1, 1, 4, 4, 1, 1, 1, 2, 4]
+  ob_bits: [59, 59, 61, 62, 60, 61, 65, 66, 67, 67, 66]
+  gap distribution: {1: 6, 2: 2, 4: 3}
+  offset_bits distribution: {59: 2, 61: 2, 62: 1, 60: 1, 65: 1, 66: 2, 67: 2}
+
+=== P68–P70 CHAIN ===
+  P68: row=0 gap=1 ob=67 shelf2_bits=68
+  P69: row=1 gap=2 ob=67 shelf2_bits=69
+  P70: row=2 gap=4 ob=66 shelf2_bits=70
+
+  row sequence 68→69→70: 0→1→2  (n mod 3: 68%3=2, 69%3=0, 70%3=1)
+  gap sequence: 1→2→4
+  ob sequence:  67→67→66
+
+=== P71 EXTRAPOLATION (unsolved) ===
+  predicted epsilon row (n mod 3): 2
+  P60–P70 gap∈{1,2}: 8/11
+
+  Gap-tier priors for P71:
+    gap=1 → offset_bits=70  interval width 2^69
+    gap=2 → offset_bits=69  interval width 2^68
+    H-10  → offset_bits=61  (only 1 hit in full 1–70: P115 analog)
+
+  shelf2 P69→P70 delta bits: 69
+  linear shelf2 guess (P70+delta): 163971547588256929660
+  avg-delta shelf2 guess:          68302484156691343159
+
+  Candidate d from shelf2 + offset (NOT verified — need EC):
+    gap1/ob70 P70 +: 1512724615555311433764
+    gap1/ob70 P70 +mid: 1807872520734664259619
+    gap2/ob69 P70 +: 1217576710375958607908
+    gap2/ob69 P70 +mid: 1365150662965635020835
+
+  D/A mid-band anchor (puzzle71_da_draft):
+    1770887431076116955135  in_band=True
+  band floor 2^70: 1180591620717411303424
+  band ceil  2^71-1: 2361183241434822606847
+
+=== PER-PUZZLE TABLE (n row gap ob RSZ bridge) ===
+  n row gap  ob RSZ br  note
+------------------------------------------------
+  1   0   1   0   N  Y  gap1
+  2   2   2   0   N  Y  gap2
+  3   1   2   1   N  Y  gap2
+  4   0   1   3   N  Y  gap1
+  5   0   1   4   N  Y  gap1
+  6   2   2   4   N  Y  gap2
+  7   1   3   4   N  Y  
+  8   0   2   6   N  Y  gap2
+  9   1   2   7   N  Y  gap2
+ 10   1   2   8   N  Y  gap2
+ 11   2   1  10   N  Y  gap1
+ 12   0   2  10   N  Y  gap2
+ 13   2   1  12   N  Y  gap1
+ 14   1   4  10   N  Y  
+ 15   2   1  14   N  Y  gap1
+ 16   1   1  15   N  Y  gap1
+ 17   0   4  13   N  Y  
+ 18   0   1  17   N  Y  gap1
+ 19   2   1  18   N  Y  gap1
+ 20   1   1  19   N  Y  gap1
+ 21   1   4  17   N  Y  
+ 22   1   1  21   N  Y  gap1
+ 23   2   1  22   N  Y  gap1
+ 24   2   1  23   N  Y  gap1
+ 25   0   4  21   N  Y  
+ 26   1   1  25   N  Y  gap1
+ 27   0   2  25   N  Y  gap2
+ 28   2   2  26   N  Y  gap2
+ 29   2   1  28   N  Y  gap1
+ 30   0   2  28   N  Y  gap2
+ 31   2   3  28   N  Y  
+ 32   0   1  31   N  Y  gap1
+ 33   1   2  31   N  Y  gap2
+ 34   0   3  31   N  Y  
+ 35   2   1  34   N  Y  gap1
+ 36   1   1  35   N  Y  gap1
+ 37   2   3  34   N  Y  
+ 38   1   2  36   N  Y  gap2
+ 39   0   2  37   N  Y  gap2
+ 40   1   2  38   N  Y  gap2
+ 41   1   1  40   N  Y  gap1
+ 42   2   3  39   N  Y  
+ 43   1   2  41   N  Y  gap2
+ 44   1   1  43   N  Y  gap1
+ 45   2   2  43   N  Y  gap2
+ 46   2   1  45   N  Y  gap1
+ 47   0   2  45   N  Y  gap2
+ 48   1   2  46   N  Y  gap2
+ 49   0   1  48   N  Y  gap1
+ 50   2   1  49   N  Y  gap1
+ 51   0   1  50   N  Y  gap1
+ 53   0   4  49   N  Y  
+ 54   1   1  53   N  Y  gap1
+ 55   0   2  53   N  Y  gap2
+ 56   0   5  51   N  Y  
+ 57   1   2  55   N  Y  gap2
+ 58   0   3  55   N  Y  
+ 59   0   2  57   N  Y  gap2
+ 60   0   1  59   N  Y  gap1
+ 61   1   2  59   N  Y  gap2
+ 62   0   1  61   N  Y  gap1
+ 63   1   1  62   N  Y  gap1
+ 64   0   4  60   N  Y  
+ 65   1   4  61   Y  Y  
+ 66   0   1  65   N  Y  gap1
+ 67   0   1  66   N  Y  gap1
+ 68   0   1  67   N  Y  gap1
+ 69   1   2  67   N  Y  gap2
+ 70   2   4  66   Y  Y  
+
+ERRORS:
+  P52: P52: expected 3 Px cube roots, got 0
+
+=== VERDICT FOR P71 ===
+  1. Bridge laws will pass once P71 pubkey+RSZ wired like P70 (lambda unified).
+  2. Scalar: gap-tier {1,2} dominates P60–P70 → search ob∈{69,70} off shelf2, not Lambda.
+  3. Row lock: expect row=2 (71 mod 3).
+  4. H-10 is NOT a 1–70 pattern (0/70 hits here; P115 is special).
+  5. D/A chain says P71 opens D(68) after P70 ends A — orthogonal to bridge offset.
+  6. No closed form d from Lambda/shift; kangaroo/BSGS in ~2^68–2^69 offset window.

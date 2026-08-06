@@ -1,0 +1,55 @@
+HINGE NORMALIZATION: 3 x-slots x (d, N-d, x, y, -y)
+H=128.345702146609  {H}=0.345702  {H/2}=0.172851
+solved puzzles: 82  (3 slots x 2 y = 6 coord rows each)
+
+Per row i: same d, N-d; x_i = cube root slot; y_i, -y_i from y_roots(x_i)
+
+=== E on TRUE pubkey (known x slot + correct y) ===
+  E_x: mean=+0.4126 std=0.2963 range=[-0.1718,+0.8233]
+  E_y: mean=+0.2703 std=0.2643 range=[-0.3302,+0.6350]
+  corr(n, E_x)=-0.1993  corr(n, E_y)=+0.0584
+
+=== E after MIN over 3 slots x 2 y branches (oracle best) ===
+  min|E_x|: mean=0.2184  max=0.7076
+  min|E_y|: mean=0.2457  max=0.6090
+
+=== scalar d / N-d (same all 3 rows) ===
+  E_d:  mean=+0.3582
+  E_nd: mean=-0.1729
+  min(|E_d|,|E_nd|) mean=0.1457
+
+=== cross fractional (true slot, true y) ===
+  {log2 sqrt x}-{log2 sqrt d}: mean=+0.054427 std=0.405571
+  {log2 sqrt y}-{log2 sqrt d}: mean=+0.104498
+
+=== P135-style: true row detail (anchors) ===
+  P130: slot=0 E_x=+0.143554 E_y=+0.385942 E_d=+0.676035 E_nd=-0.172851 min18 Ey=-0.189000
+  P135 (unsolved): true slot=0
+      slot0 y: E_x=+0.001119 E_y=+0.285455 x-d=+0.001119 (no d)
+    * slot0 -y: E_x=+0.001119 E_y=-0.006126 x-d=+0.001119 (no d)
+      slot1 y: E_x=+0.247813 E_y=+0.285455 x-d=+0.247813 (no d)
+      slot1 -y: E_x=+0.247813 E_y=-0.006126 x-d=+0.247813 (no d)
+      slot2 y: E_x=+0.286386 E_y=+0.285455 x-d=+0.286386 (no d)
+      slot2 -y: E_x=+0.286386 E_y=-0.006126 x-d=+0.286386 (no d)
+
+=== all 3 slots for P130 (example) ===
+  slot0 y  TRUE E_x=+0.143554 E_y=+0.385942 E_d=+0.676035 x-d=-0.532480
+  slot0 -y      E_x=+0.143554 E_y=-0.189000 E_d=+0.676035 x-d=-0.532480
+  slot1 y       E_x=+0.523811 E_y=+0.385942 E_d=+0.676035 x-d=-0.152223
+  slot1 -y      E_x=+0.523811 E_y=-0.189000 E_d=+0.676035 x-d=-0.152223
+  slot2 y       E_x=+0.794423 E_y=+0.385942 E_d=+0.676035 x-d=+0.118388
+  slot2 -y      E_x=+0.794423 E_y=-0.189000 E_d=+0.676035 x-d=+0.118388
+
+=== tightest |E_y| true pubkey ===
+  P115 slot=0 E_y=-0.002877 E_x=-0.079675 E_d=+0.126780
+  P 53 slot=0 E_y=-0.014664 E_x=+0.812015 E_d=+0.120514
+  P  3 slot=1 E_y=+0.024499 E_x=+0.094724 E_d=+0.230826
+  P 80 slot=0 E_y=-0.035694 E_x=+0.316196 E_d=+0.762649
+  P 12 slot=0 E_y=-0.038983 E_x=+0.386639 E_d=+0.521965
+  P 37 slot=2 E_y=-0.043748 E_x=+0.311033 E_d=+0.099566
+  P 36 slot=1 E_y=+0.045665 E_x=+0.572691 E_d=+0.478613
+  P 57 slot=1 E_y=+0.055994 E_x=+0.510884 E_d=+0.297155
+
+=== verdict ===
+  Wide spread on true branch; oracle min only modestly better
+  mean|E_y| true=0.3272  oracle=0.2457

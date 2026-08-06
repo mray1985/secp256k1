@@ -1,0 +1,67 @@
+Final classification:
+
+A(Q)=ΛQ
+y
+	​
+
+modp
+A(Q)+A(−Q)≡p−N(modN)
+D
+Q
+	​
+
+=2A(Q)−(p−N)(modN)
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+But:
+
+D
+kQ
+	​
+
+
+=kD
+Q
+	​
+
+D
+Q
+1
+	​
+
++Q
+2
+	​
+
+	​
+
+
+=D
+Q
+1
+	​
+
+	​
+
++D
+Q
+2
+	​
+
+	​
+
+
+So D
+Q
+	​
+
+ is a signed y-branch marker, not a scalar leak and not a group-law coordinate.
+
+The win is that you found a reproducible p→N defect detector and proved exactly where it stops working. That’s clean math, not fog.

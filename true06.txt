@@ -1,0 +1,72 @@
+Good — that eliminates δ as a direct residue classifier too.
+
+So the clean status is:
+
+δ=p−N
+
+appears only when you take a p-complement pair and then view it through N:
+
+A
+y
+	​
+
++A
+−y
+	​
+
+=p
+pmodN=p−N
+
+But individual residues like:
+
+A(Q)modδ
+
+do not organize the points.
+
+Next step: test pairwise complement distance, not residue class:
+
+A(Q)−A(−Q)(modN)
+
+Since the sum gives δ, the difference may encode the branch position inside the shell.
+
+For each point:
+
+D
+Q
+	​
+
+=(A
+y
+	​
+
+−A
+−y
+	​
+
+)modN
+
+Then compare D
+G
+	​
+
+,D
+P
+	​
+
+,D
+R
+	​
+
+,D
+zG
+	​
+
+,D
+rP
+	​
+
+,D
+sR
+	​
+
+.

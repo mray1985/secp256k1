@@ -1,0 +1,52 @@
+Yep — that correction matters a lot.
+
+The frozen theorem depends on signed D, not reduced D.
+
+Correct object:
+
+D=δ
+N
+−1
+	​
+
+−δ
+p
+−1
+	​
+
+
+as an integer difference.
+
+Not:
+
+D=(δ
+N
+−1
+	​
+
+−δ
+p
+−1
+	​
+
+)modp
+
+That distinction explains the TRUE63 mismatch.
+
+Correct frozen residues:
+
+Dmod9=4
+∣D∣
+−1
+modN≡7(mod9)
+∣D∣
+−1
+modp≡2(mod9)
+
+So TRUE64 confirms the theorem, but also tightens the definition:
+
+D must remain signed until after mod-9 inspection.
+Use |D| only for inverse scaling.
+Do not reduce D mod p before testing mod 9.
+
+That is the version to carry forward.

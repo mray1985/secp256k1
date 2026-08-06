@@ -1,0 +1,4 @@
+  File "C:\users\mitch\desktop\secp256k1\temp_complexity_p.py", line 4
+    n^3 â‰¡ N (mod p)
+         ^
+SyntaxError: invalid character '‰' (U+2030)

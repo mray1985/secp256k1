@@ -1,0 +1,14 @@
+P160 MASSIVE POWER FUZZ
+target_points=19,000,000,000,000
+fuzz=±3,329,828,250
+max_pow=158
+anchors=9
+est_candidates=18,999,999,997,353
+workers=3
+target Px row1: 101616124637840542991531253248586524020213215258338643076214814468447630501491
+
+WARNING: 19T-class target is not practical on one CPU.
+This run uses the same grid formula but will take years unless sharded/GPU.
+Consider --export-only to plan shards, or lower --target-points to 19e9.
+
+ETA rough @ 7,500/s: 703,703.7 hours (29,321.0 days)

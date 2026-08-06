@@ -1,0 +1,43 @@
+=== SOLVE BATCH (always P135–P160) ===
+puzzles: [135, 140, 145, 150, 155, 160]
+offset_law_row=0 for all (n≡0 mod 5 cluster)
+
+--- P135 predicted offset_bits (row 0): [132, 133, 134] + gap±1 ---
+=== P135 px_slot=2 offset_law_row=0 shelf2_bits=135 gap_bits=133 ===
+  predicted offset_bits: [132, 133, 134] (+ gap±1)
+  filtered candidates: 154  hits: 0
+
+--- P140 predicted offset_bits (row 0): [137, 138, 139] + gap±1 ---
+=== P140 px_slot=1 offset_law_row=0 shelf2_bits=140 gap_bits=134 ===
+  predicted offset_bits: [137, 138, 139] (+ gap±1)
+  filtered candidates: 197  hits: 0
+
+--- P145 predicted offset_bits (row 0): [142, 143, 144] + gap±1 ---
+=== P145 px_slot=1 offset_law_row=0 shelf2_bits=145 gap_bits=143 ===
+  predicted offset_bits: [142, 143, 144] (+ gap±1)
+  filtered candidates: 192  hits: 0
+
+--- P150 predicted offset_bits (row 0): [147, 148, 149] + gap±1 ---
+=== P150 px_slot=0 offset_law_row=0 shelf2_bits=150 gap_bits=0 ===
+  predicted offset_bits: [147, 148, 149] (+ gap±1)
+  filtered candidates: 178  hits: 0
+
+--- P155 predicted offset_bits (row 0): [152, 153, 154] + gap±1 ---
+=== P155 px_slot=0 offset_law_row=0 shelf2_bits=155 gap_bits=0 ===
+  predicted offset_bits: [152, 153, 154] (+ gap±1)
+  filtered candidates: 166  hits: 0
+
+--- P160 predicted offset_bits (row 0): [157, 158, 159] + gap±1 ---
+=== P160 px_slot=1 offset_law_row=0 shelf2_bits=160 gap_bits=159 ===
+  predicted offset_bits: [157, 158, 159] (+ gap±1)
+  filtered candidates: 177  hits: 0
+
+=== SUMMARY ===
+P135: 154 candidates, 0 EC hit(s)
+P140: 197 candidates, 0 EC hit(s)
+P145: 192 candidates, 0 EC hit(s)
+P150: 178 candidates, 0 EC hit(s)
+P155: 166 candidates, 0 EC hit(s)
+P160: 177 candidates, 0 EC hit(s)
+csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\solve_batch.csv
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\solve_batch.log

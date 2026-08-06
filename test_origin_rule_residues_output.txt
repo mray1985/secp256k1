@@ -1,0 +1,170 @@
+================================================================================
+ORIGIN RULE TEST - Residues (true35.txt)
+================================================================================
+
+Hypothesis: Omega correlates with (r*priv - z) mod 3
+ECDSA equation: s*k = z + r*priv (mod N)
+Coupled residue: r*priv - z = -s*k (mod N)
+
+================================================================================
+DATA AVAILABILITY
+================================================================================
+
+Omega classification (from sum(Px) - sum(rx)):
+  Puzzle 90: Omega = +0 -> dual-closure (self-dual)
+  Puzzle 100: Omega = -1 -> rx-closure (inverse)
+  Puzzle 115: Omega = -1 -> rx-closure (inverse)
+  Puzzle 120: Omega = +1 -> Px-closure (forward)
+  Puzzle 135: Omega = +1 -> Px-closure (forward)
+  Puzzle 150: Omega = +1 -> Px-closure (forward)
+  Puzzle 160: Omega = -1 -> rx-closure (inverse)
+
+================================================================================
+ECDSA PARAMETERS AVAILABILITY
+================================================================================
+
+Available ECDSA parameters:
+  Puzzle 115: priv = 0x60f4d11574f5deee49961d9609ac6
+  Puzzle 115: nonce k = 0x9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+  Puzzle 115: r = 0x988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2
+  Puzzle 160: r = 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+
+MISSING for Puzzle 115: s, z (message hash)
+MISSING for Puzzle 160: priv, nonce k, s, z
+MISSING for Puzzles 90, 100, 120, 135, 150: ALL ECDSA parameters
+
+================================================================================
+CURRENT STATUS
+================================================================================
+
+Without s and z values, we CANNOT compute (r*priv - z) mod 3.
+
+The Origin Rule test requires:
+  1. For each puzzle: priv, r, s, z (minimum)
+  2. Optionally: nonce k for verification
+
+Known sources for ECDSA data:
+  - Puzzle 115: priv and nonce in true1f_universality_test.py
+  - Puzzle 115, 160: r values in true1f_simple_test.py
+  - Puzzles 90, 100, 120, 135, 150, 160: Px/rx coordinates in test_*.py
+  - Missing: s and z for all puzzles
+
+================================================================================
+RESIDUES OF AVAILABLE DATA
+================================================================================
+
+Puzzle 115 (Omega = -1, rx-closure, inverse):
+  priv = 0x60f4d11574f5deee49961d9609ac6
+  r = 0x988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2
+  nonce k = 0x9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+
+  Modular residues:
+    mod 2: priv = 0, r = 0, k = 0
+    mod 3: priv = 0, r = 2, k = 0
+    mod 5: priv = 0, r = 3, k = 3
+    mod 7: priv = 1, r = 5, k = 2
+    mod 9: priv = 3, r = 8, k = 3
+    mod 11: priv = 9, r = 4, k = 8
+
+Puzzle 160 (Omega = -1, rx-closure, inverse):
+  r = 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+
+  Modular residues:
+    mod 2: r = 0
+    mod 3: r = 1
+    mod 5: r = 0
+    mod 7: r = 3
+    mod 9: r = 7
+    mod 11: r = 2
+
+Using rx3 values as proxy for r (SPECULATIVE):
+
+Puzzle 90 (Omega = +0):
+  rx3 = 0x4b316f08ef8adf25eda1edce7818965563dfc9770512e1dfa69519c45af40f1c
+  Modular residues:
+    mod 2: rx3 = 0
+    mod 3: rx3 = 1
+    mod 5: rx3 = 1
+    mod 7: rx3 = 0
+    mod 9: rx3 = 4
+    mod 11: rx3 = 3
+
+Puzzle 100 (Omega = -1):
+  rx3 = 0x4d4a8ca2adbeda34795378e6915188d68793b3867c3875a043ec6f8d6db34d92
+  Modular residues:
+    mod 2: rx3 = 0
+    mod 3: rx3 = 2
+    mod 5: rx3 = 4
+    mod 7: rx3 = 0
+    mod 9: rx3 = 8
+    mod 11: rx3 = 9
+
+Puzzle 120 (Omega = +1):
+  rx3 = 0xa285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a
+  Modular residues:
+    mod 2: rx3 = 0
+    mod 3: rx3 = 1
+    mod 5: rx3 = 0
+    mod 7: rx3 = 4
+    mod 9: rx3 = 1
+    mod 11: rx3 = 7
+
+Puzzle 135 (Omega = +1):
+  rx3 = 0x397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+  Modular residues:
+    mod 2: rx3 = 1
+    mod 3: rx3 = 1
+    mod 5: rx3 = 4
+    mod 7: rx3 = 1
+    mod 9: rx3 = 1
+    mod 11: rx3 = 5
+
+Puzzle 150 (Omega = +1):
+  rx3 = 0xf9746fbc71b4907756f69b3f55625d47b60ecd909233d3b1116860ebeafec6ef
+  Modular residues:
+    mod 2: rx3 = 1
+    mod 3: rx3 = 1
+    mod 5: rx3 = 4
+    mod 7: rx3 = 5
+    mod 9: rx3 = 1
+    mod 11: rx3 = 1
+
+Puzzle 160 (Omega = -1):
+  rx3 = 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+  Modular residues:
+    mod 2: rx3 = 0
+    mod 3: rx3 = 1
+    mod 5: rx3 = 0
+    mod 7: rx3 = 3
+    mod 9: rx3 = 7
+    mod 11: rx3 = 2
+
+================================================================================
+NEXT STEPS (from true35.txt)
+================================================================================
+
+To properly test the Origin Rule, we need:
+
+1. Locate or compute s and z for each puzzle
+   - z = HASH(message) - need the signed message for each puzzle
+   - s = signature component - need the full signature
+
+2. Compute for each puzzle:
+   - (r·priv - z) mod 3
+   - (r·priv - z) mod 9
+   - (r·priv - z) mod N and classify by sign relative to N/2
+
+3. Test correlation:
+   Omega = +1  =>  (r*priv - z) mod 3 = ?
+   Omega = -1  =>  (r*priv - z) mod 3 = ?
+   Omega = 0   =>  (r*priv - z) mod 3 = ?
+
+Expected result: A clean mapping like:
+   Omega = +1  =>  (r*priv - z) = 1 mod 3
+   Omega = -1  =>  (r*priv - z) = 2 mod 3
+   Omega = 0   =>  (r*priv - z) = 0 mod 3
+
+This would establish that Omega originates from a triadic partition
+in the initialization parameters, driven by secp256k1's structure
+(p = 1 mod 3, N = 1 mod 3).
+

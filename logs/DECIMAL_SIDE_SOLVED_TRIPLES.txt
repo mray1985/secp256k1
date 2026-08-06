@@ -1,0 +1,56 @@
+========================================================================================
+DECIMAL-SIDE SOLVED TRIPLES  (0.x.y strings; EC = calibration only)
+========================================================================================
+
+Closed branches
+  - packed U = x*10^78+y with unpack/EC/repack Delta-U: NEGATIVE (no reusable delta)
+  - n.C / A+=10^L prefix counter: REJECTED (wrong object)
+
+Representation
+  0.x.y = 0.<x 78 digits>.<y 78 digits>
+  Arithmetic under test: digitwise decimal add/carry on those strings.
+  Not: curve addition inside a packed integer.
+
+Solved keys loaded: 82  (excluded puzzles=[135])
+
+Fully solved closed additive triples: 1
+  puzzles 1+3->4  d: 1+7=8
+
+Pair sample: train=400  holdout=100  (from 3403 pairs)
+
+----------------------------------------------------------------------------------------
+Hypothesis under test
+  digitwise:  x_c digits ?= schoolbook_add(x_a, x_b)
+              y_c digits ?= schoolbook_add(y_a, y_b)
+  (i.e. whether 0.xa.ya 'decimal-add' 0.xb.yb predicts 0.xc.yc)
+----------------------------------------------------------------------------------------
+TRAIN: n=400
+  mean digit match  x=0.1046  y=0.0998
+  exact block match x=0/400  y=0/400  both+no overflow=0/400
+  overflow_x counts={0: 400}  overflow_y={0: 400}
+  chance baseline per digit ~ 0.10
+  x position hit rates: best pos 0=0.505  worst pos 33=0.065  mean=0.105
+  y position hit rates: best pos 0=0.425  worst pos 40=0.068  mean=0.100
+
+HOLDOUT: n=100
+  mean digit match  x=0.1112  y=0.1078
+  exact block match x=0/100  y=0/100  both+no overflow=0/100
+  overflow_x counts={0: 100}  overflow_y={0: 100}
+  chance baseline per digit ~ 0.10
+  x position hit rates: best pos 0=0.490  worst pos 60=0.030  mean=0.111
+  y position hit rates: best pos 0=0.400  worst pos 37=0.020  mean=0.108
+
+----------------------------------------------------------------------------------------
+Null: digit-shuffle of x_b/y_b on holdout (destroys pair structure)
+----------------------------------------------------------------------------------------
+  null mean digit match x=0.0954  y=0.1005
+  hold mean digit match x=0.1112  y=0.1078
+  lift vs null x=+0.0158  y=+0.0073
+
+========================================================================================
+VERDICT
+========================================================================================
+  Schoolbook digitwise add on 0.x.y does NOT predict P_c for d_a+d_b.
+  Correlation falsified for this rule (held-out).
+  Next rules (if any) must beat holdout + null on solved triples only.
+  Puzzle 135 remains unused.

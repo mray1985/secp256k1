@@ -1,0 +1,7 @@
+PUZZLE 71 SOLVED
+source=baby_h160_scan
+d=1180591620717411303466
+hex=0x40000000000000002a
+address=1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU
+j=0 r=42 M=100
+expected_address=1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU

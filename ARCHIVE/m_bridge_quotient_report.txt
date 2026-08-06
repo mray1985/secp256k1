@@ -1,0 +1,206 @@
+M-BRIDGE + QUOTIENT LAYER REPORT
+Test bridge objects against m=d*k^-1 and m_inv=k*d^-1 (not d alone).
+Integer quotients b_i = (Λ_i*qx_i - Qx_i)/N per own-row Λ.
+
+P65  d_bits=65  k_bits=255  m_bits=256  m_inv_bits=255
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    Lambda_3: nearest=m dist_LO_bits=56
+    Lambda_N_eps: nearest=m_inv dist_LO_bits=58
+    Lambda_2: nearest=m_inv dist_LO_bits=58
+  quotient tuple: b_bits=(255,251,250)  hits=none
+
+P70  d_bits=70  k_bits=255  m_bits=256  m_inv_bits=250
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    k: nearest=m_inv dist_LO_bits=64
+    GAP: nearest=m dist_LO_bits=64
+    Lambda_N_eps: nearest=m_inv dist_LO_bits=64
+  quotient tuple: b_bits=(254,254,256)  hits=none
+
+P75  d_bits=75  k_bits=253  m_bits=256  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    C_floor: nearest=m dist_LO_bits=65
+    GAP: nearest=m dist_LO_bits=70
+    shelf2: nearest=m dist_LO_bits=70
+  quotient tuple: b_bits=(255,253,255)  hits=none
+
+P80  d_bits=80  k_bits=256  m_bits=256  m_inv_bits=255
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    Lambda_2: nearest=m dist_LO_bits=74
+    P_over_R_pack_mod_N: nearest=m_inv dist_LO_bits=74
+    shelf2: nearest=m_inv dist_LO_bits=75
+  quotient tuple: b_bits=(251,255,254)  hits=none
+
+P85  d_bits=85  k_bits=253  m_bits=255  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    d: nearest=m_inv dist_LO_bits=78
+    Lambda_3: nearest=m_inv dist_LO_bits=81
+    P_over_R_pack_mod_N: nearest=m_inv dist_LO_bits=81
+  quotient tuple: b_bits=(255,252,252)  hits=none
+
+P90  d_bits=90  k_bits=251  m_bits=256  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    R_concat_mod_N: nearest=m_inv dist_LO_bits=84
+    GAP: nearest=m dist_LO_bits=85
+    b2_own: nearest=m dist_LO_bits=85
+  quotient tuple: b_bits=(255,254,255)  hits=none
+
+P95  d_bits=95  k_bits=256  m_bits=255  m_inv_bits=255
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    P_over_R_pack_mod_N: nearest=m_inv dist_LO_bits=88
+    Lambda_p: nearest=m_inv dist_LO_bits=90
+    Lambda_family: nearest=m dist_LO_bits=90
+  quotient tuple: b_bits=(252,256,254)  hits=none
+
+P100  d_bits=100  k_bits=253  m_bits=256  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    b3_own: nearest=m_inv dist_LO_bits=91
+    Lambda_p: nearest=m dist_LO_bits=94
+    k: nearest=m dist_LO_bits=97
+  quotient tuple: b_bits=(246,255,252)  hits=none
+
+P105  d_bits=105  k_bits=249  m_bits=250  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    b1_own: nearest=m dist_LO_bits=101
+    Lambda_N_eps: nearest=m dist_LO_bits=101
+    Lambda_2: nearest=m dist_LO_bits=101
+  quotient tuple: b_bits=(254,255,251)  hits=none
+
+P110  d_bits=110  k_bits=256  m_bits=253  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    Lambda_p: nearest=m_inv dist_LO_bits=105
+    b1_own: nearest=m dist_LO_bits=105
+    C_floor: nearest=m dist_LO_bits=106
+  quotient tuple: b_bits=(249,253,253)  hits=none
+
+P115  d_bits=115  k_bits=256  m_bits=254  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    Lambda_N_eps: nearest=m dist_LO_bits=110
+    Lambda_1: nearest=m dist_LO_bits=110
+    Lambda_family: nearest=m dist_LO_bits=110
+  quotient tuple: b_bits=(249,255,255)  hits=none
+
+P120  d_bits=120  k_bits=253  m_bits=256  m_inv_bits=255
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    C_floor: nearest=m dist_LO_bits=114
+    Lambda_family: nearest=m dist_LO_bits=115
+    b3_own: nearest=m dist_LO_bits=115
+  quotient tuple: b_bits=(253,256,253)  hits=none
+
+P125  d_bits=125  k_bits=256  m_bits=255  m_inv_bits=256
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    P_concat_mod_N: nearest=m dist_LO_bits=117
+    b3_own: nearest=m dist_LO_bits=119
+    C_floor: nearest=m_inv dist_LO_bits=120
+  quotient tuple: b_bits=(255,252,255)  hits=none
+
+P130  d_bits=130  k_bits=255  m_bits=256  m_inv_bits=255
+  exact == m: m
+  exact == m_inv: m_inv
+  exact == d: d
+  exact == k: k
+  closest mod LO to m/m_inv:
+    m: nearest=m dist_LO_bits=0
+    m_inv: nearest=m_inv dist_LO_bits=0
+    R_concat_mod_N: nearest=m dist_LO_bits=125
+    P_concat_mod_N: nearest=m_inv dist_LO_bits=125
+    Lambda_family: nearest=m_inv dist_LO_bits=126
+  quotient tuple: b_bits=(256,248,251)  hits=none
+
+SUMMARY: puzzles with RSZ+d: 14
+  any bridge object == m: 14/14
+  any bridge object == m_inv: 14/14
+
+Note: P115 shows m and m_inv hit exactly as objects; Lambda/Cq/b_i do not.
+Shift s_i = Λ_i - Λ_ε is bookkeeping (78/78); not m or d.
+
+P135 (no known d/k — structural only)
+
+  Shift identity (eps row=3):
+    s_1 = Λ_1-Λ_ε  bits=256
+    s_2 = Λ_2-Λ_ε  bits=256
+    s_3 = Λ_3-Λ_ε  bits=0
+  Own-row quotients b_i bits: (255, 254, 255)
+  b_sum bits=256  C_floor bits=135
+  (P||Py)/(R||Ry) mod N bits=255  [NOT EC m without k]
+  P_concat mod LO bits=132  R_concat mod LO bits=134
+
+  ECDLP gate: d*G==P still OPEN (254 congruence classes tested in pipeline).
+

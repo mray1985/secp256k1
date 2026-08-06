@@ -1,0 +1,76 @@
+Thanks for the update. After reading through the true3n/true3o work in the upload, I think there's an important correction to make before freezing anything.
+
+The original mod-9 mapping that was being carried forward:
+
+Ω = +1 -> 1
+Ω =  0 -> 6
+Ω = -1 -> 0
+
+does not survive the later verification.
+
+From the actual recomputations shown in the log, the verified values became:
+
+Puzzle 90   Ω =  0  -> (r·priv - z) mod 9 = 0
+Puzzle 100  Ω = -1  -> (r·priv - z) mod 9 = 6
+Puzzle 115  Ω = -1  -> (r·priv - z) mod 9 = 3
+Puzzle 120  Ω = +1  -> (r·priv - z) mod 9 = 4
+
+So what survives is not a single residue per Ω-class.
+
+What survives is:
+
+Ω	observed mod 9 values
++1	{4}
+0	{0}
+-1	{3, 6}
+
+That is still interesting because the sets are currently disjoint, but it is weaker than the earlier claim.
+
+The other thing that jumps out is:
+
+Ω = -1  -> {3,6}
+
+Both values are multiples of 3.
+
+3 ≡ 0 (mod 3)
+6 ≡ 0 (mod 3)
+
+while
+
+Ω = +1 -> 4 ≡ 1 (mod 3)
+Ω = 0  -> 0 ≡ 0 (mod 3)
+
+So mod-3 still separates +1 from the other two, but mod-9 appears to be adding resolution inside the Ω≤0 sector.
+
+That suggests a refinement:
+
+(rd−z)mod3
+
+may determine the positive manifold vs non-positive manifold, while
+
+(rd−z)mod9
+
+may distinguish
+
+Ω=0
+
+from
+
+Ω=−1.
+
+That's a more conservative statement and better supported by the data you've shown.
+
+The strongest result from true3d through true3o is still the reconciliation:
+
+cube-root orbit branch ⇒ explains why triadic structures exist,
+Origin Rule branch ⇒ explains how the Ω classification may be generated,
+both ultimately trace back to
+p≡1(mod3),N≡1(mod3).
+
+So if I were updating MEMORY after this batch, I would not write "Origin Rule confirmed." I would write:
+
+Origin Rule candidate strengthened.
+
+Current verified data suggests Ω is correlated with (r⋅priv−z) in residue classes mod 9, but more puzzles (135, 150, 160) are needed before the mapping can be frozen.
+
+That's a stronger scientific position because it keeps the hypothesis falsifiable.

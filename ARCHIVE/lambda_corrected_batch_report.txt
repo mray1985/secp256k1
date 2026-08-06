@@ -1,0 +1,55 @@
+CORRECTED LAMBDA BATCH — all puzzles
+puzzles: 27  analyzed: 27  errors: 0
+
+Definitions: Lambda = Px/rx, lambda_y = Py/ry (NOT coordinates).
+
+MUST PASS (corrected setup):
+  LAW-P                        27/27
+  LAW-N (heaven)               27/27
+  LAW-X cubic                  27/27
+  Lambda_p unified (3 rows)    14/27
+  Px == Lambda*rx              27/27
+  weighted mod p == 7          27/27
+  weighted mod N == G          27/27
+  Lambda != Px                 27/27
+  lambda_y != Py               27/27
+  bridge regression            27/27
+
+MUST FAIL (misreadings):
+  bare lam_y^2 == lam_x^3+7    fails 27/27 (want all fail)
+  bare lam_x^3 - lam_y^2 == G  fails 27/27 (want all fail)
+  naive N curve law            fails 27/27 (want all fail)
+  lambda_yN^2 == Lambda_N^3    fails 27/27 (want all fail)
+
+   n row  d?  LP LN LX w7 wG reg  bare+7
+----------------------------------------------------
+   5   0   Y   Y  Y  Y  Y  Y   Y  N
+  10   1   Y   Y  Y  Y  Y  Y   Y  N
+  15   2   Y   Y  Y  Y  Y  Y   Y  N
+  20   1   Y   Y  Y  Y  Y  Y   Y  N
+  25   0   Y   Y  Y  Y  Y  Y   Y  N
+  30   0   Y   Y  Y  Y  Y  Y   Y  N
+  35   2   Y   Y  Y  Y  Y  Y   Y  N
+  40   1   Y   Y  Y  Y  Y  Y   Y  N
+  45   2   Y   Y  Y  Y  Y  Y   Y  N
+  50   2   Y   Y  Y  Y  Y  Y   Y  N
+  55   0   Y   Y  Y  Y  Y  Y   Y  N
+  60   0   Y   Y  Y  Y  Y  Y   Y  N
+  65   1   Y   Y  Y  Y  Y  Y   Y  N
+  70   2   Y   Y  Y  Y  Y  Y   Y  N
+  75   1   Y   Y  Y  Y  Y  Y   Y  N
+  80   0   Y   Y  Y  Y  Y  Y   Y  N
+  85   0   Y   Y  Y  Y  Y  Y   Y  N
+  90   2   Y   Y  Y  Y  Y  Y   Y  N
+  95   1   Y   Y  Y  Y  Y  Y   Y  N
+ 100   2   Y   Y  Y  Y  Y  Y   Y  N
+ 105   1   Y   Y  Y  Y  Y  Y   Y  N
+ 110   0   Y   Y  Y  Y  Y  Y   Y  N
+ 115   0   Y   Y  Y  Y  Y  Y   Y  N
+ 120   2   Y   Y  Y  Y  Y  Y   Y  N
+ 125   1   Y   Y  Y  Y  Y  Y   Y  N
+ 130   0   Y   Y  Y  Y  Y  Y   Y  N
+ 135   2   N   Y  Y  Y  Y  Y   Y  N
+
+UNSOLVED (bridge closed, d open):
+  P135: regression=PASS, all laws pass=True

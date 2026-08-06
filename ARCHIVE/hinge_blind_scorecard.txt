@@ -1,0 +1,126 @@
+HINGE BLIND PREDICTIVE SCORECARD
+{H}=0.345702  {H/2}=0.172851
+P27 fixed GZ_xd=-0.004510  (T4 only; T5 uses prefix/LOO)
+EC scan radius +/-50,000 around predicted d
+Puzzles: 88  solved: 82  unsolved: 6
+Random baseline 6-way joint: 1/6 = 16.7%
+
+=== T1 Blind x-slot (argmin |E_x|, y ignored) ===
+  correct: 26/82 (31.7%)
+
+=== T2 Blind y-leg at TRUE x (argmin |E_y|, slot given) ===
+  correct: 45/82 (54.9%)
+  (oracle slot — upper bound on y discrimination)
+
+=== T3 Blind 6-way joint (3 slots x 2 y) ===
+  argmin |E_x|:     18/82 (22.0%)
+  argmin |E_y|:     20/82 (24.4%)
+  argmin |Ex|+|Ey|: 15/82 (18.3%)
+
+=== T4 Blind d from P27 GZ_xd (pubkey x only) ===
+  mean |band_frac err|: 0.2535
+  bf err < 0.05: 7/82
+  true d within +/-50,000 of pred: 19/82 solved
+  P135 unsolved EC: none  pred_bf=0.356959  d~...0864354304
+  P140 unsolved EC: none  pred_bf=0.982394  d~...4036782080
+  P145 unsolved EC: none  pred_bf=0.467351  d~...4240865280
+  P150 unsolved EC: none  pred_bf=0.292117  d~...7291102208
+  P155 unsolved EC: none  pred_bf=0.545359  d~...1121180672
+  P160 unsolved EC: none  pred_bf=0.820613  d~...9544107008
+
+=== T5 Calibration without answer leakage ===
+  Prefix (GZ_xd = mean of puzzles < n):
+    mean err {sqrt d}: 0.2680  <0.05: 5/81
+  Leave-one-out (mean over all other solved):
+    mean err {sqrt d}: 0.2652  <0.05: 6/82
+
+=== P135 blind detail ===
+  true slot=0  pick_slot(T1)=0  T1=YES
+  true y=-y  pick_y(T2)=-y  T2=YES
+  joint Ex pick=(0, 'y')
+  joint Ey pick=(0, '-y')
+  T4 pred_bf=0.356959  EC=none
+  branch table:
+    slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+    slot0  y  Ex=+0.001119 Ey=+0.285455  |Ex|=0.0011 |Ey|=0.2855
+    slot1 -y  Ex=+0.247813 Ey=-0.006126  |Ex|=0.2478 |Ey|=0.0061
+    slot1  y  Ex=+0.247813 Ey=+0.285455  |Ex|=0.2478 |Ey|=0.2855
+    slot2 -y  Ex=+0.286386 Ey=-0.006126  |Ex|=0.2864 |Ey|=0.0061
+    slot2  y  Ex=+0.286386 Ey=+0.285455  |Ex|=0.2864 |Ey|=0.2855
+
+=== Per-puzzle (solved, mispredictions only) ===
+  P  2 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.276
+  P  3 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.462
+  P  4 true=slot0/-y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.105
+  P  5 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.472
+  P  6 true=slot2/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.062
+  P  7 true=slot1/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.389
+  P  8 true=slot0/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.499
+  P  9 true=slot1/y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.493
+  P 10 true=slot1/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.150
+  P 11 true=slot2/-y  T1->slot2  T2->-y  T3Ex->(2,y)  T5p=0.416
+  P 13 true=slot2/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.459
+  P 14 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.034
+  P 15 true=slot2/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.397
+  P 16 true=slot1/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.186
+  P 17 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.279
+  P 18 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.063
+  P 19 true=slot2/-y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.321
+  P 20 true=slot1/-y  T1->slot2  T2->y  T3Ex->(2,y)  T5p=0.095
+  P 21 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.038
+  P 22 true=slot1/-y  T1->slot2  T2->-y  T3Ex->(2,y)  T5p=0.222
+  P 23 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.246
+  P 24 true=slot2/y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.500
+  P 25 true=slot0/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.246
+  P 27 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.010
+  P 28 true=slot2/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.068
+  P 29 true=slot2/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.104
+  P 30 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.106
+  P 33 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.322
+  P 34 true=slot0/-y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.107
+  P 35 true=slot2/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.141
+  P 36 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.098
+  P 37 true=slot2/-y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.212
+  P 38 true=slot1/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.241
+  P 39 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.376
+  P 40 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.262
+  P 41 true=slot1/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.455
+  P 42 true=slot2/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.267
+  P 43 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.322
+  P 45 true=slot2/y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.297
+  P 46 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.206
+  P 47 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.471
+  P 48 true=slot1/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.135
+  P 49 true=slot0/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.036
+  P 50 true=slot2/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.403
+  P 51 true=slot0/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.119
+  P 52 true=slot0/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.467
+  P 53 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.332
+  P 55 true=slot0/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.154
+  P 56 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.332
+  P 57 true=slot1/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.197
+  P 58 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.301
+  P 59 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.445
+  P 60 true=slot0/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.087
+  P 61 true=slot1/-y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.071
+  P 62 true=slot0/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.332
+  P 63 true=slot1/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.159
+  P 64 true=slot0/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.016
+  P 65 true=slot1/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.419
+  P 68 true=slot0/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.309
+  P 69 true=slot1/y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.101
+  P 70 true=slot2/y  T1->slot2  T2->-y  T3Ex->(2,y)  T5p=0.285
+  P 75 true=slot1/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.280
+  P 85 true=slot0/y  T1->slot2  T2->y  T3Ex->(2,y)  T5p=0.380
+  P 90 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.484
+  P 95 true=slot1/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.436
+  P100 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.127
+  P105 true=slot1/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.484
+  P110 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.242
+  P120 true=slot2/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.119
+  P125 true=slot1/y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.436
+  P130 true=slot0/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.468
+
+=== ID01 tautology note ===
+  {H}-{sqrt y}={Delta_y} is definitional when Delta_y=H-log2(sqrt y).
+  These tests do NOT use ID01; they use E_x,E_y branch picks and d projection.

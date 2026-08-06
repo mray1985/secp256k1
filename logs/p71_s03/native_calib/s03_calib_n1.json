@@ -1,0 +1,64 @@
+{
+  "backend": "bitcrack",
+  "binary": "C:\\tools\\BitCrack\\bin\\clBitCrack.exe",
+  "command": [
+    "C:\\tools\\BitCrack\\bin\\clBitCrack.exe",
+    "-c",
+    "--keyspace",
+    "1:20",
+    "-o",
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\native_calib\\found_n1.txt",
+    "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH"
+  ],
+  "target_address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+  "target_h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+  "start": 1,
+  "end": 32,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 42.86488239999744,
+  "found_private_keys": [
+    "1"
+  ],
+  "verified_hits": [
+    {
+      "d": 1,
+      "d_hex": "1",
+      "in_range": true,
+      "h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "1",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "",
+  "stderr_tail": "[2026-07-10.15:02:21] [Info] Compression: compressed\n[2026-07-10.15:02:21] [Info] Starting at: 0000000000000000000000000000000000000000000000000000000000000001\n[2026-07-10.15:02:21] [Info] Ending at:   0000000000000000000000000000000000000000000000000000000000000020\n[2026-07-10.15:02:21] [Info] Counting by: 0000000000000000000000000000000000000000000000000000000000000001\n[2026-07-10.15:02:21] [Info] Compiling OpenCL kernels...\n[2026-07-10.15:02:55] [Info] Initializing Intel(R) HD Graphics 530\n[2026-07-10.15:02:55] [Info] Generating 262,144 starting points (10.0MB)\n[2026-07-10.15:02:56] [Info] 10.0%\n[2026-07-10.15:02:57] [Info] 20.0%\n[2026-07-10.15:02:58] [Info] 30.0%\n[2026-07-10.15:02:58] [Info] 40.0%\n[2026-07-10.15:02:59] [Info] 50.0%\n[2026-07-10.15:03:00] [Info] 60.0%\n[2026-07-10.15:03:01] [Info] 70.0%\n[2026-07-10.15:03:02] [Info] 80.0%\n[2026-07-10.15:03:03] [Info] 90.0%\n[2026-07-10.15:03:04] [Info] 100.0%\n[2026-07-10.15:03:04] [Info] Done\n[2026-07-10.15:03:04] [Info] Found key for address '1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH'. Written to 'C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\native_calib\\found_n1.txt'\n[2026-07-10.15:03:04] [Info] No targets remaining\n[2026-07-10.15:03:04] [Info] Reached end of keyspace\n",
+  "notes": [
+    "clBitCrack_experimental"
+  ],
+  "device_notes": "OpenCL BitCrack \u2014 EXPERIMENTAL per upstream docs",
+  "started_at_utc": "2026-07-10T20:02:21.569921+00:00",
+  "finished_at_utc": "2026-07-10T20:03:04.434921+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "calibration_range": {
+      "start": 1,
+      "end": 32,
+      "inclusive": true
+    },
+    "allow_outside_p71_band": true,
+    "throughput_timeout_is_failure": false,
+    "known_hit_timeout_is_failure": true
+  }
+}

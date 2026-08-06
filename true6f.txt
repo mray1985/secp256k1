@@ -1,0 +1,441 @@
+This new version still sneaks in the same assumption under a different label.
+
+The script now explicitly says:
+
+d * G.x = X_puzzle (field multiplication)
+
+and then solves
+
+d≡X
+puzzle
+	​
+
+⋅G
+x
+−1
+	​
+
+(modp)
+
+which is mathematically correct for that equation.
+
+The problem is that nowhere in secp256k1 do we have the theorem:
+
+d⋅G
+x
+	​
+
+≡P
+x
+	​
+
+(modp)
+
+for a public key P=dG.
+
+That's the critical gap.
+
+What is fact
+
+The following are legitimate algebraic statements:
+
+P=dG
+P
+x
+	​
+
+∈F
+p
+	​
+
+Λ⋅r
+x,i
+	​
+
+≡P
+x,i
+	​
+
+(modp)
+
+(if your bridge tests verify it)
+
+IP⋅IR
+−1
+≡Λ
+3
+(modp)
+
+(if your computations verify it)
+
+Those are actual modular identities.
+
+What is assumed
+
+The script silently promotes:
+
+d⋅G
+x
+	​
+
+=P
+x
+	​
+
+
+from a coordinate identity to a private-key identity.
+
+That is not derived.
+
+It is simply chosen.
+
+Once you choose it, then naturally:
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+
+follows immediately.
+
+But that does not mean d is the discrete logarithm.
+
+Quick sanity test
+
+Suppose I take a random private key d.
+
+Compute:
+
+P=dG
+
+Then compare:
+
+P
+x
+	​
+
+
+against
+
+dG
+x
+	​
+
+(modp).
+
+For almost every key on secp256k1:
+
+P
+x
+	​
+
+
+=dG
+x
+	​
+
+(modp).
+
+If the identity were true, ECDLP would be trivial because every public key would reveal:
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+.
+
+That would completely break Bitcoin.
+
+The strongest statement I can make
+
+The bridge branch may have discovered real structural identities involving:
+
+Λ
+D
+Ω
+cube-root sectors
+triadic closures
+
+But the statement
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+(modp)
+	​
+
+
+is not presently justified by ECC mathematics.
+
+So the line:
+
+✓ PRIVATE KEY d = ...
+
+is not supported by the verification shown.
+
+The script verified:
+
+dG
+x
+	​
+
+=P
+x
+	​
+
+
+It did not verify:
+
+dG=P.
+
+Those are completely different problems.
+
+That's still the boundary between the structural bridge theory and actual private-key recovery.
+
+Pasted text.txt
+Document
+
+The numerical output itself is actually the easiest place to see the problem.
+
+Vibe reports:
+
+d=39544661527117975443127664628479358876907771716140177323445953628300851141163
+
+and then says:
+
+d⋅G
+x
+	​
+
+≡X
+puzzle
+	​
+
+(modp)
+
+which verifies.
+
+That verification is real.
+
+The issue is the next step.
+
+Check the claimed range
+
+Vibe printed:
+
+2^134 = 19807040628566084398385987584
+2^135 = 39614081257132168796771975168
+
+Those numbers are wrong.
+
+The actual values are:
+
+2
+134
+=21778071482940061661655974875633165533184
+2
+135
+=43556142965880123323311949751266331066368
+
+which are about 4×10
+40
+.
+
+But the reported d is:
+
+3.9544661527×10
+76
+
+That's roughly a 256-bit-sized number, not a Puzzle-135-sized number.
+
+So even before discussing ECC, the statement
+
+d ∈ [2^134,2^135)
+
+is numerically false.
+
+What the calculation actually solved
+
+The script solved:
+
+d=X
+puzzle
+	​
+
+G
+x
+−1
+	​
+
+(modp)
+
+and found a field element.
+
+Then verified:
+
+dG
+x
+	​
+
+≡X
+puzzle
+	​
+
+(modp).
+
+That's all.
+
+In other words:
+
+Given:
+    Gx
+    X
+
+Find:
+    d
+
+such that
+
+    d·Gx = X (mod p)
+
+This is just modular division.
+
+It is not ECDLP.
+
+What would have to happen for this to be the private key
+
+You would need:
+
+(dG)
+x
+	​
+
+=dG
+x
+	​
+
+
+for secp256k1.
+
+But ECC doesn't work that way.
+
+For example:
+
+2G
+
+has x-coordinate
+
+x(2G)=λ
+2
+−2G
+x
+	​
+
+
+not
+
+2G
+x
+	​
+
+.
+
+Already at d=2, the identity fails.
+
+So the recovered value cannot be called a private key merely because it satisfies
+
+dG
+x
+	​
+
+=X.
+The strongest numerical objection
+
+Vibe's own output gives:
+
+d = 39544661527117975443127664628479358876907771716140177323445953628300851141163
+
+while Puzzle 135 should satisfy
+
+2
+134
+≤d<2
+135
+.
+
+Those intervals differ by roughly:
+
+10
+76
+vs10
+40
+.
+
+That's a difference of about 36 decimal digits.
+
+So the candidate doesn't even land in the puzzle range.
+
+My conclusion
+
+Numerically, the script proves:
+
+X
+puzzle
+	​
+
+=dG
+x
+	​
+
+(modp)
+
+for
+
+d=X
+puzzle
+	​
+
+G
+x
+−1
+	​
+
+(modp).
+
+That is correct modular arithmetic.
+
+It does not prove:
+
+P=dG
+
+or
+
+(dG)
+x
+	​
+
+=X
+puzzle
+	​
+
+.
+
+And the reported value is not inside the Puzzle-135 interval anyway.
+
+So the calculation is a valid field-division result, but it is not currently evidence of private-key recovery.

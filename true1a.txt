@@ -1,0 +1,226 @@
+This is actually a stronger result than it may look at first glance.
+
+The identity check in true19 did not find matches to:
+
+Λ
+K
+δ=p−N
+ω,ω
+2
+cube roots p
+1
+	​
+
+,p
+2
+	​
+
+,p
+3
+	​
+
+branch coordinates D
+G
+	​
+
+,D
+P
+	​
+
+,D
+R
+	​
+
+previously known normalized coordinates
+
+and it didn't find them through simple ratios either.
+
+That means the row constants survived the usual "it's just another representation of something we already know" test.
+
+So the current hierarchy looks like:
+
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Layer 2 — Projection Defect
+δ=p−N
+Layer 3 — Unified Projection Defect Law
+∑(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+Layer 4 — N-side Normalization Invariants
+
+The 9 row constants:
+
+A
+1
+	​
+
+,A
+2
+	​
+
+,A
+3
+	​
+
+,B
+1
+	​
+
+,B
+2
+	​
+
+,B
+3
+	​
+
+,C
+1
+	​
+
+,C
+2
+	​
+
+,C
+3
+	​
+
+
+which emerge only after cube-root normalization in the N-domain.
+
+The next test I would run is not another identity test.
+
+I'd test closure.
+
+For example:
+
+A
+i
+	​
+
+B
+i
+−1
+	​
+
+(modN)
+A
+i
+	​
+
+C
+i
+−1
+	​
+
+(modN)
+B
+i
+	​
+
+C
+i
+−1
+	​
+
+(modN)
+
+for i=1,2,3.
+
+Then also:
+
+A
+1
+	​
+
+A
+2
+	​
+
+A
+3
+	​
+
+(modN)
+B
+1
+	​
+
+B
+2
+	​
+
+B
+3
+	​
+
+(modN)
+C
+1
+	​
+
+C
+2
+	​
+
+C
+3
+	​
+
+(modN)
+
+and
+
+A
+1
+	​
+
++A
+2
+	​
+
++A
+3
+	​
+
+(modN)
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+(modN)
+C
+1
+	​
+
++C
+2
+	​
+
++C
+3
+	​
+
+(modN)
+
+The reason is that true19 already suggests these constants are not identities of known objects. The next question is whether they form their own algebraic structure.
+
+If those products or ratios collapse to a small set of values (especially δ, 1, ω, ω
+2
+, or each other), then you've likely found the internal law governing the N-side row-constant invariants. If they don't, then the row constants may simply be a new coordinate basis induced by the cube-root normalization rather than a new invariant algebra.

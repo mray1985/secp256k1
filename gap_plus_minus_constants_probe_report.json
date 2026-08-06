@@ -1,0 +1,4508 @@
+{
+  "question": "Which gap +/- small constants win hi-anchor vs gap and h7?",
+  "facts": {
+    "gap": 432420386565659656852420866390673177326,
+    "constants": [
+      1,
+      3,
+      7,
+      8,
+      20,
+      21,
+      49,
+      76
+    ],
+    "puzzle_count": 24,
+    "puzzles": [
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130,
+      135,
+      140,
+      145,
+      150,
+      155,
+      160
+    ]
+  },
+  "plus_summary": [
+    {
+      "label": "gap+21",
+      "constant": 21,
+      "beats_gap": 12,
+      "beats_h7": 11,
+      "best_at_hi": 8,
+      "beats_gap_rate": 0.5,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.333
+    },
+    {
+      "label": "gap+8",
+      "constant": 8,
+      "beats_gap": 11,
+      "beats_h7": 9,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap+3",
+      "constant": 3,
+      "beats_gap": 15,
+      "beats_h7": 9,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+20",
+      "constant": 20,
+      "beats_gap": 15,
+      "beats_h7": 9,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+49",
+      "constant": 49,
+      "beats_gap": 17,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.708,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+76",
+      "constant": 76,
+      "beats_gap": 10,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.417,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+1",
+      "constant": 1,
+      "beats_gap": 13,
+      "beats_h7": 10,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.542,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.0
+    },
+    {
+      "label": "gap+7",
+      "constant": 7,
+      "beats_gap": 15,
+      "beats_h7": 0,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.0,
+      "best_at_hi_rate": 0.0
+    }
+  ],
+  "minus_summary": [
+    {
+      "label": "gap-8",
+      "constant": 8,
+      "beats_gap": 12,
+      "beats_h7": 13,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.5,
+      "beats_h7_rate": 0.542,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap-76",
+      "constant": 76,
+      "beats_gap": 13,
+      "beats_h7": 12,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.542,
+      "beats_h7_rate": 0.5,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap-49",
+      "constant": 49,
+      "beats_gap": 8,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.333,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap-3",
+      "constant": 3,
+      "beats_gap": 8,
+      "beats_h7": 8,
+      "best_at_hi": 5,
+      "beats_gap_rate": 0.333,
+      "beats_h7_rate": 0.333,
+      "best_at_hi_rate": 0.208
+    },
+    {
+      "label": "gap-20",
+      "constant": 20,
+      "beats_gap": 11,
+      "beats_h7": 9,
+      "best_at_hi": 4,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.167
+    },
+    {
+      "label": "gap-21",
+      "constant": 21,
+      "beats_gap": 11,
+      "beats_h7": 10,
+      "best_at_hi": 4,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.167
+    },
+    {
+      "label": "gap-1",
+      "constant": 1,
+      "beats_gap": 11,
+      "beats_h7": 10,
+      "best_at_hi": 3,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.125
+    },
+    {
+      "label": "gap-7",
+      "constant": 7,
+      "beats_gap": 10,
+      "beats_h7": 7,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.417,
+      "beats_h7_rate": 0.292,
+      "best_at_hi_rate": 0.0
+    }
+  ],
+  "ranked_by_best_at_hi": [
+    {
+      "label": "gap+21",
+      "constant": 21,
+      "beats_gap": 12,
+      "beats_h7": 11,
+      "best_at_hi": 8,
+      "beats_gap_rate": 0.5,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.333
+    },
+    {
+      "label": "gap-8",
+      "constant": 8,
+      "beats_gap": 12,
+      "beats_h7": 13,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.5,
+      "beats_h7_rate": 0.542,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap-76",
+      "constant": 76,
+      "beats_gap": 13,
+      "beats_h7": 12,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.542,
+      "beats_h7_rate": 0.5,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap+8",
+      "constant": 8,
+      "beats_gap": 11,
+      "beats_h7": 9,
+      "best_at_hi": 7,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.292
+    },
+    {
+      "label": "gap+49",
+      "constant": 49,
+      "beats_gap": 17,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.708,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+76",
+      "constant": 76,
+      "beats_gap": 10,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.417,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap-49",
+      "constant": 49,
+      "beats_gap": 8,
+      "beats_h7": 11,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.333,
+      "beats_h7_rate": 0.458,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+3",
+      "constant": 3,
+      "beats_gap": 15,
+      "beats_h7": 9,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap+20",
+      "constant": 20,
+      "beats_gap": 15,
+      "beats_h7": 9,
+      "best_at_hi": 6,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.25
+    },
+    {
+      "label": "gap-3",
+      "constant": 3,
+      "beats_gap": 8,
+      "beats_h7": 8,
+      "best_at_hi": 5,
+      "beats_gap_rate": 0.333,
+      "beats_h7_rate": 0.333,
+      "best_at_hi_rate": 0.208
+    },
+    {
+      "label": "gap-21",
+      "constant": 21,
+      "beats_gap": 11,
+      "beats_h7": 10,
+      "best_at_hi": 4,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.167
+    },
+    {
+      "label": "gap-20",
+      "constant": 20,
+      "beats_gap": 11,
+      "beats_h7": 9,
+      "best_at_hi": 4,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.375,
+      "best_at_hi_rate": 0.167
+    },
+    {
+      "label": "gap-1",
+      "constant": 1,
+      "beats_gap": 11,
+      "beats_h7": 10,
+      "best_at_hi": 3,
+      "beats_gap_rate": 0.458,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.125
+    },
+    {
+      "label": "gap+1",
+      "constant": 1,
+      "beats_gap": 13,
+      "beats_h7": 10,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.542,
+      "beats_h7_rate": 0.417,
+      "best_at_hi_rate": 0.0
+    },
+    {
+      "label": "gap-7",
+      "constant": 7,
+      "beats_gap": 10,
+      "beats_h7": 7,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.417,
+      "beats_h7_rate": 0.292,
+      "best_at_hi_rate": 0.0
+    },
+    {
+      "label": "gap+7",
+      "constant": 7,
+      "beats_gap": 15,
+      "beats_h7": 0,
+      "best_at_hi": 0,
+      "beats_gap_rate": 0.625,
+      "beats_h7_rate": 0.0,
+      "best_at_hi_rate": 0.0
+    }
+  ],
+  "fixed_reference": {
+    "h7_best_at_hi": 13,
+    "h7_best_among_fixed": 13
+  },
+  "per_puzzle": [
+    {
+      "puzzle": 65,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 198456608181084177568931616105282401570,
+        "h1": 183620623564122847881940369915196766516,
+        "h7": 118438305358592940527352912305967288924,
+        "hm7": 153945475562084242241910546486075663117
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 183620623564122847881940369915196766516,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 148113453360631546167382735735088392329,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 82934313923217585078842609174808748036,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 47427143719726283364284974994700373847,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-3"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 118438305358592940527352912305967288924,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 153945475562084242241910546486075663117,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 168781460179045571928901792676161298164,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 204288630382536873643459426856269672358,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 91941455106842164957353375662856945648,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 56434284903350863242795741482748571362,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-20"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 41598300286389533555804495292662936410,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 6091130082898231841246861112554562119,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-21"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 70748874989305175130301555900749790129,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 106256045192796476844859190080858164854,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 132752895444547252414858726723968507268,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 168260065648038554129416360904076882746,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 66,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 213249075119698689616813995924048042392,
+        "h1": 130734412795839214364031308982427688163,
+        "h7": 68066825418342019699756053723378740122,
+        "hm7": 73989061744604297318548928265955832643
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 130734412795839214364031308982427688163,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 136656649122101491982824183525004780704,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 34294911851879736141534064900813020295,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 28372675525617458522741190358235927756,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-3"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 68066825418342019699756053723378740122,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 73989061744604297318548928265955832643,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 14447836905517455553026633218241614106,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 8525600579255177934233758675664521588,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 139783011660511844881577143736339510150,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 133860775334249567262784269193762417748,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 210122712581288336718061035712713312971,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 216044948907550614336853910255290405324,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 61814100341521313902250133300709281546,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 67736336667783591521043007843286373157,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 3979849574386233660778082169674395384,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 1942386751876043958014792372902694954,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 67,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 211904510154835797142826264672872088686,
+        "h1": 192943169367111759477371126071250607314,
+        "h7": 79175124640767533484640294461521719082,
+        "hm7": 87786490896755596051408631506450719029
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 192943169367111759477371126071250607314,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 201554535623099822044139463116179607267,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 155020487791663684146460848868007644570,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 163631854047651746713229185912936644521,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 79175124640767533484640294461521719082,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 87786490896755596051408631506450719029,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 60213783853043495819185155859900237710,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 68825150109031558385953492904829237656,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 167322305599644956166276507359557538754,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 158710939343656893599508170314628538820,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 186283646387368993831731645961179020126,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 177672280131380931264963308916250020193,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 147639584687677265240366205974765856208,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 156250950943665327807134543019694855917,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 68103769984787905125498330121659036620,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 76715136240775967692266667166588036042,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 68,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 120596910097581691392448264606306019456,
+        "h1": 153938994959110120518035702144690797858,
+        "h7": 78428882437378961580860539015673709063,
+        "hm7": 112797683933117312486663798162387429358
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 153938994959110120518035702144690797858,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 87254825236053262266860827067921241054,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 211797221883492678083210289169212822667,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 20570655512996404015685951991151684250,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-3"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 78428882437378961580860539015673709063,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 112797683933117312486663798162387429358,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 45086797575850532455273101477288930662,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 146139768794645741612251235700772207760,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 77402165803169039800644717407344767196,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 113824400567327234266879619770716371278,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 44060080941640610675057279868959988796,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 147166485428855663392467057309101149681,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 24677522049836091136549238424467451654,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 215904088420332365204073575602528590411,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 60073040179784363822568319179510113596,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 181120780015379018962328210033101924404,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 69,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 16750591588264766650879408597369097232,
+        "h1": 62401074424848745253504791001545979486,
+        "h7": 104890683937870159827389122204363262461,
+        "hm7": 138391867114399693129147939399101456939
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 62401074424848745253504791001545979486,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 95902257601378278555263608196284173950,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 211715980114583887790147676191297044407,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 178214796938054354488388858996558849937,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 104890683937870159827389122204363262461,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 138391867114399693129147939399101456939,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 184042349950983671731773321803278339178,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 214876853438146451818888727392656643660,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 163398817588633155972878882181760272256,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 129897634412103622671120064987022077632,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 84247151575519644068494682582845195542,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 50745968398990110766735865388107000910,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 30102436036639595007841425766588934425,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 3398747139889938293917391428149260921,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 55109386510873057851572368549247750292,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 21608203334343524549813551354509553700,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        }
+      }
+    },
+    {
+      "puzzle": 70,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 115989503973338713577245631821946663818,
+        "h1": 35576937359013588039891628692242768673,
+        "h7": 80134812221808084037873458996033008953,
+        "hm7": 120306566397174145660056143750746840702
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 35576937359013588039891628692242768673,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 164864441259968641658037974054537081016,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 93710566541941465578254716670051543674,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 138268441404735961576236546973841783968,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 80134812221808084037873458996033008953,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 120306566397174145660056143750746840702,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 200719133011499271197410146880450735892,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 31259874935178155957081116763442591792,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 111603383285910279201446486272870255420,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 120375624660767147953044777371023072496,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 39963058046442022415690774241319177064,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 160478320572540207282238828505460672311,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 40380450304290100828674595268108487134,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 191598557642387326325816668375784842168,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 160129986578285131162243641098947593046,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 40311392040697098535685961647832252616,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        }
+      }
+    },
+    {
+      "puzzle": 75,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 166279986169035264667524648731938392976,
+        "h1": 146457514097294753449416436078513605754,
+        "h7": 139219417133023422111041387012140288489,
+        "hm7": 193340555205047107224007910451736497435
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 146457514097294753449416436078513605754,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 46597099869705625932044867151717214379,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 92908258501364524021543127081928751438,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 192768672728953651538914696008725142815,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 139219417133023422111041387012140288489,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 193340555205047107224007910451736497435,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 173518083133306596005899697798311710250,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 73657668905717468488528128871515318836,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 34584607238329901737404918007677099160,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 65275806989259225779966650919119292434,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-20"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 85098279060999736998074863572544079431,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 184958693288588864515446432499340471036,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 23143997083047633227858183306648339021,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 76716417144541494289513385620148053676,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 181351227039235014663149854624611240906,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 151208745298835514671899442839265541854,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 80,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 213748630378754163147301042368949542537,
+        "h1": 81877846493715384096723778058200607843,
+        "h7": 155493916314802023498101924975053354345,
+        "hm7": 160417042122953354055920706627827446562
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 81877846493715384096723778058200607843,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 86800972301866714654542559710974700094,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 181863721276362174004430750563297261545,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 176940595468210843446611968910523169296,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 155493916314802023498101924975053354345,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 160417042122953354055920706627827446562,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 23623132429763244447524660664304419653,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 28546258237914575005343442317078511865,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 170855272071936523250280954498009912733,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 175778397880087853808099736150784004725,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 38984488186897744199703690187260978045,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 43907613995049074757522471840035070024,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-21"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 194034368068910814397092779388323774219,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 189111242260759483839273997735549683388,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 137237946125979062909108881737513586039,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 142161071934130393466927663390287674719,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        }
+      }
+    },
+    {
+      "puzzle": 85,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 179492068463388988978075325767047039699,
+        "h1": 209239972550322465720899185184380185387,
+        "h7": 52890100761366747199778947451095528053,
+        "hm7": 126326350400248426096049162307674625988
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 209239972550322465720899185184380185387,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 135803722911440786824628970327801087458,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 121863281446426061414006474305888280907,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 48427031807544382517736259449309182976,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-3"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 52890100761366747199778947451095528053,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 126326350400248426096049162307674625988,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 96578446313314949353225302890341480293,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 170014695952196628249495517746920578229,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 188418206371033718342160701770619729827,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 170565930555744259613989949763474349491,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 200313834642677736356813809180807495281,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 126877585003796057460543594324228397248,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 158119067680552610234842410336732812633,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 200865069246225367721308241197361266275,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 40443237886175097820631408024353990799,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 113879487525056776716901622880933089867,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 90,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 122118321206403191972243152858162038906,
+        "h1": 213837986867134612619744739578215656413,
+        "h7": 67473902480063155909567762243115941704,
+        "hm7": 120709841672790116998366798431233157831
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 213837986867134612619744739578215656413,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 25654242714281339711810178903866556898,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 20909829882890908098878791669624692399,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 167273914269962364809055769004724407118,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 67473902480063155909567762243115941704,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 120709841672790116998366798431233157831,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 28990176012058696350865211711179540302,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 215246466400747687593621094005144537478,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 110702041779458047081201700009294207664,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 77481702373395225826732860665054892030,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 14237963287336194820768726054998725661,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 173945780865517078087165834619350374042,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 92233915098117727356829346321235706173,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 152002727314688656587656959395088370561,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 102241714991449797273994444743174655680,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 141994927421356586670491860973149419548,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 95,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 9716902254672038312778452106956997210,
+        "h1": 147683394208731991455817087177928453088,
+        "h7": 205175986707822800489872276284778377123,
+        "hm7": 185742182198478723864315372070864382661
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 147683394208731991455817087177928453088,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 167117198718076068081373991391842447508,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 30063600569880394140587299357026176355,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 49497405079224470766144203570940170781,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 205175986707822800489872276284778377123,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 185742182198478723864315372070864382661,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 47775690244418770721276736999892926828,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 28341885735074694095719832785978932360,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 111346321053790959092186268856039767328,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 130780125563135035717743173069953762028,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 163673769048464667991639058249747959728,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 144239964539120591366082154035833964972,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 80669333729748402995172622179687125358,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 61235529220404326369615717965773129174,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 155065194874436167767301725394511741818,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 135631390365092091141744821180597743142,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        }
+      }
+    },
+    {
+      "puzzle": 100,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 105212512495455034145540161012490258698,
+        "h1": 107521834801625482573300501117997391022,
+        "h7": 86666758887129612329081874728903757385,
+        "hm7": 135328602687619976232258669636788902594
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 107521834801625482573300501117997391022,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 114473526773124105988040043247695268909,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 100570142830126859158560958988299513139,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 121425218744622729402779585377393146800,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 86666758887129612329081874728903757385,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 135328602687619976232258669636788902594,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 133019280381449527804498329531281770218,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 77405744609460540486581992493698747114,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 174729432210441268292935582309469037378,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 35695592780468799998144739715511479618,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-20"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 38004915086639248425905079821018612372,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 183990446488110340135435464544674047999,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 59318772514341479380448509994751677066,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 151106252476568588910631812030228837880,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 63043579153256932946778104449663561848,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 158951782421492655614562439916029103934,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 105,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 119814407054384669453610006067153312836,
+        "h1": 77846607212931257800778114425629960704,
+        "h7": 33448466880152149230155761789689930055,
+        "hm7": 206180347228617189677064250344616695659
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 77846607212931257800778114425629960704,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 114944965243959060144422739830736590949,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 40748249181903455457133489020523330455,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 152043323274986862488067365235843221190,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 33448466880152149230155761789689930055,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 206180347228617189677064250344616695659,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 164212547387163778024232358703093343482,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 28579025069726539920968495553273208116,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-8"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 58377600799003036037635393727546438150,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 181251213309766302869584618406760187882,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 139283413468312891216752726765236835381,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 53508158988577426728448127491129715874,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 52326787599583315258148837484417188374,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 140464784857307002687052016771949361075,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 200129534029197468897577694101487444536,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 7337961572307150952376839845120898126,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 110,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 162463705076324007782144541514591451334,
+        "h1": 152430985474681146424262102923630356930,
+        "h7": 92234667864823978276967471377863790506,
+        "hm7": 199727644277835619565099254739354065157
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 152430985474681146424262102923630356930,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 172496424677966869140026980105552545738,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 132365546271395423708497225741708168122,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 192561863881252591855791857287474734546,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 92234667864823978276967471377863790506,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 199727644277835619565099254739354065157,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 82201948263181116919085032786902696102,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 189694924676192758207216816148392970752,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 38190686956533219375504230304630436746,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 69302289456478421912627553056859837892,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-20"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 48223406558176080733386668895591531150,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 59269569854835560554745114465898743487,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-21"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 103280831161483458098325916948171002913,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 210773807574495099386457700309661277424,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 167602598082873798564499925007778545968,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 60109621669862157276368141646288271538,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 115,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 1849603064692634542406001465196012012,
+        "h1": 74325033322054000035169272320709684807,
+        "h7": 98952465076874150648200048645470688388,
+        "hm7": 102651671206259419733012051575862712426
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 74325033322054000035169272320709684807,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 78024239451439269119981275251101708831,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 205746080470112387662101046498152098884,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 202046874340727118577289043567760074854,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 98952465076874150648200048645470688388,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 102651671206259419733012051575862712426,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 175127101463620785225775322431376385206,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 178826307593006054310587325361768409246,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 208038421592398570400583991309774785016,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 204339215463013301315771988379382760832,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 131863785205651935823008717523869088201,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 128164579076266666738196714593477064009,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 161075899205044451913005383471875464256,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 157376693075659182828193380541483439350,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 165957736974476054271843543184885640006,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 169656943103861323356655546115277666006,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        }
+      }
+    },
+    {
+      "puzzle": 120,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 67671170902157347368366262625545247387,
+        "h1": 148552258947348693466520503163272422578,
+        "h7": 148631678347405967918578498724158910369,
+        "hm7": 148446366413938994197109842415423772134
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 148552258947348693466520503163272422578,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 148525785813996268649167837976310259973,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 148578732080701118283873168350234585179,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 148499312680643843831815172789348097364,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 148631678347405967918578498724158910369,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 148446366413938994197109842415423772134,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 67565278368747648098955601877696597003,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+8"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 67777063435567046637776923373393897835,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 67406439568633099194839610755923621547,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 67935902235681595541892914495166873627,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 148816990280872941640047155032894048408,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 148261054480472020475641186106688633703,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 149187614147806889082984467650364323898,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 147890430613538073032703873489218356253,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 66665191834765204308964985520983071323,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+76"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 68677149969549490427767539730107429227,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        }
+      }
+    },
+    {
+      "puzzle": 125,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 36996411866737336055644976845465546127,
+        "h1": 16809879702420774114331840783932599089,
+        "h7": 92772757448290221718228119830351706948,
+        "hm7": 18779933714815549606938166139420614680
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 16809879702420774114331840783932599089,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 90802703435895446225621794474863691343,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 124422462840736994454285476042728889521,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 198415286574211666565575429733659981775,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 92772757448290221718228119830351706948,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 18779933714815549606938166139420614680,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 38966465879132111548251302200953561733,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 35026357854342560563038651489977530537,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 174288646385105553639049642961151003501,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 184138916447079431102081269738591081471,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 204325448611395993043394405800124028632,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 130332624877921320932104452109192936252,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 4989555628052121158693888651004505207,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+49"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 78982379361526793269983842341935598049,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 160498268298342125190805365472734893671,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 197929294533842859550325547227007189957,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        }
+      }
+    },
+    {
+      "puzzle": 130,
+      "solved": true,
+      "fixed_scores": {
+        "gap": 122874527151305541063652615909456724853,
+        "h1": 205743408716588706899441974584583552318,
+        "h7": 15349091095655910415905185595459328721,
+        "hm7": 171322241167392664309210448976300398920
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 205743408716588706899441974584583552318,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 19072076453540132174326340012823824697,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 1861492678942110879210577208682247992,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 188532824941990685604326211780441975615,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 15349091095655910415905185595459328721,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 171322241167392664309210448976300398920,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 88453359602109498473421090301173571433,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 157295694700501583653884141517739878241,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 36821608278315434588073801888748841243,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 208927446024295647539231429930164608263,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 140624058976080843477400077785381741394,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 105124995326530238649905154033531708102,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 20149972553894694411589738156390703997,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 206821304816943269136705372728150432744,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 204126564566056863543546877369233233929,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 17455232303008288818431242797473503497,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        }
+      }
+    },
+    {
+      "puzzle": 135,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 114304406025567936440659289757036201149,
+        "h1": 93003753279750840881488168346999981250,
+        "h7": 34800163195151732473538560113217338144,
+        "hm7": 169011411319372051497563726763383436877
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 93003753279750840881488168346999981250,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 135605058771385031999830411167072421048,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 50402447788116649763145925526927541452,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 178206364263019223118172653987144860846,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 34800163195151732473538560113217338144,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 169011411319372051497563726763383436877,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 56100815940968828032709681523253558043,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 147710758573554955938392605353347216977,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 120711737674885682109657727946984980515,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 107897074376250190771660851567087421823,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 99411084929068586550486606536948760617,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 129197727122067286330831972977123641723,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 64586805388150432253883926553392219152,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 139224769126373351717218360323208555631,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 207284042959552355499083338233696978969,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 3472468445028571527981051357096204473,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 140,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 96382416310866891386987038875034632025,
+        "h1": 63522408445793241304797957151091206701,
+        "h7": 133637638744648659188336533192569345243,
+        "hm7": 106017915199277214890110255448034568026
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 63522408445793241304797957151091206701,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 129242424175940541469176120598978057349,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 2197607284354058859580206296795643947,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+3"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 194962439906087841633554284046864907997,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 133637638744648659188336533192569345243,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 106017915199277214890110255448034568026,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 166497646609722309270525614916512770567,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 73157907334203564807921173724091142701,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 128397354424946453404373729213160697109,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 111258199518979420674073059427443216107,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 161257362290020103486562810937104122432,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 78398191653905770591883977703499790781,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 215923577184896664769405499964499500649,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 23158744563162881995431422214430236207,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 193544137959227426255142026199373371813,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 779305337493643481167948449304106851,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    },
+    {
+      "puzzle": 145,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 47348003147878387277423073044143189604,
+        "h1": 136608073248658212226980859616956025251,
+        "h7": 56916628069101161303858143588468217618,
+        "hm7": 37779378226655613250988002499818161632
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 136608073248658212226980859616956025251,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 201116307021244670070593860685430772866,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 72099839476071754383367858548481277632,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 166795845771828528938214004636767656846,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 56916628069101161303858143588468217618,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 37779378226655613250988002499818161632,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 127039448327435438200545789072630997234,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 210684931942467444097028931229755800828,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 172410432257576347991288649052455688728,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 165313948012326534306286071249931109050,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 76053877911546709356728284677118273772,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 18642128384210065198117861411168105814,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-21"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 114328377596437805462468566854418386584,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 19632371300681030907622420766132005318,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-49"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 95861432887794155779808084697855462512,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 190557439183550930334654230786141846584,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "hm7"
+        }
+      }
+    },
+    {
+      "puzzle": 150,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 43034907458965305018430709687838480276,
+        "h1": 63399389847770863683704559005872424157,
+        "h7": 185586284180604215675347654914076087443,
+        "hm7": 99516469262673605638486235538399126891
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 63399389847770863683704559005872424157,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 22670425070159746353156860369804536395,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 104128354625381981014252257641940311919,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 18058539707451370977390838266263351367,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-3"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 185586284180604215675347654914076087443,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 99516469262673605638486235538399126891,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 205950766569409774340621504232110031324,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 119880951651479164303760084856433070772,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 17904168669416821471486829657844180550,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+20"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 68165646248513788565374589717832779962,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 38268651058222380136760678975878124430,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap+21"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 47801163859708229900100740399798836080,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 176053771379118365912007593490155375695,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 89983956461187755875146174114478415339,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 138945977254450863830440207704274494376,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 207404594393278182985119239310721722930,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "gap"
+        }
+      }
+    },
+    {
+      "puzzle": 155,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 110091568484602171397816905174677169209,
+        "h1": 13003238678492789541854643871282274912,
+        "h7": 137106353592503844741498057558413913537,
+        "hm7": 75130896003951469315288998482904925350
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 13003238678492789541854643871282274912,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 207179898290711553253779166478072063506,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 181173420933725974170069878735507513682,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 31063828662729339886717177305811325223,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 137106353592503844741498057558413913537,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 75130896003951469315288998482904925350,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 198225703167046430254960547528864369501,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 21957433802157912540673262820489968949,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 101993481374946838311744855330528007347,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 110243768221508475745042200710790831381,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 199081811181056220167707116633922901640,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 13155438415399093889079939407395937079,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 109387660207498685832295631605732299781,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 110795476761705656963338178743622039715,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 82525074836503316835839774758109218471,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 137658062132701025959794035591245122531,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h1"
+        }
+      }
+    },
+    {
+      "puzzle": 160,
+      "solved": false,
+      "fixed_scores": {
+        "gap": 112364559227540337509116595048006940694,
+        "h1": 85061993109142863642314821892256303798,
+        "h7": 27639852567736900006359275638183761207,
+        "hm7": 197089265887343775011873914457830120125
+      },
+      "variants": {
+        "gap+1": {
+          "constant": 1,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177327,
+          "hi_score": 85061993109142863642314821892256303798,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-1": {
+          "constant": 1,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177325,
+          "hi_score": 122629275001436118191872854402402992141,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+3": {
+          "constant": 3,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177329,
+          "hi_score": 47494711216849609092756789382109615459,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-3": {
+          "constant": 3,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177323,
+          "hi_score": 160196556893729372741430886912549680488,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+7": {
+          "constant": 7,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 27639852567736900006359275638183761207,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-7": {
+          "constant": 7,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177319,
+          "hi_score": 197089265887343775011873914457830120125,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+8": {
+          "constant": 8,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177334,
+          "hi_score": 169786699768946301145072141302079483296,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-8": {
+          "constant": 8,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177318,
+          "hi_score": 37904568341632680689115534992579812714,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+20": {
+          "constant": 20,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177346,
+          "hi_score": 55616991584813226152276053758800646588,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-20": {
+          "constant": 20,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177306,
+          "hi_score": 169112126870267448865957136337213234360,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+21": {
+          "constant": 21,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 141809560751869974999155363181462597935,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-21": {
+          "constant": 21,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177305,
+          "hi_score": 65881707358709006835032313113196698486,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+49": {
+          "constant": 49,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177375,
+          "hi_score": 48288000825424068157763774430082139516,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-49": {
+          "constant": 49,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177277,
+          "hi_score": 159403267285154913676423901864577159019,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap+76": {
+          "constant": 76,
+          "sign": "+",
+          "offset": 432420386565659656852420866390673177402,
+          "hi_score": 189760275127954617017361635129111614730,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false,
+          "best_overall": "h7"
+        },
+        "gap-76": {
+          "constant": 76,
+          "sign": "-",
+          "offset": 432420386565659656852420866390673177250,
+          "hi_score": 17930992982624364816826041165547687516,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true,
+          "best_overall": "gap-76"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Constants are fixed offsets from gap, not per-puzzle private keys.",
+    "gap+7 equals h7; gap+1 equals h1.",
+    "Public x only; d band-limited; k not used."
+  ]
+}

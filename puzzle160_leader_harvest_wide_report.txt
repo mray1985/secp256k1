@@ -1,0 +1,28 @@
+Puzzle 160 widened leader harvest + m-band scaling
+d-radius=±1,000,000  m-radius=±1,000,000
+leaders: ['py_w15', 'y2_w21', 'rmd_wrap2', 'px_w0']
+
+=== Phase A: d-harvest ±radius on leaders ===
+  py_w15 in_d=True digits=48
+  y2_w21 in_d=True digits=49
+  rmd_wrap2 in_d=True digits=48
+  px_w0 in_d=True digits=49
+
+=== Phase B: scale leaders → m-band anchors, harvest m ===
+  py_w15: 8 m-band anchors
+  y2_w21: 8 m-band anchors
+  rmd_wrap2: 9 m-band anchors
+  px_w0: 8 m-band anchors
+  unique m anchors: 33
+
+=== Phase C: rmd_wrap2 dense bit-shift ladder ===
+
+=== Stats ===
+  d_harvest_starts: 4
+  d_steps: 8,000,000
+  m_harvest_starts: 34
+  m_steps: 66,400,034
+  m_np1_hits: 0
+  m_anchors: 33
+elapsed: 348.2s
+NO SOLUTION

@@ -1,0 +1,60 @@
+Read 271 lines from true26.txt
+Thought
+Applied 1 block to MEMORY.txt
+⚠ Search text in block 1 appears 26 times in the file. Only the first occurrence will be replaced. Consider making your search pattern more specific to avoid unintended changes.
+@@ -1 +1,10 @@
+-# 
++# MEMORY FILE: secp256k1 Project State
++# Last updated: 2026-06-03 - true25.txt processed, deepest question identified
++# Purpose: Reference for Vibe to continue work without re-learning
++# ============================================================
++=======
++# ============================================================
++# MEMORY FILE: secp256k1 Project State
++# Last updated: 2026-06-03 - true26.txt processed, Puzzle 90/120 data added
++# Purpose: Reference for Vibe to continue work without re-learning
++# ============================================================
+Thought
+Overwritten MEMORY.txt
+# ============================================================
+# MEMORY FILE: secp256k1 Project State
+# Last updated: 2026-06-03 - true26.txt processed, Puzzle 90/120 data added
+# Purpose: Reference for Vibe to continue work without re-learning
+# ============================================================
+
+## PROJECT CONTEXT
+Working on secp256k1 elliptic curve cryptography research.
+Central puzzle: Puzzle 135 (ECDSA signature with known values)
+Main focus: p->N projection defect and coordinate bridges
+… (254 more lines)
+Thought
+✓ true26.txt processed and saved to MEMORY.txt
+Key Points from true26.txt:
+Paradigm Shift
+Before true22-25: The interesting object was δ = p-N (everything collapsed to it) After true22-25: The interesting object is the Field Closure Law (sum(B_i) = p)
+The δ-law has been DEMOTED from "primary phenomenon" to "projection shadow of a deeper field-domain closure."
+What Survived
+ 1. 
+Coordinate Bridge: A(Q) = Lambda * Q_y (mod p)
+ 2. 
+X-Family Bridge: Lambda * rx_i = Px_i OR Lambda * Px_i = rx_i (bidirectional)
+ 3. 
+Field Closure Law: B1 + B2 + B3 = p for every verified puzzle
+ 4. 
+Projection Defect Law: sum(B_i) ≡ delta (mod N) - now DERIVED
+Deepest Question
+"Why does the correctly-oriented bridge produce a family whose exact sum is p?" (The δ-collapse is now FULLY EXPLAINED)
+Next Test - High Falsification Power
+Do NOT test puzzles close to 135 (130, 131, 132, 133, 134) - too similar.
+Test structurally different puzzles:
+• 
+Puzzle 90
+• 
+Puzzle 100
+• 
+Puzzle 120
+• 
+Puzzle 150
+For each: Compute Lambda_f and Lambda_r, apply both orientations, check if one yields B1+B2+B3 = p.
+If TRUE: Field Closure Law is likely curve-level If FALSE: Current law is restricted to a subclass
+Puzzle 120 and Puzzle 90 data now available in MEMORY.txt for testing!

@@ -1,0 +1,105 @@
+=== UNSOLVED FULL TRANSPORT HUNT ===
+puzzles: [135, 140, 145, 150, 155, 160]
+samples/sign: 200000  heaven_head3: False
+
+=== P135 FULL TRANSPORT HUNT ===
+  rx ...368 (hashkeys RSZ r -> R (puzzle 135 spend tx))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 135b  offset_bits [132, 133, 134] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=60463 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=60463 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=60463 kept=0 ec_hits=0
+
+=== P140 FULL TRANSPORT HUNT ===
+  rx ...000 (hashkeys RSZ r -> R (puzzle 140 spend tx))
+  anchor gap head2=11 head3=110
+  lhs tail ...943 rhs tail ...962
+  shelf2 140b  offset_bits [137, 138, 139] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=190145 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=190145 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=190145 kept=0 ec_hits=0
+
+=== P145 FULL TRANSPORT HUNT ===
+  rx ...203 (hashkeys RSZ r -> R (puzzle 145 spend tx))
+  anchor gap head2=62 head3=629
+  lhs tail ...794 rhs tail ...962
+  shelf2 145b  offset_bits [142, 143, 144] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=68890 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=68890 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=68890 kept=0 ec_hits=0
+
+=== P150 FULL TRANSPORT HUNT ===
+  rx ...479 (hashkeys RSZ r -> R (puzzle 150 spend tx))
+  anchor gap head2=10 head3=105
+  lhs tail ...264 rhs tail ...962
+  shelf2 150b  offset_bits [147, 148, 149] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=129058 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=129058 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=129058 kept=0 ec_hits=0
+
+=== P155 FULL TRANSPORT HUNT ===
+  rx ...452 (hashkeys RSZ r -> R (puzzle 155 spend tx))
+  anchor gap head2=69 head3=690
+  lhs tail ...055 rhs tail ...962
+  shelf2 155b  offset_bits [152, 153, 154] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=50140 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=50140 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=50140 kept=0 ec_hits=0
+
+=== P160 FULL TRANSPORT HUNT ===
+  rx ...020 (hashkeys RSZ r -> R (puzzle 160 spend tx))
+  anchor gap head2=73 head3=733
+  lhs tail ...898 rhs tail ...962
+  shelf2 160b  offset_bits [157, 158, 159] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=200000 gap_head=3 heaven_head=0
+    tested=152786 kept=0 ec_hits=0
+  phase3_head2: samples=200000 gap_head=2 heaven_head=0
+    tested=152786 kept=0 ec_hits=0
+  phase4_exact_gap: samples=200000 gap_head=0 heaven_head=0
+    tested=152786 kept=0 ec_hits=0
+
+=== SUMMARY ===
+  P135: kept=694 ec_hits=0
+  P140: kept=11662 ec_hits=0
+  P145: kept=910 ec_hits=0
+  P150: kept=12560 ec_hits=0
+  P155: kept=632 ec_hits=0
+  P160: kept=1589 ec_hits=0
+csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\unsolved_full_transport_hunt.csv
+report -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\unsolved_full_transport_hunt_report.txt
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\unsolved_full_transport_hunt.log

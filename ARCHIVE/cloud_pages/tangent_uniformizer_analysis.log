@@ -1,0 +1,48 @@
+=== Tangent / uniformizer (Silverman II.1, Math 223) ===
+
+Construction at smooth P = (x0, y0):
+  m = 3*x0^2 / (2*y0) mod p
+  l(x,y) = (y - y0) - m*(x - x0)   [tangent line, order-1 zero at P]
+  uniformizer t ~ (x - x0)  or  l/l'  with l'(P) != 0
+
+=== P135 ===
+  Px = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+  Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+  tangent slope m     = 99135488695835614572364795027851233834064984784801734733239176336814508583591 (256 bits)
+  chord slope P->R    = 110949369651731215170703100416479394038198680955354966268742418528756338765878 (256 bits)
+  bridge Lambda_p     = 97451685862885086182458552040892158509924235661624603229050850812487253689501 (256 bits)
+  m - chord mod p     = 103978208281420594825232679620059747649136288495087332503954341815967004489376 (256 bits)
+  m / Lambda_p mod p  = 39523502840891577613138034296878552155229759308326874179709499873788445536573 (255 bits)
+  tangent intercept   = y0 - m*x0 = 28793877746490750938394674896913585282891333190633954000761710797194630833649 mod p
+
+=== Solved puzzles: tangent vs offset (mod LO) ===
+n  row  off_bits  m%LO_bits  lam%LO_bits  m==offset?  m-chord%LO_bits
+P 70  2   66       69         69          False      69
+P 75  1   74       74         74          False      74
+P 80  0   79       79         79          False      77
+P 85  0   84       82         82          False      83
+P 90  2   89       89         84          False      86
+P 95  1   94       91         94          False      91
+P100  2   98       99         98          False      98
+P105  1  104      104        104          False      104
+P110  0  109      109        107          False      109
+P115  0  105      114        114          False      114
+P120  2  118      119        119          False      118
+P125  1  124      116        124          False      122
+P130  0  127      128        129          False      128
+
+Calibration: m%LO == offset on 0/13; Lambda_p%LO == offset on 0/13
+
+=== P135 EC probe (tangent-derived scalars in band) ===
+  m mod N: in_band=False EC=False bits=256
+  m - chord mod N: in_band=False EC=False bits=256
+  m * Lambda_p^-1 mod N: in_band=False EC=False bits=255
+  shelf2 + (m mod LO): in_band=False EC=False bits=136
+  shelf2 + (m-chord mod LO): in_band=False EC=False bits=136
+  shelf2 + (m/Lambda mod LO): in_band=True EC=False bits=135
+
+=== VERDICT ===
+Tangent m is LOCAL geometry at P; Lambda_p is GLOBAL slot ratio — different objects.
+m%LO does not systematically equal (d - shelf2) on solved puzzles.
+Wise direction for theory: use tangent/uniformizer for LOCAL parameter at P,
+  chord slopes for P-R relation, Lambda for slot bridge — do not identify them.

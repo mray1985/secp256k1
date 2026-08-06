@@ -1,0 +1,55 @@
+FAMILY BRIDGE + MIRROR DEFECT — batch from 53125.txt
+puzzles requested: 27  parsed keys: 88  analyzed: 27
+missing from 53125: []
+
+H-10 law: offset_bits == puzzle_height - 10
+  matches: 1 / 26
+
+offset == (L2-L1) mod LO:
+  matches: 0 / 26
+
+   n off_bits  H-10 L2-L1 row hits  term (first)
+------------------------------------------------------------------------
+   5        4     N     N   0    2  P115-calibrated offset (shelf2->d)|L3-L1
+  10        8     N     N   1    1  P115-calibrated offset (shelf2->d)
+  15       14     N     N   2    1  P115-calibrated offset (shelf2->d)
+  20       19     N     N   1    1  P115-calibrated offset (shelf2->d)
+  25       21     N     N   0    1  P115-calibrated offset (shelf2->d)
+  30       28     N     N   0    1  P115-calibrated offset (shelf2->d)
+  35       34     N     N   2    1  P115-calibrated offset (shelf2->d)
+  40       38     N     N   1    1  P115-calibrated offset (shelf2->d)
+  45       43     N     N   2    1  P115-calibrated offset (shelf2->d)
+  50       49     N     N   2    1  P115-calibrated offset (shelf2->d)
+  55       53     N     N   0    1  P115-calibrated offset (shelf2->d)
+  60       59     N     N   0    1  P115-calibrated offset (shelf2->d)
+  65       61     N     N   1    1  P115-calibrated offset (shelf2->d)
+  70       66     N     N   2    1  P115-calibrated offset (shelf2->d)
+  75       74     N     N   1    1  P115-calibrated offset (shelf2->d)
+  80       79     N     N   0    1  P115-calibrated offset (shelf2->d)
+  85       84     N     N   0    1  P115-calibrated offset (shelf2->d)
+  90       89     N     N   2    1  P115-calibrated offset (shelf2->d)
+  95       94     N     N   1    1  P115-calibrated offset (shelf2->d)
+ 100       98     N     N   2    1  P115-calibrated offset (shelf2->d)
+ 105      104     N     N   1    1  P115-calibrated offset (shelf2->d)
+ 110      109     N     N   0    1  P115-calibrated offset (shelf2->d)
+ 115      105     Y     N   0    1  P115-calibrated offset (shelf2->d)
+ 120      118     N     N   2    1  P115-calibrated offset (shelf2->d)
+ 125      124     N     N   1    1  P115-calibrated offset (shelf2->d)
+ 130      127     N     N   0    1  P115-calibrated offset (shelf2->d)
+
+P135 (unsolved — bridge shell only):
+  shelf2 mod LO bits = 134
+  row (epsilon landing) = 2
+  gap mod LO bits = 134
+  defect window bits: lo=135 hi=136
+  if H-10 holds: expect offset ~125 bits from shelf2
+
+P130 (d known, k unknown):
+  offset_bits=127 (H-10 pred 120: N)
+  bridge terms matching offset: P115-calibrated offset (shelf2->d)
+  cannot close m=d*k^-1 or ECDSA k without nonce
+
+P115 reference:
+  offset=33397376926465242200920829909277 bits=105
+  term_hits=P115-calibrated offset (shelf2->d)
+  frozen P115_OFFSET expects bits=105: True

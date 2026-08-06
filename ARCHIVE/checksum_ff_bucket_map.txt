@@ -1,0 +1,58 @@
+CHECKSUM FFFFFFFF BUCKET MAP
+
+N bits = 256  (32 bytes)
+N / 2^32 = 26959946667150639794667015087019630673536463705607434823784316690060  (4-byte lanes that fit in N)
+32 bytes / 8 = 4 bytes per mega-lane (checksum width)
+checksum range: 0x00000000 .. 0xFFFFFFFF  (4294967296 buckets)
+
+=== map checksum / FFFFFFFF vs private key position in band ===
+  corr(chk/FFFF, frac_d):     -0.1550
+  corr(chk/FFFF, log_pos):   -0.1445
+  frac_d - chk/FFFF: mean=-0.00762 std=0.41383
+
+=== how many d keys share one checksum bucket (uniform estimate) ===
+  band_width / 2^32 = 2^(n-1) / 2^32 = 2^(n-33)
+  P65: band~2^64  ~2^32 keys per checksum bucket  (4.29e+09 int)
+  P100: band~2^99  ~2^67 keys per checksum bucket  (1.48e+20 int)
+  P130: band~2^129  ~2^97 keys per checksum bucket  (1.58e+29 int)
+  P135: band~2^134  ~2^102 keys per checksum bucket  (5.07e+30 int)
+
+=== 8-bucket partition (top 3 bits of checksum) ===
+  bucket 0: count= 8  chk range 0x00000000..0x1fffffff
+  bucket 1: count= 7  chk range 0x20000000..0x3fffffff
+  bucket 2: count=14  chk range 0x40000000..0x5fffffff
+  bucket 3: count=14  chk range 0x60000000..0x7fffffff
+  bucket 4: count= 8  chk range 0x80000000..0x9fffffff
+  bucket 5: count=11  chk range 0xa0000000..0xbfffffff
+  bucket 6: count=10  chk range 0xc0000000..0xdfffffff
+  bucket 7: count=10  chk range 0xe0000000..0xffffffff
+
+=== N split into 8 x 4-byte lanes (32/8 bytes) ===
+  lane 0: 0xffffffff  dec ...967295
+  lane 1: 0xffffffff  dec ...967295
+  lane 2: 0xffffffff  dec ...967295
+  lane 3: 0xfffffffe  dec ...967294
+  lane 4: 0xbaaedce6  dec ...021990
+  lane 5: 0xaf48a03b  dec ...772411
+  lane 6: 0xbfd25e8c  dec ...235020
+  lane 7: 0xd0364141  dec ...216577
+
+=== checksum vs N lane (same 4-byte width) ===
+  lane 0: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 1: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 2: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 3: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 4: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 5: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 6: std(chk - (N_lane mod 2^32)) = 1.18e+09
+  lane 7: std(chk - (N_lane mod 2^32)) = 1.18e+09
+
+=== P135 ===
+  checksum: 0x7b8f3e17  frac=0.48265446  bucket8=3
+  bucket8 range: 0x60000000 .. 0x7fffffff
+  P135 band / 8 buckets ~ 2.72e+39 keys per coarse bucket
+  P135 band / 2^32 checksum buckets ~ 2^102 = 2^102 keys each
+
+  d estimate from chk/FFFF map:
+    frac=chk/FFFF: d tail ...854528 ec=False
+    frac=chk/FFFF mean-adjusted: d tail ...266688 ec=False

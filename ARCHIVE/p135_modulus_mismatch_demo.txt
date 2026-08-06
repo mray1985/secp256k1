@@ -1,0 +1,52 @@
+P135 MODULUS MISMATCH DEMONSTRATION
+Px_pub tail ...590  r_sig tail ...368
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+=== 1. Field vs Scalar bridge (Px[2] / denom) ===
+
+--- denom r_sig tail ...368  lam_A==lam_B? False ---
+  Candidate A (field): lam_tail ...14645  k_bits=255  x_bits=256  band=False  ec=False
+  Candidate B (scalar): lam_tail ...94194  k_bits=256  x_bits=256  band=False  ec=False
+    Delta (B-A) mod N tail ...73886
+
+--- denom rx[0] tail ...219  lam_A==lam_B? False ---
+  Candidate A (field): lam_tail ...39180  k_bits=256  x_bits=255  band=False  ec=False
+  Candidate B (scalar): lam_tail ...34478  k_bits=256  x_bits=255  band=False  ec=False
+    Delta (B-A) mod N tail ...89635
+
+--- denom rx[1]=r_true tail ...368  lam_A==lam_B? False ---
+  Candidate A (field): lam_tail ...14645  k_bits=255  x_bits=256  band=False  ec=False
+  Candidate B (scalar): lam_tail ...94194  k_bits=256  x_bits=256  band=False  ec=False
+    Delta (B-A) mod N tail ...73886
+
+--- denom rx[2] tail ...739  lam_A==lam_B? False ---
+  Candidate A (field): lam_tail ...89501  k_bits=256  x_bits=255  band=False  ec=False
+  Candidate B (scalar): lam_tail ...46025  k_bits=256  x_bits=255  band=False  ec=False
+    Delta (B-A) mod N tail ...56524
+
+=== 2. Full 3x3 shelf grid (A vs B) ===
+  grid hits: 0
+
+=== 3. Cubic root of r — Path 2 (mod N) ===
+
+  u0 tail ...354
+    A: Px/u field: lam_tail ...75884  k_bits=255  x_bits=254  band=False  ec=False
+    B: Px/u scalar: lam_tail ...12265  k_bits=254  x_bits=256  band=False  ec=False
+
+  u1 tail ...115
+    A: Px/u field: lam_tail ...27072  k_bits=255  x_bits=254  band=False  ec=False
+    B: Px/u scalar: lam_tail ...65850  k_bits=256  x_bits=253  band=False  ec=False
+
+  u2 tail ...205
+    A: Px/u field: lam_tail ...02880  k_bits=256  x_bits=253  band=False  ec=False
+    B: Px/u scalar: lam_tail ...10559  k_bits=256  x_bits=254  band=False  ec=False
+
+=== 4. Cubic root of r — Path 1 (mod p, lift mod N) ===
+
+=== 5. Cubic root of lambda_B (scalar ratio Px/r_sig mod N) ===
+  lambda_B tail ...94194
+
+=== 6. Solved control P130 (does A or B recover d?) ===
+  true d/k tail ...074
+  A matches d/k? False  arrest x==d? False
+  B matches d/k? False  arrest x==d? False

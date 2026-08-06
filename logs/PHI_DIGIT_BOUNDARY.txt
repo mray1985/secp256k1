@@ -1,0 +1,137 @@
+========================================================================================
+Digit boundary: x/p vs C = x/p + y/p^2 vs C_neg = x/p - y/p^2 + 1/p
+========================================================================================
+  log10(p)  ~ 77.06367888997918597471715704947021485265660965429978657546943004853968034537137520154613583624707549523375671285646202671110451547355256534380796551275630538976852458350402994519160465280710215582217416791304986220596611265086233987767704397268501294261958806128454483718688703323375534195403650066240097502276376728761211377724076658429985079326851916087428587140258617488894589955928999048171268124
+  p digits  = 78
+  So 1/p starts near fractional digit ~78
+
+----------------------------------------------------------------------------------------
+1) Walk samples: first differing fractional digit
+----------------------------------------------------------------------------------------
+  n=1
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           77
+    first digit C vs (x/p - y/p^2):   78
+    C     [70:90] = ...637484948207099828506...
+    X     [70:90] = ...637484945770421872537...
+    C_neg [70:90] = ...637484951969912471662...
+
+  n=2
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           77
+    first digit C vs (x/p - y/p^2):   78
+    C     [70:90] = ...690981578803425529332...
+    X     [70:90] = ...690981577896610682101...
+    C_neg [70:90] = ...690981585625964389964...
+
+  n=3
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   78
+    C     [70:90] = ...194056434798769185005...
+    X     [70:90] = ...194056432890699788856...
+    C_neg [70:90] = ...194056439618798947801...
+
+  n=4
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...187665464843774349426...
+    X     [70:90] = ...187665462079926497572...
+    C_neg [70:90] = ...187665467952247200812...
+
+  n=5
+    x unchanged under neg: True
+    first digit C vs X=x/p:           77
+    first digit C vs C_neg:           77
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...688932391289670701134...
+    X     [70:90] = ...688932383980220178659...
+    C_neg [70:90] = ...688932385306938211279...
+
+  n=6
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...282158747193868588362...
+    X     [70:90] = ...282158741321539276427...
+    C_neg [70:90] = ...282158744085378519586...
+
+  n=7
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...265731024404039021754...
+    X     [70:90] = ...265731020797053662138...
+    C_neg [70:90] = ...265731025826236857616...
+
+  n=8
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...299663074517108663358...
+    X     [70:90] = ...299663071403251908072...
+    C_neg [70:90] = ...299663076925563707881...
+
+  n=17
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           77
+    first digit C vs (x/p - y/p^2):   78
+    C     [70:90] = ...176172438049096158955...
+    X     [70:90] = ...176172435820255699817...
+    C_neg [70:90] = ...176172442227583795773...
+
+  n=100
+    x unchanged under neg: True
+    first digit C vs X=x/p:           77
+    first digit C vs C_neg:           77
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...602933172603487015026...
+    X     [70:90] = ...602933164862030197392...
+    C_neg [70:90] = ...602933165756741934852...
+
+  n=1000
+    x unchanged under neg: True
+    first digit C vs X=x/p:           78
+    first digit C vs C_neg:           78
+    first digit C vs (x/p - y/p^2):   77
+    C     [70:90] = ...516566348232461220833...
+    X     [70:90] = ...516566341925867719269...
+    C_neg [70:90] = ...516566344255442772800...
+
+----------------------------------------------------------------------------------------
+2) Stats first-diff digit (walk n=1..128)
+----------------------------------------------------------------------------------------
+  C vs X=x/p      : n=128  min=76  median=78  max=80
+  C vs C_neg      : n=128  min=76  median=78  max=80
+
+----------------------------------------------------------------------------------------
+3) What is actually changing
+----------------------------------------------------------------------------------------
+  • Integer x does NOT change under negation.
+  • Pure X = x/p digits are identical for P and -P.
+  • Combined C = X + Fine: Fine ~ O(1/p) ~ 10^{-78}.
+  • Adding Fine can CARRY into the last few digits of the x/p region.
+  • So printed C looks like 'x changed around digits 75-78' —
+    that is carry from y/p^2 (or (p-y)/p^2), not a new x.
+  • True C_neg = x/p + (p-y)/p^2 = x/p - y/p^2 + 1/p.
+    Plain (x/p - y/p^2) omits +1/p and is NOT Phi(-P).
+
+  C and X agree on first 77 frac digits: 65/128
+  C and X agree on first 78 frac digits: 13/128
+
+========================================================================================
+VERDICT
+========================================================================================
+  The 75-78 digit wiggle is Fine bleeding into the x/p print via carry.
+  x is fixed; compressed 02/03 is the clean tag without that bleed.
+  Phi(-P) = x/p + (p-y)/p^2, not x/p - y/p^2 alone.
+

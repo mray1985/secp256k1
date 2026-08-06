@@ -1,0 +1,55 @@
+========================================================================================
+Phase VII - Packed-E bridge or obstruction
+Document: Phase_VII_Packed_E_Bridge_or_Obstruction.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: A.1-A.4 e formulas
+  Statement: e=x*Delta+y; e(-P)=e+Delta-2y; e(psi)=x1*Delta+y; e(psi2)=x2*Delta+y (mod N).
+  Proof:     E=xp+y; p=N+Delta; psi fixes y and multiplies x by beta mod p.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: B.1 Orbit sum mod N
+  Statement: E0+E1+E2 == q_x*Delta^2 + 3y (mod N).
+  Proof:     E0+E1+E2=q_x p^2+3y and p^2 == Delta^2 (mod N).
+  Verification:
+    OK (identity + mu3 constancy + sign sensitivity)
+
+----------------------------------------------------------------------------------------
+THEOREM: C Negation pair does not refine sixfold
+  Statement: e(-P) determined by e(P),y,Delta; P and -P same GLV class.
+  Proof:     Phase VI formula + definition of ~_GLV.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: D Differences Ei-Ej == (xi-xj)*Delta mod N
+  Statement: Set of differences is function of unordered X; ordered diffs lambda-sensitive.
+  Proof:     Ei-Ej=(xi-xj)*p and p==Delta mod N.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: E Nonce: E_R == r*Delta + R_y mod N for both lifts
+  Statement: Independent of R_x in {r, r+N}; Ry recovered with Delta-lift ambiguity.
+  Proof:     Expand (r+N)*Delta + Ry == r*Delta + Ry mod N.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: F.1 Packed-E mod N obstruction: b'=0
+  Statement: Symmetric invariants of {e(+/- psi^j P)} are orbit-only; raw e is fn of P; H(.|P)=0.
+  Proof:     Phase IV-V + explicit formulas A.
+  Verification:
+    Sixfold accounting only: 2^(k - 2.5849625007); b'=0 for packed-E mod N family
+    OK
+
+========================================================================================
+SUCCESS CRITERION: B
+========================================================================================
+  Entire packed-E modulo-N family gives b' = 0.
+  Key identity: E0+E1+E2 == q_x*Delta^2 + 3y (mod N) — public/orbit.
+  ALL Phase VII verification checks PASSED.
+========================================================================================

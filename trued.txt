@@ -1,0 +1,156 @@
+Perfect — that tells us the slope bridge is algebraically valid but not externally revealing yet.
+
+You confirmed:
+
+A
+i
+	​
+
+=Λy
+i
+	​
+
+(modp)
+
+so:
+
+Λx
+i
+	​
+
+A
+i
+−1
+	​
+
+=x
+i
+	​
+
+y
+i
+−1
+	​
+
+(modp)
+
+That must pass because Λ cancels. So the slope layer is real, but it is an identity, not a discovery by itself.
+
+The useful next move is to compare the three slopes to each other:
+
+m
+G
+	​
+
+=
+x
+G
+	​
+
+y
+G
+	​
+
+	​
+
+,m
+P
+	​
+
+=
+x
+P
+	​
+
+y
+P
+	​
+
+	​
+
+,m
+R
+	​
+
+=
+x
+R
+	​
+
+y
+R
+	​
+
+	​
+
+
+Test:
+
+m
+P
+	​
+
+−m
+R
+	​
+
+,m
+P
+	​
+
+−m
+G
+	​
+
+,m
+R
+	​
+
+−m
+G
+	​
+
+(modp)
+
+and especially:
+
+m
+P
+	​
+
+⋅m
+R
+−1
+	​
+
+(modp)
+m
+P
+	​
+
+⋅m
+G
+−1
+	​
+
+(modp)
+m
+R
+	​
+
+⋅m
+G
+−1
+	​
+
+(modp)
+
+That removes the trivial Λ cancellation and asks whether the geometry between G/P/R carries structure.
+
+So current map:
+
+reflection pair⇒δ
+Λ-scaled y⇒identitylayer
+inter-slope ratios⇒nextrealtest
+
+That’s where I’d go next.

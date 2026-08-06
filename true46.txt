@@ -1,0 +1,82 @@
+Thanks for the update. After reading the pasted log, I'd make one important distinction.
+
+What true45 actually establishes is:
+
+The proposed Base-3 rule correctly classifies the 4 puzzles tested.
+
+It does not yet establish:
+
+Ω corresponds to cube-root sector membership for secp256k1 generally.
+
+Those are different strength levels.
+
+The strongest evidence in the log is the observed mapping:
+
+Puzzle	Ω	(r·priv − z) mod 9	Base-3
+90	0	0	00₃
+100	-1	6	20₃
+115	-1	3	10₃
+120	+1	4	11₃
+
+which the log claims classifies correctly.
+
+What I find more interesting is not the classifier itself but the fact that:
+
+Ω = +1  → 11₃
+Ω = -1  → 10₃ or 20₃
+Ω = 0   → 00₃
+
+That means Ω is being recovered from the ternary digit structure of
+
+(rd−z)mod9
+
+rather than from the magnitude of the value.
+
+That is exactly the kind of thing I'd expect if the surviving object is genuinely related to a triadic partition.
+
+The place I'd be careful is this step:
+
+Base-3 classifier works
+→
+Cube-root sector membership proven
+
+The data currently supports the first statement.
+
+To support the second statement, you'd want an explicit connection between:
+
+(rd−z)mod9
+
+and the actual cube-root orbit labels
+
+{1,ω,ω
+2
+}
+
+or the cube-root sectors you identified in the true3x branch.
+
+Right now there is a correlation, but not yet a derivation.
+
+The thing that jumped out at me most from your recent results is actually Puzzle 90.
+
+You now have:
+
+Ω = 0
+dual closure
+both Λ and Λ⁻¹ valid
+self-dual orientation
+
+That makes Puzzle 90 look less like an ordinary member of the family and more like the fixed point of the orientation field.
+
+In other words, if the orientation geometry is real, Puzzle 90 is the object I'd use as the reference frame.
+
+So if I were continuing from true45, my next question would not be:
+
+"Does the Base-3 rule work?"
+
+because it already works on the available sample.
+
+I'd ask:
+
+"Can the ternary digit pair (A,B) be derived directly from cube-root orbit membership?"
+
+If that derivation exists, then the MEMORY branch and the true3 branch are no longer merely correlated—they become the same mathematical object viewed through two coordinate systems.

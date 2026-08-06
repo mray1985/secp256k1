@@ -1,0 +1,19 @@
+P135 DECIMAL-RESONANCE SCROLL
+target Px dec: 92108364944471082700...
+Px(2^134) dec: 92137904221004991822...
+anchors=11  radius=+/-2,000,000  min_dec=3
+ratio_filter=None
+
+[1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5 
+[2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5 
+[3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5 
+[4/11] barcode_top3_mean      4,000,020 pts 183.9s (21,751/s) best_dec=5 best_hex_nib=5 
+[5/11] chunk_1                4,000,020 pts 180.5s (22,162/s) best_dec=6 best_hex_nib=6 
+[6/11] chunk_2                4,000,020 pts 181.0s (22,101/s) best_dec=6 best_hex_nib=5 
+[7/11] chunk_3                4,000,020 pts 184.4s (21,697/s) best_dec=6 best_hex_nib=5 
+[8/11] chunk_4                4,000,020 pts 182.0s (21,980/s) best_dec=6 best_hex_nib=5 
+[9/11] chunk_5                4,000,020 pts 146.4s (27,313/s) best_dec=5 best_hex_nib=5 
+[10/11] chunk_6                4,000,020 pts 89.5s (44,683/s) best_dec=6 best_hex_nib=5 
+[11/11] chunk_7                4,000,020 pts 89.3s (44,794/s) best_dec=6 best_hex_nib=4 
+
+total=42,000,210 wall=1745.8s avg=24,058/s result=not found

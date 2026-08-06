@@ -1,0 +1,71 @@
+GAP-TIER CONVENTION VERIFICATION
+
+Definitions (matches compute_alignment_frame in ecdlp_full_pipeline.py):
+  LO = 2^(H-1),  HI = 2^H
+  offset = (d - shelf2) mod LO
+  offset_bits = offset.bit_length()   [Python int.bit_length; offset>0]
+  gap = H - offset_bits
+
+Bit-length interval:
+  offset_bits = k  <=>  2^(k-1) <= offset < 2^k
+
+Gap tiers:
+  gap=1  -> offset_bits=H-1  -> offset in [2^(H-2), 2^(H-1))
+  gap=2  -> offset_bits=H-2  -> offset in [2^(H-3), 2^(H-2))
+
+P135 (H=135) priority tiers:
+  gap=1: offset_bits=134, offset in [2^133, 2^134) = [10889035741470030830827987437816582766592, 21778071482940061661655974875633165533184)
+  gap=2: offset_bits=133, offset in [2^132, 2^133) = [5444517870735015415413993718908291383296, 10889035741470030830827987437816582766592)
+
+NOTE: offset_bits=132 means o in [2^131,2^132), NOT o=2^132.
+      For H=135: gap=1 uses offset_bits=134, not 132.
+
+SOLVED-PUZZLE CHECK (26 keys):
+     H row offset_bits  gap  gap=H-ob in interval
+  ----------------------------------------------------
+     5   0           4    1         Y           Y
+    10   1           8    2         Y           Y
+    15   2          14    1         Y           Y
+    20   1          19    1         Y           Y
+    25   0          21    4         Y           Y
+    30   0          28    2         Y           Y
+    35   2          34    1         Y           Y
+    40   1          38    2         Y           Y
+    45   2          43    2         Y           Y
+    50   2          49    1         Y           Y
+    55   0          53    2         Y           Y
+    60   0          59    1         Y           Y
+    65   1          61    4         Y           Y
+    70   2          66    4         Y           Y
+    75   1          74    1         Y           Y
+    80   0          79    1         Y           Y
+    85   0          84    1         Y           Y
+    90   2          89    1         Y           Y
+    95   1          94    1         Y           Y
+   100   2          98    2         Y           Y
+   105   1         104    1         Y           Y
+   110   0         109    1         Y           Y
+   115   0         105   10         Y           Y
+   120   2         118    2         Y           Y
+   125   1         124    1         Y           Y
+   130   0         127    3         Y           Y
+
+  gap == H - offset_bits: 26/26
+  offset in [2^(ob-1), 2^ob): 26/26
+  gap in {1,2}: 21/26
+
+NULL MODEL (offset uniform on [0, LO), independent per puzzle):
+  P(gap=1) = 1/2, P(gap=2) = 1/4, P(gap in {1,2}) = 3/4
+  Observed gap in {1,2}: 21/26 = 80.8%
+  Binomial(n=26, p=0.75) P(X>=21) = 0.3371 (not significant at 5%)
+
+Per-puzzle null P(gap in {1,2}) under uniform-o (varies only via H=constant 3/4):
+  P(gap=1) = 0.500000
+  P(gap=2) = 0.250000
+  P(gap=3) = 0.125000
+  P(gap=4) = 0.062500
+  P(gap=10) = 0.000977
+
+P115 outlier decode:
+  gap=10 offset_bits=105 offset in [20282409603651670423947251286016, 40564819207303340847894502572032)
+  (H-10 hit: offset_bits=105 = 105)

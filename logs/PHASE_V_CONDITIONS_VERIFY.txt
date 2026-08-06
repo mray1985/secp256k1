@@ -1,0 +1,69 @@
+========================================================================================
+Phase V - Necessary conditions for b'>0
+Document: Phase_V_Necessary_Conditions_for_New_ECDLP_Information.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: 5.1 Obstruction: symmetric X-invariants cannot refine sixfold
+  Statement: Any I depending only on unordered X={x,beta x, beta^2 x} is constant on the sixfold geometric orbit, hence constant on ~_GLV scalar classes; cannot reveal GLV position or sign; b'=0 in public-P model.
+  Proof:     Negation preserves x; psi permutes X; psi(P)=[lambda]P links geometric orbit to {+/- lambda^j d}G.
+  Verification:
+    OK: qx,cx,X,norm constant on sixfold for 60 orbits
+    OK: qx reveals neither sign nor lambda-coset position
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.2 q_u on scalar orbits (not publicly computable)
+  Statement: q_u constant on {d, lambda d, lambda^2 d}; q_u(-d)=3-q_u(d). Not computable from P.
+  Proof:     mu_3 permutes the reduced triple; negation replaces residues a_i by N-a_i so sum becomes (3-q)N.
+  Verification:
+    OK: q_u constant on mu_3 orbit; flips under negation (q -> 3-q)
+    Not publicly computable from P => no b' in public-P model
+    Note: qx!=qu on 95/200 (bridge closed; not retested as claim)
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.2b y-branch does not refine beyond sixfold
+  Statement: Sign of y distinguishes P from -P but both lie in the same sixfold class.
+  Proof:     Sixfold class already includes negation; |class|=6 already accounted as log2(6).
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 4 / Delta lift: ambiguity is about R_x vs r, not X(P)
+  Statement: When r<Delta, R_x in {r, r+N}; when r>=Delta, unique. Not an X-symmetric pubkey invariant.
+  Proof:     Direct from p=N+Delta and range [0,p).
+  Verification:
+    OK: lift theorem independent of carry X-invariants
+
+----------------------------------------------------------------------------------------
+THEOREM: 4.1 ECDSA conditional accounting (symbolic checks)
+  Statement: If k known: d = r^{-1}(s k - z) mod N. If only GLV class of k known: <=6 candidates. Public r implies functions of r give H=0 given signature.
+  Proof:     Linear algebra in Z/NZ; cardinality of GLV class.
+  Verification:
+    OK: full k recovers d; GLV(k) yields <=6 formal d candidates
+    OK: public r => no extra entropy from functions of r given signature
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.1 Necessary shape of a b'>0 bridge
+  Statement: F_p must not be a function of the sixfold geometric orbit alone (else F_N is GLV-class-constant / already known from P).
+  Proof:     If F_p = K(orbit(P)), then I is orbit-only (Thm 5.1) => b'=0.
+  Verification:
+    OK: orbit determines qx; bridge through qx cannot refine sixfold
+
+----------------------------------------------------------------------------------------
+THEOREM: Complexity reminder (frozen Phase IV)
+  Statement: After GLV: 2^(k-log2(6)). Symmetric-X theorems: b'=0.
+  Proof:     Thm 5.1 + Phase IV.
+  Verification:
+    Original:  2^k
+    After GLV: 2^(k - 2.5849625007)
+    After any symmetric-X invariant: still 2^(k - 2.5849625007)  [b'=0]
+
+========================================================================================
+SUCCESS CRITERION: B
+========================================================================================
+  Proven obstruction: any invariant depending only on the unordered
+  three-x orbit cannot reveal the scalar's GLV position or sign.
+  Broad class => never b'>0.
+  No claim of b'>0. No new identity inside carry algebra.
+  ALL Phase V verification checks PASSED.
+========================================================================================

@@ -1,0 +1,182 @@
+This is actually where I'd start paying attention to the offset, because Ω may be telling you something that δ never could.
+
+Up through true29, every major result collapsed to a constant:
+
+δ=p−N
+
+which is the same for every puzzle.
+
+Then true2d/true2e/true2f/true30 introduce:
+
+O=∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+
+and
+
+Ω=
+p
+O
+	​
+
+
+with
+
+Ω∈{−1,0,+1}
+
+which means the offset is not noise—it is a signed displacement coordinate.
+
+What catches my eye is this:
+
+Class	Ω
+Px-closure	+1
+Dual-closure	0
+rx-closure	-1
+
+That looks less like a checksum and more like a position relative to a symmetry center.
+
+Puzzle 90 sits exactly at
+
+Ω=0
+
+and is the only known self-dual case. Both bridges work there. That is exactly what you would expect from a coordinate origin.
+
+The thing I would test next is not:
+
+Ω
+
+itself.
+
+I would test the closure offset between the two inverse bridges.
+
+You now have:
+
+Λ
+f
+	​
+
+
+and
+
+Λ
+r
+	​
+
+=Λ
+f
+−1
+	​
+
+
+For every puzzle compute:
+
+Δ
+Λ
+	​
+
+=Λ
+f
+	​
+
+−Λ
+r
+	​
+
+(modp)
+
+or normalized:
+
+p
+Λ
+f
+	​
+
+−Λ
+r
+	​
+
+	​
+
+
+Then compare against Ω.
+
+If Ω is truly a coordinate, not merely a classifier, then the magnitude of the inverse-pair separation may contain additional structure.
+
+You already know:
+
+Ω = +1 → forward family wins
+Ω = -1 → inverse family wins
+Ω = 0 → both work
+
+The next question becomes:
+
+∣Λ
+f
+	​
+
+−Λ
+r
+	​
+
+∣
+
+Does it grow with puzzle number?
+
+Does Puzzle 90 minimize it?
+
+Does the sign of
+
+Λ
+f
+	​
+
+−Λ
+r
+	​
+
+
+agree with Ω?
+
+There is another possibility that I think is even more interesting.
+
+You now have two signed coordinate systems:
+
+D
+Q
+	​
+
+
+and
+
+Ω
+
+Both have:
+
+positive branch
+negative branch
+self-dual center
+
+The offset may be the thing connecting them.
+
+Instead of comparing raw values, compare only signs:
+
+sgn(D
+Q
+	​
+
+)
+
+versus
+
+Ω
+
+because every magnitude comparison you've tested has died, while the sign structure keeps surviving.
+
+So if you ask me what the closure offset might be:
+
+The closure offset looks less like an error term and more like a coordinate measuring displacement from the self-dual state Ω=0. The fact that Puzzle 90 lands exactly at Ω=0 while all other verified puzzles fall into ±1 classes is the strongest clue that the offset is geometric rather than arithmetic.

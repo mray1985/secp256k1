@@ -1,0 +1,3850 @@
+{
+  "question": "Which public transform families flip to twist most reliably across all RSZ puzzles?",
+  "facts": {
+    "puzzle_count": 20,
+    "puzzles": [
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130,
+      135,
+      140,
+      145,
+      150,
+      155,
+      160
+    ],
+    "gap": 432420386565659656852420866390673177326,
+    "hinge": 432420386565659656852420866390673177327,
+    "gap_plus_7": 432420386565659656852420866390673177333,
+    "gap_minus_7": 432420386565659656852420866390673177319
+  },
+  "aggregate_family_summary": {
+    "py": {
+      "main": 16,
+      "twist": 24,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.6,
+      "dominant": "twist"
+    },
+    "hinge": {
+      "main": 20,
+      "twist": 20,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.5,
+      "dominant": "mixed"
+    },
+    "gap+7": {
+      "main": 20,
+      "twist": 20,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.5,
+      "dominant": "mixed"
+    },
+    "2^n": {
+      "main": 41,
+      "twist": 39,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.487,
+      "dominant": "main"
+    },
+    "rsz": {
+      "main": 62,
+      "twist": 58,
+      "singular": 0,
+      "transform_instances": 120,
+      "twist_rate": 0.483,
+      "dominant": "main"
+    },
+    "2^(n-1)": {
+      "main": 43,
+      "twist": 37,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.463,
+      "dominant": "main"
+    },
+    "gap": {
+      "main": 22,
+      "twist": 18,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.45,
+      "dominant": "main"
+    },
+    "index": {
+      "main": 25,
+      "twist": 15,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.375,
+      "dominant": "main"
+    },
+    "gap-7": {
+      "main": 27,
+      "twist": 13,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.325,
+      "dominant": "main"
+    },
+    "moduli": {
+      "main": 62,
+      "twist": 18,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.225,
+      "dominant": "main"
+    },
+    "literal": {
+      "main": 20,
+      "twist": 0,
+      "singular": 0,
+      "transform_instances": 20,
+      "twist_rate": 0.0,
+      "dominant": "main"
+    }
+  },
+  "ranked_by_twist_rate": [
+    {
+      "family": "py",
+      "main": 16,
+      "twist": 24,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.6,
+      "dominant": "twist"
+    },
+    {
+      "family": "hinge",
+      "main": 20,
+      "twist": 20,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.5,
+      "dominant": "mixed"
+    },
+    {
+      "family": "gap+7",
+      "main": 20,
+      "twist": 20,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.5,
+      "dominant": "mixed"
+    },
+    {
+      "family": "2^n",
+      "main": 41,
+      "twist": 39,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.487,
+      "dominant": "main"
+    },
+    {
+      "family": "rsz",
+      "main": 62,
+      "twist": 58,
+      "singular": 0,
+      "transform_instances": 120,
+      "twist_rate": 0.483,
+      "dominant": "main"
+    },
+    {
+      "family": "2^(n-1)",
+      "main": 43,
+      "twist": 37,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.463,
+      "dominant": "main"
+    },
+    {
+      "family": "gap",
+      "main": 22,
+      "twist": 18,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.45,
+      "dominant": "main"
+    },
+    {
+      "family": "index",
+      "main": 25,
+      "twist": 15,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.375,
+      "dominant": "main"
+    },
+    {
+      "family": "gap-7",
+      "main": 27,
+      "twist": 13,
+      "singular": 0,
+      "transform_instances": 40,
+      "twist_rate": 0.325,
+      "dominant": "main"
+    },
+    {
+      "family": "moduli",
+      "main": 62,
+      "twist": 18,
+      "singular": 0,
+      "transform_instances": 80,
+      "twist_rate": 0.225,
+      "dominant": "main"
+    },
+    {
+      "family": "literal",
+      "main": 20,
+      "twist": 0,
+      "singular": 0,
+      "transform_instances": 20,
+      "twist_rate": 0.0,
+      "dominant": "main"
+    }
+  ],
+  "per_puzzle": {
+    "65": {
+      "puzzle": 65,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^65",
+            "x-2^65",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^65": "twist",
+            "x-2^65": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+65",
+            "x-65"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+65": "twist",
+            "x-65": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 4,
+          "twist": 2,
+          "twist_rate": 0.333,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "twist",
+            "x+S": "main",
+            "x-S": "main",
+            "x+Z": "twist",
+            "x-Z": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^64",
+            "x-2^64",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+2^64": "main",
+            "x-2^64": "main",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "hinge",
+      "top_twist_rate": 0.5
+    },
+    "70": {
+      "puzzle": 70,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 2,
+          "twist": 4,
+          "twist_rate": 0.667,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "twist",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^69",
+            "x-2^69",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^69": "twist",
+            "x-2^69": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^70",
+            "x-2^70",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^70": "main",
+            "x-2^70": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+70",
+            "x-70"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+70": "main",
+            "x-70": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "hinge",
+      "top_twist_rate": 1.0
+    },
+    "75": {
+      "puzzle": 75,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^75",
+            "x-2^75",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^75": "main",
+            "x-2^75": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "twist",
+            "x-R": "main",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+75",
+            "x-75"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+75": "twist",
+            "x-75": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^74",
+            "x-2^74",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^74": "main",
+            "x-2^74": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "py",
+      "top_twist_rate": 1.0
+    },
+    "80": {
+      "puzzle": 80,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 2,
+          "twist": 4,
+          "twist_rate": 0.667,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^79",
+            "x-2^79",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^79": "twist",
+            "x-2^79": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^80",
+            "x-2^80",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^80": "main",
+            "x-2^80": "main",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+80",
+            "x-80"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+80": "main",
+            "x-80": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "rsz",
+      "top_twist_rate": 0.667
+    },
+    "85": {
+      "puzzle": 85,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+85",
+            "x-85"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+85": "twist",
+            "x-85": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^84",
+            "x-2^84",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^84": "twist",
+            "x-2^84": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+N": "twist",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^85",
+            "x-2^85",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^85": "twist",
+            "x-2^85": "main",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 6,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap",
+      "top_twist_rate": 1.0
+    },
+    "90": {
+      "puzzle": 90,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^90",
+            "x-2^90",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^90": "twist",
+            "x-2^90": "twist",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "twist",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+90",
+            "x-90"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+90": "twist",
+            "x-90": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "twist",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^89",
+            "x-2^89",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+2^89": "main",
+            "x-2^89": "main",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "py",
+      "top_twist_rate": 1.0
+    },
+    "95": {
+      "puzzle": 95,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 2,
+          "twist": 4,
+          "twist_rate": 0.667,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "twist",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "twist"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^94",
+            "x-2^94",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^94": "main",
+            "x-2^94": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+95",
+            "x-95"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+95": "main",
+            "x-95": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^95",
+            "x-2^95",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^95": "twist",
+            "x-2^95": "main",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "rsz",
+      "top_twist_rate": 0.667
+    },
+    "100": {
+      "puzzle": 100,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^100",
+            "x-2^100",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 0,
+          "twist": 4,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+2^100": "twist",
+            "x-2^100": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^99",
+            "x-2^99",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^99": "twist",
+            "x-2^99": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 4,
+          "twist": 2,
+          "twist_rate": 0.333,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "twist",
+            "x+S": "main",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "twist",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+100",
+            "x-100"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+100": "main",
+            "x-100": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap+7",
+      "top_twist_rate": 1.0
+    },
+    "105": {
+      "puzzle": 105,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^104",
+            "x-2^104",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^104": "main",
+            "x-2^104": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^105",
+            "x-2^105",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+2^105": "main",
+            "x-2^105": "main",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+105",
+            "x-105"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+105": "main",
+            "x-105": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap+7",
+      "top_twist_rate": 1.0
+    },
+    "110": {
+      "puzzle": 110,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 1,
+          "twist": 5,
+          "twist_rate": 0.833,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "twist",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^109",
+            "x-2^109",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^109": "main",
+            "x-2^109": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^110",
+            "x-2^110",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^110": "main",
+            "x-2^110": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+110",
+            "x-110"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+110": "main",
+            "x-110": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap-7",
+      "top_twist_rate": 1.0
+    },
+    "115": {
+      "puzzle": 115,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^115",
+            "x-2^115",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^115": "twist",
+            "x-2^115": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 2,
+          "twist": 4,
+          "twist_rate": 0.667,
+          "dominant": "twist",
+          "details": {
+            "x+R": "main",
+            "x-R": "twist",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^114",
+            "x-2^114",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^114": "twist",
+            "x-2^114": "main",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+115",
+            "x-115"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+115": "main",
+            "x-115": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "hinge",
+      "top_twist_rate": 1.0
+    },
+    "120": {
+      "puzzle": 120,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^120",
+            "x-2^120",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^120": "main",
+            "x-2^120": "twist",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+N": "twist",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 4,
+          "twist": 2,
+          "twist_rate": 0.333,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "twist",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "main",
+            "x-Z": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^119",
+            "x-2^119",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+2^119": "main",
+            "x-2^119": "main",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+120",
+            "x-120"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+120": "main",
+            "x-120": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap",
+      "top_twist_rate": 1.0
+    },
+    "125": {
+      "puzzle": 125,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^124",
+            "x-2^124",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 0,
+          "twist": 4,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+2^124": "twist",
+            "x-2^124": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+125",
+            "x-125"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+125": "twist",
+            "x-125": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 2,
+          "twist": 4,
+          "twist_rate": 0.667,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^125",
+            "x-2^125",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^125": "main",
+            "x-2^125": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "2^(n-1)",
+      "top_twist_rate": 1.0
+    },
+    "130": {
+      "puzzle": 130,
+      "solved": true,
+      "literal_side": "main",
+      "family_summary": {
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "twist"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 1,
+          "twist": 5,
+          "twist_rate": 0.833,
+          "dominant": "twist",
+          "details": {
+            "x+R": "twist",
+            "x-R": "twist",
+            "x+S": "twist",
+            "x-S": "twist",
+            "x+Z": "twist",
+            "x-Z": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^130",
+            "x-2^130",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^130": "twist",
+            "x-2^130": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^129",
+            "x-2^129",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^129": "main",
+            "x-2^129": "main",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+130",
+            "x-130"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+130": "main",
+            "x-130": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap-7",
+      "top_twist_rate": 1.0
+    },
+    "135": {
+      "puzzle": 135,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^134",
+            "x-2^134",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^134": "twist",
+            "x-2^134": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^135",
+            "x-2^135",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^135": "twist",
+            "x-2^135": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "twist",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+N": "twist",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+135",
+            "x-135"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+135": "main",
+            "x-135": "twist"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap",
+      "top_twist_rate": 1.0
+    },
+    "140": {
+      "puzzle": 140,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^139",
+            "x-2^139",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^139": "twist",
+            "x-2^139": "main",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "main",
+            "x-R": "twist",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+140",
+            "x-140"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+140": "twist",
+            "x-140": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^140",
+            "x-2^140",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^140": "main",
+            "x-2^140": "main",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+N": "main",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "py",
+      "top_twist_rate": 1.0
+    },
+    "145": {
+      "puzzle": 145,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap-7": "twist",
+            "x-gap+7": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^144",
+            "x-2^144",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+2^144": "main",
+            "x-2^144": "main",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "twist",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 5,
+          "twist": 1,
+          "twist_rate": 0.167,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "main",
+            "x+Z": "twist",
+            "x-Z": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^145",
+            "x-2^145",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 4,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+2^145": "main",
+            "x-2^145": "main",
+            "x+gap+2^n": "main",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+145",
+            "x-145"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+145": "main",
+            "x-145": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap-7",
+      "top_twist_rate": 1.0
+    },
+    "150": {
+      "puzzle": 150,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap": "twist",
+            "x-gap": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+hinge": "twist",
+            "x-hinge": "twist"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "main"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^149",
+            "x-2^149",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^149": "main",
+            "x-2^149": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^150",
+            "x-2^150",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^150": "main",
+            "x-2^150": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "main",
+            "x-Py": "twist"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+N": "twist",
+            "x-N": "twist",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 4,
+          "twist": 2,
+          "twist_rate": 0.333,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "twist",
+            "x-S": "main",
+            "x+Z": "main",
+            "x-Z": "twist"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+150",
+            "x-150"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+150": "main",
+            "x-150": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap",
+      "top_twist_rate": 1.0
+    },
+    "155": {
+      "puzzle": 155,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+gap+7": "twist",
+            "x-gap-7": "twist"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^155",
+            "x-2^155",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 1,
+          "twist": 3,
+          "twist_rate": 0.75,
+          "dominant": "twist",
+          "details": {
+            "x+2^155": "twist",
+            "x-2^155": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "twist"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^154",
+            "x-2^154",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^154": "twist",
+            "x-2^154": "twist",
+            "x+gap+2^(n-1)": "main",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "main"
+          }
+        },
+        "index": {
+          "transforms": [
+            "x+155",
+            "x-155"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+155": "twist",
+            "x-155": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "twist",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 5,
+          "twist": 1,
+          "twist_rate": 0.167,
+          "dominant": "main",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "main",
+            "x+Z": "twist",
+            "x-Z": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "gap+7",
+      "top_twist_rate": 1.0
+    },
+    "160": {
+      "puzzle": 160,
+      "solved": false,
+      "literal_side": "main",
+      "family_summary": {
+        "index": {
+          "transforms": [
+            "x+160",
+            "x-160"
+          ],
+          "main": 0,
+          "twist": 2,
+          "twist_rate": 1.0,
+          "dominant": "twist",
+          "details": {
+            "x+160": "twist",
+            "x-160": "twist"
+          }
+        },
+        "gap": {
+          "transforms": [
+            "x+gap",
+            "x-gap"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+gap": "main",
+            "x-gap": "twist"
+          }
+        },
+        "2^(n-1)": {
+          "transforms": [
+            "x+2^159",
+            "x-2^159",
+            "x+gap+2^(n-1)",
+            "x+hinge+2^(n-1)"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^159": "main",
+            "x-2^159": "twist",
+            "x+gap+2^(n-1)": "twist",
+            "x+hinge+2^(n-1)": "main"
+          }
+        },
+        "2^n": {
+          "transforms": [
+            "x+2^160",
+            "x-2^160",
+            "x+gap+2^n",
+            "x+hinge+2^n"
+          ],
+          "main": 2,
+          "twist": 2,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+2^160": "main",
+            "x-2^160": "twist",
+            "x+gap+2^n": "twist",
+            "x+hinge+2^n": "main"
+          }
+        },
+        "rsz": {
+          "transforms": [
+            "x+R",
+            "x-R",
+            "x+S",
+            "x-S",
+            "x+Z",
+            "x-Z"
+          ],
+          "main": 3,
+          "twist": 3,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+R": "main",
+            "x-R": "main",
+            "x+S": "main",
+            "x-S": "twist",
+            "x+Z": "twist",
+            "x-Z": "twist"
+          }
+        },
+        "py": {
+          "transforms": [
+            "x+Py",
+            "x-Py"
+          ],
+          "main": 1,
+          "twist": 1,
+          "twist_rate": 0.5,
+          "dominant": "mixed",
+          "details": {
+            "x+Py": "twist",
+            "x-Py": "main"
+          }
+        },
+        "moduli": {
+          "transforms": [
+            "x+N",
+            "x-N",
+            "x+p",
+            "x-p"
+          ],
+          "main": 3,
+          "twist": 1,
+          "twist_rate": 0.25,
+          "dominant": "main",
+          "details": {
+            "x+N": "twist",
+            "x-N": "main",
+            "x+p": "main",
+            "x-p": "main"
+          }
+        },
+        "hinge": {
+          "transforms": [
+            "x+hinge",
+            "x-hinge"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+hinge": "main",
+            "x-hinge": "main"
+          }
+        },
+        "gap+7": {
+          "transforms": [
+            "x+gap+7",
+            "x-gap-7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap+7": "main",
+            "x-gap-7": "main"
+          }
+        },
+        "gap-7": {
+          "transforms": [
+            "x+gap-7",
+            "x-gap+7"
+          ],
+          "main": 2,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x+gap-7": "main",
+            "x-gap+7": "main"
+          }
+        },
+        "literal": {
+          "transforms": [
+            "x"
+          ],
+          "main": 1,
+          "twist": 0,
+          "twist_rate": 0.0,
+          "dominant": "main",
+          "details": {
+            "x": "main"
+          }
+        }
+      },
+      "top_twist_family": "index",
+      "top_twist_rate": 1.0
+    }
+  },
+  "notes": [
+    "Per puzzle: 2^(n-1) and 2^n families use puzzle-specific band powers.",
+    "gap+7 / gap-7 are p-N+7 and p-N-7 boundary offsets.",
+    "d band-limited; k not used."
+  ]
+}

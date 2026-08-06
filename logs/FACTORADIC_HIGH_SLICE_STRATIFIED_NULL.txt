@@ -1,0 +1,72 @@
+========================================================================================
+STRATIFIED WITHIN-n PERMUTATION NULL
+High-slice factoradic phase coupling
+========================================================================================
+N puzzles = 70 (1..70); each n unique => exact-n strata size 1
+Trials = 5000; seed = 20260711; close threshold = 0.1
+
+OBSERVED (true pairing)
+  corr(d_frac, Px_hi_frac) = +0.609730
+  corr(d_frac, Px_lo_frac) = +0.112712
+  H_hi = |d_frac - Px_hi_frac| < 0.1: 43/70 (0.6143)
+  H_lo = |d_frac - Px_lo_frac| < 0.1: 26/70 (0.3714)
+  residualized corr hi = +0.584434
+  residualized corr lo = +0.046604
+
+----------------------------------------------------------------------------------------
+NULL S1_block5  (block, param=5)
+  r_hi: mean=+0.1168  p95=+0.2978  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=20.05  p95=26.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.1156  P(r>=0.113)=0.5091
+  gap r_hi-r_lo: obs=+0.4970  null_mean=+0.0012  P(gap>=obs)=0.0008
+  gap H_hi-H_lo: obs=+17  null_mean=+1.07  P(gap>=obs)=0.0008
+----------------------------------------------------------------------------------------
+NULL S1_block10  (block, param=10)
+  r_hi: mean=+0.1148  p95=+0.2915  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=19.26  p95=25.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.1216  P(r>=0.113)=0.5355
+  gap r_hi-r_lo: obs=+0.4970  null_mean=-0.0068  P(gap>=obs)=0.0008
+  gap H_hi-H_lo: obs=+17  null_mean=+1.48  P(gap>=obs)=0.0010
+----------------------------------------------------------------------------------------
+NULL S2_near5  (near, param=5)
+  r_hi: mean=+0.1157  p95=+0.3001  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=20.64  p95=27.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.1092  P(r>=0.113)=0.4891
+  gap r_hi-r_lo: obs=+0.4970  null_mean=+0.0065  P(gap>=obs)=0.0010
+  gap H_hi-H_lo: obs=+17  null_mean=+2.73  P(gap>=obs)=0.0004
+----------------------------------------------------------------------------------------
+NULL S2_near10  (near, param=10)
+  r_hi: mean=+0.0823  p95=+0.2709  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=18.84  p95=25.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.0864  P(r>=0.113)=0.4109
+  gap r_hi-r_lo: obs=+0.4970  null_mean=-0.0041  P(gap>=obs)=0.0004
+  gap H_hi-H_lo: obs=+17  null_mean=+1.15  P(gap>=obs)=0.0006
+----------------------------------------------------------------------------------------
+NULL S2_near15  (near, param=15)
+  r_hi: mean=+0.0661  p95=+0.2600  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=18.54  p95=24.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.0614  P(r>=0.113)=0.3309
+  gap r_hi-r_lo: obs=+0.4970  null_mean=+0.0048  P(gap>=obs)=0.0014
+  gap H_hi-H_lo: obs=+17  null_mean=+1.97  P(gap>=obs)=0.0002
+----------------------------------------------------------------------------------------
+NULL global  (global, param=0)
+  r_hi: mean=+0.0011  p95=+0.1995  P(r>=0.610)=0.0002  (0/5000)
+  H_hi: mean=17.01  p95=23.0  P(H>=43)=0.0002  (0/5000)
+  r_lo: mean=+0.0007  P(r>=0.113)=0.1806
+  gap r_hi-r_lo: obs=+0.4970  null_mean=+0.0004  P(gap>=obs)=0.0010
+  gap H_hi-H_lo: obs=+17  null_mean=+1.64  P(gap>=obs)=0.0002
+
+----------------------------------------------------------------------------------------
+NULL S3_residual_global  (OLS-remove n from both, then shuffle d residuals)
+  residual real r_hi = +0.584434
+  null mean=+0.0008  p95=+0.1969  P(r_res>=0.584)=0.0002  (0/5000)
+
+========================================================================================
+VERDICT
+========================================================================================
+  Primary null (nearby |dn|<=10):
+    P(r_null >= 0.610) = 0.0002
+    P(H_null >= 43)     = 0.0002
+    P(gap_r  >= 0.497) = 0.0004
+  STATUS: PAIRING-DEPENDENT SIGNAL
+  Stratified nulls reject chance; promote as tested coupling (still not an inversion).

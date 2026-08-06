@@ -1,0 +1,13 @@
+P160 inverted RSZ-first: k candidate -> d = r^-1(sk-z)
+k candidates: 58706
+R point: (40567588587096510886779401934085802653423995574119754026847365368948749994020, 93506999776394773977012568374000894735649274226096876119078636851803903807856)
+
+in-band d from k scan: 0
+full hits: 0
+d*G==P (any k): 0
+  (no d*G==P hits)
+
+=== Phase 2: m-leg k ladder (j=0..200k) band hits ===
+  in-band count: 0
+
+elapsed 0.4s

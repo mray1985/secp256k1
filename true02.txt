@@ -1,0 +1,84 @@
+Good. That result is sharper than expected.
+
+Since:
+
+D
+A,R2
+	​
+
+
+=p−D
+A,R1
+	​
+
+
+and
+
+D
+A,R1
+	​
+
++D
+A,R2
+	​
+
+
+≡p−N(modN)
+
+then D
+A
+	​
+
+ is not just a reflected-y artifact.
+
+It depends on the actual ECDSA branch/path used in the group equation.
+
+So next step:
+
+Test the addition-defect at each binary split of the ECDSA equation:
+
+D
+z
+	​
+
+=A(zG)−zA(G)
+D
+r
+	​
+
+=A(rP)−rA(P)
+D
+s
+	​
+
+=A(sR)−sA(R)
+
+These answer: “where does the nonlinearity enter?”
+
+If all three are huge/no-match, then the bridge is nonlinear under scalar multiplication too.
+
+Then compare:
+
+D
+s
+	​
+
+−(D
+z
+	​
+
++D
+r
+	​
+
+)(modp)
+
+against your existing:
+
+D
+A
+	​
+
+=A(sR)−A(zG)−A(rP)(modp)
+
+That will tell whether the defect is mostly from scalar multiplication or from point addition.

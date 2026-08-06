@@ -1,0 +1,48 @@
+========================================================================================
+Phase IX - Constraint Fusion
+Document: Phase_IX_Constraint_Fusion.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: 0.1-0.2 Transcript-determined fusion adds no entropy
+  Statement: If X=f(T), Y=g(T) then H(S|T,X,Y)=H(S|T).
+  Proof:     Functions of T are redundant given T.
+  Verification:
+    Logical identity - verified by constructing f(T) below
+
+----------------------------------------------------------------------------------------
+THEOREM: 1.1 GLV + qx + lift regime are all f(T)
+  Statement: Conjunction transcript-determined; no coupling beyond ECDSA.
+  Proof:     qx, GLV from P; lift regime from r vs Delta.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.1 (E,r,s,z) equivalent to (P,r,s,z) for affine P
+  Statement: E bijection recovers (x,y); same transcript information.
+  Proof:     Phase VI Thm 4.1.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.1-3.2 Even with R oracle, ECDSA has one DoF; lift fixed not k
+  Statement: Given P,R,s,z: sk=z+rd still two unknowns; Rx known => lift settled.
+  Proof:     Linear algebra in Z/NZ; Phase VIII.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 4.1-4.2 Pairwise fusions on T are conjunctions; no emergent scalar cut
+  Statement: Every pair of transcript labels is still f(T); ECDSA line unchanged.
+  Proof:     Lemma 0.1 + explicit recomputation.
+  Verification:
+    OK (30 transcripts; conjunction holds, no extra cut encoded)
+
+========================================================================================
+SUCCESS CRITERION: B
+========================================================================================
+  Fusions of Phase III-VIII public results are conjunctions / re-encodings of T.
+  No b'>0 beyond GLV (b=log2(6)=2.5849625007) and ECDSA's single linear relation.
+  Obstruction is not an artifact of studying sources separately.
+  ALL Phase IX verification checks PASSED.
+========================================================================================

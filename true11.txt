@@ -1,0 +1,177 @@
+That’s the x-family analogue of the y-branch result — but stronger in a different way.
+
+You now have:
+
+B
+i
+	​
+
+=Λrx
+i
+	​
+
+modp
+
+and:
+
+B
+i
+	​
+
+=Px
+i
+	​
+
+
+for all three i=1,2,3.
+
+So the x-bridge is real.
+
+Then the family sums show:
+
+∑B
+i
+	​
+
+=p
+
+because your raw sum_B equals the field prime p.
+
+Therefore:
+
+∑B
+i
+	​
+
+modN=p−N=δ
+
+For Gx-family:
+
+∑Gx
+i
+	​
+
+=2p
+
+so:
+
+∑Gx
+i
+	​
+
+modN=2(p−N)=2δ
+
+And the difference:
+
+∑Gx
+i
+	​
+
+−∑B
+i
+	​
+
+=p
+
+so:
+
+(∑Gx
+i
+	​
+
+−∑B
+i
+	​
+
+)modN=δ
+
+The important part is exactly what you said:
+
+d
+1
+	​
+
++d
+2
+	​
+
++d
+3
+	​
+
+≡δ(modN)
+
+but no individual d
+i
+	​
+
+ equals δ. So the defect is distributed across the x-family, not sitting in one coordinate.
+
+That gives you two clean structures now:
+
+Y side:
+
+A(Q)+A(−Q)≡δ(modN)
+
+branch/reflection shell.
+
+X side:
+
+i=1
+∑
+3
+	​
+
+B
+i
+	​
+
+≡δ(modN)
+
+three-root/family shell.
+
+So the next question becomes:
+
+Does x-family shell + y-reflection shell combine?
+
+Test:
+
+(∑B
+i
+	​
+
+)−(A
+y
+	​
+
++A
+−y
+	​
+
+)(modN)
+
+Expected:
+
+0
+
+because both equal δ. If that holds across G, P, R families, then you have a unified bridge law:
+
+i=1
+∑
+3
+	​
+
+(Λrx
+i
+	​
+
+)≡A
+y
+	​
+
++A
+−y
+	​
+
+≡p−N(modN)
+	​

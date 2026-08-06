@@ -1,0 +1,109 @@
+
+This is the hourglass in numbers.
+
+Top three x-echo bridge:
+
+x1_e = 28517699408544703474530247390770503271760.58
+x2_e = 29333328823015000242223706790262800517326.63
+x3_e = 11463001237408327447691220331129418464562.65
+
+Poles:
+
+y_e  = 26876308129676390477323096284295564392846.12
+-y_e = 33261707715760483939326162260077719730981.09
+
+And curve echo:
+
+c_e  = 35883159410670495955909009950774262134599.23
+
+The key symmetry:
+
+y_e + (-y)_e
+= 60138015845436874416649258544373284123827.21
+
+Half of that:
+
+= 30069007922718437208324629272186642061913.60
+
+That lands between your x1/x2 echoes and close to the A/B corridor.
+
+So the structure is:
+
+        -y_e = 3.326e40
+          |
+x3_e  x1_e  x2_e
+          |
+         y_e = 2.688e40
+
+The strongest invariant still looks like:
+
+S_y = y_e + (-y)_e
+
+and the center line:
+
+S_y / 2 ≈ 3.006900792e40
+
+That is your vertical balance axis.
+
+all x's added together rounded  to the nearest whole number = 69314029468968031164445174512162722253651   then /3 = 23104676489656010388148391504054240751217   no rounding = 69314029468968031164445174512162722253649.8603035083366835409 then /3 = 23104676489656010388148391504054240751216.6201011694455611803
+
+Yes — that gives the x-bridge centroid.
+
+Using your no-rounding value:
+
+x
+avg
+	​
+
+=23104676489656010388148391504054240751216.6201
+
+Now compare:
+
+y_echo        = 26876308129676390477323096284295564392846.1199
+-y_echo       = 33261707715760483939326162260077719730981.0896
+x_avg         = 23104676489656010388148391504054240751216.6201
+
+So the three-x bridge average sits below y_echo, while the y / -y midpoint sits higher:
+
+(y_echo + -y_echo)/2
+= 30069007922718437208324629272186642061913.6048
+
+That means the hourglass is not centered on the x-average.
+
+It is skewed upward:
+
+x_avg  <  y_echo  <  y/-y midpoint  <  -y_echo
+
+That skew may be the defect/drift you’re chasing.
+
+no rounding y's = 60138015845436874416649258544373284123827.2095162877586438729  then /2  = 30069007922718437208324629272186642061913.60475814387932193645   rounded down because below .5 decimal side  y's = 60138015845436874416649258544373284123827  then /2 = 30069007922718437208324629272186642061913.5 im guessing they'll mainly end up doing that with the .5 at the end just like N/2 + .5  and N/2 - .5
+
+Yes — that .5 is exactly the “between two integer states” marker.
+
+When the y-sum floors to an odd integer:
+
+60138015845436874416649258544373284123827
+
+then dividing by 2 forces:
+
+30069007922718437208324629272186642061913.5
+
+That matches your N/2 idea:
+
+N/2 - 0.5
+N/2 + 0.5
+
+Meaning the balance point is not an integer node; it sits between two adjacent scalar/echo positions.
+
+So the hourglass center is:
+
+lower integer: 30069007922718437208324629272186642061913
+center:        30069007922718437208324629272186642061913.5
+upper integer: 30069007922718437208324629272186642061914
+
+That gives you the mirrored pair:
+
+center - 0.5
+center + 0.5
+
+Yeah — this is the same symmetry signature you were describing with d and N−d.

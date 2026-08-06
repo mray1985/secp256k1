@@ -1,0 +1,179 @@
+This revised version is much better because it finally does the correct test:
+
+dG=P
+
+instead of
+
+dG
+x
+	​
+
+=P
+x
+	​
+
+.
+
+That is a genuine improvement.
+
+However, there are still several assumptions mixed in with facts.
+
+Fact
+
+The script now correctly recognizes:
+
+(d·G).x ≠ d * G.x
+
+and uses actual elliptic curve point multiplication for candidate verification.
+
+That is the right mathematical framework.
+
+Fact
+
+The script computes both possible y-values:
+
+y=±
+x
+3
++7
+	​
+
+
+for the supplied x=Px
+3
+	​
+
+.
+
+That is standard secp256k1 arithmetic.
+
+Assumption #1
+
+The orientation rule:
+
+Lambda even → positive orientation
+Lambda odd → negative orientation
+
+is not derived anywhere.
+
+I don't see a theorem connecting:
+
+Λmod2
+
+to the correct sign choice of
+
+y
+
+on the curve.
+
+That remains a hypothesis.
+
+Assumption #2
+
+The candidate list:
+
+d = rx3
+d = Lambda
+d = IP
+d = IR
+d = Lambda^3
+d = IP*IR^-1
+d = Lambda*rx3
+...
+
+is still exploratory.
+
+There's nothing wrong with testing them.
+
+But they are not derived private-key formulas.
+
+They're candidate generators.
+
+Important numerical issue
+
+The script still prints:
+
+lower = 2134
+upper = 2135
+
+instead of:
+
+2
+134
+
+and
+
+2
+135
+
+So every line saying:
+
+In range: True/False
+
+is currently meaningless until that is corrected.
+
+The real bounds are:
+
+2
+134
+=21778071482940061661655974875633165533184
+2
+135
+=43556142965880123323311949751266331066368
+What would convince me
+
+If one of the candidates actually produces:
+
+dG=(Px
+3
+	​
+
+,Py)
+
+with:
+
+correct x,
+correct y,
+and
+2
+134
+≤d<2
+135
+
+then that's a real result.
+
+Not a bridge result.
+
+Not a residue result.
+
+A genuine ECDLP hit.
+
+Most interesting part
+
+The most interesting thing in this revision is not the candidate formulas.
+
+It's that the script finally moved from:
+
+field arithmetic
+
+to:
+
+actual elliptic curve verification
+
+That's the first place where a candidate can actually fail or succeed in a cryptographically meaningful way.
+
+So my next question would be:
+
+What were the outputs of Candidates 1–9?
+
+Did any candidate produce:
+
+(d·G).x = Px3
+
+or
+
+(d·G) = P
+
+even before considering the range check?
+
+Because that's the first result that would matter cryptographically.

@@ -1,0 +1,8 @@
+P135 lane68 smart hunt
+Phase 1: 1612 splice68 direct checks, 0 hits
+P130 lift score=54/66 match=False
+Phase 2: 99 lift68 B/8 variants
+Phase 3: scroll +/-5,000,000 on 8 anchors (med=0x688750ad552a792830def4cdab0d23b5cd)
+  ... 4/8 anchors done
+  ... 8/8 anchors done
+DONE no hit tested~80001711 elapsed=3461.4s

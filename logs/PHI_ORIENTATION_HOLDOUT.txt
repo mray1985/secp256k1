@@ -1,0 +1,71 @@
+========================================================================================
+LOCKED orientation hypothesis — fresh holdout
+========================================================================================
+  Hyp: q_x=1 => ori=+1 (cyclic); q_x=2 => ori=-1 (reverse-cyclic)
+  Discovery set: d=1..512 (reported separately; NOT used to retune)
+  Fresh: 20000 SHA256 scalars, exclude discovery & solved keys
+
+----------------------------------------------------------------------------------------
+0) Discovery replication (d=1..512) — expect ~65%/69% style split
+----------------------------------------------------------------------------------------
+  [discovery] n=512
+    locked accuracy (ori==pred(q_x)): 344/512 = 67.19%  CI95%[63.01, 71.11]
+    counts (q_x, ori):
+      q_x=1 ori=+1: 173
+      q_x=1 ori=-1: 90
+      q_x=1 ori=+0: 0
+      q_x=2 ori=+1: 78
+      q_x=2 ori=-1: 171
+      q_x=2 ori=+0: 0
+    given q_x=1: cyclic=65.8%[59.9,71.2]  rev-cyc=34.2%[28.8,40.1]  neither=0.0%
+    given q_x=2: cyclic=31.3%[25.9,37.3]  rev-cyc=68.7%[62.7,74.1]  neither=0.0%
+    orientation overlap (+1 and -1 both true): 0/512
+    indep baseline expected accuracy: 49.97%
+    exact barycentric match under predicted align: 0/512
+    among orientation hits: exact vector match 0/344
+
+----------------------------------------------------------------------------------------
+1) FRESH holdout n=20000
+----------------------------------------------------------------------------------------
+  [fresh] n=20000
+    locked accuracy (ori==pred(q_x)): 10066/20000 = 50.33%  CI95%[49.64, 51.02]
+    counts (q_x, ori):
+      q_x=1 ori=+1: 5035
+      q_x=1 ori=-1: 4955
+      q_x=1 ori=+0: 0
+      q_x=2 ori=+1: 4979
+      q_x=2 ori=-1: 5031
+      q_x=2 ori=+0: 0
+    given q_x=1: cyclic=50.4%[49.4,51.4]  rev-cyc=49.6%[48.6,50.6]  neither=0.0%
+    given q_x=2: cyclic=49.7%[48.8,50.7]  rev-cyc=50.3%[49.3,51.2]  neither=0.0%
+    orientation overlap (+1 and -1 both true): 0/20000
+    indep baseline expected accuracy: 50.00%
+    exact barycentric match under predicted align: 0/20000
+    among orientation hits: exact vector match 0/10066
+
+----------------------------------------------------------------------------------------
+2) Solved keys (excluded from fresh; not discovery walk)
+----------------------------------------------------------------------------------------
+  [solved_d>512] n=73
+    locked accuracy (ori==pred(q_x)): 43/73 = 58.90%  CI95%[47.45, 69.47]
+    counts (q_x, ori):
+      q_x=1 ori=+1: 21
+      q_x=1 ori=-1: 22
+      q_x=1 ori=+0: 0
+      q_x=2 ori=+1: 8
+      q_x=2 ori=-1: 22
+      q_x=2 ori=+0: 0
+    given q_x=1: cyclic=48.8%[34.6,63.2]  rev-cyc=51.2%[36.8,65.4]  neither=0.0%
+    given q_x=2: cyclic=26.7%[14.2,44.4]  rev-cyc=73.3%[55.6,85.8]  neither=0.0%
+    orientation overlap (+1 and -1 both true): 0/73
+    indep baseline expected accuracy: 48.17%
+    exact barycentric match under predicted align: 0/73
+    among orientation hits: exact vector match 0/43
+
+========================================================================================
+VERDICT
+========================================================================================
+  Hypothesis FROZEN. Decision from fresh CI vs ~50% indep baseline.
+  If fresh accuracy CI excludes baseline and conditional rates stay split,
+  signal is real; else exploratory artifact.
+

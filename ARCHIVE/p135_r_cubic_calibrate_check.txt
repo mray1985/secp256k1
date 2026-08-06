@@ -1,0 +1,50 @@
+P135 R CUBIC CALIBRATION CHECK
+
+Tests:
+  1. nine N lambdas Px[k]/(w^j*r_true) vs bridge lambda_ns
+  2. row-2 gap + offset-bit law on shelf2+lambda mod LO candidates
+  3. bridge_state with rx[1]=r_sig vs default row=2
+  4. P130 solved neighbor sanity
+
+=== P130 use_true_r=False row=0 ===
+  shelf2 bits=130  offset_bits law [127, 128, 129]
+  known d bits=130 offset_bits=128 offset_ok=True
+  bridge lambda_ns[0] tail ...062  (from rx[0] tail ...219)
+  bridge lambda_ns[1] tail ...276  (from rx[1] tail ...368)
+  bridge lambda_ns[2] tail ...029  (from rx[2] tail ...739)
+
+=== P135 use_true_r=True row=2 ===
+  shelf2 bits=135  offset_bits law [132, 133, 134]
+  bridge lambda_ns[0] tail ...578  (from rx[0] tail ...219)
+  bridge lambda_ns[1] tail ...147  (from rx[1] tail ...368)
+  bridge lambda_ns[2] tail ...025  (from rx[2] tail ...739)
+  wrong r=rx[2] ...739 gap h2=52
+  true r_sig       ...368 gap h2=14
+
+  --- nine N lambdas lambda[k,j] = Px[k] / (w^j * r_true) ---
+    j=0 k=0 r...368 lam...088 match_lns[0]=False gap_row2=True off_bits=134 off_ok=True ec=False
+    j=0 k=1 r...368 lam...147 match_lns[1]=True gap_row2=True off_bits=130 off_ok=False ec=False
+    j=0 k=2 r...368 lam...194 match_lns[2]=False gap_row2=True off_bits=130 off_ok=False ec=False
+    j=1 k=0 r...393 lam...381 match_lns[0]=False gap_row2=True off_bits=134 off_ok=True ec=False
+    j=1 k=1 r...393 lam...477 match_lns[1]=False gap_row2=True off_bits=133 off_ok=True ec=False
+    j=1 k=2 r...393 lam...152 match_lns[2]=False gap_row2=True off_bits=133 off_ok=True ec=False
+    j=2 k=0 r...576 lam...205 match_lns[0]=False gap_row2=True off_bits=133 off_ok=True ec=False
+    j=2 k=1 r...576 lam...713 match_lns[1]=False gap_row2=True off_bits=134 off_ok=True ec=False
+    j=2 k=2 r...576 lam...991 match_lns[2]=False gap_row2=True off_bits=134 off_ok=True ec=False
+  --- field Lambdas at row-2 R_eff (tail 368) ---
+    field i=1 j=0 Lambda_p bits=255 lambda_N bits=254 lam_N tail ...194
+    field i=0 j=1 Lambda_p bits=255 lambda_N bits=254 lam_N tail ...194
+    field i=2 j=2 Lambda_p bits=255 lambda_N bits=254 lam_N tail ...194
+  --- bridge_state with rx[1]=r_sig (calibrated) ---
+    k=0 recomputed Px/r_true ...088 bridge lns[0] ...578 match=False
+    k=1 recomputed Px/r_true ...147 bridge lns[1] ...147 match=True
+    k=2 recomputed Px/r_true ...194 bridge lns[2] ...025 match=False
+  calibrated shelf2 bits=135
+  original  shelf2 bits=135
+  shelf2 delta bits=0
+
+=== branch select: which j gives Px[2]/r_j == lambda_ns[2]? ===
+  j=0 r...368 lam match row2 lns: False lam...094194 target...346025
+  j=1 r...393 lam match row2 lns: False lam...690152 target...346025
+  j=2 r...576 lam match row2 lns: False lam...709991 target...346025
+

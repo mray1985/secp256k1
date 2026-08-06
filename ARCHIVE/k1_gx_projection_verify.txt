@@ -1,0 +1,20 @@
+K=1 PROJECTION EC VERIFY — P135
+Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+
+=== r=Gx (tool default) ===
+r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+(d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+(d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+Px match: False  Py match: False
+Py proximity: dG.x/Py ratio ~ 0.999637  (screenshot ~0.9996 of Py when r=Gx)
+in_band [2^134,2^135): False
+
+=== r=sig_r ===
+r = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+d = 0xea3b6b76ac2c64ea499077e0c8a9461870eae461957e95f7f0baa5937d525b96  bits=256
+(d*G).x = 0xec7a012149fdc3b2c3ec2345e4309fd5ca7333405623f32251260d6715ea5c14
+(d*G).y = 0xd3526f558186baae0db7ad5fff57b203690957a363f33c8b43f7a491094d853d
+Px match: False  Py match: False
+Py proximity: dG.x/Py ratio ~ 2.307614  (screenshot ~0.9996 of Py when r=Gx)
+in_band [2^134,2^135): False

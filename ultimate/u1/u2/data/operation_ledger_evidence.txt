@@ -1,0 +1,2492 @@
+# Operation Ledger — Evidence Digest
+
+Every tag in the index should cite at least one of these reports when marked **PROVEN_*** or **TESTED_MISS**. Lines below are extracted verbatim from ARCHIVE outputs.
+
+Reports indexed: 200  |  Generated from `build_operation_ledger_index.py`
+
+## Claims registry
+
+| Claim | Family | Tag | Proof | Line |
+|-------|--------|-----|-------|------|
+| Schedule C algebra d=(s*k-z)*r^-1 roundtrips on solved puzzles | `rsz_schedule_c` | CONFIRMED | `ARCHIVE/taxecc_solved_forward.txt` | `SCHEDULE C  d_from_k roundtrip: True` |
+| Schedule SE / I99 pivot does not recover d without known k | `tax_math_se` | FALSIFIED | `ARCHIVE/tax_math_falsify.txt` | `P135 ec+band hits: 0` |
+| geom_pred ~142 vs log2(k_true)~255 on solved (110-bit gap) | `tax_math_se` | FALSIFIED | `ARCHIVE/taxecc_solved_forward.txt` | `gap log2(k)-geom=112.64 bits` |
+| 931 packet d candidates: 0 EC hits on P135-P160 | `dump_hex_artifacts` | DESCRIPTIVE | `ARCHIVE/packet_candidate_verify.txt` | `EXACT HITS: none` |
+| Echo (n-1+log2(3/2))/256: x modinv echo fails; no d135 | `echo_exp_n1_log` | PARTIAL | `ARCHIVE/echo_curve_power_all_puzzles.txt` | `x modinv echo = None` |
+| P160 2^32 lane sweep 280k d: EC hits 0 | `d8_epsilon_lane` | FALSIFIED | `ARCHIVE/p160_lane_two32_sweep.txt` | `hits: 0` |
+| P135 arrest scroll 300M points: result=not found | `tax_math_se` | FALSIFIED | `ARCHIVE/p135_arrest_scroll.txt` | `result=not found` |
+| Hinge blind T4 on P135: EC=none | `form56_hinge` | FALSIFIED | `ARCHIVE/hinge_blind_scorecard.txt` | `P135 unsolved EC: none` |
+| k=1 with r=Gx: dG.x ~99.96% of Py, not Px; not in band | `k1_sig_projection` | DESCRIPTIVE | `ARCHIVE/k1_gx_projection_verify.txt` | `Py proximity: dG.x/Py ratio ~ 0.999637` |
+| Band-fraction formula: formula_lined_up=0 on P135 | `puzzle_band_gate` | CONFIRMED | `ARCHIVE/band_fraction_probe.txt` | `formula_lined_up=0` |
+| Schedule K1/GLV: HEURISTIC d_hits none on solved forward | `schedule_k1_glv` | FALSIFIED | `ARCHIVE/taxecc_solved_forward.txt` | `HEURISTIC d_hits: none` |
+| Arrest email formulas at k=71: in_band but EC=False | `tax_math_se` | FALSIFIED | `ARCHIVE/arrest_formula_verify.txt` | `in_band=True  EC=False` |
+
+## Cross-cutting canonical proofs
+
+## Schedule SE falsification (solved + P135)
+**File:** `ARCHIVE/tax_math_falsify.txt`  |  **Size:** 3,556 bytes
+
+### Summary
+- SUMMARY
+- solved puzzles tested: 14
+- total trials: 4617
+- full wins (d_match AND ec_d) on solved: 7
+- P70 known_k_direct
+- P75 known_k_direct
+- P90 known_k_direct
+- P95 known_k_direct
+- P100 known_k_direct
+- P115 known_k_direct
+
+### P135 block
+- P135 ec+band hits: 0
+
+### Key verdict lines
+- SUMMARY
+- solved puzzles tested: 14
+- total trials: 4617
+- full wins (d_match AND ec_d) on solved: 7
+- P70 known_k_direct
+- P75 known_k_direct
+- P90 known_k_direct
+- P95 known_k_direct
+- P100 known_k_direct
+- P115 known_k_direct
+- P125 known_k_direct
+- P115 CALIBRATION (ground truth)
+- d_known bits=115
+- k_known bits=256
+- k0+d*dk==k: True
+- P135 ec+band hits: 0
+- pivot log2(k)=254.7053  geom_pred=145.0679
+- trials=313  full_wins(ec+d)=0  R_point_wins=0
+- pivot log2(k)=254.9229  geom_pred=142.1505
+- WIN known_k_direct k_bits=255 d_bits=70
+
+## Packet d candidates EC verify P135-P160
+**File:** `ARCHIVE/packet_candidate_verify.txt`  |  **Size:** 608 bytes
+
+### P135 block
+- P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+- P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+- P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+- P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+- P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+- P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+- TOTAL unique checked: 931
+- EXACT HITS: none
+- === CROSS-PUZZLE CHECK (any d -> any higher pubkey) ===
+- cross-puzzle hits: none
+
+### Key verdict lines
+- P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+- P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+- P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+- P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+- P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+- P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+- TOTAL unique checked: 931
+- EXACT HITS: none
+- === CROSS-PUZZLE CHECK (any d -> any higher pubkey) ===
+- cross-puzzle hits: none
+
+## Forward tax DAG on solved puzzles
+**File:** `ARCHIVE/taxecc_solved_forward.txt`  |  **Size:** 10,689 bytes
+
+### Summary
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+
+### Key verdict lines
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+- P115   255.30   142.62   112.68     256     115
+- P120   252.91   144.47   108.44     253     120
+- P125   255.16   144.50   110.65     256     125
+- GENESIS  d=0x1a838b13505b26867  bits=65  in_band=True
+- d*G match pubkey: x=True  y=True
+- SCHEDULE C  d_from_k roundtrip: True
+- log2(ry)=255.8298  geom_pred=142.0702  log2(k_true)=254.7053
+- gap log2(k)-geom=112.64 bits
+
+## Echo c^exp with (n-1+log2(3/2))/256
+**File:** `ARCHIVE/echo_curve_power_all_puzzles.txt`  |  **Size:** 7,704 bytes
+
+### P135 block
+- === P135 DETAIL ===
+- c  = 80184233617433755134183875136831551618578922487806929476230322368028862899169
+- exp = 134.58496250072116
+- echo = 26928407542694034877965964705983120737661
+- x modinv echo = None
+- y modinv echo = 6079784343358203831111636674336389833098
+- c modinv echo = 18927930228987995306295121625965768362760
+- x mod echo    = 13749265000960366197682110259406047222230
+- y mod echo    = 9282115944101677020401070053065371601583
+- c mod echo    = 11011053916064345218752709182864308201512
+- Compare old ratio 135/256:
+- old echo (135/256)     = 35883159410670495955909009950774262134599
+
+### Key verdict lines
+- === P135 DETAIL ===
+- c  = 80184233617433755134183875136831551618578922487806929476230322368028862899169
+- exp = 134.58496250072116
+- echo = 26928407542694034877965964705983120737661
+- x modinv echo = None
+- y modinv echo = 6079784343358203831111636674336389833098
+- c modinv echo = 18927930228987995306295121625965768362760
+- x mod echo    = 13749265000960366197682110259406047222230
+- y mod echo    = 9282115944101677020401070053065371601583
+- c mod echo    = 11011053916064345218752709182864308201512
+- Compare old ratio 135/256:
+- old echo (135/256)     = 35883159410670495955909009950774262134599
+- new echo (134.5849/256)= 26928407542694034877965964705983120737661
+
+## P135 k-bridge algebra checks
+**File:** `ARCHIVE/p135_k_bridge_proof_check.txt`  |  **Size:** 1,590 bytes
+
+### P135 block
+- P135 k-BRIDGE PROOF CHECK
+- === 1. Geometric (199-bit pivot) ===
+- user_ry:
+- log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+- pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+- shift to 135: 143.12 - 8 = 135.12 bits
+- true_ry:
+- log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+- pivot 198.95 -> log2(sqrt(k))=71.5599  log2(k)=143.1198 bits
+- shift to 135: 143.12 - 8 = 135.12 bits
+- log2(sqrt(N*p/(p-N))) = 191.8271  (191.827 field ratio)
+- === 2. Signature linear (mod N) ===
+
+### Key verdict lines
+- P135 k-BRIDGE PROOF CHECK
+- === 1. Geometric (199-bit pivot) ===
+- user_ry:
+- log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+- pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+- shift to 135: 143.12 - 8 = 135.12 bits
+- true_ry:
+- log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+- pivot 198.95 -> log2(sqrt(k))=71.5599  log2(k)=143.1198 bits
+- log2(sqrt(N*p/(p-N))) = 191.8271  (191.827 field ratio)
+- === 2. Signature linear (mod N) ===
+- k = k0 + d * delta_k  (mod N)
+- k0 bits=256  delta_k bits=255
+- r==rx? True  (sig r vs kG x)
+- === 3. Integer magnitude (heuristic, NOT mod N) ===
+- s bits=254  rx bits=256
+- s*4.35e40 ~ 6.7467e+116
+- rx*d for d~7.4e39 ~ 6.7083e+116
+- === 4. Small prime factors (trial, partial) ===
+- k0+ d*delta_k == k? True
+
+## k=1 projection: r=Gx vs sig r (EC verify)
+**File:** `ARCHIVE/k1_gx_projection_verify.txt`  |  **Size:** 1,056 bytes
+
+### P135 block
+- K=1 PROJECTION EC VERIFY — P135
+- Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+- === r=Gx (tool default) ===
+- r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+- d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+- (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+- (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+- Px match: False  Py match: False
+- Py proximity: dG.x/Py ratio ~ 0.999637  (screenshot ~0.9996 of Py when r=Gx)
+- in_band [2^134,2^135): False
+- === r=sig_r ===
+- r = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+
+### Key verdict lines
+- K=1 PROJECTION EC VERIFY — P135
+- Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+- === r=Gx (tool default) ===
+- r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+- d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+- (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+- (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+- Px match: False  Py match: False
+- Py proximity: dG.x/Py ratio ~ 0.999637  (screenshot ~0.9996 of Py when r=Gx)
+- in_band [2^134,2^135): False
+- === r=sig_r ===
+- r = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+- d = 0xea3b6b76ac2c64ea499077e0c8a9461870eae461957e95f7f0baa5937d525b96  bits=256
+- (d*G).x = 0xec7a012149fdc3b2c3ec2345e4309fd5ca7333405623f32251260d6715ea5c14
+- (d*G).y = 0xd3526f558186baae0db7ad5fff57b203690957a363f33c8b43f7a491094d853d
+- Py proximity: dG.x/Py ratio ~ 2.307614  (screenshot ~0.9996 of Py when r=Gx)
+
+## Hinge blind predictive scorecard
+**File:** `ARCHIVE/hinge_blind_scorecard.txt`  |  **Size:** 6,763 bytes
+
+### P135 block
+- === P135 blind detail ===
+- true slot=0  pick_slot(T1)=0  T1=YES
+- true y=-y  pick_y(T2)=-y  T2=YES
+- joint Ex pick=(0, 'y')
+- joint Ey pick=(0, '-y')
+- T4 pred_bf=0.356959  EC=none
+- branch table:
+- slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+- slot0  y  Ex=+0.001119 Ey=+0.285455  |Ex|=0.0011 |Ey|=0.2855
+- slot1 -y  Ex=+0.247813 Ey=-0.006126  |Ex|=0.2478 |Ey|=0.0061
+- slot1  y  Ex=+0.247813 Ey=+0.285455  |Ex|=0.2478 |Ey|=0.2855
+- slot2 -y  Ex=+0.286386 Ey=-0.006126  |Ex|=0.2864 |Ey|=0.0061
+
+### Key verdict lines
+- === P135 blind detail ===
+- true slot=0  pick_slot(T1)=0  T1=YES
+- true y=-y  pick_y(T2)=-y  T2=YES
+- joint Ex pick=(0, 'y')
+- joint Ey pick=(0, '-y')
+- T4 pred_bf=0.356959  EC=none
+- branch table:
+- slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+- slot0  y  Ex=+0.001119 Ey=+0.285455  |Ex|=0.0011 |Ey|=0.2855
+- slot1 -y  Ex=+0.247813 Ey=-0.006126  |Ex|=0.2478 |Ey|=0.0061
+- slot1  y  Ex=+0.247813 Ey=+0.285455  |Ex|=0.2478 |Ey|=0.2855
+- slot2 -y  Ex=+0.286386 Ey=-0.006126  |Ex|=0.2864 |Ey|=0.0061
+- slot2  y  Ex=+0.286386 Ey=+0.285455  |Ex|=0.2864 |Ey|=0.2855
+- === Per-puzzle (solved, mispredictions only) ===
+- P  2 true=slot2/-y  T1->slot0  T2->y  T3Ex->(0,y)  T5p=0.276
+- P  3 true=slot1/-y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.462
+- P  4 true=slot0/-y  T1->slot1  T2->-y  T3Ex->(1,y)  T5p=0.105
+- P  5 true=slot0/y  T1->slot1  T2->y  T3Ex->(1,y)  T5p=0.472
+- P  6 true=slot2/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.062
+- P  7 true=slot1/y  T1->slot0  T2->-y  T3Ex->(0,y)  T5p=0.389
+
+## P135 arrest scroll EC search
+**File:** `ARCHIVE/p135_arrest_scroll.txt`  |  **Size:** 1,968 bytes
+
+### P135 block
+- P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+- === hinge / arrest constants ===
+- floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+- frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+- {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+- {Delta_y} = 0.006126  (live y-bridge on P)
+- sqrt(p-N) ~ 2.079472e+19
+- k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+- k=72 arrest (frac):  ...890975609950
+- k=78 arrest ({Dy}): ...051191167665
+- anchors=15  radius=+/-10,000,000  chunk=250,000
+- scroll: 1x scalar mult + G-table offset adds; filter on prebuilt x/y arrays
+
+### Key verdict lines
+- P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+- === hinge / arrest constants ===
+- floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+- frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+- {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+- {Delta_y} = 0.006126  (live y-bridge on P)
+- sqrt(p-N) ~ 2.079472e+19
+- k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+- k=72 arrest (frac):  ...890975609950
+- k=78 arrest ({Dy}): ...051191167665
+- anchors=15  radius=+/-10,000,000  chunk=250,000
+- scroll: 1x scalar mult + G-table offset adds; filter on prebuilt x/y arrays
+- [1/15] P_Dy/direct                      20,000,080 pts 198.6s (100,683/s) best_nib=5
+- [2/15] P_Dy/height_mirror               20,000,080 pts 196.9s (101,559/s) best_nib=5
+- [3/15] P_Dy/toward_floor                20,000,080 pts 186.6s (107,209/s) best_nib=5
+- [4/15] P_Dy/toward_top                  20,000,080 pts 188.3s (106,235/s) best_nib=6
+- [5/15] P_x/direct                       20,000,080 pts 190.4s (105,020/s) best_nib=6
+- [6/15] P_x/height_mirror                20,000,080 pts 187.2s (106,841/s) best_nib=6
+- [7/15] P_x/toward_floor                 20,000,080 pts 187.2s (106,866/s) best_nib=5
+- [8/15] P_x/toward_top                   20,000,080 pts 186.7s (107,125/s) best_nib=5
+
+## P160 2^32 lane EC sweep
+**File:** `ARCHIVE/p160_lane_two32_sweep.txt`  |  **Size:** 1,591 bytes
+
+### Key verdict lines
+- hits: 0
+
+## Band-fraction discrete-log gate
+**File:** `ARCHIVE/band_fraction_probe.txt`  |  **Size:** 1,122 bytes
+
+### P135 block
+- === P135 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- no probes lined up on R via formula
+
+### Key verdict lines
+- === P135 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- no probes lined up on R via formula
+- === P130 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- TRUE d bf=0.621997  lined_up=True  d=1103873984953507439627945351144005829577
+- === P140 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P145 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P150 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P155 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P160 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+
+## Arrest email formulas EC verify
+**File:** `ARCHIVE/arrest_formula_verify.txt`  |  **Size:** 1,897 bytes
+
+### P135 block
+- P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === email formulas at k=71 ===
+- v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+- v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+- v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+- v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+- geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+- === k sweep v1 (frac*sqrt(pN)*2^k) ===
+- k=69 bits=132 in_band=False EC=False tail...5736403522
+- k=70 bits=133 in_band=False EC=False tail...1472807044
+- k=71 bits=134 in_band=False EC=False tail...2945614089
+- k=72 bits=135 in_band=True EC=False tail...5891228179
+
+### Key verdict lines
+- P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === email formulas at k=71 ===
+- v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+- v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+- v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+- v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+- geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+- === k sweep v1 (frac*sqrt(pN)*2^k) ===
+- k=69 bits=132 in_band=False EC=False tail...5736403522
+- k=70 bits=133 in_band=False EC=False tail...1472807044
+- k=71 bits=134 in_band=False EC=False tail...2945614089
+- k=72 bits=135 in_band=True EC=False tail...5891228179
+- k=73 bits=136 in_band=False EC=False tail...1782456359
+- === solved calibration: k such that v1(d) ~ true d ===
+- P 27 best_k=0 rel_err=67727361537.2559  d_true_bits=27
+- P 64 best_k=1 rel_err=0.1481  d_true_bits=64
+- P 70 best_k=7 rel_err=0.0001  d_true_bits=70
+- P100 best_k=37 rel_err=0.2002  d_true_bits=100
+- P115 best_k=52 rel_err=0.0853  d_true_bits=115
+- P130 best_k=67 rel_err=0.0136  d_true_bits=130
+
+---
+
+## Per-family evidence
+
+### D/8 / epsilon / 2^32 lane (`d8_epsilon_lane`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/h160_lane_keyhunt_status.txt`
+#### `ARCHIVE/p160_billion_even_scroll_live.log`
+#### `ARCHIVE/p160_billion_even_scroll.txt`
+#### `ARCHIVE/p160_complement_two32m1_sweep.txt`
+- hits: 0
+#### `ARCHIVE/p160_lane_two32_sweep.txt`
+- hits: 0
+#### `ARCHIVE/h160_address_two32_pattern.txt`
+- P135  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2072985111  chk<2^32? True
+- P160  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1563760281  chk<2^32? True
+- all solved checked: quotient always 2^32? True
+- P160  payload/h160 lane quotient = 4294967296  (2^32=True)
+- checksum (low 32-bit lane) = 1563760281
+- === Decimal form: h160 = q * 2^32 + r (low lane) ===
+- q = h160 // 2^32 is ~38-39 decimal digits; r is the 'small offset' lane
+- P  1  h160_dec_len=48  q_len=39  q_trail_zeros=0
+- h160 = 155677856125771267926192137724119720739 * 2^32 + 4047715286
+- dec: 668631300771580858519448973337422070966705667030
+- P 32  h160_dec_len=48  q_len=39  q_trail_zeros=0
+- h160 = 210362664487553757657734766251726278188 * 2^32 + 3499032009
+- P135:
+  - P135  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2072985111  chk<2^32? True
+  - P160  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1563760281  chk<2^32? True
+  - all solved checked: quotient always 2^32? True
+  - P160  payload/h160 lane quotient = 4294967296  (2^32=True)
+  - checksum (low 32-bit lane) = 1563760281
+  - === Decimal form: h160 = q * 2^32 + r (low lane) ===
+  - q = h160 // 2^32 is ~38-39 decimal digits; r is the 'small offset' lane
+  - P  1  h160_dec_len=48  q_len=39  q_trail_zeros=0
+
+### P135-named probes (misc) (`p135_specific`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/tax_math_bsgs_p135.txt`
+- wall=2341.8s  result=not found
+#### `ARCHIVE/p135_decimal_resonance_scroll.txt`
+- P135 DECIMAL-RESONANCE SCROLL
+- target Px dec: 92108364944471082700...
+- Px(2^134) dec: 92137904221004991822...
+- anchors=11  radius=+/-2,000,000  min_dec=3
+- ratio_filter=None
+- [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+- [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+- [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+- [4/11] barcode_top3_mean      4,000,020 pts 183.9s (21,751/s) best_dec=5 best_hex_nib=5
+- [5/11] chunk_1                4,000,020 pts 180.5s (22,162/s) best_dec=6 best_hex_nib=6
+- [6/11] chunk_2                4,000,020 pts 181.0s (22,101/s) best_dec=6 best_hex_nib=5
+- [7/11] chunk_3                4,000,020 pts 184.4s (21,697/s) best_dec=6 best_hex_nib=5
+- P135:
+  - P135 DECIMAL-RESONANCE SCROLL
+  - target Px dec: 92108364944471082700...
+  - Px(2^134) dec: 92137904221004991822...
+  - anchors=11  radius=+/-2,000,000  min_dec=3
+  - ratio_filter=None
+  - [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+  - [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+  - [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+#### `ARCHIVE/p135_intquotient_bridge.txt`
+- P135 INTQUOTIENT + BINARY-STEP (decimal d, bit-offset scroll)
+- target iq bits ~ 135
+- offsets: d0 + k*2^b  b=0..36  |k*2^b| <= 500000
+- n=131 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=500001 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=132 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1000002 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=133 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1500003 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=134 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2000004 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=135 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2500005 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=136 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=3000006 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=137 d0=29807821388451183105735358799639871672564  iq@d0=137  offsets=1000001 checked=4000007 survivors=0  best_d=29807821388451183105735358799639871172564 best_iq=137
+- n=138 d0=43556142965880123323311949751266331066367  iq@d0=138  offsets=1000001 checked=4500008 survivors=0  best_d=43556142965880123323311949751266330566367 best_iq=138
+- n=139 d0=43556142965880123323311949751266331066367  iq@d0=138  offsets=1000001 checked=5000009 survivors=0  best_d=43556142965880123323311949751266330566367 best_iq=138
+- P135:
+  - P135 INTQUOTIENT + BINARY-STEP (decimal d, bit-offset scroll)
+  - target iq bits ~ 135
+  - offsets: d0 + k*2^b  b=0..36  |k*2^b| <= 500000
+  - n=131 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=500001 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=132 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1000002 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=133 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1500003 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=134 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2000004 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=135 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2500005 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+#### `ARCHIVE/p135_binary_shift_map.txt`
+- P135 BINARY SHIFT MAP (decimal d, binary structure)
+- anchor n=135  d0=21778071482940061661655974875633165533184
+- LO=21778071482940061661655974875633165533184  HI=43556142965880123323311949751266331066368
+- Px prefix 0x145d2611c823a396
+- === +1 decimal vs single-bit carry (why decimal hides structure) ===
+- start          d_dec=21778071482940061661655974875633165533184
+- d_bin[134:]: 0000000000000000000000000000000000000000
+- iq_dec=127291261266025988744045189293564544588226  iq_bin: 0111011001101010100001101001100111000010  iq_bits=137
+- x_pref=0xcbb434aa  target=0x145d2611  nib_match=0
+- d0+1 dec       d_dec=21778071482940061661655974875633165533185
+- d_bin[134:]: 0000000000000000000000000000000000000001
+- iq_dec=127291261266025988744045189293564544588232  iq_bin: 0111011001101010100001101001100111001000  iq_bits=137
+- P135:
+  - P135 BINARY SHIFT MAP (decimal d, binary structure)
+  - anchor n=135  d0=21778071482940061661655974875633165533184
+  - LO=21778071482940061661655974875633165533184  HI=43556142965880123323311949751266331066368
+  - Px prefix 0x145d2611c823a396
+  - === +1 decimal vs single-bit carry (why decimal hides structure) ===
+  - start          d_dec=21778071482940061661655974875633165533184
+  - d_bin[134:]: 0000000000000000000000000000000000000000
+  - iq_dec=127291261266025988744045189293564544588226  iq_bin: 0111011001101010100001101001100111000010  iq_bits=137
+#### `ARCHIVE/p135_k_bridge_proof_check.txt`
+- P135 k-BRIDGE PROOF CHECK
+- === 1. Geometric (199-bit pivot) ===
+- user_ry:
+- log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+- pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+- shift to 135: 143.12 - 8 = 135.12 bits
+- true_ry:
+- log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+- pivot 198.95 -> log2(sqrt(k))=71.5599  log2(k)=143.1198 bits
+- log2(sqrt(N*p/(p-N))) = 191.8271  (191.827 field ratio)
+- === 2. Signature linear (mod N) ===
+- k = k0 + d * delta_k  (mod N)
+- P135:
+  - P135 k-BRIDGE PROOF CHECK
+  - === 1. Geometric (199-bit pivot) ===
+  - user_ry:
+  - log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+  - pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+  - shift to 135: 143.12 - 8 = 135.12 bits
+  - true_ry:
+  - log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+#### `ARCHIVE/p135_arrest_scroll.txt`
+- P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+- === hinge / arrest constants ===
+- floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+- frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+- {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+- {Delta_y} = 0.006126  (live y-bridge on P)
+- sqrt(p-N) ~ 2.079472e+19
+- k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+- k=72 arrest (frac):  ...890975609950
+- k=78 arrest ({Dy}): ...051191167665
+- anchors=15  radius=+/-10,000,000  chunk=250,000
+- scroll: 1x scalar mult + G-table offset adds; filter on prebuilt x/y arrays
+- P135:
+  - P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+  - === hinge / arrest constants ===
+  - floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+  - frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+  - {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+  - {Delta_y} = 0.006126  (live y-bridge on P)
+  - sqrt(p-N) ~ 2.079472e+19
+  - k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+
+### KeyHunt / BSGS search (`keyhunt_bsgs`) — CONSTRAINS / HAS_REPORT
+#### `ARCHIVE/tax_math_zero_bsgs.txt`
+- --- P135 [25/319] tz=2^81 anchor_top=0x2d271e07f0b379  span=2^81 tiles_total=562949953421312  [SE_pivot198.0_minus8_ceil+form56_mul_sqrt_pN_frac]
+- tile0 [5a4e3c0fe166f200000000000000000000,5a4e3c0fe166f2000000000000ffffffff] w=2^32 22.34s none
+- --- P140 [26/319] tz=2^87 anchor_top=0x1726a93bc98a55  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw]
+- tile0 [b93549de4c52a8000000000000000000000,b93549de4c52a80000000000000ffffffff] w=2^32 24.37s none
+- --- P140 [27/319] tz=2^90 anchor_top=0x34320f93ee8f9  span=2^90 tiles_total=288230376151711744  [SE_pivot198.95_raw+form56_mul_2^H2]
+- tile0 [d0c83e4fba3e40000000000000000000000,d0c83e4fba3e400000000000000ffffffff] w=2^32 20.70s none
+- --- P140 [28/319] tz=2^87 anchor_top=0x1489781ae3ffd9  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw+form56_div_2^H2]
+- tile0 [a44bc0d71ffec8000000000000000000000,a44bc0d71ffec80000000000000ffffffff] w=2^32 20.83s none
+- --- P140 [29/319] tz=2^89 anchor_top=0x4c200cc43ff59  span=2^89 tiles_total=144115188075855872  [SE_pivot198.95_raw+form56_mul_sqrt_pN_frac]
+- tile0 [984019887feb20000000000000000000000,984019887feb200000000000000ffffffff] w=2^32 20.37s none
+- --- P140 [30/319] tz=2^139 anchor_top=0x1  span=2^139 tiles_total=162259276829213363391578010288128  [SE_pivot198.95_raw_floor]
+- tile0 [80000000000000000000000000000000000,800000000000000000000000000ffffffff] w=2^32 13.37s none
+- P135:
+  - --- P135 [25/319] tz=2^81 anchor_top=0x2d271e07f0b379  span=2^81 tiles_total=562949953421312  [SE_pivot198.0_minus8_ceil+form56_mul_sqrt_pN_frac]
+  - tile0 [5a4e3c0fe166f200000000000000000000,5a4e3c0fe166f2000000000000ffffffff] w=2^32 22.34s none
+  - --- P140 [26/319] tz=2^87 anchor_top=0x1726a93bc98a55  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw]
+  - tile0 [b93549de4c52a8000000000000000000000,b93549de4c52a80000000000000ffffffff] w=2^32 24.37s none
+  - --- P140 [27/319] tz=2^90 anchor_top=0x34320f93ee8f9  span=2^90 tiles_total=288230376151711744  [SE_pivot198.95_raw+form56_mul_2^H2]
+  - tile0 [d0c83e4fba3e40000000000000000000000,d0c83e4fba3e400000000000000ffffffff] w=2^32 20.70s none
+  - --- P140 [28/319] tz=2^87 anchor_top=0x1489781ae3ffd9  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw+form56_div_2^H2]
+  - tile0 [a44bc0d71ffec8000000000000000000000,a44bc0d71ffec80000000000000ffffffff] w=2^32 20.83s none
+#### `ARCHIVE/tax_math_bsgs_p135.txt`
+- wall=2341.8s  result=not found
+#### `ARCHIVE/h160_lane_keyhunt_status.txt`
+#### `ARCHIVE/rail_anchor_bsgs.txt`
+- wall=5.0s  result=not found
+
+### Form 56 / hinge phase (`form56_hinge`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/taxecc_solved_forward.txt`
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+#### `ARCHIVE/tax_math_falsify.txt`
+- SUMMARY
+- solved puzzles tested: 14
+- total trials: 4617
+- full wins (d_match AND ec_d) on solved: 7
+- P70 known_k_direct
+- P75 known_k_direct
+- P90 known_k_direct
+- P95 known_k_direct
+- P100 known_k_direct
+- P115 known_k_direct
+- P125 known_k_direct
+- P115 CALIBRATION (ground truth)
+- P135:
+  - P135 ec+band hits: 0
+#### `ARCHIVE/hinge_blind_scorecard.csv`
+#### `ARCHIVE/hinge_blind_scorecard.txt`
+- === P135 blind detail ===
+- true slot=0  pick_slot(T1)=0  T1=YES
+- true y=-y  pick_y(T2)=-y  T2=YES
+- joint Ex pick=(0, 'y')
+- joint Ey pick=(0, '-y')
+- T4 pred_bf=0.356959  EC=none
+- branch table:
+- slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+- slot0  y  Ex=+0.001119 Ey=+0.285455  |Ex|=0.0011 |Ey|=0.2855
+- slot1 -y  Ex=+0.247813 Ey=-0.006126  |Ex|=0.2478 |Ey|=0.0061
+- slot1  y  Ex=+0.247813 Ey=+0.285455  |Ex|=0.2478 |Ey|=0.2855
+- slot2 -y  Ex=+0.286386 Ey=-0.006126  |Ex|=0.2864 |Ey|=0.0061
+- P135:
+  - === P135 blind detail ===
+  - true slot=0  pick_slot(T1)=0  T1=YES
+  - true y=-y  pick_y(T2)=-y  T2=YES
+  - joint Ex pick=(0, 'y')
+  - joint Ey pick=(0, '-y')
+  - T4 pred_bf=0.356959  EC=none
+  - branch table:
+  - slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+#### `ARCHIVE/hinge_equivalence_catalog.csv`
+#### `ARCHIVE/hinge_equivalence_catalog.txt`
+- P135 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H02_tight_Ey_plus_y
+- P140 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+- P145 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y
+- P150 [NO] (8 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+- P155 [NO] (6 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey
+- P160 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y
+- P135:
+  - P135 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H02_tight_Ey_plus_y
+  - P140 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+  - P145 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y
+  - P150 [NO] (8 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+  - P155 [NO] (6 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey
+  - P160 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y
+
+### Harvester / sieve / baby table (`harvester_sieve`) — CONSTRAINS / HAS_REPORT
+#### `ARCHIVE/harvester_appdomain_inspect.txt`
+#### `ARCHIVE/harvester_endless_scroll.txt`
+- total=6,000,000  wall=53.5s  avg=112,119/s  result=not found
+
+### h160 shelf / complement NP1 (`h160_shelf`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/h160_lane_keyhunt_status.txt`
+#### `ARCHIVE/p160_dual_gate_complement_rsz.txt`
+#### `ARCHIVE/p160_complement_two32m1_sweep.txt`
+- hits: 0
+#### `ARCHIVE/h160_address_two32_pattern.txt`
+- P135  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2072985111  chk<2^32? True
+- P160  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1563760281  chk<2^32? True
+- all solved checked: quotient always 2^32? True
+- P160  payload/h160 lane quotient = 4294967296  (2^32=True)
+- checksum (low 32-bit lane) = 1563760281
+- === Decimal form: h160 = q * 2^32 + r (low lane) ===
+- q = h160 // 2^32 is ~38-39 decimal digits; r is the 'small offset' lane
+- P  1  h160_dec_len=48  q_len=39  q_trail_zeros=0
+- h160 = 155677856125771267926192137724119720739 * 2^32 + 4047715286
+- dec: 668631300771580858519448973337422070966705667030
+- P 32  h160_dec_len=48  q_len=39  q_trail_zeros=0
+- h160 = 210362664487553757657734766251726278188 * 2^32 + 3499032009
+- P135:
+  - P135  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2072985111  chk<2^32? True
+  - P160  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1563760281  chk<2^32? True
+  - all solved checked: quotient always 2^32? True
+  - P160  payload/h160 lane quotient = 4294967296  (2^32=True)
+  - checksum (low 32-bit lane) = 1563760281
+  - === Decimal form: h160 = q * 2^32 + r (low lane) ===
+  - q = h160 // 2^32 is ~38-39 decimal digits; r is the 'small offset' lane
+  - P  1  h160_dec_len=48  q_len=39  q_trail_zeros=0
+#### `ARCHIVE/p160_rsz_h160_phase3.txt`
+- k-base variants: 8660  unique d tried: 51312  hits: 0
+- total RSZ+h160 hits: 0
+- window phase hits: 0
+- === TOTAL HITS: 0 ===
+#### `ARCHIVE/p160_h160_eps_sweep.txt`
+- P135  h160_bits=158  in_band=False  bf=0.232168  cands=30
+- P140  h160_bits=160  in_band=True  bf=0.997901  cands=204
+- P145  h160_bits=159  in_band=False  bf=0.354480  cands=33
+- P150  h160_bits=160  in_band=True  bf=0.754282  cands=206
+- P155  h160_bits=159  in_band=False  bf=0.420097  cands=34
+- P160  h160_bits=160  in_band=True  bf=0.814700  cands=201
+- total unique in-band candidates: 4183
+- EC verify (d*G == P160)...
+- checked 4183 in 1.6s
+- === HITS: 0 ===
+- (none)
+- === closest band_frac to h160(P160)=0.8147 ===
+- P135:
+  - P135  h160_bits=158  in_band=False  bf=0.232168  cands=30
+  - P140  h160_bits=160  in_band=True  bf=0.997901  cands=204
+  - P145  h160_bits=159  in_band=False  bf=0.354480  cands=33
+  - P150  h160_bits=160  in_band=True  bf=0.754282  cands=206
+  - P155  h160_bits=159  in_band=False  bf=0.420097  cands=34
+  - P160  h160_bits=160  in_band=True  bf=0.814700  cands=201
+  - total unique in-band candidates: 4183
+  - EC verify (d*G == P160)...
+
+### Scroll / scan / sweep (`scroll_scan`) — CONSTRAINS / HAS_REPORT
+#### `ARCHIVE/p160_billion_even_scroll_live.log`
+#### `ARCHIVE/p160_billion_even_scroll.txt`
+#### `ARCHIVE/p160_inverted_ksz_scan.txt`
+- full hits: 0
+#### `ARCHIVE/p160_complement_two32m1_sweep.txt`
+- hits: 0
+#### `ARCHIVE/p160_lane_two32_sweep.txt`
+- hits: 0
+#### `ARCHIVE/p160_h160_eps_sweep.txt`
+- P135  h160_bits=158  in_band=False  bf=0.232168  cands=30
+- P140  h160_bits=160  in_band=True  bf=0.997901  cands=204
+- P145  h160_bits=159  in_band=False  bf=0.354480  cands=33
+- P150  h160_bits=160  in_band=True  bf=0.754282  cands=206
+- P155  h160_bits=159  in_band=False  bf=0.420097  cands=34
+- P160  h160_bits=160  in_band=True  bf=0.814700  cands=201
+- total unique in-band candidates: 4183
+- EC verify (d*G == P160)...
+- checked 4183 in 1.6s
+- === HITS: 0 ===
+- (none)
+- === closest band_frac to h160(P160)=0.8147 ===
+- P135:
+  - P135  h160_bits=158  in_band=False  bf=0.232168  cands=30
+  - P140  h160_bits=160  in_band=True  bf=0.997901  cands=204
+  - P145  h160_bits=159  in_band=False  bf=0.354480  cands=33
+  - P150  h160_bits=160  in_band=True  bf=0.754282  cands=206
+  - P155  h160_bits=159  in_band=False  bf=0.420097  cands=34
+  - P160  h160_bits=160  in_band=True  bf=0.814700  cands=201
+  - total unique in-band candidates: 4183
+  - EC verify (d*G == P160)...
+
+### RSZ / Schedule C (`rsz_schedule_c`) — CONFIRMED / PROVEN_POSITIVE
+#### `ARCHIVE/taxecc_solved_forward.txt`
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+#### `ARCHIVE/p160_dual_gate_complement_rsz.txt`
+#### `ARCHIVE/rsz_mod_n_minus_1.txt`
+#### `ARCHIVE/rsz_mod7_log7.txt`
+#### `ARCHIVE/p160_rsz_h160_phase3.txt`
+- k-base variants: 8660  unique d tried: 51312  hits: 0
+- total RSZ+h160 hits: 0
+- window phase hits: 0
+- === TOTAL HITS: 0 ===
+#### `ARCHIVE/band_fraction_probe.csv`
+
+### log2 / fractional / band fold (`log2_fraction_fold`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/band_fraction_probe.csv`
+#### `ARCHIVE/band_fraction_probe.txt`
+- === P135 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- no probes lined up on R via formula
+- === P130 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- TRUE d bf=0.621997  lined_up=True  d=1103873984953507439627945351144005829577
+- === P140 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P145 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P150 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P155 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- === P160 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+- P135:
+  - === P135 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  - no probes lined up on R via formula
+#### `ARCHIVE/p135_binary_shift_map.txt`
+- P135 BINARY SHIFT MAP (decimal d, binary structure)
+- anchor n=135  d0=21778071482940061661655974875633165533184
+- LO=21778071482940061661655974875633165533184  HI=43556142965880123323311949751266331066368
+- Px prefix 0x145d2611c823a396
+- === +1 decimal vs single-bit carry (why decimal hides structure) ===
+- start          d_dec=21778071482940061661655974875633165533184
+- d_bin[134:]: 0000000000000000000000000000000000000000
+- iq_dec=127291261266025988744045189293564544588226  iq_bin: 0111011001101010100001101001100111000010  iq_bits=137
+- x_pref=0xcbb434aa  target=0x145d2611  nib_match=0
+- d0+1 dec       d_dec=21778071482940061661655974875633165533185
+- d_bin[134:]: 0000000000000000000000000000000000000001
+- iq_dec=127291261266025988744045189293564544588232  iq_bin: 0111011001101010100001101001100111001000  iq_bits=137
+- P135:
+  - P135 BINARY SHIFT MAP (decimal d, binary structure)
+  - anchor n=135  d0=21778071482940061661655974875633165533184
+  - LO=21778071482940061661655974875633165533184  HI=43556142965880123323311949751266331066368
+  - Px prefix 0x145d2611c823a396
+  - === +1 decimal vs single-bit carry (why decimal hides structure) ===
+  - start          d_dec=21778071482940061661655974875633165533184
+  - d_bin[134:]: 0000000000000000000000000000000000000000
+  - iq_dec=127291261266025988744045189293564544588226  iq_bin: 0111011001101010100001101001100111000010  iq_bits=137
+#### `ARCHIVE/p135_fold_from_P.txt`
+- wall=10.1s  result=not found
+#### `ARCHIVE/p135_sqrt_d_fractional.txt`
+- === P135 anchors (+d and N-d sqrt) ===
+- hinge_frac bf=0.333450:
+- +d: log2(sqrt d)=67.166725  frac=0.166725  frac(lsy)-frac(lsd)=0.172851  frac(lsx)-frac(lsd)=0.007245  frac(H)-frac(lsd)=0.178977
+- N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+- frac(lsd)+frac(lsdm)=0.166725  frac(lsd)-frac(lsdm)=0.166725
+- upper_half bf=0.584963:
+- +d: log2(sqrt d)=67.292481  frac=0.292481  frac(lsy)-frac(lsd)=0.047094  frac(lsx)-frac(lsd)=-0.118512  frac(H)-frac(lsd)=0.053221
+- frac(lsd)+frac(lsdm)=0.292481  frac(lsd)-frac(lsdm)=0.292481
+- frac_H bf=0.345702:
+- +d: log2(sqrt d)=67.172851  frac=0.172851  frac(lsy)-frac(lsd)=0.166725  frac(lsx)-frac(lsd)=0.001119  frac(H)-frac(lsd)=0.172851
+- frac(lsd)+frac(lsdm)=0.172851  frac(lsd)-frac(lsdm)=0.172851
+- === identity check: band_frac = 2*frac(lsd) mod 1? ===
+- P135:
+  - === P135 anchors (+d and N-d sqrt) ===
+  - hinge_frac bf=0.333450:
+  - +d: log2(sqrt d)=67.166725  frac=0.166725  frac(lsy)-frac(lsd)=0.172851  frac(lsx)-frac(lsd)=0.007245  frac(H)-frac(lsd)=0.178977
+  - N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+  - frac(lsd)+frac(lsdm)=0.166725  frac(lsd)-frac(lsdm)=0.166725
+  - upper_half bf=0.584963:
+  - +d: log2(sqrt d)=67.292481  frac=0.292481  frac(lsy)-frac(lsd)=0.047094  frac(lsx)-frac(lsd)=-0.118512  frac(H)-frac(lsd)=0.053221
+  - N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+#### `ARCHIVE/p135_fractional_constraint_scan.txt`
+- P135 fractional constraint scan
+- H=128.345702146609  frac(H)=0.345702
+- log2(sqrt Py)=127.339575723692  frac=0.339576
+- Delta_y=1.006126  frac(Dy)=0.006126
+- identity frac(H)-frac(lsy)=0.006126  (expect frac(Dy)=0.006126)
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  mid bf=0.584963
+- radius +/- 1,000,000
+- === anchors ===
+- upper_half_mid:
+- target bf=0.584963  center d tail ...7207116800
+- actual bf=0.584963  frac_log2d=0.584963  frac(lsy)-frac(log2d)=-0.245387  bf-frac(lsy)=0.245387
+- scan +/-1,000,000 tested=2,000,001 hit=no
+- P135:
+  - P135 fractional constraint scan
+  - H=128.345702146609  frac(H)=0.345702
+  - log2(sqrt Py)=127.339575723692  frac=0.339576
+  - Delta_y=1.006126  frac(Dy)=0.006126
+  - identity frac(H)-frac(lsy)=0.006126  (expect frac(Dy)=0.006126)
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  mid bf=0.584963
+  - radius +/- 1,000,000
+  - === anchors ===
+
+### p-N / gap / defect bridge (`p_minus_n_bridge`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p135_intquotient_bridge.txt`
+- P135 INTQUOTIENT + BINARY-STEP (decimal d, bit-offset scroll)
+- target iq bits ~ 135
+- offsets: d0 + k*2^b  b=0..36  |k*2^b| <= 500000
+- n=131 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=500001 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=132 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1000002 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=133 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1500003 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=134 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2000004 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=135 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2500005 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=136 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=3000006 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+- n=137 d0=29807821388451183105735358799639871672564  iq@d0=137  offsets=1000001 checked=4000007 survivors=0  best_d=29807821388451183105735358799639871172564 best_iq=137
+- n=138 d0=43556142965880123323311949751266331066367  iq@d0=138  offsets=1000001 checked=4500008 survivors=0  best_d=43556142965880123323311949751266330566367 best_iq=138
+- n=139 d0=43556142965880123323311949751266331066367  iq@d0=138  offsets=1000001 checked=5000009 survivors=0  best_d=43556142965880123323311949751266330566367 best_iq=138
+- P135:
+  - P135 INTQUOTIENT + BINARY-STEP (decimal d, bit-offset scroll)
+  - target iq bits ~ 135
+  - offsets: d0 + k*2^b  b=0..36  |k*2^b| <= 500000
+  - n=131 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=500001 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=132 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1000002 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=133 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=1500003 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=134 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2000004 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+  - n=135 d0=21778071482940061661655974875633165533184  iq@d0=137  offsets=1000001 checked=2500005 survivors=0  best_d=21778071482940061661655974875633165533184 best_iq=137
+#### `ARCHIVE/p135_modulus_mismatch_demo.txt`
+- P135 MODULUS MISMATCH DEMONSTRATION
+- Px_pub tail ...590  r_sig tail ...368
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === 1. Field vs Scalar bridge (Px[2] / denom) ===
+- --- denom r_sig tail ...368  lam_A==lam_B? False ---
+- Candidate A (field): lam_tail ...14645  k_bits=255  x_bits=256  band=False  ec=False
+- Candidate B (scalar): lam_tail ...94194  k_bits=256  x_bits=256  band=False  ec=False
+- Delta (B-A) mod N tail ...73886
+- --- denom rx[0] tail ...219  lam_A==lam_B? False ---
+- Candidate A (field): lam_tail ...39180  k_bits=256  x_bits=255  band=False  ec=False
+- Candidate B (scalar): lam_tail ...34478  k_bits=256  x_bits=255  band=False  ec=False
+- Delta (B-A) mod N tail ...89635
+- P135:
+  - P135 MODULUS MISMATCH DEMONSTRATION
+  - Px_pub tail ...590  r_sig tail ...368
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === 1. Field vs Scalar bridge (Px[2] / denom) ===
+  - --- denom r_sig tail ...368  lam_A==lam_B? False ---
+  - Candidate A (field): lam_tail ...14645  k_bits=255  x_bits=256  band=False  ec=False
+  - Candidate B (scalar): lam_tail ...94194  k_bits=256  x_bits=256  band=False  ec=False
+  - Delta (B-A) mod N tail ...73886
+#### `ARCHIVE/two_field_bridge_arrest.csv`
+#### `ARCHIVE/two_field_bridge_arrest_report.txt`
+- P135 hits: 0
+- ALL RSZ PUZZLES — field bridge Px_pub/r_sig
+- Total hits: 0
+- Px[0]/rx[0] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- Px[0]/rx[1] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[0]/rx[2] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[1]/rx[0] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[1]/rx[1] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- Px[1]/rx[2] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[2]/rx[0] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[2]/rx[1] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[2]/rx[2] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- P135:
+  - P135 hits: 0
+  - ALL RSZ PUZZLES — field bridge Px_pub/r_sig
+  - Total hits: 0
+#### `ARCHIVE/cloud_pages/nside_row_constant_cross.log`
+- P135 vs P130:
+- same row index? False
+- delta A1 bits=255  delta mod delta==0? False
+- delta A2 bits=256  delta mod delta==0? False
+- delta A3 bits=255  delta mod delta==0? False
+- delta B1 bits=256  delta mod delta==0? False
+- delta B2 bits=256  delta mod delta==0? False
+- delta B3 bits=256  delta mod delta==0? False
+- delta C1 bits=256  delta mod delta==0? False
+- delta C2 bits=256  delta mod delta==0? False
+- delta C3 bits=256  delta mod delta==0? False
+- delta C_active bits=254
+- P135:
+  - P135 vs P130:
+  - same row index? False
+  - delta A1 bits=255  delta mod delta==0? False
+  - delta A2 bits=256  delta mod delta==0? False
+  - delta A3 bits=255  delta mod delta==0? False
+  - delta B1 bits=256  delta mod delta==0? False
+  - delta B2 bits=256  delta mod delta==0? False
+  - delta B3 bits=256  delta mod delta==0? False
+#### `ARCHIVE/cloud_pages/nside_invariant_compare.log`
+- P135 vs P130:
+- same row? False
+- family_prod match? False
+- lambda_ns equal? False
+- delta_family bits=255
+- P140 vs P130:
+- delta_family bits=256
+- P145 vs P130:
+- P135:
+  - P135 vs P130:
+  - same row? False
+  - family_prod match? False
+  - lambda_ns equal? False
+  - delta_family bits=255
+  - P140 vs P130:
+  - same row? False
+  - family_prod match? False
+
+### Schedule SE / I99 pivot (`tax_math_se`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/tax_math_zero_bsgs.txt`
+- --- P135 [25/319] tz=2^81 anchor_top=0x2d271e07f0b379  span=2^81 tiles_total=562949953421312  [SE_pivot198.0_minus8_ceil+form56_mul_sqrt_pN_frac]
+- tile0 [5a4e3c0fe166f200000000000000000000,5a4e3c0fe166f2000000000000ffffffff] w=2^32 22.34s none
+- --- P140 [26/319] tz=2^87 anchor_top=0x1726a93bc98a55  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw]
+- tile0 [b93549de4c52a8000000000000000000000,b93549de4c52a80000000000000ffffffff] w=2^32 24.37s none
+- --- P140 [27/319] tz=2^90 anchor_top=0x34320f93ee8f9  span=2^90 tiles_total=288230376151711744  [SE_pivot198.95_raw+form56_mul_2^H2]
+- tile0 [d0c83e4fba3e40000000000000000000000,d0c83e4fba3e400000000000000ffffffff] w=2^32 20.70s none
+- --- P140 [28/319] tz=2^87 anchor_top=0x1489781ae3ffd9  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw+form56_div_2^H2]
+- tile0 [a44bc0d71ffec8000000000000000000000,a44bc0d71ffec80000000000000ffffffff] w=2^32 20.83s none
+- --- P140 [29/319] tz=2^89 anchor_top=0x4c200cc43ff59  span=2^89 tiles_total=144115188075855872  [SE_pivot198.95_raw+form56_mul_sqrt_pN_frac]
+- tile0 [984019887feb20000000000000000000000,984019887feb200000000000000ffffffff] w=2^32 20.37s none
+- --- P140 [30/319] tz=2^139 anchor_top=0x1  span=2^139 tiles_total=162259276829213363391578010288128  [SE_pivot198.95_raw_floor]
+- tile0 [80000000000000000000000000000000000,800000000000000000000000000ffffffff] w=2^32 13.37s none
+- P135:
+  - --- P135 [25/319] tz=2^81 anchor_top=0x2d271e07f0b379  span=2^81 tiles_total=562949953421312  [SE_pivot198.0_minus8_ceil+form56_mul_sqrt_pN_frac]
+  - tile0 [5a4e3c0fe166f200000000000000000000,5a4e3c0fe166f2000000000000ffffffff] w=2^32 22.34s none
+  - --- P140 [26/319] tz=2^87 anchor_top=0x1726a93bc98a55  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw]
+  - tile0 [b93549de4c52a8000000000000000000000,b93549de4c52a80000000000000ffffffff] w=2^32 24.37s none
+  - --- P140 [27/319] tz=2^90 anchor_top=0x34320f93ee8f9  span=2^90 tiles_total=288230376151711744  [SE_pivot198.95_raw+form56_mul_2^H2]
+  - tile0 [d0c83e4fba3e40000000000000000000000,d0c83e4fba3e400000000000000ffffffff] w=2^32 20.70s none
+  - --- P140 [28/319] tz=2^87 anchor_top=0x1489781ae3ffd9  span=2^87 tiles_total=36028797018963968  [SE_pivot198.95_raw+form56_div_2^H2]
+  - tile0 [a44bc0d71ffec8000000000000000000000,a44bc0d71ffec80000000000000ffffffff] w=2^32 20.83s none
+#### `ARCHIVE/taxecc_solved_forward.txt`
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+#### `ARCHIVE/tax_math_falsify.txt`
+- SUMMARY
+- solved puzzles tested: 14
+- total trials: 4617
+- full wins (d_match AND ec_d) on solved: 7
+- P70 known_k_direct
+- P75 known_k_direct
+- P90 known_k_direct
+- P95 known_k_direct
+- P100 known_k_direct
+- P115 known_k_direct
+- P125 known_k_direct
+- P115 CALIBRATION (ground truth)
+- P135:
+  - P135 ec+band hits: 0
+#### `ARCHIVE/tax_math_bsgs_p135.txt`
+- wall=2341.8s  result=not found
+#### `ARCHIVE/p135_arrest_scroll.txt`
+- P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+- === hinge / arrest constants ===
+- floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+- frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+- {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+- {Delta_y} = 0.006126  (live y-bridge on P)
+- sqrt(p-N) ~ 2.079472e+19
+- k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+- k=72 arrest (frac):  ...890975609950
+- k=78 arrest ({Dy}): ...051191167665
+- anchors=15  radius=+/-10,000,000  chunk=250,000
+- scroll: 1x scalar mult + G-table offset adds; filter on prebuilt x/y arrays
+- P135:
+  - P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+  - === hinge / arrest constants ===
+  - floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+  - frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+  - {H} = 0.345702  {H/2} = 0.172851  (log hinge)
+  - {Delta_y} = 0.006126  (live y-bridge on P)
+  - sqrt(p-N) ~ 2.079472e+19
+  - k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+#### `ARCHIVE/arrest_formula_verify.txt`
+- P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === email formulas at k=71 ===
+- v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+- v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+- v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+- v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+- geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+- === k sweep v1 (frac*sqrt(pN)*2^k) ===
+- k=69 bits=132 in_band=False EC=False tail...5736403522
+- k=70 bits=133 in_band=False EC=False tail...1472807044
+- k=71 bits=134 in_band=False EC=False tail...2945614089
+- k=72 bits=135 in_band=True EC=False tail...5891228179
+- P135:
+  - P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === email formulas at k=71 ===
+  - v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+  - v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+  - v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+  - v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+  - geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+  - === k sweep v1 (frac*sqrt(pN)*2^k) ===
+
+### Transport / decimal / tower arrest (`transport_tower`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p135_decimal_resonance_scroll.txt`
+- P135 DECIMAL-RESONANCE SCROLL
+- target Px dec: 92108364944471082700...
+- Px(2^134) dec: 92137904221004991822...
+- anchors=11  radius=+/-2,000,000  min_dec=3
+- ratio_filter=None
+- [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+- [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+- [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+- [4/11] barcode_top3_mean      4,000,020 pts 183.9s (21,751/s) best_dec=5 best_hex_nib=5
+- [5/11] chunk_1                4,000,020 pts 180.5s (22,162/s) best_dec=6 best_hex_nib=6
+- [6/11] chunk_2                4,000,020 pts 181.0s (22,101/s) best_dec=6 best_hex_nib=5
+- [7/11] chunk_3                4,000,020 pts 184.4s (21,697/s) best_dec=6 best_hex_nib=5
+- P135:
+  - P135 DECIMAL-RESONANCE SCROLL
+  - target Px dec: 92108364944471082700...
+  - Px(2^134) dec: 92137904221004991822...
+  - anchors=11  radius=+/-2,000,000  min_dec=3
+  - ratio_filter=None
+  - [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+  - [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+  - [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+#### `ARCHIVE/p135_transport_tower_arrest.txt`
+- P135 TRANSPORT TOWER ARREST
+- Px_pub=DEFAULT_PX[2] tail ...590
+- r_sig tail ...368  band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === 1. Field R_eff = beta^i * rx[j] (mod p) — row-2 hits only ===
+- *** row-2 R_eff...368 at i=1 j=0
+- R_eff i=1 j=0 h2=14 Px[0] field: lam...39180 x_bits=255 ec=False band=False denom...368
+- R_eff i=1 j=0 h2=14 Px[0] scalar: lam...21088 x_bits=256 ec=False band=False denom...368
+- R_eff i=1 j=0 h2=14 Px[1] field: lam...89501 x_bits=255 ec=False band=False denom...368
+- R_eff i=1 j=0 h2=14 Px[1] scalar: lam...29147 x_bits=255 ec=False band=False denom...368
+- R_eff i=1 j=0 h2=14 Px[2] field: lam...14645 x_bits=256 ec=False band=False denom...368
+- R_eff i=1 j=0 h2=14 Px[2] scalar: lam...94194 x_bits=256 ec=False band=False denom...368
+- *** row-2 R_eff...368 at i=0 j=1
+- P135:
+  - P135 TRANSPORT TOWER ARREST
+  - Px_pub=DEFAULT_PX[2] tail ...590
+  - r_sig tail ...368  band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === 1. Field R_eff = beta^i * rx[j] (mod p) — row-2 hits only ===
+  - *** row-2 R_eff...368 at i=1 j=0
+  - R_eff i=1 j=0 h2=14 Px[0] field: lam...39180 x_bits=255 ec=False band=False denom...368
+  - R_eff i=1 j=0 h2=14 Px[0] scalar: lam...21088 x_bits=256 ec=False band=False denom...368
+  - R_eff i=1 j=0 h2=14 Px[1] field: lam...89501 x_bits=255 ec=False band=False denom...368
+#### `ARCHIVE/p135_three_bridge_arrest.txt`
+- P135 THREE-BRIDGE ARREST
+- Px tail ...590  r tail ...368
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === SUSPECT 1: FIELD BRIDGE (mod p, then mod N) ===
+- lambda_p = (Px * r^-1 mod p) mod N  tail ...14645
+- field bridge: lam...14645  D_bits=253  k_bits=255  x_bits=256  out  ec=False  [cleared]
+- === SUSPECT 2: SCALAR BRIDGE (mod N) ===
+- lambda_N = Px * r^-1 mod N  tail ...94194
+- lambda_p != lambda_N: True  delta tail ...73886
+- scalar bridge: lam...94194  D_bits=252  k_bits=256  x_bits=256  out  ec=False  [cleared]
+- === SUSPECT 3: CUBIC BRIDGE (object u, not shadow r) ===
+- u0 tail ...354  u^3==r True
+- P135:
+  - P135 THREE-BRIDGE ARREST
+  - Px tail ...590  r tail ...368
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === SUSPECT 1: FIELD BRIDGE (mod p, then mod N) ===
+  - lambda_p = (Px * r^-1 mod p) mod N  tail ...14645
+  - field bridge: lam...14645  D_bits=253  k_bits=255  x_bits=256  out  ec=False  [cleared]
+  - === SUSPECT 2: SCALAR BRIDGE (mod N) ===
+  - lambda_N = Px * r^-1 mod N  tail ...94194
+#### `ARCHIVE/cloud_pages/all_full_transport_hunt.log`
+- P135: kept=446 ec_hits=0
+- P136: kept=762 ec_hits=0
+- P137: kept=875 ec_hits=0
+- P138: kept=256 ec_hits=0
+- P139: kept=692 ec_hits=0
+- P140: kept=5949 ec_hits=0
+- P141: kept=301 ec_hits=0
+- P142: kept=687 ec_hits=0
+- P143: kept=81 ec_hits=0
+- P144: kept=74 ec_hits=0
+- P145: kept=525 ec_hits=0
+- P146: kept=1039 ec_hits=0
+- P135:
+  - P135: kept=446 ec_hits=0
+  - P136: kept=762 ec_hits=0
+  - P137: kept=875 ec_hits=0
+  - P138: kept=256 ec_hits=0
+  - P139: kept=692 ec_hits=0
+  - P140: kept=5949 ec_hits=0
+  - P141: kept=301 ec_hits=0
+  - P142: kept=687 ec_hits=0
+#### `ARCHIVE/all_full_transport_hunt_report.txt`
+- P135
+- anchor gap head2=14 head3=148
+- lhs ...768  rhs ...962
+- candidates=446 ec_hits=0
+- P136
+- anchor gap head2=52 head3=529
+- lhs ...255  rhs ...962
+- candidates=762 ec_hits=0
+- P137
+- candidates=875 ec_hits=0
+- P138
+- candidates=256 ec_hits=0
+- P135:
+  - P135
+  - anchor gap head2=14 head3=148
+  - lhs ...768  rhs ...962
+  - candidates=446 ec_hits=0
+  - P136
+  - anchor gap head2=52 head3=529
+  - lhs ...255  rhs ...962
+  - candidates=762 ec_hits=0
+#### `ARCHIVE/transport_vertical_stack_report.txt`
+- P135     14   148   768   962   368        Y
+- P136     52   529   255   962   739     3  Y
+- P137     52   529   255   962   739     3  Y
+- P138     52   529   255   962   739     3  Y
+- P139     52   529   255   962   739     3  Y
+- P140     11   110   943   962   000        Y
+- P141     52   529   255   962   739     3  Y
+- P142     52   529   255   962   739     3  Y
+- P143     52   529   255   962   739     3  Y
+- P144     52   529   255   962   739     3  Y
+- P145     62   629   794   962   203        Y
+- P146     52   529   255   962   739     3  Y
+- P135:
+  - P135     14   148   768   962   368        Y
+  - P136     52   529   255   962   739     3  Y
+  - P137     52   529   255   962   739     3  Y
+  - P138     52   529   255   962   739     3  Y
+  - P139     52   529   255   962   739     3  Y
+  - P140     11   110   943   962   000        Y
+  - P141     52   529   255   962   739     3  Y
+  - P142     52   529   255   962   739     3  Y
+
+### N-8 / mirror / complement flip (`n8_mirror`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/p160_dual_gate_complement_rsz.txt`
+#### `ARCHIVE/p160_inverted_ksz_scan.txt`
+- full hits: 0
+#### `ARCHIVE/p160_complement_two32m1_sweep.txt`
+- hits: 0
+#### `ARCHIVE/p130_backward_shell.txt`
+#### `ARCHIVE/family_mirror_batch.csv`
+#### `ARCHIVE/complement_bit_ladder_P1_P70.txt`
+
+### Prior / shelf / schedule pipeline (`prior_hl_shelf`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p130_backward_shell.txt`
+#### `ARCHIVE/p115_flip_surround.txt`
+- === P135 (unsolved) flip estimates ===
+- same_frac              in_band=True ec=False d...148690751488
+- complement_frac        in_band=True ec=False d...750805848064
+- mirror_msb             in_band=True ec=False d...121631141888
+- flip_decimal           in_band=True ec=False d...136397679597
+- hinge+same_frac        in_band=True ec=False d...148700137258
+- hinge-same_frac        in_band=True ec=False d...148681365718
+- BEST mirror_msb: delta=7.305e+28 band_err=11.5246% in_band=True ec=False
+- mirror_msb             delta_bits= 96 band_err= 11.5246% ec=False
+- complement_frac        delta_bits= 96 band_err= 11.5246% ec=False
+- hinge-same_frac        delta_bits= 97 band_err= 14.5131% ec=False
+- BEST mirror_msb: delta=1.037e+30 band_err=5.1144% in_band=True ec=False
+- P135:
+  - === P135 (unsolved) flip estimates ===
+  - same_frac              in_band=True ec=False d...148690751488
+  - complement_frac        in_band=True ec=False d...750805848064
+  - mirror_msb             in_band=True ec=False d...121631141888
+  - flip_decimal           in_band=True ec=False d...136397679597
+  - hinge+same_frac        in_band=True ec=False d...148700137258
+  - hinge-same_frac        in_band=True ec=False d...148681365718
+#### `ARCHIVE/schedule_pipeline_v2.txt`
+- P135 candidates=2400 gen_full=0 ctrl_full=0
+- best_gen=n_bits|k0+gp*dk score=2/5
+- top generated:
+- 2/5 n_bits|k0+gp*dk rx=False ry=False pub=False band=True
+- 2/5 n_bits|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True
+- 2/5 n_bits|k0+(gp+2^H2n)*dk rx=False ry=False pub=False band=True
+- 2/5 n_bits+hinge|k0+gp*dk rx=False ry=False pub=False band=True
+- 2/5 n_bits+hinge|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True
+- P135:
+  - P135 candidates=2400 gen_full=0 ctrl_full=0
+  - best_gen=n_bits|k0+gp*dk score=2/5
+  - top generated:
+  - 2/5 n_bits|k0+gp*dk rx=False ry=False pub=False band=True
+  - 2/5 n_bits|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True
+  - 2/5 n_bits|k0+(gp+2^H2n)*dk rx=False ry=False pub=False band=True
+  - 2/5 n_bits+hinge|k0+gp*dk rx=False ry=False pub=False band=True
+  - 2/5 n_bits+hinge|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True
+#### `ARCHIVE/schedule_pipeline.txt`
+- P135 gp_mode=n_bits gp_bits=135 candidates=10 full_wins=0
+- best=k0+gp*dk score=2/5
+- top k0+gp*dk rx=False ry=False pub=False band=True
+- top pivot+gp rx=False ry=False pub=False band=False
+- RECOMMENDATION — feed Schedule E first on P115:
+- 1. k0 + (2^142) * dk     — linear bridge with fixed 142-bit correction index
+- 2. R_base + c * 2^142    — sweep c in {-2,-1,0,1,2} from arrested R_x
+- 3. pivot + 2^142         — I99 pivot + correction scaffold
+- Algebra lock: k0 + d*dk is the identity (geom_pred=d); blind path uses 2^142 not d.
+- P135:
+  - P135 gp_mode=n_bits gp_bits=135 candidates=10 full_wins=0
+  - best=k0+gp*dk score=2/5
+  - top k0+gp*dk rx=False ry=False pub=False band=True
+  - top pivot+gp rx=False ry=False pub=False band=False
+  - RECOMMENDATION — feed Schedule E first on P115:
+  - 1. k0 + (2^142) * dk     — linear bridge with fixed 142-bit correction index
+  - 2. R_base + c * 2^142    — sweep c in {-2,-1,0,1,2} from arrested R_x
+  - 3. pivot + 2^142         — I99 pivot + correction scaffold
+#### `ARCHIVE/p27_ground_zero_anchor.txt`
+- === EC scan +/-500,000 around P27-anchored d (P135) ===
+- x_anchor center ...0864354304  hit=none
+- y_anchor center ...1007580160  hit=none
+- check {sqrt x}+GZ_yx=0.660015 vs {sqrt y}=0.339576  diff=0.320439
+- P135:
+  - === EC scan +/-500,000 around P27-anchored d (P135) ===
+  - x_anchor center ...0864354304  hit=none
+  - y_anchor center ...1007580160  hit=none
+  - check {sqrt x}+GZ_yx=0.660015 vs {sqrt y}=0.339576  diff=0.320439
+#### `ARCHIVE/cloud_pages/p135_160_shelf2_offset_hunt.log`
+- === P135 px_slot=2 offset_law_row=2 shelf2_bits=135 gap_bits=133 ===
+- predicted offset_bits: [132, 133] (+ gap±1)
+- filtered candidates: 154  hits: 0
+- P135:
+  - === P135 px_slot=2 offset_law_row=2 shelf2_bits=135 gap_bits=133 ===
+  - predicted offset_bits: [132, 133] (+ gap±1)
+  - filtered candidates: 154  hits: 0
+
+### Lambda / twist / transform family (`lambda_twist_map`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/lambda_corrected_batch_report.txt`
+- P135: regression=PASS, all laws pass=True
+- P135:
+  - P135: regression=PASS, all laws pass=True
+#### `ARCHIVE/lambda_corrected_batch.csv`
+#### `ARCHIVE/p135_lambda_shell_show.txt`
+- P135 LAMBDA SHELL vs COORDINATE SHELL
+- ========================================================================
+- LOCK: Px3, Py, rx3, ry  (epsilon row)
+- +---------------------------+---------------------------+
+- |  COORDINATES (Px, Py)    |  RATIOS (Lambda, lambda_y)|
+- |  Py^2 - Px^3  =  GAP      |  lam_y^2 * ry^2           |
+- |                           |    - lam_x^3 * rx^3 = GAP |
+- ------------------------------------------------------------------------
+- mod p (on-curve)                         mod N (off-curve)
+- Py^2 - Px^3        = 7
+- weighted lambda    = 7
+- match?             True
+- P135:
+  - P135 LAMBDA SHELL vs COORDINATE SHELL
+  - ========================================================================
+  - LOCK: Px3, Py, rx3, ry  (epsilon row)
+  - +---------------------------+---------------------------+
+  - |  COORDINATES (Px, Py)    |  RATIOS (Lambda, lambda_y)|
+  - +---------------------------+---------------------------+
+  - |  Py^2 - Px^3  =  GAP      |  lam_y^2 * ry^2           |
+  - |                           |    - lam_x^3 * rx^3 = GAP |
+
+### Checksum u32 / bucket slice (`checksum_bucket`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/checksum_ff_bucket_map.txt`
+- P135: band~2^134  ~2^102 keys per checksum bucket  (5.07e+30 int)
+- === 8-bucket partition (top 3 bits of checksum) ===
+- bucket 0: count= 8  chk range 0x00000000..0x1fffffff
+- bucket 1: count= 7  chk range 0x20000000..0x3fffffff
+- bucket 2: count=14  chk range 0x40000000..0x5fffffff
+- bucket 3: count=14  chk range 0x60000000..0x7fffffff
+- bucket 4: count= 8  chk range 0x80000000..0x9fffffff
+- bucket 5: count=11  chk range 0xa0000000..0xbfffffff
+- bucket 6: count=10  chk range 0xc0000000..0xdfffffff
+- bucket 7: count=10  chk range 0xe0000000..0xffffffff
+- === N split into 8 x 4-byte lanes (32/8 bytes) ===
+- lane 0: 0xffffffff  dec ...967295
+- P135:
+  - P135: band~2^134  ~2^102 keys per checksum bucket  (5.07e+30 int)
+  - === 8-bucket partition (top 3 bits of checksum) ===
+  - bucket 0: count= 8  chk range 0x00000000..0x1fffffff
+  - bucket 1: count= 7  chk range 0x20000000..0x3fffffff
+  - bucket 2: count=14  chk range 0x40000000..0x5fffffff
+  - bucket 3: count=14  chk range 0x60000000..0x7fffffff
+  - bucket 4: count= 8  chk range 0x80000000..0x9fffffff
+  - bucket 5: count=11  chk range 0xa0000000..0xbfffffff
+#### `ARCHIVE/address_checksum_bucket_search.txt`
+- VERDICT: P135 EC hits from checksum bucket = 0
+- lo*(1+frac): bits=135 ec=False tail...334784
+- lo*2^frac: bits=135 ec=False tail...142656
+- P135:
+  - VERDICT: P135 EC hits from checksum bucket = 0
+#### `ARCHIVE/log2_d_hash160_bucket_search.csv`
+#### `ARCHIVE/log2_d_hash160_bucket_search.txt`
+- No P135 EC hit from bucket invariants.
+- Best single-bucket invariant std: 0.001048 (n/256)
+- 2^(y_pred*log2N) inv n/256: d_bits=135 ec=False tail...561600
+- lo*(1+bucket) n/256: d_bits=135 ec=False tail...669824
+- 2^(y_pred*log2N) inv (n-1)/256: d_bits=135 ec=False tail...561600
+- lo*(1+bucket) (n-1)/256: d_bits=135 ec=False tail...616960
+- lo*(1+bucket) addr[0]/58: d_bits=135 ec=False tail...533184
+- lo*(1+bucket) payload/2^200: d_bits=135 ec=False tail...389504
+- lo*(1+bucket) log2(sha256)/log2(N): d_bits=135 ec=False tail...567168
+- lo*(1+bucket) log2(payload)/log2(N): d_bits=135 ec=False tail...839936
+- lo*(1+bucket) log2(h160)/log2(N): d_bits=135 ec=False tail...148288
+- lo*(1+bucket) sum(sha)/8160: d_bits=135 ec=False tail...732224
+- P135:
+  - No P135 EC hit from bucket invariants.
+  - Best single-bucket invariant std: 0.001048 (n/256)
+
+### k-bridge / proof check (`k_bridge_proof`) — CONFIRMED / HAS_REPORT
+#### `ARCHIVE/k1_gx_projection_verify.txt`
+- K=1 PROJECTION EC VERIFY — P135
+- Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+- === r=Gx (tool default) ===
+- r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+- d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+- (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+- (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+- Px match: False  Py match: False
+- Py proximity: dG.x/Py ratio ~ 0.999637  (screenshot ~0.9996 of Py when r=Gx)
+- in_band [2^134,2^135): False
+- === r=sig_r ===
+- r = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+- P135:
+  - K=1 PROJECTION EC VERIFY — P135
+  - Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+  - === r=Gx (tool default) ===
+  - r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+  - d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+  - (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+  - (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+  - Px match: False  Py match: False
+#### `ARCHIVE/packet_candidate_verify.txt`
+- P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+- P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+- P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+- P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+- P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+- P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+- TOTAL unique checked: 931
+- EXACT HITS: none
+- === CROSS-PUZZLE CHECK (any d -> any higher pubkey) ===
+- cross-puzzle hits: none
+- P135:
+  - P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+  - TOTAL unique checked: 931
+  - EXACT HITS: none
+#### `ARCHIVE/p135_k_bridge_proof_check.txt`
+- P135 k-BRIDGE PROOF CHECK
+- === 1. Geometric (199-bit pivot) ===
+- user_ry:
+- log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+- pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+- shift to 135: 143.12 - 8 = 135.12 bits
+- true_ry:
+- log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+- pivot 198.95 -> log2(sqrt(k))=71.5599  log2(k)=143.1198 bits
+- log2(sqrt(N*p/(p-N))) = 191.8271  (191.827 field ratio)
+- === 2. Signature linear (mod N) ===
+- k = k0 + d * delta_k  (mod N)
+- P135:
+  - P135 k-BRIDGE PROOF CHECK
+  - === 1. Geometric (199-bit pivot) ===
+  - user_ry:
+  - log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+  - pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+  - shift to 135: 143.12 - 8 = 135.12 bits
+  - true_ry:
+  - log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+#### `ARCHIVE/arrest_formula_verify.txt`
+- P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === email formulas at k=71 ===
+- v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+- v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+- v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+- v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+- geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+- === k sweep v1 (frac*sqrt(pN)*2^k) ===
+- k=69 bits=132 in_band=False EC=False tail...5736403522
+- k=70 bits=133 in_band=False EC=False tail...1472807044
+- k=71 bits=134 in_band=False EC=False tail...2945614089
+- k=72 bits=135 in_band=True EC=False tail...5891228179
+- P135:
+  - P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === email formulas at k=71 ===
+  - v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+  - v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+  - v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+  - v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+  - geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+  - === k sweep v1 (frac*sqrt(pN)*2^k) ===
+
+### Barcode / hash160 / RMD160 (`barcode_hash160`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/hash_pipeline_fraction_search.txt`
+- === P135 predictions ===
+- addr pipeline sha_vh head=7321f26c chk=7b8f3e17
+- lo*(1+sha_vh mod lo / lo): ec=False tail...631552
+- lo*(1+sha2d mod lo / lo): ec=False tail...372544
+- lo*(1+h160 mod lo / lo): ec=False tail...592640
+- lo*(1+sha_vh/2^256): ec=False tail...955520
+- lo*(1+chk/2^32): ec=False tail...160128
+- VERDICT: EC hits 0
+- P135:
+  - === P135 predictions ===
+  - addr pipeline sha_vh head=7321f26c chk=7b8f3e17
+  - lo*(1+sha_vh mod lo / lo): ec=False tail...631552
+  - lo*(1+sha2d mod lo / lo): ec=False tail...372544
+  - lo*(1+h160 mod lo / lo): ec=False tail...592640
+  - lo*(1+sha_vh/2^256): ec=False tail...955520
+  - lo*(1+chk/2^32): ec=False tail...160128
+  - VERDICT: EC hits 0
+#### `ARCHIVE/log2_d_hash160_bucket_search.csv`
+#### `ARCHIVE/log2_d_hash160_bucket_search.txt`
+- No P135 EC hit from bucket invariants.
+- Best single-bucket invariant std: 0.001048 (n/256)
+- 2^(y_pred*log2N) inv n/256: d_bits=135 ec=False tail...561600
+- lo*(1+bucket) n/256: d_bits=135 ec=False tail...669824
+- 2^(y_pred*log2N) inv (n-1)/256: d_bits=135 ec=False tail...561600
+- lo*(1+bucket) (n-1)/256: d_bits=135 ec=False tail...616960
+- lo*(1+bucket) addr[0]/58: d_bits=135 ec=False tail...533184
+- lo*(1+bucket) payload/2^200: d_bits=135 ec=False tail...389504
+- lo*(1+bucket) log2(sha256)/log2(N): d_bits=135 ec=False tail...567168
+- lo*(1+bucket) log2(payload)/log2(N): d_bits=135 ec=False tail...839936
+- lo*(1+bucket) log2(h160)/log2(N): d_bits=135 ec=False tail...148288
+- lo*(1+bucket) sum(sha)/8160: d_bits=135 ec=False tail...732224
+- P135:
+  - No P135 EC hit from bucket invariants.
+  - Best single-bucket invariant std: 0.001048 (n/256)
+#### `ARCHIVE/d_hash160_address_breakdown.txt`
+#### `ARCHIVE/cloud_pages/p71_hash160_hunt.log`
+
+### Boundary / offset / permutation (`boundary_offset`) — UNTESTED / HAS_REPORT
+#### `ARCHIVE/cloud_pages/p135_160_shelf2_offset_hunt.log`
+- === P135 px_slot=2 offset_law_row=2 shelf2_bits=135 gap_bits=133 ===
+- predicted offset_bits: [132, 133] (+ gap±1)
+- filtered candidates: 154  hits: 0
+- P135:
+  - === P135 px_slot=2 offset_law_row=2 shelf2_bits=135 gap_bits=133 ===
+  - predicted offset_bits: [132, 133] (+ gap±1)
+  - filtered candidates: 154  hits: 0
+#### `ARCHIVE/cloud_pages/poisson_offset_analysis.log`
+- P135 row=2 best point estimate: offset_bits ~ 132-133 (h-10+7..8 from solved row-2 cohort).
+- P135:
+  - P135 row=2 best point estimate: offset_bits ~ 132-133 (h-10+7..8 from solved row-2 cohort).
+#### `ARCHIVE/p135_160_shelf2_offset_hunt.csv`
+
+### Double-and-add / N+1 N-1 chains (`double_and_add`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/hinge_distance_da_chains.txt`
+- === P135 puzzle135da step detail (first/last/best) ===
+- first step=0: log2(sqrt x)=126.173970 log2(sqrt y)=127.339576 d_x=2.171732 d_y=1.006126 closer=y
+- last step=191: log2(sqrt x)=127.345022 log2(sqrt y)=126.993137 d_x=1.000680 d_y=1.352565 closer=x
+- best step=31: log2(sqrt x)=127.998417 log2(sqrt y)=126.395242 d_x=0.347285 d_y=1.950461 closer=x
+- === min_delta histogram (all DA points, round 0.1) ===
+- 0.3: 5
+- 0.4: 101
+- 0.5: 59
+- 0.6: 52
+- 0.7: 49
+- 0.8: 33
+- 0.9: 17
+- P135:
+  - === P135 puzzle135da step detail (first/last/best) ===
+  - first step=0: log2(sqrt x)=126.173970 log2(sqrt y)=127.339576 d_x=2.171732 d_y=1.006126 closer=y
+  - last step=191: log2(sqrt x)=127.345022 log2(sqrt y)=126.993137 d_x=1.000680 d_y=1.352565 closer=x
+  - best step=31: log2(sqrt x)=127.998417 log2(sqrt y)=126.395242 d_x=0.347285 d_y=1.950461 closer=x
+  - === min_delta histogram (all DA points, round 0.1) ===
+  - 0.3: 5
+  - 0.4: 101
+  - 0.5: 59
+#### `ARCHIVE/hinge_distance_da_chains.csv`
+- source,tag,step,x,y,log2_sqrt_x,log2_sqrt_y,delta_x,delta_y,min_delta,closer,ratio_pmn_over_sqrt,is_p135_pubkey,x_eq_p135_px
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,0,9210836494447108270027136741376870869791784014198948301625976867708124077590,46351506704828816385393879789131775975171267756561783641521771795450741674800,126.17396964955003,127.33957572369161,2.1717324970588106,1.0061264229172318,1.0061264229172318,y,2.0085110839674436,True,True
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,1,66135406164325385060095891495657536334323340092839134970858076987573600092245,18001255490755148211396931233614335948899118184970256999612730580150292902845,127.59597902465818,126.65731637086172,0.7497231219506685,1.6883857757471255,0.7497231219506685,x,1.6814700964405087,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,2,109344736698857279586843786573489968957095068866232663724221449050639885326640,43272174790145337221510354499587258840722161011222938094283259408724798151076,127.95867354218038,127.28998742078089,0.38702860442845927,1.0557147258279593,0.38702860442845927,x,1.3076972760968444,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,3,76013374959556607443280118069621118804492499987295356045898139430054251341848,34302155782116638100070009803644310475619337609611213271735877754284606803015,127.69639425111701,127.12241722975607,0.6493078954918243,1.2232849168527726,0.6493078954918243,x,1.5684155988184523,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,4,111043121248979144190160020761239752631708838789824310947668416982217859512591,72488977945331606341283165653837897517536072723202996665415078684024079650758,127.96979166591676,127.66214842968031,0.3759104806920774,0.6835537169285247,0.3759104806920774,x,1.2976582446743925,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,5,108157905404509980937989848246545179005908593359563938978457667802027059418314,13677841400423764954426702026134455208160628007114430330082579741529691614284,127.95080121198569,126.45918788871806,0.3949009346231563,1.886514257890775,0.3949009346231563,x,1.3148524702796036,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,6,5631667576938923167887408450643946108568855977627685869886110623829484584264,102215460133416002599182629641755809412680133972016161893628836170274010847245,125.81908464720476,127.91003836368361,2.526617499404076,0.4356637829252302,0.4356637829252302,y,1.3525329893220666,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,7,72178410331515031671751563611173755062046126723130742830207139572439931595110,48694176165383451977078061593142205311256967982238680064438662251979110187906,127.6590512904428,127.37514222370375,0.6866508561660334,0.9705599229050975,0.6866508561660334,x,1.6095427057903176,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,8,13665249516995724664087472840690804982708467684151628516017291047631860793442,36823903076218835482529572391854237716998980525161643919155448507775035754942,126.45852350702413,127.1735888809088,1.8871786395847152,1.1721132657000515,1.1721132657000515,y,2.253415365241047,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,9,31060495513663202101987712317142807491737035248353699795193273662130634011067,57578491264096255265216760230142712481433200196073000378687709096357165001247,127.05080802846071,127.4960325988651,1.2948941181481282,0.8496695477437437,0.8496695477437437,y,1.8020881059704443,False,False
+- 00_Projects\patent\puzzle135da.txt,puzzle135da,10,78316740638420343482681406271026547464743773384157120493621718457418590748840,51399646681401791594085846871253574801445131372593379760098195812970671744113,127.71792796800011,127.41414682693964,0.6277741786087355,0.9315553196691981,0.6277741786087355,x,1.545179217386718,False,False
+- P135:
+  - source,tag,step,x,y,log2_sqrt_x,log2_sqrt_y,delta_x,delta_y,min_delta,closer,ratio_pmn_over_sqrt,is_p135_pubkey,x_eq_p135_px
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,0,9210836494447108270027136741376870869791784014198948301625976867708124077590,46351506704828816385393879789131775975171267756561783641521771795450741674800,126.17396964955003,127.33957572369161,2.1717324970588106,1.0061264229172318,1.0061264229172318,y,2.0085110839674436,True,True
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,1,66135406164325385060095891495657536334323340092839134970858076987573600092245,18001255490755148211396931233614335948899118184970256999612730580150292902845,127.59597902465818,126.65731637086172,0.7497231219506685,1.6883857757471255,0.7497231219506685,x,1.6814700964405087,False,False
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,2,109344736698857279586843786573489968957095068866232663724221449050639885326640,43272174790145337221510354499587258840722161011222938094283259408724798151076,127.95867354218038,127.28998742078089,0.38702860442845927,1.0557147258279593,0.38702860442845927,x,1.3076972760968444,False,False
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,3,76013374959556607443280118069621118804492499987295356045898139430054251341848,34302155782116638100070009803644310475619337609611213271735877754284606803015,127.69639425111701,127.12241722975607,0.6493078954918243,1.2232849168527726,0.6493078954918243,x,1.5684155988184523,False,False
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,4,111043121248979144190160020761239752631708838789824310947668416982217859512591,72488977945331606341283165653837897517536072723202996665415078684024079650758,127.96979166591676,127.66214842968031,0.3759104806920774,0.6835537169285247,0.3759104806920774,x,1.2976582446743925,False,False
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,5,108157905404509980937989848246545179005908593359563938978457667802027059418314,13677841400423764954426702026134455208160628007114430330082579741529691614284,127.95080121198569,126.45918788871806,0.3949009346231563,1.886514257890775,0.3949009346231563,x,1.3148524702796036,False,False
+  - 00_Projects\patent\puzzle135da.txt,puzzle135da,6,5631667576938923167887408450643946108568855977627685869886110623829484584264,102215460133416002599182629641755809412680133972016161893628836170274010847245,125.81908464720476,127.91003836368361,2.526617499404076,0.4356637829252302,0.4356637829252302,y,1.3525329893220666,False,False
+#### `ARCHIVE/puzzle_da_power2_P1_P70.txt`
+#### `ARCHIVE/puzzle_da_layouts_P1_P70_corrected.txt`
+
+### P71 DA ladder / shift (`p71_da_ladder`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/p71_da_ladder_minus1.csv`
+#### `ARCHIVE/p71_da_ladder_flow.txt`
+#### `ARCHIVE/p71_da_shift_hypothesis.txt`
+
+### Solve k batch / all systems (`solve_k_batch`) — CONSTRAINS / HAS_REPORT
+#### `ARCHIVE/cloud_pages/solve_batch.log`
+- P135: 154 candidates, 0 EC hit(s)
+- P140: 197 candidates, 0 EC hit(s)
+- P145: 192 candidates, 0 EC hit(s)
+- P150: 178 candidates, 0 EC hit(s)
+- P155: 166 candidates, 0 EC hit(s)
+- P160: 177 candidates, 0 EC hit(s)
+- csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\solve_batch.csv
+- log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\solve_batch.log
+- filtered candidates: 154  hits: 0
+- filtered candidates: 197  hits: 0
+- filtered candidates: 192  hits: 0
+- filtered candidates: 178  hits: 0
+- P135:
+  - P135: 154 candidates, 0 EC hit(s)
+  - P140: 197 candidates, 0 EC hit(s)
+  - P145: 192 candidates, 0 EC hit(s)
+  - P150: 178 candidates, 0 EC hit(s)
+  - P155: 166 candidates, 0 EC hit(s)
+  - P160: 177 candidates, 0 EC hit(s)
+  - csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\solve_batch.csv
+  - log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\solve_batch.log
+#### `ARCHIVE/solve_batch.csv`
+#### `ARCHIVE/cloud_pages/solve_k_all.csv`
+#### `ARCHIVE/cloud_pages/solve_k_all.log`
+- P135: RSZ present, d unknown — k not solvable from ECDSA
+- P140: RSZ present, d unknown — k not solvable from ECDSA
+- P145: RSZ present, d unknown — k not solvable from ECDSA
+- P150: RSZ present, d unknown — k not solvable from ECDSA
+- P155: RSZ present, d unknown — k not solvable from ECDSA
+- P160: RSZ present, d unknown — k not solvable from ECDSA
+- Solved k: 14 puzzles
+- ECDSA verify: 14/14
+- Match hashkeys published k: 11/11
+- k*G == R (any y branch): 14/14
+- k*G == R (prefer_even_y only): 9/14
+- CSV C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\solve_k_all.csv
+- P135:
+  - P135: RSZ present, d unknown — k not solvable from ECDSA
+  - P140: RSZ present, d unknown — k not solvable from ECDSA
+  - P145: RSZ present, d unknown — k not solvable from ECDSA
+  - P150: RSZ present, d unknown — k not solvable from ECDSA
+  - P155: RSZ present, d unknown — k not solvable from ECDSA
+  - P160: RSZ present, d unknown — k not solvable from ECDSA
+  - Solved k: 14 puzzles
+  - ECDSA verify: 14/14
+
+### c^exp echo (y^2 mod p) (`echo_c_power`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/echo_curve_power_all_puzzles.json`
+#### `ARCHIVE/echo_curve_power_all_puzzles.txt`
+- === P135 DETAIL ===
+- c  = 80184233617433755134183875136831551618578922487806929476230322368028862899169
+- exp = 134.58496250072116
+- echo = 26928407542694034877965964705983120737661
+- x modinv echo = None
+- y modinv echo = 6079784343358203831111636674336389833098
+- c modinv echo = 18927930228987995306295121625965768362760
+- x mod echo    = 13749265000960366197682110259406047222230
+- y mod echo    = 9282115944101677020401070053065371601583
+- c mod echo    = 11011053916064345218752709182864308201512
+- Compare old ratio 135/256:
+- old echo (135/256)     = 35883159410670495955909009950774262134599
+- P135:
+  - === P135 DETAIL ===
+  - c  = 80184233617433755134183875136831551618578922487806929476230322368028862899169
+  - exp = 134.58496250072116
+  - echo = 26928407542694034877965964705983120737661
+  - x modinv echo = None
+  - y modinv echo = 6079784343358203831111636674336389833098
+  - c modinv echo = 18927930228987995306295121625965768362760
+  - x mod echo    = 13749265000960366197682110259406047222230
+#### `ARCHIVE/puzzle_echo_ratio_scan.txt`
+- === P135 echo estimate from P120 x/echo ratio ===
+- P120 x/echo = 1.01513244135306448690350020837974094917270434668317633468555957248919860798293500774902942236053155628031846483367634867
+- est echo135 = Px3 / (x/echo)_120 = 9073531806519782395916593944218062280036812720751500861275533660859909818506
+- est vs mystery diff = -71110701810913972738267281192613489338542109767055428614954788707168953080663
+- === PAGE vs priv (ratio page/priv) ===
+- P120 page/priv = 0.0166666666666666666666666666666666669748576019092074773852928606517960701417911509732875636819928923425605475614363574447
+- P125 page/priv = 0.0166666666666666666666666666666666666932267038373525798772271268868023974931683771003343241661070623945452799015738933298
+- P130 page/priv = 0.0166666666666666666666666666666666666667119616918973825456128425714752170853096528033843971964280077374299461496316707728
+- P135:
+  - === P135 echo estimate from P120 x/echo ratio ===
+  - P120 x/echo = 1.01513244135306448690350020837974094917270434668317633468555957248919860798293500774902942236053155628031846483367634867
+  - est echo135 = Px3 / (x/echo)_120 = 9073531806519782395916593944218062280036812720751500861275533660859909818506
+  - est vs mystery diff = -71110701810913972738267281192613489338542109767055428614954788707168953080663
+  - === PAGE vs priv (ratio page/priv) ===
+  - P120 page/priv = 0.0166666666666666666666666666666666669748576019092074773852928606517960701417911509732875636819928923425605475614363574447
+  - P125 page/priv = 0.0166666666666666666666666666666666666932267038373525798772271268868023974931683771003343241661070623945452799015738933298
+  - P130 page/priv = 0.0166666666666666666666666666666666666667119616918973825456128425714752170853096528033843971964280077374299461496316707728
+
+### Cube-root rx / cubic orbit (`cbrt_rx`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p135_cbrt_rx_flip_exhaustive.txt`
+- P135 cbrt(rx) flip exhaustive
+- rx tail ...628368
+- cbrt(rx) dec ~ 4.49222121914583157683347142071669243628790707445889164843386 * 10^25
+- U = int(cbrt) = 44922212191458315768334714
+- U digits = 86 bits
+- m_start = 484795169706292
+- m_end   = 969590339412582
+- row_count = 484795169706291 (~2^49)
+- first d = 21778071482940093642494669282845327820488
+- last  d = 43556142965880097440564955649059118971548
+- upper_half_only = False
+- mod-N cube roots of rx (scalar court, not real cbrt):
+- P135:
+  - P135 cbrt(rx) flip exhaustive
+  - rx tail ...628368
+  - cbrt(rx) dec ~ 4.49222121914583157683347142071669243628790707445889164843386 * 10^25
+  - U = int(cbrt) = 44922212191458315768334714
+  - U digits = 86 bits
+  - m_start = 484795169706292
+  - m_end   = 969590339412582
+  - row_count = 484795169706291 (~2^49)
+#### `ARCHIVE/p135_wolfram_cbrt_r_screenshot_report.txt`
+- Arrest formula with lambda_i = Px/u_i still does not recover P135.
+- P135:
+  - Arrest formula with lambda_i = Px/u_i still does not recover P135.
+#### `ARCHIVE/all_puzzles_cubic_arrest_warrant.csv`
+#### `ARCHIVE/all_puzzles_cubic_arrest_warrant_report.txt`
+- SUMMARY
+- total candidate hits (ec|d|band): 0
+- EC hits: 0
+- d_match hits: 0
+- in_band hits: 0
+- P135  Px...590  r...368  band_bits=135
+- branches=6
+- no hits
+- P140  Px...424  r...000  band_bits=140
+- branches=3
+- P145  Px...165  r...203  band_bits=145
+- P150  Px...553  r...479  band_bits=150
+- P135:
+  - P135  Px...590  r...368  band_bits=135
+  - branches=6
+  - no hits
+  - P140  Px...424  r...000  band_bits=140
+  - branches=3
+  - no hits
+  - P145  Px...165  r...203  band_bits=145
+  - branches=3
+#### `ARCHIVE/p135_cubic_arrest_warrant_report.txt`
+- P135 CUBIC ARREST WARRANT
+- Px tail ...590
+- RSZ r tail ...368  r_true tail ...368  match=True
+- N mod 9 = 7  (use (N+2)/9 root when N≡7 mod 9)
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- u branches (6):
+- cbrt_r_j0      u...354  u^3==r True  u^3==r^3 False
+- cbrt_r_j1      u...115  u^3==r True  u^3==r^3 False
+- cbrt_r_j2      u...205  u^3==r True  u^3==r^3 False
+- wolfram_r3_j0  u...576  u^3==r False  u^3==r^3 True
+- wolfram_r3_j1  u...393  u^3==r False  u^3==r^3 True
+- wolfram_r3_j2  u...368  u^3==r False  u^3==r^3 True
+- P135:
+  - P135 CUBIC ARREST WARRANT
+  - Px tail ...590
+  - RSZ r tail ...368  r_true tail ...368  match=True
+  - N mod 9 = 7  (use (N+2)/9 root when N≡7 mod 9)
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - u branches (6):
+  - cbrt_r_j0      u...354  u^3==r True  u^3==r^3 False
+  - cbrt_r_j1      u...115  u^3==r True  u^3==r^3 False
+#### `ARCHIVE/p135_r_cubic_calibrate_check.txt`
+- === P135 use_true_r=True row=2 ===
+- shelf2 bits=135  offset_bits law [132, 133, 134]
+- bridge lambda_ns[0] tail ...578  (from rx[0] tail ...219)
+- bridge lambda_ns[1] tail ...147  (from rx[1] tail ...368)
+- bridge lambda_ns[2] tail ...025  (from rx[2] tail ...739)
+- wrong r=rx[2] ...739 gap h2=52
+- true r_sig       ...368 gap h2=14
+- --- nine N lambdas lambda[k,j] = Px[k] / (w^j * r_true) ---
+- j=0 k=0 r...368 lam...088 match_lns[0]=False gap_row2=True off_bits=134 off_ok=True ec=False
+- j=0 k=1 r...368 lam...147 match_lns[1]=True gap_row2=True off_bits=130 off_ok=False ec=False
+- j=0 k=2 r...368 lam...194 match_lns[2]=False gap_row2=True off_bits=130 off_ok=False ec=False
+- j=1 k=0 r...393 lam...381 match_lns[0]=False gap_row2=True off_bits=134 off_ok=True ec=False
+- P135:
+  - === P135 use_true_r=True row=2 ===
+  - shelf2 bits=135  offset_bits law [132, 133, 134]
+  - bridge lambda_ns[0] tail ...578  (from rx[0] tail ...219)
+  - bridge lambda_ns[1] tail ...147  (from rx[1] tail ...368)
+  - bridge lambda_ns[2] tail ...025  (from rx[2] tail ...739)
+  - wrong r=rx[2] ...739 gap h2=52
+  - true r_sig       ...368 gap h2=14
+  - --- nine N lambdas lambda[k,j] = Px[k] / (w^j * r_true) ---
+
+### P160 complement / fuzz / inverted (`p160_focus`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/packet_candidate_verify.txt`
+- P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+- P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+- P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+- P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+- P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+- P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+- TOTAL unique checked: 931
+- EXACT HITS: none
+- === CROSS-PUZZLE CHECK (any d -> any higher pubkey) ===
+- cross-puzzle hits: none
+- P135:
+  - P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+  - P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+  - TOTAL unique checked: 931
+  - EXACT HITS: none
+#### `ARCHIVE/p160_billion_even_scroll_live.log`
+#### `ARCHIVE/p160_billion_even_scroll.txt`
+#### `ARCHIVE/p160_dual_gate_complement_rsz.txt`
+#### `ARCHIVE/p160_inverted_ksz_scan.txt`
+- full hits: 0
+#### `ARCHIVE/p160_complement_two32m1_sweep.txt`
+- hits: 0
+
+### Puzzle ratios / stack align (`puzzle_ratios_stack`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/solved_puzzle_2n_stack.txt`
+#### `ARCHIVE/solved_puzzle_2n_decomposition.txt`
+#### `ARCHIVE/puzzle_stack_left_align.txt`
+- P135 band preview (not solved):
+- 64-hex: 30 zeros + nibble 4|5|6|7 + ...
+- prophecy lane 6B (B~8): prefix 68...
+- leftmost-1 in 135-bit frame: col 0
+- P135:
+  - P135 band preview (not solved):
+  - 64-hex: 30 zeros + nibble 4|5|6|7 + ...
+  - prophecy lane 6B (B~8): prefix 68...
+  - leftmost-1 in 135-bit frame: col 0
+#### `ARCHIVE/puzzle_ratios_P1_P130.csv`
+#### `ARCHIVE/puzzle_ratios_P1_P130.txt`
+
+### Sqrt-Px / multiples / neighbors (`sqrt_px`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p135_sqrtpx_neighbor_scan.txt`
+- P135 sqrt(Px) neighbor scan
+- candidates: 227  radius=+/-1,048,576  (~2,097,153/each)
+- est keys: 476,053,731 (~2^29)
+- upper_only: False
+- elapsed: 15761.6s  rate: 30,203 keys/s
+- hits: 0
+- no hit in scanned windows
+- P135:
+  - P135 sqrt(Px) neighbor scan
+  - candidates: 227  radius=+/-1,048,576  (~2,097,153/each)
+  - est keys: 476,053,731 (~2^29)
+  - upper_only: False
+  - elapsed: 15761.6s  rate: 30,203 keys/s
+  - hits: 0
+  - no hit in scanned windows
+#### `ARCHIVE/p135_sqrtpx_multiples_test.txt`
+- P135 sqrt(Px) multiples m=227..453 EC test
+- candidates: 227
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- mid (halfway): 32667107224410092492483962313449748299776
+- upper half: d >= 32667107224410092492483962313449748299776
+- m=227 d_tail...87480429 band=True upper_half=False frac=0.000359
+- m=228 d_tail...01522193 band=True upper_half=False frac=0.004766
+- m=229 d_tail...15563957 band=True upper_half=False frac=0.009173
+- m=230 d_tail...29605721 band=True upper_half=False frac=0.013580
+- m=231 d_tail...43647485 band=True upper_half=False frac=0.017987
+- m=232 d_tail...57689249 band=True upper_half=False frac=0.022394
+- m=233 d_tail...71731013 band=True upper_half=False frac=0.026800
+- P135:
+  - P135 sqrt(Px) multiples m=227..453 EC test
+  - candidates: 227
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - mid (halfway): 32667107224410092492483962313449748299776
+  - upper half: d >= 32667107224410092492483962313449748299776
+  - m=227 d_tail...87480429 band=True upper_half=False frac=0.000359
+  - m=228 d_tail...01522193 band=True upper_half=False frac=0.004766
+  - m=229 d_tail...15563957 band=True upper_half=False frac=0.009173
+
+### k-x-y distance tables (`k_xy_distance`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/k_xy_distance_percentiles.txt`
+#### `ARCHIVE/k_xy_distance_pattern_analysis.txt`
+- No exact hits — win condition is this gap law, not dist=0. For P135 expect best_dist_bits ≈ 135 - gap (gap typically 0–6).
+- CSV: C:\Users\mitch\Desktop\secp256k1\ARCHIVE\k_xy_distance_table_5_135.csv
+- P135:
+  - No exact hits — win condition is this gap law, not dist=0. For P135 expect best_dist_bits ≈ 135 - gap (gap typically 0–6).
+  - CSV: C:\Users\mitch\Desktop\secp256k1\ARCHIVE\k_xy_distance_table_5_135.csv
+#### `ARCHIVE/k_xy_distance_table_5_135.csv`
+#### `ARCHIVE/k_xy_mod134_distance.csv`
+
+### log(Px) / r combo probes (`log_px_r_combo`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/p135_log2_sqrt_y_pminusN.txt`
+- P135 log2(sqrt(y)) vs log2(p-N)
+- Py tail ...674800
+- sqrt(Py) = 215294000624329558639828518207030153255
+- p - N = 432420386565659656852420866390673177326  (129 bits)
+- log2 values (user vs computed):
+- log2(sqrt(y))  user 127.33957572369160989277861220187748116567052430661080322039981
+- log2(sqrt(y))  calc 127.33957572369160989277861220187748116567052430661080322039981902750117569928665
+- log2(p-N)      user 128.34570214660884155727994158781146915925012929756885086000832493
+- log2(p-N)      calc 128.34570214660884155727994158781146915925012929756885086000832493236248154049419
+- log2(p) - log2(N) = 5.3876802067106842912812129113957071241811824230391697800682433257504499319952823E-39  (ratio gap, ~0 at float64)
+- delta = log2(p-N) - log2(sqrt(y)) = 1.00612642291723166450132938593398799357960499095804763960851493
+- delta - 1 = 0.00612642291723166450132938593398799357960499095804763960851493  (offset past one bit in log2 space)
+- P135:
+  - P135 log2(sqrt(y)) vs log2(p-N)
+  - Py tail ...674800
+  - sqrt(Py) = 215294000624329558639828518207030153255
+  - p - N = 432420386565659656852420866390673177326  (129 bits)
+  - log2 values (user vs computed):
+  - log2(sqrt(y))  user 127.33957572369160989277861220187748116567052430661080322039981
+  - log2(sqrt(y))  calc 127.33957572369160989277861220187748116567052430661080322039981902750117569928665
+  - log2(p-N)      user 128.34570214660884155727994158781146915925012929756885086000832493
+#### `ARCHIVE/p135_log_px_r_combo_probe.txt`
+- P135 LOG Px <-> r COMBINATION PROBE
+- Px tail ...590  r tail ...368
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- === cores ===
+- core(Px) mod log2(N) = 247.8511728194  frac=0.9681686438
+- core(r) mod log2(N) = 1.7480370459  frac=0.0068282697
+- === A. difference (Px - r) in log space ===
+- vPx - vr = 246.1031357734  mod log2(N) = 246.1031357734  frac=0.9613403741
+- delta frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...090176
+- delta frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...090176
+- delta frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...481472
+- delta frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...959872
+- P135:
+  - P135 LOG Px <-> r COMBINATION PROBE
+  - Px tail ...590  r tail ...368
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - === cores ===
+  - core(Px) mod log2(N) = 247.8511728194  frac=0.9681686438
+  - core(r) mod log2(N) = 1.7480370459  frac=0.0068282697
+  - === A. difference (Px - r) in log space ===
+  - vPx - vr = 246.1031357734  mod log2(N) = 246.1031357734  frac=0.9613403741
+#### `ARCHIVE/p135_log_bridge_probe.txt`
+- P135 LOG BRIDGE PROBE (high precision)
+- log2(N) = 255.9999999999999999999999999999999999999946123197932893157087187870885507803304503357727380064452626
+- log2(p) = 255.9999999999999999999999999999999999999999999999999999999999999999999464874546348918372395014421393
+- log2(p) - log2(N) = 5.3876802067106842912812129113957071241845560645014949968767E-39
+- log2(7) = 2.807354922057604107441969317231830808641026625966140783677291724070320848862192986497860999170210785
+- === per witness x ===
+- label              tail              vN              vP         dN-dP       fracN
+- Px[0]             ...  059    255.33133798    255.33133798  -1.077536e-38  0.99738804
+- -> d via N/lo*(1+frac1): bits=135 ec=False
+- -> d via N/lo*2^frac1: bits=135 ec=False
+- -> d via P/lo*(1+frac1): bits=135 ec=False
+- -> d via P/lo*2^frac1: bits=135 ec=False
+- P135:
+  - P135 LOG BRIDGE PROBE (high precision)
+  - log2(N) = 255.9999999999999999999999999999999999999946123197932893157087187870885507803304503357727380064452626
+  - log2(p) = 255.9999999999999999999999999999999999999999999999999999999999999999999464874546348918372395014421393
+  - log2(p) - log2(N) = 5.3876802067106842912812129113957071241845560645014949968767E-39
+  - log2(7) = 2.807354922057604107441969317231830808641026625966140783677291724070320848862192986497860999170210785
+  - === per witness x ===
+  - label              tail              vN              vP         dN-dP       fracN
+  - Px[0]             ...  059    255.33133798    255.33133798  -1.077536e-38  0.99738804
+#### `ARCHIVE/log_space_normalization_test.txt`
+
+### u-flip / rx flip exhaustive (`u_flip`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/p115_flip_surround.txt`
+- === P135 (unsolved) flip estimates ===
+- same_frac              in_band=True ec=False d...148690751488
+- complement_frac        in_band=True ec=False d...750805848064
+- mirror_msb             in_band=True ec=False d...121631141888
+- flip_decimal           in_band=True ec=False d...136397679597
+- hinge+same_frac        in_band=True ec=False d...148700137258
+- hinge-same_frac        in_band=True ec=False d...148681365718
+- BEST mirror_msb: delta=7.305e+28 band_err=11.5246% in_band=True ec=False
+- mirror_msb             delta_bits= 96 band_err= 11.5246% ec=False
+- complement_frac        delta_bits= 96 band_err= 11.5246% ec=False
+- hinge-same_frac        delta_bits= 97 band_err= 14.5131% ec=False
+- BEST mirror_msb: delta=1.037e+30 band_err=5.1144% in_band=True ec=False
+- P135:
+  - === P135 (unsolved) flip estimates ===
+  - same_frac              in_band=True ec=False d...148690751488
+  - complement_frac        in_band=True ec=False d...750805848064
+  - mirror_msb             in_band=True ec=False d...121631141888
+  - flip_decimal           in_band=True ec=False d...136397679597
+  - hinge+same_frac        in_band=True ec=False d...148700137258
+  - hinge-same_frac        in_band=True ec=False d...148681365718
+#### `ARCHIVE/p135_hinge_delta_flip_from_px.txt`
+- P135 hinge-delta flip from Px
+- H = log2(p-N) = 128.34570214660883
+- Delta_x = 2.171732  Delta_y = 1.006126
+- sqrt(Px) bits=127 sqrt(Py) bits=128
+- 2^Delta_x = 4.505641  2^Delta_y = 2.008511
+- 2^(Delta_x-1) = 2.252821  2^(Delta_y-1) = 1.004256
+- Interpretation: sqrt(p-N)/sqrt(coord) = 2^Delta
+- check y: ratio=0.000000 2^Dy=2.008511
+- check x: ratio=0.000000 2^Dx=4.505641
+- === flip corridors d = m*U (and mirror N-d) ===
+- x_flip_div_d2.1717: U=21300652745817096043091837114269040640 (125b) count=1022 hits=0
+- x_flip_div_d1.1717: U=42601305491634192086183674228538081280 (126b) count=511 hits=0
+- P135:
+  - P135 hinge-delta flip from Px
+  - H = log2(p-N) = 128.34570214660883
+  - Delta_x = 2.171732  Delta_y = 1.006126
+  - sqrt(Px) bits=127 sqrt(Py) bits=128
+  - 2^Delta_x = 4.505641  2^Delta_y = 2.008511
+  - 2^(Delta_x-1) = 2.252821  2^(Delta_y-1) = 1.004256
+  - Interpretation: sqrt(p-N)/sqrt(coord) = 2^Delta
+  - check y: ratio=0.000000 2^Dy=2.008511
+#### `ARCHIVE/p135_cbrt_rx_flip_exhaustive.txt`
+- P135 cbrt(rx) flip exhaustive
+- rx tail ...628368
+- cbrt(rx) dec ~ 4.49222121914583157683347142071669243628790707445889164843386 * 10^25
+- U = int(cbrt) = 44922212191458315768334714
+- U digits = 86 bits
+- m_start = 484795169706292
+- m_end   = 969590339412582
+- row_count = 484795169706291 (~2^49)
+- first d = 21778071482940093642494669282845327820488
+- last  d = 43556142965880097440564955649059118971548
+- upper_half_only = False
+- mod-N cube roots of rx (scalar court, not real cbrt):
+- P135:
+  - P135 cbrt(rx) flip exhaustive
+  - rx tail ...628368
+  - cbrt(rx) dec ~ 4.49222121914583157683347142071669243628790707445889164843386 * 10^25
+  - U = int(cbrt) = 44922212191458315768334714
+  - U digits = 86 bits
+  - m_start = 484795169706292
+  - m_end   = 969590339412582
+  - row_count = 484795169706291 (~2^49)
+#### `ARCHIVE/p135_u_flip_exhaustive.txt`
+- P135 u-flip exhaustive corridor
+- U=20962014851359949581252061
+- m=[1038930257294765, 2077860514589528]
+- mode=bsgs upper_half=True
+- no hit (entire requested corridor covered)
+- P135:
+  - P135 u-flip exhaustive corridor
+  - U=20962014851359949581252061
+  - m=[1038930257294765, 2077860514589528]
+  - mode=bsgs upper_half=True
+  - no hit (entire requested corridor covered)
+
+### ARCHIVE snapshots / reports (`snapshot_archive`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/two_field_bridge_arrest_report.txt`
+- P135 hits: 0
+- ALL RSZ PUZZLES — field bridge Px_pub/r_sig
+- Total hits: 0
+- Px[0]/rx[0] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- Px[0]/rx[1] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[0]/rx[2] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[1]/rx[0] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[1]/rx[1] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- Px[1]/rx[2] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[2]/rx[0] field: lam_tail ...39180 x_bits=255 ec=False band=False
+- Px[2]/rx[1] field: lam_tail ...14645 x_bits=256 ec=False band=False
+- Px[2]/rx[2] field: lam_tail ...89501 x_bits=255 ec=False band=False
+- P135:
+  - P135 hits: 0
+  - ALL RSZ PUZZLES — field bridge Px_pub/r_sig
+  - Total hits: 0
+#### `ARCHIVE/p135_wolfram_cbrt_r_screenshot_report.txt`
+- Arrest formula with lambda_i = Px/u_i still does not recover P135.
+- P135:
+  - Arrest formula with lambda_i = Px/u_i still does not recover P135.
+#### `ARCHIVE/all_puzzles_cubic_arrest_warrant_report.txt`
+- SUMMARY
+- total candidate hits (ec|d|band): 0
+- EC hits: 0
+- d_match hits: 0
+- in_band hits: 0
+- P135  Px...590  r...368  band_bits=135
+- branches=6
+- no hits
+- P140  Px...424  r...000  band_bits=140
+- branches=3
+- P145  Px...165  r...203  band_bits=145
+- P150  Px...553  r...479  band_bits=150
+- P135:
+  - P135  Px...590  r...368  band_bits=135
+  - branches=6
+  - no hits
+  - P140  Px...424  r...000  band_bits=140
+  - branches=3
+  - no hits
+  - P145  Px...165  r...203  band_bits=145
+  - branches=3
+#### `ARCHIVE/p135_cubic_arrest_warrant_report.txt`
+- P135 CUBIC ARREST WARRANT
+- Px tail ...590
+- RSZ r tail ...368  r_true tail ...368  match=True
+- N mod 9 = 7  (use (N+2)/9 root when N≡7 mod 9)
+- band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+- u branches (6):
+- cbrt_r_j0      u...354  u^3==r True  u^3==r^3 False
+- cbrt_r_j1      u...115  u^3==r True  u^3==r^3 False
+- cbrt_r_j2      u...205  u^3==r True  u^3==r^3 False
+- wolfram_r3_j0  u...576  u^3==r False  u^3==r^3 True
+- wolfram_r3_j1  u...393  u^3==r False  u^3==r^3 True
+- wolfram_r3_j2  u...368  u^3==r False  u^3==r^3 True
+- P135:
+  - P135 CUBIC ARREST WARRANT
+  - Px tail ...590
+  - RSZ r tail ...368  r_true tail ...368  match=True
+  - N mod 9 = 7  (use (N+2)/9 root when N≡7 mod 9)
+  - band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+  - u branches (6):
+  - cbrt_r_j0      u...354  u^3==r True  u^3==r^3 False
+  - cbrt_r_j1      u...115  u^3==r True  u^3==r^3 False
+#### `ARCHIVE/p135_r_cubic_orbit_report.txt`
+- r_sig = P135_R_TRUE_X  (r < N: True, r < p: True)
+- r tail ...368
+- Row-2 tower target: gap_h2=14 gap_h3=148 lhs...768
+- Row-3 (wrong bridge slot rx[2]): gap_h2=52 gap_h3=529 lhs...255
+- === baseline ===
+- true r_sig     rx...368  {'gap': 14891216110272241377756063318957640422262002593900921218990858127611733871194, 'h2': '14', 'h3': '148', 'lhs_tail': '768', 'row2': True, 'row3': False}
+- wrong rx[2]    rx...739  {'gap': 5293597410154139910193700026630175873435457359764659897865122845449990427707, 'h2': '52', 'h3': '529', 'lhs_tail': '255', 'row2': False, 'row3': True}
+- DEFAULT_RX[1]  rx...368  (same as r_sig: True)
+- === cube preimages u: u^3 = r (mod N) ===
+- r is cubic residue mod N: True
+- no cube root found via standard formula (investigate separately)
+- === field orbit R_eff = beta^i * Rx_j (mod p) ===
+- P135:
+  - r_sig = P135_R_TRUE_X  (r < N: True, r < p: True)
+  - r tail ...368
+  - Row-2 tower target: gap_h2=14 gap_h3=148 lhs...768
+  - Row-3 (wrong bridge slot rx[2]): gap_h2=52 gap_h3=529 lhs...255
+  - === baseline ===
+  - true r_sig     rx...368  {'gap': 14891216110272241377756063318957640422262002593900921218990858127611733871194, 'h2': '14', 'h3': '148', 'lhs_tail': '768', 'row2': True, 'row3': False}
+  - wrong rx[2]    rx...739  {'gap': 5293597410154139910193700026630175873435457359764659897865122845449990427707, 'h2': '52', 'h3': '529', 'lhs_tail': '255', 'row2': False, 'row3': True}
+  - DEFAULT_RX[1]  rx...368  (same as r_sig: True)
+#### `ARCHIVE/all_full_transport_hunt_report.txt`
+- P135
+- anchor gap head2=14 head3=148
+- lhs ...768  rhs ...962
+- candidates=446 ec_hits=0
+- P136
+- anchor gap head2=52 head3=529
+- lhs ...255  rhs ...962
+- candidates=762 ec_hits=0
+- P137
+- candidates=875 ec_hits=0
+- P138
+- candidates=256 ec_hits=0
+- P135:
+  - P135
+  - anchor gap head2=14 head3=148
+  - lhs ...768  rhs ...962
+  - candidates=446 ec_hits=0
+  - P136
+  - anchor gap head2=52 head3=529
+  - lhs ...255  rhs ...962
+  - candidates=762 ec_hits=0
+
+### Gap tier convention (`gap_tier`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/p135_gap_tier_sweep.csv`
+#### `ARCHIVE/p135_gap_tier_sweep_report.txt`
+- P135 GAP-TIER INTERVAL SWEEP
+- H=135  band d in [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  shelf2 bits=135
+- ecdsa: True
+- Convention: gap = H - offset_bits; offset = (d-shelf2) mod LO
+- gap=1 -> offset_bits=134 -> o in [2^133, 2^134)
+- gap=2 -> offset_bits=133 -> o in [2^132, 2^133)
+- NOT testing o=2^132 or 2^133 alone — sampling full bit-length intervals.
+- ========================================================================
+- GAP=1  offset_bits=134  interval [10889035741470030830827987437816582766592, 21778071482940061661655974875633165533184)  width=2^133 (~1.089e+40)
+- bridge terms in interval: 11
+- sampled offset probes: 258
+- unique d candidates from tier: 535  observed gap matches target: 268
+- P135:
+  - P135 GAP-TIER INTERVAL SWEEP
+  - H=135  band d in [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  shelf2 bits=135
+  - ecdsa: True
+  - Convention: gap = H - offset_bits; offset = (d-shelf2) mod LO
+  - gap=1 -> offset_bits=134 -> o in [2^133, 2^134)
+  - gap=2 -> offset_bits=133 -> o in [2^132, 2^133)
+  - NOT testing o=2^132 or 2^133 alone — sampling full bit-length intervals.
+  - ========================================================================
+#### `ARCHIVE/gap_tier_convention_report.txt`
+- P135 (H=135) priority tiers:
+- gap=1: offset_bits=134, offset in [2^133, 2^134) = [10889035741470030830827987437816582766592, 21778071482940061661655974875633165533184)
+- gap=2: offset_bits=133, offset in [2^132, 2^133) = [5444517870735015415413993718908291383296, 10889035741470030830827987437816582766592)
+- NOTE: offset_bits=132 means o in [2^131,2^132), NOT o=2^132.
+- For H=135: gap=1 uses offset_bits=134, not 132.
+- SOLVED-PUZZLE CHECK (26 keys):
+- H row offset_bits  gap  gap=H-ob in interval
+- ----------------------------------------------------
+- 5   0           4    1         Y           Y
+- 10   1           8    2         Y           Y
+- 15   2          14    1         Y           Y
+- 20   1          19    1         Y           Y
+- P135:
+  - P135 (H=135) priority tiers:
+  - gap=1: offset_bits=134, offset in [2^133, 2^134) = [10889035741470030830827987437816582766592, 21778071482940061661655974875633165533184)
+  - gap=2: offset_bits=133, offset in [2^132, 2^133) = [5444517870735015415413993718908291383296, 10889035741470030830827987437816582766592)
+  - NOTE: offset_bits=132 means o in [2^131,2^132), NOT o=2^132.
+  - For H=135: gap=1 uses offset_bits=134, not 132.
+  - SOLVED-PUZZLE CHECK (26 keys):
+  - H row offset_bits  gap  gap=H-ob in interval
+  - ----------------------------------------------------
+
+### Graphify / manifest / build tools (`graphify_meta`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/cloud_pages/manifest_mega.json`
+
+### Offset congruence / by row (`offset_congruence`) — UNTESTED / HAS_REPORT
+#### `ARCHIVE/offset_congruence_report.txt`
+- row-2 gap=2 shared mod 2^0: residue=0  P135 tier-2 survivors=5.445e+39  ~2^132.0  (removed 0 bits)
+- VERDICT:
+- - Bit-length tier (gap 1/2): useful PRIOR, not falsified by 189-point miss
+- - Exact named bridge term: falsified for row-2 (term_exact=0/8)
+- - Low-bit congruence from row-2 cohort: see t_max above
+- - k_lane numeric proximity without s^-1 r Jacobian: misleading for ranking
+- - Next: combine carry residues with gap-tier CRT if law links layers
+- K-LANE NOTE (do not rank by raw |k_transform - d|):
+- Δk ≡ s^-1 * r * Δd (mod N)  — modular circular distance required.
+- close row1 via d ≡ rem*qx^-1: d_mod bits=256 in_band=False  implied o bits=134
+- close row2 via d ≡ rem*qx^-1: d_mod bits=256 in_band=False  implied o bits=134
+- P135:
+  - row-2 gap=2 shared mod 2^0: residue=0  P135 tier-2 survivors=5.445e+39  ~2^132.0  (removed 0 bits)
+  - VERDICT:
+  - - Bit-length tier (gap 1/2): useful PRIOR, not falsified by 189-point miss
+  - - Exact named bridge term: falsified for row-2 (term_exact=0/8)
+  - - Low-bit congruence from row-2 cohort: see t_max above
+  - - k_lane numeric proximity without s^-1 r Jacobian: misleading for ranking
+  - - Next: combine carry residues with gap-tier CRT if law links layers
+  - K-LANE NOTE (do not rank by raw |k_transform - d|):
+#### `ARCHIVE/offset_by_row_report.txt`
+#### `ARCHIVE/offset_by_row.csv`
+
+### Puzzle d ingredients / raw chain (`puzzle_d_chain`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/puzzle_d_ingredients_P1_P70.txt`
+
+### Shift basis / diagnostic (`shift_basis`) — UNTESTED / HAS_REPORT
+#### `ARCHIVE/shift_basis_identity_report.txt`
+- P135 Λ_ε = row 2
+- D_12 = Λ_1-Λ_2 bits=256
+- D_13 = Λ_1-Λ_3 bits=256
+- D_21 = Λ_2-Λ_1 bits=248
+- D_23 = Λ_2-Λ_3 bits=256
+- D_31 = Λ_3-Λ_1 bits=254
+- D_32 = Λ_3-Λ_2 bits=254
+- D_12+D_23+D_31 mod N == 0: True
+- unified s_i (Λ_i-Λ_ε) bits: 254, 254, 0
+- === PART 3: Integer quotient tuple (c_1,c_2,c_3) vs d ===
+- c_i = (Λ_i·qx_i - Qx_i) / N  (per-row Λ, exact integer)
+- P15: c_bits=(255,255,254)  sum_bits=256  gap=1  C_floor_bits=15
+- P135:
+  - P135 Λ_ε = row 2
+  - D_12 = Λ_1-Λ_2 bits=256
+  - D_13 = Λ_1-Λ_3 bits=256
+  - D_21 = Λ_2-Λ_1 bits=248
+  - D_23 = Λ_2-Λ_3 bits=256
+  - D_31 = Λ_3-Λ_1 bits=254
+  - D_32 = Λ_3-Λ_2 bits=254
+  - D_12+D_23+D_31 mod N == 0: True
+#### `ARCHIVE/shift_diagnostic_report.txt`
+- P135 (unsolved) — exact shift structure only
+- row1: 7 exact shift classes (sampled)
+- s_bits=254 c_bits=255 band_o_gap=1
+- s_bits=256 c_bits=256 band_o_gap=1
+- s_bits=257 c_bits=254 band_o_gap=1
+- row2: 7 exact shift classes (sampled)
+- s_bits=254 c_bits=254 band_o_gap=1
+- s_bits=256 c_bits=255 band_o_gap=1
+- s_bits=257 c_bits=253 band_o_gap=1
+- row3: 7 exact shift classes (sampled)
+- s_bits=0 c_bits=255 band_o_gap=?
+- s_bits=256 c_bits=252 band_o_gap=2
+- P135:
+  - P135 (unsolved) — exact shift structure only
+  - row1: 7 exact shift classes (sampled)
+  - s_bits=254 c_bits=255 band_o_gap=1
+  - s_bits=256 c_bits=256 band_o_gap=1
+  - s_bits=257 c_bits=254 band_o_gap=1
+  - row2: 7 exact shift classes (sampled)
+  - s_bits=254 c_bits=254 band_o_gap=1
+  - s_bits=256 c_bits=255 band_o_gap=1
+
+### Arrest delta-y (`arrest_delta_y`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/arrest_delta_y.txt`
+- P135 in-band: k=78  d...051191167665  pos=76.80%
+- EC scan +/-100k: none
+- === solved calibration (best k, {{Delta_y}}) ===
+- P64 best_k=7 rel_err=0.0839 bits=64
+- P70 best_k=13 rel_err=0.0754 bits=70
+- P100 best_k=43 rel_err=0.2907 bits=100
+- P115 best_k=58 rel_err=0.1670 bits=115
+- P130 best_k=73 rel_err=0.0900 bits=130
+- k=78 pos=76.80% bits=135 EC=False ...051191167665
+- k=70 pos=13.42% bits=135 EC=False ...733894871300
+- P135:
+  - P135 in-band: k=78  d...051191167665  pos=76.80%
+  - EC scan +/-100k: none
+  - === solved calibration (best k, {{Delta_y}}) ===
+  - P64 best_k=7 rel_err=0.0839 bits=64
+  - P70 best_k=13 rel_err=0.0754 bits=70
+  - P100 best_k=43 rel_err=0.2907 bits=100
+  - P115 best_k=58 rel_err=0.1670 bits=115
+  - P130 best_k=73 rel_err=0.0900 bits=130
+
+### Chain gap delta (`chain_gap_delta`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/chain_gap_delta_P1_P70.txt`
+
+### Chord d-k calibration (`chord_dk_calibration`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/cloud_pages/chord_dk_calibration.log`
+
+### D vertical stack (`d_vertical_stack`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/d_vertical_stack_report.txt`
+- P71, P72, P73, P74, P76, P77, P78, P79, P81, P82, P83, P84, P86, P87, P88, P89, P91, P92, P93, P94, P96, P97, P98, P99, P101, P102, P103, P104, P106, P107, P108, P109, P111, P112, P113, P114, P116, P117, P118, P119, P121, P122, P123, P124, P126, P127, P128, P129, P131, P132, P133, P134, P135, P136, P137, P138, P139, P140, P141, P142
+- ... +18 more
+- P135:
+  - P71, P72, P73, P74, P76, P77, P78, P79, P81, P82, P83, P84, P86, P87, P88, P89, P91, P92, P93, P94, P96, P97, P98, P99, P101, P102, P103, P104, P106, P107, P108, P109, P111, P112, P113, P114, P116, P117, P118, P119, P121, P122, P123, P124, P126, P127, P128, P129, P131, P132, P133, P134, P135, P136, P137, P138, P139, P140, P141, P142
+  - ... +18 more
+#### `ARCHIVE/transport_vertical_stack_report.txt`
+- P135     14   148   768   962   368        Y
+- P136     52   529   255   962   739     3  Y
+- P137     52   529   255   962   739     3  Y
+- P138     52   529   255   962   739     3  Y
+- P139     52   529   255   962   739     3  Y
+- P140     11   110   943   962   000        Y
+- P141     52   529   255   962   739     3  Y
+- P142     52   529   255   962   739     3  Y
+- P143     52   529   255   962   739     3  Y
+- P144     52   529   255   962   739     3  Y
+- P145     62   629   794   962   203        Y
+- P146     52   529   255   962   739     3  Y
+- P135:
+  - P135     14   148   768   962   368        Y
+  - P136     52   529   255   962   739     3  Y
+  - P137     52   529   255   962   739     3  Y
+  - P138     52   529   255   962   739     3  Y
+  - P139     52   529   255   962   739     3  Y
+  - P140     11   110   943   962   000        Y
+  - P141     52   529   255   962   739     3  Y
+  - P142     52   529   255   962   739     3  Y
+
+### Digit / decimal predict (`digit_predict`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/p72_74_digit_scroll.txt`
+#### `ARCHIVE/p72_74_digit_predict.txt`
+#### `ARCHIVE/p135_decimal_resonance_scroll.txt`
+- P135 DECIMAL-RESONANCE SCROLL
+- target Px dec: 92108364944471082700...
+- Px(2^134) dec: 92137904221004991822...
+- anchors=11  radius=+/-2,000,000  min_dec=3
+- ratio_filter=None
+- [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+- [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+- [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+- [4/11] barcode_top3_mean      4,000,020 pts 183.9s (21,751/s) best_dec=5 best_hex_nib=5
+- [5/11] chunk_1                4,000,020 pts 180.5s (22,162/s) best_dec=6 best_hex_nib=6
+- [6/11] chunk_2                4,000,020 pts 181.0s (22,101/s) best_dec=6 best_hex_nib=5
+- [7/11] chunk_3                4,000,020 pts 184.4s (21,697/s) best_dec=6 best_hex_nib=5
+- P135:
+  - P135 DECIMAL-RESONANCE SCROLL
+  - target Px dec: 92108364944471082700...
+  - Px(2^134) dec: 92137904221004991822...
+  - anchors=11  radius=+/-2,000,000  min_dec=3
+  - ratio_filter=None
+  - [1/11] band_floor_2^134       2,000,010 pts 135.3s (14,786/s) best_dec=5 best_hex_nib=5
+  - [2/11] barcode_mean41         4,000,020 pts 195.5s (20,462/s) best_dec=5 best_hex_nib=5
+  - [3/11] barcode_median         4,000,020 pts 178.1s (22,464/s) best_dec=6 best_hex_nib=5
+#### `ARCHIVE/decimal_head_transport_report.txt`
+- P135 true rx tail ...368
+- bridge ry tail  ...644
+- mod p (curve law):
+- x^3 mod p tail ...9834
+- y^2 mod p tail ...9841
+- y^2 - x^3 = 7
+- x^3 + 4 = y^2 - 3 ? True
+- x^3 + 7 = y^2 ? True
+- p cube-root branches (same x^3 mod p): 3
+- mod N (fingerprint transport):
+- (x^3+4) mod N tail ...768  (lhs; Wolfram ...768)
+- (y^2-3) mod N tail ...962  (rhs; bridge ry)
+- P135:
+  - P135 true rx tail ...368
+  - bridge ry tail  ...644
+  - mod p (curve law):
+  - x^3 mod p tail ...9834
+  - y^2 mod p tail ...9841
+  - y^2 - x^3 = 7
+  - x^3 + 4 = y^2 - 3 ? True
+  - x^3 + 7 = y^2 ? True
+
+### Hidden band structure (`hidden_band_structure`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/hidden_band_structure.txt`
+
+### Hinge anchor scorecard 135-160 (`hinge_anchor_scorecard`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/hinge_blind_scorecard.csv`
+#### `ARCHIVE/hinge_blind_scorecard.txt`
+- === P135 blind detail ===
+- true slot=0  pick_slot(T1)=0  T1=YES
+- true y=-y  pick_y(T2)=-y  T2=YES
+- joint Ex pick=(0, 'y')
+- joint Ey pick=(0, '-y')
+- T4 pred_bf=0.356959  EC=none
+- branch table:
+- slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+- slot0  y  Ex=+0.001119 Ey=+0.285455  |Ex|=0.0011 |Ey|=0.2855
+- slot1 -y  Ex=+0.247813 Ey=-0.006126  |Ex|=0.2478 |Ey|=0.0061
+- slot1  y  Ex=+0.247813 Ey=+0.285455  |Ex|=0.2478 |Ey|=0.2855
+- slot2 -y  Ex=+0.286386 Ey=-0.006126  |Ex|=0.2864 |Ey|=0.0061
+- P135:
+  - === P135 blind detail ===
+  - true slot=0  pick_slot(T1)=0  T1=YES
+  - true y=-y  pick_y(T2)=-y  T2=YES
+  - joint Ex pick=(0, 'y')
+  - joint Ey pick=(0, '-y')
+  - T4 pred_bf=0.356959  EC=none
+  - branch table:
+  - slot0 -y  Ex=+0.001119 Ey=-0.006126  |Ex|=0.0011 |Ey|=0.0061 <-- live
+#### `ARCHIVE/pipeline_scorecard.txt`
+- PIPELINE SCORECARD — PUZZLE_LIST (step 5, P5..P135)
+- puzzles in batch: 27  solved d: 26  unsolved: 1
+- Layer 1 — structural bridge (lambda laws + regression):
+- bridge regression PASS: 27/27
+- Layer 2 — shelf alignment frame (needs known d for offset):
+- shelf2 + offset == d: 12/26
+- Layer 3 — EC gate d*G == P from pipeline candidates:
+- true d hits among candidates: 26/26
+- any spurious d hits: 26/26
+- Layer 4 — ECDSA k from solved d (RSZ subset):
+- k*G == R (both y branches): 14/14
+- n reg s2+o  dG  kG RSZ
+- P135:
+  - PIPELINE SCORECARD — PUZZLE_LIST (step 5, P5..P135)
+  - puzzles in batch: 27  solved d: 26  unsolved: 1
+  - Layer 1 — structural bridge (lambda laws + regression):
+  - bridge regression PASS: 27/27
+  - Layer 2 — shelf alignment frame (needs known d for offset):
+  - shelf2 + offset == d: 12/26
+  - Layer 3 — EC gate d*G == P from pipeline candidates:
+  - true d hits among candidates: 26/26
+
+### Hurwitz continued fraction (`hurwitz_cf`) — UNTESTED / HAS_REPORT
+#### `ARCHIVE/hurwitz_cf_analysis.txt`
+- === P135+ prediction (unsolved d: CF collapses to [1; q1] only) ===
+- When priv d is known: q1_real = round(d * 0.14719115239541897)
+- q1_imag = round(-d * pi / (ln^2+pi^2))
+- CF length ~2 for d >> 10^38 (|z-1| ~ 1/d)
+- P70:
+- q1_real / d = 0.14719115239541892441623283986848888612159688290167789993010671198436123513332866
+- q1_real * d / N = 1.1971194457217847576111416822112855129601657036194660538951571047343408206221691E-36
+- q1_real / 2^n = 0.120989963018815149808915521134622395038604736328125
+- q1_real / 2^(n-1) = 0.24197992603763029961783104226924479007720947265625
+- P115:
+- q1_real / d = 0.14719115239541892773687502808710719724884186485250735706935836798635469441267715
+- q1_real * d / N = 1.2584445497864169073669639437789971831747289670346749884379632899457237700966415E-9
+- P135:
+  - === P135+ prediction (unsolved d: CF collapses to [1; q1] only) ===
+  - When priv d is known: q1_real = round(d * 0.14719115239541897)
+  - q1_imag = round(-d * pi / (ln^2+pi^2))
+  - CF length ~2 for d >> 10^38 (|z-1| ~ 1/d)
+  - P70:
+  - q1_real / d = 0.14719115239541892441623283986848888612159688290167789993010671198436123513332866
+  - q1_real * d / N = 1.1971194457217847576111416822112855129601657036194660538951571047343408206221691E-36
+  - q1_real / 2^n = 0.120989963018815149808915521134622395038604736328125
+
+### Kangaroo / Pollard / ECDLP search (`kangaroo_pollard`) — CONSTRAINS / HAS_REPORT
+#### `ARCHIVE/ecdlp_pipeline_latest.txt`
+- PHASE 17: d*G == P135 — congruence-class scalar tests
+- ================================================================================
+- Target P: Px3 = 9210836494447108270027136741376870869791784014198948301625976867708124077590, Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+- Puzzle band [LO, HI); residues tested mod N (EC) and mod LO (band rep).
+- Bridge values are congruence classes — not assumed equal to d.
+- Testing 254 congruence-class scalars...
+- [FAIL] Lambda (p-side)  |  d cong raw (mod N)
+- raw mod LO = 20387460540144409195139193244162197619869  |  test scalar = 97451685862885086182458552040892158509924235661624603229050850812487253689501
+- bits=256 (out-of-band)  x=...00361110
+- [FAIL] Lambda (p-side)  |  d cong raw (mod LO), band rep
+- raw mod LO = 20387460540144409195139193244162197619869  |  test scalar = 42165532023084470856795168119795363153053
+- bits=135 (in-band)  x=...86682768
+- P135:
+  - PHASE 17: d*G == P135 — congruence-class scalar tests
+  - ================================================================================
+  - Target P: Px3 = 9210836494447108270027136741376870869791784014198948301625976867708124077590, Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+  - Puzzle band [LO, HI); residues tested mod N (EC) and mod LO (band rep).
+  - Bridge values are congruence classes — not assumed equal to d.
+  - Testing 254 congruence-class scalars...
+  - [FAIL] Lambda (p-side)  |  d cong raw (mod N)
+  - raw mod LO = 20387460540144409195139193244162197619869  |  test scalar = 97451685862885086182458552040892158509924235661624603229050850812487253689501
+
+### P140 pipeline run (`p140_pipeline`) — PARTIAL / TESTED_MISS
+#### `ARCHIVE/cloud_pages/p140_pipeline_run.log`
+- EC hits: 0
+
+### Pow2 fractional ladder (`pow2_frac_ladder`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/pow2_frac_ladder_255_1.txt`
+
+### Puzzle 1-70 pattern P71 (`puzzle1_70_pattern`) — PARTIAL / HAS_REPORT
+#### `ARCHIVE/puzzle1_70_pattern_p71_report.txt`
+- 1770887431076116955135  in_band=True
+#### `ARCHIVE/puzzle1_70_pattern.csv`
+
+### Schedule K1 / GLV lambda (`schedule_k1_glv`) — FALSIFIED / PROVEN_NEGATIVE
+#### `ARCHIVE/taxecc_solved_forward.txt`
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+#### `ARCHIVE/tax_math_falsify.txt`
+- SUMMARY
+- solved puzzles tested: 14
+- total trials: 4617
+- full wins (d_match AND ec_d) on solved: 7
+- P70 known_k_direct
+- P75 known_k_direct
+- P90 known_k_direct
+- P95 known_k_direct
+- P100 known_k_direct
+- P115 known_k_direct
+- P125 known_k_direct
+- P115 CALIBRATION (ground truth)
+- P135:
+  - P135 ec+band hits: 0
+
+### Tangent uniformizer (`tangent_uniformizer`) — UNTESTED / HAS_REPORT
+#### `ARCHIVE/cloud_pages/tangent_uniformizer_analysis.log`
+- === P135 ===
+- Px = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+- Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+- tangent slope m     = 99135488695835614572364795027851233834064984784801734733239176336814508583591 (256 bits)
+- chord slope P->R    = 110949369651731215170703100416479394038198680955354966268742418528756338765878 (256 bits)
+- bridge Lambda_p     = 97451685862885086182458552040892158509924235661624603229050850812487253689501 (256 bits)
+- m - chord mod p     = 103978208281420594825232679620059747649136288495087332503954341815967004489376 (256 bits)
+- m / Lambda_p mod p  = 39523502840891577613138034296878552155229759308326874179709499873788445536573 (255 bits)
+- tangent intercept   = y0 - m*x0 = 28793877746490750938394674896913585282891333190633954000761710797194630833649 mod p
+- === Solved puzzles: tangent vs offset (mod LO) ===
+- n  row  off_bits  m%LO_bits  lam%LO_bits  m==offset?  m-chord%LO_bits
+- P 70  2   66       69         69          False      69
+- P135:
+  - === P135 ===
+  - Px = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+  - Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+  - tangent slope m     = 99135488695835614572364795027851233834064984784801734733239176336814508583591 (256 bits)
+  - chord slope P->R    = 110949369651731215170703100416479394038198680955354966268742418528756338765878 (256 bits)
+  - bridge Lambda_p     = 97451685862885086182458552040892158509924235661624603229050850812487253689501 (256 bits)
+  - m - chord mod p     = 103978208281420594825232679620059747649136288495087332503954341815967004489376 (256 bits)
+  - m / Lambda_p mod p  = 39523502840891577613138034296878552155229759308326874179709499873788445536573 (255 bits)
+
+### Taxecc forward calibration (`taxecc_forward`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/taxecc_solved_forward.txt`
+- SUMMARY TABLE
+- P    log2k     geom      gap  k_bits  d_bits
+- P 65   254.71   142.07   112.64     255      65
+- P 70   254.92   142.15   112.77     255      70
+- P 75   252.19   142.62   109.56     253      75
+- P 80   255.21   143.28   111.93     256      80
+- P 85   252.64   146.09   106.55     253      85
+- P 90   250.64   142.51   108.14     251      90
+- P 95   255.49   142.60   112.89     256      95
+- P100   252.74   142.82   109.92     253     100
+- P105   248.22   147.57   100.65     249     105
+- P110   255.67   148.35   107.32     256     110
+
+### k=1 projection d=(s-m)*r^-1 (`k1_sig_projection`) — DESCRIPTIVE / HAS_REPORT
+#### `ARCHIVE/k1_gx_projection_verify.txt`
+- K=1 PROJECTION EC VERIFY — P135
+- Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+- === r=Gx (tool default) ===
+- r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+- d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+- (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+- (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+- Px match: False  Py match: False
+- Py proximity: dG.x/Py ratio ~ 0.999637  (screenshot ~0.9996 of Py when r=Gx)
+- in_band [2^134,2^135): False
+- === r=sig_r ===
+- r = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+- P135:
+  - K=1 PROJECTION EC VERIFY — P135
+  - Formula: d = (s*k - m) * r^-1 mod N;  P = d*G;  compare to pubkey
+  - === r=Gx (tool default) ===
+  - r = 0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+  - d = 0xcd6143aaa0c72750db996cc99d6f4f26d1f8b68d631f54df8bd5b93acf0fea9b  bits=256
+  - (d*G).x = 0x6670805e61942fff105b80cb105b0129f08100479548a7079cd2be955bec1bb8
+  - (d*G).y = 0x5d283b1124ebc52553b7f5cfd93df3319a83366b9e81209f6d292389aa5871a3
+  - Px match: False  Py match: False
+

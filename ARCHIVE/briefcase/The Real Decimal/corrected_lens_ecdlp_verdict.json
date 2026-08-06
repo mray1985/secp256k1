@@ -1,0 +1,444 @@
+{
+  "summary": {
+    "lens": "corrected Real Decimal \u2014 stitch Px.(p-y), /p and /2^256",
+    "puzzles_run": 11,
+    "d_candidates_tested": 220,
+    "q_candidates_tested": 77,
+    "ec_hits_total_including_true_d_if_generated": 2,
+    "novel_ec_hits": 0,
+    "novel_hits": [],
+    "sanity_true_d_passes_gate": true,
+    "verdict": "CORRECTED LENS RUN THROUGH ECDLP GATES: NO NOVEL HITS"
+  },
+  "results": [
+    {
+      "puzzle": 135,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 24,
+        "d_in_window": 24,
+        "q_raw": 18,
+        "q_in_mirror": 9
+      },
+      "d_path": {
+        "tested": 24,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 9,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 140,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 145,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 24,
+        "d_in_window": 24,
+        "q_raw": 18,
+        "q_in_mirror": 9
+      },
+      "d_path": {
+        "tested": 24,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 9,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 150,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 155,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 160,
+      "status": "UNSOLVED_PUBKEY",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": null
+    },
+    {
+      "puzzle": 1,
+      "status": "SOLVED",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 1,
+        "d_in_window": 1,
+        "q_raw": 8,
+        "q_in_mirror": 1
+      },
+      "d_path": {
+        "tested": 1,
+        "ec_hits": 1,
+        "hits": [
+          {
+            "d": "1",
+            "pass": true,
+            "ec_match": true,
+            "rsz_ok": true,
+            "k": "107739790103963997972578847686919999700122689534728864342460615095621784255312",
+            "gates": [
+              {
+                "gate": "range",
+                "pass": true
+              },
+              {
+                "gate": "ec_dG",
+                "pass": true
+              },
+              {
+                "gate": "rsz_x_kG",
+                "pass": true,
+                "k": "107739790103963997972578847686919999700122689534728864342460615095621784255312"
+              },
+              {
+                "gate": "rsz_equation",
+                "pass": true
+              }
+            ]
+          }
+        ]
+      },
+      "mirror_path": {
+        "tested": 1,
+        "ec_hits": 1,
+        "hits": [
+          {
+            "q": "115792089237316195423570985008687907852837564279074904382605163141518161494336",
+            "d": "1",
+            "pass": true,
+            "ec_match": true,
+            "neg_P_ok": true,
+            "gates": [
+              {
+                "gate": "q_in_N_mirror",
+                "pass": true
+              },
+              {
+                "gate": "d_from_q_in_range",
+                "pass": true
+              },
+              {
+                "gate": "ec_dG",
+                "pass": true
+              },
+              {
+                "gate": "ec_qG_is_neg_P",
+                "pass": true
+              },
+              {
+                "gate": "rsz_x_kG",
+                "pass": true,
+                "k": "107739790103963997972578847686919999700122689534728864342460615095621784255312"
+              },
+              {
+                "gate": "rsz_equation",
+                "pass": true
+              }
+            ]
+          }
+        ]
+      },
+      "sanity_true_d": {
+        "d": "1",
+        "pass": true,
+        "ec_match": true,
+        "rsz_ok": true,
+        "k": "107739790103963997972578847686919999700122689534728864342460615095621784255312",
+        "gates": [
+          {
+            "gate": "range",
+            "pass": true
+          },
+          {
+            "gate": "ec_dG",
+            "pass": true
+          },
+          {
+            "gate": "rsz_x_kG",
+            "pass": true,
+            "k": "107739790103963997972578847686919999700122689534728864342460615095621784255312"
+          },
+          {
+            "gate": "rsz_equation",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "puzzle": 65,
+      "status": "SOLVED",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": {
+        "d": "30568377312064202855",
+        "pass": true,
+        "ec_match": true,
+        "rsz_ok": true,
+        "k": "47198096938572448412586493519997056997382333080753102230902116200392371454045",
+        "gates": [
+          {
+            "gate": "range",
+            "pass": true
+          },
+          {
+            "gate": "ec_dG",
+            "pass": true
+          },
+          {
+            "gate": "rsz_x_kG",
+            "pass": true,
+            "k": "47198096938572448412586493519997056997382333080753102230902116200392371454045"
+          },
+          {
+            "gate": "rsz_equation",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "puzzle": 75,
+      "status": "SOLVED",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": {
+        "d": "22538323240989823823367",
+        "pass": true,
+        "ec_match": true,
+        "rsz_ok": true,
+        "k": "8235300171952886560581201686307287426905544159157327920602166151291662184063",
+        "gates": [
+          {
+            "gate": "range",
+            "pass": true
+          },
+          {
+            "gate": "ec_dG",
+            "pass": true
+          },
+          {
+            "gate": "rsz_x_kG",
+            "pass": true,
+            "k": "8235300171952886560581201686307287426905544159157327920602166151291662184063"
+          },
+          {
+            "gate": "rsz_equation",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "puzzle": 100,
+      "status": "SOLVED",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 21,
+        "d_in_window": 21,
+        "q_raw": 14,
+        "q_in_mirror": 7
+      },
+      "d_path": {
+        "tested": 21,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 7,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": {
+        "d": "868221233689326498340379183142",
+        "pass": true,
+        "ec_match": true,
+        "rsz_ok": true,
+        "k": "12107164864847556103224566827231474081368335030183654868671403733078048742431",
+        "gates": [
+          {
+            "gate": "range",
+            "pass": true
+          },
+          {
+            "gate": "ec_dG",
+            "pass": true
+          },
+          {
+            "gate": "rsz_x_kG",
+            "pass": true,
+            "k": "12107164864847556103224566827231474081368335030183654868671403733078048742431"
+          },
+          {
+            "gate": "rsz_equation",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "puzzle": 130,
+      "status": "SOLVED",
+      "has_rsz": true,
+      "candidates": {
+        "d_raw": 24,
+        "d_in_window": 24,
+        "q_raw": 18,
+        "q_in_mirror": 9
+      },
+      "d_path": {
+        "tested": 24,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "mirror_path": {
+        "tested": 9,
+        "ec_hits": 0,
+        "hits": []
+      },
+      "sanity_true_d": {
+        "d": "1103873984953507439627945351144005829577",
+        "pass": true,
+        "ec_match": true,
+        "rsz_ok": true,
+        "k": "32882115789541217663266522539770238397656470152456859134490538870103939684786",
+        "gates": [
+          {
+            "gate": "range",
+            "pass": true
+          },
+          {
+            "gate": "ec_dG",
+            "pass": true
+          },
+          {
+            "gate": "rsz_x_kG",
+            "pass": true,
+            "k": "32882115789541217663266522539770238397656470152456859134490538870103939684786"
+          },
+          {
+            "gate": "rsz_equation",
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

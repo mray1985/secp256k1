@@ -1,0 +1,200 @@
+========================================================================================
+TAX AS OPERATION SCHEDULE  (not corr(d, p/y-2))
+========================================================================================
+  gross d -> tau / op -> net d'
+  Delta_+/- on signed Phi layers, exact Fraction
+
+  CORRECTION: prior r*=p/y-2 vs d Pearson test is closed as off-target.
+
+----------------------------------------------------------------------------------------
+A) Synthetic schedules on d=1..48 (controlled families)
+----------------------------------------------------------------------------------------
+  [add_constant_+1] n=48
+    unique Delta_+ : 48/48  (repeated exact residual if uniq << n)
+    unique Delta_- : 48/48
+    unique dFine   : 48/48
+    unique dX      : 48/48
+    first-diff Phi_+ digits: min=1 med=1 max=2  in[75,78]=0/48  early<75=48/48
+    same x: 0/48  y-parity flip: 25/48
+    marker neg-residual form: 0/48  GLV-same-Fine: 0/48
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [double] n=48
+    unique Delta_+ : 48/48  (repeated exact residual if uniq << n)
+    unique Delta_- : 48/48
+    unique dFine   : 48/48
+    unique dX      : 48/48
+    first-diff Phi_+ digits: min=1 med=1 max=2  in[75,78]=0/48  early<75=48/48
+    same x: 0/48  y-parity flip: 21/48
+    marker neg-residual form: 0/48  GLV-same-Fine: 0/48
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [double_and_add_+1] n=48
+    unique Delta_+ : 48/48  (repeated exact residual if uniq << n)
+    unique Delta_- : 48/48
+    unique dFine   : 48/48
+    unique dX      : 48/48
+    first-diff Phi_+ digits: min=1 med=1 max=2  in[75,78]=0/48  early<75=48/48
+    same x: 0/48  y-parity flip: 27/48
+    marker neg-residual form: 0/48  GLV-same-Fine: 0/48
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [negation] n=48
+    unique Delta_+ : 48/48  (repeated exact residual if uniq << n)
+    unique Delta_- : 48/48
+    unique dFine   : 48/48
+    unique dX      : 1/48
+    first-diff Phi_+ digits: min=76 med=78 max=80  in[75,78]=46/48  early<75=0/48
+    same x: 48/48  y-parity flip: 48/48
+    marker neg-residual form: 48/48  GLV-same-Fine: 0/48
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [glv_lambda] n=48
+    unique Delta_+ : 48/48  (repeated exact residual if uniq << n)
+    unique Delta_- : 48/48
+    unique dFine   : 1/48
+    unique dX      : 48/48
+    first-diff Phi_+ digits: min=1 med=1 max=3  in[75,78]=0/48  early<75=48/48
+    same x: 0/48  y-parity flip: 0/48
+    marker neg-residual form: 0/48  GLV-same-Fine: 48/48
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+----------------------------------------------------------------------------------------
+B) Matrix edges (factoradic_scalar_deltas.csv) labeled by op family
+----------------------------------------------------------------------------------------
+  [matrix::add_constant] n=2
+    unique Delta_+ : 2/2  (repeated exact residual if uniq << n)
+    unique Delta_- : 2/2
+    unique dFine   : 2/2
+    unique dX      : 2/2
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/2  early<75=2/2
+    same x: 0/2  y-parity flip: 1/2
+    marker neg-residual form: 0/2  GLV-same-Fine: 0/2
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [matrix::affine_a3] n=2
+    unique Delta_+ : 2/2  (repeated exact residual if uniq << n)
+    unique Delta_- : 2/2
+    unique dFine   : 2/2
+    unique dX      : 2/2
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/2  early<75=2/2
+    same x: 0/2  y-parity flip: 1/2
+    marker neg-residual form: 0/2  GLV-same-Fine: 0/2
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [matrix::double_and_add_affine] n=1
+    unique Delta_+ : 1/1  (repeated exact residual if uniq << n)
+    unique Delta_- : 1/1
+    unique dFine   : 1/1
+    unique dX      : 1/1
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/1  early<75=1/1
+    same x: 0/1  y-parity flip: 1/1
+    marker neg-residual form: 0/1  GLV-same-Fine: 0/1
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [matrix::matrix_unlabeled_add] n=13
+    unique Delta_+ : 13/13  (repeated exact residual if uniq << n)
+    unique Delta_- : 13/13
+    unique dFine   : 13/13
+    unique dX      : 13/13
+    first-diff Phi_+ digits: min=1 med=1 max=3  in[75,78]=0/13  early<75=13/13
+    same x: 0/13  y-parity flip: 8/13
+    marker neg-residual form: 0/13  GLV-same-Fine: 0/13
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [matrix::replace_constant] n=31
+    unique Delta_+ : 31/31  (repeated exact residual if uniq << n)
+    unique Delta_- : 31/31
+    unique dFine   : 31/31
+    unique dX      : 31/31
+    first-diff Phi_+ digits: min=1 med=1 max=3  in[75,78]=0/31  early<75=31/31
+    same x: 0/31  y-parity flip: 17/31
+    marker neg-residual form: 0/31  GLV-same-Fine: 0/31
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+
+----------------------------------------------------------------------------------------
+C) Factoradic lead-carry: within max_k plateau, tau = (a1-a0)*k!
+----------------------------------------------------------------------------------------
+  [factoradic_lead_tau] n=44
+    unique Delta_+ : 44/44  (repeated exact residual if uniq << n)
+    unique Delta_- : 44/44
+    unique dFine   : 44/44
+    unique dX      : 44/44
+    first-diff Phi_+ digits: min=1 med=1 max=2  in[75,78]=0/44  early<75=44/44
+    same x: 0/44  y-parity flip: 24/44
+    marker neg-residual form: 0/44  GLV-same-Fine: 0/44
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [factoradic_plateau_full] n=44
+    unique Delta_+ : 44/44  (repeated exact residual if uniq << n)
+    unique Delta_- : 44/44
+    unique dFine   : 44/44
+    unique dX      : 44/44
+    first-diff Phi_+ digits: min=1 med=1 max=3  in[75,78]=0/44  early<75=44/44
+    same x: 0/44  y-parity flip: 24/44
+    marker neg-residual form: 0/44  GLV-same-Fine: 0/44
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+----------------------------------------------------------------------------------------
+D) Holdout solved puzzles>100: same synthetic ops (skip 135)
+----------------------------------------------------------------------------------------
+  [hold_add_+1] n=6
+    unique Delta_+ : 6/6  (repeated exact residual if uniq << n)
+    unique Delta_- : 6/6
+    unique dFine   : 6/6
+    unique dX      : 6/6
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/6  early<75=6/6
+    same x: 0/6  y-parity flip: 3/6
+    marker neg-residual form: 0/6  GLV-same-Fine: 0/6
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [hold_double] n=6
+    unique Delta_+ : 6/6  (repeated exact residual if uniq << n)
+    unique Delta_- : 6/6
+    unique dFine   : 6/6
+    unique dX      : 6/6
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/6  early<75=6/6
+    same x: 0/6  y-parity flip: 2/6
+    marker neg-residual form: 0/6  GLV-same-Fine: 0/6
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [hold_glv] n=6
+    unique Delta_+ : 6/6  (repeated exact residual if uniq << n)
+    unique Delta_- : 6/6
+    unique dFine   : 1/6
+    unique dX      : 6/6
+    first-diff Phi_+ digits: min=1 med=1 max=1  in[75,78]=0/6  early<75=6/6
+    same x: 0/6  y-parity flip: 0/6
+    marker neg-residual form: 0/6  GLV-same-Fine: 6/6
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+  [hold_neg] n=6
+    unique Delta_+ : 6/6  (repeated exact residual if uniq << n)
+    unique Delta_- : 6/6
+    unique dFine   : 6/6
+    unique dX      : 1/6
+    first-diff Phi_+ digits: min=77 med=78 max=78  in[75,78]=6/6  early<75=0/6
+    same x: 6/6  y-parity flip: 6/6
+    marker neg-residual form: 6/6  GLV-same-Fine: 0/6
+    residual entropy proxy unique/n: Delta_+=1.000  Delta_-=1.000
+
+----------------------------------------------------------------------------------------
+E) Interpretation
+----------------------------------------------------------------------------------------
+  add_constant_+1: Delta_+ almost all unique — no single repeated Phi residual
+    (expected: +G is nonlinear on (x,y); tax schedule is scalar-linear only)
+  negation: same x; Delta_+ = (p-2y)/p^2 family — formula-repeated, value-unique
+  glv_lambda: Fine invariant (dFine=0); dX from beta*x wrap — orbit schedule
+  matrix edges: mostly large unique tau adds — residual entropy ~1
+  factoradic lead_tau: tests carry path on lead only; full plateau moves rem too
+
+========================================================================================
+VERDICT
+========================================================================================
+  Tax reframed as op: d --tau/op--> d' with Phi+/- deltas. Prior r* corr closed.
+  Exact Fraction used; no float for residuals.
+  Negation / GLV show structured residual FAMILIES (not one constant Delta).
+  Add/double/matrix-add show high unique Delta_+ (no cheap repeated Phi tax stamp).
+  Next: if a matrix schedule has low unique/n, that family is the candidate.
+

@@ -1,0 +1,70 @@
+Visual Architecture: The Crypto-to-Tax Data Pipeline====================================================================================================
+1. CRYPTOGRAPHIC LAYER: THE FINITE FIELD (secp256k1)
+====================================================================================================
+  [ Private Key: k ] (256-bit Integer)
+         |
+         v  Scalar Multiplication: K = k × G (Trapdoor Function)
+  [ Public Key / Address: K ] 
+         |
+         +---------> Authorized Signature (ECDSA) 
+         |           Deploys on-chain business transactions (Revenue / Gas Fees)
+         v
+====================================================================================================
+2. REVENUE INGESTION & FIDUCIARY ENTRY POINTS
+====================================================================================================
+  [ On-Chain Activity ] 
+         |
+         |----(If Multi-Sig / Partnership)------> [ Schedule K (Form 1065) ]
+         |                                          Distributes Fractional Shares to Partners
+
+         |                                                    |
+         |----(If Key held by Trust/Estate)-----> [ Form 56 ] | (Fiduciary Notice)
+         |                                                    |
+         v (Sole Proprietor / Direct Business Income)         |
+  [ SCHEDULE C ] <--------------------------------------------+
+    • Line 1: Gross Crypto Receipts (Fiat Fair Market Value at timestamp)
+    • Line 28: Total Expenses (Gas/Miner fees, hardware depreciation)
+    • Line 31: NET PROFIT / LOSS 
+         |
+         +---------------------------------------+
+
+         | (Value copies to both pipelines)      |
+         v                                       v
+====================================================================================================
+3. THE PARALLEL PROCESSING LOOPS (AGGREGATION VS. SELF-EMPLOYMENT)
+====================================================================================================
+  [ SCHEDULE SE ]                                [ SCHEDULE 1 ]
+    • Line 2: Net Profit from Sch C                 • Line 3: Net Profit from Sch C
+
+         |                                               |
+         v (Multiply by 0.9235)                          v
+    • Line 4a: Taxable SE Earnings                  • Part I: Additional Income total
+
+         |                                               |
+         v (Apply 15.3% Combined Rate)                   |
+    • Line 12: TOTAL SE TAX DUE                          |
+
+         |                                               |
+         +------------(Divide by 2)------------->   • Part II: Line 15 (Deduction Loop)
+
+         |                                               |  (Reduces Adjusted Gross Income)
+         |                                               v
+         v                                       [ FORM 1040: LINE 11 ] 
+  [ SCHEDULE 2 ]                                  Calculates Adjusted Gross Income (AGI)
+    • Part II, Line 4: SE Tax Input                      |
+
+         |                                               |
+         v                                               v
+  [ FORM 1040: LINE 23 ] <-------------------------------+
+    Adds "Other Taxes" into final total liability
+         |
+         v
+====================================================================================================
+4. STATE JURISDICTION LAYER (e.g., California)
+====================================================================================================
+  [ STATE SCHEDULE P (Form 540) ]
+    • Part I: Pulls Federal AGI Baseline
+    • Part II: Alternative Minimum Tax (AMT) Recalculation
+      Strips away local tax optimization benefits to enforce the absolute mathematical payment floor.
+====================================================================================================
+Data Pipeline Node DictionaryTo program or audit this data structure, the variables must map precisely to these system behaviors:k × G Node: The cryptographic origin. It behaves as a true one-way function. You can calculate the outputs downward into the tax ecosystem, but the state cannot calculate backward from the tax forms to find your private key k.Schedule C Node: The De-anonymizer. It converts cryptographic transactions into an accounting ledger using fiat valuation fixed at the exact block-timestamp of each transaction.Form 56 & Schedule K Nodes: The Identity Matrix. Form 56 links a human legal entity to the mathematical management of the keys. Schedule K acts as a vector splitter, dividing a single pool of address-level revenue into individual tax liabilities for multi-sig signers.Schedule SE & Schedule 1 Loop: A Feedback Loop. The math branches out to calculate your flat-rate employment tax on Schedule SE, then loops back into Schedule 1 to act as a deduction that reduces your standard bracketed income tax.Schedule P Node: The Safety Gate. It acts as an alternate validation function, checking if your business deduplication rules reduced your liability too far below the state's minimum baseline.

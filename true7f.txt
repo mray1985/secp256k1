@@ -1,0 +1,155 @@
+A couple of things jump out immediately from those results.
+
+1. The symmetry is real
+
+You found:
+
+(−y)
+135
+≡−(y
+135
+)(modp)
+
+because 135 is odd.
+
+That's why:
+
+(-y)^135 mod p = 0x7b4b...
+-y^135 mod p   = 0x7b4b...
+
+are identical.
+
+And then:
+
+y
+135
++(−y)
+135
+≡0(modp)
+
+which is exactly why your test produced:
+
+S = y^135 + (-y)^135 = 0
+S/2 = 0
+S/256 = 0
+
+That's not a numerical coincidence; it's a direct algebraic consequence of the exponent being odd.
+
+2. The "closest candidate" result is misleading
+
+The script reports:
+
+Closest candidate to Lane C:
+S = 0
+
+but that's only because the other candidates are huge 256-bit field elements while Lane C is a ~135-bit scalar-sized quantity.
+
+So "closest by absolute difference" isn't measuring the geometry you're interested in.
+
+3. The repeated-square-root branch is interesting
+
+You successfully obtained:
+
+256th-root candidate =
+0xe7efdec917a8b0100229fa4a19914d191fc2530f7c93451dbc967a63aaae8f61
+
+with verification:
+
+candidate^256 = y^135
+
+exactly.
+
+That is mathematically the closest thing in the entire test to a literal interpretation of:
+
+y
+135/256
+
+inside the field.
+
+4. The biggest result may be Test 8
+
+You found:
+
+gcd(256, p-1) = 2
+135 % 2 != 0
+
+therefore:
+
+256k ≡ 135 (mod p-1)
+
+has no solution.
+
+That means the exponent 135/256 does not exist as a simple modular exponent in the multiplicative group of F
+p
+	​
+
+.
+
+That's important because it separates two worlds:
+
+Real-number echoes
+
+y^(135/256)
+
+(which you've been using in the echo calculations)
+
+versus
+
+Finite-field exponents
+
+y^k mod p
+
+The analysis just showed they are not the same operation.
+
+5. Relating this back to the hourglass
+
+Your diagram is:
+
+      y
+    / | \
+   x  x  x
+    \ | /
+     -y
+
+and the odd exponent test says:
+
+y^135
+
+and
+
+(-y)^135
+
+collapse perfectly into additive opposites.
+
+So for odd powers, the hourglass folds all the way to:
+
+y^135 + (-y)^135 = 0
+
+The entire vertical axis annihilates.
+
+That suggests the informative invariants may be:
+
+y
+e
+	​
+
++(−y)
+e
+	​
+
+
+where e=135/256 is the real-valued echo exponent, not the finite-field exponent 135.
+
+That's exactly where your earlier symmetric-sum invariant was performing best.
+
+So if I were prioritizing experiments, I'd spend more time on:
+
+real-valued:
+y^(135/256) + (p-y)^(135/256)
+
+than on:
+
+finite-field:
+y^135 + (-y)^135
+
+because the latter is now proven to collapse to zero automatically for odd exponents.

@@ -1,0 +1,10 @@
+=== pair-term regression on solved P70+ ===
+  row 0: []
+  row 1: []
+  row 2: []
+
+P135 row=2 shelf2_bits=135 gap_bits=133
+  row-2 regression formulas (≥2 hits): []
+  candidates after regression: 3
+  scrolling 3 anchors ±250000
+done in 44.8s

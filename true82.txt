@@ -1,0 +1,53 @@
+TRUE83: Direct Solve for Puzzle 135
+================================================================================
+
+Target:
+  X_puzzle = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+  Range    = [0x4000000000000000000000000000000000, 0x8000000000000000000000000000000000)
+
+Lane Candidates:
+  Lane A (11*2^131)         = 0x5800000000000000000000000000000000
+    Decimal: 29944848289042584784776965453995602608128
+
+    In range: True
+    = 88 * 2^128
+  Lane B (12*2^131)         = 0x6000000000000000000000000000000000
+    Decimal: 32667107224410092492483962313449748299776
+    In range: True
+  Lane C (13*2^131)         = 0x6800000000000000000000000000000000
+    Decimal: 35389366159777600200190959172903893991424
+    In range: True
+    = 104 * 2^128
+
+================================================================================
+TESTING CANDIDATES
+================================================================================
+
+[Lane A (11*2^131)]
+  Testing d = 0x5800000000000000000000000000000000
+  (d*G).x = 0x8929f8ca76dfe4a94287412458960ee6cab725bc55bd6e4a77f9686064ad11dd
+  (d*G).y = 0x6203d3ac92363421ec4d946fdcf6253dd519547952724b03be36ad629ddd561
+  Status: no match
+  Time: 0.024s
+
+[Lane B (12*2^131)]
+  Testing d = 0x6000000000000000000000000000000000
+  (d*G).x = 0x6d0471408d4c0fc7570bfccb4d4dea8ebcdc8a466f598c4154c5f315b0fe9bb6
+  (d*G).y = 0x12c7e0fa2899e5b4f1ab802dfa5dcfede074f9a975a4f720a5d99d4142e56a07
+  Status: no match
+  Time: 0.025s
+
+[Lane C (13*2^131)]
+  Testing d = 0x6800000000000000000000000000000000
+  (d*G).x = 0xf1f46990697c96ddebd6ca858fa2fdf6989de2699f467d90df2b8735bfb66558
+  (d*G).y = 0x79e95dc62fbdc98169bf9f0ef41ffd1e1c2de8e53e11024ea5a8f0fbe544a992
+  Status: no match
+  Time: 0.026s
+
+================================================================================
+NOTES:
+  - Pure Python EC mul is SLOW for 134-bit scalars
+  - For speed: use 'pip install ecdsa' then ecdsa.SigningKey
+  - Or use SageMath: d*G where G is a curve point
+================================================================================
+WARNING: Cache entry deserialization failed, entry ignored

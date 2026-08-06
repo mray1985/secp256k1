@@ -1,0 +1,2181 @@
+{
+  "question": "Does folded defect +7 beat full gap+7 at puzzle-scale hi-anchor?",
+  "facts": {
+    "gap": 432420386565659656852420866390673177326,
+    "puzzle_count": 24,
+    "formulas": {
+      "fold_mod_n": "gap mod 2^n",
+      "fold_mod_n+7": "(gap mod 2^n) + 7",
+      "fold_band_hi": "hi - (gap mod 2^(n-1))",
+      "fold_band_hi+7": "band_hi + 7"
+    }
+  },
+  "ranked_by_best_at_hi": [
+    {
+      "offset": "fold_mod_n+21",
+      "best_at_hi": 6,
+      "beats_h7": 18,
+      "beats_gap": 19,
+      "in_band_rate": 0.292,
+      "best_at_hi_rate": 0.25,
+      "beats_h7_rate": 0.75
+    },
+    {
+      "offset": "fold_mod_n",
+      "best_at_hi": 5,
+      "beats_h7": 21,
+      "beats_gap": 17,
+      "in_band_rate": 0.292,
+      "best_at_hi_rate": 0.208,
+      "beats_h7_rate": 0.875
+    },
+    {
+      "offset": "gap",
+      "best_at_hi": 3,
+      "beats_h7": 9,
+      "beats_gap": 0,
+      "in_band_rate": null,
+      "best_at_hi_rate": 0.125,
+      "beats_h7_rate": 0.375
+    },
+    {
+      "offset": "h7",
+      "best_at_hi": 3,
+      "beats_h7": 0,
+      "beats_gap": 15,
+      "in_band_rate": null,
+      "best_at_hi_rate": 0.125,
+      "beats_h7_rate": 0.0
+    },
+    {
+      "offset": "fold_mod_n+7",
+      "best_at_hi": 2,
+      "beats_h7": 17,
+      "beats_gap": 20,
+      "in_band_rate": 0.292,
+      "best_at_hi_rate": 0.083,
+      "beats_h7_rate": 0.708
+    },
+    {
+      "offset": "fold_band_lo+7",
+      "best_at_hi": 2,
+      "beats_h7": 17,
+      "beats_gap": 18,
+      "in_band_rate": 1.0,
+      "best_at_hi_rate": 0.083,
+      "beats_h7_rate": 0.708
+    },
+    {
+      "offset": "gap+21",
+      "best_at_hi": 1,
+      "beats_h7": 11,
+      "beats_gap": 12,
+      "in_band_rate": null,
+      "best_at_hi_rate": 0.042,
+      "beats_h7_rate": 0.458
+    },
+    {
+      "offset": "fold_band_hi",
+      "best_at_hi": 1,
+      "beats_h7": 17,
+      "beats_gap": 18,
+      "in_band_rate": 1.0,
+      "best_at_hi_rate": 0.042,
+      "beats_h7_rate": 0.708
+    },
+    {
+      "offset": "fold_band_hi+7",
+      "best_at_hi": 1,
+      "beats_h7": 17,
+      "beats_gap": 17,
+      "in_band_rate": 1.0,
+      "best_at_hi_rate": 0.042,
+      "beats_h7_rate": 0.708
+    },
+    {
+      "offset": "fold_band_lo",
+      "best_at_hi": 0,
+      "beats_h7": 17,
+      "beats_gap": 17,
+      "in_band_rate": 1.0,
+      "best_at_hi_rate": 0.0,
+      "beats_h7_rate": 0.708
+    }
+  ],
+  "reference": {
+    "h7_best": 3,
+    "fold_mod_n+7_best": 2,
+    "fold_band_hi+7_best": 1
+  },
+  "rows": [
+    {
+      "puzzle": 65,
+      "solved": true,
+      "lo": 18446744073709551616,
+      "hi": 36893488147419103231,
+      "folded": {
+        "fold_mod_n": 4624529904179460846,
+        "fold_mod_n+7": 4624529904179460853,
+        "fold_mod_n+21": 4624529904179460867,
+        "fold_band_hi": 32268958243239642385,
+        "fold_band_hi+7": 32268958243239642392,
+        "fold_band_lo": 23071273977889012462,
+        "fold_band_lo+7": 23071273977889012469
+      },
+      "scores": {
+        "gap": 198456608181084177568931616105282401570,
+        "h7": 118438305358592940527352912305967288924,
+        "gap+21": 41598300286389533555804495292662936410,
+        "fold_mod_n": 167465742696829064,
+        "fold_mod_n+7": 606030724574119695,
+        "fold_mod_n+21": 1743602766796016453,
+        "fold_band_hi": 3814470909795836301,
+        "fold_band_hi+7": 8908654358352519108,
+        "fold_band_lo": 7073936364771540834,
+        "fold_band_lo+7": 5028430352819932748
+      },
+      "best_at_hi": "fold_mod_n",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 4624529904179460846,
+          "hi_score": 167465742696829064,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+7": {
+          "offset": 4624529904179460853,
+          "hi_score": 606030724574119695,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 4624529904179460867,
+          "hi_score": 1743602766796016453,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 32268958243239642385,
+          "hi_score": 3814470909795836301,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 32268958243239642392,
+          "hi_score": 8908654358352519108,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 23071273977889012462,
+          "hi_score": 7073936364771540834,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 23071273977889012469,
+          "hi_score": 5028430352819932748,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 66,
+      "solved": true,
+      "lo": 36893488147419103232,
+      "hi": 73786976294838206463,
+      "folded": {
+        "fold_mod_n": 4624529904179460846,
+        "fold_mod_n+7": 4624529904179460853,
+        "fold_mod_n+21": 4624529904179460867,
+        "fold_band_hi": 69162446390658745617,
+        "fold_band_hi+7": 69162446390658745624,
+        "fold_band_lo": 41518018051598564078,
+        "fold_band_lo+7": 41518018051598564085
+      },
+      "scores": {
+        "gap": 213249075119698689616813995924048042392,
+        "h7": 68066825418342019699756053723378740122,
+        "gap+21": 210122712581288336718061035712713312971,
+        "fold_mod_n": 1432815281021128568,
+        "fold_mod_n+7": 586386156969800051,
+        "fold_mod_n+21": 2147048379838389235,
+        "fold_band_hi": 12942693568589772865,
+        "fold_band_hi+7": 19758539135569200450,
+        "fold_band_lo": 6854966725009587784,
+        "fold_band_lo+7": 61395145970810614
+      },
+      "best_at_hi": "fold_band_lo+7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 4624529904179460846,
+          "hi_score": 1432815281021128568,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 4624529904179460853,
+          "hi_score": 586386156969800051,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 4624529904179460867,
+          "hi_score": 2147048379838389235,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 69162446390658745617,
+          "hi_score": 12942693568589772865,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 69162446390658745624,
+          "hi_score": 19758539135569200450,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 41518018051598564078,
+          "hi_score": 6854966725009587784,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 41518018051598564085,
+          "hi_score": 61395145970810614,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        }
+      }
+    },
+    {
+      "puzzle": 67,
+      "solved": true,
+      "lo": 73786976294838206464,
+      "hi": 147573952589676412927,
+      "folded": {
+        "fold_mod_n": 78411506199017667310,
+        "fold_mod_n+7": 78411506199017667317,
+        "fold_mod_n+21": 78411506199017667331,
+        "fold_band_hi": 142949422685496952081,
+        "fold_band_hi+7": 142949422685496952088,
+        "fold_band_lo": 78411506199017667310,
+        "fold_band_lo+7": 78411506199017667317
+      },
+      "scores": {
+        "gap": 211904510154835797142826264672872088686,
+        "h7": 79175124640767533484640294461521719082,
+        "gap+21": 186283646387368993831731645961179020126,
+        "fold_mod_n": 31320549550287771652,
+        "fold_mod_n+7": 20585384521931534197,
+        "fold_mod_n+21": 10052901465741145030,
+        "fold_band_hi": 70595153725429098158,
+        "fold_band_hi+7": 62385738928429117134,
+        "fold_band_lo": 31320549550287771652,
+        "fold_band_lo+7": 20585384521931534197
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 78411506199017667310,
+          "hi_score": 31320549550287771652,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 78411506199017667317,
+          "hi_score": 20585384521931534197,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 78411506199017667331,
+          "hi_score": 10052901465741145030,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 142949422685496952081,
+          "hi_score": 70595153725429098158,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 142949422685496952088,
+          "hi_score": 62385738928429117134,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 78411506199017667310,
+          "hi_score": 31320549550287771652,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 78411506199017667317,
+          "hi_score": 20585384521931534197,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 68,
+      "solved": true,
+      "lo": 147573952589676412928,
+      "hi": 295147905179352825855,
+      "folded": {
+        "fold_mod_n": 78411506199017667310,
+        "fold_mod_n+7": 78411506199017667317,
+        "fold_mod_n+21": 78411506199017667331,
+        "fold_band_hi": 216736398980335158545,
+        "fold_band_hi+7": 216736398980335158552,
+        "fold_band_lo": 225985458788694080238,
+        "fold_band_lo+7": 225985458788694080245
+      },
+      "scores": {
+        "gap": 120596910097581691392448264606306019456,
+        "h7": 78428882437378961580860539015673709063,
+        "gap+21": 44060080941640610675057279868959988796,
+        "fold_mod_n": 32193909186949702404,
+        "fold_mod_n+7": 22771383328955782410,
+        "fold_mod_n+21": 37186737445729758514,
+        "fold_band_hi": 100305751104227520999,
+        "fold_band_hi+7": 48927000739936394300,
+        "fold_band_lo": 56771100323279503258,
+        "fold_band_lo+7": 1026756915731427119
+      },
+      "best_at_hi": "fold_band_lo+7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 78411506199017667310,
+          "hi_score": 32193909186949702404,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 78411506199017667317,
+          "hi_score": 22771383328955782410,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 78411506199017667331,
+          "hi_score": 37186737445729758514,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 216736398980335158545,
+          "hi_score": 100305751104227520999,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 216736398980335158552,
+          "hi_score": 48927000739936394300,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 225985458788694080238,
+          "hi_score": 56771100323279503258,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 225985458788694080245,
+          "hi_score": 1026756915731427119,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        }
+      }
+    },
+    {
+      "puzzle": 69,
+      "solved": true,
+      "lo": 295147905179352825856,
+      "hi": 590295810358705651711,
+      "folded": {
+        "fold_mod_n": 78411506199017667310,
+        "fold_mod_n+7": 78411506199017667317,
+        "fold_mod_n+21": 78411506199017667331,
+        "fold_band_hi": 511884304159687984401,
+        "fold_band_hi+7": 511884304159687984408,
+        "fold_band_lo": 373559411378370493166,
+        "fold_band_lo+7": 373559411378370493173
+      },
+      "scores": {
+        "gap": 16750591588264766650879408597369097232,
+        "h7": 104890683937870159827389122204363262461,
+        "gap+21": 84247151575519644068494682582845195542,
+        "fold_mod_n": 19037522320889198210,
+        "fold_mod_n+7": 28314174396209438548,
+        "fold_mod_n+21": 38894392613708599400,
+        "fold_band_hi": 85365858552047411169,
+        "fold_band_hi+7": 210794386282361005692,
+        "fold_band_lo": 38461876318522024054,
+        "fold_band_lo+7": 144886424971469249727
+      },
+      "best_at_hi": "fold_mod_n",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 78411506199017667310,
+          "hi_score": 19037522320889198210,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+7": {
+          "offset": 78411506199017667317,
+          "hi_score": 28314174396209438548,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 78411506199017667331,
+          "hi_score": 38894392613708599400,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 511884304159687984401,
+          "hi_score": 85365858552047411169,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 511884304159687984408,
+          "hi_score": 210794386282361005692,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 373559411378370493166,
+          "hi_score": 38461876318522024054,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 373559411378370493173,
+          "hi_score": 144886424971469249727,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 70,
+      "solved": true,
+      "lo": 590295810358705651712,
+      "hi": 1180591620717411303423,
+      "folded": {
+        "fold_mod_n": 78411506199017667310,
+        "fold_mod_n+7": 78411506199017667317,
+        "fold_mod_n+21": 78411506199017667331,
+        "fold_band_hi": 1102180114518393636113,
+        "fold_band_hi+7": 1102180114518393636120,
+        "fold_band_lo": 668707316557723319022,
+        "fold_band_lo+7": 668707316557723319029
+      },
+      "scores": {
+        "gap": 115989503973338713577245631821946663818,
+        "h7": 80134812221808084037873458996033008953,
+        "gap+21": 39963058046442022415690774241319177064,
+        "fold_mod_n": 35689135995684190416,
+        "fold_mod_n+7": 19742176992631349555,
+        "fold_mod_n+21": 31720362588574315686,
+        "fold_band_hi": 307910743260719229752,
+        "fold_band_hi+7": 95554198974451371236,
+        "fold_band_lo": 158920449078786096692,
+        "fold_band_lo+7": 170540487906274548177
+      },
+      "best_at_hi": "fold_mod_n+7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 78411506199017667310,
+          "hi_score": 35689135995684190416,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 78411506199017667317,
+          "hi_score": 19742176992631349555,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+21": {
+          "offset": 78411506199017667331,
+          "hi_score": 31720362588574315686,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 1102180114518393636113,
+          "hi_score": 307910743260719229752,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1102180114518393636120,
+          "hi_score": 95554198974451371236,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 668707316557723319022,
+          "hi_score": 158920449078786096692,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 668707316557723319029,
+          "hi_score": 170540487906274548177,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 75,
+      "solved": true,
+      "lo": 18889465931478580854784,
+      "hi": 37778931862957161709567,
+      "folded": {
+        "fold_mod_n": 36676751748438768073454,
+        "fold_mod_n+7": 36676751748438768073461,
+        "fold_mod_n+21": 36676751748438768073475,
+        "fold_band_hi": 19991646045996974490897,
+        "fold_band_hi+7": 19991646045996974490904,
+        "fold_band_lo": 36676751748438768073454,
+        "fold_band_lo+7": 36676751748438768073461
+      },
+      "scores": {
+        "gap": 166279986169035264667524648731938392976,
+        "h7": 139219417133023422111041387012140288489,
+        "gap+21": 85098279060999736998074863572544079431,
+        "fold_mod_n": 18013762629563106278050,
+        "fold_mod_n+7": 10243579049726463834626,
+        "fold_mod_n+21": 14345419872507607021604,
+        "fold_band_hi": 7956308964943327088990,
+        "fold_band_hi+7": 7867395922456569128202,
+        "fold_band_lo": 18013762629563106278050,
+        "fold_band_lo+7": 10243579049726463834626
+      },
+      "best_at_hi": "fold_band_hi+7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 36676751748438768073454,
+          "hi_score": 18013762629563106278050,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 36676751748438768073461,
+          "hi_score": 10243579049726463834626,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 36676751748438768073475,
+          "hi_score": 14345419872507607021604,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 19991646045996974490897,
+          "hi_score": 7956308964943327088990,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 19991646045996974490904,
+          "hi_score": 7867395922456569128202,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_lo": {
+          "offset": 36676751748438768073454,
+          "hi_score": 18013762629563106278050,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 36676751748438768073461,
+          "hi_score": 10243579049726463834626,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 80,
+      "solved": true,
+      "lo": 604462909807314587353088,
+      "hi": 1208925819614629174706175,
+      "folded": {
+        "fold_mod_n": 452245002240967546878702,
+        "fold_mod_n+7": 452245002240967546878709,
+        "fold_mod_n+21": 452245002240967546878723,
+        "fold_band_hi": 756680817373661627827473,
+        "fold_band_hi+7": 756680817373661627827480,
+        "fold_band_lo": 1056707912048282134231790,
+        "fold_band_lo+7": 1056707912048282134231797
+      },
+      "scores": {
+        "gap": 213748630378754163147301042368949542537,
+        "h7": 155493916314802023498101924975053354345,
+        "gap+21": 38984488186897744199703690187260978045,
+        "fold_mod_n": 95767823125237573278879,
+        "fold_mod_n+7": 9445609346891814787330,
+        "fold_mod_n+21": 9179088657246884166096,
+        "fold_band_hi": 118392147780428970289413,
+        "fold_band_hi+7": 185412905186744308919581,
+        "fold_band_lo": 515492905584988658981321,
+        "fold_band_lo+7": 396895592490729817653330
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 452245002240967546878702,
+          "hi_score": 95767823125237573278879,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 452245002240967546878709,
+          "hi_score": 9445609346891814787330,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 452245002240967546878723,
+          "hi_score": 9179088657246884166096,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 756680817373661627827473,
+          "hi_score": 118392147780428970289413,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 756680817373661627827480,
+          "hi_score": 185412905186744308919581,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 1056707912048282134231790,
+          "hi_score": 515492905584988658981321,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 1056707912048282134231797,
+          "hi_score": 396895592490729817653330,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 85,
+      "solved": true,
+      "lo": 19342813113834066795298816,
+      "hi": 38685626227668133590597631,
+      "folded": {
+        "fold_mod_n": 28257538853377438565120750,
+        "fold_mod_n+7": 28257538853377438565120757,
+        "fold_mod_n+21": 28257538853377438565120771,
+        "fold_band_hi": 29770900488124761820775697,
+        "fold_band_hi+7": 29770900488124761820775704,
+        "fold_band_lo": 28257538853377438565120750,
+        "fold_band_lo+7": 28257538853377438565120757
+      },
+      "scores": {
+        "gap": 179492068463388988978075325767047039699,
+        "h7": 52890100761366747199778947451095528053,
+        "gap+21": 200313834642677736356813809180807495281,
+        "fold_mod_n": 13877199021059868209319883,
+        "fold_mod_n+7": 10957438831002212029060287,
+        "fold_mod_n+21": 619036158239326816670731,
+        "fold_band_hi": 7969325020679100817817154,
+        "fold_band_hi+7": 3854466853765567917398221,
+        "fold_band_lo": 13877199021059868209319883,
+        "fold_band_lo+7": 10957438831002212029060287
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 28257538853377438565120750,
+          "hi_score": 13877199021059868209319883,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 28257538853377438565120757,
+          "hi_score": 10957438831002212029060287,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 28257538853377438565120771,
+          "hi_score": 619036158239326816670731,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 29770900488124761820775697,
+          "hi_score": 7969325020679100817817154,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 29770900488124761820775704,
+          "hi_score": 3854466853765567917398221,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 28257538853377438565120750,
+          "hi_score": 13877199021059868209319883,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 28257538853377438565120757,
+          "hi_score": 10957438831002212029060287,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 90,
+      "solved": true,
+      "lo": 618970019642690137449562112,
+      "hi": 1237940039285380274899124223,
+      "folded": {
+        "fold_mod_n": 221685669991718106518108910,
+        "fold_mod_n+7": 221685669991718106518108917,
+        "fold_mod_n+21": 221685669991718106518108931,
+        "fold_band_hi": 1016254369293662168381015313,
+        "fold_band_hi+7": 1016254369293662168381015320,
+        "fold_band_lo": 840655689634408243967671022,
+        "fold_band_lo+7": 840655689634408243967671029
+      },
+      "scores": {
+        "gap": 122118321206403191972243152858162038906,
+        "h7": 67473902480063155909567762243115941704,
+        "gap+21": 14237963287336194820768726054998725661,
+        "fold_mod_n": 43597152724545291056252718,
+        "fold_mod_n+7": 80675525944366099492023638,
+        "fold_mod_n+21": 86294001421495182073297503,
+        "fold_band_hi": 347714242982045734222034031,
+        "fold_band_hi+7": 345443384862971491572708142,
+        "fold_band_lo": 346968746193171189985844728,
+        "fold_band_lo+7": 357066730342540321512176103
+      },
+      "best_at_hi": "fold_mod_n",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 221685669991718106518108910,
+          "hi_score": 43597152724545291056252718,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+7": {
+          "offset": 221685669991718106518108917,
+          "hi_score": 80675525944366099492023638,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 221685669991718106518108931,
+          "hi_score": 86294001421495182073297503,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 1016254369293662168381015313,
+          "hi_score": 347714242982045734222034031,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1016254369293662168381015320,
+          "hi_score": 345443384862971491572708142,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 840655689634408243967671022,
+          "hi_score": 346968746193171189985844728,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 840655689634408243967671029,
+          "hi_score": 357066730342540321512176103,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 95,
+      "solved": true,
+      "lo": 19807040628566084398385987584,
+      "hi": 39614081257132168796771975167,
+      "folded": {
+        "fold_mod_n": 24980486455699323604500593390,
+        "fold_mod_n+7": 24980486455699323604500593397,
+        "fold_mod_n+21": 24980486455699323604500593411,
+        "fold_band_hi": 34440635429998929590657369361,
+        "fold_band_hi+7": 34440635429998929590657369368,
+        "fold_band_lo": 24980486455699323604500593390,
+        "fold_band_lo+7": 24980486455699323604500593397
+      },
+      "scores": {
+        "gap": 9716902254672038312778452106956997210,
+        "h7": 205175986707822800489872276284778377123,
+        "gap+21": 163673769048464667991639058249747959728,
+        "fold_mod_n": 10033097429705826677178695258,
+        "fold_mod_n+7": 9279809140234759412197821075,
+        "fold_mod_n+21": 2055382698203169498025172523,
+        "fold_band_hi": 1561527218393508259005003546,
+        "fold_band_hi+7": 7117131489460184575422457662,
+        "fold_band_lo": 10033097429705826677178695258,
+        "fold_band_lo+7": 9279809140234759412197821075
+      },
+      "best_at_hi": "fold_band_hi",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 24980486455699323604500593390,
+          "hi_score": 10033097429705826677178695258,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 24980486455699323604500593397,
+          "hi_score": 9279809140234759412197821075,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 24980486455699323604500593411,
+          "hi_score": 2055382698203169498025172523,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 34440635429998929590657369361,
+          "hi_score": 1561527218393508259005003546,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi+7": {
+          "offset": 34440635429998929590657369368,
+          "hi_score": 7117131489460184575422457662,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 24980486455699323604500593390,
+          "hi_score": 10033097429705826677178695258,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 24980486455699323604500593397,
+          "hi_score": 9279809140234759412197821075,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 100,
+      "solved": true,
+      "lo": 633825300114114700748351602688,
+      "hi": 1267650600228229401496703205375,
+      "folded": {
+        "fold_mod_n": 738033949084078361946396146414,
+        "fold_mod_n+7": 738033949084078361946396146421,
+        "fold_mod_n+21": 738033949084078361946396146435,
+        "fold_band_hi": 1163441951258265740298658661649,
+        "fold_band_hi+7": 1163441951258265740298658661656,
+        "fold_band_lo": 738033949084078361946396146414,
+        "fold_band_lo+7": 738033949084078361946396146421
+      },
+      "scores": {
+        "gap": 105212512495455034145540161012490258698,
+        "h7": 86666758887129612329081874728903757385,
+        "gap+21": 38004915086639248425905079821018612372,
+        "fold_mod_n": 200538599286482546870591199762,
+        "fold_mod_n+7": 147681505926455014242753672161,
+        "fold_mod_n+21": 106087767319526491400204070964,
+        "fold_band_hi": 528560973605217953702806262104,
+        "fold_band_hi+7": 440801423839156810861568405496,
+        "fold_band_lo": 200538599286482546870591199762,
+        "fold_band_lo+7": 147681505926455014242753672161
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 738033949084078361946396146414,
+          "hi_score": 200538599286482546870591199762,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 738033949084078361946396146421,
+          "hi_score": 147681505926455014242753672161,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 738033949084078361946396146435,
+          "hi_score": 106087767319526491400204070964,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 1163441951258265740298658661649,
+          "hi_score": 528560973605217953702806262104,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1163441951258265740298658661656,
+          "hi_score": 440801423839156810861568405496,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 738033949084078361946396146414,
+          "hi_score": 200538599286482546870591199762,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 738033949084078361946396146421,
+          "hi_score": 147681505926455014242753672161,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 105,
+      "solved": true,
+      "lo": 20282409603651670423947251286016,
+      "hi": 40564819207303340847894502572031,
+      "folded": {
+        "fold_mod_n": 22288094152963978187390350637806,
+        "fold_mod_n+7": 22288094152963978187390350637813,
+        "fold_mod_n+21": 22288094152963978187390350637827,
+        "fold_band_hi": 38559134657991033084451403220241,
+        "fold_band_hi+7": 38559134657991033084451403220248,
+        "fold_band_lo": 22288094152963978187390350637806,
+        "fold_band_lo+7": 22288094152963978187390350637813
+      },
+      "scores": {
+        "gap": 119814407054384669453610006067153312836,
+        "h7": 33448466880152149230155761789689930055,
+        "gap+21": 139283413468312891216752726765236835381,
+        "fold_mod_n": 10579084704814042976316775375114,
+        "fold_mod_n+7": 9247106515993188132702002084321,
+        "fold_mod_n+21": 4323300651679744561761257271597,
+        "fold_band_hi": 7675798684714592128661607840521,
+        "fold_band_hi+7": 16984576685783247265307314346260,
+        "fold_band_lo": 10579084704814042976316775375114,
+        "fold_band_lo+7": 9247106515993188132702002084321
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 22288094152963978187390350637806,
+          "hi_score": 10579084704814042976316775375114,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 22288094152963978187390350637813,
+          "hi_score": 9247106515993188132702002084321,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 22288094152963978187390350637827,
+          "hi_score": 4323300651679744561761257271597,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 38559134657991033084451403220241,
+          "hi_score": 7675798684714592128661607840521,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 38559134657991033084451403220248,
+          "hi_score": 16984576685783247265307314346260,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 22288094152963978187390350637806,
+          "hi_score": 10579084704814042976316775375114,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 22288094152963978187390350637813,
+          "hi_score": 9247106515993188132702002084321,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 110,
+      "solved": true,
+      "lo": 649037107316853453566312041152512,
+      "hi": 1298074214633706907132624082305023,
+      "folded": {
+        "fold_mod_n": 711890020677120772601596894362350,
+        "fold_mod_n+7": 711890020677120772601596894362357,
+        "fold_mod_n+21": 711890020677120772601596894362371,
+        "fold_band_hi": 1235221301273439588097339229095185,
+        "fold_band_hi+7": 1235221301273439588097339229095192,
+        "fold_band_lo": 711890020677120772601596894362350,
+        "fold_band_lo+7": 711890020677120772601596894362357
+      },
+      "scores": {
+        "gap": 162463705076324007782144541514591451334,
+        "h7": 92234667864823978276967471377863790506,
+        "gap+21": 48223406558176080733386668895591531150,
+        "fold_mod_n": 350932941021172427403552110134438,
+        "fold_mod_n+7": 247608725085990438285477650224491,
+        "fold_mod_n+21": 40960293215626460051845516788247,
+        "fold_band_hi": 50103132893517791523271912579953,
+        "fold_band_hi+7": 138785641679778494149747951533394,
+        "fold_band_lo": 350932941021172427403552110134438,
+        "fold_band_lo+7": 247608725085990438285477650224491
+      },
+      "best_at_hi": "fold_mod_n+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 711890020677120772601596894362350,
+          "hi_score": 350932941021172427403552110134438,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 711890020677120772601596894362357,
+          "hi_score": 247608725085990438285477650224491,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 711890020677120772601596894362371,
+          "hi_score": 40960293215626460051845516788247,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_band_hi": {
+          "offset": 1235221301273439588097339229095185,
+          "hi_score": 50103132893517791523271912579953,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1235221301273439588097339229095192,
+          "hi_score": 138785641679778494149747951533394,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 711890020677120772601596894362350,
+          "hi_score": 350932941021172427403552110134438,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 711890020677120772601596894362357,
+          "hi_score": 247608725085990438285477650224491,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 115,
+      "solved": true,
+      "lo": 20769187434139310514121985316880384,
+      "hi": 41538374868278621028243970633760767,
+      "folded": {
+        "fold_mod_n": 5904186879211948401132093223582446,
+        "fold_mod_n+7": 5904186879211948401132093223582453,
+        "fold_mod_n+21": 5904186879211948401132093223582467,
+        "fold_band_hi": 35634187989066672627111877410178321,
+        "fold_band_hi+7": 35634187989066672627111877410178328,
+        "fold_band_lo": 26673374313351258915254078540462830,
+        "fold_band_lo+7": 26673374313351258915254078540462837
+      },
+      "scores": {
+        "gap": 1849603064692634542406001465196012012,
+        "h7": 98952465076874150648200048645470688388,
+        "gap+21": 131863785205651935823008717523869088201,
+        "fold_mod_n": 982915049586681639986253976155778,
+        "fold_mod_n+7": 2066708045998399313334886705337351,
+        "fold_mod_n+21": 1669892840390113741099663252558484,
+        "fold_band_hi": 8102709963229137358135526007102137,
+        "fold_band_hi+7": 2977459866560034788056283442740470,
+        "fold_band_lo": 10253569118672894875808535021221416,
+        "fold_band_lo+7": 6482229353044861649864127351401473
+      },
+      "best_at_hi": "fold_mod_n",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 5904186879211948401132093223582446,
+          "hi_score": 982915049586681639986253976155778,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+7": {
+          "offset": 5904186879211948401132093223582453,
+          "hi_score": 2066708045998399313334886705337351,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 5904186879211948401132093223582467,
+          "hi_score": 1669892840390113741099663252558484,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 35634187989066672627111877410178321,
+          "hi_score": 8102709963229137358135526007102137,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 35634187989066672627111877410178328,
+          "hi_score": 2977459866560034788056283442740470,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 26673374313351258915254078540462830,
+          "hi_score": 10253569118672894875808535021221416,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 26673374313351258915254078540462837,
+          "hi_score": 6482229353044861649864127351401473,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 120,
+      "solved": true,
+      "lo": 664613997892457936451903530140172288,
+      "hi": 1329227995784915872903807060280344575,
+      "folded": {
+        "fold_mod_n": 421287935561998158683571799561190126,
+        "fold_mod_n+7": 421287935561998158683571799561190133,
+        "fold_mod_n+21": 421287935561998158683571799561190147,
+        "fold_band_hi": 907940060222917714220235260719154449,
+        "fold_band_hi+7": 907940060222917714220235260719154456,
+        "fold_band_lo": 1085901933454456095135475329701362414,
+        "fold_band_lo+7": 1085901933454456095135475329701362421
+      },
+      "scores": {
+        "gap": 67671170902157347368366262625545247387,
+        "h7": 148631678347405967918578498724158910369,
+        "gap+21": 148816990280872941640047155032894048408,
+        "fold_mod_n": 199041978321161125603926317805112197,
+        "fold_mod_n+7": 64812403719867484981689544778036006,
+        "fold_mod_n+21": 203646745482719796262784001121235370,
+        "fold_band_hi": 143570873442530113464960281083681326,
+        "fold_band_hi+7": 160636974233563876050491509255871777,
+        "fold_band_lo": 490877151449575299074079507230757927,
+        "fold_band_lo+7": 445945649775887365859771785052889337
+      },
+      "best_at_hi": "fold_mod_n+7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 421287935561998158683571799561190126,
+          "hi_score": 199041978321161125603926317805112197,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 421287935561998158683571799561190133,
+          "hi_score": 64812403719867484981689544778036006,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+21": {
+          "offset": 421287935561998158683571799561190147,
+          "hi_score": 203646745482719796262784001121235370,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 907940060222917714220235260719154449,
+          "hi_score": 143570873442530113464960281083681326,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 907940060222917714220235260719154456,
+          "hi_score": 160636974233563876050491509255871777,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 1085901933454456095135475329701362414,
+          "hi_score": 490877151449575299074079507230757927,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 1085901933454456095135475329701362421,
+          "hi_score": 445945649775887365859771785052889337,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 125,
+      "solved": true,
+      "lo": 21267647932558653966460912964485513216,
+      "hi": 42535295865117307932921825928971026431,
+      "folded": {
+        "fold_mod_n": 7067427914486577523202607100962913006,
+        "fold_mod_n+7": 7067427914486577523202607100962913013,
+        "fold_mod_n+21": 7067427914486577523202607100962913027,
+        "fold_band_hi": 35467867950630730409719218828008113425,
+        "fold_band_hi+7": 35467867950630730409719218828008113432,
+        "fold_band_lo": 28335075847045231489663520065448426222,
+        "fold_band_lo+7": 28335075847045231489663520065448426229
+      },
+      "scores": {
+        "gap": 36996411866737336055644976845465546127,
+        "h7": 92772757448290221718228119830351706948,
+        "gap+21": 204325448611395993043394405800124028632,
+        "fold_mod_n": 256405793249363634655231730053123109,
+        "fold_mod_n+7": 1670521762939621934378066355250650690,
+        "fold_mod_n+21": 1543051039168984450757944575104577777,
+        "fold_band_hi": 16269469520974720475362004873017364843,
+        "fold_band_hi+7": 378727448340943478749330992291814457,
+        "fold_band_lo": 1405546204723657879832315435699227305,
+        "fold_band_lo+7": 2666171194509943498953537826797307394
+      },
+      "best_at_hi": "fold_mod_n",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 7067427914486577523202607100962913006,
+          "hi_score": 256405793249363634655231730053123109,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": true
+        },
+        "fold_mod_n+7": {
+          "offset": 7067427914486577523202607100962913013,
+          "hi_score": 1670521762939621934378066355250650690,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 7067427914486577523202607100962913027,
+          "hi_score": 1543051039168984450757944575104577777,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 35467867950630730409719218828008113425,
+          "hi_score": 16269469520974720475362004873017364843,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 35467867950630730409719218828008113432,
+          "hi_score": 378727448340943478749330992291814457,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 28335075847045231489663520065448426222,
+          "hi_score": 1405546204723657879832315435699227305,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 28335075847045231489663520065448426229,
+          "hi_score": 2666171194509943498953537826797307394,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 130,
+      "solved": true,
+      "lo": 680564733841876926926749214863536422912,
+      "hi": 1361129467683753853853498429727072845823,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 928709081118094197001077563336399668497,
+        "fold_band_hi+7": 928709081118094197001077563336399668504,
+        "fold_band_lo": 1112985120407536583779170081254209600238,
+        "fold_band_lo+7": 1112985120407536583779170081254209600245
+      },
+      "scores": {
+        "gap": 122874527151305541063652615909456724853,
+        "h7": 15349091095655910415905185595459328721,
+        "gap+21": 140624058976080843477400077785381741394,
+        "fold_mod_n": 122874527151305541063652615909456724853,
+        "fold_mod_n+7": 15349091095655910415905185595459328721,
+        "fold_mod_n+21": 140624058976080843477400077785381741394,
+        "fold_band_hi": 80364151154640407995663659389116548651,
+        "fold_band_hi+7": 257959310291495473101049627472077866861,
+        "fold_band_lo": 227828078728722076066158707495485101249,
+        "fold_band_lo+7": 54479442943520208433647245145688499832
+      },
+      "best_at_hi": "h7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 122874527151305541063652615909456724853,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 15349091095655910415905185595459328721,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 140624058976080843477400077785381741394,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 928709081118094197001077563336399668497,
+          "hi_score": 80364151154640407995663659389116548651,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 928709081118094197001077563336399668504,
+          "hi_score": 257959310291495473101049627472077866861,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 1112985120407536583779170081254209600238,
+          "hi_score": 227828078728722076066158707495485101249,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 1112985120407536583779170081254209600245,
+          "hi_score": 54479442943520208433647245145688499832,
+          "in_band": true,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 135,
+      "solved": false,
+      "lo": 21778071482940061661655974875633165533184,
+      "hi": 43556142965880123323311949751266331066367,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 43123722579314463666459528884875657889041,
+        "fold_band_hi+7": 43123722579314463666459528884875657889048,
+        "fold_band_lo": 22210491869505721318508395742023838710510,
+        "fold_band_lo+7": 22210491869505721318508395742023838710517
+      },
+      "scores": {
+        "gap": 114304406025567936440659289757036201149,
+        "h7": 34800163195151732473538560113217338144,
+        "gap+21": 99411084929068586550486606536948760617,
+        "fold_mod_n": 114304406025567936440659289757036201149,
+        "fold_mod_n+7": 34800163195151732473538560113217338144,
+        "fold_mod_n+21": 99411084929068586550486606536948760617,
+        "fold_band_hi": 2707915162256377860523834933172562122733,
+        "fold_band_hi+7": 2706420025667866889531839928637565982503,
+        "fold_band_lo": 8704089544595011133695126156610668603883,
+        "fold_band_lo+7": 8701186598733210882526568758328744078645
+      },
+      "best_at_hi": "h7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 114304406025567936440659289757036201149,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 34800163195151732473538560113217338144,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 99411084929068586550486606536948760617,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 43123722579314463666459528884875657889041,
+          "hi_score": 2707915162256377860523834933172562122733,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 43123722579314463666459528884875657889048,
+          "hi_score": 2706420025667866889531839928637565982503,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 22210491869505721318508395742023838710510,
+          "hi_score": 8704089544595011133695126156610668603883,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 22210491869505721318508395742023838710517,
+          "hi_score": 8701186598733210882526568758328744078645,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 140,
+      "solved": false,
+      "lo": 696898287454081973172991196020261297061888,
+      "hi": 1393796574908163946345982392040522594123775,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 1393364154521598286689129971174131920946449,
+        "fold_band_hi+7": 1393364154521598286689129971174131920946456,
+        "fold_band_lo": 697330707840647632829843616886651970239214,
+        "fold_band_lo+7": 697330707840647632829843616886651970239221
+      },
+      "scores": {
+        "gap": 96382416310866891386987038875034632025,
+        "h7": 133637638744648659188336533192569345243,
+        "gap+21": 161257362290020103486562810937104122432,
+        "fold_mod_n": 96382416310866891386987038875034632025,
+        "fold_mod_n+7": 133637638744648659188336533192569345243,
+        "fold_mod_n+21": 161257362290020103486562810937104122432,
+        "fold_band_hi": 310715885851247938887178185417829974004100,
+        "fold_band_hi+7": 310715957236291685122402999014504151406007,
+        "fold_band_lo": 245891696904200255399234749193247268821273,
+        "fold_band_lo+7": 245891839541488426695343420618060521298934
+      },
+      "best_at_hi": "gap",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 96382416310866891386987038875034632025,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 133637638744648659188336533192569345243,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 161257362290020103486562810937104122432,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 1393364154521598286689129971174131920946449,
+          "hi_score": 310715885851247938887178185417829974004100,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1393364154521598286689129971174131920946456,
+          "hi_score": 310715957236291685122402999014504151406007,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 697330707840647632829843616886651970239214,
+          "hi_score": 245891696904200255399234749193247268821273,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 697330707840647632829843616886651970239221,
+          "hi_score": 245891839541488426695343420618060521298934,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 145,
+      "solved": false,
+      "lo": 22300745198530623141535718272648361505980416,
+      "hi": 44601490397061246283071436545296723011960831,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 44601057976674680623414584124430332338783505,
+        "fold_band_hi+7": 44601057976674680623414584124430332338783512,
+        "fold_band_lo": 22301177618917188801192570693514752179157742,
+        "fold_band_lo+7": 22301177618917188801192570693514752179157749
+      },
+      "scores": {
+        "gap": 47348003147878387277423073044143189604,
+        "h7": 56916628069101161303858143588468217618,
+        "gap+21": 76053877911546709356728284677118273772,
+        "fold_mod_n": 47348003147878387277423073044143189604,
+        "fold_mod_n+7": 56916628069101161303858143588468217618,
+        "fold_mod_n+21": 76053877911546709356728284677118273772,
+        "fold_band_hi": 17431503550744743300813810745781364739598391,
+        "fold_band_hi+7": 17431503563229301491264201908391257086829906,
+        "fold_band_lo": 2669089572077619863403093330638921853644876,
+        "fold_band_lo+7": 2669089597046010016625983439727854592344661
+      },
+      "best_at_hi": "gap",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 47348003147878387277423073044143189604,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 56916628069101161303858143588468217618,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 76053877911546709356728284677118273772,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 44601057976674680623414584124430332338783505,
+          "hi_score": 17431503550744743300813810745781364739598391,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 44601057976674680623414584124430332338783512,
+          "hi_score": 17431503563229301491264201908391257086829906,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 22301177618917188801192570693514752179157742,
+          "hi_score": 2669089572077619863403093330638921853644876,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 22301177618917188801192570693514752179157749,
+          "hi_score": 2669089597046010016625983439727854592344661,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 150,
+      "solved": false,
+      "lo": 713623846352979940529142984724747568191373312,
+      "hi": 1427247692705959881058285969449495136382746623,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 1427247260285573315398629117028628745709569297,
+        "fold_band_hi+7": 1427247260285573315398629117028628745709569304,
+        "fold_band_lo": 713624278773366506188799837145613958864550638,
+        "fold_band_lo+7": 713624278773366506188799837145613958864550645
+      },
+      "scores": {
+        "gap": 43034907458965305018430709687838480276,
+        "h7": 185586284180604215675347654914076087443,
+        "gap+21": 38268651058222380136760678975878124430,
+        "fold_mod_n": 43034907458965305018430709687838480276,
+        "fold_mod_n+7": 185586284180604215675347654914076087443,
+        "fold_mod_n+21": 38268651058222380136760678975878124430,
+        "fold_band_hi": 642940623123898753165064877998488394965058529,
+        "fold_band_hi+7": 642940623123941942683197219202811718798327358,
+        "fold_band_lo": 9122047384050778182314527663970259731920090,
+        "fold_band_lo+7": 9122047383964399224561866280477249840903330
+      },
+      "best_at_hi": "gap+21",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 43034907458965305018430709687838480276,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 185586284180604215675347654914076087443,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 38268651058222380136760678975878124430,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 1427247260285573315398629117028628745709569297,
+          "hi_score": 642940623123898753165064877998488394965058529,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1427247260285573315398629117028628745709569304,
+          "hi_score": 642940623123941942683197219202811718798327358,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 713624278773366506188799837145613958864550638,
+          "hi_score": 9122047384050778182314527663970259731920090,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 713624278773366506188799837145613958864550645,
+          "hi_score": 9122047383964399224561866280477249840903330,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 155,
+      "solved": false,
+      "lo": 22835963083295358096932575511191922182123945984,
+      "hi": 45671926166590716193865151022383844364247891967,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 45671925734170329628205494169962977973574714641,
+        "fold_band_hi+7": 45671925734170329628205494169962977973574714648,
+        "fold_band_lo": 22835963515715744662592232363612788572797123310,
+        "fold_band_lo+7": 22835963515715744662592232363612788572797123317
+      },
+      "scores": {
+        "gap": 110091568484602171397816905174677169209,
+        "h7": 137106353592503844741498057558413913537,
+        "gap+21": 199081811181056220167707116633922901640,
+        "fold_mod_n": 110091568484602171397816905174677169209,
+        "fold_mod_n+7": 137106353592503844741498057558413913537,
+        "fold_mod_n+21": 199081811181056220167707116633922901640,
+        "fold_band_hi": 11635241825214633100843686676072547895080336445,
+        "fold_band_hi+7": 11635241825214639535448906760583814352718603497,
+        "fold_band_lo": 417799006646923638748696658802008556364843521,
+        "fold_band_lo+7": 417799006646910769538622025633666965204597174
+      },
+      "best_at_hi": "gap",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 110091568484602171397816905174677169209,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": true,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 137106353592503844741498057558413913537,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 199081811181056220167707116633922901640,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 45671925734170329628205494169962977973574714641,
+          "hi_score": 11635241825214633100843686676072547895080336445,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 45671925734170329628205494169962977973574714648,
+          "hi_score": 11635241825214639535448906760583814352718603497,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 22835963515715744662592232363612788572797123310,
+          "hi_score": 417799006646923638748696658802008556364843521,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 22835963515715744662592232363612788572797123317,
+          "hi_score": 417799006646910769538622025633666965204597174,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    },
+    {
+      "puzzle": 160,
+      "solved": false,
+      "lo": 730750818665451459101842416358141509827966271488,
+      "hi": 1461501637330902918203684832716283019655932542975,
+      "folded": {
+        "fold_mod_n": 432420386565659656852420866390673177326,
+        "fold_mod_n+7": 432420386565659656852420866390673177333,
+        "fold_mod_n+21": 432420386565659656852420866390673177347,
+        "fold_band_hi": 1461501636898482531638025175863862153265259365649,
+        "fold_band_hi+7": 1461501636898482531638025175863862153265259365656,
+        "fold_band_lo": 730750819097871845667502073210562376218639448814,
+        "fold_band_lo+7": 730750819097871845667502073210562376218639448821
+      },
+      "scores": {
+        "gap": 112364559227540337509116595048006940694,
+        "h7": 27639852567736900006359275638183761207,
+        "gap+21": 141809560751869974999155363181462597935,
+        "fold_mod_n": 112364559227540337509116595048006940694,
+        "fold_mod_n+7": 27639852567736900006359275638183761207,
+        "fold_mod_n+21": 141809560751869974999155363181462597935,
+        "fold_band_hi": 525775447571220150267317196455167369017655958792,
+        "fold_band_hi+7": 525775447571220149780617178811401736626754751060,
+        "fold_band_lo": 17332361061625838941221007331637431436953315404,
+        "fold_band_lo+7": 17332361061625837967820972908117554411842749048
+      },
+      "best_at_hi": "h7",
+      "variants": {
+        "fold_mod_n": {
+          "offset": 432420386565659656852420866390673177326,
+          "hi_score": 112364559227540337509116595048006940694,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+7": {
+          "offset": 432420386565659656852420866390673177333,
+          "hi_score": 27639852567736900006359275638183761207,
+          "in_band": false,
+          "beats_gap": true,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_mod_n+21": {
+          "offset": 432420386565659656852420866390673177347,
+          "hi_score": 141809560751869974999155363181462597935,
+          "in_band": false,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi": {
+          "offset": 1461501636898482531638025175863862153265259365649,
+          "hi_score": 525775447571220150267317196455167369017655958792,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_hi+7": {
+          "offset": 1461501636898482531638025175863862153265259365656,
+          "hi_score": 525775447571220149780617178811401736626754751060,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo": {
+          "offset": 730750819097871845667502073210562376218639448814,
+          "hi_score": 17332361061625838941221007331637431436953315404,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        },
+        "fold_band_lo+7": {
+          "offset": 730750819097871845667502073210562376218639448821,
+          "hi_score": 17332361061625837967820972908117554411842749048,
+          "in_band": true,
+          "beats_gap": false,
+          "beats_h7": false,
+          "best_at_hi": false
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Folded offsets used directly as public-x shift and score modulus.",
+    "in_band: offset value in [2^(n-1), 2^n-1].",
+    "h7 = full gap+7; fold_mod_n+7 = puzzle-scaled defect + curve constant."
+  ]
+}

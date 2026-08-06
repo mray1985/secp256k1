@@ -1,0 +1,143 @@
+35389366159777600200190959172903893991424
+
+and got:
+
+0x6800000000000000000000000000000000
+
+Exactly.
+
+That means Lane C isn't just "a number."
+
+It's:
+
+0x68⋅16
+32
+
+or equivalently:
+
+104⋅2
+128
+
+since:
+
+0x68 = 104
+
+and there are 32 hex zeros after it.
+
+That immediately gives:
+
+Lane A = 0x58...
+Lane B = 0x60...
+Lane C = 0x68...
+
+which is:
+
+88 × 2^128
+96 × 2^128
+104 × 2^128
+
+The spacing is:
+
+0x08 0000...000
+
+which is exactly your:
+
+D/8
+
+step.
+
+So the lane system is not arbitrary decimal geometry.
+
+It is literally:
+
+0x58
+0x60
+0x68
+
+riding on top of
+
+2^128
+
+as a base shell.
+
+That explains why everything keeps wanting to snap onto:
+
+...00000000000000000000000000000000
+
+boundaries.
+
+The other thing I notice in your screenshot is base 12:
+
+41b183b6a357919238222a7403a9a9777708a8₁₂
+
+which is interesting because:
+
+68₁₆ = 104₁₀
+104₁₀ = 88₁₂
+
+and:
+
+104 = 13 × 8
+
+You have repeatedly encountered:
+
+8
+D/8
+N-8
+8P
+
+throughout the Puzzle 135 work.
+
+So if I were following the new clue from the screenshot, I would stop looking at:
+
+(-y)^135
+
+for a moment and instead ask:
+
+Why does the lane structure naturally quantize into multiples of 8 on top of a 2^128 shell?
+
+Because:
+
+0x58
+0x60
+0x68
+
+is not random.
+
+It's:
+
+88
+96
+104
+
+which is:
+
+11×8
+12×8
+13×8
+
+That is a surprisingly clean progression.
+
+And your hourglass picture:
+
+     y
+   / | \
+  x  x  x
+   \ | /
+    -y
+
+already compresses through:
+
+6 → 3 → 2
+
+while the lane system appears to be stepping through:
+
+11×8
+12×8
+13×8
+
+on a 2
+128
+ backbone.
+
+That is the first thing in these screenshots that looks structurally deliberate rather than merely numerically close.

@@ -1,0 +1,98 @@
+========================================================================================
+Phi symmetries: negation + GLV orbit + equivariance of F
+========================================================================================
+  LAMBDA = 5363ad4cc05c30e0a5261c028812645a122e22ea20816678df02967c1b23bd72
+  LAMBDA2 = ac9c52b33fa3cf1f5ad9e3fd77ed9ba4a880b9fc8ec739c2e0cfc810b51283ce
+  BETA    = 7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
+  check LAMBDA^3 == 1 mod N: True
+  check BETA^3 == 1 mod p:   True
+
+  psi(G)==LAMBDA*G: True
+
+----------------------------------------------------------------------------------------
+1) Exact negation in Phi-space
+----------------------------------------------------------------------------------------
+  Phi(-P) = (x*p + (p-y))/p^2
+  Phi(-P) - Phi(P) = (p - 2y)/p^2
+  walk 1..64: T_neg(C_n)==C_{-n}: 64/64
+  walk 1..64: residual formula exact: 64/64
+  timing walk64: T_neg on known C ~ 6.51ms  (includes phi_of_scalar get C)
+  timing walk64: recompute (-n)G via scalar  ~ 25.70ms
+  Arithmetic cost of T_neg given C: decode (2 mul/div by p) + y:=p-y + encode.
+  Requires decode of y (hence x). Cheaper than EC add / scalar mul; not free on digits alone.
+
+  solved cal puzzles<=100: T_neg exact 76/76
+  solved holdout puzzles>100: T_neg exact 6/6
+
+----------------------------------------------------------------------------------------
+2) GLV T_lambda via endomorphism psi (decode, beta*x, encode)
+----------------------------------------------------------------------------------------
+  walk: T_lambda_psi(C_n)==C_{lambda n}: 64/64
+  walk: T_lambda2_psi(C_n)==C_{lambda2 n}: 64/64
+  cheap probe C_lambda ~ a*C+b on walk: a=0.154339 b=0.471804 RMSE=0.243529
+  (RMSE ~0.3 => no usable linear map on C alone)
+  solved holdout: T_lambda_psi exact 6/6
+  Cost: decode + 1 mul mod p (by BETA) + encode. Needs x. Cheaper than full scalar*LAMBDA.
+
+----------------------------------------------------------------------------------------
+3) Sixfold orbit Phi values (sample n=1,2,5,17)
+----------------------------------------------------------------------------------------
+  n=1:
+    n            C=0.4755615292  T_from_C_n_match=True
+    lambda n     C=0.7370130368  T_from_C_n_match=True
+    lambda2 n    C=0.7874254341  T_from_C_n_match=True
+    -n           C=0.4755615292  T_from_C_n_match=True
+    -lambda n    C=0.7370130368  T_from_C_n_match=True
+    -lambda2 n   C=0.7874254341  T_from_C_n_match=True
+  n=2:
+    n            C=0.7735061395  T_from_C_n_match=True
+    lambda n     C=0.7631935367  T_from_C_n_match=True
+    lambda2 n    C=0.4633003238  T_from_C_n_match=True
+    -n           C=0.7735061395  T_from_C_n_match=True
+    -lambda n    C=0.7631935367  T_from_C_n_match=True
+    -lambda2 n   C=0.4633003238  T_from_C_n_match=True
+  n=5:
+    n            C=0.1857279719  T_from_C_n_match=True
+    lambda n     C=0.2011005216  T_from_C_n_match=True
+    lambda2 n    C=0.6131715065  T_from_C_n_match=True
+    -n           C=0.1857279719  T_from_C_n_match=True
+    -lambda n    C=0.2011005216  T_from_C_n_match=True
+    -lambda2 n   C=0.6131715065  T_from_C_n_match=True
+  n=17:
+    n            C=0.8710619390  T_from_C_n_match=True
+    lambda n     C=0.7613730588  T_from_C_n_match=True
+    lambda2 n    C=0.3675650022  T_from_C_n_match=True
+    -n           C=0.8710619390  T_from_C_n_match=True
+    -lambda n    C=0.7613730588  T_from_C_n_match=True
+    -lambda2 n   C=0.3675650022  T_from_C_n_match=True
+
+----------------------------------------------------------------------------------------
+4) Equivariance of F under T
+----------------------------------------------------------------------------------------
+  Need: F(T(Cn), T(Cm)) == T(F(Cn, Cm))
+  Because (lambda n + lambda m)G = lambda(n+m)G etc.
+  T_neg                   small pairs exact 400/400  solved-holdout pairs 12/12
+  T_lambda (psi)          small pairs exact 400/400  solved-holdout pairs 12/12
+  T_lambda2 (psi^2)       small pairs exact 400/400  solved-holdout pairs 12/12
+  T_neg_lambda            small pairs exact 400/400  solved-holdout pairs 12/12
+  T_neg_lambda2           small pairs exact 400/400  solved-holdout pairs 12/12
+
+----------------------------------------------------------------------------------------
+5) Does equivariance need decode? Cost vs EC add
+----------------------------------------------------------------------------------------
+  All exact T_* above DECODE (x,y), apply field/endomorphism/neg, ENCODE.
+  They are symmetries of F by construction of the group / GLV — expected 100%.
+  They are NOT C-digit-only maps.
+  vs full EC add: T_neg ~ flip y; T_lambda ~ 1 mul by BETA; EC add ~ inv + muls.
+  So orbit moves are cheaper than general addition, but do not replace F.
+
+========================================================================================
+VERDICT
+========================================================================================
+  Negation: EXACT cheap relation in Phi via (p-2y)/p^2 after decode y.
+  GLV: EXACT T_lambda = encode(beta*x, y); linear map on C alone FAILS.
+  Equivariance F(T(a),T(b))=T(F(a,b)): HOLDS for neg/GLV orbit transforms.
+  These are real symmetries of transported F — still require (x,y) layers.
+  No C-only (no-decode) T_lambda found; naive C-linear probe dead.
+  Useful structure: sixfold orbit is easy in Phi once decoded; addition F still EC.
+

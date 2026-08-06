@@ -1,0 +1,21 @@
+Overnight setup (auto-run while you sleep)
+==========================================
+
+Pruned:
+- puzzle160_keyhunt_bsgs\bloom_archive (~8 GB) — rebuild with rebuild_bloom.bat if P160 resumes
+- ~478 one-off .py scripts in Desktop\secp256k1 root
+- __pycache__, F:\puzzle71_bsgs test
+
+Kept Python (root):
+- puzzle71_harvester.py, puzzle_da_sequence.py, puzzle71_da_draft.py, puzzle71_multiplier_area.py
+- puzzle160_complement_focus.py, puzzle160_epsilon_ladder.py, barcode160_window_search.py
+- hashkeys_rsz.py, genesis_calibration.py, decode_genesis_poetic.py, verify_new_candidates_P160.py
+- All of puzzle71_bsgs\, puzzle160_keyhunt_bsgs\ (bats), 02_Research\, ECDLP\
+
+Baby build:
+- Output: C:\puzzle71_bsgs\baby\baby_h160.bin
+- Uses --auto-fit (~52%% of full 2^35 table, ~415 GB h160)
+- Log: C:\puzzle71_bsgs\logs\baby_c_autofit.log
+- Resume: python build_baby_h160.py --out-dir C:\puzzle71_bsgs\baby --auto-fit --start-r N
+
+Full deleted file list: C:\puzzle71_bsgs\logs\pruned_files.txt

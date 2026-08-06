@@ -1,0 +1,74 @@
+P135 CLOUD PAGE SCROLL
+  band width 2^134 keys ~ 2.177807e+40
+  ECDSA available: True
+
+=== Page levels ===
+  mega  K=1.000000e+39  pages=22  cf_mult=8.831469e+36
+  mid   K=1.000000e+18  pages=21778071482940061661656  cf_mult=8.831469e+15
+  fine  K=1.000000e+03  pages=21778071482940061661655974875633165534  cf_mult=8.831469e+00
+
+  shelf2 anchor (mod LO) = 12399803124245147579303535673221407674145
+  kanga in-band: 1612  mega-page buckets: 1
+  top mega-pages by kanga density:
+    page  12: count=1612  d=[33778071482940061661655974875633165533184, 34778071482940061661655974875633165533183]
+
+=== Top 10 kanga by CF score (K=1000 ref) ===
+  cf=9.990000e+02  d=34619168108456337743001979373353238970919  mega_page=12  q1~5095635248854424535681991524909464944640  ec=False
+  cf=9.990000e+02  d=34619168108456337743038872861500658074151  mega_page=12  q1~5095635248854424535681991524909464944640  ec=False
+  cf=9.990000e+02  d=34394242258433480865087735229416640780578  mega_page=12  q1~5062528153786041380453269381804757876736  ec=False
+  cf=9.990000e+02  d=34394242258433480865124628717564059883810  mega_page=12  q1~5062528153786041380453269381804757876736  ec=False
+  cf=9.990000e+02  d=34391072195652521148120310843663539546071  mega_page=12  q1~5062061548592146368786171315347880148992  ec=False
+  cf=9.990000e+02  d=34391072195652521148157204331810958649303  mega_page=12  q1~5062061548592146368786171315347880148992  ec=False
+  cf=9.990000e+02  d=34390660986042838695508907437834449295876  mega_page=12  q1~5062001022175821191163764241635473358848  ec=False
+  cf=9.990000e+02  d=34390660986042838695545800925981868399108  mega_page=12  q1~5062001022175821191163764241635473358848  ec=False
+  cf=9.990000e+02  d=34389749191559523262808106598529114038170  mega_page=12  q1~5061866814095074033592383149862400557056  ec=False
+  cf=9.990000e+02  d=34389749191559523262845000086676533141402  mega_page=12  q1~5061866814095074033592383149862400557056  ec=False
+
+=== Running up to 44 shards from shards_mega_K1000000000000000000000000000000000000000.jsonl ===
+  shard 1 page=0 tested=1 hit=False elapsed=0.00s
+  shard 2 page=0 tested=50001 hit=False elapsed=5.68s
+  shard 3 page=1 tested=1 hit=False elapsed=0.00s
+  shard 4 page=1 tested=50001 hit=False elapsed=16.05s
+  shard 5 page=2 tested=1 hit=False elapsed=0.00s
+  shard 6 page=2 tested=50001 hit=False elapsed=15.65s
+  shard 7 page=3 tested=1 hit=False elapsed=0.00s
+  shard 8 page=3 tested=50001 hit=False elapsed=15.47s
+  shard 9 page=4 tested=1 hit=False elapsed=0.00s
+  shard 10 page=4 tested=50001 hit=False elapsed=17.27s
+  shard 11 page=5 tested=1 hit=False elapsed=0.00s
+  shard 12 page=5 tested=50001 hit=False elapsed=16.63s
+  shard 13 page=6 tested=1 hit=False elapsed=0.00s
+  shard 14 page=6 tested=50001 hit=False elapsed=16.16s
+  shard 15 page=7 tested=1 hit=False elapsed=0.00s
+  shard 16 page=7 tested=50001 hit=False elapsed=16.96s
+  shard 17 page=8 tested=1 hit=False elapsed=0.00s
+  shard 18 page=8 tested=50001 hit=False elapsed=15.94s
+  shard 19 page=9 tested=1 hit=False elapsed=0.00s
+  shard 20 page=9 tested=50001 hit=False elapsed=17.04s
+  shard 21 page=10 tested=1 hit=False elapsed=0.00s
+  shard 22 page=10 tested=50001 hit=False elapsed=16.55s
+  shard 23 page=11 tested=1 hit=False elapsed=0.00s
+  shard 24 page=11 tested=50001 hit=False elapsed=16.84s
+  shard 25 page=12 tested=50001 hit=False elapsed=20.43s
+  shard 26 page=12 tested=50001 hit=False elapsed=18.17s
+  shard 27 page=13 tested=1 hit=False elapsed=0.00s
+  shard 28 page=13 tested=50001 hit=False elapsed=16.57s
+  shard 29 page=14 tested=1 hit=False elapsed=0.00s
+  shard 30 page=14 tested=50001 hit=False elapsed=16.02s
+  shard 31 page=15 tested=1 hit=False elapsed=0.00s
+  shard 32 page=15 tested=50001 hit=False elapsed=15.32s
+  shard 33 page=16 tested=1 hit=False elapsed=0.00s
+  shard 34 page=16 tested=50001 hit=False elapsed=16.01s
+  shard 35 page=17 tested=1 hit=False elapsed=0.00s
+  shard 36 page=17 tested=50001 hit=False elapsed=15.27s
+  shard 37 page=18 tested=1 hit=False elapsed=0.00s
+  shard 38 page=18 tested=50001 hit=False elapsed=16.87s
+  shard 39 page=19 tested=1 hit=False elapsed=0.00s
+  shard 40 page=19 tested=50001 hit=False elapsed=15.31s
+  shard 41 page=20 tested=1 hit=False elapsed=0.00s
+  shard 42 page=20 tested=50001 hit=False elapsed=15.71s
+  shard 43 page=21 tested=1 hit=False elapsed=0.00s
+  shard 44 page=21 tested=50001 hit=False elapsed=16.11s
+
+  total tested=1150044  elapsed=368.02s  rate=3125 d/s
+  EC hits=0

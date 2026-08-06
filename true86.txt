@@ -1,0 +1,83 @@
+n the mid-1990s, some people involved in defining new standard curves (which would happen under the aegis of SECG starting in 1998) tried to generate verifiably random curve elements.
+
+These people were working notably on curves over binary field, in particular the famous Koblitz curves (y2+xy=x3+ax2+1, with a=0 or 1, in F2m). Such curves have an even cofactor, in practice 2 or 4. The algorithm expressed in SEC 1 will then produce (with SHA-1) a "short X" point, and there would be a multiplication of the point by 2.
+
+Somebody, at some point, worked over the other kind of Koblitz curves, those that are over prime fields (y2=x3+b over Fp, with p prime and p=1mod3). Curve secp256k1 is of that kind. By analogy with the first kind of Koblitz curves, the same generating code may have been imported "as is", or with only a slight variant, and including the final multiplication by 2 of the point, which is not needed (but harmless) for a prime order curve.
+
+It is probable that however the points were initially chosen, they just "stuck". This is a common phenomenon: once some test values have been disseminated, it is very very hard to correct them afterwards, because that would imply that several people must fix their code accordingly. This won't happen if there is not a good reason to do so. And, as @poncho points out, the general understanding is that the choice of the generator has no significance for security, and cannot be "backdoored", and thus does not require verifiable randomness.
+
+What you quoted is actually a well-known historical explanation for why secp256k1's generator G looks the way it does.
+
+The key idea is:
+
+The generator may not have been chosen through a deep cryptographic process at all. It may have been the output of an automated point-generation procedure that was reused from earlier Koblitz-curve work, including a final "multiply by 2" step that was necessary for curves with cofactor 2 or 4, but unnecessary for a prime-order curve like secp256k1.
+
+If that's true, then:
+
+Generated point P
+        ↓
+Final step: G = 2P
+
+and the published generator is simply:
+
+G=2P
+
+where P was the original candidate point.
+
+What's interesting relative to your recent work is that you've been repeatedly encountering:
+
+2 poles
+3 x's
+6 d's
+D/8
+N-8
+8P
+
+and now you're reading a hypothesis that the generator itself may have undergone a final:
+
+×2
+
+operation.
+
+That doesn't imply a weakness, but it does mean that a doubling operation could literally be embedded in the historical construction of G.
+
+The important cryptographic distinction is:
+
+Historical generation
+
+If the original unpublished point was P,
+
+G=2P
+
+is perfectly plausible.
+
+Discrete log problem
+
+Knowing that G=2P does not give:
+
+d
+
+from
+
+Q=dG
+
+because:
+
+Q=d(2P)=2(dP)
+
+and the unknown scalar is still there.
+
+So the observation is interesting structurally but doesn't automatically create a shortcut.
+
+What I find more relevant to your lane work is the philosophical point at the end:
+
+Once test vectors and parameters are distributed, they tend to become permanent.
+
+That means many things that look mysterious in secp256k1 may simply be artifacts of the original generation process that nobody bothered to change later because there was no security reason to do so.
+
+In other words:
+
+Some structures are fundamental mathematics.
+Some structures are historical fingerprints.
+
+One of the hardest parts of your Puzzle 135 exploration is distinguishing between those two categories. The lane identities you've derived (exact arithmetic equalities) are much stronger evidence than patterns that can be explained by how parameters were originally generated.

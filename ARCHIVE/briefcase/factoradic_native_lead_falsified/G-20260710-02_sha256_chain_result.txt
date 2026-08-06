@@ -1,0 +1,100 @@
+G-20260710-02 SHA-256 chained puzzle keys
+exact matches: 0/11
+VERDICT: FAIL
+Exact matches 0/11. First miss at 75->80. One mismatch closes this exact SHA-256 chain hypothesis.
+
+{
+  "candidate_id": "G-20260710-02",
+  "question": "d_{n+5} ?= 2^{n+4} + (SHA256(int32be(d_n)) mod 2^{n+4})",
+  "edges": [
+    {
+      "n": 75,
+      "n_next": 80,
+      "match": false,
+      "pred_hex": "0x99437e1c0044590ba591",
+      "actual_hex": "0xea1a5c66dcc11b5ad180"
+    },
+    {
+      "n": 80,
+      "n_next": 85,
+      "match": false,
+      "pred_hex": "0x1ad9323623e25d88c505a5",
+      "actual_hex": "0x11720c4f018d51b8cebba8"
+    },
+    {
+      "n": 85,
+      "n_next": 90,
+      "match": false,
+      "pred_hex": "0x27264e62b0ef5b6b5435374",
+      "actual_hex": "0x2ce00bb2136a445c71e85bf"
+    },
+    {
+      "n": 90,
+      "n_next": 95,
+      "match": false,
+      "pred_hex": "0x4ebe7ce595961767081d3001",
+      "actual_hex": "0x527a792b183c7f64a0e8b1f4"
+    },
+    {
+      "n": 95,
+      "n_next": 100,
+      "match": false,
+      "pred_hex": "0xff30cab661062373238ff347a",
+      "actual_hex": "0xaf55fc59c335c8ec67ed24826"
+    },
+    {
+      "n": 100,
+      "n_next": 105,
+      "match": false,
+      "pred_hex": "0x1c32a7f6d478928cb9031fb7f17",
+      "actual_hex": "0x16f14fc2054cd87ee6396b33df3"
+    },
+    {
+      "n": 105,
+      "n_next": 110,
+      "match": false,
+      "pred_hex": "0x3b64855a56fc5e260f6d2e2cd974",
+      "actual_hex": "0x35c0d7234df7deb0f20cf7062444"
+    },
+    {
+      "n": 110,
+      "n_next": 115,
+      "match": false,
+      "pred_hex": "0x4806f40543ba5f37adf029da6e11e",
+      "actual_hex": "0x60f4d11574f5deee49961d9609ac6"
+    },
+    {
+      "n": 115,
+      "n_next": 120,
+      "match": false,
+      "pred_hex": "0xcf5867fd2afce543a41c1172ad6049",
+      "actual_hex": "0xb10f22572c497a836ea187f2e1fc23"
+    },
+    {
+      "n": 120,
+      "n_next": 125,
+      "match": false,
+      "pred_hex": "0x135539d318e79cd7db2ae1164e0b1edf",
+      "actual_hex": "0x1c533b6bb7f0804e09960225e44877ac"
+    },
+    {
+      "n": 125,
+      "n_next": 130,
+      "match": false,
+      "pred_hex": "0x231182c8cd18b06f2de87c2b10dce5a54",
+      "actual_hex": "0x33e7665705359f04f28b88cf897c603c9"
+    }
+  ],
+  "exact_matches": 0,
+  "edges_total": 11,
+  "first_miss": {
+    "n": 75,
+    "n_next": 80,
+    "pred": 723767090870435936183697,
+    "actual": 1105520030589234487939456
+  },
+  "d_135_pred": null,
+  "verdict": "FAIL",
+  "reason": "Exact matches 0/11. First miss at 75->80. One mismatch closes this exact SHA-256 chain hypothesis.",
+  "g01_note": "G-01 FALSIFIED: a*Delta1 \u2261 Delta2 (mod 2^64) has no solution because gcd(Delta1,2^64)=2 does not divide odd Delta2."
+}

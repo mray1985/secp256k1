@@ -1,0 +1,27 @@
+{
+  "candidate_id": "F-20260709-04",
+  "short_name": "band_floor_doubled_x",
+  "formula": "u=d-2**(n-1); Q=P-[2**(n-1)]G; T=3*Qx**2*inv(2*Qy) mod p; X2=T**2-2*Qx mod p; score=Pearson(phi(u), phi(X2)); NOT T-as-score; no offset ladder; FORBIDDEN Q==[u]G",
+  "domains": "u in [0,2**(n-1)); Q,X2 in F_p",
+  "score_definition": "Pearson corr phi(u) vs phi(X2(Q))",
+  "expected_direction": "higher",
+  "allowed_parameters": {
+    "translation": "band floor 2**(n-1)",
+    "feature": "X2(Q) only",
+    "grid": "none"
+  },
+  "holdout_split": "train 1..50; test 51..70; ranges 1..35 / 36..70",
+  "null_families": [
+    "shuffle Q among u",
+    "random (n-1)-bit field",
+    "random EC",
+    "nearby height",
+    "sawtooth control"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "X2 is x([2]Q); phi(u) vs phi(X2) not implied by curve equation alone; must collapse under wrong Q attachment.",
+  "registered_date": "2026-07-09",
+  "evaluated_date": "2026-07-09",
+  "locked": true
+}

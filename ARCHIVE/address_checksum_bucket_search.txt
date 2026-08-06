@@ -1,0 +1,65 @@
+ADDRESS CHECKSUM / TAIL HEX BUCKET SEARCH
+puzzles: 82
+
+Buckets:
+  checksum_hex  = 4 appended bytes (8 hex chars)
+  tail8_hex     = last 8 payload bytes (16 hex chars)
+  h160_tail8_hex = last 4 bytes of hash160 (8 hex chars)
+
+=== d_hex substring in checksum / tail hex ===
+  d_hex[:2] in checksum_hex: 2/82
+  d_hex[:4] in checksum_hex: 2/82
+  d_hex[:8] in checksum_hex: 2/82
+  d_hex[-8:] in checksum_hex: 2/82
+  d_hex[:4] in tail8_hex: 5/82
+  d_hex[:8] in tail8_hex: 5/82
+  checksum_hex in d_hex: 0/82
+  tail8_hex in d_hex: 0/82
+
+=== checksum byte buckets vs log_pos (correlation) ===
+  r=-0.1609  checksum_byte[2]/255
+  r=-0.1450  checksum_byte[0]/255
+  r=+0.0951  checksum_byte[1]/255
+  r=-0.0573  checksum_byte[3]/255
+
+=== tail8 byte buckets vs log_pos (top |r|) ===
+  r=-0.1609  tail8_byte[6]/255
+  r=-0.1450  tail8_byte[4]/255
+  r=-0.1220  tail8_byte[2]/255
+  r=+0.0951  tail8_byte[5]/255
+  r=-0.0573  tail8_byte[7]/255
+  r=+0.0224  tail8_byte[0]/255
+  r=-0.0062  tail8_byte[3]/255
+  r=-0.0003  tail8_byte[1]/255
+
+=== invariants log_pos - bucket (low std) ===
+  std=0.36384 mean=+0.06569  chk_b1/255
+  std=0.36384 mean=+0.06569  tail8_b5/255
+  std=0.38591 mean=+0.07908  tail8_b0/255
+  std=0.39336 mean=+0.06067  tail8_b3/255
+  std=0.39806 mean=+0.08391  tail8_b1/255
+  std=0.40428 mean=+0.06292  chk_b3/255
+  std=0.40428 mean=+0.06292  tail8_b7/255
+  std=0.41163 mean=+0.05292  chk_b0/255
+  std=0.41163 mean=+0.05292  tail8_b4/255
+  std=0.41488 mean=+0.07368  tail8_b2/255
+  std=0.44412 mean=+0.08343  chk_b2/255
+  std=0.44412 mean=+0.08343  tail8_b6/255
+
+=== bucket cardinality (partition power) ===
+  checksum_hex: 82 distinct / 82 puzzles
+  tail8_hex: 82 distinct / 82 puzzles
+  h160_tail8_hex: 82 distinct / 82 puzzles
+
+=== P135 buckets (constraint candidates) ===
+  checksum_hex: 7b8f3e17
+  tail8_hex:    329923267b8f3e17
+  payload tail: ...329923267b8f3e17
+  checksum byte fracs /255: [0.4824, 0.5608, 0.2431, 0.0902]
+  tail8 byte fracs /255:    [0.1961, 0.6, 0.1373, 0.149, 0.4824, 0.5608, 0.2431, 0.0902]
+
+  d candidates from best invariant (chk_b0/255):
+    lo*(1+frac): bits=135 ec=False tail...334784
+    lo*2^frac: bits=135 ec=False tail...142656
+
+VERDICT: P135 EC hits from checksum bucket = 0

@@ -1,0 +1,206 @@
+TRUE48: DERIVING ORIGIN RULE FROM CUBE-ROOT ORBIT
+================================================================================
+
+TRUE47'S CHALLENGE
+----------------------------------------
+"Can the ternary digit pair (A,B) be derived from cube-root orbit membership?"
+
+Test proposed: For a solved puzzle with known d, generate the cube-root orbit
+{d, ω_N1·d, ω_N1²·d} and compute (r·d - z) mod 9 for all three.
+
+If the values cycle through {1, 4, 7} (cube roots of unity mod 9),
+then we've connected the Origin Rule directly to cube-root orbits.
+
+ANALYSIS
+----------------------------------------
+
+The direct test as stated has a problem: r and z are specific to each puzzle,
+so we cannot simply multiply d by ω_N1 and keep the same r, z.
+
+However, we can use a different approach.
+
+From true47, we know:
+- ω_N1 mod 9 = 4 (which IS a cube root of unity mod 9)
+- ω_p mod 9 = 8 (field cube root)
+- Cube roots of unity mod 9: {1, 4, 7}
+
+Verified puzzle data:
+- Ω = +1: (r·d - z) mod 9 = 4 = ω_N1 mod 9
+- Ω = -1: (r·d - z) mod 9 ∈ {3, 6}
+- Ω = 0: (r·d - z) mod 9 = 0
+
+This shows Ω = +1 corresponds to ω_N1 mod 9.
+
+But we need to show this is NOT coincidental.
+
+ALTERNATIVE TEST
+----------------------------------------
+
+Instead of generating hypothetical puzzles, let's look at the MATHEMATICAL
+structure of (r·d - z) mod 9 under cube-root transformation.
+
+From ECDSA: r·d = s·k - z + t·N
+
+So: r·d - z = s·k - 2z + t·N
+
+Now consider d' = ω_N1 · d mod N
+Then: r·d' = r·ω_N1·d = ω_N1·(r·d) = ω_N1·(s·k - z + t·N)
+
+So: r·d' - z = ω_N1·s·k - ω_N1·z + ω_N1·t·N - z
+
+This doesn't simplify to a function of (r·d - z) alone.
+
+However, modulo 9:
+- ω_N1 mod 9 = 4
+- N mod 9 = 7
+- ω_N1·N mod 9 = 4·7 = 28 ≡ 1 mod 9
+
+Interesting! ω_N1·N ≡ 1 mod 9
+
+Since N ≡ 7 mod 9 and ω_N1 ≡ 4 mod 9, we have 4·7 = 28 ≡ 1 mod 9.
+
+So: ω_N1·N ≡ 1 mod 9
+
+This means: ω_N1·t·N mod 9 = t·(ω_N1·N) mod 9 = t·1 mod 9 = t mod 9
+
+Now, r·d = s·k - z + t·N
+So: ω_N1·(r·d) = ω_N1·s·k - ω_N1·z + ω_N1·t·N
+
+Modulo 9:
+  ω_N1·(r·d) mod 9 = (ω_N1·s·k - ω_N1·z + t) mod 9
+
+Now, r·d' - z = ω_N1·(r·d) - z (from above, if we ignore the k and z terms...)
+
+Actually, this approach isn't working. Let me try a different angle.
+
+DIRECT EMPIRICAL TEST
+----------------------------------------
+
+Use Puzzle 120 (Ω = +1) where we know:
+- d = 0xb10f22572c497a836ea187f2e1fc23
+- r = 0xa285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a
+- z = 0x7e17cf7c5b7ccfaa4c7c05874e4fb4f12661662b8e33188e2e62b3739931ade5
+- (r·d - z) mod 9 = 4
+
+Compute the cube-root orbit:
+- d1 = d
+- d2 = ω_N1 · d mod N
+- d3 = ω_N1² · d mod N
+
+Now, for each di, we CANNOT compute (r·di - z) mod 9 with the same r, z,
+because r and z are specific to Puzzle 120's signature.
+
+However, we can ask: **What would (r·di - z) mod 9 be if Puzzle 120
+had private key di instead of d?**
+
+From ECDSA: s·k = z + r·di mod N
+So: r·di = s·k - z mod N
+
+Therefore: (r·di - z) mod 9 = (s·k - 2z) mod 9
+
+But s·k = z + r·d mod N, so:
+  (r·di - z) mod 9 = (z + r·d - 2z) mod 9 = (r·d - z) mod 9
+
+Wait, this doesn't depend on di! This can't be right.
+
+Let me recalculate:
+From ECDSA: s·k = z + r·di mod N
+So: r·di = s·k - z + t·N for some t
+Therefore: r·di - z = s·k - 2z + t·N
+
+So: (r·di - z) mod 9 = (s·k - 2z + t·N) mod 9
+
+But s·k = z + r·d mod N, so s·k = z + r·d + u·N for some u
+Therefore: (r·di - z) mod 9 = (z + r·d + u·N - 2z + t·N) mod 9
+                              = (r·d - z + (u+t)·N) mod 9
+
+Now, (r·d - z) mod 9 is known (it's 4 for Puzzle 120), and N mod 9 = 7.
+So: (r·di - z) mod 9 = (4 + (u+t)·7) mod 9
+
+This depends on (u+t) mod 9, which can be any value from 0 to 8.
+
+So (r·di - z) mod 9 can be ANY value, not just the cube roots of unity.
+
+This means the direct test won't work because r and z are tied to the
+specific private key d through the ECDSA equation.
+
+NEW APPROACH: LOOK AT THE FIELD SIDE
+----------------------------------------
+
+From true3d, we have the field cube root ω_p with:
+- ω_p mod 9 = 8
+- ω_p² mod 9 = 1
+- ω_p³ ≡ 1 mod p
+
+And from the x-coordinate spacing:
+- Px[i+1] = ω_p · Px[i] mod p
+
+From true42, we have:
+- Ω = +1: (r·d - z) mod 9 = 4 = ω_N1 mod 9
+
+Notice that ω_p² mod 9 = 1, and ω_N1 mod 9 = 4.
+
+Also, 4 is a cube root of unity mod 9 (4³ = 64 ≡ 1 mod 9).
+
+So we have:
+- Group cube root ω_N1 mod 9 = 4 ∈ {1, 4, 7} (cube roots of unity mod 9)
+- Field cube root ω_p mod 9 = 8 ∉ {1, 4, 7}
+
+But ω_p² mod 9 = 1, which IS a cube root of unity.
+
+So the field cube root squares to a cube root of unity mod 9.
+
+This suggests the connection is through the **square** or some power.
+
+OBSERVATION: Ω = +1 puzzles have (r·d - z) mod 9 = 4 = ω_N1 mod 9
+
+This is a direct numerical equality. The question is: Why is this NOT a coincidence?
+
+HYPOTHESIS: For puzzles with Ω = +1, the private key d is in the ω_N1 orbit.
+
+But we need to define what "ω_N1 orbit" means. If we consider the cosets of the
+subgroup H = {1, ω_N1, ω_N2} in (Z_N)*, then there are (N-1)/3 cosets.
+
+If d is in coset C_i, then ω_N1·d, ω_N2·d are also in C_i (by definition of coset).
+
+So all three are in the same orbit. The question is: Does each coset map to
+a specific Ω value?
+
+With only 4 puzzles, we can't test this directly.
+
+However, we can note that:
+- Ω = +1 puzzles: 120, 135, 150 (3 puzzles)
+- Ω = -1 puzzles: 100, 115, 160 (3 puzzles)
+- Ω = 0 puzzles: 90 (1 puzzle)
+
+7 puzzles, 3 Ω values. If the cube-root orbits partition the space into
+3 classes, and Ω also has 3 classes, then they COULD be the same partition.
+
+CONCLUSION
+----------------------------------------
+
+True47 is correct: We have a **correlation** but not yet a **derivation**.
+
+The strongest evidence:
+- Ω = +1: (r·d - z) mod 9 = 4 = ω_N1 mod 9
+- This is a direct numerical match
+
+But we cannot yet derive WHY this match occurs from first principles.
+
+To close this gap, we need either:
+1. More puzzles with known private keys to establish the pattern statistically
+2. A mathematical derivation showing how the cube-root structure induces the
+   base-3 pattern in (r·d - z) mod 9
+
+The derivation likely involves:
+- The fact that p ≡ 1 mod 3 and N ≡ 1 mod 3
+- The specific values ω_N1 mod 9 = 4 and ω_p mod 9 = 8
+- How these interact with the ECDSA equation modulo 9
+
+This remains an open problem.
+
+NEXT STEP: true49
+----------------------------------------
+
+Attempt to derive the connection mathematically, or find more puzzles
+with known private keys to strengthen the statistical evidence.

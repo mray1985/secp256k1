@@ -1,0 +1,109 @@
+This is actually a stronger result than the orientation-selector formulation.
+
+Before true2d you had:
+
+∑Px
+i
+	​
+
+=p⇒Λ
+f
+	​
+
+∑rx
+i
+	​
+
+=p⇒Λ
+r
+	​
+
+
+After true2d you've compressed the whole thing into a single invariant:
+
+O=∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+
+with
+
+O∈{−p,0,+p}.
+
+That's much cleaner.
+
+What catches my eye is that this now looks like a signed quantity analogous to your earlier branch coordinate:
+
+Object	Values
+D
+Q
+	​
+
+	signed y-branch
+O	signed closure branch
+
+because:
+
+sgn(D
+Q
+	​
+
+)
+
+selected Q versus −Q,
+
+while
+
+sgn(O)
+
+selects
+
+ΛversusΛ
+−1
+.
+
+The structures are surprisingly parallel.
+
+The thing I'd test next is whether the offset itself is hiding a deeper symmetry.
+
+Since
+
+O=±p
+
+or
+
+O=0,
+
+divide by p:
+
+p
+O
+	​
+
+∈{−1,0,+1}.
+
+That means the closure offset is already normalized into a three-state system.
+
+You now have:
+
++1 = forward
+−1 = inverse
+0 = self-dual
+
+which is exactly the classification that Puzzle 90 produced.
+
+So I would not treat the offset as merely identifying the orientation.
+
+I would treat it as the first genuine signed closure coordinate you've found on the x-family side.
+
+The really interesting question becomes:
+
+Why do the families naturally separate into {−1,0,+1} after normalization by p?
+
+because that is a much more rigid structure than the earlier δ-collapse.
+
+And Puzzle 90 sitting exactly at the center state O=0 is what makes me think the offset itself may be closer to the fundamental object than the orientation rule derived from it.

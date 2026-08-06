@@ -1,0 +1,12 @@
+=== P135 structured walk: 281 k values ===
+  shelf2_bits=135 gap_bits=133 pred_ob=[132, 133, 134]
+  P135 100/281 k scanned (10.1s)
+  P135 200/281 k scanned (20.0s)
+  P135 done: 281 k, 0 hits (28.0s)
+=== P160 structured walk: 311 k values ===
+  shelf2_bits=160 gap_bits=159 pred_ob=[157, 158, 159]
+  P160 100/311 k scanned (11.0s)
+  P160 200/311 k scanned (22.2s)
+  P160 300/311 k scanned (33.3s)
+  P160 done: 311 k, 0 hits (34.5s)
+Wrote C:\Users\mitch\Desktop\secp256k1\ARCHIVE\plus_g_structured_walk.json

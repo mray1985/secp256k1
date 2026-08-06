@@ -1,0 +1,119 @@
+====================================================================================================
+PUZZLE 135 SOLVER - true7f.txt Insight Implementation
+====================================================================================================
+
+STEP 1: Computing real-valued echo invariants from Puzzle 135
+----------------------------------------------------------------------------------------------------
+Puzzle 135 X: 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+Puzzle 135 Y: 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+curve_val = X^3 + 7 mod p: 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1
+
+x_echo = X^(135/256) = 26876308129676390477323096284295564392846 (0x4efb7ca982ce423b271ce0b214abdc798e)
+y_echo = Y^(135/256) = 26876308129676390477323096284295564392846 (0x4efb7ca982ce423b271ce0b214abdc798e)
+c_echo = curve_val^(135/256) = 35883159410670495955909009950774262134599 (0x69737d1eee4328641d8702422e09167747)
+neg_y_echo = (p-Y)^(135/256) = 33261707715760483939326162260077719730981 (0x61bf53e39d9fdc07d8820f191356ee3b25)
+
+Verification:
+  y_echo matches true7e.txt: True
+  neg_y_echo matches true7e.txt: True
+
+STEP 2: Computing symmetric invariants
+----------------------------------------------------------------------------------------------------
+S = y_echo + neg_y_echo = 60138015845436874416649258544373284123827 (0xb0bad08d206e1e42ff9eefcb2802cab4b3)
+D = neg_y_echo - y_echo = 6385399586084093462003065975782155338135 (0x12c3d73a1ad199ccb1652e66feab11c197)
+R = y_echo * neg_y_echo = 893951905488013418273930225854658809968089535821357774514973591151663553720961926 (0x1e2851c00014cc3c9da12b2335b7376b2c875ba19166eb339acdfb063bf15ce54b86)
+
+B - y_echo = 5790799094733702015160866029154183906930 (0x110483567d31bdc4d8e31f4deb54238672)
+neg_y_echo - B = 594600491350391446842199946627971431205 (0x1bf53e39d9fdc07d8820f191356ee3b25)
+These are surprisingly close (differ by -89.73%)
+
+S/2 = 30069007922718437208324629272186642061913 (0x585d684690370f217fcf77e59401655a59)
+Lane A = 0x5800000000000000000000000000000000
+S/2 - A = 124159633675852423547663818191039453785 (0x5d684690370f217fcf77e59401655a59)
+
+STEP 3: Computing rho calibration from solved puzzles
+----------------------------------------------------------------------------------------------------
+Average rho_x = 1.3280434381 (from 10 puzzles)
+Average rho_y = 14.7253179125 (from 10 puzzles)
+Average rho_c = 1.6958740804 (from 10 puzzles)
+Average rho_neg_y = 0.7495639448 (from 10 puzzles)
+
+STEP 4: Generating candidates from true7f.txt insight
+----------------------------------------------------------------------------------------------------
+  y_echo = 0x4efb7ca982ce423b271ce0b214abdc798e (in range)
+  neg_y_echo = 0x61bf53e39d9fdc07d8820f191356ee3b25 (in range)
+  c_echo = 0x69737d1eee4328641d8702422e09167747 (in range)
+  S_half = 0x585d684690370f217fcf77e59401655a59 (in range)
+  rho_neg_y_avg * neg_y_echo = 0x4944958f34d76d75ebfdf7f840b2d66498
+
+Total candidates generated: 65
+
+STEP 5: Filtering and deduplicating candidates
+----------------------------------------------------------------------------------------------------
+Unique in-range candidates: 59
+
+First 20 candidates:
+  [1] rho_neg_y_h100: 0x42fb5a1c986fa3bf74c1445b5317b9305d
+  [2] rho_neg_y_h120: 0x439e33256ee8c0f4f28ade848da2fa745e
+  [3] rho_neg_y_h90: 0x4490a2e40c54a76c32cdb212c8ba0a4f9a
+  [4] rho_c_h75: 0x44ff7317baf1393edb5798308856be2ee4
+  [5] rho_x_h80: 0x465974d7600b27678b5909f8a5b0a67962
+  [6] rho_neg_y_avg: 0x4944958f34d76d75ebfdf7f840b2d66498
+  [7] D*k: 0x4b0f5ce86b466732c594b99bfaac47065c
+  [8] rho_c_h90: 0x4cbe6664af0744002ede554da7c3ac4b88
+  [9] y_echo: 0x4efb7ca982ce423b271ce0b214abdc798e
+  [10] interp_0: 0x4efb7ca982ce4400000000000000000000
+  [11] rho_neg_y_h130: 0x4f58e091041fdd918c33f2d5dc41a93fe0
+  [12] rho_c_h120: 0x4fe631222211b5a1c0e4307e29742916d4
+  [13] interp_5: 0x4febadd2d0f25800000000000000000000
+  [14] rho_neg_y_h70: 0x505d3ceeb115b2fe980afeddd722c91c11
+  [15] interp_10: 0x50dbdefc1f166c00000000000000000000
+  [16] interp_15: 0x51cc10256d3a8000000000000000000000
+  [17] rho_neg_y_h110: 0x523a096f41c2f1c3c47ac7062274110689
+  [18] interp_20: 0x52bc414ebb5e9800000000000000000000
+  [19] interp_25: 0x53ac72780982ac00000000000000000000
+  [20] interp_30: 0x549ca3a157a6c000000000000000000000
+
+Last 20 candidates:
+  [40] B-neg_y_to_B: 0x5e40ac1c626023f8277df0e6eca911c4db
+  [41] interp_85: 0x5eeec067b333a000000000000000000000
+  [42] interp_90: 0x5fdef1910157b400000000000000000000
+  [43] B+-50000: 0x5fffffffffffffffffffffffffffff3cb0
+  [44] B+-25000: 0x5fffffffffffffffffffffffffffff9e58
+  [45] B: 0x6000000000000000000000000000000000
+  [46] B++25000: 0x60000000000000000000000000000061a8
+  [47] B++50000: 0x600000000000000000000000000000c350
+  [48] interp_95: 0x60cf22ba4f7bc800000000000000000000
+  [49] neg_y_echo: 0x61bf53e39d9fdc07d8820f191356ee3b25
+  [50] interp_100: 0x61bf53e39d9fe000000000000000000000
+  [51] rho_x_h100: 0x6272d7b51e943acd9fb38c816e51585903
+  [52] rho_c_h100: 0x66655ffd815fe555c5c51eedae24eab840
+  [53] C+-50000: 0x67ffffffffffffffffffffffffffff3cb0
+  [54] C+-25000: 0x67ffffffffffffffffffffffffffff9e58
+  [55] C: 0x6800000000000000000000000000000000
+  [56] C++25000: 0x68000000000000000000000000000061a8
+  [57] C++50000: 0x680000000000000000000000000000c350
+  [58] c_echo: 0x69737d1eee4328641d8702422e09167747
+  [59] B+B_to_y: 0x710483567d31bdc4d8e31f4deb54238672
+
+====================================================================================================
+STEP 6: Testing All Candidates Systematically
+====================================================================================================
+
+[20/59] Progress: 33% | Elapsed: 0.0s | ETA: 0.0s
+[40/59] Progress: 67% | Elapsed: 0.0s | ETA: 0.0s
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+Total candidates tested: 59
+Total time: 0.02s
+Average per candidate: 0.000s
+
+NO MATCHES FOUND
+
+All candidates exhausted.
+Next steps:
+  1. Try larger offset ranges around promising candidates
+  2. Investigate if the echo computation needs adjustment
+  3. Check if there's a different interpretation of true7f.txt insight

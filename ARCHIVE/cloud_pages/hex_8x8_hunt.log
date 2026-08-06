@@ -1,0 +1,24 @@
+Px chunks: 145d2611 | c823a396 | ef6712ce | 0f712f09 | b9b4f313 | 5e3e0aa3 | 230fb9b6 | d08d1e16
+Py chunks: 667a05e9 | a1bdd6f7 | 0142b665 | 58bd12ce | 2c0f9cbc | 7001b20c | 8a6a109c | 80dc5330
+Phase A: 8x8 px/py chunk cross (64 grid)
+Phase A done tested=512
+Phase B: 8x8 digit grid diagonals
+Phase B done tested=640
+Phase C: kanga 8x8 chunk substitution
+  slot 0 unique 8-hex chunks: 1
+  slot 1 unique 8-hex chunks: 1
+  slot 2 unique 8-hex chunks: 1
+  slot 3 unique 8-hex chunks: 2
+  slot 4 unique 8-hex chunks: 806
+  slot 5 unique 8-hex chunks: 1612
+  slot 6 unique 8-hex chunks: 806
+  slot 7 unique 8-hex chunks: 806
+  kanga base 200/1612 tested=52096
+  kanga base 400/1612 tested=103296
+  kanga base 600/1612 tested=154496
+  kanga base 800/1612 tested=205696
+  kanga base 1000/1612 tested=256896
+  kanga base 1200/1612 tested=308096
+  kanga base 1400/1612 tested=359296
+  kanga base 1600/1612 tested=410496
+DONE no hit tested=413312 elapsed=40.0s rate=10331/s

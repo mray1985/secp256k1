@@ -1,0 +1,15 @@
+PACKET CANDIDATE EC VERIFY — d*G == target pubkey
+
+P135: unique=121  in_band=121  exact_pubkey_hits=0  x_only_wrong_y=0
+P140: unique=145  in_band=145  exact_pubkey_hits=0  x_only_wrong_y=0
+P145: unique=164  in_band=164  exact_pubkey_hits=0  x_only_wrong_y=0
+P150: unique=165  in_band=165  exact_pubkey_hits=0  x_only_wrong_y=0
+P155: unique=169  in_band=169  exact_pubkey_hits=0  x_only_wrong_y=0
+P160: unique=167  in_band=167  exact_pubkey_hits=0  x_only_wrong_y=0
+
+TOTAL unique checked: 931
+
+EXACT HITS: none
+
+=== CROSS-PUZZLE CHECK (any d -> any higher pubkey) ===
+cross-puzzle hits: none

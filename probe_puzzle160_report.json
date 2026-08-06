@@ -1,0 +1,660 @@
+{
+  "summary": {
+    "p_minus_x_dominates_contains": 1,
+    "y_shell_top_contains": 1,
+    "inverse_N_in_top2_any_shell": 2,
+    "lane_ABC": {
+      "A": {
+        "top_contains": "x inv p",
+        "top_start": "p-x",
+        "top_start_end": "p-x"
+      },
+      "B": {
+        "top_contains": "Px",
+        "top_start": "p-y",
+        "top_start_end": "p-y"
+      },
+      "C": {
+        "top_contains": "x inv p",
+        "top_start": "x inv p",
+        "top_start_end": "x inv p"
+      }
+    },
+    "calibration_verdict": "weak"
+  },
+  "diff_vs_height96": {
+    "comparisons": [
+      {
+        "shell": "A",
+        "h96_contains": "p-x",
+        "p160_contains": "x inv p",
+        "match": false,
+        "h96_start_end": "p-y",
+        "p160_start_end": "p-x"
+      },
+      {
+        "shell": "B",
+        "h96_contains": "y inv N",
+        "p160_contains": "Px",
+        "match": false,
+        "h96_start_end": "y inv p",
+        "p160_start_end": "p-y"
+      },
+      {
+        "shell": "C",
+        "h96_contains": "p-x",
+        "p160_contains": "x inv p",
+        "match": false,
+        "h96_start_end": "Px",
+        "p160_start_end": "x inv p"
+      },
+      {
+        "shell": "LO",
+        "h96_contains": "y inv N",
+        "p160_contains": "Px",
+        "match": false,
+        "h96_start_end": "Px",
+        "p160_start_end": "x inv p"
+      },
+      {
+        "shell": "MID",
+        "h96_contains": "Px",
+        "p160_contains": "p-x",
+        "match": false,
+        "h96_start_end": "y inv N",
+        "p160_start_end": "Px"
+      },
+      {
+        "shell": "HI",
+        "h96_contains": "p-x",
+        "p160_contains": "p-x",
+        "match": true,
+        "h96_start_end": "Py",
+        "p160_start_end": "Px"
+      }
+    ],
+    "match_count": 1
+  },
+  "shells": [
+    {
+      "name": "a",
+      "scalar": 105938049261200199402133651456,
+      "hex": "0x1564de685e4bb400000000000",
+      "top_contains": "y inv N",
+      "top_start": "Px",
+      "top_start_end": "Px",
+      "stats": {
+        "Px": {
+          "start": 4,
+          "end": 0,
+          "contains": 68,
+          "start_end_score": 4
+        },
+        "Py": {
+          "start": 2,
+          "end": 0,
+          "contains": 56,
+          "start_end_score": 2
+        },
+        "p-x": {
+          "start": 0,
+          "end": 2,
+          "contains": 74,
+          "start_end_score": 2
+        },
+        "p-y": {
+          "start": 0,
+          "end": 0,
+          "contains": 56,
+          "start_end_score": 0
+        },
+        "x inv p": {
+          "start": 0,
+          "end": 0,
+          "contains": 71,
+          "start_end_score": 0
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 3,
+          "contains": 66,
+          "start_end_score": 4
+        },
+        "y inv p": {
+          "start": 2,
+          "end": 1,
+          "contains": 76,
+          "start_end_score": 3
+        },
+        "y inv N": {
+          "start": 2,
+          "end": 1,
+          "contains": 81,
+          "start_end_score": 3
+        }
+      }
+    },
+    {
+      "name": "A",
+      "scalar": 54469361728556732095561465856,
+      "hex": "0xb00000000000000000000000",
+      "top_contains": "x inv p",
+      "top_start": "p-x",
+      "top_start_end": "p-x",
+      "stats": {
+        "Px": {
+          "start": 3,
+          "end": 0,
+          "contains": 63,
+          "start_end_score": 3
+        },
+        "Py": {
+          "start": 4,
+          "end": 1,
+          "contains": 66,
+          "start_end_score": 5
+        },
+        "p-x": {
+          "start": 11,
+          "end": 1,
+          "contains": 69,
+          "start_end_score": 12
+        },
+        "p-y": {
+          "start": 0,
+          "end": 1,
+          "contains": 60,
+          "start_end_score": 1
+        },
+        "x inv p": {
+          "start": 9,
+          "end": 0,
+          "contains": 75,
+          "start_end_score": 9
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 0,
+          "contains": 62,
+          "start_end_score": 1
+        },
+        "y inv p": {
+          "start": 3,
+          "end": 1,
+          "contains": 66,
+          "start_end_score": 4
+        },
+        "y inv N": {
+          "start": 8,
+          "end": 1,
+          "contains": 67,
+          "start_end_score": 9
+        }
+      }
+    },
+    {
+      "name": "B",
+      "scalar": 59421121885698253195157962752,
+      "hex": "0xc00000000000000000000000",
+      "top_contains": "Px",
+      "top_start": "p-y",
+      "top_start_end": "p-y",
+      "stats": {
+        "Px": {
+          "start": 8,
+          "end": 1,
+          "contains": 83,
+          "start_end_score": 9
+        },
+        "Py": {
+          "start": 3,
+          "end": 2,
+          "contains": 61,
+          "start_end_score": 5
+        },
+        "p-x": {
+          "start": 1,
+          "end": 0,
+          "contains": 64,
+          "start_end_score": 1
+        },
+        "p-y": {
+          "start": 9,
+          "end": 3,
+          "contains": 67,
+          "start_end_score": 12
+        },
+        "x inv p": {
+          "start": 0,
+          "end": 0,
+          "contains": 80,
+          "start_end_score": 0
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 1,
+          "contains": 56,
+          "start_end_score": 2
+        },
+        "y inv p": {
+          "start": 0,
+          "end": 2,
+          "contains": 64,
+          "start_end_score": 2
+        },
+        "y inv N": {
+          "start": 2,
+          "end": 0,
+          "contains": 65,
+          "start_end_score": 2
+        }
+      }
+    },
+    {
+      "name": "C",
+      "scalar": 64372882042839774294754459648,
+      "hex": "0xd00000000000000000000000",
+      "top_contains": "x inv p",
+      "top_start": "x inv p",
+      "top_start_end": "x inv p",
+      "stats": {
+        "Px": {
+          "start": 2,
+          "end": 1,
+          "contains": 60,
+          "start_end_score": 3
+        },
+        "Py": {
+          "start": 2,
+          "end": 0,
+          "contains": 56,
+          "start_end_score": 2
+        },
+        "p-x": {
+          "start": 2,
+          "end": 1,
+          "contains": 58,
+          "start_end_score": 3
+        },
+        "p-y": {
+          "start": 0,
+          "end": 0,
+          "contains": 57,
+          "start_end_score": 0
+        },
+        "x inv p": {
+          "start": 10,
+          "end": 0,
+          "contains": 65,
+          "start_end_score": 10
+        },
+        "x inv N": {
+          "start": 10,
+          "end": 0,
+          "contains": 65,
+          "start_end_score": 10
+        },
+        "y inv p": {
+          "start": 1,
+          "end": 1,
+          "contains": 62,
+          "start_end_score": 2
+        },
+        "y inv N": {
+          "start": 0,
+          "end": 1,
+          "contains": 63,
+          "start_end_score": 1
+        }
+      }
+    },
+    {
+      "name": "M_LO",
+      "scalar": 79228162514264337593543950335,
+      "hex": "0xffffffffffffffffffffffff",
+      "top_contains": "p-x",
+      "top_start": "Px",
+      "top_start_end": "Px",
+      "stats": {
+        "Px": {
+          "start": 14,
+          "end": 1,
+          "contains": 74,
+          "start_end_score": 15
+        },
+        "Py": {
+          "start": 10,
+          "end": 1,
+          "contains": 78,
+          "start_end_score": 11
+        },
+        "p-x": {
+          "start": 5,
+          "end": 0,
+          "contains": 79,
+          "start_end_score": 5
+        },
+        "p-y": {
+          "start": 0,
+          "end": 1,
+          "contains": 57,
+          "start_end_score": 1
+        },
+        "x inv p": {
+          "start": 2,
+          "end": 0,
+          "contains": 64,
+          "start_end_score": 2
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 0,
+          "contains": 61,
+          "start_end_score": 1
+        },
+        "y inv p": {
+          "start": 13,
+          "end": 1,
+          "contains": 66,
+          "start_end_score": 14
+        },
+        "y inv N": {
+          "start": 0,
+          "end": 2,
+          "contains": 71,
+          "start_end_score": 2
+        }
+      }
+    },
+    {
+      "name": "M_MID",
+      "scalar": 118842243771396506390315925503,
+      "hex": "0x17fffffffffffffffffffffff",
+      "top_contains": "Px",
+      "top_start": "Px",
+      "top_start_end": "y inv N",
+      "stats": {
+        "Px": {
+          "start": 3,
+          "end": 1,
+          "contains": 86,
+          "start_end_score": 4
+        },
+        "Py": {
+          "start": 2,
+          "end": 3,
+          "contains": 62,
+          "start_end_score": 5
+        },
+        "p-x": {
+          "start": 0,
+          "end": 0,
+          "contains": 70,
+          "start_end_score": 0
+        },
+        "p-y": {
+          "start": 0,
+          "end": 1,
+          "contains": 63,
+          "start_end_score": 1
+        },
+        "x inv p": {
+          "start": 1,
+          "end": 0,
+          "contains": 67,
+          "start_end_score": 1
+        },
+        "x inv N": {
+          "start": 0,
+          "end": 2,
+          "contains": 73,
+          "start_end_score": 2
+        },
+        "y inv p": {
+          "start": 0,
+          "end": 0,
+          "contains": 54,
+          "start_end_score": 0
+        },
+        "y inv N": {
+          "start": 2,
+          "end": 4,
+          "contains": 55,
+          "start_end_score": 6
+        }
+      }
+    },
+    {
+      "name": "M_HI",
+      "scalar": 158456325028528675187087900671,
+      "hex": "0x1ffffffffffffffffffffffff",
+      "top_contains": "Px",
+      "top_start": "y inv N",
+      "top_start_end": "y inv N",
+      "stats": {
+        "Px": {
+          "start": 5,
+          "end": 1,
+          "contains": 75,
+          "start_end_score": 6
+        },
+        "Py": {
+          "start": 3,
+          "end": 2,
+          "contains": 74,
+          "start_end_score": 5
+        },
+        "p-x": {
+          "start": 2,
+          "end": 1,
+          "contains": 59,
+          "start_end_score": 3
+        },
+        "p-y": {
+          "start": 1,
+          "end": 1,
+          "contains": 69,
+          "start_end_score": 2
+        },
+        "x inv p": {
+          "start": 0,
+          "end": 1,
+          "contains": 56,
+          "start_end_score": 1
+        },
+        "x inv N": {
+          "start": 3,
+          "end": 0,
+          "contains": 52,
+          "start_end_score": 3
+        },
+        "y inv p": {
+          "start": 2,
+          "end": 2,
+          "contains": 60,
+          "start_end_score": 4
+        },
+        "y inv N": {
+          "start": 14,
+          "end": 2,
+          "contains": 70,
+          "start_end_score": 16
+        }
+      }
+    },
+    {
+      "name": "LO",
+      "scalar": 39614081257132168796771975168,
+      "hex": "0x800000000000000000000000",
+      "top_contains": "Px",
+      "top_start": "x inv p",
+      "top_start_end": "x inv p",
+      "stats": {
+        "Px": {
+          "start": 3,
+          "end": 1,
+          "contains": 73,
+          "start_end_score": 4
+        },
+        "Py": {
+          "start": 2,
+          "end": 1,
+          "contains": 65,
+          "start_end_score": 3
+        },
+        "p-x": {
+          "start": 0,
+          "end": 1,
+          "contains": 55,
+          "start_end_score": 1
+        },
+        "p-y": {
+          "start": 4,
+          "end": 0,
+          "contains": 63,
+          "start_end_score": 4
+        },
+        "x inv p": {
+          "start": 5,
+          "end": 1,
+          "contains": 72,
+          "start_end_score": 6
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 0,
+          "contains": 66,
+          "start_end_score": 1
+        },
+        "y inv p": {
+          "start": 1,
+          "end": 0,
+          "contains": 56,
+          "start_end_score": 1
+        },
+        "y inv N": {
+          "start": 2,
+          "end": 0,
+          "contains": 73,
+          "start_end_score": 2
+        }
+      }
+    },
+    {
+      "name": "MID",
+      "scalar": 59421121885698253195157962751,
+      "hex": "0xbfffffffffffffffffffffff",
+      "top_contains": "p-x",
+      "top_start": "Px",
+      "top_start_end": "Px",
+      "stats": {
+        "Px": {
+          "start": 4,
+          "end": 1,
+          "contains": 67,
+          "start_end_score": 5
+        },
+        "Py": {
+          "start": 2,
+          "end": 1,
+          "contains": 56,
+          "start_end_score": 3
+        },
+        "p-x": {
+          "start": 2,
+          "end": 1,
+          "contains": 71,
+          "start_end_score": 3
+        },
+        "p-y": {
+          "start": 0,
+          "end": 2,
+          "contains": 67,
+          "start_end_score": 2
+        },
+        "x inv p": {
+          "start": 1,
+          "end": 1,
+          "contains": 66,
+          "start_end_score": 2
+        },
+        "x inv N": {
+          "start": 0,
+          "end": 2,
+          "contains": 65,
+          "start_end_score": 2
+        },
+        "y inv p": {
+          "start": 2,
+          "end": 0,
+          "contains": 60,
+          "start_end_score": 2
+        },
+        "y inv N": {
+          "start": 3,
+          "end": 1,
+          "contains": 70,
+          "start_end_score": 4
+        }
+      }
+    },
+    {
+      "name": "HI",
+      "scalar": 79228162514264337593543950335,
+      "hex": "0xffffffffffffffffffffffff",
+      "top_contains": "p-x",
+      "top_start": "Px",
+      "top_start_end": "Px",
+      "stats": {
+        "Px": {
+          "start": 14,
+          "end": 1,
+          "contains": 74,
+          "start_end_score": 15
+        },
+        "Py": {
+          "start": 10,
+          "end": 1,
+          "contains": 78,
+          "start_end_score": 11
+        },
+        "p-x": {
+          "start": 5,
+          "end": 0,
+          "contains": 79,
+          "start_end_score": 5
+        },
+        "p-y": {
+          "start": 0,
+          "end": 1,
+          "contains": 57,
+          "start_end_score": 1
+        },
+        "x inv p": {
+          "start": 2,
+          "end": 0,
+          "contains": 64,
+          "start_end_score": 2
+        },
+        "x inv N": {
+          "start": 1,
+          "end": 0,
+          "contains": 61,
+          "start_end_score": 1
+        },
+        "y inv p": {
+          "start": 13,
+          "end": 1,
+          "contains": 66,
+          "start_end_score": 14
+        },
+        "y inv N": {
+          "start": 0,
+          "end": 2,
+          "contains": 71,
+          "start_end_score": 2
+        }
+      }
+    }
+  ]
+}

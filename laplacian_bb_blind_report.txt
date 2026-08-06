@@ -1,0 +1,29 @@
+========================================================================
+BB BLIND TEST — public L only
+  x = Px/p,  A = 256*p*sec(x)(2*sec^2(x)-1),  D = A/r^2
+  FORBIDDEN: k, d, z+r*d, recover_k_from_d
+========================================================================
+
+--- BLIND HITS: k (real L/A or L/D) ---
+  (none)
+
+--- BLIND HITS: d (real L/A or L/D) ---
+  (none)
+
+--- BLIND HITS: k (mod N scaled) ---
+  (none)
+
+--- BLIND HITS: d (mod N scaled) ---
+  (none)
+
+--- STATUS ---
+BB literal Px/p: algebra CONFIRMED (forward); blind ECDSA bridge FAILED.
+Px/p vs 2*pi*Px/p changes sec-body sign (e.g. P80 +1.79 vs -1.01).
+Label: PROMISING geometry / TEST algebra — not confirmed key leak.
+
+Catalog size: 62 L formulas per puzzle
+Puzzles tested: 14
+
+--- P80 body sign (public geometry only) ---
+  BB x=Px/p:      body=+1.788295
+  old 2pi*Px/p:   body=-1.005616

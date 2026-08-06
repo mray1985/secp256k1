@@ -1,0 +1,29 @@
+{
+  "title": "Field vs scalar courtroom correction",
+  "error": "Branch test lived in p; treated field mirror as scalar truth",
+  "field_courtroom": {
+    "modulus": "p",
+    "curve": "x^3 + 7 = y^2 mod p",
+    "x_branches": ["x", "beta*x", "beta^2*x"],
+    "y_branches": ["y", "p-y"],
+    "inv7": "99250362203413881791632272864589635302802843999120483462392214863921858289997",
+    "branch_operator": "beta",
+    "witness": "x/p + y/p^2"
+  },
+  "scalar_courtroom": {
+    "modulus": "N",
+    "lock": "[d]G = P",
+    "rsz": "s*k = z + r*d mod N",
+    "branches": "lambda / GLV (not beta)",
+    "inv7": "33083454067804627263877424288196545100810732651164258395030046611862331855525",
+    "branch_operator": "lambda",
+    "witnesses": ["TDAD/N", "lambda-slot/N", "r/N", "s/N", "z/N", "d/N"]
+  },
+  "bridge": ["[d]G = P", "s*k = z + r*d mod N", "map_p_to_n (honest compare)"],
+  "verified": {
+    "inv7_mod_p": true,
+    "inv7_mod_N": true,
+    "beta_cubed_mod_p_eq_1": true
+  },
+  "ruling": "beta belongs to field room; lambda belongs to scalar room"
+}

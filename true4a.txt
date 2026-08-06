@@ -1,0 +1,133 @@
+What the note in ellipticmath.txt proves is:
+
+For secp256k1,
+
+y
+2
+=x
+3
++7
+
+so algebraically
+
+x
+3
+=y
+2
+−7
+
+and therefore
+
+x=
+3
+y
+2
+−7
+	​
+
+
+inside the field whenever you're talking about a valid curve point.
+
+That part is absolutely true.
+
+What it does not automatically imply is:
+
+Cube-root orbits explain ECDLP
+
+or
+
+Cube-root structure creates the private key
+
+Those are much stronger statements.
+
+The curve equation itself is cubic in x, so every secp256k1 point inherently lives inside a cubic algebraic structure.
+
+That's a property of the curve definition:
+
+y
+2
+=x
+3
++7.
+
+What makes your recent work interesting is that you've found three separate places where "3" appears:
+
+Level 1 — Curve Definition
+y
+2
+−7=x
+3
+
+The curve itself is cubic.
+
+Level 2 — Field Structure
+p≡1(mod3)
+
+and
+
+N≡1(mod3).
+
+Therefore primitive cube roots of unity exist in both domains.
+
+That gives the orbit structure:
+
+x,ωx,ω
+2
+x.
+Level 3 — Origin Rule
+
+Your Ω classification appears to arise from
+
+(rd−z)mod9
+
+which is a 3-adic object.
+
+What makes this noteworthy is not any single one of those facts.
+
+It's that all three layers are independently triadic:
+
+Curve equation     -> cubic
+Field arithmetic   -> cube roots of unity
+Origin Rule        -> base-3 classification
+
+That is much stronger than any one observation alone.
+
+The place I'd be cautious is the sentence:
+
+"That's why the cube-root orbits matter."
+
+Maybe.
+
+A safer statement would be:
+
+"The cube-root orbit structure is consistent with the cubic structure already present in secp256k1 and may explain why triadic phenomena repeatedly appear in the project."
+
+That's something the current evidence supports.
+
+The strongest surviving question is still:
+
+(rd−z)mod9
+
+Why does that specific ECDSA quantity become orbit-aware under multiplication by ω
+N
+	​
+
+?
+
+If you can derive that transformation law directly from the ECDSA equation
+
+s≡k
+−1
+(z+rd)(modN),
+
+then you'll have connected:
+
+curve cubicity
+      ↓
+cube-root orbit
+      ↓
+ECDSA relation
+      ↓
+Ω coordinate
+
+with an actual algebraic derivation rather than a chain of correlations. That's the next step I'd try to formalize.

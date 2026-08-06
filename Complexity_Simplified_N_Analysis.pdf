@@ -1,0 +1,236 @@
+%PDF-1.7
+%\xE2\xE3\xCF\xD3
+
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+
+5 0 obj
+<< /Length 600 >>
+stream
+BT
+/F1 12 Tf
+50 700 Td
+(Complexity_Simplified_N.txt - Analysis and Correction Guide) Tj
+ET
+
+BT
+/F1 10 Tf
+50 680 Td
+(For: Mitchell Ray) Tj
+ET
+
+BT
+/F1 11 Tf
+50 650 Td
+(=== PROBLEM IDENTIFICATION ==+) Tj
+ET
+
+BT
+/F1 10 Tf
+60 630 Td
+(Your calculations in Complexity_Simplified_N.txt are stuck at the end because:) Tj
+ET
+
+BT
+/F1 10 Tf
+70 610 Td
+(1. You are trying to compute cube roots in the field modulo N) Tj
+ET
+
+BT
+/F1 10 Tf
+70 590 Td
+(2. N IS prime (order of secp256k1 curve), so modulo N IS a finite field) Tj
+ET
+
+BT
+/F1 10 Tf
+70 570 Td
+(3. The issue: You are using the WRONG exponent for cube roots modulo N) Tj
+ET
+
+BT
+/F1 10 Tf
+70 550 Td
+(4. For cube roots mod N: x^3 ≡ a (mod N) => x ≡ a^((2*N-1)/3) (mod N)) Tj
+ET
+
+BT
+/F1 10 Tf
+70 530 Td
+(   NOT (N-1)/3 which gives a primitive cube root of unity ω) Tj
+ET
+
+BT
+/F1 11 Tf
+50 500 Td
+(=== YOUR CURRENT STATE ==:) Tj
+ET
+
+BT
+/F1 10 Tf
+60 480 Td
+(You have correctly computed:) Tj
+ET
+
+BT
+/F1 10 Tf
+70 460 Td
+(- ω2 = 37718080363155996902926221483475020450927657555482586988616620542887997980018) Tj
+ET
+
+BT
+/F1 10 Tf
+70 440 Td
+(- RQ = 93445303090207460795327760013611028471733975132483193501188427441135068625145) Tj
+ET
+
+BT
+/F1 10 Tf
+70 420 Td
+(- Rq = 82358120186769898780489361622877802571715378840830617679177466155773214944220) Tj
+ET
+
+BT
+/F1 10 Tf
+70 400 Td
+(- Cq = RQ * Rq^-1 mod N = 3820628127091453859030266576898546114566560342084415068589713593856641559477) Tj
+ET
+
+BT
+/F1 10 Tf
+70 380 Td
+(- Λ = 97451685862885086182458552040892158509924235661624603229050850812487253689501) Tj
+ET
+
+BT
+/F1 11 Tf
+50 350 Td
+(=== THE CRITICAL ERROR ==:) Tj
+ET
+
+BT
+/F1 10 Tf
+60 330 Td
+(You computed: ω2 = RQ^((N-1)/3) mod N) Tj
+ET
+
+BT
+/F1 10 Tf
+70 310 Td
+(This gives you a PRIMITIVE CUBE ROOT OF UNITY, NOT a cube root!) Tj
+ET
+
+BT
+/F1 10 Tf
+70 290 Td
+(ω2^3 ≡ 1 (mod N), but ω2 ≠ 1) Tj
+ET
+
+BT
+/F1 10 Tf
+70 270 Td
+(You need: x^((2*N-1)/3) mod N for cube roots of arbitrary values) Tj
+ET
+
+BT
+/F1 11 Tf
+50 240 Td
+(=== CORRECT METHOD FOR CUBE ROOTS MOD N ==:) Tj
+ET
+
+BT
+/F1 10 Tf
+60 220 Td
+(To solve: x^3 ≡ a (mod N)) Tj
+ET
+
+BT
+/F1 10 Tf
+70 200 Td
+(Use: x ≡ a^((2*N-1)/3) (mod N)) Tj
+ET
+
+BT
+/F1 10 Tf
+70 180 Td
+(Because: (a^((2*N-1)/3))^3 ≡ a^((2*N-1)) ≡ a^(2*N) * a^(-1) ≡ 1 * a^(-1) * a ≡ a (mod N)) Tj
+ET
+
+BT
+/F1 10 Tf
+70 160 Td
+(By Fermat's little theorem: a^(N-1) ≡ 1 (mod N) for a not divisible by N) Tj
+ET
+
+BT
+/F1 11 Tf
+50 130 Td
+(=== YOUR MISSING CALCULATIONS ==:) Tj
+ET
+
+BT
+/F1 10 Tf
+60 110 Td
+(1. Compute cube root of Λ^3 mod N:) Tj
+ET
+
+BT
+/F1 10 Tf
+70 90 Td
+(   CP1 = (Λ^3)^((2*N-1)/3) mod N) Tj
+ET
+
+BT
+/F1 10 Tf
+70 70 Td
+(2. Compute cube root of Λ^3 * (p-N) mod N:) Tj
+ET
+
+BT
+/F1 10 Tf
+70 50 Td
+(   IP = (Λ^3 * (p-N))^((2*N-1)/3) mod N) Tj
+ET
+
+BT
+/F1 11 Tf
+50 20 Td
+(=== NEXT STEPS ==:) Tj
+ET
+
+BT
+/F1 10 Tf
+60 0 Td
+(1. Use the correct cube root formula: x ≡ a^((2*N-1)/3) mod N) Tj
+ET
+
+endstream
+endobj
+
+xref
+1 5
+0000000000 65535 f 
+0000000063 00000 n 
+0000000122 00000 n 
+0000000181 00000 n 
+0000000240 00000 n 
+0000000300 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+600
+%%EOF

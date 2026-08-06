@@ -1,0 +1,134 @@
+Level 1 — What you have definitely proven
+
+Your tests show:
+
+δ=p−N
+
+and
+
+A(Q)+A(−Q)≡δ(modN)
+
+for G, P, and R.
+
+You also showed:
+
+i=1
+∑
+3
+	​
+
+B
+i
+	​
+
+=p
+
+where
+
+B
+i
+	​
+
+=Λrx
+i
+	​
+
+(modp)
+
+therefore
+
+i=1
+∑
+3
+	​
+
+B
+i
+	​
+
+≡p−N=δ(modN)
+
+Those are direct computational results.
+
+Level 2 — The interpretation
+
+The stronger statement:
+
+"The x-family shell and y-family shell are the same invariant."
+
+is a hypothesis supported by the data, not yet a theorem.
+
+What you have actually shown is:
+
+x-shell→δ
+
+and
+
+y-shell→δ
+
+You have not yet shown:
+
+B
+1
+	​
+
+↔A(Q)
+
+or
+
+B
+2
+	​
+
+↔A(−Q)
+
+or any one-to-one correspondence between the x-family members and the y-family members.
+
+The strongest mathematically safe statement
+
+You have discovered two independent constructions that both project to the same constant:
+
+δ=p−N
+	​
+
+Reflection shell:
+A(Q)+A(−Q)≡δ(modN)
+Three-root shell:
+i=1
+∑
+3
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+
+That is already a meaningful result.
+
+The next thing I would test is whether the individual x-family defects
+
+d
+i
+	​
+
+=(Gx
+i
+	​
+
+−B
+i
+	​
+
+)(modN)
+
+have any relationship to the signed branch coordinate
+
+D
+Q
+	​
+
+.
+
+If there is a hidden connection between the two shells, it will likely appear there rather than in the sums, because the sums have already collapsed to δ.

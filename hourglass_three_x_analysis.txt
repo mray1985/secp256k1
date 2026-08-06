@@ -1,0 +1,219 @@
+C:\Users\mitch\Desktop\secp256k1\hourglass_three_x_analysis.py:6: SyntaxWarning: "\ " is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\ "? A raw string is also an option.
+  \ | /           \ | /
+====================================================================================================
+HOURGLASS STRUCTURE ANALYSIS (diagram1.txt)
+====================================================================================================
+
+Diagram:
+   d  d  d              k  k  k
+    \ | /           \ | /
+     \|/             \|/
+      y               ry
+     /|\            /|\
+    / | \           / | \
+   x  x  x = P       rx rx rx = R
+    \ | /           \ | /
+     \|/             \|/
+     -y              -ry
+     /|\            /|\
+    / | \           / | \
+  -d -d -d         -k -k -k
+
+Puzzle 135 point P = d*G:
+  x = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+  y = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+
+Candidate 'three x's' for the waist/bridge:
+  1. x = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+  2. c = x^3+7 mod p = 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1
+  3. x_inv = x^(-1) mod p = 0x46dc3cd89a2461219ee1b561c4443ce727dfc86f0f228a68cf11dc5ea5a8d601
+
+====================================================================================================
+THE THREE X'S (WAIST OF THE HOURGLASS)
+====================================================================================================
+
+Echo values for the three x's and y poles:
+  x_echo = 1.1463001237e+40
+  c_echo = 3.5883159411e+40
+  x_inv_echo = 2.2124709728e+40
+  y_echo = 2.6876308130e+40
+  (-y)_echo = 3.3261707716e+40
+
+Average of y_echo and (-y)_echo = 3.0069007923e+40
+Lane B = 32667107224410092492483962313449748299776
+Difference = 2.5980993017e+39
+
+Average of x_echo, c_echo, x_inv_echo = 2.3156956792e+40
+Difference from Lane B = 9.5101504325e+39
+
+Geometric mean of x_echo, c_echo, x_inv_echo = 2.0877998647e+40
+Difference from Lane B = 1.1789108578e+40
+
+====================================================================================================
+THE R POINT: What is rx, ry?
+====================================================================================================
+
+Hypothesis: R = -P
+  Then R = (x, p-y)
+  rx = x = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+  ry = p-y = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+
+If R = -P, then:
+  Left hourglass: P = (x,x,x) connects y and -y
+  Right hourglass: R = (x,x,x) connects ry=p-y and -ry=y
+  The waist is the same: x, c, x_inv
+
+====================================================================================================
+THE TWO HOURLASSES: d and k = N-d
+====================================================================================================
+
+Left hourglass (d):
+  Poles: y = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330, -y = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+  Waist: x, c, x_inv
+
+Right hourglass (k = N-d):
+  Poles: ry = p-y = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff, -ry = y = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+  Waist: rx = x, rc = c, rx_inv = x_inv
+
+Conclusion: Both hourglasses share the same waist (x, c, x_inv)
+and have swapped poles (y and p-y)
+
+====================================================================================================
+ECHO INVARIANTS FOR BOTH HOURLASSES
+====================================================================================================
+
+Left hourglass echoes:
+  y_echo = 2.6876308130e+40
+  (-y)_echo = 3.3261707716e+40
+  avg = 3.0069007923e+40
+
+Right hourglass echoes:
+  ry_echo = (p-y)^(h/256) = 3.3261707716e+40
+  (-ry)_echo = y^(h/256) = 2.6876308130e+40
+  avg = 3.0069007923e+40
+
+Both hourglasses have the SAME average echo!
+
+====================================================================================================
+THE WAIST ECHO VALUES (Three x's)
+====================================================================================================
+
+x_echo = 1.1463001237e+40
+c_echo = 3.5883159411e+40
+x_inv_echo = 2.2124709728e+40
+
+Geometric mean = 2.0877998647e+40
+Arithmetic mean = 2.3156956792e+40
+Product = 9.1005281063e+120
+
+====================================================================================================
+CONNECTION: WAIST ECHOES vs POLE ECHOES
+====================================================================================================
+
+avg_waist = 2.3156956792e+40
+avg_pole = 3.0069007923e+40
+Ratio: avg_waist / avg_pole = 0.7701270641
+
+Waist echoes vs Lane B:
+  x_echo / B = 0.3509034687
+  c_echo / B = 1.0984492494
+  x_inv_echo / B = 0.6772778984
+
+====================================================================================================
+WHAT IS R? (The other hourglass)
+====================================================================================================
+
+Hypothesis: R = -P
+  P = (x, y) = d*G
+  R = (x, p-y) = (N-d)*G
+  k = N - d
+
+Then:
+  Left hourglass: d -> (x,c,x_inv) waist -> poles: y, -y
+  Right hourglass: k=N-d -> (x,c,x_inv) waist -> poles: ry=p-y, -ry=y
+
+====================================================================================================
+TESTING WAIST INVARIANTS ON CALIBRATION
+====================================================================================================
+
+Testing stability of waist invariants:
+----------------------------------------------------------------------------------------------------
+           x_echo: avg_ratio=1.305510, std=0.788870
+           c_echo: avg_ratio=0.960490, std=0.267007
+       x_inv_echo: avg_ratio=1.647788, std=1.351112
+        avg_waist: avg_ratio=1.093873, std=0.320874
+        geo_waist: avg_ratio=1.189873, std=0.477974
+
+Most stable waist invariant: c_echo (std=0.267007)
+
+====================================================================================================
+COMBINING WAIST AND POLE INVARIANTS
+====================================================================================================
+
+Puzzle 135:
+  S = 6.0138015845e+40
+  best_waist (c_echo) = 3.5883159411e+40
+  S / best_waist = 1.6759398234
+
+S / best_waist ratios for calibration:
+----------------------------------------------------------------------------------------------------
+  h= 70: S=1.840393e+21, waist=8.897300e+20, S/waist=2.068485
+  h= 75: S=6.138089e+22, waist=3.300689e+22, S/waist=1.859639
+  h= 80: S=1.935515e+24, waist=6.636990e+23, S/waist=2.916254
+  h= 85: S=5.271286e+25, waist=2.651255e+25, S/waist=1.988223
+  h= 90: S=1.917686e+27, waist=1.190248e+27, S/waist=1.611165
+  h=100: S=1.933169e+30, waist=8.788612e+29, S/waist=2.199629
+  h=110: S=1.481955e+33, waist=1.197179e+33, S/waist=1.237872
+  h=120: S=1.795812e+36, waist=1.194013e+36, S/waist=1.504013
+  h=125: S=5.658192e+37, waist=3.829852e+37, S/waist=1.477392
+  h=130: S=1.878572e+39, waist=1.115820e+39, S/waist=1.683580
+
+====================================================================================================
+KEY INSIGHT FROM DIAGRAM1.TXT
+====================================================================================================
+
+The diagram shows TWO hourglasses sharing the same waist structure:
+
+  Hourglass 1 (d):
+    Top: y
+    Waist: x, x, x (the three x's)
+    Bottom: -y
+
+  Hourglass 2 (k):
+    Top: ry
+    Waist: rx, rx, rx (the three x's)
+    Bottom: -ry
+
+Interpretation:
+  - The 'three x's' are three values derived from the point P = (x, y)
+  - Likely: x, c=x^3+7, x_inv=x^(-1) mod p
+  - Both hourglasses share this waist
+  - P = d*G gives y and -y as poles
+  - R = k*G gives ry and -ry as poles
+
+If R = -P, then:
+  - ry = p - y
+  - -ry = y
+  - k = N - d
+  - The waist (x, c, x_inv) is the same for both
+
+This means:
+  d + k = N
+  y + ry = p
+  The waist is invariant under negation
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+Based on diagram1.txt:
+  1. The 'three x's' are: x, c=x^3+7, x_inv=x^(-1) mod p
+  2. These form the waist/bridge of the hourglass
+  3. Two hourglasses: d->P and k->R with swapped poles
+  4. If R = -P, then k = N - d and ry = p - y
+  5. Both hourglasses share the same waist
+
+Most stable invariants:
+  Pole: S = y_echo + (-y)_echo (std=0.110362)
+  Waist: c_echo (std=0.267007)
+

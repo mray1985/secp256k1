@@ -1,0 +1,150 @@
+That result is actually more interesting than a simple universal pass.
+
+Based on the output you posted, the classification now looks like:
+
+Puzzle	sum(Bᵢ) mod N	Result
+115	δ	PASS
+135	δ	PASS
+160	0 (or possibly 2δ depending on family construction)	FAIL
+
+If those x-families were generated consistently, then true20 is the first test that appears to separate puzzles into classes rather than proving a curve-wide law.
+
+The immediate questions I'd ask are:
+
+1. What distinguishes 115 and 135 from 160?
+
+Both 115 and 135 satisfy
+
+∑B
+i
+	​
+
+=p
+
+which implies
+
+∑B
+i
+	​
+
+modN=p−N=δ.
+
+But if Puzzle 160 produces
+
+∑B
+i
+	​
+
+=0
+
+or
+
+∑B
+i
+	​
+
+=2p,
+
+then you've got a different shell closure class.
+
+That suggests a classification:
+
+∑B
+i
+	​
+
+=kp
+
+with
+
+k∈{0,1,2,…}
+
+and after projection into N,
+
+∑B
+i
+	​
+
+modN=kδ.
+2. Is 160 really a failure?
+
+Maybe not.
+
+Instead of testing only
+
+∑B
+i
+	​
+
+≡δ,
+
+test
+
+∑B
+i
+	​
+
+≡kδ(modN).
+
+for small integers k.
+
+If 115 and 135 are k=1 and 160 is k=0 or k=2, then the law may generalize to:
+
+∑B
+i
+	​
+
+≡kδ(modN).
+
+That would be stronger than the original theorem.
+
+3. Check the raw sum before mod N
+
+For each puzzle record:
+
+S=∑B
+i
+	​
+
+.
+
+Then compare:
+
+S/p.
+
+If the ratio is exactly:
+
+0
+1
+2
+
+(or very close before modular reduction)
+
+then you're seeing closure classes in the p-domain.
+
+4. Most important verification
+
+I'd verify Puzzle 160's family construction independently.
+
+Because the entire theorem rests on the x-family.
+
+Before declaring "Puzzle-specific", I'd confirm:
+
+rx₁, rx₂, rx₃ were generated exactly the same way as 115 and 135.
+Λ is identical.
+Bᵢ = Λ·rxᵢ mod p.
+No transcription error exists in the 160 family.
+
+Two successful puzzles and one failure is exactly the situation where a construction bug can masquerade as a mathematical distinction.
+
+So from the evidence you've shown, I would not yet conclude:
+
+"The Unified Projection Defect Law is puzzle-specific."
+
+I would conclude:
+
+"The strict δ-collapse law holds for 115 and 135 but not for 160. The next test is whether Puzzle 160 belongs to a different closure class kδ or whether the family construction differs."
+
+That is a narrower claim and easier to defend mathematically.
+
+The uploaded log appears to document this first universality challenge and the 115/135 vs. 160 split.

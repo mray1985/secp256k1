@@ -1,0 +1,160 @@
+OFFSET CONGRUENCE ANALYSIS
+True offset: o = (d - shelf2) mod LO,  gap = H - bitlength(o)
+
+COHORT: row-2 all (8 solved)  n=8
+
+  shared o mod 2^t:  t_max=0  residue=1
+
+     H gap  ob    o mod 16    o mod 256  mantissa~   d_lo   d_hi
+  ----------------------------------------------------------------------
+    15   1  14          11           91   1.417358   3419   4773
+    35   1  34           4          180   1.289413 2486038196 6103896396
+    45   2  43          10          122   1.186732 821256346490 3576790164614
+    50   1  49           3          163   1.895914 252177341565859 29297635144797
+    70   4  66          13          205   1.301264 11114680660998805197 25778807486420298035
+    90   1  89           7          119   1.936393 289799562282139104706998391 19685447539205964017782665
+   100   2  98           3          179   1.929084 147219182376012206851243295923 11237142652516468335844604749
+   120   2 118           1          145   1.242800 40342027242547940091811042682903953 125811472230566544021164839852139119
+
+  fixed t ladder (all equal mod 2^t?):
+    t= 4: N  residues=['0xb', '0x4', '0xa', '0x3', '0xd', '0x7']...
+    t= 8: N  residues=['0x5b', '0xb4', '0x7a', '0xa3', '0xcd', '0x77']...
+    t=12: N  residues=['0xd5b', '0xeb4', '0xb7a', '0xba3', '0x6cd', '0x77']...
+    t=16: N  residues=['0x2d5b', '0xeeb4', '0x5b7a', '0x4ba3', '0xd6cd', '0xb077']...
+
+  mantissa low 8 bits: floor(o / 2^(b-8)) for b>=8:
+    shared among scaled mantissas: t=0  (weak cross-height invariant)
+    values: [181, 165, 151, 242, 166, 247, 246, 159]
+
+COHORT: row-2 gap=1  n=4
+
+  shared o mod 2^t:  t_max=0  residue=1
+
+     H gap  ob    o mod 16    o mod 256  mantissa~   d_lo   d_hi
+  ----------------------------------------------------------------------
+    15   1  14          11           91   1.417358   3419   4773
+    35   1  34           4          180   1.289413 2486038196 6103896396
+    50   1  49           3          163   1.895914 252177341565859 29297635144797
+    90   1  89           7          119   1.936393 289799562282139104706998391 19685447539205964017782665
+
+  fixed t ladder (all equal mod 2^t?):
+    t= 4: N  residues=['0xb', '0x4', '0x3', '0x7']
+    t= 8: N  residues=['0x5b', '0xb4', '0xa3', '0x77']
+    t=12: N  residues=['0xd5b', '0xeb4', '0xba3', '0x77']
+    t=16: N  residues=['0x2d5b', '0xeeb4', '0x4ba3', '0xb077']
+
+  mantissa low 8 bits: floor(o / 2^(b-8)) for b>=8:
+    shared among scaled mantissas: t=0  (weak cross-height invariant)
+    values: [181, 165, 242, 247]
+
+COHORT: row-2 gap=2  n=3
+
+  shared o mod 2^t:  t_max=0  residue=0
+
+     H gap  ob    o mod 16    o mod 256  mantissa~   d_lo   d_hi
+  ----------------------------------------------------------------------
+    45   2  43          10          122   1.186732 821256346490 3576790164614
+   100   2  98           3          179   1.929084 147219182376012206851243295923 11237142652516468335844604749
+   120   2 118           1          145   1.242800 40342027242547940091811042682903953 125811472230566544021164839852139119
+
+  fixed t ladder (all equal mod 2^t?):
+    t= 4: N  residues=['0xa', '0x3', '0x1']
+    t= 8: N  residues=['0x7a', '0xb3', '0x91']
+    t=12: N  residues=['0xb7a', '0x4b3', '0xd91']
+    t=16: N  residues=['0x5b7a', '0xc4b3', '0x9d91']
+
+  mantissa low 8 bits: floor(o / 2^(b-8)) for b>=8:
+    shared among scaled mantissas: t=0  (weak cross-height invariant)
+    values: [151, 246, 159]
+
+COHORT: row-2 gap in {1,2} (7 puzzles)  n=7
+
+  shared o mod 2^t:  t_max=0  residue=1
+
+     H gap  ob    o mod 16    o mod 256  mantissa~   d_lo   d_hi
+  ----------------------------------------------------------------------
+    15   1  14          11           91   1.417358   3419   4773
+    35   1  34           4          180   1.289413 2486038196 6103896396
+    45   2  43          10          122   1.186732 821256346490 3576790164614
+    50   1  49           3          163   1.895914 252177341565859 29297635144797
+    90   1  89           7          119   1.936393 289799562282139104706998391 19685447539205964017782665
+   100   2  98           3          179   1.929084 147219182376012206851243295923 11237142652516468335844604749
+   120   2 118           1          145   1.242800 40342027242547940091811042682903953 125811472230566544021164839852139119
+
+  fixed t ladder (all equal mod 2^t?):
+    t= 4: N  residues=['0xb', '0x4', '0xa', '0x3', '0x7', '0x3']...
+    t= 8: N  residues=['0x5b', '0xb4', '0x7a', '0xa3', '0x77', '0xb3']...
+    t=12: N  residues=['0xd5b', '0xeb4', '0xb7a', '0xba3', '0x77', '0x4b3']...
+    t=16: N  residues=['0x2d5b', '0xeeb4', '0x5b7a', '0x4ba3', '0xb077', '0xc4b3']...
+
+  mantissa low 8 bits: floor(o / 2^(b-8)) for b>=8:
+    shared among scaled mantissas: t=0  (weak cross-height invariant)
+    values: [181, 165, 151, 242, 247, 246, 159]
+
+COHORT: all rows gap=1 (14 puzzles)  n=14
+
+  shared o mod 2^t:  t_max=0  residue=1
+
+     H gap  ob    o mod 16    o mod 256  mantissa~   d_lo   d_hi
+  ----------------------------------------------------------------------
+     5   1   4           9            9   1.125000      1      7
+    15   1  14          11           91   1.417358   3419   4773
+    20   1  19          14          206   1.143364  37582 224562
+    35   1  34           4          180   1.289413 2486038196 6103896396
+    50   1  49           3          163   1.895914 252177341565859 29297635144797
+    60   1  59           4          196   1.301626 86937919010496452 201292457141215292
+    75   1  74           8          104   1.661397 6246714590040075079528 3198018375699215347864
+    80   1  79          14          126   1.840869 254137015885321342987390 48094439018335950689154
+    85   1  84           5           37   1.218151 2109829669141510311668517 7561576887775523085980891
+    90   1  89           7          119   1.936393 289799562282139104706998391 19685447539205964017782665
+    95   1  94          11          251   1.840789 8326771278336939606448987131 1576749035946102592744006661
+   105   1 104           3          179   1.747777 7583362005665532427679341323443 2557842796160302784294284319565
+   110   1 109           1          177   1.279302 90638568173436603310934550244785 233879985484990123472221470331471
+   125   1 124           7           23   1.713270 7584787341593689746063646994166399511 3049036624685637237166809488076357097
+
+  fixed t ladder (all equal mod 2^t?):
+    t= 4: N  residues=['0x9', '0xb', '0xe', '0x4', '0x3', '0x4']...
+    t= 8: N  residues=['0x9', '0x5b', '0xce', '0xb4', '0xa3', '0xc4']...
+    t=12: N  residues=['0x9', '0xd5b', '0x2ce', '0xeb4', '0xba3', '0xfc4']...
+    t=16: N  residues=['0x9', '0x2d5b', '0x92ce', '0xeeb4', '0x4ba3', '0xdfc4']...
+
+  mantissa low 8 bits: floor(o / 2^(b-8)) for b>=8:
+    shared among scaled mantissas: t=0  (weak cross-height invariant)
+    values: [181, 146, 165, 242, 166, 212, 235, 155, 247, 235, 223, 163, 219]
+
+P135 ROW-1/ROW-2 CARRY (unified Λ_N row3)
+
+  row1: carry_ok=False  rem_bits=255  b_bits=0
+  row2: carry_ok=False  rem_bits=255  b_bits=0
+  row3: carry_ok=True  rem_bits=0  b_bits=255
+
+  close row1 via d ≡ rem*qx^-1: d_mod bits=256 in_band=False  implied o bits=134
+    gap=1 tier hit: True  (o in [134b..135b))
+    gap=2 tier hit: False  (o in [133b..134b))
+  close row2 via d ≡ rem*qx^-1: d_mod bits=256 in_band=False  implied o bits=134
+    gap=1 tier hit: True  (o in [134b..135b))
+    gap=2 tier hit: False  (o in [133b..134b))
+
+  Carry congruences give d mod N outside puzzle band — they constrain
+  a DIFFERENT layer than shelf2 offset unless linked by bridge law.
+
+========================================================================
+P135 TIER WIDTH AFTER HYPOTHETICAL CONGRUENCES
+
+  gap=1 raw tier width: 2^134  [10889035741470030830827987437816582766592, 21778071482940061661655974875633165533184)
+  gap=2 raw tier width: 2^133  [5444517870735015415413993718908291383296, 10889035741470030830827987437816582766592)
+
+  bits to remove for ~2^60 search: ~73 (from 2^133 tier)
+
+  row-2 gap=1 shared mod 2^0: residue=1  P135 tier-1 survivors=1.089e+40  ~2^133.0  (removed 0 bits)
+  row-2 gap=2 shared mod 2^0: residue=0  P135 tier-2 survivors=5.445e+39  ~2^132.0  (removed 0 bits)
+
+VERDICT:
+  - Bit-length tier (gap 1/2): useful PRIOR, not falsified by 189-point miss
+  - Exact named bridge term: falsified for row-2 (term_exact=0/8)
+  - Low-bit congruence from row-2 cohort: see t_max above
+  - k_lane numeric proximity without s^-1 r Jacobian: misleading for ranking
+  - Next: combine carry residues with gap-tier CRT if law links layers
+
+K-LANE NOTE (do not rank by raw |k_transform - d|):
+  Δk ≡ s^-1 * r * Δd (mod N)  — modular circular distance required.

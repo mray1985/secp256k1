@@ -1,0 +1,90 @@
+TRUE3B: THE HORIZONTAL ALIGNMENT DISCOVERY
+===========================================
+
+From true3a.txt, we established:
+- Q1,+ + Q2,+ + Q3,+ = O (point at infinity)
+- Q_pub = Q2,+ for Puzzle 160
+- Px1^3 ≡ Px2^3 ≡ Px3^3 mod p (Triple Cubic Root Loop)
+
+NEW DISCOVERY (true3b):
+
+Tested: Is {Q1, Q2, Q3} a subgroup of order 3?
+- 3*Q1 ≠ O
+- 3*Q2 ≠ O  
+- 3*Q3 ≠ O
+
+**Result: NOT a subgroup of order 3.**
+
+HORIZONTAL ALIGNMENT PHENOMENON:
+
+2*Q1 = (0xff6b9dc3dfe256d1ab0674660c259383e992fe8d080e9b225b655c8b8c499735, 0x251830970f33cca630bd4d8e62557a0e22fdce6efd39e41c0371dbce53354d9)
+2*Q2 = (0xf0c1aabc2946adb220fe755a1af12d7b3051377df77abf799614d81bf0c141d3, 0x251830970f33cca630bd4d8e62557a0e22fdce6efd39e41c0371dbce53354d9)
+2*Q3 = (0xfd2b77ff6d6fb7c33fb163fd8e93f00e61bc9f50076a5640e85cb5682f51f56, 0x251830970f33cca630bd4d8e62557a0e22fdce6efd39e41c0371dbce53354d9)
+
+**ALL THREE 2*Qi POINTS SHARE THE SAME Y-COORDINATE!**
+
+y_2 = 0x251830970f33cca630bd4d8e62557a0e22fdce6efd39e41c0371dbce53354d9
+
+Similarly:
+
+3*Q1 = (0x4bac3a9b1f32847eef4873249f5999eeed072162413dc754663d4141f296ecc4, 0xd4c78a7ffe9b3a454d0c413b8fba028b97d4918ef8bd4d1a504201f2fab5d38c)
+3*Q2 = (0x7e83bbd87b5a7226cbaa05cfb3d2e15865c86349b1c02f6fd8f1ea3785c73c0b, 0xd4c78a7ffe9b3a454d0c413b8fba028b97d4918ef8bd4d1a504201f2fab5d38c)
+3*Q3 = (0x35d0098c6573095a450d870bacd384b8ad307b540d02093bc0d0d48587a1d360, 0xd4c78a7ffe9b3a454d0c413b8fba028b97d4918ef8bd4d1a504201f2fab5d38c)
+
+**ALL THREE 3*Qi POINTS SHARE THE SAME Y-COORDINATE!**
+
+y_3 = 0xd4c78a7ffe9b3a454d0c413b8fba028b97d4918ef8bd4d1a504201f2fab5d38c
+
+INTERPRETATION:
+
+The three points {Q1, Q2, Q3} form a special triadic structure where:
+1. Their point sum is O (zero element)
+2. Their doubles lie on a horizontal line (same y)
+3. Their triples lie on a horizontal line (same y)
+
+This is NOT a subgroup of order 3, but it IS a geometric configuration with
+profound symmetry properties.
+
+DISCRETE LOG IMPLICATION:
+
+Since Q1 + Q2 + Q3 = O, if we let:
+  priv1 = log_G(Q1)
+  priv2 = log_G(Q2) = private key for Puzzle 160 (since Q2 = Q_pub)
+  priv3 = log_G(Q3)
+
+Then: priv1 + priv2 + priv3 ≡ 0 mod N
+
+Therefore: priv2 ≡ -priv1 - priv3 mod N
+
+This means if we can find priv1 and priv3, we can compute priv2.
+
+But computing discrete logs is the ECDLP, which is hard.
+
+ALTERNATIVE APPROACH:
+
+Notice that Q1 + Q2 = -Q3, and we verified this computationally.
+
+What if we consider the relationship between the Px coordinates and the
+discrete logs? We know:
+
+From true3a: Px1^3 ≡ Px2^3 ≡ Px3^3 ≡ c mod p
+
+This means Px1, Px2, Px3 are the three cube roots of c mod p.
+
+The cube roots of unity in the field are: 1, ω, ω² where ω³ ≡ 1 mod p
+and ω ≠ 1.
+
+So Px2 = ω * Px1 mod p, and Px3 = ω² * Px1 mod p (or some permutation).
+
+If this is true, then the three points are related by multiplication by
+cube roots of unity in the x-coordinate.
+
+HYPOTHESIS: There exists ω with ω³ ≡ 1 mod p, ω ≠ 1, such that:
+  Px2 ≡ ω * Px1 mod p
+  Px3 ≡ ω² * Px1 mod p
+
+Let's test this.
+
+NEXT STEP:
+Test if Px2 * Px1_inv ≡ Px3 * Px2_inv mod p (i.e., Px2/Px1 = Px3/Px2)
+If so, then (Px2/Px1)^3 ≡ 1 mod p, confirming ω = Px2/Px1 is a cube root of unity.

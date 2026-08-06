@@ -1,0 +1,64 @@
+=== Poisson lambda analysis: offset_bits residual r = offset_bits - (n-10) ===
+Solved puzzles n >= 70, grouped by bridge row index
+
+--- ROW 0  (n=5 puzzles) ---
+  P 80  offset_bits= 79  pred(n-10)= 70  residual= +9
+  P 85  offset_bits= 84  pred(n-10)= 75  residual= +9
+  P110  offset_bits=109  pred(n-10)=100  residual= +9
+  P115  offset_bits=105  pred(n-10)=105  residual= +0
+  P130  offset_bits=127  pred(n-10)=120  residual= +7
+  Poisson lambda (mean residual) = 6.8000
+  Variance of residuals        = 12.1600
+  mean ~ var?                    False  (delta=5.36)
+  residual range                 [0, 9]
+  chi2 vs Poisson(lam)         = 0.000  (df=0)
+  Linear fit offset_bits = 0.9147*n + 5.6723
+  P135 offset_bits prediction:
+    linear (row 0)         = 129.2 -> round 129
+    h-10 + Poisson lam (row 0) = 132
+
+--- ROW 1  (n=4 puzzles) ---
+  P 75  offset_bits= 74  pred(n-10)= 65  residual= +9
+  P 95  offset_bits= 94  pred(n-10)= 85  residual= +9
+  P105  offset_bits=104  pred(n-10)= 95  residual= +9
+  P125  offset_bits=124  pred(n-10)=115  residual= +9
+  Poisson lambda (mean residual) = 9.0000
+  Variance of residuals        = 0.0000
+  mean ~ var?                    False  (delta=9.00)
+  residual range                 [9, 9]
+  chi2 vs Poisson(lam)         = 0.000  (df=0)
+  Linear fit offset_bits = 1.0000*n + -1.0000
+  P135 offset_bits prediction:
+    linear (row 1)         = 134.0 -> round 134
+    h-10 + Poisson lam (row 1) = 134
+
+--- ROW 2  (n=4 puzzles) ---
+  P 70  offset_bits= 66  pred(n-10)= 60  residual= +6
+  P 90  offset_bits= 89  pred(n-10)= 80  residual= +9
+  P100  offset_bits= 98  pred(n-10)= 90  residual= +8
+  P120  offset_bits=118  pred(n-10)=110  residual= +8
+  Poisson lambda (mean residual) = 7.7500
+  Variance of residuals        = 1.1875
+  mean ~ var?                    False  (delta=6.56)
+  residual range                 [6, 9]
+  chi2 vs Poisson(lam)         = 0.000  (df=0)
+  Linear fit offset_bits = 1.0346*n + -5.5385
+  P135 offset_bits prediction:
+    linear (row 2)         = 134.1 -> round 134
+    h-10 + Poisson lam (row 2) = 133
+
+=== P135 row=2 candidate offsets from predicted offset_bits ===
+shelf2 = 35959002268835125861687979158600974388545 (135 bits)
+band LO=21778071482940061661655974875633165533184 HI=43556142965880123323311949751266331066368
+  linear: offset_bits=134
+    d range approx [43556142965880123323311949751266331066367, 43556142965880123323311949751266331066367]  (bit-length band, not EC-tested)
+  poisson: offset_bits=133
+    d range approx [41403520139570141277101972877509265771841, 43556142965880123323311949751266331066367]  (bit-length band, not EC-tested)
+  h10+8 (row2 median residual): offset_bits=133
+    d range approx [41403520139570141277101972877509265771841, 43556142965880123323311949751266331066367]  (bit-length band, not EC-tested)
+
+=== VERDICT ===
+Global residual mean=7.77 var=5.87
+Per-row mean~var (Poisson signature): weak — residuals are small integers 7-9, not rare-event counts.
+Linear n-tracking fits better than Poisson for offset_bits vs n.
+P135 row=2 best point estimate: offset_bits ~ 132-133 (h-10+7..8 from solved row-2 cohort).

@@ -1,0 +1,54 @@
+PER-SLOT d experiment (for science)
+{H/2}=0.172851  puzzles with bridge: 81
+
+d_model:
+  shared_d      = same true d on every row (OLD behaviour)
+  lambda_row    = lambda_ns[i] per court row
+  lambda_band   = band rep of lambda_ns[i]
+  d_cbrt_slot   = mod-N cube root branch i of true d
+  d_true_oracle = true d only on matching row
+
+=== shared_d (true xy or y branch) ===
+  mean |E_d|     = 0.3738
+  mean |E_x-E_d| = 0.3384
+  mean |E_x|     = 0.4405
+  d in puzzle band: 81/81
+
+=== lambda_row (true xy or y branch) ===
+  mean |E_d|     = 0.4755
+  mean |E_x-E_d| = 0.3366
+  mean |E_x|     = 0.4405
+  d in puzzle band: 0/81
+
+=== lambda_band (true xy or y branch) ===
+  mean |E_d|     = 0.3653
+  mean |E_x-E_d| = 0.3127
+  mean |E_x|     = 0.4405
+  d in puzzle band: 81/81
+
+=== d_cbrt_slot (true xy or y branch) ===
+  mean |E_d|     = 0.3738
+  mean |E_x-E_d| = 0.3384
+  mean |E_x|     = 0.4405
+  d in puzzle band: 81/81
+
+=== d_true_oracle (true xy or y branch) ===
+  mean |E_d|     = 0.3738
+  mean |E_x-E_d| = 0.3384
+  mean |E_x|     = 0.4405
+  d in puzzle band: 81/81
+
+=== P130 per-slot (true row) ===
+  shared_d       E_x=+0.143554 E_d=+0.676035 Ex-Ed=-0.532480 in_band=True
+  lambda_row     E_x=+0.143554 E_d=+0.605456 Ex-Ed=-0.461902 in_band=False
+  lambda_band    E_x=+0.143554 E_d=+0.693281 Ex-Ed=-0.549727 in_band=True
+  d_cbrt_slot    E_x=+0.143554 E_d=+0.676035 Ex-Ed=-0.532480 in_band=True
+
+=== best d_model per puzzle (min |E_x-E_d| on true branch) ===
+  P 27 best=shared_d       |Ex-Ed|=0.004510 E_x=+0.1918 E_d=+0.1963
+  P 45 best=lambda_band    |Ex-Ed|=0.006456 E_x=+0.2230 E_d=+0.2295
+  P 48 best=lambda_row     |Ex-Ed|=0.009169 E_x=+0.4208 E_d=+0.4300
+  P115 best=shared_d       |Ex-Ed|=0.206455 E_x=-0.0797 E_d=+0.1268
+  P130 best=lambda_row     |Ex-Ed|=0.461902 E_x=+0.1436 E_d=+0.6055
+
+wins (best |E_x-E_d| on true branch): lambda_row=34, lambda_band=27, shared_d=20, d_cbrt_slot=0, d_true_oracle=0

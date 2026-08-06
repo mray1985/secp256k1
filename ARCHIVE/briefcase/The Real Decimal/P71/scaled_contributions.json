@@ -1,0 +1,259 @@
+{
+  "mult": 536870912,
+  "p71_lo": "1180591620717411303424",
+  "p71_hi": "2361183241434822606847",
+  "terms": [
+    {
+      "index": 1,
+      "value": "536870912",
+      "bits": 30,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 2,
+      "value": "1610612736",
+      "bits": 31,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 3,
+      "value": "3758096384",
+      "bits": 32,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 4,
+      "value": "4294967296",
+      "bits": 33,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 5,
+      "value": "11274289152",
+      "bits": 34,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 6,
+      "value": "26306674688",
+      "bits": 35,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 7,
+      "value": "40802189312",
+      "bits": 36,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 8,
+      "value": "120259084288",
+      "bits": 37,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 9,
+      "value": "250718715904",
+      "bits": 38,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 10,
+      "value": "275951648768",
+      "bits": 39,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 11,
+      "value": "620085903360",
+      "bits": 40,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 12,
+      "value": "1440424656896",
+      "bits": 41,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 13,
+      "value": "2800318676992",
+      "bits": 42,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 14,
+      "value": "5660766896128",
+      "bits": 43,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 15,
+      "value": "14424110792704",
+      "bits": 44,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 16,
+      "value": "27654220677120",
+      "bits": 45,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 17,
+      "value": "51444581400576",
+      "bits": 46,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 18,
+      "value": "106659607216128",
+      "bits": 47,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 19,
+      "value": "191950141521920",
+      "bits": 48,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 20,
+      "value": "463489785135104",
+      "bits": 49,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 21,
+      "value": "972683391008768",
+      "bits": 50,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 22,
+      "value": "1614640878452736",
+      "bits": 51,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 23,
+      "value": "3005833935847424",
+      "bits": 52,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 24,
+      "value": "7746336443072512",
+      "bits": 53,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 25,
+      "value": "17816334482014208",
+      "bits": 54,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 26,
+      "value": "29280328581382144",
+      "bits": 55,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 27,
+      "value": "60102666923016192",
+      "bits": 56,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 28,
+      "value": "122210292225540096",
+      "bits": 57,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 29,
+      "value": "215128949368291328",
+      "bits": 58,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 30,
+      "value": "554674670280900608",
+      "bits": 59,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 31,
+      "value": "1128711258753728512",
+      "bits": 60,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 32,
+      "value": "1660795570899386368",
+      "bits": 61,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 33,
+      "value": "3831882801158815744",
+      "bits": 62,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 34,
+      "value": "7587635338290397184",
+      "bits": 63,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 35,
+      "value": "10798015821910114304",
+      "bits": 64,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 36,
+      "value": "22756760726808821760",
+      "bits": 65,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 37,
+      "value": "53822146766060912640",
+      "bits": 66,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 38,
+      "value": "78904742888188411904",
+      "bits": 67,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 39,
+      "value": "173798519310378860544",
+      "bits": 68,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 40,
+      "value": "538831249400555110400",
+      "bits": 69,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 41,
+      "value": "782893191303280984064",
+      "bits": 70,
+      "solo_in_p71_band": false
+    },
+    {
+      "index": 42,
+      "value": "1554442376562402656256",
+      "bits": 71,
+      "solo_in_p71_band": true
+    }
+  ]
+}

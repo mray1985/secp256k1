@@ -1,0 +1,90 @@
+========================================================================================
+Exact partition of x-field by q_x
+========================================================================================
+
+Setup:
+  1 + beta + beta^2 = p  (integer)
+  k1 = floor(beta*x / p),  x1 = beta*x mod p
+  k2 = floor(beta^2*x / p), x2 = beta^2*x mod p
+  q_x = x - k1 - k2 = (x + x1 + x2)/p in {1,2} for x in 1..p-1
+
+----------------------------------------------------------------------------------------
+1) Derivation
+----------------------------------------------------------------------------------------
+  Let y = beta*x/p, z = beta^2*x/p  (rationals).
+  Then y + z = (beta + beta^2)*x/p = (p-1)*x/p = x - x/p.
+  For integer x in 1..p-1:  0 < x/p < 1, so
+    floor(y+z) = floor(x - x/p) = x - 1.
+
+  Classical identity:
+    floor(y)+floor(z) = floor(y+z)     iff  {y}+{z} < 1
+    floor(y)+floor(z) = floor(y+z) - 1 iff  {y}+{z} >= 1
+
+  Therefore k1+k2 in {x-1, x-2}, and
+    q_x = x - (k1+k2) in {1, 2}.
+
+  Exact criteria (equivalent for x in 1..p-1):
+
+    q_x = 1  <=>  {beta*x/p} + {beta^2*x/p} < 1
+            <=>  x1 + x2 < p
+            <=>  x1 + x2 = p - x
+            <=>  k1 + k2 = x - 1
+
+    q_x = 2  <=>  {beta*x/p} + {beta^2*x/p} >= 1
+            <=>  x1 + x2 >= p
+            <=>  x1 + x2 = 2p - x
+            <=>  k1 + k2 = x - 2
+
+  Boundary hypersurface in the torus: {beta x/p} + {beta^2 x/p} = 1,
+  i.e. (beta*x mod p) + (beta^2*x mod p) = p.
+
+----------------------------------------------------------------------------------------
+2) Piecewise constancy of (k1,k2)
+----------------------------------------------------------------------------------------
+  k1 jumps at x where beta*x is divisible by p:
+    x = ceil(m*p / beta) for m = 1..beta-1, clipped to [1,p-1]
+  k2 jumps at x = ceil(n*p / beta^2) for n = 1..beta^2-1 (reps).
+  On each open cell of this arrangement, (k1,k2) is constant,
+  hence q_x = x - k1 - k2 is an affine function of x with slope 1,
+  taking only values in {1,2} — so within a cell, q_x flips at most
+  when x crosses k1+k2+1.5, i.e. the cell may split into at most two
+  q_x-regions (often one).
+
+  Practical decision procedure (exact, O(1) mul/div):
+    x1 = (beta * x) % p
+    x2 = (beta2 * x) % p
+    q_x = 1 if x1 + x2 < p else 2
+  Or: q_x = (x + x1 + x2) // p
+
+----------------------------------------------------------------------------------------
+3) Verification on random x and on walk x(nG)
+----------------------------------------------------------------------------------------
+  random x: frac criterion <-> q_x : 5000/5000
+  random x: x1+x2 = q_x*p - x     : 5000/5000
+  random x: k1+k2 = x - q_x        : 5000/5000
+  random x: x1+x2 in {p-x,2p-x}  : 5000/5000
+  walk x(nG) n=1..1024: frac criterion: 1024/1024
+
+----------------------------------------------------------------------------------------
+4) Measure of regions (empirical)
+----------------------------------------------------------------------------------------
+  sample 20000: q_x=1 -> 9946 (49.73%)  q_x=2 -> 10054 (50.27%)
+  (Expect ~1/2 each if {y},{z} behave like uniform with y+z = x-x/p constraint.)
+
+----------------------------------------------------------------------------------------
+5) Edge case x=0
+----------------------------------------------------------------------------------------
+  x=0: k1=0 k2=0 x1=0 x2=0 q_x=0
+  (degenerate; not an affine curve x-coordinate for finite points)
+
+========================================================================================
+VERDICT
+========================================================================================
+  Exact rule:
+    q_x = 1  <=>  (beta*x mod p) + (beta^2*x mod p) < p
+    q_x = 2  <=>  (beta*x mod p) + (beta^2*x mod p) >= p
+  Equiv: q_x = 1 <=> {beta x/p}+{beta^2 x/p} < 1.
+  Equiv: q_x = x - floor(beta x/p) - floor(beta^2 x/p).
+  Regions = cells of the floor arrangement of beta x/p and beta^2 x/p,
+  cut by the antidiagonal {y}+{z}=1 on the unit torus.
+

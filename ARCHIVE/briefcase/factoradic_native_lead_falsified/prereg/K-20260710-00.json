@@ -1,0 +1,28 @@
+{
+  "candidate_id": "K-20260710-00",
+  "short_name": "panel_admissibility",
+  "formula": "tag rows by source, pub, txid, low_S, k_star, era_proxy; no rule training",
+  "domains": "82 solved (d,k,r,s,z,P) panel",
+  "score_definition": "diagnostic stratification only",
+  "expected_direction": "n/a",
+  "allowed_parameters": {
+    "tags": [
+      "source",
+      "pub_compressed",
+      "txid",
+      "low_S",
+      "k_star",
+      "era_proxy"
+    ]
+  },
+  "holdout_split": "n/a diagnostic",
+  "null_families": [
+    "heterogeneity check"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Diagnostic tagging only; no sieve.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

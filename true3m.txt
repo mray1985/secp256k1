@@ -1,0 +1,165 @@
+TRUE3M: ORIGIN RULE TEST - CRITICAL RESULT
+=============================================
+
+Following true3f.txt's directive to test the Origin Rule with verified data only.
+
+TEST SETUP:
+- For puzzles with known priv (d) and nonce (k):
+  1. Compute z = (s*k - r*priv) mod N
+  2. Compute (r*priv - z) mod 3 and mod 9
+  3. Compare with Omega from MEMORY.txt
+
+- Expected mapping from MEMORY.txt (mod 9):
+  Omega = +1 => (r*priv - z) mod 9 = 1
+  Omega = 0  => (r*priv - z) mod 9 = 6
+  Omega = -1 => (r*priv - z) mod 9 = 0
+
+- Known Omega values:
+  Puzzle 90: Omega = 0
+  Puzzle 100: Omega = -1
+  Puzzle 115: Omega = -1
+  Puzzle 120: Omega = +1
+  Puzzle 135: Omega = +1
+  Puzzle 150: Omega = +1
+  Puzzle 160: Omega = -1
+
+AVAILABLE DATA:
+================
+
+Puzzle 115 (only puzzle with full parameters):
+  priv = 0x60f4d11574f5deee49961d9609ac6
+  k    = 0x9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+  r    = 0x988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2
+  s    = 0x10c209729f42f3b531116c5650df090cbe934bd5a4fc556d60f143227b54c69a
+
+Computed:
+  z = (s*k - r*priv) mod N = 0x16cc9c96952b3460a847c7a831cc695ffe9289a41d5ded5aa9cb6ff3ab67f6b
+
+Test:
+  (r*priv - z) mod 9 = 3
+  (r*priv - z) mod 3 = 0
+
+Omega for Puzzle 115 = -1
+
+Expected (from MEMORY.txt mod 9): 0
+Actual: 3
+Result: FAIL for mod 9
+
+But: (r*priv - z) mod 3 = 0, which matches Omega = -1 pattern
+
+ANALYSIS:
+=========
+
+The mod 9 test FAILED, but the mod 3 test PASSED.
+
+This suggests:
+1. The Origin Rule is correct for **mod 3**, not mod 9
+2. The mod 9 mapping from MEMORY.txt may be based on incomplete data
+3. Or the mod 9 values have an offset
+
+Let's reconsider the mod 9 results from MEMORY.txt:
+  Omega = +1 => (r*d - z) mod 9 = 1
+  Omega = 0  => (r*d - z) mod 9 = 6
+  Omega = -1 => (r*d - z) mod 9 = 0
+
+Modulo 3:
+  1 mod 3 = 1
+  6 mod 3 = 0
+  0 mod 3 = 0
+
+So mod 3 mapping would be:
+  Omega = +1 => (r*d - z) mod 3 = 1
+  Omega = 0  => (r*d - z) mod 3 = 0
+  Omega = -1 => (r*d - z) mod 3 = 0
+
+This can't be right because Omega = 0 and Omega = -1 would both give 0.
+
+But our Puzzle 115 test gives:
+  Omega = -1, (r*d - z) mod 3 = 0
+
+So maybe:
+  Omega = +1 => (r*d - z) mod 3 = 1
+  Omega = 0  => (r*d - z) mod 3 = 0
+  Omega = -1 => (r*d - z) mod 3 = 0
+
+No, that doesn't distinguish Omega = 0 from Omega = -1.
+
+Wait - maybe Omega = 0 is a special case (dual-closure Puzzle 90).
+For non-dual puzzles (Omega = ±1):
+  Omega = +1 => (r*d - z) mod 3 = ?
+  Omega = -1 => (r*d - z) mod 3 = 0
+
+From Puzzle 115 (Omega = -1): (r*d - z) mod 3 = 0 ✓
+
+We need to test a puzzle with Omega = +1 to see if (r*d - z) mod 3 = 1 or 2.
+
+ALTERNATIVE HYPOTHESIS:
+=======================
+
+Maybe the Origin Rule is:
+  (r*d - z) mod 3 = Omega
+
+For Puzzle 115: Omega = -1, but -1 mod 3 = 2, not 0.
+So: (r*d - z) mod 3 = 0 ≠ 2 = Omega mod 3
+
+Not matching.
+
+Maybe: (r*d - z) mod 3 = (Omega + 1) mod 3
+For Puzzle 115: (Omega + 1) mod 3 = (-1 + 1) mod 3 = 0 ✓
+
+Let's check:
+  Omega = +1: (1 + 1) mod 3 = 2
+  Omega = 0: (0 + 1) mod 3 = 1
+  Omega = -1: (-1 + 1) mod 3 = 0
+
+So mapping would be:
+  Omega = +1 => (r*d - z) mod 3 = 2
+  Omega = 0  => (r*d - z) mod 3 = 1
+  Omega = -1 => (r*d - z) mod 3 = 0
+
+Puzzle 115: Omega = -1, (r*d - z) mod 3 = 0 ✓
+
+This looks promising!
+
+NEW HYPOTHESIS:
+  (r*priv - z) mod 3 = (Omega + 1) mod 3
+
+Or equivalently:
+  (r*priv - z + 2) mod 3 = Omega mod 3
+
+Let's test this hypothesis.
+
+IMPORTANT: We need more puzzles with full ECDSA parameters to verify.
+
+CURRENT STATUS:
+===============
+
+- Puzzle 115: Omega = -1, (r*d - z) mod 3 = 0
+  - If hypothesis: (Omega + 1) mod 3 = (-1 + 1) mod 3 = 0 ✓
+  - Mapping: Omega = -1 => (r*d - z) mod 3 = 0
+
+- Need to test Puzzles 120, 135, 150 (Omega = +1) and Puzzle 90 (Omega = 0)
+
+DATA NEEDED:
+============
+
+Full ECDSA parameters (priv, nonce k, r, s, z) for:
+- Puzzle 90 (Omega = 0)
+- Puzzle 100 (Omega = -1)
+- Puzzle 120 (Omega = +1)
+- Puzzle 135 (Omega = +1)
+- Puzzle 150 (Omega = +1)
+- Puzzle 160 (Omega = -1)
+
+Currently only Puzzle 115 has priv + k known.
+
+NEXT STEP:
+==========
+
+Find ECDSA parameters for other puzzles. The files likely containing them:
+- Complexity_Simplified_N_*.txt
+- true20.txt and related files
+- Any files mentioning "private key" or "nonce"
+
+Once we have 2-3 more puzzles with full parameters, we can confirm the
+Origin Rule hypothesis definitively.

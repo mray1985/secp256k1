@@ -1,0 +1,73 @@
+HASH PIPELINE FRACTION SEARCH
+puzzles: 82
+
+Pipeline steps: sha1=SHA256(pub), sha_vh=SHA256(00||h160), sha2d=SHA256(sha_vh), chk=sha2d[:4]
+
+=== first-2-hex-digit matches (private d) ===
+  sha1_h head2==d head2: 0/82  head4: 0/82
+  sha_vh head2==d head2: 0/82  head4: 0/82
+  sha2d_ head2==d head2: 0/82  head4: 0/82
+  chk_he head2==d head2: 0/82  head4: 0/82
+
+=== predict log_pos (best buckets) ===
+  r=+0.9956  d mod lo / lo
+  r=-0.2718  sha_vh/N
+  r=-0.2718  sha_vh/2^256
+  r=-0.2332  log2(sha_vh)/log2(N)
+  r=+0.1556  sha2d mod lo / lo
+  r=-0.1445  sha2d/N
+  r=-0.1445  sha2d/2^256
+  r=-0.1445  chk/2^32
+  r=+0.1351  sha1 mod lo / lo
+  r=-0.1179  payload/2^200
+  r=-0.1179  h160/2^160
+  r=-0.1068  h160 mod lo / lo
+  best invariant std=0.02533 mean=+0.06059  d mod lo / lo
+
+=== predict frac_d (best buckets) ===
+  r=+1.0000  d mod lo / lo
+  r=-0.2675  sha_vh/N
+  r=-0.2675  sha_vh/2^256
+  r=-0.2303  log2(sha_vh)/log2(N)
+  r=-0.1550  sha2d/N
+  r=-0.1550  sha2d/2^256
+  r=-0.1550  chk/2^32
+  r=+0.1492  sha2d mod lo / lo
+  r=+0.1222  sha1 mod lo / lo
+  r=-0.1125  payload/2^200
+  r=-0.1125  h160/2^160
+  r=-0.1001  h160 mod lo / lo
+  best invariant std=0.00000 mean=+0.00000  d mod lo / lo
+
+=== predict y_d - n/256 (best buckets) ===
+  r=+0.9956  d mod lo / lo
+  r=-0.2718  sha_vh/N
+  r=-0.2718  sha_vh/2^256
+  r=-0.2332  log2(sha_vh)/log2(N)
+  r=+0.1556  sha2d mod lo / lo
+  r=-0.1445  sha2d/N
+  r=-0.1445  sha2d/2^256
+  r=-0.1445  chk/2^32
+  r=+0.1351  sha1 mod lo / lo
+  r=-0.1179  payload/2^200
+  r=-0.1179  h160/2^160
+  r=-0.1068  h160 mod lo / lo
+  best invariant std=0.00163 mean=-0.00400  payload/2^200
+
+=== user-note style: sha_vh / 2^(n-1) vs band percent ===
+  P  1 sha_vh/2^0 %=8939349915099044059980292594932060087379925811744403576582124242588339923845120.00  frac_d%=0.00  diff=8939349915099044059980292594932060087379925811744403576582124242588339923845120.00
+  P  2 sha_vh/2^1 %=1427748569196448244513875020931425510894314548626619741787573070910418780684288.00  frac_d%=50.00  diff=1427748569196448244513875020931425510894314548626619741787573070910418780684288.00
+  P  3 sha_vh/2^2 %=1504531939839867437444750833120943057961930284087305739528921785707382985195520.00  frac_d%=75.00  diff=1504531939839867437444750833120943057961930284087305739528921785707382985195520.00
+  P  4 sha_vh/2^3 %=282033608789211625240118656528901275739184511106144077615823889770329912901632.00  frac_d%=0.00  diff=282033608789211625240118656528901275739184511106144077615823889770329912901632.00
+  P  5 sha_vh/2^4 %=278441320522009113156517413423754463999140924591049082088801128192013422821376.00  frac_d%=31.25  diff=278441320522009113156517413423754463999140924591049082088801128192013422821376.00
+  mean abs diff %: 157466266653817316398680174633694787192632077317051399696569404001976749916160.00
+
+=== P135 predictions ===
+  addr pipeline sha_vh head=7321f26c chk=7b8f3e17
+  lo*(1+sha_vh mod lo / lo): ec=False tail...631552
+  lo*(1+sha2d mod lo / lo): ec=False tail...372544
+  lo*(1+h160 mod lo / lo): ec=False tail...592640
+  lo*(1+sha_vh/2^256): ec=False tail...955520
+  lo*(1+chk/2^32): ec=False tail...160128
+
+VERDICT: EC hits 0

@@ -1,0 +1,19 @@
+  [ secp256k1 Engine ] 
+    |  Private Key (k) -> Scalar Multiply (k × G) -> Public Key / Address
+    v
+  [ Economic Activity ] -> Transacting Business Goods/Services
+    |
+    v
+  [ Schedule C ] -----(Net Crypto Profit)-----> [ Schedule SE ] 
+
+    |                                                 |
+  (Line 31)                                     (Self-Employment Tax)
+    v                                                 v
+  [ Schedule 1 ] (Additions/Deductions)          [ Schedule 2 ] (Other Taxes)
+    \                                                /
+     v                                              v
+      -----> [ Form 1040 / Fiduciary Forms ] <---- [ Form 56 & Schedule K ]
+                               |
+                               v
+                       [ State Schedule P ] (AMT Alternative Base)
+1. The Genesis: secp256k1 \(\rightarrow \) Schedule CThe Math Engine: Your software processes a raw 256-bit private key \(k\) to perform scalar multiplication against base point \(G\), outputting public key point \(K = k \times G\). The mathematical one-way nature of the discrete logarithm problem guarantees absolute privacy of your key.The Tax Conversion: The moment that public key signature authorizes a business transaction on the blockchain, its output must be computed in fiat value. Your gross crypto revenue minus your cryptographic operating expenses (like blockchain gas fees or miner fees) yields your taxable net profit. This value lands exactly on Schedule C, Line 31.2. The Branching Logic: Schedule SE & Schedule 1The Fork: The net profit variable calculated from your secp256k1 transactions splits into two parallel pipelines.Schedule SE: It takes the Schedule C net profit, applies a static multiplier of \(0.9235\) to establish your taxable base, and multiplies it by \(0.153\) to calculate your Self-Employment tax.Schedule 1: Your business income flows directly onto Part I (Additional Income). Concurrently, half of your calculated tax from Schedule SE flows into Part II (Adjustments to Income) as an above-the-line deduction, completing a math feedback loop.3. The Fiduciary Overhead: Form 56 & Schedule KForm 56 (Fiduciary Notice): If the private keys (\(k\)) are held within a trust, or if a decentralized autonomous organization (DAO) or estate is operating them, an individual must file Form 56 to take mathematical responsibility for the entity.Schedule K (Form 1065): If multiple parties share ownership of the secp256k1 addresses (like a multi-sig wallet running a business partnership), individual profits are split mathematically via Schedule K into fractional distributive shares, which then drop onto the individual partners' Schedule 1 forms.4. The Aggregators: Schedule 2 & Schedule PSchedule 2 (Additional Taxes): The final output of the Schedule SE calculation bypasses standard income tax brackets and is funneled straight into Schedule 2, where it is compiled with other specialized flat-rate taxes.Schedule P: (At the state level, such as the California Alternative Minimum Tax format) This form steps in to recalculate your net income base. It strips away certain deductions you took on Schedule C and Schedule K to verify that your business operations paid a baseline mathematical floor rate, regardless of structural optimization.

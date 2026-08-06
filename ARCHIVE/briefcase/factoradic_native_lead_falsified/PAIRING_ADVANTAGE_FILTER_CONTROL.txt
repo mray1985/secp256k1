@@ -1,0 +1,97 @@
+name:              CONTROL: native m=n factoradic lead corr
+score_real:        +0.6097
+score_shuffled:    +0.4845  (sd=0.1159)
+ADVANTAGE:         +0.1253   [= real - shuffled]
+p_shuffled:        0.1339
+rand n-bit mean:   +0.5186
+rand EC mean:      +0.4881
+nearby height mean:+0.5435
+control native-n advantage: +0.1349
+beats_control:     False
+holdout train/test score:     +0.5612 / +0.7260
+holdout train/test advantage: +0.0492 / +0.2344
+range scores ((1, 35)/(36, 70)): +0.5539 / +0.6380
+
+PROMOTION GATE:
+  [ OK ] advantage > 0.12
+  [ NO ] p_shuffle < 0.01
+  [ OK ] beats random n-bit
+  [ OK ] beats random EC pairs
+  [ NO ] holds out-of-sample
+  [ OK ] direction consistent across ranges
+VERDICT:           FAIL
+note: WARNING: no prereg record — register F before peeking (see C:\Users\mitch\Desktop\secp256k1\logs\prereg\F_PREREG_TEMPLATE.md)
+note: CONTROL feature: always FAIL by policy (sawtooth null model).
+
+{
+  "policy": {
+    "laboratory_rule": "\"Looks similar\" \u2260 \"depends on the correct pairing.\" Ask P_i=[d_i]G versus P_\u03c0(i)\u2260[d_i]G. Need score_real strong, score_shuffled ordinary, \u0394 unusually large.",
+    "promote_only_if": {
+      "advantage": "> 0.12",
+      "p_shuffle": "< 0.01",
+      "beats_random_nbit": true,
+      "beats_random_ec": true,
+      "holds_out_of_sample": true,
+      "direction_consistent_across_ranges": true
+    },
+    "false_positive_benchmark": {
+      "control": "native m=n factoradic lead",
+      "score_real": 0.61,
+      "score_shuffled": 0.485,
+      "advantage": 0.125,
+      "p_shuffle": 0.15,
+      "meaning": "Ordinary null noise / convincing coincidence shape \u2014 NOT a magical cutoff. New F must beat this AND have low null p."
+    },
+    "exclude_trivial": [
+      "DL recomputation: F=1{P=[d]G} (or any verify of already-known solved d vs its point)",
+      "Curve membership alone: formulas implied by y^2 \u2261 x^3+7 (mod p) for every valid point"
+    ],
+    "preregistration": {
+      "required_before_peeking": true,
+      "template": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\prereg\\F_PREREG_TEMPLATE.md",
+      "fields": [
+        "exact formula and reductions",
+        "domains p or N",
+        "score definition",
+        "expected direction",
+        "allowed parameters",
+        "holdout split",
+        "null families"
+      ]
+    },
+    "worthwhile_middle_ground": "Compact F(d,Px,Py) not guaranteed by curve membership alone and destroyed by permutation \u2014 fingerprint of correct attachment.",
+    "archive": "C:\\Users\\mitch\\Desktop\\secp256k1\\ARCHIVE\\briefcase\\factoradic_native_lead_falsified"
+  },
+  "result": {
+    "name": "CONTROL: native m=n factoradic lead corr",
+    "score_real": 0.6097297956101619,
+    "score_shuffled_mean": 0.4844727813946734,
+    "score_shuffled_sd": 0.11589189496283334,
+    "advantage": 0.12525701421548852,
+    "p_shuffled": 0.13386613386613386,
+    "score_rand_nbit_mean": 0.518629616456101,
+    "score_rand_ec_mean": 0.48813803121389,
+    "score_nearby_mean": 0.543521165368903,
+    "control_native_lead_advantage": 0.13491842007687288,
+    "beats_control": false,
+    "score_train": 0.5611977664809327,
+    "score_test": 0.7260328587068778,
+    "advantage_train": 0.04922465199362447,
+    "advantage_test": 0.23440108572356977,
+    "score_range_lo": 0.5539370878496257,
+    "score_range_hi": 0.637967368666252,
+    "gate": {
+      "advantage_gt_floor": true,
+      "p_shuffle_ok": false,
+      "beats_rand_nbit": true,
+      "beats_rand_ec": true,
+      "holds_oos": false,
+      "direction_consistent": true
+    },
+    "verdict": "FAIL",
+    "notes": [
+      "WARNING: no prereg record \u2014 register F before peeking (see C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\prereg\\F_PREREG_TEMPLATE.md)",
+      "CONTROL feature: always FAIL by policy (sawtooth null model)."
+    ]
+  }
+}

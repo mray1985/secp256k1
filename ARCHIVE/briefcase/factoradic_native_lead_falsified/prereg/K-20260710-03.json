@@ -1,0 +1,25 @@
+{
+  "candidate_id": "K-20260710-03",
+  "short_name": "hashkeys_batch_rfc6979_attribution",
+  "formula": "txid=17e4e323cfbc68d7f0071cad09364e8193eedf8fefbcbd8a21b4b65717a4b3d3; in_batch: all solved rows on that txid must RFC6979-match 100%; out_batch: report match rate (need not be 100%); P135 co-location metadata only; NOT a universal k-sieve or key recovery",
+  "domains": "solved panel stratified by txid; hashkeys batch vs other",
+  "score_definition": "in_batch match rate; out_batch match rate; attribution if in=100% and in>>out",
+  "expected_direction": "in_batch 100%; out_batch substantially lower",
+  "allowed_parameters": {
+    "txid": "17e4e323cfbc68d7f0071cad09364e8193eedf8fefbcbd8a21b4b65717a4b3d3",
+    "rfc6979": "same locked procedure as K-02",
+    "orbit": "{k, N-k}",
+    "grid": "none"
+  },
+  "holdout_split": "in-batch vs out-of-batch by exact txid (not chronological bins)",
+  "null_families": [
+    "out-of-batch contrast",
+    "no encoding variants"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Attribution of signing process within one tx batch; does not verify P=[d]G as a sieve or claim d recovery.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

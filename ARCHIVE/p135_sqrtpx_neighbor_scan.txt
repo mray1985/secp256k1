@@ -1,0 +1,9 @@
+P135 sqrt(Px) neighbor scan
+candidates: 227  radius=+/-1,048,576  (~2,097,153/each)
+est keys: 476,053,731 (~2^29)
+upper_only: False
+
+
+elapsed: 15761.6s  rate: 30,203 keys/s
+hits: 0
+no hit in scanned windows

@@ -1,0 +1,79 @@
+Puzzle 160 — RMD160 + Py slice barcode analysis
+P_160 Px = 101616124637840542991531253248586524020213215258338643076214814468447630501491
+P_160 Py = 88132823371574229813684435207239348220522140366126834573803505878170136640646
+RMD barcodes: 13   Py slices: 21
+
+================================================================================
+RMD160 FAMILY — alignment vs P
+================================================================================
+rmd_wrap2    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=Px(93)  best_xy_prefix=(3,0) step=019  closure=True  np1_div=False
+rmd_wrap1    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=Px(82)  best_xy_prefix=(1,2) step=078  closure=True  np1_div=False
+rmd_wrap11   digits=48  m_prefix_px= 0 m_prefix_py= 1  fp=Py(79)  best_xy_prefix=(2,2) step=134  closure=True  np1_div=False
+rmd_wrap4    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=y inv N(79)  best_xy_prefix=(2,2) step=242  closure=True  np1_div=False
+rmd_wrap5    digits=48  m_prefix_px= 0 m_prefix_py= 1  fp=Px(78)  best_xy_prefix=(3,0) step=117  closure=True  np1_div=False
+b2_rmd160    digits=49  m_prefix_px= 1 m_prefix_py= 0  fp=p-y(77)  best_xy_prefix=(2,2) step=025  closure=True  np1_div=False
+rmd_wrap0    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=Px(77)  best_xy_prefix=(1,3) step=361  closure=True  np1_div=False
+rmd_wrap3    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=p-x(77)  best_xy_prefix=(4,0) step=315  closure=True  np1_div=False
+rmd_wrap10   digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=p-y(76)  best_xy_prefix=(3,1) step=183  closure=True  np1_div=False
+rmd_wrap8    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=y inv p(75)  best_xy_prefix=(2,1) step=014  closure=True  np1_div=False
+rmd_wrap6    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=p-y(74)  best_xy_prefix=(3,0) step=004  closure=True  np1_div=False
+rmd_wrap7    digits=48  m_prefix_px= 0 m_prefix_py= 0  fp=Px(71)  best_xy_prefix=(3,0) step=082  closure=True  np1_div=False
+rmd_wrap9    digits=48  m_prefix_px= 0 m_prefix_py= 1  fp=y inv N(68)  best_xy_prefix=(3,2) step=140  closure=True  np1_div=False
+
+================================================================================
+PY SLICE FAMILY — substring check + alignment vs P
+================================================================================
+py           digits=77  offset= 0  m==Py? True  m_prefix_py=77  fp=p-y(79)  best_xy_prefix=(3,2) step=218  closure=True
+py_w0        digits=48  offset= 0  m==Py? False m_prefix_py=48  fp=Px(80)  best_xy_prefix=(3,1) step=168  closure=True
+py_w15       digits=48  offset=56  m==Py? False m_prefix_py= 1  fp=Px(94)  best_xy_prefix=(4,0) step=369  closure=True
+py_w13       digits=48  offset=50  m==Py? False m_prefix_py= 1  fp=p-x(78)  best_xy_prefix=(3,0) step=060  closure=True
+py_w6        digits=48  offset=17  m==Py? False m_prefix_py= 1  fp=y inv p(78)  best_xy_prefix=(3,0) step=011  closure=True
+py_w1        digits=48  offset= 1  m==Py? False m_prefix_py= 1  fp=x inv p(76)  best_xy_prefix=(3,1) step=153  closure=True
+py_w10       digits=48  offset=34  m==Py? False m_prefix_py= 1  fp=p-x(73)  best_xy_prefix=(4,0) step=045  closure=True
+py_w18       digits=48  offset=64  m==Py? False m_prefix_py= 1  fp=Py(73)  best_xy_prefix=(3,2) step=089  closure=True
+py_w3        digits=48  offset= 5  m==Py? False m_prefix_py= 1  fp=Py(73)  best_xy_prefix=(2,2) step=424  closure=True
+py_w8        digits=48  offset=21  m==Py? False m_prefix_py= 1  fp=Py(69)  best_xy_prefix=(0,3) step=042  closure=True
+py_w16       digits=48  offset=62  m==Py? False m_prefix_py= 1  fp=x inv N(68)  best_xy_prefix=(5,0) step=431  closure=True
+py_w5        digits=48  offset=16  m==Py? False m_prefix_py= 0  fp=p-y(87)  best_xy_prefix=(2,1) step=036  closure=True
+py_w4        digits=48  offset=12  m==Py? False m_prefix_py= 0  fp=p-y(85)  best_xy_prefix=(3,0) step=031  closure=True
+py_w9        digits=48  offset=31  m==Py? False m_prefix_py= 0  fp=p-x(80)  best_xy_prefix=(1,2) step=030  closure=True
+py_w17       digits=48  NOT_IN_PY  m==Py? False m_prefix_py= 0  fp=Px(79)  best_xy_prefix=(2,1) step=017  closure=True
+py_w19       digits=49  offset=68  m==Py? False m_prefix_py= 0  fp=p-x(79)  best_xy_prefix=(2,2) step=118  closure=True
+py_w11       digits=49  offset=41  m==Py? False m_prefix_py= 0  fp=Px(77)  best_xy_prefix=(4,0) step=333  closure=True
+py_w12       digits=49  offset=47  m==Py? False m_prefix_py= 0  fp=Px(76)  best_xy_prefix=(2,1) step=013  closure=True
+py_w14       digits=48  offset=54  m==Py? False m_prefix_py= 0  fp=Px(75)  best_xy_prefix=(4,0) step=278  closure=True
+py_w7        digits=49  offset=18  m==Py? False m_prefix_py= 0  fp=Px(71)  best_xy_prefix=(2,3) step=294  closure=True
+py_w2        digits=49  offset= 2  m==Py? False m_prefix_py= 0  fp=x inv N(70)  best_xy_prefix=(2,3) step=218  closure=True
+
+================================================================================
+(N+1) divisibility: 0 hits
+================================================================================
+  none of these scalars divide N+1 exactly
+
+================================================================================
+TOP fingerprint leaders (both families)
+================================================================================
+py_w15       (py)  Px contains=94
+rmd_wrap2    (rmd)  Px contains=93
+py_w5        (py)  p-y contains=87
+py_w4        (py)  p-y contains=85
+rmd_wrap1    (rmd)  Px contains=82
+py_w0        (py)  Px contains=80
+py_w9        (py)  p-x contains=80
+py           (py)  p-y contains=79
+py_w17       (py)  Px contains=79
+py_w19       (py)  p-x contains=79
+
+================================================================================
+BEST decimal prefix to P (both families)
+================================================================================
+py           (py)  prefix=(3,2) step=218  fp=p-y(79)
+py_w16       (py)  prefix=(5,0) step=431  fp=x inv N(68)
+py_w18       (py)  prefix=(3,2) step=089  fp=Py(73)
+py_w2        (py)  prefix=(2,3) step=218  fp=x inv N(70)
+py_w7        (py)  prefix=(2,3) step=294  fp=Px(71)
+rmd_wrap9    (rmd)  prefix=(3,2) step=140  fp=y inv N(68)
+b2_rmd160    (rmd)  prefix=(2,2) step=025  fp=p-y(77)
+py_w0        (py)  prefix=(3,1) step=168  fp=Px(80)
+py_w1        (py)  prefix=(3,1) step=153  fp=x inv p(76)
+py_w10       (py)  prefix=(4,0) step=045  fp=p-x(73)

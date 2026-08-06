@@ -1,0 +1,46 @@
+SCHEDULE PIPELINE (strict generated_k only)
+PIVOT_I99=198.95  CORR_142=2^142
+
+=== P115 CALIBRATION LOCK ===
+ry_source == R_true: True
+rx_match: True
+ry_match: True
+k0 + d*dk == k: True
+known d bits=115  k bits=256
+
+=== P115 SCHEDULE E SWEEP (calibration — wins expected only if algebra aligns) ===
+P115 gp_mode=2p142 gp_bits=143 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+P115 gp_mode=geom_round gp_bits=2 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+P115 gp_mode=geom_floor gp_bits=2 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+P115 gp_mode=n_bits gp_bits=115 candidates=10 full_wins=0
+  best=k0+gp*dk score=2/5
+
+=== BLIND P70-P125 (known_k masked) ===
+  no blind full-score wins on P70-P125
+
+=== P135 (last — not scored as win without ground truth) ===
+P135 gp_mode=2p142 gp_bits=143 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+    top k0+gp*dk rx=False ry=False pub=False band=False
+    top pivot+gp rx=False ry=False pub=False band=False
+P135 gp_mode=geom_round gp_bits=23 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+    top k0+gp*dk rx=False ry=False pub=False band=False
+    top pivot+gp rx=False ry=False pub=False band=False
+P135 gp_mode=geom_floor gp_bits=23 candidates=10 full_wins=0
+  best=k0+gp*dk score=1/5
+    top k0+gp*dk rx=False ry=False pub=False band=False
+    top pivot+gp rx=False ry=False pub=False band=False
+P135 gp_mode=n_bits gp_bits=135 candidates=10 full_wins=0
+  best=k0+gp*dk score=2/5
+    top k0+gp*dk rx=False ry=False pub=False band=True
+    top pivot+gp rx=False ry=False pub=False band=False
+
+RECOMMENDATION — feed Schedule E first on P115:
+  1. k0 + (2^142) * dk     — linear bridge with fixed 142-bit correction index
+  2. R_base + c * 2^142    — sweep c in {-2,-1,0,1,2} from arrested R_x
+  3. pivot + 2^142         — I99 pivot + correction scaffold
+  Algebra lock: k0 + d*dk is the identity (geom_pred=d); blind path uses 2^142 not d.

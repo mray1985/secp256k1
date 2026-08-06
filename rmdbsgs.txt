@@ -1,0 +1,16 @@
+# Puzzle 71 RIPEMD160 BSGS — use rmdbsgs.py (fixed) or puzzle71_bsgs/ for full run.
+#
+# CORRECT P71 target (from puzzle71_bsgs/TARGET.txt):
+#   address  = 1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU
+#   hash160  = F6F5431D25BBF7B12E8ADD9AF5E3475C44A0A5B8
+#   band     = [2^70, 2^71 - 1]
+#
+# OLD rmdbsgs.txt had WRONG target (20D45A6A... = Puzzle 66 hash160)
+# and WRONG band (2^133..2^134 = Puzzle 134).
+#
+# Real P71 search: hash160(compressed_pubkey(d*G)) — NOT RIPEMD160(str(d)).
+# Full BSGS: puzzle71_bsgs/build_baby_h160.py + run_giant_shard.py
+#
+# Quick test:
+#   python rmdbsgs.py --diagnose
+#   python rmdbsgs.py --puzzle 71 --sample 1000000

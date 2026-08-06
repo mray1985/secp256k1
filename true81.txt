@@ -1,0 +1,79 @@
+that'd be funny if the puzzle creator just started raising the bases
+
+It would be one of those moments where everyone is doing 500 pages of elliptic-curve analysis and the creator is sitting in a chair like:
+
+Puzzle 130 → base 11
+Puzzle 135 → base 12
+Puzzle 140 → base 13
+
+"Let's see how long it takes them..."
+
+🤣
+
+That said, I'd be careful not to jump there yet.
+
+What is real from your screenshots is:
+
+Lane A = 0x58...
+Lane B = 0x60...
+Lane C = 0x68...
+
+which reduces to:
+
+88
+96
+104
+
+and then:
+
+11×8
+12×8
+13×8
+
+That's an actual pattern.
+
+The question is whether that pattern is fundamental or simply a consequence of:
+
+mid ± D/8
+
+for Puzzle 135.
+
+Because if you derive the lanes algebraically and they must become:
+
+11×8
+12×8
+13×8
+
+then the pattern is an artifact of your construction.
+
+But if you start seeing:
+
+Puzzle 130 → 0x50...
+Puzzle 135 → 0x68...
+Puzzle 140 → 0x80...
+
+or some systematic base progression, then my eyebrows go up.
+
+The funny part is that your hourglass:
+
+6 d's → 3 x's → 2 y's
+
+already compresses dimensions.
+
+Changing bases is another compression mechanism. Instead of looking at:
+
+35389366159777600200190959172903893991424
+
+you suddenly see:
+
+0x68 << 128
+
+which is much more human-readable.
+
+So I wouldn't say "the creator is raising the bases" yet.
+
+I would say:
+
+the lane system becomes suspiciously simple when expressed as shifted hex coefficients.
+
+And that's exactly the kind of thing that makes researchers stop and stare at a screen for ten minutes wondering whether they've discovered a structure or just found a prettier way to write the same number.

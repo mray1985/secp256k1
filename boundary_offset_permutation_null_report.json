@@ -1,0 +1,324 @@
+{
+  "question": "Is h7 (p-N+7) special vs random offsets near p-N for hi-anchor distance?",
+  "protocol": {
+    "h7": 432420386565659656852420866390673177333,
+    "gap": 432420386565659656852420866390673177326,
+    "delta_range": [
+      -1000,
+      1000
+    ],
+    "permutations_per_puzzle": 1000,
+    "seed": 20260701,
+    "puzzle_count": 24
+  },
+  "aggregate": {
+    "mean_percentile_rank": 0.5567,
+    "median_percentile_rank": 0.609,
+    "top_5pct_count": 0,
+    "top_1pct_count": 0,
+    "top_5pct_rate": 0.0,
+    "top_1pct_rate": 0.0
+  },
+  "verdict": {
+    "label": "INCONCLUSIVE",
+    "criteria": {
+      "PROMISING": "h7 in top 5% for majority of puzzles, or mean percentile >= 0.75",
+      "COINCIDENCE": "mean percentile near 0.5 (<= 0.55)"
+    }
+  },
+  "per_puzzle": [
+    {
+      "puzzle": 65,
+      "h7_hi_distance": 118438305358592940527352912305967288924,
+      "null_mean": 1.1066832744960706e+38,
+      "null_min": 184676897881659348862306446157515475,
+      "null_median": 109878127722411502030470833674593734752,
+      "percentile_rank": 0.457,
+      "rank_among_null": 544,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 66,
+      "h7_hi_distance": 68066825418342019699756053723378740122,
+      "null_mean": 1.0840079043514804e+38,
+      "null_min": 45260538655990944467553608485274722,
+      "null_median": 106004185707136664552439729356458757449,
+      "percentile_rank": 0.687,
+      "rank_among_null": 314,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 67,
+      "h7_hi_distance": 79175124640767533484640294461521719082,
+      "null_mean": 1.0924530726681102e+38,
+      "null_min": 275263323323440421508551843933752452,
+      "null_median": 109802329851027576118174958319174240350,
+      "percentile_rank": 0.631,
+      "rank_among_null": 369,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 68,
+      "h7_hi_distance": 78428882437378961580860539015673709063,
+      "null_mean": 1.074724486109126e+38,
+      "null_min": 88734329386025874223049289184486846,
+      "null_median": 106762441286041776090961437626171132480,
+      "percentile_rank": 0.641,
+      "rank_among_null": 360,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 69,
+      "h7_hi_distance": 104890683937870159827389122204363262461,
+      "null_mean": 1.0639068331327746e+38,
+      "null_min": 520545108483563581753681178937588812,
+      "null_median": 109536773341909296228802966317651652128,
+      "percentile_rank": 0.516,
+      "rank_among_null": 484,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 70,
+      "h7_hi_distance": 80134812221808084037873458996033008953,
+      "null_mean": 1.0633258454212459e+38,
+      "null_min": 139637865331036913503276893118421548,
+      "null_median": 103179475905308486569843382581230524296,
+      "percentile_rank": 0.631,
+      "rank_among_null": 368,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 75,
+      "h7_hi_distance": 139219417133023422111041387012140288489,
+      "null_mean": 1.044654461924032e+38,
+      "null_min": 75545879255440969445830530474117290,
+      "null_median": 103438663528814799667786102904881161419,
+      "percentile_rank": 0.334,
+      "rank_among_null": 667,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 80,
+      "h7_hi_distance": 155493916314802023498101924975053354345,
+      "null_mean": 1.0869969451426313e+38,
+      "null_min": 103791546072634840093707845407059351,
+      "null_median": 111734454952758792485272591327721381874,
+      "percentile_rank": 0.269,
+      "rank_among_null": 732,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 85,
+      "h7_hi_distance": 52890100761366747199778947451095528053,
+      "null_mean": 1.094002895624064e+38,
+      "null_min": 275617301773815682247216008276885637,
+      "null_median": 113737029119883822067275465210170490853,
+      "percentile_rank": 0.769,
+      "rank_among_null": 232,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 90,
+      "h7_hi_distance": 67473902480063155909567762243115941704,
+      "null_mean": 1.0806111719209514e+38,
+      "null_min": 78724905748447688021826276486629354,
+      "null_median": 108357607300161530007778555442238508998,
+      "percentile_rank": 0.692,
+      "rank_among_null": 309,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 95,
+      "h7_hi_distance": 205175986707822800489872276284778377123,
+      "null_mean": 1.0847352512194844e+38,
+      "null_min": 565143208579543824199058262031266677,
+      "null_median": 108446076256243553266693396703634759970,
+      "percentile_rank": 0.042,
+      "rank_among_null": 959,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 100,
+      "h7_hi_distance": 86666758887129612329081874728903757385,
+      "null_mean": 1.09207168733326e+38,
+      "null_min": 289756871429718796962130856394220113,
+      "null_median": 109396100647576848422194559252041569886,
+      "percentile_rank": 0.609,
+      "rank_among_null": 392,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 105,
+      "h7_hi_distance": 33448466880152149230155761789689930055,
+      "null_mean": 1.1245893046546939e+38,
+      "null_min": 340952456154573604568545198510398609,
+      "null_median": 111544807331425889161514976020165736172,
+      "percentile_rank": 0.869,
+      "rank_among_null": 131,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 110,
+      "h7_hi_distance": 92234667864823978276967471377863790506,
+      "null_mean": 1.088506919713567e+38,
+      "null_min": 15021408528312405951141303021792986,
+      "null_median": 106321162246533313488753937886209357438,
+      "percentile_rank": 0.575,
+      "rank_among_null": 426,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 115,
+      "h7_hi_distance": 98952465076874150648200048645470688388,
+      "null_mean": 1.0901167042310818e+38,
+      "null_min": 145582532734311314204673256661874430,
+      "null_median": 110475111927330319643258294304315482232,
+      "percentile_rank": 0.558,
+      "rank_among_null": 443,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 120,
+      "h7_hi_distance": 148631678347405967918578498724158910369,
+      "null_mean": 1.0843617716790818e+38,
+      "null_min": 54672862426116762048207655827123890985,
+      "null_median": 135977520604946905224004539356244734903,
+      "percentile_rank": 0.235,
+      "rank_among_null": 765,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 125,
+      "h7_hi_distance": 92772757448290221718228119830351706948,
+      "null_mean": 1.0509375753245369e+38,
+      "null_min": 180218865735773565730828122414990809,
+      "null_median": 101393361041265755442047680545348365651,
+      "percentile_rank": 0.543,
+      "rank_among_null": 457,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 130,
+      "h7_hi_distance": 15349091095655910415905185595459328721,
+      "null_mean": 1.0812604155726773e+38,
+      "null_min": 244648528410267523315479993331926939,
+      "null_median": 108394437458668899862793955957160640385,
+      "percentile_rank": 0.941,
+      "rank_among_null": 60,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 135,
+      "h7_hi_distance": 34800163195151732473538560113217338144,
+      "null_mean": 1.0881677287691694e+38,
+      "null_min": 585872205534473513508354233011535,
+      "null_median": 109461657406935539286423605399139925835,
+      "percentile_rank": 0.86,
+      "rank_among_null": 141,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 140,
+      "h7_hi_distance": 133637638744648659188336533192569345243,
+      "null_mean": 1.062371328801715e+38,
+      "null_min": 346381869754187751481721038746596306,
+      "null_median": 105325151459768839387146813370541399294,
+      "percentile_rank": 0.378,
+      "rank_among_null": 623,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 145,
+      "h7_hi_distance": 56916628069101161303858143588468217618,
+      "null_mean": 1.088217422305402e+38,
+      "null_min": 144754107102651823837521168271625786,
+      "null_median": 108744220679153750101013780525064028602,
+      "percentile_rank": 0.738,
+      "rank_among_null": 263,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 150,
+      "h7_hi_distance": 185586284180604215675347654914076087443,
+      "null_mean": 1.1013205893917895e+38,
+      "null_min": 292970890313530589304441888614450024,
+      "null_median": 111061953855200112500404866125475980317,
+      "percentile_rank": 0.161,
+      "rank_among_null": 840,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 155,
+      "h7_hi_distance": 137106353592503844741498057558413913537,
+      "null_mean": 1.0922477128234307e+38,
+      "null_min": 174406107793246850091616491594618239,
+      "null_median": 108880364409075389619732295483863107895,
+      "percentile_rank": 0.36,
+      "rank_among_null": 639,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    },
+    {
+      "puzzle": 160,
+      "h7_hi_distance": 27639852567736900006359275638183761207,
+      "null_mean": 1.0776478748579582e+38,
+      "null_min": 456003159235032925449482565539396946,
+      "null_median": 109143351655670314086754108586870438336,
+      "percentile_rank": 0.866,
+      "rank_among_null": 135,
+      "in_top_5pct": false,
+      "in_top_1pct": false,
+      "h7_delta": 7
+    }
+  ],
+  "notes": [
+    "Lower hi-anchor distance is better.",
+    "Percentile rank = fraction of null offsets with strictly larger hi distance.",
+    "h7 delta=7 is fixed; null draws delta uniformly from [-1000,1000]."
+  ]
+}

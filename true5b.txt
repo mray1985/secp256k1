@@ -1,0 +1,39 @@
+Next step: stop scaling offsets. That branch is exhausted.
+
+TRUE67 should be:
+
+Residue-to-candidate reconstruction, not more phase shifting.
+
+Use the surviving Origin Rule class for Puzzle 135:
+
+Ω=+1
+
+So:
+
+(rd−z)mod9∈{1,4,7}
+
+Since TRUE66 found 0 hits after raw, δ
+k
+	​
+
+, corrected D, and composite scaling, the offset model is likely not the scalar locator.
+
+Clean TRUE67 plan:
+
+Generate d candidates only inside Puzzle 135 range.
+
+Filter by:
+
+(rd−z)mod9∈{1,4,7}
+
+Then filter by public key:
+
+dG=P
+Do not use D as an offset anymore; keep D as classifier/bridge invariant.
+
+Freeze:
+
+D = structural bridge.
+Ω
+
+Minified React error #185; visit https://react.dev/errors/185 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.

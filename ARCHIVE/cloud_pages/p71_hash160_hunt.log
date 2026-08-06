@@ -1,0 +1,36 @@
+=== P71 BRIDGE + HASH160 HUNT ===
+target hash160: f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8
+target address: 1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU
+band: [1180591620717411303424, 2361183241434822606848)
+predicted row: 2  offset tiers: gap1→ob70, gap2→ob69, gap4→ob67
+
+--- calibration ---
+  calibrate P70: hash160=5db8cda53a6a002db10365967d7f85d19e171b10 != P71 target: True
+
+shelf2 / anchor guesses: 6
+  P70_shelf2_mod_LO: 2103020425914017085476 (71b)
+  2*s70 - s69: 1344563168305668233084 (71b)
+  s70 + (s70-s69): 1344563168305668233084 (71b)
+  s70 + (s69-s68): 2333816662159948363506 (71b)
+  avg(s68,s69,s70): 1744665438425998358778 (71b)
+  P70_d_mod_LO: 2151028594722434993905 (71b)
+
+stack bracket anchors: 5
+  stack:meet_fwd_back: d=1331987242629309930720 hex=0x4835094c0020101ce0
+  stack:forward_from_p70: d=1940873948010047380962 hex=0x6937096c8634d89de2
+  stack:backward_from_p75: d=1332023413268848844000 hex=0x483589cd0169141ce0
+  stack:back_core_p75_p70: d=1329607011061407421664 hex=0x4814010400201014e0
+  stack:cross_core: d=1180882182058213906432 hex=0x400408480000001800
+
+--- phase 1: discrete shelf2 + gap-tier endpoints ---
+  tested 102 discrete candidates
+
+--- phase 1b: exact stack anchors ---
+  tested 5 stack anchors
+
+=== SUMMARY ===
+tested≈107  elapsed=0.1s  rate≈862/s
+P71 OPEN — no hash160 hit in this run
+  widen: --samples 500000 --radius 500000
+  or run puzzle71_bsgs/ for full-band BSGS
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\p71_hash160_hunt.log

@@ -1,0 +1,8 @@
+@echo off
+setlocal
+call "%~dp0paths.bat"
+cd /d "%WORKDIR%"
+echo Leader y2_w21  center=1279319893184270309653638302331043709986753761686
+echo Range e016b02454ea9f787a09f9feb2b712abd9ff4196:e016b02454ea9f787a09f9feb2b7147d83496196  (+-1000000000000)
+"%KEYHUNT%" -m bsgs -f "%PUBFILE%" -r e016b02454ea9f787a09f9feb2b712abd9ff4196:e016b02454ea9f787a09f9feb2b7147d83496196 -k %BLOOM_KB% -t %THREADS% -s %STATS% -S -q
+pause

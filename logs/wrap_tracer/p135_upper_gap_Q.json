@@ -1,0 +1,81 @@
+{
+  "object": "P135_upper_gap_Q",
+  "status": "LOCKED_FACT_ZERO_BITS",
+  "definition": {
+    "U": 43556142965880123323311949751266331066367,
+    "U_hex": "0x7fffffffffffffffffffffffffffffffff",
+    "Q": "P135 - [U]G",
+    "scalar": "Q = [d-U]G = -[g]G with g=U-d",
+    "band": "2^134 <= d <= U = 2^135-1"
+  },
+  "pubkey": {
+    "compressed": "02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16",
+    "Px": 9210836494447108270027136741376870869791784014198948301625976867708124077590,
+    "Py_even": 46351506704828816385393879789131775975171267756561783641521771795450741674800,
+    "Py_odd_p_minus_y": 69440582532487379038177105219556131878098716909078780397935812212458092996863,
+    "note": "Must use even Py for 02-prefix; file 'Py' fields sometimes store p-y"
+  },
+  "U_G": {
+    "x": 47766466314263642148323271310262277386212541520415961783609701242013902247193,
+    "y": 18180699820180080130916016381678591228013832567397144934977300408272614451318
+  },
+  "Q": {
+    "x": 52886041483769761904968341876867358442579522291679760649513667751265486773330,
+    "y": 63913543214727770248777694773511805483462696697028811296623304851008216065287
+  },
+  "matches_locked_user_coords": true,
+  "vs_generator_thresholds": {
+    "Qx_lt_Gx": true,
+    "Qy_gt_Gy": true,
+    "pair": "(Qx < Gx, Qy > Gy)",
+    "Gx": 55066263022277343669578718895168534326250603453777594175500187360389116729240,
+    "Gy": 32670510020758816978083085130507043184471273380659243275938904335757337482424,
+    "warning": "Exact for this point. As g changes by 1, coordinates of -[g]G do not move monotonically past Gx/Gy. Inequalities do NOT prove a scalar threshold on g."
+  },
+  "better_object": "How far is Q from O, -G, -2G, ... in scalar space? That is the upper-bound interval discrete-log problem.",
+  "landmarks": {
+    "Q_is_O": false,
+    "Q_equals_neg_G": false,
+    "Q_equals_neg_2G": false,
+    "meaning": {
+      "Q=O": "d=U",
+      "Q=-G": "d=U-1",
+      "Q=-[2]G": "d=U-2",
+      "Q=-[g]G": "g=U-d (upper gap)"
+    }
+  },
+  "wrong_y_branch_Q": {
+    "x": 33219204229518432289352905711750901006132909443170301686126624213631663298292,
+    "y": 1438616635516390280283738726205656441178908013149101084454639614477148047775,
+    "equals_locked": false,
+    "note": "Using odd y (p-y) as if it were Py produces a different Q"
+  },
+  "p_wrap_on_P_minus_UG": {
+    "operation": "subtraction_via_negation",
+    "p_wrap_event": {
+      "q_dx": 0,
+      "q_dy": 0,
+      "q_lambda": 7635082620491249044791920680954317460030216078522458223535894212677841964428,
+      "q_x": 5931099154799720096324923110178431644141790372364775426471260541863306363096,
+      "q_y": -9884691038218009201745115967785166305932053775107375169447916344826217746629,
+      "tuple": [
+        0,
+        0,
+        7635082620491249044791920680954317460030216078522458223535894212677841964428,
+        5931099154799720096324923110178431644141790372364775426471260541863306363096,
+        -9884691038218009201745115967785166305932053775107375169447916344826217746629
+      ]
+    },
+    "n_wrap": null,
+    "note": "N-wrap unknown: d unknown. p-wrap is affine-path only."
+  },
+  "band_floor_contrast": {
+    "L": 21778071482940061661655974875633165533184,
+    "L_hex": "0x4000000000000000000000000000000000",
+    "usual_S01": "Q_floor = P - [L]G = [d-L]G with u=d-L in [0, 2^134)",
+    "upper_gap": "Q = P - [U]G = -[g]G with g=U-d in [0, 2^134)",
+    "relation": "u + g = U - L = 2^134 - 1",
+    "u_plus_g": 21778071482940061661655974875633165533183
+  },
+  "verified_bits": 0
+}

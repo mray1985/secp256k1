@@ -1,0 +1,277 @@
+This refinement is important because true1b actually strengthens the result by removing an apparent mystery.
+
+Before true1b, there were two candidate discoveries:
+
+C
+i
+	​
+
+=A
+i
+	​
+
+B
+i
+−1
+	​
+
+Row-collapse under cube-root normalization
+
+After true1b:
+
+Not a discovery
+C
+i
+	​
+
+=A
+i
+	​
+
+B
+i
+−1
+	​
+
+(modN)
+
+is simply inherited from
+
+A
+ij
+	​
+
+=P
+N
+	​
+
+G
+N
+−1
+	​
+
+B
+ij
+	​
+
+=r
+N
+	​
+
+G
+N
+−1
+	​
+
+C
+ij
+	​
+
+=P
+N
+	​
+
+r
+N
+−1
+	​
+
+
+So that relation is expected.
+
+Actual discovery
+
+The surprising part is:
+
+A
+i1
+	​
+
+=A
+i2
+	​
+
+=A
+i3
+	​
+
+B
+i1
+	​
+
+=B
+i2
+	​
+
+=B
+i3
+	​
+
+C
+i1
+	​
+
+=C
+i2
+	​
+
+=C
+i3
+	​
+
+
+after normalization by the cube roots of
+
+δ=p−N.
+
+And you showed that this is not explained by a simple cube-root orbit:
+
+ratios don't collapse to ω
+ratios don't collapse to ω
+2
+ratios don't collapse to p
+1
+	​
+
+,p
+2
+	​
+
+,p
+3
+	​
+
+row-to-row orbit ratios differ between A, B, and C
+
+So the normalization basis is causing a collapse, but not through the obvious cube-root symmetry mechanism.
+
+At this stage I'd write the current hierarchy as:
+
+Unified Projection Defect Layer
+δ=p−N
+∑(Λrx
+i
+	​
+
+)=A(Q)+A(−Q)=δ(modN)
+N-Side Normalization Layer
+
+Given cube roots
+
+p
+1
+	​
+
+,p
+2
+	​
+
+,p
+3
+	​
+
+
+of δ,
+
+the matrices
+
+A
+ij
+	​
+
+=P
+N
+	​
+
+G
+N
+−1
+	​
+
+B
+ij
+	​
+
+=r
+N
+	​
+
+G
+N
+−1
+	​
+
+C
+ij
+	​
+
+=P
+N
+	​
+
+r
+N
+−1
+	​
+
+
+each collapse from a 3×3 structure to exactly three row constants.
+
+That row-collapse remains unexplained.
+
+The next test I would personally run is not another ratio test.
+
+I would test eigen-style behavior:
+
+For each matrix:
+
+A
+1
+	​
+
++A
+2
+	​
+
++A
+3
+	​
+
+A
+1
+	​
+
+A
+2
+	​
+
+A
+3
+	​
+
+
+and form the cubic
+
+f
+A
+	​
+
+(x)=(x−A
+1
+	​
+
+)(x−A
+2
+	​
+
+)(x−A
+3
+	​
+
+)(modN)
+
+and similarly for B and C.
+
+If the coefficients of those cubics collapse to known quantities (especially δ, Λ, or the normalization roots), then the row constants may be acting like roots of a hidden normalization polynomial rather than orbit representatives.
+
+That would be the first place I'd look before generating yet another layer of ratios.

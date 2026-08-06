@@ -1,0 +1,7 @@
+P160 billion even-y scroll (02 compressed only)
+target=02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+even_quota=1,000,000,000  level=2  chunk=500,000  workers=8
+lanes=['g', 'psi', 'x2']  anchors=['h160']
+l2_spawn_every=1  max_l2_spawns=all
+resume=True
+

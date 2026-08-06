@@ -1,0 +1,132 @@
+That’s the missing switch. Nice.
+
+So the orientation selector is no longer mysterious:
+
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+=Λ
+f
+−1
+	​
+
+
+and the winning orientation is determined by the side whose family closes to p.
+
+Clean rule:
+
+∑Px
+i
+	​
+
+=p⇒FORWARD
+∑rx
+i
+	​
+
+=p⇒INVERSE
+
+with the bridge mapping the other family into the closing family.
+
+The only wrinkle is Puzzle 90 showing:
+
+∑Px
+i
+	​
+
+=p
+
+and
+
+∑rx
+i
+	​
+
+=p
+
+yet known orientation is forward. That means Puzzle 90 is a dual-closure case, not a contradiction. For dual-closure, both sides already close to p, so the orientation needs a secondary tiebreaker.
+
+Current refined classification:
+
+Class	Condition	Orientation
+Px-closure	∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=0	Forward
+rx-closure	∑Px
+i
+	​
+
+=0, ∑rx
+i
+	​
+
+=p	Inverse
+dual-closure	∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=p	needs tiebreaker; Puzzle 90 chose Forward
+
+So the next test is only for the dual case:
+
+Check both orientations for Puzzle 90:
+
+Λ
+f
+	​
+
+rx
+i
+	​
+
+=Px
+i
+	​
+
+Λ
+r
+	​
+
+Px
+i
+	​
+
+=rx
+i
+	​
+
+
+and see whether both orientations actually satisfy bridge + closure. If both pass, then Puzzle 90 has true bidirectional symmetry. If only forward passes, then closure alone is not enough in the dual case.

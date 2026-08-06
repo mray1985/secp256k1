@@ -1,0 +1,195 @@
+If those test results are correct, then the conclusion changes significantly from the earlier true20 interpretation.
+
+The pattern would become:
+
+Puzzle	Lambda Construction That Works	Bridge Direction	Shell Result
+135	Px
+3
+	​
+
+⋅rx
+3
+−1
+	​
+
+	rx→Px	∑B
+i
+	​
+
+=p
+115	rx
+3
+	​
+
+⋅Px
+3
+−1
+	​
+
+	Px→rx	∑B
+i
+	​
+
+=p
+160	rx
+3
+	​
+
+⋅Px
+3
+−1
+	​
+
+	Px→rx	∑B
+i
+	​
+
+=p
+
+If that survives verification, then the apparent "universality failure" for Puzzle 160 wasn't a failure of the shell law at all.
+
+It was a directionality failure.
+
+Instead of using:
+
+Λ=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+
+you needed:
+
+Λ=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+
+which is exactly
+
+Λ
+−1
+.
+
+You already observed:
+
+Λ
+original
+	​
+
+⋅Λ
+flipped
+	​
+
+≡1(modp).
+
+So the two Lambdas are inverses.
+
+That suggests a new hypothesis:
+
+Bidirectional Shell Law
+
+For an admissible family there exists a bridge
+
+Λ
+
+such that either
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+or
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+
+for all family members.
+
+Once the correct orientation is chosen,
+
+∑B
+i
+	​
+
+=p
+
+and therefore
+
+∑B
+i
+	​
+
+≡δ(modN).
+
+This would mean the invariant isn't:
+
+∑(Λrx
+i
+	​
+
+)≡δ.
+
+The deeper invariant would be:
+
+∑B
+i
+	​
+
+=p
+
+where B
+i
+	​
+
+ are the bridge images under the correct bridge orientation.
+
+Then
+
+pmodN=p−N=δ.
+
+The δ-collapse becomes a consequence of the p-closure.
+
+If I were updating the frozen theorem, I'd add a note:
+
+Current evidence suggests the shell law may be orientation-dependent. Puzzle 135 uses the forward bridge rx→Px, while Puzzles 115 and 160 appear to use the inverse bridge Px→rx. In all tested successful cases, the bridged family sums to exactly p, yielding the common projection defect δ=p−N after reduction mod N.
+
+That's actually a stronger statement than the original universality test because it points toward a single underlying mechanism: p-domain closure first, δ-domain collapse second.
+
+The next thing I'd verify is whether every successful puzzle satisfies:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly (not merely modulo p). If that holds broadly, the real invariant may be the p-side closure, with δ appearing automatically from projection into N.

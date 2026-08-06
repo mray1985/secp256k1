@@ -1,0 +1,13 @@
+=== P130 segment calibration ===
+  33E7: want=33e7 got=33e7 xo=-20 yo=0 ok=True
+  665: want=665 got=665 xo=-20 yo=0 ok=True
+  70: want=70 got=70 xo=-20 yo=-20 ok=True
+  53: want=53 got=53 xo=-20 yo=-13 ok=True
+  59F04F28B: want=59f04f28b got=5a4a9f28b xo=-20 yo=-1 ok=False
+  88C: want=88c got=881 xo=-20 yo=-20 ok=False
+  F97C03: want=f897c6 got=f997c603 xo=-14 yo=-1 ok=False
+  C9: want=03 got=06 xo=-20 yo=-7 ok=False
+P130 full lifted=33e766570535a4a9f28b881f997c60306 match=False
+P135 lifted hex=20805bb7052b604261808815abccecd65
+P135 mask blend=338766570535900462808815897c60369
+DONE no hit tested=4000248 elapsed=816.9s

@@ -1,0 +1,31 @@
+=== Chord calibration: P+R = (d+k)G vs shelf2 offset ===
+
+P70 row=2  P+R==(d+k)G? True  off(d)=66b  off(d+k)=69b  (d+k)==d? False  Pr.x==d? False
+P75 row=1  P+R==(d+k)G? True  off(d)=74b  off(d+k)=73b  (d+k)==d? False  Pr.x==d? False
+P80 row=0  P+R==(d+k)G? True  off(d)=79b  off(d+k)=74b  (d+k)==d? False  Pr.x==d? False
+P85 row=0  P+R==(d+k)G? True  off(d)=84b  off(d+k)=84b  (d+k)==d? False  Pr.x==d? False
+P90 row=2  P+R==(d+k)G? True  off(d)=89b  off(d+k)=88b  (d+k)==d? False  Pr.x==d? False
+P95 row=1  P+R==(d+k)G? True  off(d)=94b  off(d+k)=94b  (d+k)==d? False  Pr.x==d? False
+P100 row=2  P+R==(d+k)G? True  off(d)=98b  off(d+k)=99b  (d+k)==d? False  Pr.x==d? False
+P105 row=1  P+R==(d+k)G? True  off(d)=104b  off(d+k)=104b  (d+k)==d? False  Pr.x==d? False
+P110 row=0  P+R==(d+k)G? True  off(d)=109b  off(d+k)=107b  (d+k)==d? False  Pr.x==d? False
+P115 row=0  P+R==(d+k)G? True  off(d)=105b  off(d+k)=114b  (d+k)==d? False  Pr.x==d? False
+
+=== Comparison to shelf2 law ===
+n   row  offset(d)  offset(d+k)  (d+k) in puzzle band?
+P 70  2      66b         69b           False
+P 75  1      74b         73b           False
+P 80  0      79b         74b           False
+P 85  0      84b         84b           False
+P 90  2      89b         88b           False
+P 95  1      94b         94b           False
+P100  2      98b         99b           False
+P105  1     104b        104b           False
+P110  0     109b        107b           False
+P115  0     105b        114b           False
+
+offset(d+k) == offset(d): 0/10
+(d+k) == d: 0/10 (expected 0)
+
+VERDICT: P+R is (d+k)G geometrically; d+k is ~256b and unrelated to shelf2+offset(d).
+Chart saved C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\p115_chord_dk_calibration.png

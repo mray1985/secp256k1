@@ -1,0 +1,28 @@
+BAND-FRACTION PROBE — DISCRETE LOG FORMULA ALIGNMENT
+k = k0 + d*delta_k (mod N);  lined_up = k*G matches spend R (rx, ry)
+anchor = int(2^(n-1+0.58))  probes=100  span=2^22
+
+=== P130 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  TRUE d bf=0.621997  lined_up=True  d=1103873984953507439627945351144005829577
+  true d in probe grid: False
+  no probes lined up on R via formula
+
+=== P135 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+=== P140 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+=== P145 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+=== P150 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+=== P155 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+=== P160 anchor bf=0.4948 probes=100 formula_lined_up=0 ===
+  no probes lined up on R via formula
+
+NOTE: formula roundtrip d->k->d is algebraic identity for all d. lined_up is the real discrete-log gate (k*G == R).

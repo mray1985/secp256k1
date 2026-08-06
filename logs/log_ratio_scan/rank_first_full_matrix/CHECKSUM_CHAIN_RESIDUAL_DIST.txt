@@ -1,0 +1,46 @@
+CHECKSUM-CHAIN RESIDUALS — focus + cohort distribution
+Equation: (H1^2 ± c) - (H2^3 + 7)  mod {N,p}
+H1=SHA256(00||RMD160), H2=SHA256(H1), c=(-b) mod N
+
+=== Focus puzzles (sci scale) ===
+
+P135  checksum4=7B8F3E17
+  H1sq_plus_c__minus__H2cu7__mod_N: 1.565e75  frac=0.013517  zero=False
+  H1sq_plus_c__minus__H2cu7__mod_p: 1.423e76  frac=0.122881  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_N: 6.564e76  frac=0.566894  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_p: 7.831e76  frac=0.676257  zero=False
+
+P150  checksum4=0AD915E0
+  H1sq_plus_c__minus__H2cu7__mod_N: 6.308e76  frac=0.544747  zero=False
+  H1sq_plus_c__minus__H2cu7__mod_p: 8.389e76  frac=0.724481  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_N: 1.102e77  frac=0.952122  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_p: 1.527e76  frac=0.131856  zero=False
+
+P155  checksum4=DA22D4E9
+  H1sq_plus_c__minus__H2cu7__mod_N: 2.038e76  frac=0.176033  zero=False
+  H1sq_plus_c__minus__H2cu7__mod_p: 3.861e76  frac=0.333410  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_N: 9.043e76  frac=0.780943  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_p: 1.087e77  frac=0.938320  zero=False
+
+P160  checksum4=5D351699
+  H1sq_plus_c__minus__H2cu7__mod_N: 8.638e76  frac=0.746018  zero=False
+  H1sq_plus_c__minus__H2cu7__mod_p: 9.551e76  frac=0.824882  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_N: 5.574e75  frac=0.048137  zero=False
+  H1sq_minus_c__minus__H2cu7__mod_p: 1.471e76  frac=0.127001  zero=False
+
+=== Cohort distribution (n=88 with c) ===
+H1sq_plus_c__minus__H2cu7__mod_N: mean_frac=0.4558 var_ratio=0.984 chi2_16=10.18 (df=15.0) zeros=0 edge1e-3=1
+H1sq_plus_c__minus__H2cu7__mod_p: mean_frac=0.5751 var_ratio=1.049 chi2_16=22.91 (df=15.0) zeros=0 edge1e-3=0
+H1sq_minus_c__minus__H2cu7__mod_N: mean_frac=0.4693 var_ratio=1.169 chi2_16=22.55 (df=15.0) zeros=0 edge1e-3=0
+H1sq_minus_c__minus__H2cu7__mod_p: mean_frac=0.5091 var_ratio=1.059 chi2_16=14.55 (df=15.0) zeros=0 edge1e-3=0
+
+=== Frac Pearson (cross-variant) ===
+  H1sq_plus_c__minus__H2cu7__mod_N__vs__H1sq_plus_c__minus__H2cu7__mod_p: 0.0766
+  H1sq_plus_c__minus__H2cu7__mod_N__vs__H1sq_minus_c__minus__H2cu7__mod_N: -0.2094
+  H1sq_plus_c__minus__H2cu7__mod_N__vs__H1sq_minus_c__minus__H2cu7__mod_p: -0.0328
+  H1sq_plus_c__minus__H2cu7__mod_p__vs__H1sq_minus_c__minus__H2cu7__mod_N: -0.1040
+  H1sq_plus_c__minus__H2cu7__mod_p__vs__H1sq_minus_c__minus__H2cu7__mod_p: -0.0833
+  H1sq_minus_c__minus__H2cu7__mod_N__vs__H1sq_minus_c__minus__H2cu7__mod_p: 0.0038
+
+RULING:
+No exact closes in focus set. Fractional residues sit in the bulk of Uniform(0,M); chi2/var vs uniform reported. SHA256 mixing leaves no clean polynomial identity. No crude variance anomaly.

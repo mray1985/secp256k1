@@ -1,0 +1,30 @@
+{
+  "candidate_id": "S-20260710-04",
+  "short_name": "lead_to_bitcut_audit",
+  "formula": "Classify each surviving P135 lead as (1) interval reduction, (2) candidate-set reduction, or (3) ranking-only=0 bits; b_removed=134-log2(M) or 134-log2(W); no additive intersection without measure",
+  "domains": "all ledger P135 claims vs S-03 verified-bit gate",
+  "score_definition": "verified bits removed under locked promotion requirements",
+  "expected_direction": "most historical leads score 0; only proven exclusions credit bits",
+  "allowed_parameters": {
+    "categories": [
+      1,
+      2,
+      3
+    ],
+    "baseline_width_bits": 134,
+    "intersection": "measure |A cap B|; do not sum b_A+b_B",
+    "risky_heuristic": "partial retention without 100% holdout = 0 verified bits"
+  },
+  "holdout_split": "100% holdout coverage required for any credited cut",
+  "null_families": [
+    "shuffle pairing",
+    "random curve",
+    "known-d injection"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Audit of claimed reductions; DL recompute is not a lead.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

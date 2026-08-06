@@ -1,0 +1,193 @@
+========================================================================================
+LAYER OPERATORS: coarse X=x/p  vs  fine F=y/p^2  (separate)
+========================================================================================
+  Metric: algebraic RULES per layer, not repeated combined Delta.
+
+----------------------------------------------------------------------------------------
+A) Controlled schedules d=1..64
+----------------------------------------------------------------------------------------
+  [add_+1] n=64
+    COARSE X=x/p:
+      X fixed:              0/64
+      x'==beta*x (psi):     0/64
+      x'==beta^2*x:         0/64
+      unique dX values:     64/64
+    FINE F=y/p^2:
+      F fixed:              0/64
+      F -> 1/p - F:         0/64
+      F -> -F (signed):     0/64
+      unique dF values:     64/64
+      y-parity flip:        31/64
+    primary rule histogram: {'none': 64}
+    OPERATOR SUMMARY:  T_X: generic (no id/beta)
+                       T_F: generic (no id/reflect)
+
+  [double] n=64
+    COARSE X=x/p:
+      X fixed:              0/64
+      x'==beta*x (psi):     0/64
+      x'==beta^2*x:         0/64
+      unique dX values:     64/64
+    FINE F=y/p^2:
+      F fixed:              0/64
+      F -> 1/p - F:         0/64
+      F -> -F (signed):     0/64
+      unique dF values:     64/64
+      y-parity flip:        32/64
+    primary rule histogram: {'none': 64}
+    OPERATOR SUMMARY:  T_X: generic (no id/beta)
+                       T_F: generic (no id/reflect)
+
+  [double_add_+1] n=64
+    COARSE X=x/p:
+      X fixed:              0/64
+      x'==beta*x (psi):     0/64
+      x'==beta^2*x:         0/64
+      unique dX values:     64/64
+    FINE F=y/p^2:
+      F fixed:              0/64
+      F -> 1/p - F:         0/64
+      F -> -F (signed):     0/64
+      unique dF values:     64/64
+      y-parity flip:        33/64
+    primary rule histogram: {'none': 64}
+    OPERATOR SUMMARY:  T_X: generic (no id/beta)
+                       T_F: generic (no id/reflect)
+
+  [negation] n=64
+    COARSE X=x/p:
+      X fixed:              64/64
+      x'==beta*x (psi):     0/64
+      x'==beta^2*x:         0/64
+      unique dX values:     1/64
+    FINE F=y/p^2:
+      F fixed:              0/64
+      F -> 1/p - F:         64/64
+      F -> -F (signed):     0/64
+      unique dF values:     64/64
+      y-parity flip:        64/64
+    primary rule histogram: {'negation_canonical_layers': 64}
+    OPERATOR SUMMARY:  T_X: id
+                       T_F: reflect 1/p - F
+
+  [glv_lambda] n=64
+    COARSE X=x/p:
+      X fixed:              0/64
+      x'==beta*x (psi):     64/64
+      x'==beta^2*x:         0/64
+      unique dX values:     64/64
+    FINE F=y/p^2:
+      F fixed:              64/64
+      F -> 1/p - F:         0/64
+      F -> -F (signed):     0/64
+      unique dF values:     1/64
+      y-parity flip:        0/64
+    primary rule histogram: {'glv_psi': 64}
+    OPERATOR SUMMARY:  T_X: x |-> beta*x mod p
+                       T_F: id
+
+  [glv_lambda2] n=64
+    COARSE X=x/p:
+      X fixed:              0/64
+      x'==beta*x (psi):     0/64
+      x'==beta^2*x:         64/64
+      unique dX values:     64/64
+    FINE F=y/p^2:
+      F fixed:              64/64
+      F -> 1/p - F:         0/64
+      F -> -F (signed):     0/64
+      unique dF values:     1/64
+      y-parity flip:        0/64
+    primary rule histogram: {'glv_psi2': 64}
+    OPERATOR SUMMARY:  T_X: x |-> beta^2*x mod p
+                       T_F: id
+
+----------------------------------------------------------------------------------------
+B) Holdout puzzles>100
+----------------------------------------------------------------------------------------
+  [hold_add_+1] n=6
+    COARSE X=x/p:
+      X fixed:              0/6
+      x'==beta*x (psi):     0/6
+      x'==beta^2*x:         0/6
+      unique dX values:     6/6
+    FINE F=y/p^2:
+      F fixed:              0/6
+      F -> 1/p - F:         0/6
+      F -> -F (signed):     0/6
+      unique dF values:     6/6
+      y-parity flip:        3/6
+    primary rule histogram: {'none': 6}
+    OPERATOR SUMMARY:  T_X: generic (no id/beta)
+                       T_F: generic (no id/reflect)
+
+  [hold_double] n=6
+    COARSE X=x/p:
+      X fixed:              0/6
+      x'==beta*x (psi):     0/6
+      x'==beta^2*x:         0/6
+      unique dX values:     6/6
+    FINE F=y/p^2:
+      F fixed:              0/6
+      F -> 1/p - F:         0/6
+      F -> -F (signed):     0/6
+      unique dF values:     6/6
+      y-parity flip:        2/6
+    primary rule histogram: {'none': 6}
+    OPERATOR SUMMARY:  T_X: generic (no id/beta)
+                       T_F: generic (no id/reflect)
+
+  [hold_neg] n=6
+    COARSE X=x/p:
+      X fixed:              6/6
+      x'==beta*x (psi):     0/6
+      x'==beta^2*x:         0/6
+      unique dX values:     1/6
+    FINE F=y/p^2:
+      F fixed:              0/6
+      F -> 1/p - F:         6/6
+      F -> -F (signed):     0/6
+      unique dF values:     6/6
+      y-parity flip:        6/6
+    primary rule histogram: {'negation_canonical_layers': 6}
+    OPERATOR SUMMARY:  T_X: id
+                       T_F: reflect 1/p - F
+
+  [hold_glv] n=6
+    COARSE X=x/p:
+      X fixed:              0/6
+      x'==beta*x (psi):     6/6
+      x'==beta^2*x:         0/6
+      unique dX values:     6/6
+    FINE F=y/p^2:
+      F fixed:              6/6
+      F -> 1/p - F:         0/6
+      F -> -F (signed):     0/6
+      unique dF values:     1/6
+      y-parity flip:        0/6
+    primary rule histogram: {'glv_psi': 6}
+    OPERATOR SUMMARY:  T_X: x |-> beta*x mod p
+                       T_F: id
+
+----------------------------------------------------------------------------------------
+C) Doubling: coarse/fine follow EC-double on (x,y)?
+----------------------------------------------------------------------------------------
+  d=1..64: 2*(dG) matches affine double: 64/64
+  So for doubling, T_X/T_F are just EC-double — not a simpler decimal rule.
+
+----------------------------------------------------------------------------------------
+D) Layer operator table
+----------------------------------------------------------------------------------------
+  negation:  T_X = id,            T_F = reflect (1/p - F)
+  GLV psi:   T_X = beta*x mod p,  T_F = id
+  add/double: both move; entangled via full EC (no layer-local rule)
+  Frequencies: neg ~ digits 76-80 (fine); add/double ~ digit 1 (coarse)
+
+========================================================================================
+VERDICT
+========================================================================================
+  Automorphisms = product operators on (X,F):
+    neg=(id, reflect)   GLV=(beta-mul, id)
+  Generic schedules entangle both layers.
+  Right metric: layer RULES, not repeated combined Delta.
+

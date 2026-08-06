@@ -1,0 +1,78 @@
+{
+  "note": "161-256 not public; proxy on puzzles 1-160",
+  "n_anchors": 87,
+  "pearson_n_left5_gap": -0.05196297471393614,
+  "top10_left5": [
+    {
+      "n": 115,
+      "left5_gap": 102,
+      "prefix_match": 2,
+      "solved": true
+    },
+    {
+      "n": 19,
+      "left5_gap": 212,
+      "prefix_match": 2,
+      "solved": true
+    },
+    {
+      "n": 62,
+      "left5_gap": 335,
+      "prefix_match": 1,
+      "solved": true
+    },
+    {
+      "n": 7,
+      "left5_gap": 353,
+      "prefix_match": 1,
+      "solved": true
+    },
+    {
+      "n": 63,
+      "left5_gap": 404,
+      "prefix_match": 2,
+      "solved": true
+    },
+    {
+      "n": 51,
+      "left5_gap": 406,
+      "prefix_match": 2,
+      "solved": true
+    },
+    {
+      "n": 68,
+      "left5_gap": 431,
+      "prefix_match": 1,
+      "solved": true
+    },
+    {
+      "n": 150,
+      "left5_gap": 441,
+      "prefix_match": 1,
+      "solved": false
+    },
+    {
+      "n": 45,
+      "left5_gap": 449,
+      "prefix_match": 2,
+      "solved": true
+    },
+    {
+      "n": 50,
+      "left5_gap": 585,
+      "prefix_match": 1,
+      "solved": true
+    }
+  ],
+  "bands": {
+    "low 1-60": {
+      "mean_left5_gap": 27449.883333333335
+    },
+    "mid 61-120": {
+      "mean_left5_gap": 25024.0
+    },
+    "high 121-159": {
+      "mean_left5_gap": 27052.14285714286
+    }
+  }
+}

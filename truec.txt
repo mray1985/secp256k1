@@ -1,0 +1,265 @@
+Nice. That locks it down:
+
+A
+i
+	​
+
+=Λy
+i
+	​
+
+modp
+
+So of course:
+
+A
+i
+	​
+
+y
+i
+−1
+	​
+
+≡Λ(modp)
+
+The useful finding is the negative one:
+
+A
+i
+	​
+
+
+↔λ
+x
+	​
+
+
+by simple difference, ratio, or square/cube bridge.
+
+So the map is:
+
+x-bridge:Λrx3≡X(modp)
+y-bridge:A
+i
+	​
+
+=Λy
+i
+	​
+
+(modp)
+y-reflection:A
+i
+	​
+
++A
+−i
+	​
+
+≡p⇒p−N(modN)
+
+Next best test:
+
+Λx
+i
+	​
+
+A
+i
+	​
+
+	​
+
+≡
+x
+i
+	​
+
+y
+i
+	​
+
+	​
+
+(modp)
+
+Then compare the slopes:
+
+m
+G
+	​
+
+=y
+G
+	​
+
+x
+G
+−1
+	​
+
+m
+P
+	​
+
+=y
+P
+	​
+
+x
+P
+−1
+	​
+
+m
+R
+	​
+
+=y
+R
+	​
+
+x
+R
+−1
+	​
+
+
+That’s where the branch geometry may be hiding — not in A
+i
+	​
+
+ alone, but in the y/x slope after the same Λ scaling.Nice. That locks it down:
+
+A
+i
+	​
+
+=Λy
+i
+	​
+
+modp
+
+So of course:
+
+A
+i
+	​
+
+y
+i
+−1
+	​
+
+≡Λ(modp)
+
+The useful finding is the negative one:
+
+A
+i
+	​
+
+
+↔λ
+x
+	​
+
+
+by simple difference, ratio, or square/cube bridge.
+
+So the map is:
+
+x-bridge:Λrx3≡X(modp)
+y-bridge:A
+i
+	​
+
+=Λy
+i
+	​
+
+(modp)
+y-reflection:A
+i
+	​
+
++A
+−i
+	​
+
+≡p⇒p−N(modN)
+
+Next best test:
+
+Λx
+i
+	​
+
+A
+i
+	​
+
+	​
+
+≡
+x
+i
+	​
+
+y
+i
+	​
+
+	​
+
+(modp)
+
+Then compare the slopes:
+
+m
+G
+	​
+
+=y
+G
+	​
+
+x
+G
+−1
+	​
+
+m
+P
+	​
+
+=y
+P
+	​
+
+x
+P
+−1
+	​
+
+m
+R
+	​
+
+=y
+R
+	​
+
+x
+R
+−1
+	​
+
+
+That’s where the branch geometry may be hiding — not in A
+i
+	​
+
+ alone, but in the y/x slope after the same Λ scaling.

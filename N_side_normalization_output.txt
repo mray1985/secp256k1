@@ -1,0 +1,89 @@
+================================================================================
+N-SIDE NORMALIZATION TEST OUTPUT
+Generated: 2026-06-03
+Source: test_N_side_normalization.py
+Purpose: Test N-side normalized coordinates (true1.txt suggestion)
+================================================================================
+
+Verification: Cube roots of delta mod N
+p1^3 mod N = 0x14551231950b75fc4402da1722fc9baee
+p2^3 mod N = 0x14551231950b75fc4402da1722fc9baee
+p3^3 mod N = 0x14551231950b75fc4402da1722fc9baee
+delta      = 0x14551231950b75fc4402da1722fc9baee
+
+G_N matrix (Gx_i * p_j^-1 mod N):
+  Row 1: 0x5b4b9cc5f2f92d4a61d2dc00e0030d46b5e6a593d9ddcc550bc00ffa6d6b5c2a, 
+          0x8cef86793a83806b8e09b061ddb469582cf204ff6330dfb680c05829c76b69c2, 
+          0x17c4dcc0d283524a1023739d4248895fd7d632537239f4303351f6689b5f7b55
+  Row 2: 0x63c0ab9af0abf49b066b5109a58f2cfb08afdc425401b05d2134061196a76120, 
+          0x29f6bded0f443243c82fecbcac32c70978981eece0bb4eeceee22e4010534e55, 
+          0x72489678000fd9213164c239ae3e0bfa3966e1b77a8ba0f1afbc2a3b293b91cc
+  Row 3: 0xaefa7317584bf40a8699d12bcbe9d8b456f8a7c502de3241add5f45e3a06f154, 
+          0x9817f068def405f97aded3079c6f95368e607775a00a1ea633c3180e2b95a93a, 
+          0xb8ed9c7fc8c005fbfe875bcc97a6921290049a92bba8ef8f9e0bb0ad3acfe7f4
+
+P_N matrix (Px_i * p_j^-1 mod N):
+  Row 1: 0x6e607c8ac5a373566ecc2243b2ab9a1f5c5c0d43eff363e0a7f5dd2782da668c, 
+          0x27d6723b5164f996b637601256d003355500a982b80f327c42dbbf01246de69, 
+          0x8f221c5185463d1025d067bb27e765ac0902c50a93d4493353aec5753b14fc4c
+  Row 2: 0x2ce4ec7caeaf9511cb2dd23a5b62c7a4b57c7a0ac9a4a056d4dc6c230dc88c86, 
+          0x86170d34957f106e84b2bd126293d2298f9bf62a8350d3e0c7cbebf544e7d2c1, 
+          0x4d04064ebbd15a7fb01f70b34209663075966cb162532c04232a06747d85e1fa
+  Row 3: 0x1bbdf4b4a9a5828fbd720a9d1aafa7b6f8ef0d7edec6d3427092bbea8e69e43d, 
+          0x9eeaa60f49c87c4c787604ff8b2a906e9260bb619acdafba25a2569d1296a01f, 
+          0x4557653c0c920123ca17f0635a25c7d92f5f140635b41d3f299d4c052f35bce5
+
+r_N matrix (rx_i * p_j^-1 mod N):
+  Row 1: 0x3cca8291b9bc9eafc2a7e7289234253198904af116131a8ff404d9363393c8a5, 
+          0x18b12a47720ed8c30eedce7e5fe197e92ad7e7e0476b11371b19bf58dacb46d1, 
+          0xaa845326d434888d2e6a4a590dea42e3f746aa1551ca7474b0b3c5fdc1d731cb
+  Row 2: 0x64228fa393d1a10cb7793ac99b2d5b2dced8445ac1ce767140bd3772cb418824, 
+          0x5021c589e375f959adcb49402607ae4f2ca8cb9b5f547908776ecfdf2f74839f, 
+          0x4bbbaad288b865999abb7bf63ecaf681bf2dccf08e25b0c207a6573ad580357e
+  Row 3: 0xcd19a942ee62d63374b6dc44241a9296ae269a4f58dc1df2a607f9c13f445dd5, 
+          0xe62b44fdd336e68c145f5867a06d7f5fdc69e7e63d36c30a10dd0f3ff91496e1, 
+          0x4cbb11bf3e66434076e9cb543b77ee06eacd3797c87e5f7ac8bfb41868138dcc
+
+A_ij = P_N(i,j) * G_N(i,j)^-1 mod N:
+  Row 1: 0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387, 
+          0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387, 
+          0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387
+  Row 2: 0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f, 
+          0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f, 
+          0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f
+  Row 3: 0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2, 
+          0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2, 
+          0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2
+
+B_ij = r_N(i,j) * G_N(i,j)^-1 mod N:
+  Row 1: 0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745, 
+          0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745, 
+          0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745
+  Row 2: 0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc, 
+          0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc, 
+          0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc
+  Row 3: 0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4, 
+          0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4, 
+          0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4
+
+C_ij = P_N(i,j) * r_N(i,j)^-1 mod N:
+  Row 1: 0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a, 
+          0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a, 
+          0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a
+  Row 2: 0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb, 
+          0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb, 
+          0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb
+  Row 3: 0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769, 
+          0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769, 
+          0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769
+
+COLLAPSE ANALYSIS
+================================================================================
+
+A_ij: 3 unique values out of 9
+
+B_ij: 3 unique values out of 9
+
+C_ij: 3 unique values out of 9
+
+================================================================================

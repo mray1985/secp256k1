@@ -1,0 +1,31 @@
+{
+  "puzzle": 77,
+  "ecdlp": {
+    "statement": "find d in [75557863725914323419136, 151115727451828646838271] with [d]G = P",
+    "range_lo": "75557863725914323419136",
+    "range_hi": "151115727451828646838271",
+    "range_lo_hex": "0x10000000000000000000",
+    "range_hi_hex": "0x1fffffffffffffffffff",
+    "d_window": "[2^76, 2^77)",
+    "N_mirror": "[N-2^77+1, N-2^76]",
+    "bit_band": [
+      76,
+      77
+    ],
+    "width": "75557863725914323419136",
+    "width_bits": 77
+  },
+  "identity": {
+    "address": "1Bxk4CQdqL9p22JEtDfdXMsng1XacifUtE",
+    "hash160": "783c138ac81f6a52398564bb17455576e8525b29",
+    "btc_value": 7.7,
+    "solved": false,
+    "has_pubkey": false,
+    "solve_date": null
+  },
+  "status": "NO_PUBKEY",
+  "note": "ECDLP is address/hash160 only until spend leaks P. Cannot run coordinate / N-y / packet stack.",
+  "gates_available": [
+    "range_only_when_candidate_d"
+  ]
+}

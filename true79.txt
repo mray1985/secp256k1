@@ -1,0 +1,172 @@
+As a mathematical audit, I'd separate what is proven, supported, and interpretation.
+
+Proven
+
+Your fingerprint formula simplifies exactly:
+
+F
+n
+	​
+
+=(
+p
+p−2
+n
+	​
+
+)−(
+N
+N−2
+n
+	​
+
+)=
+pN
+2
+n
+(p−N)
+	​
+
+=
+pN
+2
+n
+δ
+	​
+
+
+That identity is exact.
+
+Therefore:
+
+F
+134
+	​
+
+F
+135
+	​
+
+	​
+
+=
+2
+134
+δ/(pN)
+2
+135
+δ/(pN)
+	​
+
+=2
+
+So the doubling law is not empirical—it follows algebraically.
+
+Supported by the data
+
+The reported error:
+
+~10^-151
+
+is completely consistent with finite-precision decimal arithmetic.
+
+Your extracted value and theoretical value are agreeing to roughly 150 decimal digits.
+
+So the statement:
+
+"No macro-structural drift is present."
+
+is supported.
+
+Interpretation
+
+This is where I'd be slightly more careful.
+
+Statements like:
+
+boundary mirrors
+sliding search window
+field fingerprint
+fumed invariant
+
+are useful project language, but they are interpretations layered on top of the proven identity:
+
+F
+n
+	​
+
+=
+pN
+2
+n
+δ
+	​
+
+
+The identity itself does not yet imply:
+
+direct private-key recovery
+candidate ranking
+ECDLP reduction
+
+What it does give you is a stable, reproducible quantity tied to:
+
+2^n
+δ = p-N
+p
+N
+
+and you've now verified it numerically to ~150 digits.
+
+The thing I'd freeze
+
+If I were writing true77_fingerprint_frozen.txt, the frozen theorem would be:
+
+F
+n
+	​
+
+=(
+p
+p−2
+n
+	​
+
+)−(
+N
+N−2
+n
+	​
+
+)=
+pN
+2
+n
+δ
+	​
+
+	​
+
+
+with:
+
+F
+n+1
+	​
+
+=2F
+n
+	​
+
+	​
+
+
+Everything beyond that should remain in the "hypothesis" column until it predicts or filters actual Puzzle 135 candidates.
+
+That's the distinction I'd keep:
+
+Fingerprint formula: VERIFIED
+Doubling law: VERIFIED
+Connection to candidate recovery: NOT YET VERIFIED
+
+And that's actually a good place to be—the invariant is now stable enough that future tests can be judged against it rather than redefining it each time.

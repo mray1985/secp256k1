@@ -1,0 +1,48 @@
+========================================================================================
+NULL TEST: native-lead m=n  —  real Px vs random / shuffled
+========================================================================================
+N puzzles = 70 (1..70)
+REAL  r=+0.6097  close=0.6143  MAE=0.1349
+REAL residualized (remove linear n from both)  r=+0.5844
+Trials per null = 2000
+
+(Null E uses 200 trials)
+null                                                       mean     sd     p95  max|r|        p
+----------------------------------------------------------------------------------------------------
+A: random 256-bit Px-like, native m=n                    +0.527  0.109  +0.701   0.842   0.2354
+  real=+0.6097  p05=+0.346  p50=+0.528  p99=+0.772  trials_|r|>=|real|=470/2000
+B: random exact n-bit ints vs d_frac                     +0.519  0.111  +0.690   0.922   0.2094
+  real=+0.6097  p05=+0.332  p50=+0.524  p99=+0.767  trials_|r|>=|real|=418/2000
+C: shuffle real Px across puzzles                        +0.484  0.114  +0.670   0.824   0.1414
+  real=+0.6097  p05=+0.303  p50=+0.482  p99=+0.736  trials_|r|>=|real|=282/2000
+D: A residualized (both ~n removed)                      +0.494  0.117  +0.682   0.840   0.2299
+  real=+0.5844  p05=+0.294  p50=+0.496  p99=+0.753  trials_|r|>=|real|=459/2000
+E: random n-bit d' vs native lead([d']G.x)               +0.528  0.114  +0.726   0.780   0.2438
+  real=+0.6097  p05=+0.340  p50=+0.527  p99=+0.769  trials_|r|>=|real|=48/200
+
+========================================================================================
+CLOSE-RATE under Null A (random 256-bit native m=n)
+========================================================================================
+  real close=0.6143
+  null mean=0.6307  p95=0.7143
+  p(close_null >= close_real) = 0.6812  (1362/2000)
+
+========================================================================================
+INTERPRETATION
+========================================================================================
+  Null A: random native-n ALSO correlates -> n-scale / factoradic artifact.
+           null mean r=+0.527; real +0.610 is NOT extreme (p=0.235).
+  Null B: random n-bit ints correlate with d_frac -> shared n-driven factoradic shape.
+  Null C: shuffled Px still often hits |r|>=real -> weak pairing evidence.
+  Null D: residual real r=+0.584, null mean=+0.494, p=0.2299
+           residualization does NOT rescue a paired effect.
+  Null E: random EC pairs give similar r -> generic scale-matched factoradic link,
+           not a puzzle-specific (d, [d]G.x) signature.
+
+VERDICT:
+  The native m=n correlation is largely an artifact of comparing two
+  scale-matched n-bit factoradic lead fractions that both drift with n.
+  Random 256-bit / n-bit / shuffled-Px / random-EC all produce mean r ~ 0.48-0.53.
+  Real r=0.61 sits inside that null bulk (two-sided p ~ 0.14-0.24).
+  Operational lead rule remains well-defined, but it is NOT evidence of
+  a special pubkey-private factoradic pairing beyond shared bit-width.

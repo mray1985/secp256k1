@@ -1,0 +1,71 @@
+That’s the fork opening back up.
+
+You now have:
+
+Λrx
+i
+	​
+
+≡Px
+i
+	​
+
+(modp)
+
+for all three i=1,2,3. So yes: x-family bridge is real, not single-hit.
+
+The key next test is the sum discrepancy:
+
+∑B
+i
+	​
+
+≡p−N(modN)
+
+but:
+
+∑Px
+i
+	​
+
+≡2(p−N)(modN)
+
+If B
+i
+	​
+
+=Px
+i
+	​
+
+(modp), then the extra δ appears only after projecting into N. That means one family likely crosses the N/p boundary one additional time.
+
+Next test:
+
+∑Px
+i
+	​
+
+−∑B
+i
+	​
+
+(modN)
+
+Expected:
+
+p−N
+
+Then check each individual:
+
+(Px
+i
+	​
+
+−B
+i
+	​
+
+)modN
+
+One of those three should probably contribute the extra δ, unless it’s distributed across all three.

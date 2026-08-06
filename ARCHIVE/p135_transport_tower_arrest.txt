@@ -1,0 +1,39 @@
+P135 TRANSPORT TOWER ARREST
+Px_pub=DEFAULT_PX[2] tail ...590
+r_sig tail ...368  band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+=== 1. Field R_eff = beta^i * rx[j] (mod p) — row-2 hits only ===
+  *** row-2 R_eff...368 at i=1 j=0
+  R_eff i=1 j=0 h2=14 Px[0] field: lam...39180 x_bits=255 ec=False band=False denom...368
+  R_eff i=1 j=0 h2=14 Px[0] scalar: lam...21088 x_bits=256 ec=False band=False denom...368
+  R_eff i=1 j=0 h2=14 Px[1] field: lam...89501 x_bits=255 ec=False band=False denom...368
+  R_eff i=1 j=0 h2=14 Px[1] scalar: lam...29147 x_bits=255 ec=False band=False denom...368
+  R_eff i=1 j=0 h2=14 Px[2] field: lam...14645 x_bits=256 ec=False band=False denom...368
+  R_eff i=1 j=0 h2=14 Px[2] scalar: lam...94194 x_bits=256 ec=False band=False denom...368
+  *** row-2 R_eff...368 at i=0 j=1
+  R_eff i=0 j=1 h2=14 Px[0] field: lam...39180 x_bits=255 ec=False band=False denom...368
+  R_eff i=0 j=1 h2=14 Px[0] scalar: lam...21088 x_bits=256 ec=False band=False denom...368
+  R_eff i=0 j=1 h2=14 Px[1] field: lam...89501 x_bits=255 ec=False band=False denom...368
+  R_eff i=0 j=1 h2=14 Px[1] scalar: lam...29147 x_bits=255 ec=False band=False denom...368
+  R_eff i=0 j=1 h2=14 Px[2] field: lam...14645 x_bits=256 ec=False band=False denom...368
+  R_eff i=0 j=1 h2=14 Px[2] scalar: lam...94194 x_bits=256 ec=False band=False denom...368
+  *** row-2 R_eff...368 at i=2 j=2
+  R_eff i=2 j=2 h2=14 Px[0] field: lam...39180 x_bits=255 ec=False band=False denom...368
+  R_eff i=2 j=2 h2=14 Px[0] scalar: lam...21088 x_bits=256 ec=False band=False denom...368
+  R_eff i=2 j=2 h2=14 Px[1] field: lam...89501 x_bits=255 ec=False band=False denom...368
+  R_eff i=2 j=2 h2=14 Px[1] scalar: lam...29147 x_bits=255 ec=False band=False denom...368
+  R_eff i=2 j=2 h2=14 Px[2] field: lam...14645 x_bits=256 ec=False band=False denom...368
+  R_eff i=2 j=2 h2=14 Px[2] scalar: lam...94194 x_bits=256 ec=False band=False denom...368
+
+=== 2. N-side r_j = w^j * r_sig (mod N) — all row-2 ===
+
+=== 3. Cubic u_i (u^3=r mod N) — object branches ===
+
+=== 4. Hybrid: row-2 R_eff denom + cubic lambda (Px/u mod N) ===
+
+=== 5. Full grid scan (silent unless hit) ===
+  full grid trials: 72
+
+=== VERDICT ===
+  hits: 0
+  No transport tower pairing cuffed P135.

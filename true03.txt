@@ -1,0 +1,120 @@
+That’s the split we needed.
+
+Now we know:
+
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+
+is nonlinear in both places:
+
+Scalar multiplication
+A(kQ)
+
+=kA(Q)
+Point addition
+A(Q
+1
+	​
+
++Q
+2
+	​
+
+)
+
+=A(Q
+1
+	​
+
+)+A(Q
+2
+	​
+
+)
+
+And the mismatch is not decomposing cleanly:
+
+D
+s
+	​
+
+−(D
+z
+	​
+
++D
+r
+	​
+
+)
+
+=D
+A
+	​
+
+
+So the bridge is a coordinate projection, not an algebraic representation of the group law. That is important.
+
+Next step: measure the group-law correction term directly.
+
+For two points U=zG and V=rP:
+
+D
+add
+	​
+
+(U,V)=A(U+V)−A(U)−A(V)
+
+You already have that as D
+A
+	​
+
+. Now compute the actual ECC addition slope:
+
+μ=
+V
+x
+	​
+
+−U
+x
+	​
+
+V
+y
+	​
+
+−U
+y
+	​
+
+	​
+
+(modp)
+
+Then compare:
+
+D
+A
+	​
+
+
+against:
+
+Λμ,Λμ
+2
+,Λμ
+3
+,μ
+2
+,μ
+3
+
+Because point addition’s nonlinearity comes from the slope μ. If D
+A
+	​
+
+ has structure, it should show up around the addition slope, not around raw y-branches.

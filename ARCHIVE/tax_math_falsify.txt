@@ -1,0 +1,103 @@
+TAX MATH FALSIFICATION REPORT
+
+I99 pivot = 198.95
+{H} = 0.345702  {H/2} = 0.172851
+
+P65  known_d=True  ry_source=pub_y
+  k_true bits=255  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=254.7053  geom_pred=145.0679
+  trials=313  full_wins(ec+d)=0  R_point_wins=0
+
+P70  known_d=True  ry_source=pub_y
+  k_true bits=255  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=254.9229  geom_pred=142.1505
+  trials=241  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=255 d_bits=70
+
+P75  known_d=True  ry_source=pub_y
+  k_true bits=253  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=252.1864  geom_pred=142.6231
+  trials=241  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=253 d_bits=75
+
+P80  known_d=True  ry_source=pub_y
+  k_true bits=256  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=255.2073  geom_pred=142.5995
+  trials=313  full_wins(ec+d)=0  R_point_wins=0
+
+P85  known_d=True  ry_source=pub_y
+  k_true bits=253  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=252.6429  geom_pred=141.9812
+  trials=241  full_wins(ec+d)=0  R_point_wins=0
+
+P90  known_d=True  ry_source=pub_y
+  k_true bits=251  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=250.6446  geom_pred=142.5052
+  trials=241  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=251 d_bits=90
+
+P95  known_d=True  ry_source=pub_y
+  k_true bits=256  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=255.4866  geom_pred=142.5993
+  trials=241  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=256 d_bits=95
+
+P100  known_d=True  ry_source=pub_y
+  k_true bits=253  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=252.7424  geom_pred=142.8196
+  trials=313  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=253 d_bits=100
+
+P105  known_d=True  ry_source=pub_y
+  k_true bits=249  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=248.2159  geom_pred=141.9286
+  trials=313  full_wins(ec+d)=0  R_point_wins=0
+
+P110  known_d=True  ry_source=pub_y
+  k_true bits=256  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=255.6652  geom_pred=141.9166
+  trials=241  full_wins(ec+d)=0  R_point_wins=0
+
+P115  known_d=True  ry_source=R_true
+  k_true bits=256  [k]G rx_match=True  ry_match=True
+  pivot log2(k)=255.3024  geom_pred=142.6191
+  trials=299  full_wins(ec+d)=1  R_point_wins=1
+    WIN known_k_direct k_bits=256 d_bits=115
+
+P120  known_d=True  ry_source=pub_y
+  k_true bits=253  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=252.9074  geom_pred=142.1660
+  trials=331  full_wins(ec+d)=0  R_point_wins=0
+
+P125  known_d=True  ry_source=pub_y
+  k_true bits=256  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=255.1586  geom_pred=144.5039
+  trials=430  full_wins(ec+d)=1  R_point_wins=0
+    WIN known_k_direct k_bits=256 d_bits=125
+
+P130  known_d=True  ry_source=pub_y
+  k_true bits=255  [k]G rx_match=True  ry_match=False
+  pivot log2(k)=254.1838  geom_pred=143.5866
+  trials=430  full_wins(ec+d)=0  R_point_wins=0
+
+=== P135 (unsolved) ===
+P135  known_d=False  ry_source=R_true
+  trials=429  full_wins(ec+d)=0  R_point_wins=0
+  P135 ec+band hits: 0
+
+SUMMARY
+  solved puzzles tested: 14
+  total trials: 4617
+  full wins (d_match AND ec_d) on solved: 7
+    P70 known_k_direct
+    P75 known_k_direct
+    P90 known_k_direct
+    P95 known_k_direct
+    P100 known_k_direct
+    P115 known_k_direct
+    P125 known_k_direct
+
+P115 CALIBRATION (ground truth)
+  d_known bits=115
+  k_known bits=256
+  k0+d*dk==k: True

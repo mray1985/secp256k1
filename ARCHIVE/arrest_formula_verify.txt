@@ -1,0 +1,37 @@
+ARREST FORMULA VERIFICATION
+
+=== constants ===
+floor(sqrt(N)) = 340282366920938463463374607431768211455
+floor(sqrt(p)) = 340282366920938463463374607431768211455
+frac(sqrt(N)) decimal tail = 0.364615348014596609103858110976294292825635269181125548925105585811975953847106783
+sqrt(p-N) = 20794720160792249931.6719154742508211418105094361336396911497552828504605365018755232881090318157564645388832930643124408
+log2(p-N) = 128.3457021466  {H} = 0.345702  {H/2} = 0.172851
+log2 sqrt(Np/(p-N)) = 191.827149
+P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+=== email formulas at k=71 ===
+  v1 frac(sqrtN)*sqrt(pN)*2^k: d...662945614089  bits=134  in_band=False  EC=False
+  v2 (pN)*frac(sqrtN)*2^k mod N: d...849393726711  bits=198  in_band=False  EC=False
+  v3 frac(sqrtN)*2^k*sqrt(pN): d...662945614089  bits=134  in_band=False  EC=False
+  v4 sqrt(y)*2^H2/tail: d...307982445503  bits=129  in_band=False  EC=False
+  geom_mean*2^71: d...550636302336  bits=135  in_band=True  EC=False
+
+=== k sweep v1 (frac*sqrt(pN)*2^k) ===
+  k=69 bits=132 in_band=False EC=False tail...5736403522
+  k=70 bits=133 in_band=False EC=False tail...1472807044
+  k=71 bits=134 in_band=False EC=False tail...2945614089
+  k=72 bits=135 in_band=True EC=False tail...5891228179
+  k=73 bits=136 in_band=False EC=False tail...1782456359
+
+=== solved calibration: k such that v1(d) ~ true d ===
+  P 27 best_k=0 rel_err=67727361537.2559  d_true_bits=27
+  P 64 best_k=1 rel_err=0.1481  d_true_bits=64
+  P 70 best_k=7 rel_err=0.0001  d_true_bits=70
+  P100 best_k=37 rel_err=0.2002  d_true_bits=100
+  P115 best_k=52 rel_err=0.0853  d_true_bits=115
+  P130 best_k=67 rel_err=0.0136  d_true_bits=130
+  mean rel err across sample: 11287893589.6172
+
+=== 10^29 / log bridge ===
+10^29 bits ~ 1.00E+29  log2 ~ 96.336
+191.827/2 = 95.913  (email half-log claim)

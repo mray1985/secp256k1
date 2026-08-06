@@ -1,0 +1,67 @@
+{
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "command": [
+    "wsl",
+    "-e",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/keyhunt",
+    "-m",
+    "address",
+    "-f",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/logs/p71_s03/promotion/solved_n70/keyhunt_targets.txt",
+    "-r",
+    "349b84b6431a6c4ee9:349b84b6431a6c4ef9",
+    "-l",
+    "compress",
+    "-t",
+    "4"
+  ],
+  "target_address": "19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR",
+  "target_h160": "5db8cda53a6a002db10365967d7f85d19e171b10",
+  "start": 970436974005023690473,
+  "end": 970436974005023690489,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 0.40817319999769097,
+  "found_private_keys": [
+    "349b84b6431a6c4ef1"
+  ],
+  "verified_hits": [
+    {
+      "d": 970436974005023690481,
+      "d_hex": "349b84b6431a6c4ef1",
+      "in_range": true,
+      "h160": "5db8cda53a6a002db10365967d7f85d19e171b10",
+      "address": "19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "349b84b6431a6c4ef1",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD\n[+] Mode address\n[+] Search compress only\n[+] Threads : 4\n[+] Setting search for btc adddress\n[+] N = 0x100000000\n[+] Range \n[+] -- from : 0x349b84b6431a6c4ee9\n[+] -- to   : 0x349b84b6431a6c4ef9\n[+] Allocating memory for 1 elements: 0.00 MB\n[+] Bloom filter for 1 elements.\n[+] Loading data to the bloomfilter total: 0.03 MB\n[+] Sorting data ... done! 1 values were loaded and sorted\n\nBase key: 349b84b6431a6c4ee9     \nHit! Private Key: 349b84b6431a6c4ef1\npubkey: 0290e6900a58d33393bc1097b5aed31f2e4e7cbd3e5466af958665bc0121248483\nAddress 19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR\nrmd160 5db8cda53a6a002db10365967d7f85d19e171b10\n",
+  "stderr_tail": "",
+  "notes": [
+    "stop_on_hit=keyhunt_known_hit_calibration"
+  ],
+  "device_notes": "KeyHunt CPU compressed address mode (WSL-capable)",
+  "started_at_utc": "2026-07-10T16:41:29.961586+00:00",
+  "finished_at_utc": "2026-07-10T16:41:30.369867+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "pass": true
+  },
+  "step": "solved_n70"
+}

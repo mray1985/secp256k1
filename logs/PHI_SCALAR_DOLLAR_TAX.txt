@@ -1,0 +1,96 @@
+========================================================================================
+Scalar-as-dollars: levy scales with d (not storewide %)
+========================================================================================
+  Metaphor: d=1 -> $1, d=2 -> $2, d=2^134 -> $2^134
+  r*(P) = p/y - 2 still comes from y of d*G, not from d as cash.
+
+----------------------------------------------------------------------------------------
+1) Walk d=1..128: is r* a simple function of dollar-scalar d?
+----------------------------------------------------------------------------------------
+  corr(d, r*):       0.115209
+  corr(log2(d), r*): 0.050178
+  corr(y, r*):       -0.321068  (exact monotone in 1/y by construction)
+
+  samples:
+    d=$1     y_mod_p bits~255  r*=p/y-2 = +1.544239e+00
+    d=$2     y_mod_p bits~253  r*=p/y-2 = +7.523629e+00
+    d=$3     y_mod_p bits~254  r*=p/y-2 = +2.526129e+00
+    d=$5     y_mod_p bits~256  r*=p/y-2 = -8.184928e-01
+    d=$10    y_mod_p bits~256  r*=p/y-2 = -1.345106e-01
+    d=$64    y_mod_p bits~255  r*=p/y-2 = +7.615587e-01
+    d=$100   y_mod_p bits~256  r*=p/y-2 = -8.844259e-01
+    d=$128   y_mod_p bits~255  r*=p/y-2 = +7.346470e-01
+
+----------------------------------------------------------------------------------------
+2) Dollar ladder d = 2^k  (puzzle-sized wallets)
+----------------------------------------------------------------------------------------
+  $2^0   = d~2^0    r*=+1.544239e+00  neg-tax-exact=True
+  $2^1   = d~2^1    r*=+7.523629e+00  neg-tax-exact=True
+  $2^2   = d~2^2    r*=+1.124690e+00  neg-tax-exact=True
+  $2^3   = d~2^3    r*=+7.734637e-01  neg-tax-exact=True
+  $2^4   = d~2^4    r*=-9.672753e-01  neg-tax-exact=True
+  $2^5   = d~2^5    r*=-2.820392e-01  neg-tax-exact=True
+  $2^6   = d~2^6    r*=+7.615587e-01  neg-tax-exact=True
+  $2^7   = d~2^7    r*=+7.346470e-01  neg-tax-exact=True
+  $2^8   = d~2^8    r*=+1.224492e+01  neg-tax-exact=True
+  $2^9   = d~2^9    r*=+2.749951e+00  neg-tax-exact=True
+  $2^10  = d~2^10   r*=+1.152668e+00  neg-tax-exact=True
+  $2^11  = d~2^11   r*=+4.358083e+00  neg-tax-exact=True
+  $2^12  = d~2^12   r*=-7.885337e-01  neg-tax-exact=True
+  $2^13  = d~2^13   r*=-6.170010e-01  neg-tax-exact=True
+  $2^14  = d~2^14   r*=+3.685764e+01  neg-tax-exact=True
+  $2^15  = d~2^15   r*=+1.099351e+00  neg-tax-exact=True
+  $2^32  = d~2^32   r*=-7.563826e-01  neg-tax-exact=True
+  $2^64  = d~2^64   r*=+9.458315e-01  neg-tax-exact=True
+  $2^80  = d~2^80   r*=+1.686494e+00  neg-tax-exact=True
+  $2^100 = d~2^100  r*=-7.267115e-01  neg-tax-exact=True
+  $2^120 = d~2^120  r*=+2.175772e-01  neg-tax-exact=True
+  $2^134 = d~2^134  r*=+1.454695e+00  neg-tax-exact=True
+
+----------------------------------------------------------------------------------------
+3) Candidate dollar levies into Phi (exact hit rates)
+----------------------------------------------------------------------------------------
+  A) C_tax = C + d/p^2          (add $d into Fine units)
+  B) C_tax = C * (1 + d/N)      (tax proportional to wealth / order)
+  C) Fine_tax = Fine * (1 + d)  (absurd scale)
+  D) r = d                      (use scalar itself as Fine tax rate)
+  walk 1..64: A==Phi(-P) 0/64
+  walk 1..64: B==Phi(-P) 0/64
+  walk 1..64: Fine*(1+d)==neg 0/64
+  walk 1..64: d == r*=p/y-2     0/64
+
+----------------------------------------------------------------------------------------
+4) Solved keys: r* vs puzzle n and bit-length of d
+----------------------------------------------------------------------------------------
+  n_keys=82  corr(puzzle, r*)=0.063844
+  corr(bitlen(d), r*)=0.063844
+    puzzle 1: $d~2^0..  r*=+1.544239e+00
+    puzzle 2: $d~2^1..  r*=+2.526129e+00
+    puzzle 10: $d~2^9..  r*=-8.009522e-01
+    puzzle 20: $d~2^19..  r*=-1.177576e-01
+    puzzle 40: $d~2^39..  r*=+7.066981e-02
+    puzzle 70: $d~2^69..  r*=-8.103748e-01
+    puzzle 100: $d~2^99..  r*=-1.083770e-01
+    puzzle 105: $d~2^104..  r*=+4.893139e+01
+    puzzle 110: $d~2^109..  r*=+8.522462e+01
+    puzzle 115: $d~2^114..  r*=+4.869031e-01
+    puzzle 120: $d~2^119..  r*=+3.939823e+00
+    puzzle 125: $d~2^124..  r*=+4.079300e+00
+    puzzle 130: $d~2^129..  r*=-5.493385e-01
+
+----------------------------------------------------------------------------------------
+5) What the dollar metaphor gets right / wrong
+----------------------------------------------------------------------------------------
+  RIGHT: scalars have magnitude — $1 vs $2^134 is meaningful for search cost.
+  WRONG: r* is not a tax on that wallet size. r* = p/y-2 uses curve y of d*G.
+  y(d*G) is pseudorandom in F_p; it does not track d or 2^k smoothly.
+  So bigger dollar d does not imply bigger (or smoother) Fine-tax rate.
+
+========================================================================================
+VERDICT
+========================================================================================
+  Per-point / per-dollar scaling was understood: levy may depend on d.
+  But the negation Fine rate r* depends on y(dG), not on d as cash.
+  corr(d, r*) ~ 0 on the walk; 2^k ladder jumps around with no trend.
+  Dollar size of d is real for puzzles; it is not the Phi Fine tax dial.
+

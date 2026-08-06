@@ -1,0 +1,192 @@
+{
+  "exhibit": "roof_stitch_catalog",
+  "keeper": "Roof-stitches tell roof relationship and overflow; they are not public point witnesses.",
+  "distinction": {
+    "coordinate_packet": "x.y / p with x < p \u2014 stays under field roof",
+    "roof_stitch": "p.N or N.p \u2014 moduli stitched as decimal; overflow or under-roof depends on denominator"
+  },
+  "stitches": {
+    "p_dot_N": {
+      "name": "p.N",
+      "head_role": "field_roof",
+      "tail_role": "scalar_roof",
+      "head": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "tail": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "stitched_decimal_string": "115792089237316195423570985008687907853269984665640564039457584007908834671663.115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "integer_digits": 78,
+      "fractional_digits": 78,
+      "total_decimal_digits": 156,
+      "kind": "roof_stitch",
+      "not": "coordinate_packet",
+      "normalizations": {
+        "over_2_256": {
+          "formula": "p.N / 2^256",
+          "value": "0.999999999999999999999999999999999999999999999999999999999999999999962907930056589107815410248382057834910333971232085999",
+          "role": "binary_roof_witness",
+          "placement": "under_roof"
+        },
+        "over_p": {
+          "formula": "p.N / p",
+          "value": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000099999999999999999999999999999999999999627",
+          "placement": "overflow"
+        },
+        "over_N": {
+          "formula": "p.N / N",
+          "value": "1.00000000000000000000000000000000000000373445534504013415275958254798055509402031150842988026869982832743380540155450194",
+          "placement": "overflow"
+        }
+      }
+    },
+    "N_dot_p": {
+      "name": "N.p",
+      "head_role": "scalar_roof",
+      "tail_role": "field_roof",
+      "head": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "tail": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "stitched_decimal_string": "115792089237316195423570985008687907852837564279074904382605163141518161494337.115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "integer_digits": 78,
+      "fractional_digits": 78,
+      "total_decimal_digits": 156,
+      "kind": "roof_stitch",
+      "not": "coordinate_packet",
+      "normalizations": {
+        "over_2_256": {
+          "formula": "N.p / 2^256",
+          "value": "0.999999999999999999999999999999999999996265544654959865847240417451982352836051223756109628807109811257319434223717704379",
+          "role": "binary_roof_witness",
+          "placement": "under_roof"
+        },
+        "over_p": {
+          "formula": "N.p / p",
+          "value": "0.999999999999999999999999999999999999996265544654959865847240417452019444905995634648294218558727753422408961733806752138",
+          "placement": "under_roof"
+        },
+        "over_N": {
+          "formula": "N.p / N",
+          "value": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000373",
+          "placement": "overflow"
+        }
+      }
+    },
+    "p_dot_delta": {
+      "name": "p.(p-N)",
+      "head_role": "field_roof",
+      "tail_role": "defect_tail",
+      "head": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "tail": "432420386565659656852420866390673177326",
+      "stitched_decimal_string": "115792089237316195423570985008687907853269984665640564039457584007908834671663.432420386565659656852420866390673177326",
+      "integer_digits": 78,
+      "fractional_digits": 39,
+      "total_decimal_digits": 117,
+      "kind": "roof_stitch",
+      "not": "coordinate_packet",
+      "normalizations": {
+        "over_2_256": {
+          "formula": "p.(p-N) / 2^256",
+          "value": "0.999999999999999999999999999999999999999999999999999999999999999999962907930059323563160450382534817417458314526326095099",
+          "role": "binary_roof_witness",
+          "placement": "under_roof"
+        },
+        "over_p": {
+          "formula": "p.(p-N) / p",
+          "value": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000373445534504013415275958254798055509400537",
+          "placement": "overflow"
+        },
+        "over_N": {
+          "formula": "p.(p-N) / N",
+          "value": "1.00000000000000000000000000000000000000373445534504013415275958254798055509402304596377492040285258790998178595664852125",
+          "placement": "overflow"
+        }
+      }
+    },
+    "N_dot_delta": {
+      "name": "N.(p-N)",
+      "head_role": "scalar_roof",
+      "tail_role": "defect_tail",
+      "head": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "tail": "432420386565659656852420866390673177326",
+      "stitched_decimal_string": "115792089237316195423570985008687907852837564279074904382605163141518161494337.432420386565659656852420866390673177326",
+      "integer_digits": 78,
+      "fractional_digits": 39,
+      "total_decimal_digits": 117,
+      "kind": "roof_stitch",
+      "not": "coordinate_packet",
+      "normalizations": {
+        "over_2_256": {
+          "formula": "N.(p-N) / 2^256",
+          "value": "0.999999999999999999999999999999999999996265544654959865847240417451982352836053958211454668941262570839867414778811709745",
+          "role": "binary_roof_witness",
+          "placement": "under_roof"
+        },
+        "over_p": {
+          "formula": "N.(p-N) / p",
+          "value": "0.999999999999999999999999999999999999996265544654959865847240417452019444905998369103639258692880513004956942288900757503",
+          "placement": "under_roof"
+        },
+        "over_N": {
+          "formula": "N.(p-N) / N",
+          "value": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000373445534504013415275958254798055509401931",
+          "placement": "overflow"
+        }
+      }
+    }
+  },
+  "summary_table": {
+    "p.N / 2^256": {
+      "placement": "under_roof",
+      "meaning": "field roof p under 2^256, scalar roof N in decimal tail"
+    },
+    "N.p / 2^256": {
+      "placement": "under_roof",
+      "meaning": "scalar roof N under 2^256, field roof p in decimal tail"
+    },
+    "N.p / p": {
+      "placement": "under_roof",
+      "meaning": "scalar roof inside field courtroom \u2014 clean under-roof witness"
+    },
+    "p.N / p": {
+      "placement": "overflow",
+      "meaning": "field-roof overflow witness",
+      "overflow_tail": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000099999999999999999999999999999999999999627"
+    },
+    "p.N / N": {
+      "placement": "overflow",
+      "meaning": "overflow above scalar roof",
+      "overflow_tail": "0.00000000000000000000000000000000000000373445534504013415275958254798055509402031150842988026869982832743380540155450194"
+    },
+    "N.p / N": {
+      "placement": "overflow",
+      "meaning": "scalar-roof overflow by tiny field tail",
+      "overflow_tail": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000373"
+    }
+  },
+  "cross_courtroom_reference": {
+    "N_over_p": {
+      "formula": "N / p",
+      "value": "0.999999999999999999999999999999999999996265544654959865847240417452019444905994634648294218558727753422408961733806752138"
+    },
+    "p_over_N_raw": {
+      "formula": "p / N",
+      "value": "1.00000000000000000000000000000000000000373445534504013415275958254798055509401931150842988026869982832743380540155450194",
+      "note": "raw > 1"
+    },
+    "delta_over_p": {
+      "formula": "(p-N) / p",
+      "value": "0.00000000000000000000000000000000000000373445534504013415275958254798055509400536535170578144127224657759103826619324786238187250878912912254411062095235156542"
+    },
+    "delta_over_N": {
+      "formula": "(p-N) / N",
+      "value": "0.00000000000000000000000000000000000000373445534504013415275958254798055509401931150842988026869982832743380540155450193530367551132943066610227696945925622260"
+    }
+  },
+  "constants": {
+    "p": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+    "N": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+    "DELTA": "432420386565659656852420866390673177326",
+    "p_digits": 78,
+    "N_digits": 78,
+    "DELTA_digits": 39
+  },
+  "ruling": "p.N is allowed, but it is a roof-stitch, not the same kind of packet as x.y.",
+  "judge_popcorn": "Roof-stitches measure courtroom overflow; coordinate packets witness public points."
+}

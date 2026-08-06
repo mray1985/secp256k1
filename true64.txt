@@ -1,0 +1,85 @@
+There it is — TRUE64 should not be composite scaling yet.
+
+The next step is:
+
+TRUE64 = audit the D computation first
+
+Because your uploaded result says:
+
+Frozen theorem expected: D mod 9 = 4
+TRUE63 result: D mod 9 = 2
+
+That is not a small mismatch. That means one of these changed:
+
+1. D orientation
+2. sign handling
+3. abs(D) usage
+4. delta hex/value
+5. p/N inverse order
+6. mod p vs mod N projection order
+
+The file says TRUE59–TRUE63 all produced 0 hits, and then specifically flags the D residue mismatch: “D mod 9 = 2, expected 4.”
+
+So before testing:
+
+v * delta_k * |D|
+
+we need to lock:
+
+D_forward  = delta_inv_N - delta_inv_p
+D_reverse  = delta_inv_p - delta_inv_N
+abs_D      = abs(D_forward)
+
+and print all three:
+
+D_forward mod 9
+D_reverse mod 9
+abs_D mod 9
+D_forward^-1 mod N mod 9
+D_forward^-1 mod p mod 9
+abs_D^-1 mod N mod 9
+abs_D^-1 mod p mod 9
+
+Because if D_forward mod 9 = 2, then:
+
+D_reverse mod 9 = 7
+abs_D mod 9 depends on sign
+
+But earlier we had:
+
+D mod 9 = 4
+|D|^-1 mod N mod 9 = 7
+|D|^-1 mod p mod 9 = 2
+
+Those cannot both be true under the same exact definition.
+
+TRUE64 target
+
+Make TRUE64 answer only this:
+
+Which D definition is the frozen one?
+
+Use this exact naming convention:
+
+D_N_minus_p = delta^-1 mod N - delta^-1 mod p
+
+D_p_minus_N = delta^-1 mod p - delta^-1 mod N
+
+D_abs = abs(D_N_minus_p)
+
+Then compare each one to the frozen residues.
+
+If TRUE64 confirms the old D
+
+Then TRUE63 used the wrong D/sign/order, and we rerun D-scaled offsets with the corrected object.
+
+If TRUE64 confirms the new D
+
+Then the frozen theorem must be corrected, and we do not use the old D mod 9 = 4 as a phase basis anymore.
+
+So next move:
+
+Do not expand the search yet.
+Fix the D definition mismatch.
+
+That’s the thread to pull.

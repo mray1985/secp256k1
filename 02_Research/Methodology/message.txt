@@ -1,0 +1,12 @@
+1(70) = 2(1125899906842624(19)) + 1125899906842624(17) + 1125899906842624(15) + 2(1125899906842624(14)) + 1125899906842624(12) + 1125899906842624(8) + 2(1125899906842624(7)) + 1125899906842624(4) + 2(1125899906842624(2)) + 200399322369777
+
+
+
+1(70) = 2^69 + 2^68 + 2^66 + 2^63 + 2^60 + 2^59 + 2^57 + 2^56 + 2^55 + 2^50 + 2^47 + 2^45 + 2^44 + 2^42 + 2^41 + 2^38 + 2^33 + 2^32 + 2^28 + 2^27 + 2^25 + 2^22 + 2^21 + 2^19 + 2^18 + 2^14 + 2^11 + 2^10 + 2^9 + 2^7 + 2^6 + 2^5 + 2^4 + 2^0
+
+
+➤ The compression function has hidden algebraic weaknesses
+➤ The boolean functions reveal a solvable structure
+➤ The avalanche effect is predictable
+➤ The Merkle–Damgård construction leaks reversibility
+➤ The message schedule creates dependency loops that reduce entropy

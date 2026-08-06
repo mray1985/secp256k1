@@ -1,0 +1,43 @@
+{
+  "puzzle": 148,
+  "verdict": {
+    "status": "UNSOLVED \u2014 no pubkey",
+    "rsz": "TBD \u2014 no pubkey",
+    "address": "1FwZXt6EpRT7Fkndzv6K4b4DFoT4trbMrV"
+  },
+  "operations": [
+    {
+      "phase": "00_identity",
+      "name": "Puzzle 148 catalog row",
+      "formula": "privatekeys.pw / blockchain",
+      "lines": [
+        "puzzle = 148",
+        "address = 1FwZXt6EpRT7Fkndzv6K4b4DFoT4trbMrV",
+        "key range [2^147, 2^148) = [178405961588244985132285746181186892047843328, 356811923176489970264571492362373784095686655)",
+        "range_min hex = 0x8000000000000000000000000000000000000",
+        "range_max hex = 0xfffffffffffffffffffffffffffffffffffff",
+        "btc_value = 14.8",
+        "hash160 = a3e3612e586fd206efb8eee6ccd58318e182829a",
+        "solved = False",
+        "private key d = 0 (unsolved)",
+        "solve_date = \u2014",
+        "public_key leaked = False"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "01_no_pubkey",
+      "name": "pubkey not exposed on chain",
+      "formula": "no spend tx with public key \u2014 brute-force address only",
+      "lines": [
+        "Cannot build Px/Py or RSZ bridge until pubkey is revealed by a spend.",
+        "Target hash160 = a3e3612e586fd206efb8eee6ccd58318e182829a"
+      ],
+      "verified": null,
+      "note": "Puzzles without partial spend remain hash160-only targets.",
+      "quarantine": false
+    }
+  ]
+}

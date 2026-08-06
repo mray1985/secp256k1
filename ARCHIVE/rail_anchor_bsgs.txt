@@ -1,0 +1,19 @@
+RAIL ANCHOR BSGS — Puzzle 135 (known pubkey)
+target Px ...708124077590
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  margin=+/-10,000,000
+m = auto sqrt(width)
+
+--- p27_x rail ---
+  d0 ...000864354304  band_pos=28.1%
+  P0 x ...869516759723  x_eq_target=False
+  width=20,000,001 (~2^24)  m~2^12  1.3s  none
+--- frac_sqrtN k=72 ---
+  d0 ...325891228179  band_pos=64.4%
+  P0 x ...030864657760  x_eq_target=False
+  width=20,000,001 (~2^24)  m~2^12  1.9s  none
+--- Delta_y k=78 ---
+  d0 ...051191167665  band_pos=76.8%
+  P0 x ...515259678410  x_eq_target=False
+  width=20,000,001 (~2^24)  m~2^12  1.7s  none
+
+wall=5.0s  result=not found

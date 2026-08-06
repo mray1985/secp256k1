@@ -1,0 +1,86 @@
+Address / hash160 and the 2^32 lane
+============================================================
+
+P2PKH payload (25 bytes) = 0x00 || hash160(20) || checksum(4)
+As integer:  payload_int = hash160_int * 2^32 + checksum_int
+So (payload_int - checksum_int) // hash160_int = 2^32 = 4294967296 EXACTLY
+
+P  1  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1359812148  chk<2^32? True
+P  2  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2886159340  chk<2^32? True
+P  3  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1083247487  chk<2^32? True
+P  4  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1308809193  chk<2^32? True
+P  5  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=3241711859  chk<2^32? True
+P  6  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2084675093  chk<2^32? True
+P  7  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1331255633  chk<2^32? True
+P  8  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1568254512  chk<2^32? True
+P  9  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2301172252  chk<2^32? True
+P 10  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2882222237  chk<2^32? True
+P 11  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1618527934  chk<2^32? True
+P 12  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2282953163  chk<2^32? True
+P 65  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=4168814151  chk<2^32? True
+P 70  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1183261830  chk<2^32? True
+P 75  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2814606569  chk<2^32? True
+P115  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2369898057  chk<2^32? True
+P125  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2121907948  chk<2^32? True
+P135  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=2072985111  chk<2^32? True
+P160  payload//h160 quotient=4294967296  (exact 2^32? True)  checksum=1563760281  chk<2^32? True
+
+all solved checked: quotient always 2^32? True
+
+P160  payload/h160 lane quotient = 4294967296  (2^32=True)
+      checksum (low 32-bit lane) = 1563760281
+
+=== Decimal form: h160 = q * 2^32 + r (low lane) ===
+q = h160 // 2^32 is ~38-39 decimal digits; r is the 'small offset' lane
+
+P  1  h160_dec_len=48  q_len=39  q_trail_zeros=0
+       h160 = 155677856125771267926192137724119720739 * 2^32 + 4047715286
+       dec: 668631300771580858519448973337422070966705667030
+
+P 32  h160_dec_len=48  q_len=39  q_trail_zeros=0
+       h160 = 210362664487553757657734766251726278188 * 2^32 + 3499032009
+       dec: 903500764273463988181880382493368868364757171657
+
+P 65  h160_dec_len=48  q_len=39  q_trail_zeros=0
+       h160 = 110198137486968862283227382909400521671 * 2^32 + 4250337591
+       dec: 473297396586642889676789498927544571546534609207
+
+P 70  h160_dec_len=48  q_len=39  q_trail_zeros=0
+       h160 = 124577757214661425459132078314068346321 * 2^32 + 2652314384
+       dec: 535057393045998874059714060903434364160149232400
+
+P 75  h160_dec_len=49  q_len=39  q_trail_zeros=0
+       h160 = 248397109716490964777750126538213534068 * 2^32 + 893117903
+       dec: 1066857462653252525599924701941488823087534958031
+
+P115  h160_dec_len=49  q_len=39  q_trail_zeros=0
+       h160 = 311118116916604071034451793983433834339 * 2^32 + 2212903332
+       dec: 1336242137349918844473431344447377884268099680676
+
+P125  h160_dec_len=49  q_len=39  q_trail_zeros=0
+       h160 = 328358629134923537207915581154262337316 * 2^32 + 376594376
+       dec: 1410289573493889363768636573386390669777117011912
+
+P135  h160_dec_len=48  q_len=38  q_trail_zeros=0
+       h160 = 79002594813711770213205994808044223943 * 2^32 + 848896806
+       dec: 339313561024031265435986695011695739557734064934
+
+P160  h160_dec_len=49  q_len=39  q_trail_zeros=0
+       h160 = 308755245059347712608776152856926050336 * 2^32 + 2567541394
+       dec: 1326093679998364004747100419105194353286137352850
+
+=== Private key d in band: (d - lo) = q * 2^32 + r ===
+(band width / 2^32 = 2^(n-33) buckets — checksum fine buckets)
+
+P 65  true d  band_buckets~2^32  (d-lo)//2^32=2822287669  rem=95578215
+P 70  true d  band_buckets~2^37  (d-lo)//2^32=88508511811  rem=443305713
+P 75  true d  band_buckets~2^42  (d-lo)//2^32=849565795974  rem=2704502279
+P115  true d  band_buckets~2^82  (d-lo)//2^32=2490108785320665140205921  rem=3646986950
+P125  true d  band_buckets~2^92  (d-lo)//2^32=3814441567562495018195616293  rem=3829954476
+P130  true d  band_buckets~2^97  (d-lo)//2^32=98559365400958459987583601912  rem=2546336713
+P135  true d  band_buckets~2^102  (d-lo)//2^32=-5070602400912917605986812821504  rem=0
+P160  h160(P160) anchor  band_buckets~2^127  (d-lo)//2^32=138614061598878480877088849141041944608  rem=2567541394
+
+=== Interpretation ===
+The '4294967296 every time' is structural: checksum sits in the low 32-bit lane, so address_int = h160_int * 2^32 + checksum. Not a puzzle secret — encoding geometry.
+The 'long zeros + small offset' in decimal is usually h160 = (big quotient) * 2^32 + (remainder under 4.3e9). Same lane split applies to d-lo in the puzzle band.

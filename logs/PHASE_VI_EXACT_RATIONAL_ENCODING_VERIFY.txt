@@ -1,0 +1,65 @@
+========================================================================================
+Phase VI - Exact Rational Encoding (E = x*p + y)
+Document: Phase_VI_Exact_Rational_Encoding.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: 4.1 Bijection (x,y) <-> E
+  Statement: E=xp+y is bijective onto {0..p^2-1}; inverse x=floor(E/p), y=E mod p.
+  Proof:     Euclidean division by p on [0,p^2).
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.2-2.4 E(-P), E(psi), E(psi^2)
+  Statement: E(-P)=E+p-2y; E(psi)=(beta x mod p)*p+y; fine residue invariant under psi.
+  Proof:     Direct from definitions; psi fixes y.
+  Verification:
+    OK; E(psi) != beta*E on 100/100 samples
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.1-3.4 Orbit algebra on E_j
+  Statement: E0+E1+E2 = q_x p^2 + 3y; Ei-Ej=(xi-xj)p; floor(Ej/p)=xj.
+  Proof:     Carry theorem: x0+x1+x2=q_x p; expand packed sum.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 5.1 E mod N = x*Delta + y mod N
+  Statement: E = xp+y == x*Delta+y (mod N) because p == Delta (mod N).
+  Proof:     p = N+Delta.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 5.2-6.1 No forced ID with signature r; no ring-hom bridge
+  Statement: E mod N is a pubkey quantity; r is a nonce x-mod-N. p!=N => no unital ring hom.
+  Proof:     Distinct geometric roles; Phase II ring-hom impossibility.
+  Verification:
+    E(G) mod N = 104546484844792112930166045520327606280985463806268219741099821340531146153254 (public; not identified with a signature r)
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 7.1 Hierarchy: E is foundation; decimals are serialization
+  Statement: P -> E -> Phi=E/p^2 -> decimal encoding -> digits.
+  Proof:     Phi defined as rational E/p^2; digit depths corollaries of lattice 1/p, 1/p^2.
+  Verification:
+    OK (object + lattice bounds as encoding corollaries)
+
+----------------------------------------------------------------------------------------
+THEOREM: 8 Complexity: engineering only; no ECDLP claim
+  Statement: E stores ~2 log2(p) bits (same as (x,y)); enables single-int compare/hash.
+  Proof:     Bit length of E < p^2 is ceil(log2(p^2))=2 ceil(log2 p) roughly; not a DL reduction.
+  Verification:
+    bitlength(p^2-1)=512, 2*bitlength(p-1)=512
+    No ECDLP reduction claimed - OK
+
+========================================================================================
+VERDICT
+========================================================================================
+  Canonical object: E = xp + y
+  Orbit sum: E0+E1+E2 = q_x p^2 + 3y
+  Unique recovery of (x,y); E mod N = x Delta + y mod N
+  Decimals = serialization only. No ECDLP claim.
+  ALL Phase VI verification checks PASSED.
+========================================================================================

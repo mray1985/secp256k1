@@ -1,0 +1,670 @@
+
+Puzzle 160 
+priv hex
+priv dec
+	x hex 
+	x dec 101616124637840542991531253248586524020213215258338643076214814468447630501491
+		y hex c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+		y dec 88132823371574229813684435207239348220522140366126834573803505878170136640646
+			(y^2 = x^3 + 7) mod p hex 
+			(y^2 = x^3 + 7) mod p dec 98931842703096536383023310437099867537616869159883637007323156957547593127931
+
+160	
+r:	59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824	
+s:	2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f	
+z(message hash):	aa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154	x-coordinate compressed:	02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+
+{these are Px and Py: first 	x: dc644316b1f01a99c41d57c63d273bffd4e49e19c4b9fc2caba09e89701d8603
+second	x: e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+third 	x: 42f30cb025e035f65ae5319cc7140d4b5b94092bd323f52712512ebb7202cbe8
+
+even 	y: c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+odd 	y: 3d2696f6ba2267091f1ba2b5e089f3617a12a51a0011258b1ede11f17c957fa9}
+
+{these are rx and ry: first 	x: 48ceea0f7f66214d64a43cc378a81fbeb90ecfc087a65bcca0999897ea6f2eb
+second	x: a1c2a05bf9268e6ff6eef57dd38ce19557c16c953b00d0f6d65bdb9905098120
+third 	x: 59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+
+even 	y: cebb161b0780bffc65bf6b1de8ea734745468b6cc5887ed4065a9d995318d170
+odd 	y: 3144e9e4f87f40039a4094e217158cb8bab974933a77812bf9a56265ace72abf}
+==================================================================================================================================================================================
+puzzle 155
+priv:	
+nonce:	
+z:	84fdc53f18e9feec7c7f398e653ea001e3eb9c853c7f90aa597acacd12bfebfd	
+s:	19fb464ad88a144592c5deeee49609ee255ddf3ee17a0df3adbcde69c03257c9	
+
+Px and Py
+first 	x: bde6be79a641272b3633ae25e03c1141910f18682edf53da5443c256deac3166
+second	x: 5cd1854cae45391ca4ec428cc7e6c7d9984424b954209a8eea197b9e364c05f6
+third 	x: e547bc39ab799fb824e00f4d57dd26e4d6acc2de7d001196c1a2c208eb07c102
+
+even 	y: a05558d386a35842b634368db9c6ffd6ca21c5339ee8d1bb8cf78d0c134b254
+odd 	y: f5faaa72c795ca7bd49cbc9724639002935de3acc61172e44730872e3ecb49db
+
+rx and ry
+first 	x: f09bcda859dc5400124aebf36be6333655f1d10ef96adfe335cabbbec865cd5c
+second	x: 9b83b0c9e77322b7103f737d78116c0d0f448f21606c32273d22d5fa51342f7c
+third 	x: 73e0818dbeb08948dd75a08f1c0860bc9ac99fcfa628edf58d126e44e665fb86
+
+even 	y: b6d878261a8c1a8daab093f3fe09a483d2b8ceec0018805c8d5a7cd4d2d90fc6
+odd 	y: 492787d9e573e572554f6c0c01f65b7c2d473113ffe77fa372a5832a2d26ec69
+
+
+==================================================================================================================================================================================
+puzzle 150
+r:	f9746fbc71b4907756f69b3f55625d47b60ecd909233d3b1116860ebeafec6ef	
+s:	2db803a9ec7faf80dfbf78418102778cab6450b13549de1759fb88711241ac20	
+z:	b02bee27647fee6492d70d7a569ad594462ea022ff08df7ded497da5ed579541	compressed x:	03137807790ea7dc6e97901c2bc87411f45ed74a5629315c4e4b03a0a102250c49
+
+Px and Py 
+first 	x: 8d983c1cd898fd257ed71f7f3b2d1dc8c0421a321e48034f7fc61cab05f06ab3
+second	x: 5eefbc6a18bf266be998c454fc5ed042e0e69b77b886a062353642b2f7ea8533
+third 	x: 137807790ea7dc6e97901c2bc87411f45ed74a5629315c4e4b03a0a102250c49
+
+even 	y: 6db4740af0f652d72049c03da7d234ee77eae650c4ec67bce8cd9b8d89c4b78
+odd 	y: f924b8bf50f09ad28dfb63fc2582dcb11881519af3b13984317326462763b0b7
+
+rx and ry
+first 	x: 76d4d3ff45118a77fb9d900f1cb39227b2603488502dce09862acc8697a93420
+second	x: 8fb6bc444939e510ad6bd4b18dea10909790fde71d9e5e45686cd28b7d57fd4f
+third 	x: f9746fbc71b4907756f69b3f55625d47b60ecd909233d3b1116860ebeafec6ef
+
+even 	y: 7fa3c4b9369b6f8fe8efffea5608e14762be46d434645d525950053172b3f65e
+odd 	y: 805c3b46c964907017100015a9f71eb89d41b92bcb9ba2ada6affacd8d4c05d1
+
+==================================================================================================================================================================================
+puzzle 145
+
+
+priv:	
+nonce:	
+z:	100cd5c53eadad64b97cd46d3c7f2e8f02f5c55c4333f71585c149bd3a693eed	
+s:	13ca9514a84bc640b2841c09d15f4d35b5d6f2cf484e69202ca589477fea1e2f	
+
+Px and Py
+
+first 	x: afdda497369e219a2c1c369954a930e4d3740968e5e4352475bcffce3140dae5
+second	x: e12604c4a4f49154c2de5ab99eb56398e8d4c62281829a3db372e6493fdaa050
+third 	x: 6efc56a4246d4d1111056ead0ca16b8243b730749899309dd6d019e68ee47d29
+
+even 	y: a1098858ff72d580a49657ead95ca202c3b5e8a3c7b7a880e66a631112676f4c
+odd 	y: 5ef677a7008d2a7f5b69a81526a35dfd3c4a175c3848577f19959ceded988ce3
+
+rx and ry
+first 	x: 975bf9ee76637ce33f4539397ebb9fd2cd2cb77d79fccfefc291d8e4bd4464bb
+second	x: 6963028da42ba58ea26073749e8391e0f3386224becc8f2ad3225407535a93cb
+third 	x: ff410383e570dd8e1e5a5351e2c0ce4c3f9ae65dc736a0e56a4bd311ef60ffd8
+
+even 	y: d3d7db3c67811076f3ffee4072cfcc5ff809d2890c64505c228a7c097c78c4a2
+odd 	y: 2c2824c3987eef890c0011bf8d3033a007f62d76f39bafa3dd7583f58387378d
+
+
+==================================================================================================================================================================================
+puzzle 140
+
+
+priv:	
+nonce:	
+z:	fc51df8026a78f2106970d089b81e2dad52d9a927edafd922f049c3efa3427ce	
+s:	213396378381f50c084aef327f2b14893b0250a917335bd1fe95431c9d2451a3	
+
+Px and Py
+first 	x: 1f6a332d3c5c4f2de2378c012f429cd109ba07d69690c6c701b6bb87860d6640
+second	x: 1b5617948b93480cab6b1e9d82156b54d2f33b32945a0521fa9242223beb2bb5
+third 	x: c53fb53e381068c5725d55614ea7f7da2352bcf6d515341703b702553e076a3a
+
+even 	y: 696dc1b3b16a6bcf37e58c59d5fa9f64d4415dd9df3103ab5a7e7d360d5d146
+odd 	y: f96923e4c4e959430c81a73a62a05609b2bbea22620cefc54a58182b9f2a2ae9
+
+rx and ry
+first 	x: e41046e4b1b7cff1a35f8d6b0eb3448a0403885b17dbf0a0d2ff634de6d03d68
+second	x: ba1df777b9956abc0206a58920e9376e30430e59b78a9ba190b8c4f0c8256f3e
+third 	x: 61d1c1a394b2c5525a99cd0bd0638407cbb9694b309973bd9c47d7bf510a4bb8
+
+even 	y: 5289de4dbbc211197b03c131071c0e31aa664c5243045e7ac4a09c0c796499c0
+odd 	y: ad7621b2443deee684fc3ecef8e3f1ce5599b3adbcfba1853b5f63f2869b626f
+
+
+==================================================================================================================================================================================
+
+Puzzle 135
+
+135	
+r:	c86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650	s:	224a322e81c044d341521f65fabdfa86d84673fb55ed7533862e37f7724931fa	z:	92886faaf53f90a5c03d6af773a726e75097179306b980e5d28772e612e00fc7	compressed x:	02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+
+
+Px and PY: 
+first 	x: 72ab2f222a14d37dee42bc32fdab26774ad410b4214eaf3af5f22033ec37ef83
+second	x: 78f7aacc0dc788eb225630fef2e3aa7efb76fc3880734621e6fe2614433aee96
+third 	x: 145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+
+even 	y: 667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+odd 	y: 9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+
+rx and ry:
+first 	x: fe18792a79c763cf9928ee413eb6b9576c08839ab388f2d7e8260cba1e812f53
+second	x: c86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+third 	x: 397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+
+even 	y: 6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c
+odd 	y: 9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3
+==================================================================================================================================================================================
+puzzle 130
+
+
+priv:	000000000000000000000000000000033e7665705359f04f28b88cf897c603c9
+nonce:	48b29e355781af91077b51c2a572561c0c99a6b8a8d439fd3bf287bc8d8f19b2
+z:	8d9ac8a5bc9b7ab8954e985fb9ebfc82e11c009fcccafcfb90934fb01a8c57ce	
+s:	1f5ff38219a72080f77534b735badbcf57f503a33e91935ee7a859387abf5483	
+
+Px and Py
+first 	x: f4a535a21e8f55d9753485642b5ad870f9aa2e55764186d6a4569960bd618299
+second	x: a81e0c1f21451624c4db80878849da6c0ddc9184f389f39993c3cb81390afd73
+third 	x: 633cbe3ec02b9401c5effa144c5b4d22f87940259634858fc7e59b1c09937852
+
+even 	y: 4f875e833eaa7565b05f4bf90e6b365d48e2659ebdb4acc31101d8be74ce6a4c
+odd 	y: b078a17cc1558a9a4fa0b406f194c9a2b71d9a61424b533ceefe27408b3191e3
+
+rx and ry
+first 	x: a140efde60628bf490fc6a56331c2507f5ad4deed0b40fd67e97a8d4554e03f6
+second	x: 9fca00d29192007648f7e4b525f15a00a5180833617a604ec6701833eb26e580
+third 	x: bef50f4f0e0b7395260bb0f4a6f280f7653aa9ddcdd18fdabaf83ef5bf8b0ee8
+
+even 	y: 6a53a6262b01e72f5f436e15d60265e477f05edee34482c3453a07164f6ee834
+odd 	y: 95ac59d9d4fe18d0a0bc91ea29fd9a1b880fa1211cbb7d3cbac5f8e8b09113fb
+==================================================================================================================================================================================
+puzzle 125
+
+priv:	000000000000000000000000000000001c533b6bb7f0804e09960225e44877ac
+nonce:	8edf4133b6490e274b8caa8e14ffa139df1b919f785d988dc54b268f0fc98ca2
+z:	5e39fb8e7f5ec05eab86c4f2618c5c96fb3c8c7ff38f37224084fffe50aaaeb0	
+s:	6db258553ff34e7928d877a93d219dfff683bdd6de8c54cbebafe028198285eb	
+
+Px and Py
+first 	x: 33709eb11e0d4439a729f21c2c443dedb727528229713f0065721ba8fa46f00e
+second	x: 49aa191e37c19d1f4d46ef483a5c52e6df889201cf65c219e5a9a45b2ad28c
+third 	x: cc45b735c3bafa293988c6f48b8165bf61f924ebd4bf5b3d80a83ab1aa8e3995
+
+even 	y: 2a1c304a39a77775d3579d077b6ee5e4d26fd3ec36f52ad674a9b47fdd999c48
+odd 	y: d5e3cfb5c658888a2ca862f884911a1b2d902c13c90ad5298b564b7f22665fe7
+
+rx and ry
+
+first 	x: 9e957f9b579d048ac3361da1b414f5374822eff9f2c439c2961f9f1ed2213ff0
+second	x: 1699b85f9fd4e3c6234bc0b3378a965a08ea4f76b5359998dec6123c20ff7b64
+third 	x: 4ad0c805088e17af197e21ab1460746eaef2c08f58062ca48b1a4ea40cdf40db
+
+even 	y: a2ca7dacfa71fd2bd1bedead632bf23fe4c88d66fd565200818feef20f149f4
+odd 	y: f5d358253058e02d42e4121529cd40dc01b37729902a9adff7e7010fdf0eb23b
+
+==================================================================================================================================================================================
+puzzle 120 
+
+r:	a285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a	
+s:	1844883eb808df18a9138ee2c13439ecf716799edcf073772f2696e4f9384f58	
+z:	7e17cf7c5b7ccfaa4c7c05874e4fb4f12661662b8e33188e2e62b3739931ade5	compressed x:	02ceb6cbbcdbdf5ef7150682150f4ce2c6f4807b349827dcdbdd1f2efa885a2630
+d:	0000000000000000000000000000000000b10f22572c497a836ea187f2e1fc23
+k:	1e0283128ecdd93e9f8fa5b63841bacb2da3338f9178e36e29a13d534c1bd9fb
+
+Px and PY: first 	x: 1485d9c12ed1a17e7cf733aeaf4a8d24bf3a2b69a29fbd632661e620ca1bae12
+second	x: 1cc35a81f54eff8a6e024a3c416890144c455961c53865c0fc7eeae3ad8a27ed
+third 	x: ceb6cbbcdbdf5ef7150682150f4ce2c6f4807b349827dcdbdd1f2efa885a2630
+
+even 	y: 2b195386bea3f5f002dc033b92cfc2c9e71b586302b09cfe535e1ff290b1b5ac
+odd 	y: d4e6ac79415c0a0ffd23fcc46d303d3618e4a79cfd4f6301aca1e00c6f4e4683
+
+rx and ry: first 	x: 98ec533578cc3c12f14e0d716adcb0c39bfa0654f58f7e53ce60baf0f157b22a
+second	x: c48e03b56c71ca2900294fe689a9883a30a0c364dfdcf0af30c19b733463042a
+third 	x: a285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a
+
+even 	y: 711ba8640d22333eec3566a68dff8f40719a79886e0ed24f91c8f92077110cb0
+odd 	y: 8ee4579bf2ddccc113ca9959720070bf8e65867791f12db06e3706de88eeef7f
+==================================================================================================================================================================================
+puzzle 115	
+r:	988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2	
+s:	10c209729f42f3b531116c5650df090cbe934bd5a4fc556d60f143227b54c69a	
+z(message hash):	016cc9c96952b3460a847c7a831cc695ffe9289a41d5ded5aa9cb6ff3ab67f6b	x-coordinate compressed:	0248d313b0398d4923cdca73b8cfa6532b91b96703902fc8b32fd438a3b7cd7f55	private key:	60F4D11574F5DEEE49961D9609AC6	
+nonce:	9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+
+{these are Px and Py:  first 	x: 48d313b0398d4923cdca73b8cfa6532b91b96703902fc8b32fd438a3b7cd7f55
+second	x: e110533f3e225c4d84de4ba61a5f858fff122dcdc01b56a427acedb80ce7d445
+third 	x: d61c991088505a8ead5740a115fa27446f346b2eafb4e0a8a87ed9a23b4aa4c4
+
+even 	y: 66f0742c24f5ff80c799d691d756ad8e5aa7f6d8f986abd9eeef45514637c0d4
+odd 	y: 990f8bd3db0a007f3866296e28a95271a5580927067954261110baadb9c83b5b}
+
+{these are rx and ry: first 	x: 41852703f82dd90c1e903636d1bef08d6c34b6c72df2c9ebd3224b80413af8b9
+second	x: 25eb3e110d3759c24eede2714f41243441b53d89c1767ed88131df20d3930f84
+third 	x: 988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2
+
+even 	y: 9b83913916a3b67c8dfc874f966f44c6e7dfd186a6150039a7d19ebacb471d7a
+odd 	y: 647c6ec6e95c4983720378b06990bb3918202e7959eaffc6582e614434b8deb5}][
+
+
+
+==================================================================================================================================================================================
+==================================================================================================================================================================================
+puzzle 110 
+
+
+priv:	35C0D7234DF7DEB0F20CF7062444	
+nonce:	caf9bf64e2440011a0c52746068da91cb7f9b1e20b0a4ac0816babbb85c4bcba
+z:	0573b73c3fe704730cee74e1878253b2cbd253650d10dcd2a418b98e8c04ae17	
+s:	3329eb238537ec29814802e5d19f1a34a25faac8092d41b431f10bbfa05717ed	
+
+Px and Py
+first 	x: 9976ba5570966bf889196b7fdf5a0f9a1e9ab340556ec29f8bb60599616167d
+second	x: b330c261b08c2afbf609a2e530819532421cc6940a1b8051d3150a0af78193f3
+third 	x: 4337d1f8f86a6e448164c662d188c9d41bf98e37f08d9384342f959a726851bf
+
+even 	y: fd10a708110c1443d7a9fd8bb52ae8ac4526c63deb0095b9a3c7bc8754215476
+odd 	y: 2ef58f7eef3ebbc285602744ad51753bad939c214ff6a465c384377abdea7b9
+
+rx and ry
+first 	x: 432b58ff0eb659d99d7ebacf3c7faf6a392e6bb5abeec9b3eb23e67e7ec28fef
+second	x: 2ce84174d77df3974453ed9ea7075a94adc333068e2b82427cf3bf685a99b860
+third 	x: 8fec658c19cbb28f1e2d57921c78f601190e6143c5e5b40997e85a1826a3b3e0
+
+even 	y: d310081776809c43db3a1fed24fe0c828ba86e78b6df671edc40179b2c7f24ec
+odd 	y: 2ceff7e8897f63bc24c5e012db01f37d74579187492098e123bfe863d380d743
+==================================================================================================================================================================================
+puzzle 105 
+
+
+
+priv:	16F14FC2054CD87EE6396B33DF3	
+nonce:	0129543698812c5d61918bddd6b24712b0d757aecba20a21c7971a3b652142af
+z:	9c4c95b28b34558365fbcc4168debafa430c0238a27d9185d4cea23f69cddb18	
+s:	2f66ac26be1b44df871473a42c5e8e2cbc703465e415b064dc4854b1d8b3c99f	
+
+Px and Py
+first 	x: 6ec6312cda12ba44e0064f65ca72c0af9f11f4941a5aba1fa77b15a07a36a4e1
+second	x: bcf7ce887ffca5e62c9cabbdb7ffa71dc183c52c04ff4ee5ee82e0c55c39d77b
+third 	x: d442004aa5f09fd4f35d04dc7d8d98329f6a463fe0a5f6fa6a020998298f7c02
+
+even 	y: faf93fd0c4a3ea3ed2146b45e92fd4268ef1150c4da5207633afed1163bb3910
+odd 	y: 506c02f3b5c15c12deb94ba16d02bd9710eeaf3b25adf89cc5012ed9c44c31f
+
+rx and ry
+first 	x: 955e7286b8434c08c50e60bd744db12a23b264b0bdec92308a91b8f3cb0ca0d9
+second	x: 4c16ba04ab97d8ac5a93b6e3a8c61bae65c5383faa1a9f7fed2ea39ec6da1e1c
+third 	x: 1e8ad3749c24db4ae05de85ee2ec33277688630f97f8ce4f883fa36c6e193d3a
+
+even 	y: 4d5a4b2164a412d3f54b69c3a33861ca6748796b8c9b80013b80aae12310a2bc
+odd 	y: b2a5b4de9b5bed2c0ab4963c5cc79e3598b7869473647ffec47f551ddcef5973
+==================================================================================================================================================================================
+puzzle 100
+
+r:	537b3babb66402cc0cbe8b4856e0172c087bd98ddfb43e293219c8cccf6c7fdc	s:	4fb4d9eecf4c6cd0efb567612993a085cfbeca1163633047e6dd0c4059b06d0c	z:	1ced6233a635419d1b20077c0e114510b00c3510baf322b1a236dccca3c13c82	compressed x:	03d2063d40402f030d4cc71331468827aa41a8a09bd6fd801ba77fb64f8e67e617	d:	AF55FC59C335C8EC67ED24826	k:	1ac46997d73e24a7167fa8b9825927cb59d23528c69328ce71de3087a8c79c1f
+
+Px and Py 
+first 	x: d2063d40402f030d4cc71331468827aa41a8a09bd6fd801ba77fb64f8e67e617
+second	x: 8a3489cc8f52f6c7b1a3f29cf227b84b3a0dff6360d35fc96652d9e7a7a963de
+third 	x: a3c538f3307e062b0194fa31c750200a84496000c82f201af22d6fc6c9eeae69
+
+even 	y: 78aa9e3f429d67040e78fac2cc0021698d120d7cf1d3469ea7dbcec8602ac4ca
+odd 	y: 875561c0bd6298fbf187053d33ffde9672edf2830e2cb961582431369fd53765
+
+rx and ry  first 	x: 5f3a37b19bdd22ff79edfbd117ce5ffd6ff072eba4134c3689f9c7a4c2e02ec1
+second	x: 537b3babb66402cc0cbe8b4856e0172c087bd98ddfb43e293219c8cccf6c7fdc
+third 	x: 4d4a8ca2adbeda34795378e6915188d68793b3867c3875a043ec6f8d6db34d92
+
+even 	y: ee05c63b2b348ae01941d04ee25be29c6d60f69be3ab1f963c2f8dcb187e14dc
+odd 	y: 11fa39c4d4cb751fe6be2fb11da41d63929f09641c54e069c3d07233e781e753
+
+==================================================================================================================================================================================
+puzzle 95 
+
+95	
+
+priv:	527A792B183C7F64A0E8B1F4	
+nonce:	b3591ed9fac56c96f20f13646c6d4a4371c1c34db9126ee203d9ecb823c46930
+z:	6c44185598b9fd22ac7c8bd8349f5a5894c4e02da9bbd672fd59cd67ce2cfb8f	
+s:	392816fdecd0122f306b96b68a863f338abb0e874657adf22bb685b2e38826ce	
+
+Px and Py
+first 	x: 967a5905d6f3b420959a02789f96ab4c3223a2c4d2762f817b7895c5bc88a045
+second	x: 69870ac249cf3fb3f0e650b4abe9bbc7a22d61df5cb85c6b0bb974d4744f572b
+third 	x: fffe9c37df3d0c2b797facd2b47f98ec2baefb5bd0d1741378cdf563cf2800ee
+
+even 	y: 9da9709f8e830ba5cea1d0426a261f0b9b5dda057478d8e6009ad7c4a8af6916
+odd 	y: 62568f60717cf45a315e2fbd95d9e0f464a225fa8b872719ff65283a57509319
+
+rx and ry
+first 	x: df359e57f5e14b8dccf09daf6ec634f48cfc105658e0fc1bf53926af5494498a
+second	x: c9f01efbfe0c21fd59e04f7aed9ac2d5a206579893059c890c630da9497ee216
+third 	x: 56da42ac0c129274d92f12d5a39f0835d0fd98111419675afe63cba561ecccbe
+
+even 	y: b75331f723149494732951abd8e54c41a98e2c14911536baef702fa678342f9c
+odd 	y: 48acce08dceb6b6b8cd6ae54271ab3be5671d3eb6eeac945108fd05887cbcc93
+==================================================================================================================================================================================
+
+puzzle 90  
+
+r:	089214e780b1be83aca76593293e871159eb392090135759dc110667bfd72e36	s:	73eb3423c444d9248d682de9670a1c48343e3554bd3eda0da070a8cd3f2ff7cc	z:	b79f283cae2b07b53adb9773dde9b93edf91a99b9fdda83ba9c7f4e50d7c5c11	compressed x:	035c38bd9ae4b10e8a250857006f3cfd98ab15a6196d9f4dfd25bc7ecc77d788d5	d:	2CE00BB2136A445C71E85BF		k:	0640c641a09b8b28b721f3c861916de8eb1fab230ad5fa33dd0e03739b4936c9
+
+Px and Py: first 	x: 5c38bd9ae4b10e8a250857006f3cfd98ab15a6196d9f4dfd25bc7ecc77d788d5
+second	x: 59e6004d2850fa8804d1d641e2a68dada9c3644135839d3500d9670661ad271d
+third 	x: 49e14217f2fdf6edd625d2bdae1c74b9ab26f5a55cdd14cdd96a1a2c267b4c3d
+
+even 	y: 57b69c1400b54101ede5f2c39406dfc05510da7673259d97910409b1e39047fc
+odd 	y: a84963ebff4abefe121a0d3c6bf9203faaef25898cda62686efbf64d1c6fb433
+
+
+rx and ry: first 	x: 89214e780b1be83aca76593293e871159eb392090135759dc110667bfd72e36
+second	x: ac3c7c0f8fc3625665b6ac9e5ea8e2994234fd686ad9c6c67d59dfd2e534bedd
+third 	x: 4b316f08ef8adf25eda1edce7818965563dfc9770512e1dfa69519c45af40f1c
+
+even 	y: 7b1535125b8e92e433ff190a76f8c653a2d73ffb5f49f342ca23c5dffee8675c
+odd 	y: 84eacaeda4716d1bcc00e6f5890739ac5d28c004a0b60cbd35dc3a1f011794d3
+
+==================================================================================================================================================================================
+puzzle 85
+
+
+
+
+priv:	11720C4F018D51B8CEBBA8 
+nonce:	18fbd62747eb6a108af69ae775878af10075590fc534036710c2cb6121a24710
+z:	4b0269284f3a12c5a0fe6fd247d116e777470de4d5762a2c6318273cc0a2e8a0	
+s:	766b5813b8f194a228331282914238b30fe7ca34afad27eecb01e602ae5ea4e7	
+	
+Px and Py
+first 	x: 3141496300841c19fc23a24211a11ee3ad8eec4dfef052b6f60c51c8942bfda1
+second	x: a4fa5f52afa31bd54bf83372b4d65e68d0b43b53c0492511f762811fef501754
+third 	x: 29c4574a4fd8c810b7e42a4b398882b381bcd85e40c6883712912d167c83e73a
+
+even 	y: f1fd3c502866ec54f69e36a0edb670c958d005ca36c50d8311cffeef594adfdc
+odd 	y: e02c3afd79913ab0961c95f12498f36a72ffa35c93af27cee30010fa6b51c53
+
+rx and ry
+first 	x: 5d5115941fe523aa58eda3850858bf1837102507a81823bcf749dbd546ee4840
+second	x: d0272274f0778f4242d4ada44d4c9ca1959238336c4754111da12adaf71a427
+third 	x: 95ac78449113636182e511a0b2d2771daf96b77521236701f6dc117c09a00fc8
+
+even 	y: 4a1cb95605758b1d8a5bbd8df0cefce6a3e9ac1a5bd059468ac55a296681e55a
+odd 	y: b5e346a9fa8a74e275a442720f3103195c1653e5a42fa6b9753aa5d5997e16d5
+
+==================================================================================================================================================================================
+puzzle 80 
+
+
+
+priv:	EA1A5C66DCC11B5AD180		
+nonce:	93c7e4ce32301e1676eeef686e851d3b84a0174f7e9f0c523df966c96a24e886
+z:	42b44688c7e5aa10eff0ec27922238d4f3e4cda094bb7a61bea7849caa7b39d9	
+s:	2a7c06856091c28f49f1dd3a5bf405cc6c5743eb7aa0b66c150336b48215b2d4	
+
+Px and Py
+first 	x: cac929ecdad32c47c8ec914d09e7ceda43e4d1b9f4852f2c3272839856b35c9f
+second	x: 7e1238f7b1ce757df94faa9a2eb261bf0aeb9f84dbf81212104e78931c2a19dc
+third 	x: b7249d1b735e5e3a3dc3c418c765cf66b12f8ec12f82bec1bd3f03d28d2281e3
+
+even 	y: 9da38ee70e3d6346d2d731f202f23a7ebb01aa8d1001438011ab3b021cccc1c4
+odd 	y: 625c7118f1c29cb92d28ce0dfd0dc58144fe5572effebc7fee54c4fce3333a6b
+
+rx and ry
+
+first 	x: 434522bcf21a82e4f723ba25b895b64e2996b0bb67e2b50104bbdb1b973781d1
+second	x: 8317c7f43d629fbe025e8e05dbbe6946d5a490115fd2718b282b693ff5809d40
+third 	x: 39a3154ed082dd5d067db7d46babe06b00c4bf33384ad973d318bba37347dd1e
+
+even 	y: 4b22ef70a6e378fd6e5a8a5b6ec2816eca7f260a6192b70a89d44bfbb4211e1e
+odd 	y: b4dd108f591c870291a575a4913d7e913580d9f59e6d48f5762bb4034bdede11
+
+==================================================================================================================================================================================
+puzzle 75 
+
+
+	
+
+priv:	4C5CE114686A1336E07		
+nonce:	123503c481722a0b4161fc681b8c786425664c102101a649d665ca788da72e7f
+z:	f88b9f85f645b62635765fc550ae8d29ec28737bff088baa33d34719fce25447	
+s:	3ee9d3f06eeadc7ccae821ac4d9f16c0df1ac5e977c9d1bceac968ed9f05bcc4	
+
+Px and Py
+first 	x: 726b574f193e374686d8e12bc6e4142adeb06770e0a2856f5e4ad89f66044755
+second	x: 1828c27e926a48816b77e1ca19eb8e78dbde0d535ef403a865cd784c8b2877dc
+third 	x: 756be632545780380daf3d0a1f305d5c45718b3bc06976e83be7af130ed33cfe
+
+even 	y: 64eacdd198f8f6f5b24c0f638199cd5d924a80fc14f84bf68603fe36d81e4b8c
+odd 	y: 9b15322e6707090a4db3f09c7e6632a26db57f03eb07b40979fc01c827e1b0a3
+
+rx and ry
+first 	x: b41fc1fdf0431e1b7c91de9faeb39b345838e1dfde33751e9d4e22e3bb40d036
+second	x: 31aa9dc17417d12c7e1369e9d745cfa423d33208c54d8244a7ddda74c20ea6cc
+third 	x: 1a35a0409ba510b8055ab7767a06952783f3ec175c7f089cbad402a682b0852d
+
+even 	y: 8b9ecf7054e3db0db31f134956932c5c67176ad5b11a1d8b8ff2cf4e38ce07d2
+odd 	y: 7461308fab1c24f24ce0ecb6a96cd3a398e8952a4ee5e274700d30b0c731f45d
+
+
+==================================================================================================================================================================================
+puzzle 70 
+
+
+
+priv:	349B84B6431A6C4EF1		
+nonce:	79577177c7a329a48d26bcf81b5db9e88b458bf8e76665f3a9ff4ab4f0cad08e
+z:	fb3fbd8f0f59ee460024db999b97f475d9cc8cdbce21b3ee749810cd266b2c31	
+s:	39ecf6abb2c43d62bce1d9cf77d3bbabb5ccad0f87399990f6ba2a568236330c	
+
+Px and Py
+first 	x: 90e6900a58d33393bc1097b5aed31f2e4e7cbd3e5466af958665bc0121248483
+second	x: 32dff4c2d47f5485e8074892f14e3f6e1ae5ef262dae3106de0e8cc86b5d5e7d
+third 	x: 3c397b32d2ad77e65be81fb75fdea163969d539b7deb1f639b8bb735737e192f
+
+even 	y: d7319f127105f492fd15e009b103b4a83295722f28f07c95f9a5443ef8e77ce0
+odd 	y: 28ce60ed8efa0b6d02ea1ff64efc4b57cd6a8dd0d70f836a065abbc007187f4f
+
+rx and ry
+first 	x: a7221fae49c5e0250642d544fd5b4f568a82f0ad16a6d20a673504b967a9d2a2
+second	x: 36729851ae5082e0d70786af455cd47fa29162c459f73c1041f2663c783842be
+third 	x: 226b480007e99cfa22b5a40bbd47dc29d2ebac8e8f61f1e556d89509201de6cf
+
+even 	y: ad37a3e3aa44815884b47ad5e7e953bbb55c67d1ca744799ce62f04f2279b0c4
+odd 	y: 52c85c1c55bb7ea77b4b852a1816ac444aa3982e358bb866319d0fafdd864b6b
+==================================================================================================================================================================================
+puzzle 69  
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+==================================================================================================================================================================================
+puzzle 68
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+==================================================================================================================================================================================puzzle 67 
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+==================================================================================================================================================================================puzzle 66 
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+==================================================================================================================================================================================puzzle 65 
+
+	
+priv:	1A838B13505B26867		
+nonce:	68592d1aa72720ae7333beb3bd9d6a8e69c0567fb91720318c6289d48227c05d
+z:	339207a21f02059dcc8bfc47f62c9ec289f3c3037bdc24c8fee9174280f182a2	
+s:	3e94a32386348f863f6ec148077eb3ebddfd4c0333c5b2030187f6b8686fe98d	
+
+Px and Py
+first 	x: 30210c23b1a047bc9bdbb13448e67deddc108946de6de639bcc75d47c0216b1b
+second	x: c6716b0bdc84a570d1f818172ec4cf5ab2893324642323de45f8c3541a6f536e
+third 	x: 96d88d071db12d2922c36b48854b2b771664394bd6ef5e7fd3fdf63256f3da6
+
+even 	y: e383c4a8ed4fac77c0d2ad737d8499a362f483f8fe39d1e86aaed578a9455dfc
+odd 	y: 1c7c3b5712b053883f2d528c827b665c9d0b7c0701c62e1795512a8656ba9e33
+
+rx and ry
+
+first 	x: 254e0f8d74b596d69f76d9dbd7747f612ced232a1e4acf8052c32ced04d90916
+second	x: 5546e2ea6259151ce2bc9040efd94f8019cc08c5524ca18a77f26dcd74deb10a
+third 	x: 856b0d8828f1540c7dcc95e338b2311eb946d4108f688ef5354a65448648420f
+
+even 	y: c8eda9063c7a71b50e104de6ebca86f793aadbb69492250f19716e96ef1f10c2
+odd 	y: 371256f9c3858e4af1efb219143579086c5524496b6ddaf0e68e916810e0eb6d
+
+
+==================================================================================================================================================================================puzzle 64 
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+
+==================================================================================================================================================================================puzzle 63
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+ ==================================================================================================================================================================================puzzle 62
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+ ==================================================================================================================================================================================puzzle 61
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+ ==================================================================================================================================================================================puzzle 60
+priv:	
+nonce:	
+z:	
+s:
+
+Px and Py
+
+
+rx and ry
+ ==================================================================================================================================================================================
+Perfect — true27 is just a checkpoint, not a new branch.
+
+Current live state:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+is the primary invariant.
+
+δ=p−N
+
+is now the projected shadow:
+
+pmodN=δ.
+
+Verified so far:
+
+Puzzle 115
+Puzzle 135
+Puzzle 160 after bridge flip
+
+Next real work:
+
+Test Puzzle 90 and Puzzle 120 first, since you already have data for them. For each one:
+
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+(modp)
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+Then check which orientation gives:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+That’s the clean falsification gate.

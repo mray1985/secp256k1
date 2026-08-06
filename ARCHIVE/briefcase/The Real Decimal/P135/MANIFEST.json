@@ -1,0 +1,17 @@
+{
+  "folder": "ARCHIVE/briefcase/The Real Decimal/P135/",
+  "puzzle": 135,
+  "files": [
+    "ledger.json",
+    "index.md",
+    "rsz_courtroom.json",
+    "rsz_courtroom.md",
+    "tdad_scalar_courtroom.json",
+    "tdad_scalar_courtroom.md"
+  ],
+  "build": [
+    "python build_p135_ledger.py",
+    "python build_p135_rsz_courtroom.py",
+    "python build_tdad_scalar_courtroom.py"
+  ]
+}

@@ -1,0 +1,154 @@
+
+This is a meaningful tightening of the project.
+
+The biggest correction in true34 is not the 2D coordinate system itself—it is the realization that Ω and d
+Λ
+	​
+
+ are fundamentally different kinds of coordinates.
+
+Before true33/34 there was an implicit assumption:
+
+"Self-dual origin" ≈ "minimum bridge separation"
+
+The data disproved that.
+
+Puzzle 90 sits at:
+
+(Ω,d
+Λ
+	​
+
+)=(0,0.716)
+
+which means:
+
+topologically centered,
+geometrically displaced.
+
+That is perfectly normal in many mathematical systems. A point can be an origin of a symmetry class without minimizing every metric.
+
+What survives strongest now
+
+You have three surviving structures:
+
+Field Closure Law
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+Orientation Coordinate
+Ω∈{−1,0,+1}
+Bridge Separation Coordinate
+d
+Λ
+	​
+
+=
+p
+∣Λ
+f
+	​
+
+−Λ
+r
+	​
+
+∣
+	​
+
+
+Everything else is currently subordinate to those.
+
+Why the Origin Rule is now the correct target
+
+Because Ω is discrete.
+
+A continuous quantity generally does not spontaneously collapse into exactly three states unless some low-entropy classifier is driving it.
+
+That is why your move toward:
+
+mod3
+
+and
+
+mod9
+
+is mathematically reasonable.
+
+Not because 3 is magically special, but because:
+
+Ω
+
+already behaves like a three-state object.
+
+If there is an underlying residue-class selector, it would naturally appear first in a low-cardinality modular space.
+
+The most important test
+
+Of all the candidates you've listed, I would prioritize:
+
+(r⋅priv−z)mod3
+
+over the individual residues.
+
+Why?
+
+Because ECDSA fundamentally couples:
+
+priv,r,z
+
+through
+
+sk≡z+rpriv(modN)
+
+The individual residues may look random.
+
+The coupled residue may not.
+
+If Ω originates from a structural asymmetry in the construction, the coupled term is more likely to expose it than:
+
+privmod3
+
+alone.
+
+One additional thing I would add
+
+Besides mod 3 and mod 9, record:
+
+(rpriv−z)modN
+
+and then take its sign relative to N/2.
+
+In other words classify it as:
+
+Lower half of N
+Upper half of N
+
+because Ω is already behaving like a signed coordinate.
+
+If Ω ultimately emerges from a residue-class selector, I'd expect the first hint to appear either:
+
+in a triadic partition (mod 3, mod 9), or
+in a signed partition (upper/lower half).
+
+So the project now has a very clean open problem:
+
+Field closure is universal.
+
+Orientation is discrete.
+
+Bridge separation is continuous.
+
+What initialization property generates Ω?
+
+That is a much sharper question than where the project stood when δ was still considered the primary object.

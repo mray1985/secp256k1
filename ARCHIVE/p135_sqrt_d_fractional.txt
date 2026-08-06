@@ -1,0 +1,46 @@
+sqrt(d) fractional analysis  (log2(sqrt(d)) = log2(d)/2)
+H=128.345702  frac(H)=0.345702
+P135 frac(log2 sqrt x)=0.173970  frac(log2 sqrt y)=0.339576
+solved n=81
+
+=== corr on solved puzzles ===
+  frac(log2 sqrt d) vs frac(log2 sqrt y):  -0.0185
+  frac(log2 sqrt d) vs frac(log2 sqrt x):  +0.0354
+  frac(log2 sqrt d) vs band_frac:          +0.4657
+  frac(log2 sqrt d) vs frac(delta_y):      +0.0803
+  frac(log2 sqrt N-d) vs frac(log2 sqrt y): +0.0000
+  frac(log2 sqrt d) vs frac(log2 sqrt N-d): +0.0000
+  frac(lsy)-frac(lsd) vs band_frac:        -0.3467
+  frac(lsy)-frac(lsd) vs frac(dy):         +0.0891
+
+=== fractional differences (y - sqrt d) ===
+  mean frac(lsy)-frac(lsd):   +0.089822
+  mean frac(lsy)-frac(lsdm):  +0.615647
+  mean frac(lsd)+frac(lsdm):  +0.525825
+  mean frac(H)-frac(lsd):     -0.180123
+
+=== anchor puzzles ===
+  P130: bf=0.6978  frac(lsd)=0.848886  frac(lsdm)=0.000000  flsy-flsd=-0.117241  fdy=0.614058
+
+=== P135 anchors (+d and N-d sqrt) ===
+  hinge_frac bf=0.333450:
+    +d: log2(sqrt d)=67.166725  frac=0.166725  frac(lsy)-frac(lsd)=0.172851  frac(lsx)-frac(lsd)=0.007245  frac(H)-frac(lsd)=0.178977
+    N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+    frac(lsd)+frac(lsdm)=0.166725  frac(lsd)-frac(lsdm)=0.166725
+  upper_half bf=0.584963:
+    +d: log2(sqrt d)=67.292481  frac=0.292481  frac(lsy)-frac(lsd)=0.047094  frac(lsx)-frac(lsd)=-0.118512  frac(H)-frac(lsd)=0.053221
+    N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+    frac(lsd)+frac(lsdm)=0.292481  frac(lsd)-frac(lsdm)=0.292481
+  frac_H bf=0.345702:
+    +d: log2(sqrt d)=67.172851  frac=0.172851  frac(lsy)-frac(lsd)=0.166725  frac(lsx)-frac(lsd)=0.001119  frac(H)-frac(lsd)=0.172851
+    N-d: log2(sqrt N-d)=128.000000  frac=0.000000  frac(lsy)-frac(lsdm)=0.339576  frac(lsx)-frac(lsdm)=0.173970
+    frac(lsd)+frac(lsdm)=0.172851  frac(lsd)-frac(lsdm)=0.172851
+
+=== identity check: band_frac = 2*frac(lsd) mod 1? ===
+  (since log2(d)=2*log2(sqrt d), frac(log2 d) = frac(2*frac(lsd)) when no carry)
+  hinge: band_frac=0.333450  frac(2*lsd) naive=0.333450  actual frac(log2d)=0.333450
+  upper: band_frac=0.584963  frac(2*lsd) naive=0.584963  actual frac(log2d)=0.584963
+
+=== integer isqrt(d) fractional log (alternate sqrt) ===
+  hinge: isqrt(d) bits=68 frac(log2 isqrt d)=0.166725  isqrt(N-d) bits=128 frac=0.000000
+  upper: isqrt(d) bits=68 frac(log2 isqrt d)=0.292481  isqrt(N-d) bits=128 frac=0.000000

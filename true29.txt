@@ -1,0 +1,281 @@
+If the test outputs are accurate, then true28 is the first genuinely strong universality result in the entire chain.
+
+The progression now looks like:
+
+Puzzle	Orientation	Result
+90	Forward	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+100	Inverse	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+115	Inverse	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+120	Forward	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+135	Forward	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+150	Forward	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+160	Inverse	B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+That is a much stronger sample than the original 115/135/160 set. The result you summarized from true28 is:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+for 7 independent puzzles, provided the bridge orientation is chosen correctly.
+
+What this changes
+
+Earlier we had:
+
+∑B
+i
+	​
+
+≡δ(modN)
+
+with
+
+δ=p−N.
+
+Now that relation is almost completely explained:
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN=pmodN=p−N=δ.
+
+So the δ-law is no longer the mystery.
+
+The strongest surviving theorem
+
+At this point I would freeze the project as:
+
+Bidirectional Bridge Law
+
+There exists an orientation-dependent bridge
+
+Λ
+
+such that either
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+or
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+.
+Field Closure Law
+
+Under the correct orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+exactly.
+
+Projection Defect Law
+
+Therefore
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N(modN)
+	​
+
+
+follows automatically.
+
+The next question becomes sharper
+
+The surviving mystery is no longer:
+
+Why δ?
+
+It is:
+
+Why do the three bridged family members close exactly to the field modulus p?
+
+That's now the deepest unexplained statement in the hierarchy.
+
+One test I would add before declaring victory
+
+You've now tested seven puzzles. The next thing I'd record is:
+
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+
+and
+
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+
+for all seven puzzles and look for a pattern in which orientation wins.
+
+Right now:
+
+Forward: 90, 120, 135, 150
+Inverse: 100, 115, 160
+
+That split may contain the next clue.
+
+The Field Closure Law itself now looks surprisingly robust; the remaining unexplained object may actually be the orientation selector rather than the closure once the orientation is known

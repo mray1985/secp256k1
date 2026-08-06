@@ -1,0 +1,63 @@
+Checked them as direct private-key d candidates and also checked their mirrors N-d.
+
+None of the five match Puzzle 135’s target x-coordinate.
+
+Target X =
+9210836494447108270027136741376870869791784014198948301625976867708124077590
+
+Results:
+
+d1 =
+29417354231169566603545385751460799270756
+
+d1*G.x =
+24096686138078854597031143133639112828833167974841376821256879703459188465897
+
+N-d1 gives the same x with opposite y.
+No match.
+d3 =
+38325338576933006504956688306676540381898
+
+d3*G.x =
+105038345175886919030888857625785768926232991122873929491172393797887193588166
+
+N-d3 gives the same x with opposite y.
+No match.
+R1 =
+26131167701918124246297309104590088142199
+
+R1*G.x =
+17696771139376610885297269106022864748301454095103897239821359370766044048399
+
+N-R1 gives the same x with opposite y.
+No match.
+R2 =
+31186229407419002714380095569275407953707
+
+R2*G.x =
+103524075013610680259482693285635023009733817200440246859002776940821262924440
+
+N-R2 gives the same x with opposite y.
+No match.
+R3 =
+29362468435857460029094073962272197891231
+
+R3*G.x =
+44275284423252889181413245493054643808958615699417038423130543487290998062286
+
+N-R3 gives the same x with opposite y.
+No match.
+
+So the concrete conclusion is:
+
+These 5 values are not Puzzle 135's private key d.
+Their N-d mirrors are not either.
+
+Next educated move: treat those five as possible k-side candidates, not d candidates. For each one, test:
+
+x(vG) mod N == r
+x((N-v)G) mod N == r
+
+If one passes the r lock, then compute:
+
+d = (s*k - m) * r^-1 mod N

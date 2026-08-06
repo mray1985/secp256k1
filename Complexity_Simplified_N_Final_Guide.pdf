@@ -1,0 +1,282 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+>>
+/MediaBox [0 0 612 792]
+/Contents 6 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+6 0 obj
+<<
+/Length 2500
+>>
+stream
+q
+0 0 612 792 re
+W
+n
+BT
+/F2 16 Tf
+30 750 Td
+(Complexity_Simplified_N.txt - Step-by-Step Guide) Tj
+ET
+
+BT
+/F1 10 Tf
+30 730 Td
+(For: Mitchell Ray - secp256k1 Curve Calculations) Tj
+ET
+
+BT
+/F2 14 Tf
+30 700 Td
+(================================================================================) Tj
+ET
+
+BT
+/F2 12 Tf
+30 680 Td
+(1. PROBLEM IDENTIFICATION) Tj
+ET
+
+BT
+/F1 10 Tf
+40 660 Td
+(You are using the WRONG exponent for cube roots modulo N.) Tj
+ET
+
+BT
+/F1 10 Tf
+40 645 Td
+(You computed: omega2 = RQ^((N-1)/3) mod N) Tj
+ET
+
+BT
+/F1 10 Tf
+40 630 Td
+(This gives a PRIMITIVE CUBE ROOT OF UNITY, not a cube root of Lambda^3.) Tj
+ET
+
+BT
+/F2 12 Tf
+30 600 Td
+(2. THE CORRECT METHOD) Tj
+ET
+
+BT
+/F1 10 Tf
+40 580 Td
+(For cube roots mod N: x = a^((2*N-1)/3) mod N) Tj
+ET
+
+BT
+/F1 10 Tf
+40 565 Td
+(Not (N-1)/3 which gives omega) Tj
+ET
+
+BT
+/F2 12 Tf
+30 535 Td
+(3. YOUR CORRECT VALUES) Tj
+ET
+
+BT
+/F1 9 Tf
+40 515 Td
+(N = 115792089237316195423570985008687907852837564279074904382605163141518161494337) Tj
+ET
+
+BT
+/F1 9 Tf
+40 500 Td
+(Lambda = 97451685862885086182458552040892158509924235661624603229050850812487253689501) Tj
+ET
+
+BT
+/F1 9 Tf
+40 485 Td
+(p1 = 1248780847746852317428964695904392891045016528862400526454142780194939123483) Tj
+ET
+
+BT
+/F1 9 Tf
+40 470 Td
+(p2 = 21551977082208859489759061364299864038123955443494189974630776168682352336746) Tj
+ET
+
+BT
+/F1 9 Tf
+40 455 Td
+(p3 = 92991331307360483616382958948483650923668592306718313881520244192640870034108) Tj
+ET
+
+BT
+/F2 12 Tf
+30 425 Td
+(4. YOUR MISSING CALCULATIONS) Tj
+ET
+
+BT
+/F1 10 Tf
+40 405 Td
+(Cube root of Lambda^3 mod N = Lambda) Tj
+ET
+
+BT
+/F1 9 Tf
+40 390 Td
+(Lambda^3 mod N = 38932995473618115921409207338423707925309087193404485552072959838229500524277) Tj
+ET
+
+BT
+/F1 10 Tf
+40 370 Td
+(Cube roots of Lambda^3 * (p-N) mod N:) Tj
+ET
+
+BT
+/F1 9 Tf
+40 355 Td
+(Root 1 = Lambda * p1 mod N = 21864327243976606572352071181633865121353765839471190989110739184573495121925) Tj
+ET
+
+BT
+/F1 9 Tf
+40 340 Td
+(Root 2 = Lambda * p2 mod N = 90798428535687044113399170261082130318391557661176307034657430351294071817198) Tj
+ET
+
+BT
+/F1 9 Tf
+40 325 Td
+(Root 3 = Lambda * p3 mod N = 3129333457652544737819743565971912413092240778427406358836993605650594555214) Tj
+ET
+
+BT
+/F2 12 Tf
+30 295 Td
+(5. THE ERROR WITH y1, y2, y3) Tj
+ET
+
+BT
+/F1 10 Tf
+40 275 Td
+(y1^3, y2^3, y3^3 all labeled as omega^2-1 but are DIFFERENT values) Tj
+ET
+
+BT
+/F1 10 Tf
+40 260 Td
+(Correction: Use exponent (2*N-1)/3 for cube roots, not (N-1)/3) Tj
+ET
+
+BT
+/F2 12 Tf
+30 230 Td
+(6. NEXT STEPS) Tj
+ET
+
+BT
+/F1 10 Tf
+40 210 Td
+(1. Use exponent (2*N-1)/3 for cube roots of values) Tj
+ET
+
+BT
+/F1 10 Tf
+40 195 Td
+(2. Add the 3 cube roots of Lambda^3 * (p-N) to your file) Tj
+ET
+
+BT
+/F1 10 Tf
+40 180 Td
+(3. Fix y1, y2, y3 calculations) Tj
+ET
+
+BT
+/F1 10 Tf
+40 165 Td
+(4. Verify all calculations) Tj
+ET
+
+BT
+/F2 12 Tf
+30 135 Td
+(7. KEY FORMULA) Tj
+ET
+
+BT
+/F1 10 Tf
+40 115 Td
+(Cube root of a mod N = a^((2*N-1)/3) mod N) Tj
+ET
+
+BT
+/F2 12 Tf
+30 85 Td
+(================================================================================) Tj
+ET
+
+Q
+q
+0 0 612 792 re
+W
+n
+endstream
+endobj
+
+xref
+1 6
+0000000000 65535 f 
+0000000063 00000 n 
+0000000122 00000 n 
+0000000181 00000 n 
+0000000240 00000 n 
+0000000300 00000 n 
+0000000360 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1500
+%%EOF

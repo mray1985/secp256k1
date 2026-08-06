@@ -1,0 +1,6703 @@
+{
+  "source": "F:\\New folder\\secp256k1\\DOUBLE_AND_ADD+BREAKDOWN.txt",
+  "rules": "C:\\Users\\mitch\\Desktop\\secp256k1\\ARCHIVE\\briefcase\\Double Add\\Double Add Rules.txt",
+  "work_ceiling": {
+    "last_transcript_puzzle": 70,
+    "max_work_puzzle": 73,
+    "unsolved_gap": [
+      71,
+      72,
+      73,
+      74
+    ],
+    "cannot_reference_d": "P71\u2013P74 have no known scalar \u2014 do not use A(71)\u2026D(74) in paths",
+    "P73_target": {
+      "band": [
+        4722366482869645213696,
+        9444732965739290427391
+      ],
+      "primary_anchor": "d(70) = d(n-3)",
+      "d70": "970436974005023690481",
+      "d70_repeat_count_range": [
+        5,
+        9
+      ],
+      "next_solved_after_gap": 75
+    }
+  },
+  "early_sequence": {
+    "issue": "Early prose in double_and_add.txt mis-describes P4 as 7+1 instead of D(1)A(1)D(1)A(1)D(1)",
+    "P3": {
+      "value": 7,
+      "correct_AD": "D(2)A(1)",
+      "raw_prose": "2(3)+1 (ambiguous index)"
+    },
+    "P4": {
+      "value": 8,
+      "correct_AD": "D(1)A(1)D(1)A(1)D(1)",
+      "wrong_prose": "7+1 (breaks alternation narrative)",
+      "stable_from": "P4 forward AD never breaks (rules item 8)"
+    },
+    "canonical_file": "F:\\New folder\\secp256k1\\DOUBLE_AND_ADD+BREAKDOWN.txt"
+  },
+  "validation": {
+    "puzzle_count": 37,
+    "violations": [
+      "P21: starts A but P20 ended A",
+      "P31: AD sum 2102388548 != d 2102388551",
+      "P32: AD sum 2692763920 != d 3093472814"
+    ],
+    "all_ad_valid": false
+  },
+  "rsz_cross": {
+    "n": 37,
+    "r_n_k_minus_path_final": -0.270403869877246,
+    "perm_k_minus_path": 0.1035,
+    "r_n_anchor_repeats": 0.27737255833843694,
+    "note": "k_minus_path_final is 0 mod N tautologically if path equals d; nonzero measures parse/eval mismatch"
+  },
+  "puzzles": [
+    {
+      "n": 1,
+      "target": 1,
+      "formula": "1",
+      "ad_raw": "A(1)",
+      "ops": [
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 1
+        }
+      ],
+      "computed": 1,
+      "expected": 1,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": null,
+      "anchor_repeats": 0
+    },
+    {
+      "n": 2,
+      "target": 3,
+      "formula": "2*1 + 1",
+      "ad_raw": "D(1)A(1)",
+      "ops": [
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 2
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 3
+        }
+      ],
+      "computed": 3,
+      "expected": 3,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": null,
+      "anchor_repeats": 0
+    },
+    {
+      "n": 3,
+      "target": 7,
+      "formula": "2*3 + 1",
+      "ad_raw": "D(2)A(1)",
+      "ops": [
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 6
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 7
+        }
+      ],
+      "computed": 7,
+      "expected": 7,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": null,
+      "anchor_repeats": 0
+    },
+    {
+      "n": 4,
+      "target": 8,
+      "formula": "2*1 + 1 + 2*1 + 1 + 2*1",
+      "ad_raw": "D(1)A(1)D(1)A(1)D(1)",
+      "ops": [
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 2
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 3
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 5
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 6
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 8
+        }
+      ],
+      "computed": 8,
+      "expected": 8,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 1,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 5,
+      "target": 21,
+      "formula": "3 + 2*3 + 3 + 2*3 + 1 + 2*1",
+      "ad_raw": "A(2)D(2)A(2)D(2)A(1)D(1)",
+      "ops": [
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 3
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 9
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 12
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 18
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 19
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 21
+        }
+      ],
+      "computed": 21,
+      "expected": 21,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 2,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 6,
+      "target": 49,
+      "formula": "7 + 2*7 + 7 + 2*7 + 7",
+      "ad_raw": "A(3)D(3)A(3)D(3)A(3)",
+      "ops": [
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 7
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 21
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 28
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 42
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 49
+        }
+      ],
+      "computed": 49,
+      "expected": 49,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 3,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 7,
+      "target": 76,
+      "formula": "2*8 + 8 + 2*8 + 8 + 2*8 + 3 + 2*3 + 1 + 2*1",
+      "ad_raw": "D(4)A(4)D(4)A(4)D(4)A(2)D(2)A(1)D(1)",
+      "ops": [
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 16
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 24
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 40
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 48
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 64
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 67
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 73
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 74
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 76
+        }
+      ],
+      "computed": 76,
+      "expected": 76,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 4,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 8,
+      "target": 224,
+      "formula": "21 + 2*21 + 21 + 2*21 + 21 + 2*21 + 21 + 2*7",
+      "ad_raw": "A(5)D(5)A(5)D(5)A(5)D(5)A(5)D(3)",
+      "ops": [
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 21
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 63
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 84
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 126
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 147
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 189
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 210
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 224
+        }
+      ],
+      "computed": 224,
+      "expected": 224,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 5,
+      "anchor_repeats": 7
+    },
+    {
+      "n": 9,
+      "target": 467,
+      "formula": "49 + 2*49 + 49 + 2*49 + 49 + 2*21 + 21 + 2*21 + 8 + 2*3 + 3 + 2*1",
+      "ad_raw": "A(6)D(6)A(6)D(6)A(6)D(5)A(5)D(5)A(4)D(2)A(2)D(1)",
+      "ops": [
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 49
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 147
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 196
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 294
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 343
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 385
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 406
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 448
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 456
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 462
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 465
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 467
+        }
+      ],
+      "computed": 467,
+      "expected": 467,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 6,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 10,
+      "target": 514,
+      "formula": "76 + 2*76 + 76 + 2*76 + 49 + 2*3 + 3",
+      "ad_raw": "A(7)D(7)A(7)D(7)A(6)D(2)A(2)",
+      "ops": [
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          7
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          7
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 76
+        },
+        {
+          "op": "D",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "double",
+          "partial": 228
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 304
+        },
+        {
+          "op": "D",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "double",
+          "partial": 456
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 505
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 511
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 514
+        }
+      ],
+      "computed": 514,
+      "expected": 514,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 7,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 11,
+      "target": 1155,
+      "formula": "2*224 + 224 + 2*224 + 21 + 2*7",
+      "ad_raw": "D(8)A(8)D(8)A(5)D(3)",
+      "ops": [
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 448
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 672
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 1120
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 1141
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 1155
+        }
+      ],
+      "computed": 1155,
+      "expected": 1155,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 8,
+      "anchor_repeats": 3
+    },
+    {
+      "n": 12,
+      "target": 2683,
+      "formula": "467 + 2*467 + 467 + 2*224 + 224 + 2*49 + 21 + 2*8 + 8",
+      "ad_raw": "A(9)D(9)A(9)D(8)A(8)D(6)A(5)D(4)A(4)",
+      "ops": [
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          9
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          4
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 467
+        },
+        {
+          "op": "D",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "double",
+          "partial": 1401
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 1868
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 2316
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 2540
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 2638
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 2659
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 2675
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 2683
+        }
+      ],
+      "computed": 2683,
+      "expected": 2683,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 9,
+      "anchor_repeats": 3
+    },
+    {
+      "n": 13,
+      "target": 5216,
+      "formula": "2*514 + 514 + 2*514 + 514 + 2*514 + 514 + 2*224 + 76 + 2*21 + 21 + 2*1 + 1",
+      "ad_raw": "D(10)A(10)D(10)A(10)D(10)A(10)D(8)A(7)D(5)A(5)D(1)A(1)",
+      "ops": [
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 1028
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 1542
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 2570
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 3084
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 4112
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 4626
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 5074
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 5150
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 5192
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 5213
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 5215
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 5216
+        }
+      ],
+      "computed": 5216,
+      "expected": 5216,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 10,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 14,
+      "target": 10544,
+      "formula": "2*1155 + 1155 + 2*1155 + 1155 + 2*1155 + 1155 + 2*49 + 49 + 2*1",
+      "ad_raw": "D(11)A(11)D(11)A(11)D(11)A(11)D(6)A(6)D(1)",
+      "ops": [
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 2310
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 3465
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 5775
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 6930
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 9240
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 10395
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 10493
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 10542
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 10544
+        }
+      ],
+      "computed": 10544,
+      "expected": 10544,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 11,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 15,
+      "target": 26867,
+      "formula": "2683 + 2*2683 + 2683 + 2*2683 + 2683 + 2*2683 + 2683 + 2*8 + 7 + 2*7",
+      "ad_raw": "A(12)D(12)A(12)D(12)A(12)D(12)A(12)D(4)A(3)D(3)",
+      "ops": [
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 2683
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 8049
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 10732
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 16098
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 18781
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 24147
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 26830
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 26846
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 26853
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 26867
+        }
+      ],
+      "computed": 26867,
+      "expected": 26867,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 12,
+      "anchor_repeats": 7
+    },
+    {
+      "n": 16,
+      "target": 51510,
+      "formula": "5216 + 2*5216 + 5216 + 2*5216 + 5216 + 2*5216 + 2683 + 2*514 + 224 + 2*224 + 76 + 2*49 + 3 + 2*3",
+      "ad_raw": "A(13)D(13)A(13)D(13)A(13)D(13)A(12)D(10)A(8)D(8)A(7)D(6)A(2)D(2)",
+      "ops": [
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 5216
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 15648
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 20864
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 31296
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 36512
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 46944
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 49627
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 50655
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 50879
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 51327
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 51403
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 51501
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 51504
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 51510
+        }
+      ],
+      "computed": 51510,
+      "expected": 51510,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 13,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 17,
+      "target": 95823,
+      "formula": "10544 + 2*10544 + 10544 + 2*10544 + 10544 + 2*10544 + 467 + 2*224 + 3 + 2*3 + 1 + 2*1",
+      "ad_raw": "A(14)D(14)A(14)D(14)A(14)D(14)A(9)D(8)A(2)D(2)A(1)D(1)",
+      "ops": [
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 10544
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 31632
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 42176
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 63264
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 73808
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 94896
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 95363
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 95811
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 95814
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 95820
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 95821
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 95823
+        }
+      ],
+      "computed": 95823,
+      "expected": 95823,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 14,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 18,
+      "target": 198669,
+      "formula": "26867 + 2*26867 + 26867 + 2*26867 + 10544 + 2*10544 + 1155 + 2*1155 + 514 + 2*514 + 224 + 2*224 + 49 + 2*49 + 3 + 2*3",
+      "ad_raw": "A(15)D(15)A(15)D(15)A(14)D(14)A(11)D(11)A(10)D(10)A(8)D(8)A(6)D(6)A(2)D(2)",
+      "ops": [
+        [
+          "A",
+          15
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          15
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "add",
+          "partial": 26867
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 80601
+        },
+        {
+          "op": "A",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "add",
+          "partial": 107468
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 161202
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 171746
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 192834
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 193989
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 196299
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 196813
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 197841
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 198065
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 198513
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 198562
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 198660
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 198663
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 198669
+        }
+      ],
+      "computed": 198669,
+      "expected": 198669,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 15,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 19,
+      "target": 357535,
+      "formula": "51510 + 2*51510 + 51510 + 2*51510 + 10544 + 2*10544 + 5216 + 2*5216 + 514 + 2*224 + 224 + 2*3 + 3",
+      "ad_raw": "A(16)D(16)A(16)D(16)A(14)D(14)A(13)D(13)A(10)D(8)A(8)D(2)A(2)",
+      "ops": [
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 51510
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 154530
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 206040
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 309060
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 319604
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 340692
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 345908
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 356340
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 356854
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 357302
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 357526
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 357532
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 357535
+        }
+      ],
+      "computed": 357535,
+      "expected": 357535,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 16,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 20,
+      "target": 863317,
+      "formula": "2*95823 + 95823 + 2*95823 + 95823 + 2*95823 + 95823 + 2*224 + 224 + 2*49 + 49 + 2*21 + 21 + 2*7 + 7 + 2*3 + 1",
+      "ad_raw": "D(17)A(17)D(17)A(17)D(17)A(17)D(8)A(8)D(6)A(6)D(5)A(5)D(3)A(3)D(2)A(1)",
+      "ops": [
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 191646
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 287469
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 479115
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 574938
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 766584
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 862407
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 862855
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 863079
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 863177
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 863226
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 863268
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 863289
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 863303
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 863310
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 863316
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 863317
+        }
+      ],
+      "computed": 863317,
+      "expected": 863317,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 17,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 21,
+      "target": 1811764,
+      "formula": "198669 + 2*198669 + 198669 + 2*198669 + 198669 + 2*198669 + 10544 + 2*5216 + 2683 + 2*21 + 21 + 2*7 + 7",
+      "ad_raw": "A(18)D(18)A(18)D(18)A(18)D(18)A(14)D(13)A(12)D(5)A(5)D(3)A(3)",
+      "ops": [
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 198669
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 596007
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 794676
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 1192014
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 1390683
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 1788021
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 1798565
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 1808997
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 1811680
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 1811722
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 1811743
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 1811757
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 1811764
+        }
+      ],
+      "computed": 1811764,
+      "expected": 1811764,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 18,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 22,
+      "target": 3007503,
+      "formula": "2*357535 + 357535 + 2*357535 + 357535 + 2*357535 + 51510 + 2*26867 + 26867 + 2*5216 + 2683 + 2*514 + 514 + 2*224 + 7",
+      "ad_raw": "D(19)A(19)D(19)A(19)D(19)A(16)D(15)A(15)D(13)A(12)D(10)A(10)D(8)A(3)",
+      "ops": [
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          15
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 715070
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 1072605
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 1787675
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 2145210
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 2860280
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 2911790
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 2965524
+        },
+        {
+          "op": "A",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "add",
+          "partial": 2992391
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 3002823
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 3005506
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 3006534
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 3007048
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 3007496
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 3007503
+        }
+      ],
+      "computed": 3007503,
+      "expected": 3007503,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 19,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 23,
+      "target": 5598802,
+      "formula": "2*863317 + 863317 + 2*863317 + 863317 + 2*198669 + 10544 + 2*5216 + 467 + 2*49 + 21",
+      "ad_raw": "D(20)A(20)D(20)A(20)D(18)A(14)D(13)A(9)D(6)A(5)",
+      "ops": [
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          5
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 1726634
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 2589951
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 4316585
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 5179902
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 5577240
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 5587784
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 5598216
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 5598683
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 5598781
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 5598802
+        }
+      ],
+      "computed": 5598802,
+      "expected": 5598802,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 20,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 24,
+      "target": 14428676,
+      "formula": "2*1811764 + 1811764 + 2*1811764 + 1811764 + 2*863317 + 863317 + 2*357535 + 198669 + 2*26867 + 514 + 2*49 + 49 + 2*3 + 1",
+      "ad_raw": "D(21)A(21)D(21)A(21)D(20)A(20)D(19)A(18)D(15)A(10)D(6)A(6)D(2)A(1)",
+      "ops": [
+        [
+          "D",
+          21
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          21
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "double",
+          "partial": 3623528
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 5435292
+        },
+        {
+          "op": "D",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "double",
+          "partial": 9058820
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 10870584
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 12597218
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 13460535
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 14175605
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 14374274
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 14428008
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 14428522
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 14428620
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 14428669
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 14428675
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 14428676
+        }
+      ],
+      "computed": 14428676,
+      "expected": 14428676,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 21,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 25,
+      "target": 33185509,
+      "formula": "2*3007503 + 3007503 + 2*3007503 + 3007503 + 2*3007503 + 3007503 + 2*3007503 + 95823 + 2*2683 + 1155 + 2*224 + 76 + 2*49 + 8 + 2*1",
+      "ad_raw": "D(22)A(22)D(22)A(22)D(22)A(22)D(22)A(17)D(12)A(11)D(8)A(7)D(6)A(4)D(1)",
+      "ops": [
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 6015006
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 9022509
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 15037515
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 18045018
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 24060024
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 27067527
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 33082533
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 33178356
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 33183722
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 33184877
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 33185325
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 33185401
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 33185499
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 33185507
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 33185509
+        }
+      ],
+      "computed": 33185509,
+      "expected": 33185509,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 22,
+      "anchor_repeats": 7
+    },
+    {
+      "n": 26,
+      "target": 54538862,
+      "formula": "5598802 + 2*5598802 + 5598802 + 2*5598802 + 5598802 + 2*5598802 + 3007503 + 2*357535 + 357535 + 2*26867 + 5216 + 2*5216 + 49 + 2*49 + 7",
+      "ad_raw": "A(23)D(23)A(23)D(23)A(23)D(23)A(22)D(19)A(19)D(15)A(13)D(13)A(6)D(6)A(3)",
+      "ops": [
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 5598802
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 16796406
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 22395208
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 33592812
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 39191614
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 50389218
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 53396721
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 54111791
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 54469326
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 54523060
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 54528276
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 54538708
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 54538757
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 54538855
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 54538862
+        }
+      ],
+      "computed": 54538862,
+      "expected": 54538862,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 23,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 27,
+      "target": 111949941,
+      "formula": "2*14428676 + 14428676 + 2*14428676 + 14428676 + 2*5598802 + 5598802 + 2*3007503 + 1811764 + 2*357535 + 26867 + 2*5216 + 1155 + 2*514 + 49 + 2*49 + 7 + 2*1 + 1",
+      "ad_raw": "D(24)A(24)D(24)A(24)D(23)A(23)D(22)A(21)D(19)A(15)D(13)A(11)D(10)A(6)D(6)A(3)D(1)A(1)",
+      "ops": [
+        [
+          "D",
+          24
+        ],
+        [
+          "A",
+          24
+        ],
+        [
+          "D",
+          24
+        ],
+        [
+          "A",
+          24
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          15
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "double",
+          "partial": 28857352
+        },
+        {
+          "op": "A",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "add",
+          "partial": 43286028
+        },
+        {
+          "op": "D",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "double",
+          "partial": 72143380
+        },
+        {
+          "op": "A",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "add",
+          "partial": 86572056
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 97769660
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 103368462
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 109383468
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 111195232
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 111910302
+        },
+        {
+          "op": "A",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "add",
+          "partial": 111937169
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 111947601
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 111948756
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 111949784
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 111949833
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 111949931
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 111949938
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 111949940
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 111949941
+        }
+      ],
+      "computed": 111949941,
+      "expected": 111949941,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 24,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 28,
+      "target": 227634408,
+      "formula": "2*33185509 + 33185509 + 2*33185509 + 33185509 + 2*5598802 + 5598802 + 2*3007503 + 3007503 + 2*863317 + 863317 + 2*51510 + 2683 + 2*2683 + 467 + 2*467 + 7 + 2*3 + 3 + 2*1",
+      "ad_raw": "D(25)A(25)D(25)A(25)D(23)A(23)D(22)A(22)D(20)A(20)D(16)A(12)D(12)A(9)D(9)A(3)D(2)A(2)D(1)",
+      "ops": [
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          9
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 66371018
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 99556527
+        },
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 165927545
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 199113054
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 210310658
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 215909460
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 221924466
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 224931969
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 226658603
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 227521920
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 227624940
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 227627623
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 227632989
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 227633456
+        },
+        {
+          "op": "D",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "double",
+          "partial": 227634390
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 227634397
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 227634403
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 227634406
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 227634408
+        }
+      ],
+      "computed": 227634408,
+      "expected": 227634408,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 25,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 29,
+      "target": 400708894,
+      "formula": "54538862 + 2*54538862 + 54538862 + 2*54538862 + 54538862 + 2*5598802 + 5598802 + 2*357535 + 357535 + 2*198669 + 198669 + 2*95823 + 95823 + 2*51510 + 51510 + 2*5216 + 5216 + 2*2683 + 2683 + 2*1155 + 1155 + 2*514 + 514 + 2*224 + 224 + 2*76 + 76 + 2*49 + 49 + 2*21 + 21 + 2*8 + 7 + 2*3",
+      "ad_raw": "A(26)D(26)A(26)D(26)A(26)D(23)A(23)D(19)A(19)D(18)A(18)D(17)A(17)D(16)A(16)D(13)A(13)D(12)A(12)D(11)A(11)D(10)A(10)D(8)A(8)D(7)A(7)D(6)A(6)D(5)A(5)D(4)A(3)D(2)",
+      "ops": [
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          26
+        ],
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          26
+        ],
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          7
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 54538862
+        },
+        {
+          "op": "D",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "double",
+          "partial": 163616586
+        },
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 218155448
+        },
+        {
+          "op": "D",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "double",
+          "partial": 327233172
+        },
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 381772034
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 392969638
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 398568440
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 399283510
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 399641045
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 400038383
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 400237052
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 400428698
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 400524521
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 400627541
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 400679051
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 400689483
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 400694699
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 400700065
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 400702748
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 400705058
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 400706213
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 400707241
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 400707755
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 400708203
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 400708427
+        },
+        {
+          "op": "D",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "double",
+          "partial": 400708579
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 400708655
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 400708753
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 400708802
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 400708844
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 400708865
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 400708881
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 400708888
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 400708894
+        }
+      ],
+      "computed": 400708894,
+      "expected": 400708894,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 26,
+      "anchor_repeats": 5
+    },
+    {
+      "n": 30,
+      "target": 1033162084,
+      "formula": "111949941 + 2*111949941 + 111949941 + 2*111949941 + 111949941 + 2*111949941 + 5598802 + 2*5598802 + 1811764 + 2*1811764 + 863317 + 2*863317 + 198669 + 2*198669 + 51510 + 2*51510 + 10544 + 2*10544 + 2683 + 2*2683 + 224 + 2*224 + 76",
+      "ad_raw": "A(27)D(27)A(27)D(27)A(27)D(27)A(23)D(23)A(21)D(21)A(20)D(20)A(18)D(18)A(16)D(16)A(14)D(14)A(12)D(12)A(8)D(8)A(7)",
+      "ops": [
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          27
+        ],
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          27
+        ],
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          27
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          21
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          7
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 111949941
+        },
+        {
+          "op": "D",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "double",
+          "partial": 335849823
+        },
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 447799764
+        },
+        {
+          "op": "D",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "double",
+          "partial": 671699646
+        },
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 783649587
+        },
+        {
+          "op": "D",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "double",
+          "partial": 1007549469
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 1013148271
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 1024345875
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 1026157639
+        },
+        {
+          "op": "D",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "double",
+          "partial": 1029781167
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 1030644484
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 1032371118
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 1032569787
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 1032967125
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 1033018635
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 1033121655
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 1033132199
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 1033153287
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 1033155970
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 1033161336
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 1033161560
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 1033162008
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 1033162084
+        }
+      ],
+      "computed": 1033162084,
+      "expected": 1033162084,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 27,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 31,
+      "target": 2102388551,
+      "formula": "2*227634408 + 227634408 + 2*227634408 + 227634408 + 2*227634408 + 227634408 + 2*14428676 + 14428676 + 2*3007503 + 3007503 + 2*357535 + 357535 + 2*95823 + 95823 + 2*2683 + 2683 + 2*467 + 467 + 2*224 + 224 + 2*49 + 21 + 2*8 + 8 + 2*1 + 1",
+      "ad_raw": "D(28)A(28)D(28)A(28)D(28)A(28)D(24)A(24)D(22)A(22)D(19)A(19)D(17)A(17)D(12)A(12)D(9)A(9)D(8)A(8)D(6)A(5)D(3)A(3)D(1)A(1)",
+      "ops": [
+        [
+          "D",
+          28
+        ],
+        [
+          "A",
+          28
+        ],
+        [
+          "D",
+          28
+        ],
+        [
+          "A",
+          28
+        ],
+        [
+          "D",
+          28
+        ],
+        [
+          "A",
+          28
+        ],
+        [
+          "D",
+          24
+        ],
+        [
+          "A",
+          24
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          9
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          5
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "double",
+          "partial": 455268816
+        },
+        {
+          "op": "A",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "add",
+          "partial": 682903224
+        },
+        {
+          "op": "D",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "double",
+          "partial": 1138172040
+        },
+        {
+          "op": "A",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "add",
+          "partial": 1365806448
+        },
+        {
+          "op": "D",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "double",
+          "partial": 1821075264
+        },
+        {
+          "op": "A",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "add",
+          "partial": 2048709672
+        },
+        {
+          "op": "D",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "double",
+          "partial": 2077567024
+        },
+        {
+          "op": "A",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "add",
+          "partial": 2091995700
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 2098010706
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 2101018209
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 2101733279
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 2102090814
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 2102282460
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 2102378283
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 2102383649
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 2102386332
+        },
+        {
+          "op": "D",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "double",
+          "partial": 2102387266
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 2102387733
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 2102388181
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 2102388405
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 2102388503
+        },
+        {
+          "op": "A",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "add",
+          "partial": 2102388524
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 2102388538
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 2102388545
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 2102388547
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 2102388548
+        }
+      ],
+      "computed": 2102388548,
+      "expected": 2102388551,
+      "eval_ok": false,
+      "in_band": true,
+      "anchor_n_minus_3": 28,
+      "anchor_repeats": 6
+    },
+    {
+      "n": 32,
+      "target": 3093472814,
+      "formula": "2*400708894 + 400708894 + 2*400708894 + 400708894 + 2*54538862 + 54538862 + 2*33185509 + 33185509 + 2*5598802 + 5598802 + 2*1811764 + 1811764 + 2*863317 + 863317 + 2*95823 + 95823 + 2*51510 + 51510 + 2*26867 + 5216 + 2*5216 + 1155 + 2*1155 + 224 + 2*224 + 76 + 2*76 + 8 + 2*8 + 7 + 2*7 + 1 + 2*1",
+      "ad_raw": "D(29)A(29)D(29)A(29)D(26)A(26)D(25)A(25)D(23)A(23)D(21)A(21)D(20)A(20)D(17)A(17)D(16)A(16)D(15)A(13)D(13)A(11)D(11)A(8)D(8)A(7)D(7)A(4)D(4)A(3)D(3)A(1)D(1)",
+      "ops": [
+        [
+          "D",
+          29
+        ],
+        [
+          "A",
+          29
+        ],
+        [
+          "D",
+          29
+        ],
+        [
+          "A",
+          29
+        ],
+        [
+          "D",
+          26
+        ],
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          21
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          7
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "double",
+          "partial": 801417788
+        },
+        {
+          "op": "A",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "add",
+          "partial": 1202126682
+        },
+        {
+          "op": "D",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "double",
+          "partial": 2003544470
+        },
+        {
+          "op": "A",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "add",
+          "partial": 2404253364
+        },
+        {
+          "op": "D",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "double",
+          "partial": 2513331088
+        },
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 2567869950
+        },
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 2634240968
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 2667426477
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 2678624081
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 2684222883
+        },
+        {
+          "op": "D",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "double",
+          "partial": 2687846411
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 2689658175
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 2691384809
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 2692248126
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 2692439772
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 2692535595
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 2692638615
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 2692690125
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 2692743859
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 2692749075
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 2692759507
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 2692760662
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 2692762972
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 2692763196
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 2692763644
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 2692763720
+        },
+        {
+          "op": "D",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "double",
+          "partial": 2692763872
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 2692763880
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 2692763896
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 2692763903
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 2692763917
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 2692763918
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 2692763920
+        }
+      ],
+      "computed": 2692763920,
+      "expected": 3093472814,
+      "eval_ok": false,
+      "in_band": true,
+      "anchor_n_minus_3": 29,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 33,
+      "target": 7137437912,
+      "formula": "1033162084 + 2*1033162084 + 1033162084 + 2*1033162084 + 227634408 + 2*227634408 + 111949941 + 2*33185509 + 33185509 + 2*14428676 + 14428676 + 2*198669 + 198669 + 2*51510 + 51510 + 2*5216 + 5216 + 2*1155 + 1155 + 2*8 + 8 + 2*7",
+      "ad_raw": "A(30)D(30)A(30)D(30)A(28)D(28)A(27)D(25)A(25)D(24)A(24)D(18)A(18)D(16)A(16)D(13)A(13)D(11)A(11)D(4)A(4)D(3)",
+      "ops": [
+        [
+          "A",
+          30
+        ],
+        [
+          "D",
+          30
+        ],
+        [
+          "A",
+          30
+        ],
+        [
+          "D",
+          30
+        ],
+        [
+          "A",
+          28
+        ],
+        [
+          "D",
+          28
+        ],
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          24
+        ],
+        [
+          "A",
+          24
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          3
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 30,
+          "d_ref": 1033162084,
+          "kind": "add",
+          "partial": 1033162084
+        },
+        {
+          "op": "D",
+          "index": 30,
+          "d_ref": 1033162084,
+          "kind": "double",
+          "partial": 3099486252
+        },
+        {
+          "op": "A",
+          "index": 30,
+          "d_ref": 1033162084,
+          "kind": "add",
+          "partial": 4132648336
+        },
+        {
+          "op": "D",
+          "index": 30,
+          "d_ref": 1033162084,
+          "kind": "double",
+          "partial": 6198972504
+        },
+        {
+          "op": "A",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "add",
+          "partial": 6426606912
+        },
+        {
+          "op": "D",
+          "index": 28,
+          "d_ref": 227634408,
+          "kind": "double",
+          "partial": 6881875728
+        },
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 6993825669
+        },
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 7060196687
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 7093382196
+        },
+        {
+          "op": "D",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "double",
+          "partial": 7122239548
+        },
+        {
+          "op": "A",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "add",
+          "partial": 7136668224
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 7137065562
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 7137264231
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 7137367251
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 7137418761
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 7137429193
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 7137434409
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 7137436719
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 7137437874
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 7137437890
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 7137437898
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 7137437912
+        }
+      ],
+      "computed": 7137437912,
+      "expected": 7137437912,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 30,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 34,
+      "target": 14133072157,
+      "formula": "2102388551 + 2*2102388551 + 2102388551 + 2*2102388551 + 400708894 + 2*400708894 + 54538862 + 2*54538862 + 33185509 + 2*33185509 + 14428676 + 2*14428676 + 3007503 + 2*3007503 + 198669 + 2*198669 + 95823 + 2*95823 + 51510 + 2*51510 + 26867 + 2*26867 + 2683 + 2*2683 + 1155 + 2*1155 + 514 + 2*514 + 224 + 2*224 + 49 + 2*49 + 8 + 2*8 + 7 + 2*3",
+      "ad_raw": "A(31)D(31)A(31)D(31)A(29)D(29)A(26)D(26)A(25)D(25)A(24)D(24)A(22)D(22)A(18)D(18)A(17)D(17)A(16)D(16)A(15)D(15)A(12)D(12)A(11)D(11)A(10)D(10)A(8)D(8)A(6)D(6)A(4)D(4)A(3)D(2)",
+      "ops": [
+        [
+          "A",
+          31
+        ],
+        [
+          "D",
+          31
+        ],
+        [
+          "A",
+          31
+        ],
+        [
+          "D",
+          31
+        ],
+        [
+          "A",
+          29
+        ],
+        [
+          "D",
+          29
+        ],
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          26
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          24
+        ],
+        [
+          "D",
+          24
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          15
+        ],
+        [
+          "D",
+          15
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "D",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "add",
+          "partial": 2102388551
+        },
+        {
+          "op": "D",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "double",
+          "partial": 6307165653
+        },
+        {
+          "op": "A",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "add",
+          "partial": 8409554204
+        },
+        {
+          "op": "D",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "double",
+          "partial": 12614331306
+        },
+        {
+          "op": "A",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "add",
+          "partial": 13015040200
+        },
+        {
+          "op": "D",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "double",
+          "partial": 13816457988
+        },
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 13870996850
+        },
+        {
+          "op": "D",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "double",
+          "partial": 13980074574
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 14013260083
+        },
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 14079631101
+        },
+        {
+          "op": "A",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "add",
+          "partial": 14094059777
+        },
+        {
+          "op": "D",
+          "index": 24,
+          "d_ref": 14428676,
+          "kind": "double",
+          "partial": 14122917129
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 14125924632
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 14131939638
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 14132138307
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 14132535645
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 14132631468
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 14132823114
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 14132874624
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 14132977644
+        },
+        {
+          "op": "A",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "add",
+          "partial": 14133004511
+        },
+        {
+          "op": "D",
+          "index": 15,
+          "d_ref": 26867,
+          "kind": "double",
+          "partial": 14133058245
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 14133060928
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 14133066294
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 14133067449
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 14133069759
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 14133070273
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 14133071301
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 14133071525
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 14133071973
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 14133072022
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 14133072120
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 14133072128
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 14133072144
+        },
+        {
+          "op": "A",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "add",
+          "partial": 14133072151
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 14133072157
+        }
+      ],
+      "computed": 14133072157,
+      "expected": 14133072157,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 31,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 35,
+      "target": 20112871792,
+      "formula": "3093472814 + 2*3093472814 + 3093472814 + 2*3093472814 + 400708894 + 2*400708894 + 111949941 + 2*111949941 + 3007503 + 2*3007503 + 1811764 + 2*863317 + 863317 + 2*198669 + 198669 + 2*10544 + 10544 + 2*1155 + 1155 + 2*514 + 514 + 2*467 + 467 + 2*49 + 8 + 2*8 + 3 + 2*3 + 1",
+      "ad_raw": "A(32)D(32)A(32)D(32)A(29)D(29)A(27)D(27)A(22)D(22)A(21)D(20)A(20)D(18)A(18)D(14)A(14)D(11)A(11)D(10)A(10)D(9)A(9)D(6)A(4)D(4)A(2)D(2)A(1)",
+      "ops": [
+        [
+          "A",
+          32
+        ],
+        [
+          "D",
+          32
+        ],
+        [
+          "A",
+          32
+        ],
+        [
+          "D",
+          32
+        ],
+        [
+          "A",
+          29
+        ],
+        [
+          "D",
+          29
+        ],
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          27
+        ],
+        [
+          "A",
+          22
+        ],
+        [
+          "D",
+          22
+        ],
+        [
+          "A",
+          21
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          18
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          9
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          6
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          2
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 32,
+          "d_ref": 3093472814,
+          "kind": "add",
+          "partial": 3093472814
+        },
+        {
+          "op": "D",
+          "index": 32,
+          "d_ref": 3093472814,
+          "kind": "double",
+          "partial": 9280418442
+        },
+        {
+          "op": "A",
+          "index": 32,
+          "d_ref": 3093472814,
+          "kind": "add",
+          "partial": 12373891256
+        },
+        {
+          "op": "D",
+          "index": 32,
+          "d_ref": 3093472814,
+          "kind": "double",
+          "partial": 18560836884
+        },
+        {
+          "op": "A",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "add",
+          "partial": 18961545778
+        },
+        {
+          "op": "D",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "double",
+          "partial": 19762963566
+        },
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 19874913507
+        },
+        {
+          "op": "D",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "double",
+          "partial": 20098813389
+        },
+        {
+          "op": "A",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "add",
+          "partial": 20101820892
+        },
+        {
+          "op": "D",
+          "index": 22,
+          "d_ref": 3007503,
+          "kind": "double",
+          "partial": 20107835898
+        },
+        {
+          "op": "A",
+          "index": 21,
+          "d_ref": 1811764,
+          "kind": "add",
+          "partial": 20109647662
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 20111374296
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 20112237613
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 20112634951
+        },
+        {
+          "op": "A",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "add",
+          "partial": 20112833620
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 20112854708
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 20112865252
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 20112867562
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 20112868717
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 20112869745
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 20112870259
+        },
+        {
+          "op": "D",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "double",
+          "partial": 20112871193
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 20112871660
+        },
+        {
+          "op": "D",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "double",
+          "partial": 20112871758
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 20112871766
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 20112871782
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 20112871785
+        },
+        {
+          "op": "D",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "double",
+          "partial": 20112871791
+        },
+        {
+          "op": "A",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "add",
+          "partial": 20112871792
+        }
+      ],
+      "computed": 20112871792,
+      "expected": 20112871792,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 32,
+      "anchor_repeats": 4
+    },
+    {
+      "n": 36,
+      "target": 42387769980,
+      "formula": "2*7137437912 + 7137437912 + 2*7137437912 + 2102388551 + 2*2102388551 + 111949941 + 2*111949941 + 54538862 + 2*863317 + 863317 + 2*198669 + 10544 + 2*10544 + 5216 + 2*467 + 467 + 2*224 + 49 + 2*21 + 3 + 2*1",
+      "ad_raw": "D(33)A(33)D(33)A(31)D(31)A(27)D(27)A(26)D(20)A(20)D(18)A(14)D(14)A(13)D(9)A(9)D(8)A(6)D(5)A(2)D(1)",
+      "ops": [
+        [
+          "D",
+          33
+        ],
+        [
+          "A",
+          33
+        ],
+        [
+          "D",
+          33
+        ],
+        [
+          "A",
+          31
+        ],
+        [
+          "D",
+          31
+        ],
+        [
+          "A",
+          27
+        ],
+        [
+          "D",
+          27
+        ],
+        [
+          "A",
+          26
+        ],
+        [
+          "D",
+          20
+        ],
+        [
+          "A",
+          20
+        ],
+        [
+          "D",
+          18
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          9
+        ],
+        [
+          "A",
+          9
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          6
+        ],
+        [
+          "D",
+          5
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "op": "D",
+          "index": 33,
+          "d_ref": 7137437912,
+          "kind": "double",
+          "partial": 14274875824
+        },
+        {
+          "op": "A",
+          "index": 33,
+          "d_ref": 7137437912,
+          "kind": "add",
+          "partial": 21412313736
+        },
+        {
+          "op": "D",
+          "index": 33,
+          "d_ref": 7137437912,
+          "kind": "double",
+          "partial": 35687189560
+        },
+        {
+          "op": "A",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "add",
+          "partial": 37789578111
+        },
+        {
+          "op": "D",
+          "index": 31,
+          "d_ref": 2102388551,
+          "kind": "double",
+          "partial": 41994355213
+        },
+        {
+          "op": "A",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "add",
+          "partial": 42106305154
+        },
+        {
+          "op": "D",
+          "index": 27,
+          "d_ref": 111949941,
+          "kind": "double",
+          "partial": 42330205036
+        },
+        {
+          "op": "A",
+          "index": 26,
+          "d_ref": 54538862,
+          "kind": "add",
+          "partial": 42384743898
+        },
+        {
+          "op": "D",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "double",
+          "partial": 42386470532
+        },
+        {
+          "op": "A",
+          "index": 20,
+          "d_ref": 863317,
+          "kind": "add",
+          "partial": 42387333849
+        },
+        {
+          "op": "D",
+          "index": 18,
+          "d_ref": 198669,
+          "kind": "double",
+          "partial": 42387731187
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 42387741731
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 42387762819
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 42387768035
+        },
+        {
+          "op": "D",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "double",
+          "partial": 42387768969
+        },
+        {
+          "op": "A",
+          "index": 9,
+          "d_ref": 467,
+          "kind": "add",
+          "partial": 42387769436
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 42387769884
+        },
+        {
+          "op": "A",
+          "index": 6,
+          "d_ref": 49,
+          "kind": "add",
+          "partial": 42387769933
+        },
+        {
+          "op": "D",
+          "index": 5,
+          "d_ref": 21,
+          "kind": "double",
+          "partial": 42387769975
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 42387769978
+        },
+        {
+          "op": "D",
+          "index": 1,
+          "d_ref": 1,
+          "kind": "double",
+          "partial": 42387769980
+        }
+      ],
+      "computed": 42387769980,
+      "expected": 42387769980,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 33,
+      "anchor_repeats": 3
+    },
+    {
+      "n": 37,
+      "target": 100251560595,
+      "formula": "14133072157 + 2*14133072157 + 14133072157 + 2*14133072157 + 14133072157 + 2*400708894 + 400708894 + 2*33185509 + 33185509 + 2*5598802 + 5598802 + 2*357535 + 357535 + 2*95823 + 95823 + 2*51510 + 51510 + 2*10544 + 10544 + 2*5216 + 5216 + 2*2683 + 2683 + 2*1155 + 1155 + 2*514 + 514 + 2*224 + 224 + 2*76 + 76 + 2*8 + 8 + 2*7 + 3",
+      "ad_raw": "A(34)D(34)A(34)D(34)A(34)D(29)A(29)D(25)A(25)D(23)A(23)D(19)A(19)D(17)A(17)D(16)A(16)D(14)A(14)D(13)A(13)D(12)A(12)D(11)A(11)D(10)A(10)D(8)A(8)D(7)A(7)D(4)A(4)D(3)A(2)",
+      "ops": [
+        [
+          "A",
+          34
+        ],
+        [
+          "D",
+          34
+        ],
+        [
+          "A",
+          34
+        ],
+        [
+          "D",
+          34
+        ],
+        [
+          "A",
+          34
+        ],
+        [
+          "D",
+          29
+        ],
+        [
+          "A",
+          29
+        ],
+        [
+          "D",
+          25
+        ],
+        [
+          "A",
+          25
+        ],
+        [
+          "D",
+          23
+        ],
+        [
+          "A",
+          23
+        ],
+        [
+          "D",
+          19
+        ],
+        [
+          "A",
+          19
+        ],
+        [
+          "D",
+          17
+        ],
+        [
+          "A",
+          17
+        ],
+        [
+          "D",
+          16
+        ],
+        [
+          "A",
+          16
+        ],
+        [
+          "D",
+          14
+        ],
+        [
+          "A",
+          14
+        ],
+        [
+          "D",
+          13
+        ],
+        [
+          "A",
+          13
+        ],
+        [
+          "D",
+          12
+        ],
+        [
+          "A",
+          12
+        ],
+        [
+          "D",
+          11
+        ],
+        [
+          "A",
+          11
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "A",
+          10
+        ],
+        [
+          "D",
+          8
+        ],
+        [
+          "A",
+          8
+        ],
+        [
+          "D",
+          7
+        ],
+        [
+          "A",
+          7
+        ],
+        [
+          "D",
+          4
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "D",
+          3
+        ],
+        [
+          "A",
+          2
+        ]
+      ],
+      "steps": [
+        {
+          "op": "A",
+          "index": 34,
+          "d_ref": 14133072157,
+          "kind": "add",
+          "partial": 14133072157
+        },
+        {
+          "op": "D",
+          "index": 34,
+          "d_ref": 14133072157,
+          "kind": "double",
+          "partial": 42399216471
+        },
+        {
+          "op": "A",
+          "index": 34,
+          "d_ref": 14133072157,
+          "kind": "add",
+          "partial": 56532288628
+        },
+        {
+          "op": "D",
+          "index": 34,
+          "d_ref": 14133072157,
+          "kind": "double",
+          "partial": 84798432942
+        },
+        {
+          "op": "A",
+          "index": 34,
+          "d_ref": 14133072157,
+          "kind": "add",
+          "partial": 98931505099
+        },
+        {
+          "op": "D",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "double",
+          "partial": 99732922887
+        },
+        {
+          "op": "A",
+          "index": 29,
+          "d_ref": 400708894,
+          "kind": "add",
+          "partial": 100133631781
+        },
+        {
+          "op": "D",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "double",
+          "partial": 100200002799
+        },
+        {
+          "op": "A",
+          "index": 25,
+          "d_ref": 33185509,
+          "kind": "add",
+          "partial": 100233188308
+        },
+        {
+          "op": "D",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "double",
+          "partial": 100244385912
+        },
+        {
+          "op": "A",
+          "index": 23,
+          "d_ref": 5598802,
+          "kind": "add",
+          "partial": 100249984714
+        },
+        {
+          "op": "D",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "double",
+          "partial": 100250699784
+        },
+        {
+          "op": "A",
+          "index": 19,
+          "d_ref": 357535,
+          "kind": "add",
+          "partial": 100251057319
+        },
+        {
+          "op": "D",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "double",
+          "partial": 100251248965
+        },
+        {
+          "op": "A",
+          "index": 17,
+          "d_ref": 95823,
+          "kind": "add",
+          "partial": 100251344788
+        },
+        {
+          "op": "D",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "double",
+          "partial": 100251447808
+        },
+        {
+          "op": "A",
+          "index": 16,
+          "d_ref": 51510,
+          "kind": "add",
+          "partial": 100251499318
+        },
+        {
+          "op": "D",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "double",
+          "partial": 100251520406
+        },
+        {
+          "op": "A",
+          "index": 14,
+          "d_ref": 10544,
+          "kind": "add",
+          "partial": 100251530950
+        },
+        {
+          "op": "D",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "double",
+          "partial": 100251541382
+        },
+        {
+          "op": "A",
+          "index": 13,
+          "d_ref": 5216,
+          "kind": "add",
+          "partial": 100251546598
+        },
+        {
+          "op": "D",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "double",
+          "partial": 100251551964
+        },
+        {
+          "op": "A",
+          "index": 12,
+          "d_ref": 2683,
+          "kind": "add",
+          "partial": 100251554647
+        },
+        {
+          "op": "D",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "double",
+          "partial": 100251556957
+        },
+        {
+          "op": "A",
+          "index": 11,
+          "d_ref": 1155,
+          "kind": "add",
+          "partial": 100251558112
+        },
+        {
+          "op": "D",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "double",
+          "partial": 100251559140
+        },
+        {
+          "op": "A",
+          "index": 10,
+          "d_ref": 514,
+          "kind": "add",
+          "partial": 100251559654
+        },
+        {
+          "op": "D",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "double",
+          "partial": 100251560102
+        },
+        {
+          "op": "A",
+          "index": 8,
+          "d_ref": 224,
+          "kind": "add",
+          "partial": 100251560326
+        },
+        {
+          "op": "D",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "double",
+          "partial": 100251560478
+        },
+        {
+          "op": "A",
+          "index": 7,
+          "d_ref": 76,
+          "kind": "add",
+          "partial": 100251560554
+        },
+        {
+          "op": "D",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "double",
+          "partial": 100251560570
+        },
+        {
+          "op": "A",
+          "index": 4,
+          "d_ref": 8,
+          "kind": "add",
+          "partial": 100251560578
+        },
+        {
+          "op": "D",
+          "index": 3,
+          "d_ref": 7,
+          "kind": "double",
+          "partial": 100251560592
+        },
+        {
+          "op": "A",
+          "index": 2,
+          "d_ref": 3,
+          "kind": "add",
+          "partial": 100251560595
+        }
+      ],
+      "computed": 100251560595,
+      "expected": 100251560595,
+      "eval_ok": true,
+      "in_band": true,
+      "anchor_n_minus_3": 34,
+      "anchor_repeats": 5
+    }
+  ]
+}

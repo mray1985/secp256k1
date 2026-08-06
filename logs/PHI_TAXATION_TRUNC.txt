@@ -1,0 +1,75 @@
+========================================================================================
+Taxation = truncation at x-channel / Fine boundary
+========================================================================================
+  Tax_k(C) = first k fractional digits of C (truncate)
+  Skim     = C - Tax_k(C)  (deep tail)
+
+----------------------------------------------------------------------------------------
+1) When does Tax_k(Phi) == Tax_k(x/p)?  (walk 1..256)
+----------------------------------------------------------------------------------------
+  k=70:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=71:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=72:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=73:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=74:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=75:  Tax_k(Phi)==Tax_k(x/p)  256/256  (100.0%)
+  k=76:  Tax_k(Phi)==Tax_k(x/p)  247/256  (96.5%)
+  k=77:  Tax_k(Phi)==Tax_k(x/p)  141/256  (55.1%)
+  k=78:  Tax_k(Phi)==Tax_k(x/p)  24/256  (9.4%)
+  k=79:  Tax_k(Phi)==Tax_k(x/p)  3/256  (1.2%)
+  k=80:  Tax_k(Phi)==Tax_k(x/p)  0/256  (0.0%)
+  k=81:  Tax_k(Phi)==Tax_k(x/p)  0/256  (0.0%)
+
+----------------------------------------------------------------------------------------
+2) Tax on Phi+ vs Phi- vs Phi(-P) — shared taxed body?
+----------------------------------------------------------------------------------------
+  k=74: Tax(Phi+)==Tax(Phi-) 255/256  Tax(Phi)==Tax(Phi(-P)) 256/256
+  k=75: Tax(Phi+)==Tax(Phi-) 254/256  Tax(Phi)==Tax(Phi(-P)) 256/256
+  k=76: Tax(Phi+)==Tax(Phi-) 238/256  Tax(Phi)==Tax(Phi(-P)) 247/256
+  k=77: Tax(Phi+)==Tax(Phi-) 74/256  Tax(Phi)==Tax(Phi(-P)) 133/256
+  k=78: Tax(Phi+)==Tax(Phi-) 17/256  Tax(Phi)==Tax(Phi(-P)) 5/256
+
+----------------------------------------------------------------------------------------
+3) Can the skimmed residual recover parity / y?
+----------------------------------------------------------------------------------------
+  After Tax_77: residual R = Phi - Tax_77(Phi)
+  Test: sign(R) or magnitude vs y parity — weak probes only
+  residual sign encodes parity? useless (always R>=0): 256/256
+  Tax_k(x/p) digits recover integer x (near candidates): k=75 -> 4/256
+  Tax_k(x/p) digits recover integer x (near candidates): k=76 -> 44/256
+  Tax_k(x/p) digits recover integer x (near candidates): k=77 -> 256/256
+  Tax_k(x/p) digits recover integer x (near candidates): k=78 -> 256/256
+  Skim alone does not give y; need 02/03 (or Fine) as separate tax stamp.
+
+----------------------------------------------------------------------------------------
+4) Practical 'tax schedule'
+----------------------------------------------------------------------------------------
+  Tax body  (keep):  first ~75 digits of Phi  ~  shared x-channel
+                      safer: Tax(x/p) directly, not Tax(Phi)
+  Tax stamp (keep):  02/03 parity  OR  full Fine = y/p^2
+  Tax discard:       trying to read y from Phi digit 78 alone under float
+  Best levy:         pack = Tax_78(x/p) + '.' + parity   (already tested)
+
+----------------------------------------------------------------------------------------
+5) Sample n=1
+----------------------------------------------------------------------------------------
+  Tax_74(Phi)= 0.47556152915955157247070934588462193610098548582913243655046485815576863748
+  Tax_74(x/p)= 0.47556152915955157247070934588462193610098548582913243655046485815576863748  match=True
+  Tax_75(Phi)= 0.475561529159551572470709345884621936100985485829132436550464858155768637484
+  Tax_75(x/p)= 0.475561529159551572470709345884621936100985485829132436550464858155768637484  match=True
+  Tax_76(Phi)= 0.4755615291595515724707093458846219361009854858291324365504648581557686374849
+  Tax_76(x/p)= 0.4755615291595515724707093458846219361009854858291324365504648581557686374849  match=True
+  Tax_77(Phi)= 0.47556152915955157247070934588462193610098548582913243655046485815576863748494
+  Tax_77(x/p)= 0.47556152915955157247070934588462193610098548582913243655046485815576863748494  match=True
+  Tax_78(Phi)= 0.475561529159551572470709345884621936100985485829132436550464858155768637484948
+  Tax_78(x/p)= 0.475561529159551572470709345884621936100985485829132436550464858155768637484945  match=False
+
+========================================================================================
+VERDICT
+========================================================================================
+  Yes: a useful 'tax' is truncation of the x-channel.
+  Tax_k(Phi)~Tax_k(x/p) is reliable for k<=75 (~99%), weakens by k=77-78.
+  Do not tax Phi for the body — tax x/p (or compressed x) to avoid Fine carry.
+  Second levy: parity stamp 02/03 (or keep Fine). That is the y-branch tax.
+  If you meant transformation (not truncation): T_neg / T_lambda already exist.
+

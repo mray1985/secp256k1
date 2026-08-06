@@ -1,0 +1,33 @@
+{
+  "candidate_id": "S-20260710-02",
+  "short_name": "native_kangaroo_equivalence_throughput",
+  "formula": "L=2**(n-1); Q=P-[L]G; native Kangaroo on u in [0,L); C_i=ops_i/sqrt(2**(n-1)); >=10 seeds per n; ladder 35,40,45,50 then 55; verify [u]G=Q and [L+u]G=P; separate native vs python op metrics; T135 ~ C*2**67 / measured_ops_per_s from distribution not best run",
+  "domains": "solved puzzles; JeanLucPons Kangaroo native CPU/GPU",
+  "score_definition": "exact u match; C_i median/p90/range; throughput reproducibility",
+  "expected_direction": "native u equals python and d_n-L; scaling ~ sqrt(L)",
+  "allowed_parameters": {
+    "ladder": [
+      35,
+      40,
+      45,
+      50
+    ],
+    "ladder_conditional": [
+      55
+    ],
+    "seeds_per_n": 10,
+    "engine": "JeanLucPons Kangaroo",
+    "op_metrics": "native Count vs python ops separate until proven identical",
+    "glv_negation": "measure on/off only; no claim from binary presence"
+  },
+  "holdout_split": "none; benchmark on known solved puzzles",
+  "null_families": [
+    "false collision must fail pubkey verify"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Benchmarks search engine on known interval; verification is correctness gate.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

@@ -1,0 +1,57 @@
+=== Puzzle 140 pipeline run ===
+
+TARGET (53125 pubkey)
+  Px = 14209337303565764460094546138159026146027198320188098929659045244992519759424
+  Py = 112811665967762242085501977147851451381351584829682616476865345769307248405225
+  d known = no
+
+CONFIG
+  row = 1  (Px slot index)
+  Px[row] = 14209337303565764460094546138159026146027198320188098929659045244992519759424
+  Py = 112811665967762242085501977147851451381351584829682616476865345769307248405225
+  band LO..HI = [2^139, 2^140)
+
+Bridge regression: PASS
+  LAW-P OK
+  LAW-N OK (heaven rebirth)
+  FAMILY BRIDGE OK
+
+SHELF / OFFSET SHELL (no known d)
+  shelf2 = 714069018082471366960856265705786204772865 (140 bits)
+  shelf2 mod LO bits = 134
+  gap mod LO = 17170730628389393787865069685524907710977 (134 bits)
+  row = 1
+  predicted offset_bits (row law): [138, 139]
+  H-10 baseline (n-10): 130
+  C_floor = 1053263948268891411819202911236484110634920
+
+RSZ (hashkeys spend tx)
+  r = 103156088317849197759996882435181365194174551366286995120913712587868633841000
+  s = 15017469962149945200885750723848273514585811077818809131821534176221677769123
+  z = 114127494999609483589900034258620576750389929574496287636294793597914174465998
+  published k = none
+  R lift candidates: 2
+    y_even: x=103156088317849197759996882435181365194174551366286995120913712587868633841000
+    y_odd: x=103156088317849197759996882435181365194174551366286995120913712587868633841000
+  prefer_even_y R = (103156088317849197759996882435181365194174551366286995120913712587868633841000, 37333245915080596366466446640280650707141080414988633944262330900928885201344)
+  k not solvable without d (one ECDSA equation, two unknowns)
+
+PHASE 17 — d*G candidate scan (no known d injected)
+  candidates tested: 256
+  EC hits (any): 0
+  EC hits in-band: 0
+  hits matching target Px/Py row: 0
+
+SHELF2+OFFSET HUNT (row-calibrated bit filter + EC gate)
+  filtered candidates: 169
+  EC hits: 0
+  no EC hit in hunt window
+  closest filtered (by offset_bits vs pred):
+    d_bits=140 off_bits=139 gap=134 src=align:shelf2 (LO+(L2-L1 mod LO)) + (L3-L2 mod LO)
+    d_bits=140 off_bits=139 gap=134 src=align:shelf2 (LO+(L2-L1 mod LO)) + (L3-L1 mod LO)
+    d_bits=140 off_bits=139 gap=134 src=align:shelf2 (LO+(L2-L1 mod LO)) + (dy_mod mod LO)
+    d_bits=140 off_bits=139 gap=134 src=align:shelf2 (LO+(L2-L1 mod LO)) + (d3_mod mod LO)
+    d_bits=140 off_bits=139 gap=134 src=align:shelf2 (LO+(L2-L1 mod LO)) + (dy residue (sh
+
+RESULT: P140 OPEN — bridge closed, d not recovered
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\p140_pipeline_run.log

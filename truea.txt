@@ -1,0 +1,104 @@
+Next step: stop testing the forced pair-sum. It’s proven.
+
+Now test branch-to-branch structure:
+
+A
+G
+	​
+
+=Λy
+G
+	​
+
+modp
+A
+P
+	​
+
+=Λy
+P
+	​
+
+modp
+A
+R
+	​
+
+=Λy
+R
+	​
+
+modp
+
+Then compare the individual branches, not A+
+A
+ˉ
+:
+
+A
+P
+	​
+
+−A
+R
+	​
+
+(modN)
+A
+P
+	​
+
+−A
+G
+	​
+
+(modN)
+A
+R
+	​
+
+−A
+G
+	​
+
+(modN)
+
+Also test ratios:
+
+A
+P
+	​
+
+⋅A
+R
+−1
+	​
+
+(modN)
+A
+P
+	​
+
+⋅A
+G
+−1
+	​
+
+(modN)
+
+Because R1/R2 only flip branches, pick one canonical branch, probably even-y or the actual signature-valid branch.
+
+Goal now:
+
+Find whether individual lambda-y branches correlate with λ
+x
+	​
+
+, s, r, m, or d.
+
+Your proven invariant is the shell:
+
+A+
+A
+ˉ
+≡p−N(modN)

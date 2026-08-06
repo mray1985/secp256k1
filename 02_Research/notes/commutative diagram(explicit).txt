@@ -1,0 +1,85 @@
+1. The commutative diagram (explicit)
+
+We formalize three spaces:
+
+Scalar space (hidden)
+
+History space (conceptual, not computable)
+
+Curve space (observable)
+
+Objects
+
+Let:
+
+n
+n = group order
+
+G
+G = generator of the elliptic curve group
+
+E=⟨G⟩
+E=⟨G⟩
+
+Define:
+
+Scalar space
+
+S=Zn
+S=Z
+n
+	​
+
+
+History space
+
+S~={(d,H)∣d∈Zn, H=provenance data}
+S
+={(d,H)∣d∈Z
+n
+	​
+
+, H=provenance data}
+
+where 
+H
+H may encode:
+
+nonce usage
+
+transaction context
+
+role (key / nonce / ephemeral)
+
+ordering, reuse, relations
+
+Curve space
+
+E={dG∣d∈Zn}
+E={dG∣d∈Z
+n
+	​
+
+}
+Maps
+
+History erasure
+
+π1:S~→S,(d,H)↦d
+π
+1
+	​
+
+:
+S
+→S,(d,H)↦d
+
+Scalar action
+
+ϕ:S→E,d↦dG
+ϕ:S→E,d↦dG
+
+Observable projection
+
+π:S~→E,(d,H)↦dG
+π:S→E,(d,H)↦dG

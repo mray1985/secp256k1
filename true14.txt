@@ -1,0 +1,40 @@
+Next move is exactly:
+
+d
+i
+	​
+
+=(Gx
+i
+	​
+
+−B
+i
+	​
+
+)modN
+
+compare against:
+
+D
+Q
+	​
+
+, −D
+Q
+	​
+
+, D
+G
+	​
+
+, D
+P
+	​
+
+, D
+R
+	​
+
+
+If no individual match appears, then the unified law remains a shared collapse to δ, not an individual shell mapping.

@@ -1,0 +1,40 @@
+{
+  "candidate_id": "G-20260710-01",
+  "short_name": "creator_payload_lcg_64",
+  "formula": "u=d-2**(n-1); w=floor(2**64 * u / 2**(n-1)); chain n=75,80,...,130; w_{n+5}\u2261a*w_n+c (mod 2**64); infer a,c from w75,w80,w85 only; exact holdout 90..130; no width/modulus/byte-reverse/approx",
+  "domains": "solved d in band; w in 0..2**64-1",
+  "score_definition": "exact match count on holdout n=90..130; promote only if 9/9",
+  "expected_direction": "all holdout predictions exact",
+  "allowed_parameters": {
+    "bits": 64,
+    "modulus": "2**64",
+    "chain_step": 5,
+    "infer_from": [
+      75,
+      80,
+      85
+    ],
+    "holdout": [
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130
+    ],
+    "grid": "none"
+  },
+  "holdout_split": "infer 75,80,85; predict 90..130 exact",
+  "null_families": [
+    "one miss closes branch"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Tests creator-side payload recurrence on known d; not ECDSA verification or curve membership.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

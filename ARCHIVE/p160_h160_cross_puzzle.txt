@@ -1,0 +1,75 @@
+P160 d = hash160(another puzzle pubkey)?
+P160 band [730750818665451459101842416358141509827966271488, 1461501637330902918203684832716283019655932542976)  width 2^159
+P160 pubkey 02E0A8B039282FAF6FE0FD769CFBC4B6B4CF8758BA68220EAC420E32B91DDFA673
+
+=== hash160 values in P160 band: 51 / 87 puzzles ===
+  P  4  h160=9652d86bedf43ad264362e6e6eba6eb764508127  band_frac=0.174403  d*G==P160? no
+  P  5  h160=8f9dff39a81ee4abcbad2ad8bafff090415a2be8  band_frac=0.122009  d*G==P160? no
+  P  6  h160=f93ec34e9e34a8f8ff7d600cdad83047b1bcb45c  band_frac=0.947228  d*G==P160? no
+  P  7  h160=e2192e8a7dd8dd1c88321959b477968b941aa973  band_frac=0.766393  d*G==P160? no
+  P  8  h160=dce76b2613052ea012204404a97b3c25eac31715  band_frac=0.725812  d*G==P160? no
+  P 10  h160=d7729816650e581d7462d52ad6f732da0e2ec93b  band_frac=0.683185  d*G==P160? no
+  P 11  h160=f8c698da3164ef8fa4258692d118cc9a902c5acc  band_frac=0.943561  d*G==P160? no
+  P 12  h160=85a1f9ba4da24c24e582d9b891dacbd1b043f971  band_frac=0.044006  d*G==P160? no
+  P 13  h160=f932d0188616c964416b91fb9cf76ba9790a921e  band_frac=0.946863  d*G==P160? no
+  P 14  h160=97f9281a1383879d72ac52a6a3e9e8b9a4a4f655  band_frac=0.187291  d*G==P160? no
+  P 15  h160=fe7c45126731f7384640b0b0045fd40bac72e2a2  band_frac=0.988167  d*G==P160? no
+  P 17  h160=b67cb6edeabc0c8b927c9ea327628e7aa63e2d52  band_frac=0.425681  d*G==P160? no
+  P 18  h160=ad1e852b08eba53df306ec9daa8c643426953f94  band_frac=0.352494  d*G==P160? no
+  P 19  h160=ebfbe6819fcdebab061732ce91df7d586a037dee  band_frac=0.843625  d*G==P160? no
+  P 20  h160=b907c3a2a3b27789dfb509b730dd47703c272868  band_frac=0.445549  d*G==P160? no
+  P 23  h160=d0a79df189fe1ad5c306cc70497b358415da579e  band_frac=0.630115  d*G==P160? no
+  P 26  h160=bfebb73562d4541b32a02ba664d140b5a574792f  band_frac=0.499381  d*G==P160? no
+  P 30  h160=d39c4704664e1deb76c9331e637564c257d68a08  band_frac=0.653207  d*G==P160? no
+  P 31  h160=d805f6f251f7479ebd853b3d0f4b9b2656d92f1d  band_frac=0.687682  d*G==P160? no
+  P 32  h160=9e42601eeaedc244e15f17375adb0e2cd08efdc9  band_frac=0.236401  d*G==P160? no
+  P 34  h160=f6d67d7983bf70450f295c9cb828daab265f1bfa  band_frac=0.928421  d*G==P160? no
+  P 35  h160=f6d8ce225ffbdecec170f8298c3fc28ae686df25  band_frac=0.928491  d*G==P160? no
+  P 38  h160=b190e2d40cfdeee2cee072954a2be89e7ba39364  band_frac=0.387234  d*G==P160? no
+  P 40  h160=95a156cd21b4a69de969eb6716864f4c8b82a82a  band_frac=0.168986  d*G==P160? no
+  P 41  h160=d1562eb37357f9e6fc41cb2359f4d3eda4032329  band_frac=0.635443  d*G==P160? no
+  P 42  h160=8efb85f9c5b5db2d55973a04128dc7510075ae23  band_frac=0.117051  d*G==P160? no
+  P 43  h160=f92044c7924e5525c61207972c253c9fc9f086f7  band_frac=0.946297  d*G==P160? no
+  P 44  h160=80df54e1f612f2fc5bdc05c9d21a83aa8d20791e  band_frac=0.006816  d*G==P160? no
+  P 45  h160=f0225bfc68a6e17e87cd8b5e60ae3be18f120753  band_frac=0.876049  d*G==P160? no
+  P 46  h160=9a012260d01c5113df66c8a8438c9f7a1e3d5dac  band_frac=0.203160  d*G==P160? no
+  P 47  h160=f828005d41b0f4fed4c8dca3b06011072cfb07d4  band_frac=0.938721  d*G==P160? no
+  P 48  h160=8661cb56d9df0a61f01328b55af7e56a3fe7a2b2  band_frac=0.049859  d*G==P160? no
+  P 50  h160=de081b76f840e462fa2cdf360173dfaf4a976a47  band_frac=0.734622  d*G==P160? no
+  P 51  h160=ef6419cffd7fad7027994354eb8efae223c2dbe7  band_frac=0.870242  d*G==P160? no
+  P 54  h160=cb66763cf7fde659869ae7f06884d9a0f879a092  band_frac=0.589064  d*G==P160? no
+  P 55  h160=db53d9bbd1f3a83b094eeca7dd970bd85b492fa2  band_frac=0.713496  d*G==P160? no
+  P 58  h160=8c2a6071f89c90c4dab5ab295d7729d1b54ea60f  band_frac=0.095043  d*G==P160? no
+  P 59  h160=b14ed3146f5b2c9bde1703deae9ef33af8110210  band_frac=0.385218  d*G==P160? no
+  P 60  h160=cdf8e5c7503a9d22642e3ecfc87817672787b9c5  band_frac=0.609158  d*G==P160? no
+  P 62  h160=e26646db84b0602f32b34b5a62ca3cae1f91b779  band_frac=0.768746  d*G==P160? no
+  P 63  h160=ef58afb697b094423ce90721fbb19a359ef7c50e  band_frac=0.869894  d*G==P160? no
+  P 68  h160=e0b8a2baee1b77fc703455f39d51477451fc8cfc  band_frac=0.755635  d*G==P160? no
+  P 75  h160=badf8b0d34289e679ec65c6c61d3a974353be5cf  band_frac=0.459947  d*G==P160? no
+  P 85  h160=cd03c1e6268ce9b89e3c3eeab8d0f1b6e8cac281  band_frac=0.601677  d*G==P160? no
+  P 90  h160=d06b6e206691295ec345782d7ea0686969d8674b  band_frac=0.628279  d*G==P160? no
+  P100  h160=c7a7b23f6bd98b8aaf527beb724dda9460b1bc6e  band_frac=0.559805  d*G==P160? no
+  P115  h160=ea0f2b7576bd098921fce9bfebe37f6383e639a4  band_frac=0.828588  d*G==P160? no
+  P125  h160=f7079256aa027dc437cbb539f955472416725fc8  band_frac=0.929919  d*G==P160? no
+  P130  h160=a24922852051a9002ebf4c864a55acb75bb4cf75  band_frac=0.267857  d*G==P160? no
+  P140  h160=ffbb35a7bb9bbe16c1aa2534f7ff11d59c8e3d1a  band_frac=0.997901  d*G==P160? no
+  P150  h160=e08c4d3bc9cf2b3e2cb88de2bfaa4fe8c7aa3f24  band_frac=0.754282  d*G==P160? no
+
+=== EC hits (with transforms): 0 ===
+  (none)
+
+=== solved d == another puzzle h160: 0 ===
+  (none on 53125 solved set)
+
+=== P160 self-reference ===
+  h160(P160) = e84818e1bf7f699aa6e28ef9edfb582099099292  bits=160
+  in band? True  band_frac=0.814700
+  h160(P160)*G==P160? False
+
+=== magnitude (log10) ===
+  d_lo           bits=160  ~10^47.86
+  d_hi~          bits=160  ~10^48.16
+  h160(P160)     bits=160  ~10^48.12
+  h160(P135)     bits=158  ~10^47.53
+  h160(P125)     bits=160  ~10^48.15
+  h160(P70)      bits=159  ~10^47.73

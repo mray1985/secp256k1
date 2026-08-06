@@ -1,0 +1,21 @@
+14.	 Decimal: 
+    Hex:
+    log2:
+	
+
+	range:	
+
+		target:	 
+	
+			mini target:	
+
+				DIGITS:	
+
+					mini DIGITS:	
+
+						RESULT:
+
+							mini RESULT:	
+
+
+:::

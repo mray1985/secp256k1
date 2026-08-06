@@ -1,0 +1,33 @@
+P135 ARREST + PRECOMPUTED ENDLESS SCROLL
+
+=== hinge / arrest constants ===
+floor(sqrt N) = floor(sqrt p) = 2^128 - 1  (shared shell)
+frac(sqrt N)) = 0.364615348015  (decimal tail — spatial)
+{H} = 0.345702  {H/2} = 0.172851  (log hinge)
+{Delta_y} = 0.006126  (live y-bridge on P)
+sqrt(p-N) ~ 2.079472e+19
+
+k=71 arrest (email): bits=134 in_band=False  (134-bit — below band)
+k=72 arrest (frac):  ...890975609950
+k=78 arrest ({Dy}): ...051191167665
+
+anchors=15  radius=+/-10,000,000  chunk=250,000
+scroll: 1x scalar mult + G-table offset adds; filter on prebuilt x/y arrays
+
+[1/15] P_Dy/direct                      20,000,080 pts 198.6s (100,683/s) best_nib=5 
+[2/15] P_Dy/height_mirror               20,000,080 pts 196.9s (101,559/s) best_nib=5 
+[3/15] P_Dy/toward_floor                20,000,080 pts 186.6s (107,209/s) best_nib=5 
+[4/15] P_Dy/toward_top                  20,000,080 pts 188.3s (106,235/s) best_nib=6 
+[5/15] P_x/direct                       20,000,080 pts 190.4s (105,020/s) best_nib=6 
+[6/15] P_x/height_mirror                20,000,080 pts 187.2s (106,841/s) best_nib=6 
+[7/15] P_x/toward_floor                 20,000,080 pts 187.2s (106,866/s) best_nib=5 
+[8/15] P_x/toward_top                   20,000,080 pts 186.7s (107,125/s) best_nib=5 
+[9/15] P_y/direct                       20,000,080 pts 186.6s (107,207/s) best_nib=5 
+[10/15] P_y/height_mirror                20,000,080 pts 187.2s (106,825/s) best_nib=6 
+[11/15] P_y/toward_floor                 20,000,080 pts 188.6s (106,063/s) best_nib=6 
+[12/15] P_y/toward_top                   20,000,080 pts 186.5s (107,266/s) best_nib=5 
+[13/15] arrest_Delta_y_k78               20,000,080 pts 186.9s (106,996/s) best_nib=6 
+[14/15] arrest_frac_k72                  20,000,080 pts 186.2s (107,439/s) best_nib=6 
+[15/15] frac_sqrtN k=72                  20,000,080 pts 186.3s (107,333/s) best_nib=6 
+
+total=300,001,200 wall=2830.1s avg=106,004/s result=not found

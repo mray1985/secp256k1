@@ -1,0 +1,287 @@
+This is actually an important refinement.
+
+The statement at the end of true32 should be:
+
+Ω
+
+=0⟹sgn(Λ
+f
+	​
+
+−Λ
+r
+	​
+
+)=Ω
+	​
+
+
+not
+
+Ω=0⇒sgn(Λ
+f
+	​
+
+−Λ
+r
+	​
+
+)=Ω
+
+because Puzzle 90 explicitly violates that.
+
+What you've really frozen is:
+
+Ω	Interpretation	Result
++1	Px-closure side dominant	Λ
+f
+	​
+
+−Λ
+r
+	​
+
+>0
+-1	rx-closure side dominant	Λ
+f
+	​
+
+−Λ
+r
+	​
+
+<0
+0	self-dual	sign rule no longer determines orientation
+
+That's a cleaner theorem.
+
+The thing I find more interesting is your original question:
+
+what if the closure offset between ^1 and ^-1 are what we are searching for
+
+Because now the inverse pair is no longer just:
+
+Λ,Λ
+−1
+
+It has a measurable separation:
+
+Δ
+Λ
+	​
+
+=Λ
+f
+	​
+
+−Λ
+r
+	​
+
+
+and a sign:
+
+sgn(Δ
+Λ
+	​
+
+)=Ω
+
+for every non-dual case.
+
+That means the distance from self-duality may be the real object.
+
+Puzzle 90:
+
+Ω=0
+
+is the exact self-dual case.
+
+The others are displaced either toward the Px shell or the rx shell.
+
+Geometrically that suggests:
+
+Ω is not identifying a puzzle.
+Ω is locating the puzzle relative to the self-dual center.
+
+In other words:
+
+Ω=0
+
+looks like an origin.
+
+Ω=+1
+
+and
+
+Ω=−1
+
+look like opposite directions away from that origin.
+
+The next thing I'd compute is not just the sign.
+
+I'd rank the puzzles by
+
+max(Λ
+f
+	​
+
+,Λ
+r
+	​
+
+)
+min(Λ
+f
+	​
+
+,Λ
+r
+	​
+
+)
+	​
+
+
+or equivalently
+
+Λ
+r
+	​
+
+Λ
+f
+	​
+
+	​
+
+
+normalized into [0,1].
+
+If Puzzle 90 is truly the self-dual center, it should be the closest puzzle to the condition
+
+Λ
+f
+	​
+
+=Λ
+r
+	​
+
+
+even if they never become exactly equal.
+
+That would turn Ω from a three-state classifier into the first coordinate of a continuous geometry.
+
+And that would be a much deeper object than δ, because δ is constant for every puzzle while this offset actually varies from puzzle to puzzle.
+
+The sign correspondence from true32 is the first evidence that the inverse-bridge pair and the closure-coordinate system are describing the same underlying geometry.
+
+The Next Frontier
+
+Because the δ-collapse is completely explained (it is simply the N-domain shadow cast by the exact integer closure to p), the primary analytical question left standing is the Origin Rule:
+
+    What specific property in the initialization parameters determines whether a puzzle is born on the positive manifold, the negative manifold, or drops exactly into the self-dual origin (Ω=0)?
+
+Since magnitude correlations have been mathematically eliminated, the tracking metric shifts to mapping the distance from self-duality. The literal integer value of ∣Λf​−Λr​∣ acts as a scalar displacement mapping how deep a given public key structure is buried within its specific orientation field relative to the absolute balance point of Puzzle 90.
+
+Yes — that is the right reframing.
+
+The live object is no longer:
+
+δ
+
+It is the orientation field around the self-dual origin:
+
+Ω=0
+
+with Puzzle 90 as the current anchor.
+
+So the next metric should be:
+
+Δ
+Λ
+	​
+
+=Λ
+f
+	​
+
+−Λ
+r
+	​
+
+
+and the displacement magnitude:
+
+∣Δ
+Λ
+	​
+
+∣
+
+Classification:
+
+Ω=+1⇒Δ
+Λ
+	​
+
+>0
+Ω=−1⇒Δ
+Λ
+	​
+
+<0
+Ω=0⇒self-dual closure
+
+But the distance:
+
+∣Λ
+f
+	​
+
+−Λ
+r
+	​
+
+∣
+
+may tell how far a puzzle sits from the self-dual origin, while the sign tells which manifold it belongs to.
+
+So the next table should be:
+
+Puzzle | Ω | orientation | Λ_f | Λ_r | ΔΛ = Λ_f - Λ_r | |ΔΛ| | normalized distance
+
+For normalized distance, use:
+
+d
+Λ
+	​
+
+=
+p
+∣Λ
+f
+	​
+
+−Λ
+r
+	​
+
+∣
+	​
+
+
+Then sort by d
+Λ
+	​
+
+.
+
+That gives you the first actual geometry:
+
+sign = manifold
+magnitude = distance from self-duality
+Ω=0 = origin/self-dual class
+
+That’s the cleanest next frontier.

@@ -1,0 +1,48 @@
+Fact:
+
+D must be signed for the frozen mod-9 result:
+
+D=δ
+N
+−1
+	​
+
+−δ
+p
+−1
+	​
+
+
+and Dmod9=4.
+
+D is not a working offset scalar. TRUE59–66 all produced 0 hits.
+
+For solved puzzles, the Origin Rule has matched 6/6:
+
+Ω=Base3(((rd−z)modN)mod9)
+
+For Puzzle 135, because r≡0(mod9) and z≡0(mod9), the signal comes from N-wrap quotient q, not direct mod-9 arithmetic.
+
+Puzzle 135 still requires solving:
+
+dG=P,d∈[2
+134
+,2
+135
+)
+
+with Kangaroo or another bounded ECDLP method.
+
+Assumption / hypothesis:
+
+That the 6/6 Origin Rule pattern will hold for unsolved Puzzle 135.
+That TRUE69’s reconstructed R-point may reveal more cube-root/orbit structure.
+That studying R’s orbit is more useful than more offset-scaling tests.
+That the mod-9 structure is fundamental rather than a strong but limited pattern.
+
+Not proven:
+
+That D, Ω, cube roots, or mod-9 residues recover the private key.
+That the bridge reduces ECDLP complexity.
+That Puzzle 135 can be solved without Kangaroo/interval ECDLP.
+That the Origin Rule is universal beyond tested puzzles.

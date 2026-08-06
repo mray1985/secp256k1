@@ -1,0 +1,62 @@
+Thought for 4s
+
+Yep. This lands the plane:
+
+The 3-adic / mod-9 structure is confirmed as a phase filter.
+It is not confirmed as a key equation.
+
+The biggest correction is the ECDSA sign:
+
+s*k ≡ z + r*d mod N
+
+so:
+
+r*d ≡ s*k - z mod N
+
+and:
+
+d ≡ (s*k - z) * r^-1 mod N
+
+That means the earlier form:
+
+r*d - z ≡ -s*k mod N
+
+was wrong. Your uploaded run explicitly confirms the corrected ECDSA relation across the available puzzle data and rejects the x-coordinate mod-9 shortcut.
+
+So the next move is not “find d from mod 9.” It is:
+
+Use mod 9 to reject bad phase candidates before curve multiplication.
+
+The working model should now be:
+
+1. Generate phase candidate v from bridge objects:
+   Λ, Λ^-1, δ, δ^-1 gap, c/t ratios, c/d ratios, p↔N reduction drift.
+
+2. Build phase-shifted scalar candidates:
+   d = d0 + v
+   d = d0 - v
+   k = k0 + v
+   k = k0 - v
+
+3. Apply the Origin Rule:
+   Ω = classifier((r*d - z) mod 9)
+
+4. Only survivors go to hard curve tests:
+   dG.x == X_puzzle
+   kG.x mod N == r
+
+Where:
+
+d0 = -z * r^-1 mod N
+k0 = z * s^-1 mod N
+delta_k = r * s^-1 mod N
+
+The thing to derive next is exactly what your summary says:
+
+D = δ^-1 mod N - δ^-1 mod p
+
+to
+
+Ω = Base3((r*d - z) mod 9)
+
+That is the surviving bridge. Not direct key recovery — phase classification.

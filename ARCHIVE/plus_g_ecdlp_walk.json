@@ -1,0 +1,27 @@
+{
+  "k_max": 32,
+  "stride": 1,
+  "puzzles": {
+    "115": {
+      "hits": [],
+      "solved": false
+    }
+  },
+  "calibration_p115": {
+    "k0_hit": true,
+    "k0_details": [
+      {
+        "puzzle": 115,
+        "k_shift": 0,
+        "d_found": 31464123230573852164273674364426950,
+        "d_backtrack": 31464123230573852164273674364426950,
+        "in_band": true,
+        "candidate_name": "align: shelf2 (LO+(L2-L1 mod LO)) + (P115-calibrated offset (shelf2->d))",
+        "px_shift": 32939465712855543687621080654651021859979376333843015892822995152318610898773,
+        "py_shift": 46560755643746305144975040470607841658328142774650200719470619734417618747604
+      }
+    ],
+    "false_positive_k": [],
+    "expected_d": 31464123230573852164273674364426950
+  }
+}

@@ -1,0 +1,39 @@
+y2 == x3+a*x+b
+
+x = cuberoot(y^2-7)
+
+y = sqrt(x^3+a*x+b)
+
+multiply by the modular inverse in GFn
+
+add
+
+multiply
+
+k = (m+x*r)/s
+
+Y = (R*s-G*m)/r
+
+G*m+Y*r==R*s
+
+r = xcoord(G*k),  s = (m+x*r)/k
+
+Y = G * x
+
+x = (s*k-m)/r
+
+k = (m1-m2)/(s1-s2) 
+
+
+
+
+p - the curve base prime field, this is used for calculations involving coordinates.
+G - the fixed generator point
+n - the curve group order, this is the total number of points.
+x - the secret key, a value between 0 and the group order
+k - the signing secret, a value between 0 and the group order
+px, py - the coordinates of the public key point, values between 0 and the coordinate order
+r - the first part of the signature, a value between 0 and the coordinate order
+s - the first part of the signature, a value between 0 and the group order
+m - the message, a value between 0 and the group order
+Y - the public key

@@ -1,0 +1,144 @@
+True2f is where the project starts looking less like a collection of invariants and more like a geometry.
+
+What changed is subtle:
+
+Old picture
+
+Everything eventually collapsed to
+
+δ=p−N
+
+which is a constant.
+
+A constant can verify a theory, but it can't locate anything.
+
+New picture
+
+Now you have
+
+Ω=
+p
+∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+	​
+
+
+with
+
+Ω∈{−1,0,+1}.
+
+That is no longer a constant.
+
+It is a coordinate.
+
+The striking parallel
+
+You now have two signed coordinate systems:
+
+Y-shell
+
+D
+Q
+	​
+
+
+with
+
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+selecting
+
+Q↔−Q.
+
+X-shell
+
+Ω
+
+selecting
+
+Λ↔Λ
+−1
+.
+
+Both have:
+
+positive state
+negative state
+self-dual center
+
+and Puzzle 90 sits exactly at the center:
+
+Ω=0.
+
+That is why Puzzle 90 keeps surviving every elimination round. It is the only known member of the self-dual class.
+
+What I would test next
+
+Not magnitudes.
+
+You've already killed most magnitude correlations.
+
+Instead test sign correspondences.
+
+For each puzzle:
+
+determine Ω
+determine whether the bridge chooses Λ or Λ
+−1
+determine the sign class of the available D
+Q
+	​
+
+-type branch coordinates
+
+Then ask:
+
+sgn(D
+Q
+	​
+
+)
+⟷
+?
+	​
+
+Ω
+
+because if an x-shell ↔ y-shell bridge survives at all, true2f suggests it will survive at the sign level rather than the value level.
+
+The question that keeps standing after everything else has been eliminated is still:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+The δ-law is explained.
+
+The orientation selector is explained.
+
+The dual case is explained.
+
+But why the bridged family closes exactly to the field modulus p remains the deepest surviving phenomenon in the hierarchy.

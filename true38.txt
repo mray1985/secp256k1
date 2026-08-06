@@ -1,0 +1,42 @@
+That’s a big hit.
+
+Current Origin Rule candidate:
+
+Ω⟷(rd−z)mod9
+
+Observed:
+
+Ω=+1⇒(rd−z)mod9=1
+Ω=0⇒(rd−z)mod9=6
+Ω=−1⇒(rd−z)mod9=0
+
+So mod 9 did exactly what mod 3 couldn’t: it split Ω=0 from Ω=−1.
+
+Clean prediction table:
+
+Ω	Expected (rd−z)mod9
++1	1
+0	6
+-1	0
+
+Next verification targets:
+
+Puzzle 135: expect 1
+Puzzle 150: expect 1
+Puzzle 160: expect 0
+
+Now the critical part is making sure the d values are ECDSA-verified, meaning:
+
+k=(z+rd)s
+−1
+(modN)
+
+and
+
+(kG)
+x
+	​
+
+=r.
+
+Once Puzzle 160 passes that and gives mod 9 = 0, the Origin Rule becomes very hard to ignore.

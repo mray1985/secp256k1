@@ -1,0 +1,23 @@
+{
+  "candidate_id": "P71-S-20260710-01",
+  "short_name": "p71_address_scanner_calibration",
+  "formula": "d->compressed SEC->SHA256->RIPEMD160; linear scan; no kangaroo; calibrate oracle+solved+checkpoint+rate",
+  "domains": "Puzzle 71 address/hash160; solved puzzle addresses; artificial intervals",
+  "score_definition": "exact recovery; partition coverage; checkpoint resume; keys/s",
+  "expected_direction": "recover all calibration targets; measure R",
+  "allowed_parameters": {
+    "kangaroo": false,
+    "pattern_heuristics": false,
+    "band": "[2^70,2^71)"
+  },
+  "holdout_split": "calibration only; full band not searched",
+  "null_families": [
+    "shelf2/gap ranking without explicit S"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Scanner correctness on known hash160 targets.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

@@ -1,0 +1,44 @@
+P135 fractional constraint scan
+H=128.345702146609  frac(H)=0.345702
+log2(sqrt Py)=127.339575723692  frac=0.339576
+Delta_y=1.006126  frac(Dy)=0.006126
+identity frac(H)-frac(lsy)=0.006126  (expect frac(Dy)=0.006126)
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  mid bf=0.584963
+radius +/- 1,000,000
+
+=== anchors ===
+upper_half_mid:
+  target bf=0.584963  center d tail ...7207116800
+  actual bf=0.584963  frac_log2d=0.584963  frac(lsy)-frac(log2d)=-0.245387  bf-frac(lsy)=0.245387
+  scan +/-1,000,000 tested=2,000,001 hit=no
+
+frac_lsy_minus_frac_dy:
+  target bf=0.333449  center d tail ...6850769920
+  actual bf=0.333449  frac_log2d=0.333449  frac(lsy)-frac(log2d)=0.006126  bf-frac(lsy)=-0.006126
+  scan +/-1,000,000 tested=2,000,001 hit=no
+
+frac_H:
+  target bf=0.345702  center d tail ...2033649664
+  actual bf=0.345702  frac_log2d=0.345702  frac(lsy)-frac(log2d)=-0.006126  bf-frac(lsy)=0.006126
+  scan +/-1,000,000 tested=2,000,001 hit=no
+
+dy_minus1_lane:
+  target bf=0.591089  center d tail ...7836170240
+  actual bf=0.591089  frac_log2d=0.591089  frac(lsy)-frac(log2d)=-0.251513  bf-frac(lsy)=0.251513
+  scan +/-1,000,000 tested=2,000,001 hit=no
+
+bf_minus_lsy_0245:
+  target bf=0.585026  center d tail ...4473198592
+  actual bf=0.585026  frac_log2d=0.585026  frac(lsy)-frac(log2d)=-0.245450  bf-frac(lsy)=0.245450
+  scan +/-1,000,000 tested=2,000,001 hit=no
+
+=== note: simultaneous bf~0.585 AND frac(lsy)-frac(log2d)~0.006 impossible ===
+  at bf=0.585: frac(lsy)-frac(log2d) = -0.245424
+  at frac diff 0.006: bf = 0.333449
+
+=== micro corridor bf in [0.583,0.587]: 90,572,513,434,329,495,005,322,165,551,812,837,377 keys ===
+  skip full micro (>90,572,513,434,329,495,005,322,165,551,812,837,377 keys); use --radius on anchor
+
+total EC keys tested: 10,000,005
+elapsed: 282.5s
+hits: 0

@@ -1,0 +1,91 @@
+P135 LOG BRIDGE PROBE (high precision)
+
+log2(N) = 255.9999999999999999999999999999999999999946123197932893157087187870885507803304503357727380064452626
+log2(p) = 255.9999999999999999999999999999999999999999999999999999999999999999999464874546348918372395014421393
+log2(p) - log2(N) = 5.3876802067106842912812129113957071241845560645014949968767E-39
+log2(7) = 2.807354922057604107441969317231830808641026625966140783677291724070320848862192986497860999170210785
+
+=== per witness x ===
+label              tail              vN              vP         dN-dP       fracN
+Px[0]             ...  059    255.33133798    255.33133798  -1.077536e-38  0.99738804
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+Px[1]             ...  014    255.56278018    255.56278018  -1.077536e-38  0.99829211
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+Px[2]             ...  590    247.85117282    247.85117282  -1.077536e-38  0.96816864
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+rx[0]             ...  219      2.77503765      2.77503765  -1.616304e-38  0.01083999
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+rx[1]             ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+rx[2]             ...  739    252.34253186    252.34253186  -1.077536e-38  0.98571302
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+r_sig             ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+u0                ...  354    255.98390062    255.98390062  -1.077536e-38  0.99993711
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+u1                ...  115      1.74536041      1.74536041  -1.616304e-38  0.00681781
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+u2                ...  205      1.24361929      1.24361929  -1.616304e-38  0.00485789
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+R_eff i=1j=0      ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+R_eff i=0j=1      ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+R_eff i=2j=2      ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+r_RSZ             ...  368      1.74803705      1.74803705  -1.616304e-38  0.00682827
+  -> d via N/lo*(1+frac1): bits=135 ec=False
+  -> d via N/lo*2^frac1: bits=135 ec=False
+  -> d via P/lo*(1+frac1): bits=135 ec=False
+  -> d via P/lo*2^frac1: bits=135 ec=False
+
+=== solved puzzle correlation (Px vs log2(d)) ===
+  puzzles: 73
+  mean |vN - log2(d) mod log2(N)|: 137.979730
+  mean |vP - log2(d) mod log2(p)|: 137.979730
+  mean |vN - log2(d) mod log2(p)| (cross): 137.979730
+
+=== same on r from RSZ where available ===
+  RSZ r puzzles: 14 mean err vs log2(d) mod log2(N): 146.941371
+
+=== VERDICT ===
+  No EC hit from log-bridge d candidates on P135.

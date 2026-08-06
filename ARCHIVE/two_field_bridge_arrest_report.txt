@@ -1,0 +1,34 @@
+TWO-FIELD BRIDGE ARREST WARRANT
+lambda = (Px * denom^-1 mod p) mod N
+arrest x = lambda * z * (s - r*lambda)^-1 mod N
+
+P135 TWO-FIELD BRIDGE GRID
+pub Px tail ...590  r tail ...368
+
+  Px[0]/rx[0] field: lam_tail ...89501 x_bits=255 ec=False band=False
+  Px[0]/rx[1] field: lam_tail ...39180 x_bits=255 ec=False band=False
+  Px[0]/rx[2] field: lam_tail ...14645 x_bits=256 ec=False band=False
+  Px[1]/rx[0] field: lam_tail ...14645 x_bits=256 ec=False band=False
+  Px[1]/rx[1] field: lam_tail ...89501 x_bits=255 ec=False band=False
+  Px[1]/rx[2] field: lam_tail ...39180 x_bits=255 ec=False band=False
+  Px[2]/rx[0] field: lam_tail ...39180 x_bits=255 ec=False band=False
+  Px[2]/rx[1] field: lam_tail ...14645 x_bits=256 ec=False band=False
+  Px[2]/rx[2] field: lam_tail ...89501 x_bits=255 ec=False band=False
+
+P135 cubic u_i as field denom (lambda = (Px*u_i^-1 mod p) mod N):
+  Px[0]/u0 field: x_bits=253 ec=False band=False lam...315
+  Px[1]/u0 field: x_bits=256 ec=False band=False lam...127
+  Px[2]/u0 field: x_bits=254 ec=False band=False lam...884
+  Px[0]/u1 field: x_bits=256 ec=False band=False lam...966
+  Px[1]/u1 field: x_bits=256 ec=False band=False lam...288
+  Px[2]/u1 field: x_bits=254 ec=False band=False lam...072
+  Px[0]/u2 field: x_bits=256 ec=False band=False lam...390
+  Px[1]/u2 field: x_bits=256 ec=False band=False lam...056
+  Px[2]/u2 field: x_bits=253 ec=False band=False lam...880
+
+P135 hits: 0
+
+ALL RSZ PUZZLES — field bridge Px_pub/r_sig
+
+
+Total hits: 0

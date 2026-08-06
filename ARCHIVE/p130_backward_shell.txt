@@ -1,0 +1,37 @@
+P130 BACKWARD-SHELL TEST (past 2^128)
+true d bits=130 band_frac=0.621997
+true d=1103873984953507439627945351144005829577
+
+=== FORWARD (standard) ===
+k = k0 + d*dk:  k bits=255
+R align rx,ry: (True, True)
+d*G==P: True
+recover d from k: True
+
+=== k FROM true d (backward-shell variants) ===
+  k = s*(z+r*d)                lined_up=False  k_bits=251
+  k = (z+r*d)*s                lined_up=False  k_bits=251
+  k = (k0_b + d*dk_b)          lined_up=False  k_bits=251
+  k = (k0_b + d*dk_b)^-1       lined_up=False  k_bits=255
+  k = (z*s + d*r)^-1           lined_up=False  k_bits=256
+
+=== d FROM true k (backward recovery variants) ===
+  fwd d=(sk-z)/r               d==true=True  d*G==P=True
+  bwd d=(sk-z)*r               d==true=False  d*G==P=False
+  bwd d=(k-k0_b)*dk_b^-1       d==true=False  d*G==P=False
+  bwd d=(k-k0_b)^-1*dk_b       d==true=False  d*G==P=False
+  bwd d=(k*k0_b^-1 - z)*r      d==true=False  d*G==P=False
+
+=== COMPLEMENT / MIRROR scalars ===
+  d                        bf=0.6220  k*G==R=(True, True)  d*G==P=True
+  band_complement top-d    bf=-0.6220  k*G==R=(False, False)  d*G==P=False
+  N-d                      bf=170141183460469231731687303715884105728.0000  k*G==R=(False, False)  d*G==P=False
+
+=== 2^129.58 bounce (100) — backward k=s*(z+r*d) lined up on R? ===
+  anchor bf=0.4948  R_hits=0
+
+=== s MUST STAY INVERSE (user correction) ===
+  Only k forms with s^-1 and (z+r*d) forward hit R:
+    k = s^-1(z+rd)  ==  (z+rd)*s^-1   [same, R_ok=True]
+  k = s(z+rd) or s^-1(z+rd)^-1 or s(z+rd)^-1  [all R_ok=False]
+  d recovery: only fwd d=(sk-z)/r works; s^-1 in d-path variants fail

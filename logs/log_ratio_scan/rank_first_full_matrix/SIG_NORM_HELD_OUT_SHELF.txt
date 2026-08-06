@@ -1,0 +1,43 @@
+HELD-OUT + SHELF TESTS on (a,b) normalization
+
+=== Focus angles (verified) ===
+P135: wt=82  theta_a=1.2042 (69.0 deg)  theta_b=1.7385 (99.6 deg)
+P150: wt=86  theta_a=5.6717 (325.0 deg)  theta_b=4.4214 (253.3 deg)
+P155: wt=90  theta_a=5.5416 (317.5 deg)  theta_b=1.9004 (108.9 deg)
+P160: wt=81  theta_a=2.5910 (148.5 deg)  theta_b=4.0907 (234.4 deg)
+
+=== Group circular means (rsz rows) ===
+low wt quintile theta_a circ mean: 2.8417 (n=26)
+high wt quintile theta_a circ mean: 0.3806
+high wt quintile theta_b circ mean: 0.4357 (n=19)
+mid mean circ_a_to_0: 3.160359e+76
+high mean circ_a_to_0: 2.341834e+76
+
+=== CV: predict wt cohort from (a,b,theta,...) only — no d ===
+accuracy: 0.4634
+majority baseline: 0.5854 (mid)
+feature-shuffle null mean: 0.4779
+feature-shuffle null p95: 0.7059
+beats null p95: False
+label_counts: {'mid': 48, 'high': 17, 'low': 17}
+
+=== P150/P155 shelf vs solved ===
+shelf circ_a=2397302955370839789755683445765398511571095349336323449702658704656922959175 (2.070351e-02 of N)  circ_b=46459554919273059015929047826989760005275855562538255139003129949097169126866 (4.012325e-01 of N)
+null frac solved pairs with circ_a <= shelf: 0.0385
+P150 nearest solved by joint circ(a)+circ(b):
+  P28 wt=80  circ_a/N=0.0090 circ_b/N=0.0576
+  P80 wt=92  circ_a/N=0.0526 circ_b/N=0.0245
+  P35 wt=88  circ_a/N=0.0166 circ_b/N=0.0812
+  P20 wt=80  circ_a/N=0.0069 circ_b/N=0.1258
+  P44 wt=78  circ_a/N=0.0767 circ_b/N=0.1004
+P155 nearest solved by joint circ(a)+circ(b):
+  P66 wt=73  circ_a/N=0.0571 circ_b/N=0.0322
+  P14 wt=80  circ_a/N=0.1156 circ_b/N=0.0334
+  P70 wt=78  circ_a/N=0.1089 circ_b/N=0.0508
+  P55 wt=89  circ_a/N=0.0727 circ_b/N=0.1040
+  P125 wt=82  circ_a/N=0.0127 circ_b/N=0.2012
+
+RULING:
+- Angular proximity of theta_a for 150/155 is measurable; interpret as shared nonce path: NO.
+- Weight-cohort prediction from (a,b,theta) must beat shuffle null to count as signal.
+- Still signature normalization only; DLP intact without k.

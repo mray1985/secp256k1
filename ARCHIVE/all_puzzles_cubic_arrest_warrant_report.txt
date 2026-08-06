@@ -1,0 +1,103 @@
+ALL PUZZLES CUBIC ARREST WARRANT
+puzzles=20  N mod 9=7
+
+P65  Px...227  r...962  band_bits=65
+  known d bits=65
+  branches=6
+  no hits
+
+P70  Px...307  r...294  band_bits=70
+  known d bits=70
+  branches=3
+  no hits
+
+P75  Px...213  r...981  band_bits=75
+  known d bits=75
+  branches=3
+  no hits
+
+P80  Px...956  r...472  band_bits=80
+  known d bits=80
+  branches=6
+  no hits
+
+P85  Px...498  r...703  band_bits=85
+  known d bits=85
+  branches=3
+  no hits
+
+P90  Px...925  r...142  band_bits=90
+  known d bits=90
+  branches=3
+  no hits
+
+P95  Px...525  r...850  band_bits=95
+  known d bits=95
+  branches=3
+  no hits
+
+P100  Px...559  r...660  band_bits=100
+  known d bits=100
+  branches=6
+  no hits
+
+P105  Px...907  r...826  band_bits=105
+  known d bits=105
+  branches=6
+  no hits
+
+P110  Px...061  r...400  band_bits=110
+  known d bits=110
+  branches=3
+  no hits
+
+P115  Px...773  r...818  band_bits=115
+  known d bits=115
+  branches=3
+  no hits
+
+P120  Px...552  r...490  band_bits=120
+  known d bits=120
+  branches=3
+  no hits
+
+P125  Px...974  r...500  band_bits=125
+  known d bits=125
+  branches=6
+  no hits
+
+P130  Px...826  r...032  band_bits=130
+  known d bits=130
+  branches=6
+  no hits
+
+P135  Px...590  r...368  band_bits=135
+  branches=6
+  no hits
+
+P140  Px...424  r...000  band_bits=140
+  branches=3
+  no hits
+
+P145  Px...165  r...203  band_bits=145
+  branches=3
+  no hits
+
+P150  Px...553  r...479  band_bits=150
+  branches=3
+  no hits
+
+P155  Px...998  r...452  band_bits=155
+  branches=6
+  no hits
+
+P160  Px...491  r...020  band_bits=160
+  branches=3
+  no hits
+
+SUMMARY
+  total candidate hits (ec|d|band): 0
+  EC hits: 0
+  d_match hits: 0
+  in_band hits: 0
+

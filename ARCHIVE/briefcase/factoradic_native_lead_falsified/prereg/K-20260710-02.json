@@ -1,0 +1,26 @@
+{
+  "candidate_id": "K-20260710-02",
+  "short_name": "rfc6979_deterministic_generator_id",
+  "formula": "k_det=RFC6979_HMAC_SHA256(d,z) via ecdsa.rfc6979.generate_k; match iff k_det in {k, N-k}; exact match only; by source; no extra entropy; z as 32-byte BE of (z mod 2^256); d 32-byte BE",
+  "domains": "solved panel (d,k,r,s,z); sources stratified",
+  "score_definition": "exact_match rate overall and by source",
+  "expected_direction": "many matches within one source => that source used RFC6979",
+  "allowed_parameters": {
+    "hash": "SHA-256",
+    "extra_entropy": null,
+    "serialization": "d and z as 32-byte big-endian",
+    "low_S_orbit": "{k, N-k}",
+    "grid": "none"
+  },
+  "holdout_split": "full panel; primary split by source (not train/test bins)",
+  "null_families": [
+    "by-source separation",
+    "no post-failure encoding variants"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Tests whether historical k equals RFC6979(d,z); attribution of signer, not P=[d]G verification as a sieve.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

@@ -1,0 +1,28 @@
+n,row,known_d,law_p,law_n,law_x,lambda_p_unified,px_eq_lam_rx,weighted_p_eq_7,weighted_n_eq_G,bare_lam_y2_eq_lam_x3_plus7,bare_lam_x3_minus_lam_y2_eq_G,naive_n_curve_law,naive_n_cubic_mix,lambda_ne_px,lambda_ne_py,lambda_n_distinct_rows,bridge_regression,reg_detail
+5,0,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+10,1,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+15,2,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+20,1,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+25,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+30,0,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+35,2,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+40,1,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+45,2,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+50,2,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+55,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+60,0,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+65,1,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+70,2,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+75,1,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+80,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+85,0,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+90,2,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+95,1,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+100,2,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+105,1,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+110,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+115,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; P115 frozen checkpoints OK; P115 concat decimals OK; known d*G == P OK
+120,2,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+125,1,True,True,True,True,False,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+130,0,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK; known d*G == P OK
+135,2,False,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK

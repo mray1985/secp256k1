@@ -1,0 +1,8 @@
+schedule E(Form 1040 or Form 990 or Schedule SE or Form 8933 or Form 706 or Form 5471 or Publication 5819)
+schedule C(Form 1040 or Form 990 or Form 8933 or Form 8995-A or Form 706 or Form 1116 or Form 1065 or Form 5713 or Form 11652 or Form 1040-SS  Publication 334) 
+schedule D(Form 1040 or Form 941 or Form 1065 or Form 1041 or Form 1120 or Form 1120-S or Form 990 or Form 8933 or Form 706 or Form 965 or 8995-A)
+schedule L(Form 1118 or Form 990 or Form 706)(Form 990, Part VI and schedule L use Schedule O)
+schedule P(Form 706 or Form 1120-F or Form 8865 or Form 5471 or Form 1120-IC-DISC or Form 1040-NR or Form 1120-FSC)
+
+
+https://www.irs.gov/tax-professionals/eitc-central/eitc-schedule-c-and-record-reconstruction-training

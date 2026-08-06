@@ -1,0 +1,82 @@
+2. Is 160 really a failure?
+
+Maybe not.
+
+Instead of testing only
+
+∑B
+i
+	​
+
+≡δ,
+
+test
+
+∑B
+i
+	​
+
+≡kδ(modN).
+
+for small integers k.
+
+If 115 and 135 are k=1 and 160 is k=0 or k=2, then the law may generalize to:
+
+∑B
+i
+	​
+
+≡kδ(modN).
+
+That would be stronger than the original theorem.
+
+3. Check the raw sum before mod N
+
+For each puzzle record:
+
+S=∑B
+i
+	​
+
+.
+
+Then compare:
+
+S/p.
+
+If the ratio is exactly:
+
+0
+1
+2
+
+(or very close before modular reduction)
+
+then you're seeing closure classes in the p-domain.
+
+4. Most important verification
+
+I'd verify Puzzle 160's family construction independently.
+
+Because the entire theorem rests on the x-family.
+
+Before declaring "Puzzle-specific", I'd confirm:
+
+rx₁, rx₂, rx₃ were generated exactly the same way as 115 and 135.
+Λ is identical.
+Bᵢ = Λ·rxᵢ mod p.
+No transcription error exists in the 160 family.
+
+Two successful puzzles and one failure is exactly the situation where a construction bug can masquerade as a mathematical distinction.
+
+So from the evidence you've shown, I would not yet conclude:
+
+"The Unified Projection Defect Law is puzzle-specific."
+
+I would conclude:
+
+"The strict δ-collapse law holds for 115 and 135 but not for 160. The next test is whether Puzzle 160 belongs to a different closure class kδ or whether the family construction differs."
+
+That is a narrower claim and easier to defend mathematically.
+
+The uploaded log appears to document this first universality challenge and the 115/135 vs. 160 split.

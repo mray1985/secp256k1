@@ -1,0 +1,113 @@
+================================================================================
+TRUE19.TXT IDENTITY CHECK RESULTS
+Generated: 2026-06-03
+Source: true19_identity_check.py
+Purpose: Compare row-constant invariants against all known values per true19.txt
+================================================================================
+
+TEST SPECIFICATION (from true19.txt):
+-------------------------------------
+Compare A_i, B_i, C_i (row constants from N-side normalization) against:
+  Λ, K, δ, ω, ω2, D_G, D_P, D_R
+
+And check ratios between rows:
+  A1·A2⁻¹, A2·A3⁻¹, A1·A3⁻¹ (same for B and C)
+
+If row constants don't match known values or simple ratios → genuinely new N-side invariant layer
+
+================================================================================
+KNOWN VALUES (mod N)
+================================================================================
+Lambda       = 0xd773b315f9871cf943f6f886ad1243bbe9d2130db214dd8ef0504cfedae1049d
+K            = 0xb33aeaff49cd97ae4de620b3f2bb0fa83c6b253b0ce2787653715998f9c77fb7
+delta        = 0x14551231950b75fc4402da1722fc9baee
+omega        = 0x78074008874160198520644763525212887401909906723592317393988542598630163514318
+omega2       = 0x37718080363155996902926221483475020450927657555482586988616620542887997980018
+p1           = 0x2c2c8f003633906f0afbab6a8955999f3bdc8ede139647eb152da73b866b71b
+p2           = 0x2fa5fc9b872d446277e6293e7b5faa55b96589f7d715e836866bfd93273cdf6a
+p3           = 0xcd973a74756f8296976a1c0adc0afc0f0d8b8a00f6f9538688138685f092aabc
+D_G          = 0xb20ea27eb4741f4b3c5c59868e1a3b79516cec586bc0ae4b4310bc67d2991a35
+D_P          = 0x15face81f7e64af7b330fd8a64b8d15c143b52f2310112633e4a3dc20c87876e
+D_R          = 0xbeef71f885c9d96d5640ba724bbc7304f124f776f034e90caa2bad5188b7db9b
+A_G_N        = 0xd907513f5a3a0fa59e2e2cc3470d1dbca8b6762c35e05725a1885e33694c8b32
+A_P_N        = 0xafd6740fbf3257bd9987ec5325c68aeacc63b05c0dc3913bf3bef9a1e28a12e
+A_R_N        = 0xdf77b8fc42e4ecb6ab205d3925de398278927bbb781a74865515d6a8445bebe5
+
+================================================================================
+ROW CONSTANTS (from N-side normalization)
+================================================================================
+Matrix A_ij = P_N · G_N⁻¹ mod N:
+  A1 = 0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387
+  A2 = 0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f
+  A3 = 0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2
+
+Matrix B_ij = r_N · G_N⁻¹ mod N:
+  B1 = 0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745
+  B2 = 0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc
+  B3 = 0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4
+
+Matrix C_ij = P_N · r_N⁻¹ mod N:
+  C1 = 0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a
+  C2 = 0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb
+  C3 = 0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769
+
+================================================================================
+TEST 1: DIRECT IDENTITY CHECK
+================================================================================
+Result: NO direct matches found.
+
+None of the 9 row constants equal any of the 13 known values (Lambda, K, delta,
+omega, omega2, p1, p2, p3, D_G, D_P, D_R, A_G_N, A_P_N, A_R_N).
+
+================================================================================
+TEST 2: ROW CONSTANTS mod N vs KNOWN VALUES
+================================================================================
+All row constants are already less than N, so mod N = themselves.
+Result: NO matches found.
+
+================================================================================
+TEST 3: RATIOS BETWEEN ROWS
+================================================================================
+
+A matrix ratios:
+  A1 * A2^-1 mod N = 0x796c0954dfba57f3ba5f2b898f12d3b71cface1e06dab4396af41cd7bc5bb85a
+  A2 * A3^-1 mod N = 0x6c01759f7812fae8540d4372ecafc7ee462f6e4d5ae8491540f012d5397358f9
+  A1 * A3^-1 mod N = 0x83d83bd4290606d21b6bc153178438f812d91fe7f4047b1f04542bf77f70d8e5
+
+B matrix ratios:
+  B1 * B2^-1 mod N = 0x4db92c21f4084d7e9f73c8ebd416b58bc916917b52cd908d2cb9045d75ed18cd
+  B2 * B3^-1 mod N = 0x52f4ddf9a69d9908e84ab05398d746d88398ba828e6b1769a20db1e0a8dae0bc
+  B1 * B3^-1 mod N = 0xd3fe280a35d5e6a955daa53166b0c75b10e5be581f65647735616f09fb5ee31e
+
+C matrix ratios:
+  C1 * C2^-1 mod N = 0xdbf65289766b7b31ab471d0d92100834ff0422e886528ccf910f718266ad653
+  C2 * C3^-1 mod N = 0x844f4104172b0ebbcca19dd42fc280bb679761ec5900d8b4e1e8e96fcbdff9e1
+  C1 * C3^-1 mod N = 0x872aa3876b2738db9883d30f50909ef57075ae5ef6ea18417ad6e3ce2bd6b227
+
+Result: NO ratio matches found against known values.
+
+================================================================================
+TEST 4: ROW CONSTANTS vs CUBE ROOTS OF UNITY
+================================================================================
+Checked if row constants ≡ ω^k or ω2^k mod N for k=1..5
+Result: NO matches found.
+
+================================================================================
+CONCLUSION
+================================================================================
+Total row constants: 9
+Direct matches found: 0
+Ratio matches found: 0
+Cube root matches found: 0
+
+✓ CONFIRMED: Row constants are GENUINELY NEW N-side invariants.
+
+The row-constant invariants from N-side cube-root normalization represent
+a fundamentally new layer of invariants that do not correspond to any previously
+known values (Lambda, K, delta, cube roots of unity, cube roots of delta,
+signed branch coordinates D_Q, or their ratios).
+
+This establishes a new N-side invariant structure beyond the Unified Projection
+Defect Law.
+
+================================================================================

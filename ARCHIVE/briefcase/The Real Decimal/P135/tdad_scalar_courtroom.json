@@ -1,0 +1,13 @@
+{
+  "puzzle": 135,
+  "tdad_entry": {
+    "puzzle": 135,
+    "T": null,
+    "formula": null,
+    "raw": ""
+  },
+  "p135_note": "EMPTY \u2014 no TDAD operator sequence filed for puzzle 135. Scalar recipe missing; cannot form T_135/N packet.",
+  "ruling": "TDAD/N is the scalar-side equivalent of 0.x_y(base p). For all 82 filed puzzles, T_n equals d_n and [T_n]G = P. The double/add file is literally the private-key construction transcript, not a decorative label. Puzzle 135 has no transcript yet \u2014 open work.",
+  "global_exhibit": "exhibit_tdad_scalar_courtroom.json",
+  "solved_exact_count": 82
+}

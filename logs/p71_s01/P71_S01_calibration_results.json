@@ -1,0 +1,221 @@
+{
+  "candidate_id": "P71-S-20260710-01",
+  "target_addr": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+  "target_h160": "f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8",
+  "band": {
+    "lo": 1180591620717411303424,
+    "hi": 2361183241434822606848,
+    "width_bits": 70
+  },
+  "kangaroo": false,
+  "partitions_ok": true,
+  "results": [
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 2824,
+      "elapsed_s": 0.31009890000132145,
+      "keys_per_s": 9106.77206526036,
+      "recovered_d": 1051399,
+      "target_h160": "611df347435b738bf1aa3d8d2e6fb1eb3c2f05a7",
+      "notes": "d_true=1051399"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 3937,
+      "elapsed_s": 0.42378720000124304,
+      "keys_per_s": 9290.03990679391,
+      "recovered_d": 1052512,
+      "target_h160": "5836fa159d39a0fde8a3bf7c1eb6fe38fa74c819",
+      "notes": "d_true=1052512"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 2858,
+      "elapsed_s": 0.2991189999956987,
+      "keys_per_s": 9554.725711309204,
+      "recovered_d": 1051433,
+      "target_h160": "db40fa8a63384c7a44d2a066b7bb49ba28969dc6",
+      "notes": "d_true=1051433"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 935,
+      "elapsed_s": 0.09247389999654843,
+      "keys_per_s": 10110.961039113725,
+      "recovered_d": 1049510,
+      "target_h160": "8ac1437ecaf57411cc30ec72de769d1d5678985a",
+      "notes": "d_true=1049510"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 3606,
+      "elapsed_s": 0.3753930999955628,
+      "keys_per_s": 9605.930423448443,
+      "recovered_d": 1052181,
+      "target_h160": "c0eda954ba457ed0a90519558723c19c116af707",
+      "notes": "d_true=1052181"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 1575,
+      "elapsed_s": 0.17041109999991022,
+      "keys_per_s": 9242.355691623548,
+      "recovered_d": 1050150,
+      "target_h160": "063aacec54758be93c35867761cfc6a539e3736f",
+      "notes": "d_true=1050150"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 915,
+      "elapsed_s": 0.09005429999524495,
+      "keys_per_s": 10160.536476862448,
+      "recovered_d": 1049490,
+      "target_h160": "e4098147561328bf8a3fedf513a2a21050fea605",
+      "notes": "d_true=1049490"
+    },
+    {
+      "mode": "oracle_w12",
+      "status": "PASS",
+      "keys_tested": 1353,
+      "elapsed_s": 0.13635960000101477,
+      "keys_per_s": 9922.293699819676,
+      "recovered_d": 1049928,
+      "target_h160": "24c3dbc35868b12bb876a9131b46d71ad5c77809",
+      "notes": "d_true=1049928"
+    },
+    {
+      "mode": "solved_n1",
+      "status": "PASS",
+      "keys_tested": 1,
+      "elapsed_s": 2.3600005079060793e-05,
+      "keys_per_s": 42372.87223667822,
+      "recovered_d": 1,
+      "target_h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+      "notes": "addr=1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH"
+    },
+    {
+      "mode": "solved_n5",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0004950999937136658,
+      "keys_per_s": 8079.176026637853,
+      "recovered_d": 21,
+      "target_h160": "8f9dff39a81ee4abcbad2ad8bafff090415a2be8",
+      "notes": "addr=1E6NuFjCi27W5zoXg8TRdcSRq84zJeBW3k"
+    },
+    {
+      "mode": "solved_n10",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0004517999987001531,
+      "keys_per_s": 8853.475014404963,
+      "recovered_d": 514,
+      "target_h160": "d7729816650e581d7462d52ad6f732da0e2ec93b",
+      "notes": "addr=1LeBZP5QCwwgXRtmVUvTVrraqPUokyLHqe"
+    },
+    {
+      "mode": "solved_n20",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0006151999987196177,
+      "keys_per_s": 6501.950598707708,
+      "recovered_d": 863317,
+      "target_h160": "b907c3a2a3b27789dfb509b730dd47703c272868",
+      "notes": "addr=1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum"
+    },
+    {
+      "mode": "solved_n30",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0006066999994800426,
+      "keys_per_s": 6593.044343873582,
+      "recovered_d": 1033162084,
+      "target_h160": "d39c4704664e1deb76c9331e637564c257d68a08",
+      "notes": "addr=1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps"
+    },
+    {
+      "mode": "solved_n40",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0008592000012868084,
+      "keys_per_s": 4655.493475336676,
+      "recovered_d": 1003651412950,
+      "target_h160": "95a156cd21b4a69de969eb6716864f4c8b82a82a",
+      "notes": "addr=1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv"
+    },
+    {
+      "mode": "solved_n50",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0009219999992637895,
+      "keys_per_s": 4338.394797390425,
+      "recovered_d": 611140496167764,
+      "target_h160": "de081b76f840e462fa2cdf360173dfaf4a976a47",
+      "notes": "addr=1MEzite4ReNuWaL5Ds17ePKt2dCxWEofwk"
+    },
+    {
+      "mode": "solved_n65",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0012350000033620745,
+      "keys_per_s": 3238.8663879438786,
+      "recovered_d": 30568377312064202855,
+      "target_h160": "52e763a7ddc1aa4fa811578c491c1bc7fd570137",
+      "notes": "addr=18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe"
+    },
+    {
+      "mode": "solved_n70",
+      "status": "PASS",
+      "keys_tested": 4,
+      "elapsed_s": 0.0011770999990403652,
+      "keys_per_s": 3398.1819754150147,
+      "recovered_d": 970436974005023690481,
+      "target_h160": "5db8cda53a6a002db10365967d7f85d19e171b10",
+      "notes": "addr=19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR"
+    },
+    {
+      "mode": "rate",
+      "status": "MEASURED",
+      "keys_tested": 1500,
+      "elapsed_s": 0.1615511999989394,
+      "keys_per_s": 9284.98209861547,
+      "recovered_d": null,
+      "target_h160": "",
+      "notes": "Python reference CPU; not a GPU launch rate"
+    },
+    {
+      "mode": "checkpoint_phase1",
+      "status": "PARTIAL",
+      "keys_tested": 5000,
+      "elapsed_s": 0.5292604999995092,
+      "keys_per_s": 9447.143703345775,
+      "recovered_d": null,
+      "target_h160": "",
+      "notes": "ck_exists=True"
+    },
+    {
+      "mode": "checkpoint_phase2",
+      "status": "PASS",
+      "keys_tested": 12346,
+      "elapsed_s": 0.8126107999996748,
+      "keys_per_s": 15193.005064669262,
+      "recovered_d": 274489,
+      "target_h160": "",
+      "notes": "d_true=274489"
+    }
+  ],
+  "promotion": {
+    "oracle_pass": true,
+    "solved_pass": true,
+    "checkpoint_pass": true,
+    "cpu_gpu_identical": null,
+    "python_rate_keys_per_s": 9284.98209861547
+  }
+}

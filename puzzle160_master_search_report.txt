@@ -1,0 +1,24 @@
+Puzzle 160 master combined search
+barcodes=76 leaders=['py_w15', 'y2_w21', 'rmd_wrap2', 'px_w0']
+d band [730750818665451459101842416358141509827966271488, 1461501637330902918203684832716283019655932542976)  m band [79228162514264337593543950336, 158456325028528675187087900672)
+
+=== Phase 1: leaders exact + N+1 ===
+py_w15 = 803505878170136640646881328233715742298136844352 (48 digits)
+y2_w21 = 1279319893184270309653638302331043709986753761686 (49 digits)
+rmd_wrap2 = 999836400474710041910519435328613735285013260936 (48 digits)
+px_w0 = 1016161246378405429915312532485865240202132152583 (49 digits)
+
+=== Phase 2: leader combinations ===
+
+=== Phase 3: 48-digit windows from leaders ===
+leader in-band windows: 43
+
+=== Phase 4: full master windows ===
+master in-band windows: 780
+
+=== Phase 5: log2/trunc on all master barcodes ===
+trunc candidates in d-band: 299
+
+=== Phase 6: anchor a ===
+
+NO SOLUTION  elapsed=192.1s

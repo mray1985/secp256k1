@@ -1,0 +1,87 @@
+========================================================================================
+Phase IV - Information Flow (theorem / proof / verification)
+Document: Information_Theoretic_Consequences_Cube_Root_Lift_Algebra.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: 1.1 Sixfold constancy of X-invariants including q_x
+  Statement: q_x and the set X are constant on {+/-P, +/-psi(P), +/-psi^2(P)}.
+  Proof:     Negation preserves x; psi permutes the three reduced x-values, so sum S_x and q_x=S_x/p are fixed.
+  Verification:
+    OK on 80 random sixfold orbits
+
+----------------------------------------------------------------------------------------
+THEOREM: 1.field Field invariants of X are constant or functions of x
+  Statement: trace=e1=0; e2=0; product=e3=x^3; minpoly T^3-x^3; disc=-27 x^6 in F_p.
+  Proof:     Follows from 1+beta+beta^2=0 and beta^3=1 in F_p.
+  Verification:
+    OK (trace/norm/e2=0/minpoly/disc) on 100 points
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.1 H(I|P)=0 for P-computable invariants; H(q_x)<=1
+  Statement: Any invariant of X or (x,y) is determined by P, so conditional entropy is 0. |{1,2}|=2 => H(q_x)<=1.
+  Proof:     Definition of conditional entropy of a deterministic function; cardinality bound on entropy.
+  Verification:
+    H(q_x) <= log2(2) = 1 bit (cardinality bound)
+    H(I|P)=0: invariants recomputed from (x,y) alone - OK
+    H(c_x) <= 1 bit - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.3 q_x does not refine sixfold classes
+  Statement: q_x is constant on each sixfold orbit, so it does not split the GLV equivalence relation.
+  Proof:     Theorem 1.1 + definition of orbit quotient.
+  Verification:
+    Sixfold quotient factor: 2^k -> 2^(k - log2(6)) with log2(6)=2.5849625007
+    Additional factor from q_x: b'=0
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.1 Recoverability split
+  Statement: (p,beta) invariants are polytime from P; (N,lambda) invariants require the scalar.
+  Proof:     x is a coordinate of P; u=d is the ECDLP unknown. Carry formulas use only (M,t,a).
+  Verification:
+    q_u values seen per q_x: {1: [1, 2], 2: [1, 2]}
+    q_u is not a function of q_x (hence not of public X alone) - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 4.1 No carry-class bridge q_x(P)=q_u(d)
+  Statement: The identity q_x(dG)=q_u(d) is false in general.
+  Proof:     Both sides in {1,2}; one counterexample falsifies a claimed identity. Parallel Phi_3 calculus does not identify classes.
+  Verification:
+    Counterexamples: 150/300 (first tag qx=2 qu=1)
+    Identity REFUTED - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 4.2 No unital ring-hom bridge F_p <-> Z/NZ
+  Statement: No unital ring homomorphism either way.
+  Proof:     Fields/prime rings: nontrivial unital hom is injective; then order divides order; p!=N and neither divides the other.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 5.1 Delta absent from carry equations
+  Statement: Carry reconstruction for (M,t) uses only M,t,a — not Delta=p-N.
+  Proof:     Inspect formula; instantiate (p,beta) and (N,lambda) separately; Delta unused.
+  Verification:
+    Carry checks never use Delta; signature lift uses Delta - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 6 Complexity accounting
+  Statement: After GLV sixfold: 2^(k-log2(6)). After lift/carry theorems: same (b'=0).
+  Proof:     Lift invariants are P-computable and constant on sixfold classes (Thm 1.1, 2.1, 2.3, 4.1).
+  Verification:
+    Original:     2^k
+    After GLV:    2^(k - 2.5849625007)
+    After carries: 2^(k - 2.5849625007)   [b' = 0]
+
+========================================================================================
+FINAL ANSWER
+========================================================================================
+  Do current theorems reveal information about an unknown scalar
+  beyond the known sixfold symmetry?
+
+  NO.
+
+  Additional bits b' = 0.
+  Only justified factor: b = log2(6) (classical GLV).
+  ALL Phase IV verification checks PASSED.
+========================================================================================

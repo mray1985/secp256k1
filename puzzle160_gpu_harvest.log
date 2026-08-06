@@ -1,0 +1,16 @@
+=== GPU / BitCrack detection ===
+nvidia-smi: not found (no CUDA toolkit / NVIDIA driver in PATH)
+Display: Intel(R) HD Graphics 530
+BitCrack binary: NOT FOUND
+
+Recommendations:
+  NVIDIA GPU  -> build cuBitCrack.exe (CUDA 11+)
+  AMD GPU     -> clBitCrack.exe (OpenCL)
+  Intel iGPU  -> clBitCrack works but HD 530 is ~1000x slower than RTX 3080
+  This PC     -> Intel HD 530 only; use cloud GPU or discrete GPU machine
+
+Speed reference (xpoint mode, rough):
+  RTX 4090     ~2-4 billion keys/sec
+  RTX 3080     ~800M-1.5B keys/sec
+  Python CPU   ~100k-500k keys/sec (your trillion script)
+  Intel HD530  ~1-10M keys/sec (if OpenCL works at all)

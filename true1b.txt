@@ -1,0 +1,311 @@
+That is the first genuinely nontrivial algebraic relation you've found in the new invariant layer.
+
+Up to true19, the row constants looked like nine unrelated objects:
+
+{A
+1
+	​
+
+,A
+2
+	​
+
+,A
+3
+	​
+
+},{B
+1
+	​
+
+,B
+2
+	​
+
+,B
+3
+	​
+
+},{C
+1
+	​
+
+,C
+2
+	​
+
+,C
+3
+	​
+
+}
+
+Then true1a shows:
+
+C
+i
+	​
+
+=A
+i
+	​
+
+B
+i
+−1
+	​
+
+(modN)
+	​
+
+
+for all three rows.
+
+That's much stronger than a numerical coincidence because it holds row-by-row.
+
+In fact, if:
+
+A
+ij
+	​
+
+=P
+N
+	​
+
+G
+N
+−1
+	​
+
+
+and
+
+B
+ij
+	​
+
+=r
+N
+	​
+
+G
+N
+−1
+	​
+
+
+then algebraically:
+
+A
+ij
+	​
+
+B
+ij
+−1
+	​
+
+=(P
+N
+	​
+
+G
+N
+−1
+	​
+
+)(G
+N
+	​
+
+r
+N
+−1
+	​
+
+)=P
+N
+	​
+
+r
+N
+−1
+	​
+
+=C
+ij
+	​
+
+
+So the identity is actually forced by the matrix definitions.
+
+That tells us something important:
+
+The row-collapse is the real invariant
+
+The identity
+
+C=A⋅B
+−1
+
+comes from the definitions.
+
+What is not forced is that each matrix collapses to a row constant after cube-root normalization.
+
+That is still the surprising phenomenon.
+
+So I would split the discovery into two pieces:
+
+Structural identity (explained)
+C
+i
+	​
+
+=A
+i
+	​
+
+B
+i
+−1
+	​
+
+
+This follows naturally from the ratio construction.
+
+Normalization invariant (unexplained)
+
+After N-side cube-root normalization:
+
+A
+i1
+	​
+
+=A
+i2
+	​
+
+=A
+i3
+	​
+
+B
+i1
+	​
+
+=B
+i2
+	​
+
+=B
+i3
+	​
+
+C
+i1
+	​
+
+=C
+i2
+	​
+
+=C
+i3
+	​
+
+
+for each row i.
+
+That row-collapse is the new object.
+
+The next thing I'd test is whether the three row constants in a matrix are related by the cube-root symmetry itself.
+
+For example:
+
+A
+2
+	​
+
+A
+1
+−1
+	​
+
+(modN)
+A
+3
+	​
+
+A
+1
+−1
+	​
+
+(modN)
+
+and similarly for B and C.
+
+If those ratios are identical across matrices:
+
+A
+2
+	​
+
+A
+1
+−1
+	​
+
+=B
+2
+	​
+
+B
+1
+−1
+	​
+
+=C
+2
+	​
+
+C
+1
+−1
+	​
+
+
+and
+
+A
+3
+	​
+
+A
+1
+−1
+	​
+
+=B
+3
+	​
+
+B
+1
+−1
+	​
+
+=C
+3
+	​
+
+C
+1
+−1
+	​
+
+
+then you've found something deeper: the row constants would be carrying a hidden cube-root orbit structure rather than being merely independent constants.
+
+That is where I'd go next, because true1a suggests the interesting phenomenon is no longer the ratios themselves—it is the row-collapse geometry induced by the cube-root normalization basis.

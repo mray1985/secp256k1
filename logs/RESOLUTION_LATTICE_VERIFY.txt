@@ -1,0 +1,54 @@
+========================================================================================
+Coarse/Fine resolution: lattice 1/p and 1/p^2
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: Bounds on p and p^2
+  Statement: 10^77 < p < 10^78 and 10^154 < p^2 < 10^155.
+  Proof:     Direct integer comparison.
+  Verification:
+    10^78 - p = 884207910762683804576429014991312092146730015334359435960542415992091165328337
+    p - 10^77 = 15792089237316195423570985008687907853269984665640564039457584007908834671663
+    10^155 - p^2 = 86592192070057402900425975001794153872520634179407606622276438556279230616625530338852152312187047918697145226060398194617788707274939849752301206984814431
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: C1 Floor Tax_78 injective on {x/p}
+  Statement: Tax_78(x/p) distinct for distinct x in 0..p-1.
+  Proof:     Min spacing 1/p; bin width 10^(-78); 10^78>p => 10^(-78)<1/p; no bin can hold two lattice points.
+  Verification:
+    Consecutive collision criterion (xK)%p < p-K is impossible since p-K<0
+    Hence no consecutive (hence no) collisions for Tax_78 - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: C2 Floor Tax_77 NOT injective
+  Statement: Exists x with Tax_77(x/p)=Tax_77((x+1)/p).
+  Proof:     10^77<p => bin width 10^(-77)>1/p; consecutive residues can share a bin.
+  Verification:
+    Explicit collision: x=0 and x=1 share Tax_77 floor=0
+    NOTE: this is k=77, NOT k=78 - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: F1/F2 Fine channel Tax_155 injective; Tax_154 not
+  Statement: Same lemma with delta=1/p^2.
+  Proof:     10^155>p^2>10^154.
+  Verification:
+    Tax_155: p^2-10^155<0 => no consecutive floor collisions - OK
+    Tax_154 explicit consecutive collision: y=0,1 - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: Lattice primacy
+  Statement: Coarse resolution 1/p; fine resolution 1/p^2. Decimals encode these lattices.
+  Proof:     Definitions; E=xp+y packages both without base 10.
+  Verification:
+    E=xp+y recovers (x,y) - OK
+    Decimal digit counts are encodings of bin-width vs lattice spacing - OK
+
+========================================================================================
+VERDICT
+========================================================================================
+  Floor Tax_78 IS injective (theorem: 10^78>p).
+  Earlier collision example was Tax_77, not Tax_78.
+  Prefer language: resolution 1/p and 1/p^2.
+  ALL resolution-lattice checks PASSED.
+========================================================================================

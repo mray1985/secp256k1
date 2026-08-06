@@ -1,0 +1,67 @@
+{
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "command": [
+    "wsl",
+    "-e",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/keyhunt",
+    "-m",
+    "address",
+    "-f",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/logs/p71_s03/promotion/solved_n40/keyhunt_targets.txt",
+    "-r",
+    "e9ae4933ce:e9ae4933de",
+    "-l",
+    "compress",
+    "-t",
+    "4"
+  ],
+  "target_address": "1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv",
+  "target_h160": "95a156cd21b4a69de969eb6716864f4c8b82a82a",
+  "start": 1003651412942,
+  "end": 1003651412958,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 0.3506852999998955,
+  "found_private_keys": [
+    "e9ae4933d6"
+  ],
+  "verified_hits": [
+    {
+      "d": 1003651412950,
+      "d_hex": "e9ae4933d6",
+      "in_range": true,
+      "h160": "95a156cd21b4a69de969eb6716864f4c8b82a82a",
+      "address": "1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "e9ae4933d6",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD\n[+] Mode address\n[+] Search compress only\n[+] Threads : 4\n[+] Setting search for btc adddress\n[+] N = 0x100000000\n[+] Range \n[+] -- from : 0xe9ae4933ce\n[+] -- to   : 0xe9ae4933de\n[+] Allocating memory for 1 elements: 0.00 MB\n[+] Bloom filter for 1 elements.\n[+] Loading data to the bloomfilter total: 0.03 MB\n[+] Sorting data ... done! 1 values were loaded and sorted\n\nBase key: e9ae4933ce     \nHit! Private Key: e9ae4933d6\npubkey: 03a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4\nAddress 1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv\nrmd160 95a156cd21b4a69de969eb6716864f4c8b82a82a\n",
+  "stderr_tail": "",
+  "notes": [
+    "stop_on_hit=keyhunt_known_hit_calibration"
+  ],
+  "device_notes": "KeyHunt CPU compressed address mode (WSL-capable)",
+  "started_at_utc": "2026-07-10T16:41:28.881446+00:00",
+  "finished_at_utc": "2026-07-10T16:41:29.232220+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "pass": true
+  },
+  "step": "solved_n40"
+}

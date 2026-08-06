@@ -1,0 +1,36 @@
+ARREST WITH Delta_y (not frac sqrt N)
+
+H = 128.3457021466   {H} = 0.345702
+log2 sqrt(y) = 127.3395757237   {sqrt y} = 0.339576
+Delta_y = 1.0061264229   {Delta_y} = 0.006126
+frac(sqrt N) = 0.364615  (old multiplier)
+P135 band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+Formula: d = floor( mult * sqrt(p-N) * 2^k )
+
+=== {Delta_y} = 0.0061264229 ===
+  k=78 pos=76.80% bits=135 EC=False ...051191167665
+
+=== Delta_y full = 1.0061264229 ===
+  k=70 pos=13.42% bits=135 EC=False ...733894871300
+
+=== |E_y| = 0.0061264229 ===
+  k=78 pos=76.80% bits=135 EC=False ...051191167665
+
+=== head-to-head at k=71,72 ===
+k=71:
+  frac(sqrtN): bits=134 in=False ...945487804975
+  {Delta_y}:  bits=128 in=False ...601962430997
+k=72:
+  frac(sqrtN): bits=135 in=True ...890975609950
+  {Delta_y}:  bits=129 in=False ...203924861994
+
+P135 in-band: k=78  d...051191167665  pos=76.80%
+EC scan +/-100k: none
+
+=== solved calibration (best k, {{Delta_y}}) ===
+P64 best_k=7 rel_err=0.0839 bits=64
+P70 best_k=13 rel_err=0.0754 bits=70
+P100 best_k=43 rel_err=0.2907 bits=100
+P115 best_k=58 rel_err=0.1670 bits=115
+P130 best_k=73 rel_err=0.0900 bits=130

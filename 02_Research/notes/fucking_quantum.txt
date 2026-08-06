@@ -1,0 +1,27 @@
+			 | s | γ | μ^- 
+spin-parity 		(J^π) | 1/2^+ | 1^- | 1/2 
+electric charge 	(Q) | -1/3 | 0 | -1 
+isospin 		(I) | 0 | {0, 1} | 
+isospin projection 	(I_3) | 0 | 0 | 
+strangeness 		(S) | -1 | 0 | 0 
+hypercharge 		(Y) | -2/3 | 0 | 0 
+charm 			(C) | 0 | 0 | 0 
+bottomness 		(B) | 0 | 0 | 0 
+topness 		(T) | 0 | 0 | 0
+baryon number 		(B) | 1/3 | 0 | 0 
+lepton number 		(L) | 0 | 0 | 1
+
+
+
+x = r cos(p)
+y = r sin(p)
+r = sqrt(x^2 + y^2)
+p = tan^(-1)(x, y)
+
+
+Δ(256k1sec⁡(p))=(256k1)/r2 sec⁡(p)(2sec⁡2(p)−1)
+
+
+
+
+ΔCk1  ∼  520[R′′(r)+2rR′(r)−ℓ(ℓ+1)r2R(r)]Yℓm(θ,ϕ)

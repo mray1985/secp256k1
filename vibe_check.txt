@@ -1,0 +1,303 @@
+N-PAPER — SCALAR FIELD STRUCTURE MOD N
+
+Primary scalar modulus
+
+N =
+115792089237316195423570985008687907852837564279074904382605163141518161494337
+
+This paper works in scalar space modulo N.
+
+All lowercase root families are scalar residues mod N. They are not elliptic-curve coordinates unless multiplied by G.
+
+Curve coordinates are written as uppercase X and Y.
+
+If a scalar a is multiplied by G, then:
+
+aG = (X_a, Y_a)
+
+Coordinate field reference
+
+p =
+115792089237316195423570985008687907853269984665640564039457584007908834671663
+
+Global defect:
+
+Δ = p - N
+
+Δ =
+432420386565659656852420866390673177326
+
+Since p ≡ Δ mod N, any scalar-side cubic relation involving p mod N may be written through Δ.
+
+Defect-root family
+
+The three scalar defect roots are:
+
+d1 =
+1248780847746852317428964695904392891045016528862400526454142780194939123483
+
+d2 =
+21551977082208859489759061364299864038123955443494189974630776168682352336746
+
+d3 =
+92991331307360483616382958948483650923668592306718313881520244192640870034108
+
+They satisfy:
+
+d1^3 ≡ Δ mod N
+d2^3 ≡ Δ mod N
+d3^3 ≡ Δ mod N
+
+Therefore:
+
+d1, d2, d3 = cube roots of p - N modulo N
+
+These are the three defect-root branches.
+
+Defect-root normalization matrix
+
+The coordinate-derived x families are:
+
+Gx1, Gx2, Gx3
+Px1, Px2, Px3
+rx1, rx2, rx3
+
+The normalization test is:
+
+object_i * d_j^-1 mod N
+
+This means:
+
+Gx_i * d_j^-1 mod N
+Px_i * d_j^-1 mod N
+rx_i * d_j^-1 mod N
+
+This projects x-coordinate-derived values into scalar space through the inverse cube-root branches of the global defect Δ.
+
+The purpose of this matrix is to test which defect-root branch each x-family aligns with.
+
+Δ-scaled coordinate families
+
+The direct Δ-scaled families are:
+
+gx_i = Gx_i * Δ mod N
+Qx_i = Px_i * Δ mod N
+qx_i = rx_i * Δ mod N
+
+Their triple products define:
+
+Ig = gx1 * gx2 * gx3 mod N
+IQ = Qx1 * Qx2 * Qx3 mod N
+Iq = qx1 * qx2 * qx3 mod N
+
+Then:
+
+RQ = IQ * Ig^-1 mod N
+
+Rq = Iq * Ig^-1 mod N
+
+RQ and Rq cubic class
+
+RQ =
+93445303090207460795327760013611028471733975132483193501188427441135068625145
+
+Rq =
+82358120186769898780489361622877802571715378840830617679177466155773214944220
+
+Both classify to the same cube-root-of-unity class:
+
+RQ^((N-1)/3) mod N = ω2
+
+Rq^((N-1)/3) mod N = ω2
+
+where:
+
+ω2 =
+37718080363155996902926221483475020450927657555482586988616620542887997980018
+
+Since RQ and Rq are in the same cubic class, their ratio is a cubic residue:
+
+Cq = RQ * Rq^-1 mod N
+
+Cq =
+3820628127091453859030266576898546114566560342084415068589713593856641559477
+
+Cq root family
+
+The three scalar roots of Cq are:
+
+c1 =
+18550647013200406789286060994475703560416436121766183371493072993703432094758
+
+c2 =
+36793031382526386630822426321733144812287525987490732260894675548311548513972
+
+c3 =
+60448410841589402003462497692479059480133602169817988750217414599503180885607
+
+They satisfy:
+
+c1^3 ≡ Cq mod N
+c2^3 ≡ Cq mod N
+c3^3 ≡ Cq mod N
+
+T root family
+
+Define:
+
+T = ω2 - 1
+
+T =
+37718080363155996902926221483475020450927657555482586988616620542887997980017
+
+Rename the old y1, y2, y3 values as t1, t2, t3 to avoid confusion with elliptic-curve Y coordinates.
+
+t1 =
+6278217321159360251768865021595913467275586303393073724224099427672203972183
+
+t2 =
+28159576510706975400073279818842758000059714322687393825967946111446184253203
+
+t3 =
+81354295405449859771728840168249236385502263652994436832413117602399773268951
+
+They satisfy:
+
+t1^3 ≡ T mod N
+t2^3 ≡ T mod N
+t3^3 ≡ T mod N
+
+Internal root rotation rule
+
+For any three roots of the same cubic-residue target, their ratios are cube roots of unity.
+
+For the T root family:
+
+t1 * t2^-1 mod N = ω2
+t1 * t3^-1 mod N = ω2^2
+t2 * t3^-1 mod N = ω2
+
+So the internal root rotation is controlled by ω2, not by Λ.
+
+Coordinate bridge constant
+
+Λ =
+97451685862885086182458552040892158509924235661624603229050850812487253689501
+
+Λ is the coordinate-side bridge constant carried into scalar-side comparison.
+
+Important distinction:
+
+Λ^3 mod N means cube Λ.
+
+x^3 ≡ Λ mod N means solve for cube roots of Λ.
+
+These are different operations.
+
+Known:
+
+Λ^3 mod N =
+38932995473618115921409207338423707925309087193404485552072959838229500524277
+
+(Λ^3)^-1 mod N =
+18158872149047011662869210869797000763012526280126636835511798961942647895908
+
+ECDSA scalar stride
+
+The ECDSA equation is:
+
+sk ≡ m + rd mod N
+
+So:
+
+k = (m + r*d) * s^-1 mod N
+
+The scalar stride is:
+
+delta_k = r * s^-1 mod N
+
+delta_k =
+42518748094800190364691662520829255725760545190387351376607655495124216557634
+
+This means when d increases by 1, k increases by delta_k modulo N.
+
+Recentered scalar equation
+
+Define the signature ground-zero scalar:
+
+d0 = -m * r^-1 mod N
+
+Then:
+
+d = d0 + Δd
+
+and:
+
+k = Δd * delta_k mod N
+
+This turns the ECDSA scalar line into a centered proportional map.
+
+Current working root families
+
+Defect roots:
+
+d1, d2, d3 = cube roots of Δ = p - N mod N
+
+Cq roots:
+
+c1, c2, c3 = cube roots of Cq = RQ * Rq^-1 mod N
+
+T roots:
+
+t1, t2, t3 = cube roots of T = ω2 - 1 mod N
+
+Bridge constant:
+
+Λ = coordinate bridge constant
+
+Stride:
+
+delta_k = scalar stride from d to k
+
+Next comparison tests
+
+First compare root families internally:
+
+d1d2^-1, d1d3^-1, d2*d3^-1 mod N
+
+c1c2^-1, c1c3^-1, c2*c3^-1 mod N
+
+t1t2^-1, t1t3^-1, t2*t3^-1 mod N
+
+Each family should rotate by ω2 and ω2^2.
+
+Then compare root families branch-to-branch:
+
+t_i * d_j^-1 mod N
+
+c_i * d_j^-1 mod N
+
+c_i * t_j^-1 mod N
+
+Look for row collapse, column collapse, or repeated constants.
+
+Do not confuse these operations
+
+a^3 mod N
+means cube a.
+
+x^3 ≡ a mod N
+means solve for cube roots of a.
+
+a^-1 mod N
+means modular inverse.
+
+a and N-a
+are additive inverse reflections.
+
+Curve coordinates are over p.
+Scalar roots are over N.
+
+Only after multiplying a scalar by G do we get curve coordinates:
+
+aG = (X_a, Y_a)

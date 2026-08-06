@@ -1,0 +1,119 @@
+=== ALL SYSTEMS BATCH — P135 P140 P145 P150 P155 P160 ===
+puzzles: [135, 140, 145, 150, 155, 160]
+offset_law_row=0 for all (n≡0 mod 5)
+
+Pair-term regression formulas (≥2 hits on solved): row0=0 row1=0 row2=0
+
+--- P135 px_slot=2 law_row=0 pred_off=[132, 133, 134] gap_bits=133 ---
+=== P135 px_slot=2 offset_law_row=0 shelf2_bits=135 gap_bits=133 ===
+  predicted offset_bits: [132, 133, 134] (+ gap±1)
+  filtered candidates: 154  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 243 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  26 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  28 hits=0
+  shelf2_align_hunt      cand= 154 hits=0
+
+--- P140 px_slot=1 law_row=0 pred_off=[137, 138, 139] gap_bits=134 ---
+=== P140 px_slot=1 offset_law_row=0 shelf2_bits=140 gap_bits=134 ===
+  predicted offset_bits: [137, 138, 139] (+ gap±1)
+  filtered candidates: 197  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 267 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  24 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  34 hits=0
+  shelf2_align_hunt      cand= 197 hits=0
+
+--- P145 px_slot=1 law_row=0 pred_off=[142, 143, 144] gap_bits=143 ---
+=== P145 px_slot=1 offset_law_row=0 shelf2_bits=145 gap_bits=143 ===
+  predicted offset_bits: [142, 143, 144] (+ gap±1)
+  filtered candidates: 192  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 265 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  32 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  36 hits=0
+  shelf2_align_hunt      cand= 192 hits=0
+
+--- P150 px_slot=0 law_row=0 pred_off=[147, 148, 149] gap_bits=0 ---
+=== P150 px_slot=0 offset_law_row=0 shelf2_bits=150 gap_bits=0 ===
+  predicted offset_bits: [147, 148, 149] (+ gap±1)
+  filtered candidates: 178  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 265 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  32 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  34 hits=0
+  shelf2_align_hunt      cand= 178 hits=0
+
+--- P155 px_slot=0 law_row=0 pred_off=[152, 153, 154] gap_bits=0 ---
+=== P155 px_slot=0 offset_law_row=0 shelf2_bits=155 gap_bits=0 ===
+  predicted offset_bits: [152, 153, 154] (+ gap±1)
+  filtered candidates: 166  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 243 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  28 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  32 hits=0
+  shelf2_align_hunt      cand= 166 hits=0
+
+--- P160 px_slot=1 law_row=0 pred_off=[157, 158, 159] gap_bits=159 ---
+=== P160 px_slot=1 offset_law_row=0 shelf2_bits=160 gap_bits=159 ===
+  predicted offset_bits: [157, 158, 159] (+ gap±1)
+  filtered candidates: 177  hits: 0
+
+  bridge_regression      PASS  LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+  lambda_laws            PASS  LAW-P=True LAW-N=True
+  phase17_candidates     cand= 267 hits=0
+  pair_term_regress      cand=   0 hits=0
+  gap_tier_bridge        cand=  26 hits=0
+  shift_combo_carry      cand=   9 hits=0
+  carry_band_reps        cand=   3 hits=0
+  tangent_ec_probes      cand=   6 hits=0
+  bridge_direct_terms    cand=  28 hits=0
+  shelf2_align_hunt      cand= 177 hits=0
+
+=== MATRIX (ec_hits per system x puzzle) ===
+system                 P135 P140 P145 P150 P155 P160
+bridge_direct_terms       0    0    0    0    0    0 
+bridge_regression        P   P   P   P   P   P 
+carry_band_reps           0    0    0    0    0    0 
+gap_tier_bridge           0    0    0    0    0    0 
+lambda_laws              P   P   P   P   P   P 
+pair_term_regress         0    0    0    0    0    0 
+phase17_candidates        0    0    0    0    0    0 
+shelf2_align_hunt         0    0    0    0    0    0 
+shift_combo_carry         0    0    0    0    0    0 
+tangent_ec_probes         0    0    0    0    0    0 
+
+elapsed=8.1s
+csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\all_systems_batch.csv
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\all_systems_batch.log
+RESULT: all six still OPEN

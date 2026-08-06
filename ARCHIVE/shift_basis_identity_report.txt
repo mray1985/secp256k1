@@ -1,0 +1,47 @@
+SHIFT BASIS IDENTITY TEST
+Hypothesis: unified closure shift s_i ≡ Λ_i - Λ_ε (mod N)
+
+=== PART 1: r_i = s_i - (Λ_i - Λ_ε) mod N ===
+
+  P15 row1: r_i=0  centered(s)=255b  centered(ΔΛ)=255b  match=True
+  P15 row2: r_i=0  centered(s)=255b  centered(ΔΛ)=255b  match=True
+  P15 row3: r_i=0  centered(s)=0b  centered(ΔΛ)=0b  match=True
+
+  r_i == 0: 78/78
+  centered(s_min) == centered(Λ_i-Λ_ε): 78/78
+
+=== PART 2: Λ difference matrix (sample P135) ===
+
+  P135 Λ_ε = row 2
+    D_12 = Λ_1-Λ_2 bits=256
+    D_13 = Λ_1-Λ_3 bits=256
+    D_21 = Λ_2-Λ_1 bits=248
+    D_23 = Λ_2-Λ_3 bits=256
+    D_31 = Λ_3-Λ_1 bits=254
+    D_32 = Λ_3-Λ_2 bits=254
+  D_12+D_23+D_31 mod N == 0: True
+  unified s_i (Λ_i-Λ_ε) bits: 254, 254, 0
+
+=== PART 3: Integer quotient tuple (c_1,c_2,c_3) vs d ===
+  c_i = (Λ_i·qx_i - Qx_i) / N  (per-row Λ, exact integer)
+
+  P15: c_bits=(255,255,254)  sum_bits=256  gap=1  C_floor_bits=15
+       c_sum mod LO == o: False  c_sum == C_floor: False
+  P45: c_bits=(254,254,254)  sum_bits=256  gap=2  C_floor_bits=45
+       c_sum mod LO == o: False  c_sum == C_floor: False
+  P115: c_bits=(249,255,255)  sum_bits=256  gap=10  C_floor_bits=115
+       c_sum mod LO == o: False  c_sum == C_floor: False
+  P120: c_bits=(253,256,253)  sum_bits=256  gap=2  C_floor_bits=120
+       c_sum mod LO == o: False  c_sum == C_floor: False
+  P130: c_bits=(256,248,251)  sum_bits=256  gap=3  C_floor_bits=130
+       c_sum mod LO == o: False  c_sum == C_floor: False
+
+  quotient tests: 26
+    c_sum mod LO == o: 0/26
+    c_sum mod LO == d mod LO: 0/26
+    c1+c2+c3 == C_floor (shelf): 0/26
+    any c_i == d: 0/26
+
+VERDICT:
+  s_i ≡ Λ_i - Λ_ε (mod N): CLOSED on all unified-Λ row-tests.
+  Shift is basis conversion, not private-key unknown.

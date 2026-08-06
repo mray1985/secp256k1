@@ -1,0 +1,73 @@
+LOCKED BRANCH: R = (H1^2 + c) - (H2^3 + 7)  mod N
+TEST: s/R ≈ 10   (equivalently 10R/s ≈ 1)
+
+=== P135 lock ===
+s match: True
+R match: True
+10R - s = 142273128491673195350299549532647783580829491317233874305645319516860415074
+10R/s   = 1.0091731532161623
+s/R     = 9.90910228649139
+rel gap = 0.9173153216%
+
+=== Anchors ===
+P135 wt=82: s/R=9.909102  10R/s=1.009173  gap=0.9173%
+P150 wt=86: s/R=0.327839  10R/s=30.502801  gap=2950.2801%
+P155 wt=90: s/R=0.576542  10R/s=17.344791  gap=1634.4791%
+P160 wt=81: s/R=0.234034  10R/s=42.728751  gap=4172.8751%
+
+=== Cohort (n=88) ===
+median s/R = 0.569678
+median |s/R-10| = 9.46825
+median rel gap % = 1655.6204
+best rel gap % = 0.917315 (P135)
+P135 rank by gap = 1 / 88
+
+band counts:
+  abs_sR_minus_10_lt_0.01: 0
+  abs_sR_minus_10_lt_0.05: 0
+  abs_sR_minus_10_lt_0.1: 1
+  abs_sR_minus_10_lt_0.25: 1
+  abs_sR_minus_10_lt_0.5: 1
+  abs_sR_minus_10_lt_1.0: 1
+  rel_gap_pct_lt_1: 1
+  rel_gap_pct_lt_5: 1
+  rel_gap_pct_lt_10: 1
+
+=== Null (shuffle s vs R, 2000 trials) ===
+P135 gap % = 0.917315
+mean fraction of rows with gap ≤ P135: 0.000756
+median best-gap-per-trial %: 17.065364
+
+=== Other branches |s/R-10|<0.1 hits ===
+{'minus_N': 0, 'plus_p': 0, 'minus_p': 0}
+
+=== All rows by ascending rel gap ===
+  P135 wt= 82  s/R=    9.909102  gap=    0.9173%
+  P100 wt= 90  s/R=    6.098850  gap=   63.9653%
+  P  9 wt= 84  s/R=  111.720302  gap=   91.0491%
+  P 17 wt= 86  s/R= 1782.084605  gap=   99.4389%
+  P 31 wt= 89  s/R=    4.935262  gap=  102.6235%
+  P 62 wt= 80  s/R=    4.785949  gap=  108.9450%
+  P 51 wt= 93  s/R=    4.580226  gap=  118.3298%
+  P 54 wt= 85  s/R=    4.512335  gap=  121.6148%
+  P 23 wt= 82  s/R=    3.510826  gap=  184.8333%
+  P 25 wt= 80  s/R=    2.748884  gap=  263.7839%
+  P 57 wt= 80  s/R=    2.450080  gap=  308.1499%
+  P 18 wt= 79  s/R=    2.020035  gap=  395.0409%
+  P 70 wt= 78  s/R=    1.806881  gap=  453.4398%
+  P 35 wt= 88  s/R=    1.659967  gap=  502.4218%
+  P125 wt= 82  s/R=    1.657484  gap=  503.3242%
+  P 80 wt= 92  s/R=    1.468991  gap=  580.7392%
+  P 38 wt= 82  s/R=    1.466143  gap=  582.0617%
+  P 61 wt= 79  s/R=    1.464861  gap=  582.6588%
+  P 44 wt= 78  s/R=    1.292085  gap=  673.9431%
+  P 65 wt= 82  s/R=    1.247698  gap=  701.4763%
+  ...
+  P 30 wt= 78  s/R=    0.123296  gap= 8010.5397%
+  P  8 wt= 69  s/R=    0.122601  gap= 8056.5286%
+  P 69 wt= 78  s/R=    0.104848  gap= 9437.6423%
+  P 39 wt= 77  s/R=    0.053124  gap=18723.7940%
+  P  6 wt= 85  s/R=    0.007759  gap=128789.5155%
+
+RULING:
+P135 locks s/R~9.909102 (gap 0.9173%). Cohort: 1/88 within 1% of 10R~s, 1/88 within 5%. Anchors 150/155/160 with gap<5%: [135]. Shuffle null mean fraction <=P135-gap: 0.0008. Fixed-branch s~10R does NOT generalize to Hamming anchors / cohort.

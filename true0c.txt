@@ -1,0 +1,71 @@
+If true0b.txt ends with:
+
+D_Q is a signed y-branch marker created by the p→N projection defect.
+
+Valid for: Q↔−Q
+
+Invalid for: kQ and Q₁+Q₂
+
+Research branch complete.
+
+then I'd split the project into two separate paths:
+
+Path 1 — Formalize the result
+
+You've established:
+
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+A(Q)+A(−Q)≡p−N(modN)
+D
+Q
+	​
+
+=2A(Q)−(p−N)(modN)
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+and demonstrated failures for scalar and additive linearity.
+
+That is a self-contained theorem-like result about the p→N projection defect.
+
+Path 2 — Return to the x-bridge
+
+The strongest unresolved relation is still:
+
+Λ⋅rx3≡X(modp)
+
+Everything else you tested ultimately collapsed into branch/reflection structure.
+
+The x-side bridge is the one thing that still touches a coordinate directly.
+
+Questions I'd test next:
+
+Λ⋅rx1(modp)
+Λ⋅rx2(modp)
+Λ⋅rx3(modp)
+
+and compare to the three corresponding x-family members.
+
+If the three-x-family relation survives the same way the y-reflection survived, that's where new information is most likely hiding.
+
+The y-branch work answered "what happens to reflection under p→N?"
+
+The next question is:
+
+"What happens to the three-x family under the same bridge?"
+
+That's where I'd spend the next cycle rather than continuing to probe D
+Q
+	​
+
+, because you've already mapped its behavior pretty thoroughly.

@@ -1,0 +1,67 @@
+{
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "command": [
+    "wsl",
+    "-e",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/keyhunt",
+    "-m",
+    "address",
+    "-f",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/logs/p71_s03/promotion/solved_n20/keyhunt_targets.txt",
+    "-r",
+    "d2c4d:d2c5d",
+    "-l",
+    "compress",
+    "-t",
+    "4"
+  ],
+  "target_address": "1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum",
+  "target_h160": "b907c3a2a3b27789dfb509b730dd47703c272868",
+  "start": 863309,
+  "end": 863325,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 0.26846500000101514,
+  "found_private_keys": [
+    "d2c55"
+  ],
+  "verified_hits": [
+    {
+      "d": 863317,
+      "d_hex": "d2c55",
+      "in_range": true,
+      "h160": "b907c3a2a3b27789dfb509b730dd47703c272868",
+      "address": "1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "d2c55",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD\n[+] Mode address\n[+] Search compress only\n[+] Threads : 4\n[+] Setting search for btc adddress\n[+] N = 0x100000000\n[+] Range \n[+] -- from : 0xd2c4d\n[+] -- to   : 0xd2c5d\n[+] Allocating memory for 1 elements: 0.00 MB\n[+] Bloom filter for 1 elements.\n[+] Loading data to the bloomfilter total: 0.03 MB\n[+] Sorting data ... done! 1 values were loaded and sorted\n\nBase key: d2c4d     \nHit! Private Key: d2c55\npubkey: 033c4a45cbd643ff97d77f41ea37e843648d50fd894b864b0d52febc62f6454f7c\nAddress 1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum\nrmd160 b907c3a2a3b27789dfb509b730dd47703c272868\n",
+  "stderr_tail": "",
+  "notes": [
+    "stop_on_hit=keyhunt_known_hit_calibration"
+  ],
+  "device_notes": "KeyHunt CPU compressed address mode (WSL-capable)",
+  "started_at_utc": "2026-07-10T16:41:28.330959+00:00",
+  "finished_at_utc": "2026-07-10T16:41:28.599520+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "pass": true
+  },
+  "step": "solved_n20"
+}

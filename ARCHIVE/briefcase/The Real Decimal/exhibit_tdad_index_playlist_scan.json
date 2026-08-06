@@ -1,0 +1,4179 @@
+{
+  "tdad_core": {
+    "operator_cycle": [
+      3,
+      2,
+      1,
+      2
+    ],
+    "operator_names": {
+      "3": "triple",
+      "2": "double",
+      "1": "add"
+    },
+    "low_entropy_operators": true,
+    "high_entropy_indices": true
+  },
+  "global_constraints": {
+    "playlist_count": 21,
+    "pure_3212_playlists": 4,
+    "cycle_count_distribution": {
+      "1": 3,
+      "3": 1,
+      "8": 2,
+      "10": 2
+    },
+    "unique_indices_used": 66,
+    "unique_term_pairs": 140,
+    "index_frequency_top20": [
+      [
+        5,
+        15
+      ],
+      [
+        7,
+        14
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        14,
+        11
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        58,
+        6
+      ],
+      [
+        19,
+        6
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        66,
+        6
+      ],
+      [
+        43,
+        5
+      ],
+      [
+        42,
+        5
+      ],
+      [
+        30,
+        5
+      ],
+      [
+        24,
+        5
+      ],
+      [
+        52,
+        4
+      ]
+    ],
+    "anchor_hit_counts": {
+      "65": 2,
+      "70": 1
+    },
+    "distance_from_target": {
+      "min": 1,
+      "max": 69,
+      "mean": 26.39846743295019
+    },
+    "reuse_per_index_distribution": {
+      "1": 166,
+      "2": 35,
+      "3": 7,
+      "4": 1
+    },
+    "cycle_position_preferences": {
+      "0": {
+        "coeff": 3,
+        "op": "triple",
+        "top_indices": [
+          [
+            13,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            43,
+            2
+          ],
+          [
+            66,
+            2
+          ]
+        ]
+      },
+      "1": {
+        "coeff": 2,
+        "op": "double",
+        "top_indices": [
+          [
+            5,
+            6
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            51,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            66,
+            2
+          ]
+        ]
+      },
+      "2": {
+        "coeff": 1,
+        "op": "add",
+        "top_indices": [
+          [
+            7,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            58,
+            2
+          ],
+          [
+            42,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            66,
+            2
+          ],
+          [
+            48,
+            2
+          ]
+        ]
+      },
+      "3": {
+        "coeff": 2,
+        "op": "double",
+        "top_indices": [
+          [
+            1,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            63,
+            3
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      }
+    },
+    "puzzles_with_10_cycles": [
+      70,
+      71
+    ],
+    "puzzles_with_8_cycles": [
+      69,
+      72
+    ]
+  },
+  "per_puzzle": [
+    {
+      "puzzle": 2,
+      "term_count": 1,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 1,
+      "distance_min": 1,
+      "distance_max": 1,
+      "distance_mean": 1,
+      "unique_indices": 1,
+      "max_reuse": 1,
+      "reuse_gt1_count": 0,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 1.0,
+      "cycle_pos_index_mean": {
+        "0": 1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 1,
+          "value": "1",
+          "contrib": 3,
+          "contrib_bits": 2
+        }
+      ],
+      "total_eval": "3",
+      "eval_ok": false,
+      "indices_path": [
+        1
+      ]
+    },
+    {
+      "puzzle": 3,
+      "term_count": 2,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 2,
+      "distance_min": 1,
+      "distance_max": 2,
+      "distance_mean": 1.5,
+      "unique_indices": 2,
+      "max_reuse": 1,
+      "reuse_gt1_count": 0,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 1.0,
+      "cycle_pos_index_mean": {
+        "0": 2,
+        "1": 1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 2,
+          "value": "3",
+          "contrib": 6,
+          "contrib_bits": 3
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 1,
+          "index": 1,
+          "value": "1",
+          "contrib": 1,
+          "contrib_bits": 1
+        }
+      ],
+      "total_eval": "7",
+      "eval_ok": false,
+      "indices_path": [
+        2,
+        1
+      ]
+    },
+    {
+      "puzzle": 4,
+      "term_count": 3,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 2,
+      "distance_min": 2,
+      "distance_max": 3,
+      "distance_mean": 2.6666666666666665,
+      "unique_indices": 2,
+      "max_reuse": 2,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.3333333333333333,
+      "cycle_pos_index_mean": {
+        "0": 1,
+        "1": 2,
+        "2": 1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 2,
+          "value": "3",
+          "contrib": 6,
+          "contrib_bits": 3
+        },
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 1,
+          "index": 1,
+          "value": "1",
+          "contrib": 1,
+          "contrib_bits": 1
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 1,
+          "value": "1",
+          "contrib": 1,
+          "contrib_bits": 1
+        }
+      ],
+      "total_eval": "8",
+      "eval_ok": false,
+      "indices_path": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "puzzle": 5,
+      "term_count": 1,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 3,
+      "distance_min": 2,
+      "distance_max": 2,
+      "distance_mean": 2,
+      "unique_indices": 1,
+      "max_reuse": 1,
+      "reuse_gt1_count": 0,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 1.0,
+      "cycle_pos_index_mean": {
+        "0": 3
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 3,
+          "value": "7",
+          "contrib": 21,
+          "contrib_bits": 5
+        }
+      ],
+      "total_eval": "21",
+      "eval_ok": false,
+      "indices_path": [
+        3
+      ]
+    },
+    {
+      "puzzle": 6,
+      "term_count": 2,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 5,
+      "distance_min": 1,
+      "distance_max": 3,
+      "distance_mean": 2,
+      "unique_indices": 2,
+      "max_reuse": 1,
+      "reuse_gt1_count": 0,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 1.0,
+      "cycle_pos_index_mean": {
+        "0": 5,
+        "1": 3
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 1,
+          "index": 3,
+          "value": "7",
+          "contrib": 7,
+          "contrib_bits": 3
+        }
+      ],
+      "total_eval": "49",
+      "eval_ok": false,
+      "indices_path": [
+        5,
+        3
+      ]
+    },
+    {
+      "puzzle": 7,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 6,
+      "distance_min": 1,
+      "distance_max": 6,
+      "distance_mean": 3.75,
+      "unique_indices": 4,
+      "max_reuse": 1,
+      "reuse_gt1_count": 0,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.5,
+      "cycle_pos_index_mean": {
+        "0": 6,
+        "1": 4,
+        "2": 2,
+        "3": 1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 1,
+          "index": 6,
+          "value": "49",
+          "contrib": 49,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 4,
+          "value": "8",
+          "contrib": 16,
+          "contrib_bits": 5
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 3,
+          "index": 2,
+          "value": "3",
+          "contrib": 9,
+          "contrib_bits": 4
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 1,
+          "value": "1",
+          "contrib": 2,
+          "contrib_bits": 2
+        }
+      ],
+      "total_eval": "76",
+      "eval_ok": false,
+      "indices_path": [
+        6,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "puzzle": 8,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 7,
+      "distance_min": 1,
+      "distance_max": 7,
+      "distance_mean": 3.4,
+      "unique_indices": 3,
+      "max_reuse": 3,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.8,
+      "cycle_pos_index_mean": {
+        "0": 4,
+        "1": 5,
+        "2": 5,
+        "3": 5
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 1,
+          "index": 7,
+          "value": "76",
+          "contrib": 76,
+          "contrib_bits": 7
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 3,
+          "index": 5,
+          "value": "21",
+          "contrib": 63,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 1,
+          "index": 1,
+          "value": "1",
+          "contrib": 1,
+          "contrib_bits": 1
+        }
+      ],
+      "total_eval": "224",
+      "eval_ok": false,
+      "indices_path": [
+        7,
+        5,
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "puzzle": 9,
+      "term_count": 6,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 4,
+      "index_max": 7,
+      "distance_min": 2,
+      "distance_max": 5,
+      "distance_mean": 3.3333333333333335,
+      "unique_indices": 3,
+      "max_reuse": 3,
+      "reuse_gt1_count": 2,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 1.0,
+      "cycle_pos_index_mean": {
+        "0": 5.5,
+        "1": 5.5,
+        "2": 7,
+        "3": 5
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 7,
+          "value": "76",
+          "contrib": 152,
+          "contrib_bits": 8
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 7,
+          "value": "76",
+          "contrib": 152,
+          "contrib_bits": 8
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 1,
+          "index": 7,
+          "value": "76",
+          "contrib": 76,
+          "contrib_bits": 7
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 3,
+          "index": 5,
+          "value": "21",
+          "contrib": 63,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 4,
+          "value": "8",
+          "contrib": 16,
+          "contrib_bits": 5
+        }
+      ],
+      "total_eval": "467",
+      "eval_ok": false,
+      "indices_path": [
+        7,
+        7,
+        7,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "puzzle": 10,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 8,
+      "distance_min": 2,
+      "distance_max": 9,
+      "distance_mean": 5.25,
+      "unique_indices": 3,
+      "max_reuse": 2,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.75,
+      "cycle_pos_index_mean": {
+        "0": 8,
+        "1": 5,
+        "2": 5,
+        "3": 1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 8,
+          "value": "224",
+          "contrib": 448,
+          "contrib_bits": 9
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 3,
+          "index": 5,
+          "value": "21",
+          "contrib": 63,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 1,
+          "index": 1,
+          "value": "1",
+          "contrib": 1,
+          "contrib_bits": 1
+        }
+      ],
+      "total_eval": "554",
+      "eval_ok": false,
+      "indices_path": [
+        8,
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "puzzle": 11,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 10,
+      "distance_min": 1,
+      "distance_max": 8,
+      "distance_mean": 5.6,
+      "unique_indices": 4,
+      "max_reuse": 2,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.6,
+      "cycle_pos_index_mean": {
+        "0": 6.5,
+        "1": 5,
+        "2": 5,
+        "3": 4
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 10,
+          "value": "514",
+          "contrib": 1028,
+          "contrib_bits": 11
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 3,
+          "index": 5,
+          "value": "21",
+          "contrib": 63,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 3,
+          "value": "7",
+          "contrib": 14,
+          "contrib_bits": 4
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 1,
+          "index": 4,
+          "value": "8",
+          "contrib": 8,
+          "contrib_bits": 4
+        }
+      ],
+      "total_eval": "1155",
+      "eval_ok": false,
+      "indices_path": [
+        10,
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "puzzle": 12,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 10,
+      "distance_min": 2,
+      "distance_max": 9,
+      "distance_mean": 5.2,
+      "unique_indices": 4,
+      "max_reuse": 2,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.6,
+      "cycle_pos_index_mean": {
+        "0": 6.5,
+        "1": 10,
+        "2": 7,
+        "3": 4
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 10,
+          "value": "514",
+          "contrib": 1542,
+          "contrib_bits": 11
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 10,
+          "value": "514",
+          "contrib": 1028,
+          "contrib_bits": 11
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 7,
+          "value": "76",
+          "contrib": 76,
+          "contrib_bits": 7
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 3,
+          "value": "7",
+          "contrib": 21,
+          "contrib_bits": 5
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 4,
+          "value": "8",
+          "contrib": 16,
+          "contrib_bits": 5
+        }
+      ],
+      "total_eval": "2683",
+      "eval_ok": false,
+      "indices_path": [
+        10,
+        10,
+        7,
+        4,
+        3
+      ]
+    },
+    {
+      "puzzle": 13,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 11,
+      "distance_min": 2,
+      "distance_max": 12,
+      "distance_mean": 7.3,
+      "unique_indices": 8,
+      "max_reuse": 2,
+      "reuse_gt1_count": 2,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.5,
+      "cycle_pos_index_mean": {
+        "0": 6,
+        "1": 5.666666666666667,
+        "2": 6,
+        "3": 5
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 11,
+          "value": "1155",
+          "contrib": 2310,
+          "contrib_bits": 12
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 1,
+          "index": 11,
+          "value": "1155",
+          "contrib": 1155,
+          "contrib_bits": 11
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 9,
+          "value": "467",
+          "contrib": 934,
+          "contrib_bits": 10
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 3,
+          "index": 8,
+          "value": "224",
+          "contrib": 672,
+          "contrib_bits": 10
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 6,
+          "value": "49",
+          "contrib": 98,
+          "contrib_bits": 7
+        }
+      ],
+      "total_eval": "5216",
+      "eval_ok": false,
+      "indices_path": [
+        11,
+        11,
+        9,
+        8,
+        6,
+        5,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "puzzle": 14,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 13,
+      "distance_min": 1,
+      "distance_max": 11,
+      "distance_mean": 7.5,
+      "unique_indices": 3,
+      "max_reuse": 2,
+      "reuse_gt1_count": 1,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.25,
+      "cycle_pos_index_mean": {
+        "0": 13,
+        "1": 5,
+        "2": 5,
+        "3": 3
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 13,
+          "value": "5216",
+          "contrib": 10432,
+          "contrib_bits": 14
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 3,
+          "index": 5,
+          "value": "21",
+          "contrib": 63,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 5,
+          "value": "21",
+          "contrib": 42,
+          "contrib_bits": 6
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 1,
+          "index": 3,
+          "value": "7",
+          "contrib": 7,
+          "contrib_bits": 3
+        }
+      ],
+      "total_eval": "10544",
+      "eval_ok": false,
+      "indices_path": [
+        13,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "puzzle": 15,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 1,
+      "index_max": 14,
+      "distance_min": 1,
+      "distance_max": 14,
+      "distance_mean": 7.5,
+      "unique_indices": 7,
+      "max_reuse": 3,
+      "reuse_gt1_count": 2,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.8,
+      "cycle_pos_index_mean": {
+        "0": 8,
+        "1": 6.333333333333333,
+        "2": 8,
+        "3": 8
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 14,
+          "value": "10544",
+          "contrib": 21088,
+          "contrib_bits": 15
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 3,
+          "index": 11,
+          "value": "1155",
+          "contrib": 3465,
+          "contrib_bits": 12
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 9,
+          "value": "467",
+          "contrib": 934,
+          "contrib_bits": 10
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 1,
+          "index": 9,
+          "value": "467",
+          "contrib": 467,
+          "contrib_bits": 9
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 8,
+          "value": "224",
+          "contrib": 448,
+          "contrib_bits": 9
+        }
+      ],
+      "total_eval": "26867",
+      "eval_ok": false,
+      "indices_path": [
+        14,
+        11,
+        9,
+        9,
+        8,
+        7,
+        7,
+        7,
+        2,
+        1
+      ]
+    },
+    {
+      "puzzle": 16,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 3,
+      "index_max": 14,
+      "distance_min": 2,
+      "distance_max": 13,
+      "distance_mean": 7.2,
+      "unique_indices": 8,
+      "max_reuse": 2,
+      "reuse_gt1_count": 2,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.6,
+      "cycle_pos_index_mean": {
+        "0": 9.333333333333334,
+        "1": 8.333333333333334,
+        "2": 9.5,
+        "3": 8
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 14,
+          "value": "10544",
+          "contrib": 21088,
+          "contrib_bits": 15
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 1,
+          "index": 14,
+          "value": "10544",
+          "contrib": 10544,
+          "contrib_bits": 14
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 13,
+          "value": "5216",
+          "contrib": 10432,
+          "contrib_bits": 14
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 3,
+          "index": 12,
+          "value": "2683",
+          "contrib": 8049,
+          "contrib_bits": 13
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 10,
+          "value": "514",
+          "contrib": 1028,
+          "contrib_bits": 11
+        }
+      ],
+      "total_eval": "51510",
+      "eval_ok": false,
+      "indices_path": [
+        14,
+        14,
+        13,
+        12,
+        10,
+        8,
+        6,
+        4,
+        4,
+        3
+      ]
+    },
+    {
+      "puzzle": 17,
+      "term_count": 12,
+      "cycle_count": 3,
+      "da_cycle_pure": false,
+      "index_min": 2,
+      "index_max": 14,
+      "distance_min": 3,
+      "distance_max": 15,
+      "distance_mean": 8.166666666666666,
+      "unique_indices": 8,
+      "max_reuse": 4,
+      "reuse_gt1_count": 2,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.5,
+      "cycle_pos_index_mean": {
+        "0": 11,
+        "1": 8.666666666666666,
+        "2": 8,
+        "3": 7.666666666666667
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 3,
+          "index": 14,
+          "value": "10544",
+          "contrib": 31632,
+          "contrib_bits": 15
+        },
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 14,
+          "value": "10544",
+          "contrib": 21088,
+          "contrib_bits": 15
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 2,
+          "index": 14,
+          "value": "10544",
+          "contrib": 21088,
+          "contrib_bits": 15
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 1,
+          "index": 14,
+          "value": "10544",
+          "contrib": 10544,
+          "contrib_bits": 14
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 2,
+          "index": 13,
+          "value": "5216",
+          "contrib": 10432,
+          "contrib_bits": 14
+        }
+      ],
+      "total_eval": "95823",
+      "eval_ok": false,
+      "indices_path": [
+        14,
+        14,
+        14,
+        14,
+        13,
+        8,
+        7,
+        7,
+        6,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "puzzle": 68,
+      "term_count": 33,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "index_min": 2,
+      "index_max": 66,
+      "distance_min": 2,
+      "distance_max": 66,
+      "distance_mean": 32.60606060606061,
+      "unique_indices": 27,
+      "max_reuse": 3,
+      "reuse_gt1_count": 5,
+      "anchor_hits": {
+        "65": 1
+      },
+      "anchor_term_count": 1,
+      "high_half_bias": 0.48484848484848486,
+      "cycle_pos_index_mean": {
+        "0": 35.22222222222222,
+        "1": 37,
+        "2": 35.875,
+        "3": 33.5
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 139038652651039007178,
+          "contrib_bits": 67
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 65,
+          "value": "30568377312064202855",
+          "contrib": 61136754624128405710,
+          "contrib_bits": 66
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 64,
+          "value": "17799667357578236628",
+          "contrib": 17799667357578236628,
+          "contrib_bits": 64
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 59,
+          "value": "525070384258266191",
+          "contrib": 1050140768516532382,
+          "contrib_bits": 60
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 58,
+          "value": "199976667976342049",
+          "contrib": 599930003929026147,
+          "contrib_bits": 60
+        }
+      ],
+      "total_eval": "219898266213316039825",
+      "eval_ok": false,
+      "indices_path": [
+        66,
+        65,
+        64,
+        59,
+        58,
+        56,
+        55,
+        55,
+        55,
+        51,
+        48,
+        45,
+        45,
+        40,
+        38,
+        36,
+        32,
+        30,
+        30,
+        28,
+        27,
+        24,
+        24,
+        20,
+        19,
+        18,
+        18,
+        17,
+        13,
+        12,
+        10,
+        8,
+        2
+      ]
+    },
+    {
+      "puzzle": 69,
+      "term_count": 32,
+      "cycle_count": 8,
+      "da_cycle_pure": true,
+      "index_min": 1,
+      "index_max": 66,
+      "distance_min": 3,
+      "distance_max": 68,
+      "distance_mean": 35.3125,
+      "unique_indices": 24,
+      "max_reuse": 3,
+      "reuse_gt1_count": 5,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.5,
+      "cycle_pos_index_mean": {
+        "0": 35.875,
+        "1": 34.875,
+        "2": 33.75,
+        "3": 30.25
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 139038652651039007178,
+          "contrib_bits": 67
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 92692435100692671452,
+          "contrib_bits": 67
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 46346217550346335726,
+          "contrib_bits": 66
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 63,
+          "value": "8993229949524469768",
+          "contrib": 17986459899048939536,
+          "contrib_bits": 64
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 58,
+          "value": "199976667976342049",
+          "contrib": 599930003929026147,
+          "contrib_bits": 60
+        }
+      ],
+      "total_eval": "297274491920375905804",
+      "eval_ok": true,
+      "indices_path": [
+        66,
+        66,
+        66,
+        63,
+        58,
+        58,
+        58,
+        52,
+        50,
+        48,
+        48,
+        43,
+        42,
+        41,
+        38,
+        36,
+        33,
+        30,
+        27,
+        26,
+        19,
+        19,
+        19,
+        14,
+        13,
+        12,
+        9,
+        7,
+        6,
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "puzzle": 70,
+      "term_count": 40,
+      "cycle_count": 10,
+      "da_cycle_pure": true,
+      "index_min": 1,
+      "index_max": 68,
+      "distance_min": 2,
+      "distance_max": 69,
+      "distance_mean": 37.625,
+      "unique_indices": 33,
+      "max_reuse": 2,
+      "reuse_gt1_count": 7,
+      "anchor_hits": {
+        "65": 1
+      },
+      "anchor_term_count": 1,
+      "high_half_bias": 0.45,
+      "cycle_pos_index_mean": {
+        "0": 34.3,
+        "1": 33.2,
+        "2": 31.9,
+        "3": 30.1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 68,
+          "value": "219898266213316039825",
+          "contrib": 659694798639948119475,
+          "contrib_bits": 70
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 67,
+          "value": "132656943602386256302",
+          "contrib": 265313887204772512604,
+          "contrib_bits": 68
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 65,
+          "value": "30568377312064202855",
+          "contrib": 30568377312064202855,
+          "contrib_bits": 65
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 62,
+          "value": "3908372542507822062",
+          "contrib": 7816745085015644124,
+          "contrib_bits": 63
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 61,
+          "value": "1425787542618654982",
+          "contrib": 4277362627855964946,
+          "contrib_bits": 62
+        }
+      ],
+      "total_eval": "970436974005023690481",
+      "eval_ok": false,
+      "indices_path": [
+        68,
+        67,
+        65,
+        62,
+        61,
+        60,
+        58,
+        57,
+        52,
+        51,
+        51,
+        48,
+        43,
+        43,
+        42,
+        41,
+        39,
+        37,
+        32,
+        30,
+        29,
+        28,
+        28,
+        24,
+        23,
+        23,
+        21,
+        19,
+        15,
+        14,
+        13,
+        13,
+        9,
+        7,
+        7,
+        6,
+        4,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "puzzle": 71,
+      "term_count": 40,
+      "cycle_count": 10,
+      "da_cycle_pure": true,
+      "index_min": 2,
+      "index_max": 69,
+      "distance_min": 2,
+      "distance_max": 69,
+      "distance_mean": 37.6,
+      "unique_indices": 33,
+      "max_reuse": 2,
+      "reuse_gt1_count": 7,
+      "anchor_hits": {},
+      "anchor_term_count": 0,
+      "high_half_bias": 0.45,
+      "cycle_pos_index_mean": {
+        "0": 35.3,
+        "1": 34.2,
+        "2": 33,
+        "3": 31.1
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 69,
+          "value": "297274491920375905804",
+          "contrib": 891823475761127717412,
+          "contrib_bits": 70
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 68,
+          "value": "219898266213316039825",
+          "contrib": 439796532426632079650,
+          "contrib_bits": 69
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 46346217550346335726,
+          "contrib_bits": 66
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 63,
+          "value": "8993229949524469768",
+          "contrib": 17986459899048939536,
+          "contrib_bits": 64
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 62,
+          "value": "3908372542507822062",
+          "contrib": 11725117627523466186,
+          "contrib_bits": 64
+        }
+      ],
+      "total_eval": "1411488254391826260559",
+      "eval_ok": true,
+      "indices_path": [
+        69,
+        68,
+        66,
+        63,
+        62,
+        61,
+        59,
+        58,
+        53,
+        52,
+        52,
+        49,
+        44,
+        44,
+        43,
+        42,
+        40,
+        38,
+        33,
+        31,
+        30,
+        29,
+        29,
+        25,
+        24,
+        24,
+        23,
+        20,
+        16,
+        15,
+        14,
+        14,
+        10,
+        8,
+        8,
+        7,
+        5,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "puzzle": 72,
+      "term_count": 32,
+      "cycle_count": 8,
+      "da_cycle_pure": true,
+      "index_min": 3,
+      "index_max": 70,
+      "distance_min": 2,
+      "distance_max": 69,
+      "distance_mean": 36.9375,
+      "unique_indices": 29,
+      "max_reuse": 2,
+      "reuse_gt1_count": 3,
+      "anchor_hits": {
+        "70": 1
+      },
+      "anchor_term_count": 1,
+      "high_half_bias": 0.5,
+      "cycle_pos_index_mean": {
+        "0": 38.375,
+        "1": 35.5,
+        "2": 34.375,
+        "3": 32
+      },
+      "top_contrib_terms": [
+        {
+          "pos": 0,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 70,
+          "value": "970436974005023690481",
+          "contrib": 2911310922015071071443,
+          "contrib_bits": 72
+        },
+        {
+          "pos": 1,
+          "cycle_pos": 1,
+          "coeff": 2,
+          "index": 66,
+          "value": "46346217550346335726",
+          "contrib": 92692435100692671452,
+          "contrib_bits": 67
+        },
+        {
+          "pos": 3,
+          "cycle_pos": 3,
+          "coeff": 2,
+          "index": 63,
+          "value": "8993229949524469768",
+          "contrib": 17986459899048939536,
+          "contrib_bits": 64
+        },
+        {
+          "pos": 2,
+          "cycle_pos": 2,
+          "coeff": 1,
+          "index": 64,
+          "value": "17799667357578236628",
+          "contrib": 17799667357578236628,
+          "contrib_bits": 64
+        },
+        {
+          "pos": 4,
+          "cycle_pos": 0,
+          "coeff": 3,
+          "index": 59,
+          "value": "525070384258266191",
+          "contrib": 1575211152774798573,
+          "contrib_bits": 61
+        }
+      ],
+      "total_eval": "3041466034261123517719",
+      "eval_ok": true,
+      "indices_path": [
+        70,
+        66,
+        64,
+        63,
+        59,
+        56,
+        53,
+        51,
+        50,
+        46,
+        45,
+        44,
+        43,
+        42,
+        42,
+        40,
+        35,
+        27,
+        27,
+        23,
+        21,
+        20,
+        20,
+        19,
+        18,
+        17,
+        15,
+        13,
+        11,
+        10,
+        9,
+        3
+      ]
+    }
+  ],
+  "playlists": {
+    "70": {
+      "puzzle": 70,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 68
+        },
+        {
+          "coeff": 2,
+          "index": 67
+        },
+        {
+          "coeff": 1,
+          "index": 65
+        },
+        {
+          "coeff": 2,
+          "index": 62
+        },
+        {
+          "coeff": 3,
+          "index": 61
+        },
+        {
+          "coeff": 2,
+          "index": 60
+        },
+        {
+          "coeff": 1,
+          "index": 58
+        },
+        {
+          "coeff": 2,
+          "index": 57
+        },
+        {
+          "coeff": 3,
+          "index": 52
+        },
+        {
+          "coeff": 2,
+          "index": 51
+        },
+        {
+          "coeff": 1,
+          "index": 51
+        },
+        {
+          "coeff": 2,
+          "index": 48
+        },
+        {
+          "coeff": 3,
+          "index": 43
+        },
+        {
+          "coeff": 2,
+          "index": 43
+        },
+        {
+          "coeff": 1,
+          "index": 42
+        },
+        {
+          "coeff": 2,
+          "index": 41
+        },
+        {
+          "coeff": 3,
+          "index": 39
+        },
+        {
+          "coeff": 2,
+          "index": 37
+        },
+        {
+          "coeff": 1,
+          "index": 32
+        },
+        {
+          "coeff": 2,
+          "index": 30
+        },
+        {
+          "coeff": 3,
+          "index": 29
+        },
+        {
+          "coeff": 2,
+          "index": 28
+        },
+        {
+          "coeff": 1,
+          "index": 28
+        },
+        {
+          "coeff": 2,
+          "index": 24
+        },
+        {
+          "coeff": 3,
+          "index": 23
+        },
+        {
+          "coeff": 2,
+          "index": 23
+        },
+        {
+          "coeff": 1,
+          "index": 21
+        },
+        {
+          "coeff": 2,
+          "index": 19
+        },
+        {
+          "coeff": 3,
+          "index": 15
+        },
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 1,
+          "index": 13
+        },
+        {
+          "coeff": 2,
+          "index": 13
+        },
+        {
+          "coeff": 3,
+          "index": 9
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 6
+        },
+        {
+          "coeff": 3,
+          "index": 4
+        },
+        {
+          "coeff": 2,
+          "index": 2
+        },
+        {
+          "coeff": 1,
+          "index": 2
+        },
+        {
+          "coeff": 2,
+          "index": 1
+        }
+      ],
+      "T": "891823475761127717412",
+      "eval_ok": false,
+      "term_count": 40,
+      "cycle_count": 10,
+      "da_cycle_pure": true,
+      "indices": [
+        68,
+        67,
+        65,
+        62,
+        61,
+        60,
+        58,
+        57,
+        52,
+        51,
+        51,
+        48,
+        43,
+        43,
+        42,
+        41,
+        39,
+        37,
+        32,
+        30,
+        29,
+        28,
+        28,
+        24,
+        23,
+        23,
+        21,
+        19,
+        15,
+        14,
+        13,
+        13,
+        9,
+        7,
+        7,
+        6,
+        4,
+        2,
+        2,
+        1
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "indices_path": [
+        68,
+        67,
+        65,
+        62,
+        61,
+        60,
+        58,
+        57,
+        52,
+        51,
+        51,
+        48,
+        43,
+        43,
+        42,
+        41,
+        39,
+        37,
+        32,
+        30,
+        29,
+        28,
+        28,
+        24,
+        23,
+        23,
+        21,
+        19,
+        15,
+        14,
+        13,
+        13,
+        9,
+        7,
+        7,
+        6,
+        4,
+        2,
+        2,
+        1
+      ]
+    },
+    "69": {
+      "puzzle": 69,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 66
+        },
+        {
+          "coeff": 2,
+          "index": 66
+        },
+        {
+          "coeff": 1,
+          "index": 66
+        },
+        {
+          "coeff": 2,
+          "index": 63
+        },
+        {
+          "coeff": 3,
+          "index": 58
+        },
+        {
+          "coeff": 2,
+          "index": 58
+        },
+        {
+          "coeff": 1,
+          "index": 58
+        },
+        {
+          "coeff": 2,
+          "index": 52
+        },
+        {
+          "coeff": 3,
+          "index": 50
+        },
+        {
+          "coeff": 2,
+          "index": 48
+        },
+        {
+          "coeff": 1,
+          "index": 48
+        },
+        {
+          "coeff": 2,
+          "index": 43
+        },
+        {
+          "coeff": 3,
+          "index": 42
+        },
+        {
+          "coeff": 2,
+          "index": 41
+        },
+        {
+          "coeff": 1,
+          "index": 38
+        },
+        {
+          "coeff": 2,
+          "index": 36
+        },
+        {
+          "coeff": 3,
+          "index": 33
+        },
+        {
+          "coeff": 2,
+          "index": 30
+        },
+        {
+          "coeff": 1,
+          "index": 27
+        },
+        {
+          "coeff": 2,
+          "index": 26
+        },
+        {
+          "coeff": 3,
+          "index": 19
+        },
+        {
+          "coeff": 2,
+          "index": 19
+        },
+        {
+          "coeff": 1,
+          "index": 19
+        },
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 3,
+          "index": 13
+        },
+        {
+          "coeff": 2,
+          "index": 12
+        },
+        {
+          "coeff": 1,
+          "index": 9
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 3,
+          "index": 6
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 1
+        }
+      ],
+      "T": "297274491920375905804",
+      "eval_ok": true,
+      "term_count": 32,
+      "cycle_count": 8,
+      "da_cycle_pure": true,
+      "indices": [
+        66,
+        66,
+        66,
+        63,
+        58,
+        58,
+        58,
+        52,
+        50,
+        48,
+        48,
+        43,
+        42,
+        41,
+        38,
+        36,
+        33,
+        30,
+        27,
+        26,
+        19,
+        19,
+        19,
+        14,
+        13,
+        12,
+        9,
+        7,
+        6,
+        5,
+        5,
+        1
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "indices_path": [
+        66,
+        66,
+        66,
+        63,
+        58,
+        58,
+        58,
+        52,
+        50,
+        48,
+        48,
+        43,
+        42,
+        41,
+        38,
+        36,
+        33,
+        30,
+        27,
+        26,
+        19,
+        19,
+        19,
+        14,
+        13,
+        12,
+        9,
+        7,
+        6,
+        5,
+        5,
+        1
+      ]
+    },
+    "68": {
+      "puzzle": 68,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 66
+        },
+        {
+          "coeff": 2,
+          "index": 65
+        },
+        {
+          "coeff": 1,
+          "index": 64
+        },
+        {
+          "coeff": 2,
+          "index": 59
+        },
+        {
+          "coeff": 3,
+          "index": 58
+        },
+        {
+          "coeff": 2,
+          "index": 56
+        },
+        {
+          "coeff": 1,
+          "index": 55
+        },
+        {
+          "coeff": 2,
+          "index": 55
+        },
+        {
+          "coeff": 3,
+          "index": 55
+        },
+        {
+          "coeff": 2,
+          "index": 51
+        },
+        {
+          "coeff": 1,
+          "index": 48
+        },
+        {
+          "coeff": 2,
+          "index": 45
+        },
+        {
+          "coeff": 3,
+          "index": 45
+        },
+        {
+          "coeff": 2,
+          "index": 40
+        },
+        {
+          "coeff": 1,
+          "index": 38
+        },
+        {
+          "coeff": 2,
+          "index": 36
+        },
+        {
+          "coeff": 3,
+          "index": 32
+        },
+        {
+          "coeff": 2,
+          "index": 30
+        },
+        {
+          "coeff": 1,
+          "index": 30
+        },
+        {
+          "coeff": 2,
+          "index": 28
+        },
+        {
+          "coeff": 3,
+          "index": 27
+        },
+        {
+          "coeff": 2,
+          "index": 24
+        },
+        {
+          "coeff": 1,
+          "index": 24
+        },
+        {
+          "coeff": 2,
+          "index": 20
+        },
+        {
+          "coeff": 3,
+          "index": 19
+        },
+        {
+          "coeff": 2,
+          "index": 18
+        },
+        {
+          "coeff": 1,
+          "index": 18
+        },
+        {
+          "coeff": 2,
+          "index": 17
+        },
+        {
+          "coeff": 3,
+          "index": 13
+        },
+        {
+          "coeff": 2,
+          "index": 12
+        },
+        {
+          "coeff": 1,
+          "index": 10
+        },
+        {
+          "coeff": 2,
+          "index": 8
+        },
+        {
+          "coeff": 3,
+          "index": 2
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 33,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        66,
+        65,
+        64,
+        59,
+        58,
+        56,
+        55,
+        55,
+        55,
+        51,
+        48,
+        45,
+        45,
+        40,
+        38,
+        36,
+        32,
+        30,
+        30,
+        28,
+        27,
+        24,
+        24,
+        20,
+        19,
+        18,
+        18,
+        17,
+        13,
+        12,
+        10,
+        8,
+        2
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3
+      ],
+      "indices_path": [
+        66,
+        65,
+        64,
+        59,
+        58,
+        56,
+        55,
+        55,
+        55,
+        51,
+        48,
+        45,
+        45,
+        40,
+        38,
+        36,
+        32,
+        30,
+        30,
+        28,
+        27,
+        24,
+        24,
+        20,
+        19,
+        18,
+        18,
+        17,
+        13,
+        12,
+        10,
+        8,
+        2
+      ]
+    },
+    "2": {
+      "puzzle": 2,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 1,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        1
+      ],
+      "coeffs": [
+        3
+      ],
+      "indices_path": [
+        1
+      ]
+    },
+    "3": {
+      "puzzle": 3,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 2
+        },
+        {
+          "coeff": 1,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 2,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        2,
+        1
+      ],
+      "coeffs": [
+        2,
+        1
+      ],
+      "indices_path": [
+        2,
+        1
+      ]
+    },
+    "4": {
+      "puzzle": 4,
+      "terms": [
+        {
+          "coeff": 1,
+          "index": 1
+        },
+        {
+          "coeff": 2,
+          "index": 2
+        },
+        {
+          "coeff": 1,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 3,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        1,
+        2,
+        1
+      ],
+      "coeffs": [
+        1,
+        2,
+        1
+      ],
+      "indices_path": [
+        1,
+        2,
+        1
+      ]
+    },
+    "5": {
+      "puzzle": 5,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 1,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        3
+      ],
+      "coeffs": [
+        3
+      ],
+      "indices_path": [
+        3
+      ]
+    },
+    "6": {
+      "puzzle": 6,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 2,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        5,
+        3
+      ],
+      "coeffs": [
+        2,
+        1
+      ],
+      "indices_path": [
+        5,
+        3
+      ]
+    },
+    "7": {
+      "puzzle": 7,
+      "terms": [
+        {
+          "coeff": 1,
+          "index": 6
+        },
+        {
+          "coeff": 2,
+          "index": 4
+        },
+        {
+          "coeff": 3,
+          "index": 2
+        },
+        {
+          "coeff": 2,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "indices": [
+        6,
+        4,
+        2,
+        1
+      ],
+      "coeffs": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "indices_path": [
+        6,
+        4,
+        2,
+        1
+      ]
+    },
+    "8": {
+      "puzzle": 8,
+      "terms": [
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        7,
+        5,
+        5,
+        5,
+        1
+      ],
+      "coeffs": [
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        7,
+        5,
+        5,
+        5,
+        1
+      ]
+    },
+    "9": {
+      "puzzle": 9,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 4
+        },
+        {
+          "coeff": 1,
+          "index": 4
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 6,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        7,
+        7,
+        7,
+        5,
+        4,
+        4
+      ],
+      "coeffs": [
+        2,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        7,
+        7,
+        7,
+        5,
+        4,
+        4
+      ]
+    },
+    "10": {
+      "puzzle": 10,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 8
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "indices": [
+        8,
+        5,
+        5,
+        1
+      ],
+      "coeffs": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        8,
+        5,
+        5,
+        1
+      ]
+    },
+    "11": {
+      "puzzle": 11,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 10
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 4
+        },
+        {
+          "coeff": 2,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        10,
+        5,
+        5,
+        4,
+        3
+      ],
+      "coeffs": [
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "indices_path": [
+        10,
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    "12": {
+      "puzzle": 12,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 10
+        },
+        {
+          "coeff": 2,
+          "index": 10
+        },
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 4
+        },
+        {
+          "coeff": 3,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 5,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        10,
+        10,
+        7,
+        4,
+        3
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3
+      ],
+      "indices_path": [
+        10,
+        10,
+        7,
+        4,
+        3
+      ]
+    },
+    "13": {
+      "puzzle": 13,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 11
+        },
+        {
+          "coeff": 1,
+          "index": 11
+        },
+        {
+          "coeff": 2,
+          "index": 9
+        },
+        {
+          "coeff": 3,
+          "index": 8
+        },
+        {
+          "coeff": 2,
+          "index": 6
+        },
+        {
+          "coeff": 1,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 3
+        },
+        {
+          "coeff": 3,
+          "index": 2
+        },
+        {
+          "coeff": 2,
+          "index": 1
+        },
+        {
+          "coeff": 1,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        11,
+        11,
+        9,
+        8,
+        6,
+        5,
+        3,
+        2,
+        1,
+        1
+      ],
+      "coeffs": [
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        11,
+        11,
+        9,
+        8,
+        6,
+        5,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    "14": {
+      "puzzle": 14,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 13
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 5
+        },
+        {
+          "coeff": 1,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 4,
+      "cycle_count": 1,
+      "da_cycle_pure": false,
+      "indices": [
+        13,
+        5,
+        5,
+        3
+      ],
+      "coeffs": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        13,
+        5,
+        5,
+        3
+      ]
+    },
+    "15": {
+      "puzzle": 15,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 3,
+          "index": 11
+        },
+        {
+          "coeff": 2,
+          "index": 9
+        },
+        {
+          "coeff": 1,
+          "index": 9
+        },
+        {
+          "coeff": 2,
+          "index": 8
+        },
+        {
+          "coeff": 3,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 2
+        },
+        {
+          "coeff": 3,
+          "index": 1
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        14,
+        11,
+        9,
+        9,
+        8,
+        7,
+        7,
+        7,
+        2,
+        1
+      ],
+      "coeffs": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3
+      ],
+      "indices_path": [
+        14,
+        11,
+        9,
+        9,
+        8,
+        7,
+        7,
+        7,
+        2,
+        1
+      ]
+    },
+    "16": {
+      "puzzle": 16,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 1,
+          "index": 14
+        },
+        {
+          "coeff": 2,
+          "index": 13
+        },
+        {
+          "coeff": 3,
+          "index": 12
+        },
+        {
+          "coeff": 2,
+          "index": 10
+        },
+        {
+          "coeff": 1,
+          "index": 8
+        },
+        {
+          "coeff": 2,
+          "index": 6
+        },
+        {
+          "coeff": 3,
+          "index": 4
+        },
+        {
+          "coeff": 2,
+          "index": 4
+        },
+        {
+          "coeff": 1,
+          "index": 3
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 10,
+      "cycle_count": null,
+      "da_cycle_pure": false,
+      "indices": [
+        14,
+        14,
+        13,
+        12,
+        10,
+        8,
+        6,
+        4,
+        4,
+        3
+      ],
+      "coeffs": [
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        14,
+        14,
+        13,
+        12,
+        10,
+        8,
+        6,
+        4,
+        4,
+        3
+      ]
+    },
+    "17": {
+      "puzzle": 17,
+      "terms": [
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 3,
+          "index": 14
+        },
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 1,
+          "index": 14
+        },
+        {
+          "coeff": 2,
+          "index": 13
+        },
+        {
+          "coeff": 3,
+          "index": 8
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 1,
+          "index": 7
+        },
+        {
+          "coeff": 2,
+          "index": 6
+        },
+        {
+          "coeff": 3,
+          "index": 4
+        },
+        {
+          "coeff": 2,
+          "index": 3
+        },
+        {
+          "coeff": 1,
+          "index": 2
+        }
+      ],
+      "T": null,
+      "eval_ok": false,
+      "term_count": 12,
+      "cycle_count": 3,
+      "da_cycle_pure": false,
+      "indices": [
+        14,
+        14,
+        14,
+        14,
+        13,
+        8,
+        7,
+        7,
+        6,
+        4,
+        3,
+        2
+      ],
+      "coeffs": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "indices_path": [
+        14,
+        14,
+        14,
+        14,
+        13,
+        8,
+        7,
+        7,
+        6,
+        4,
+        3,
+        2
+      ]
+    },
+    "71": {
+      "puzzle": 71,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 69
+        },
+        {
+          "coeff": 2,
+          "index": 68
+        },
+        {
+          "coeff": 1,
+          "index": 66
+        },
+        {
+          "coeff": 2,
+          "index": 63
+        },
+        {
+          "coeff": 3,
+          "index": 62
+        },
+        {
+          "coeff": 2,
+          "index": 61
+        },
+        {
+          "coeff": 1,
+          "index": 59
+        },
+        {
+          "coeff": 2,
+          "index": 58
+        },
+        {
+          "coeff": 3,
+          "index": 53
+        },
+        {
+          "coeff": 2,
+          "index": 52
+        },
+        {
+          "coeff": 1,
+          "index": 52
+        },
+        {
+          "coeff": 2,
+          "index": 49
+        },
+        {
+          "coeff": 3,
+          "index": 44
+        },
+        {
+          "coeff": 2,
+          "index": 44
+        },
+        {
+          "coeff": 1,
+          "index": 43
+        },
+        {
+          "coeff": 2,
+          "index": 42
+        },
+        {
+          "coeff": 3,
+          "index": 40
+        },
+        {
+          "coeff": 2,
+          "index": 38
+        },
+        {
+          "coeff": 1,
+          "index": 33
+        },
+        {
+          "coeff": 2,
+          "index": 31
+        },
+        {
+          "coeff": 3,
+          "index": 30
+        },
+        {
+          "coeff": 2,
+          "index": 29
+        },
+        {
+          "coeff": 1,
+          "index": 29
+        },
+        {
+          "coeff": 2,
+          "index": 25
+        },
+        {
+          "coeff": 3,
+          "index": 24
+        },
+        {
+          "coeff": 2,
+          "index": 24
+        },
+        {
+          "coeff": 1,
+          "index": 23
+        },
+        {
+          "coeff": 2,
+          "index": 20
+        },
+        {
+          "coeff": 3,
+          "index": 16
+        },
+        {
+          "coeff": 2,
+          "index": 15
+        },
+        {
+          "coeff": 1,
+          "index": 14
+        },
+        {
+          "coeff": 2,
+          "index": 14
+        },
+        {
+          "coeff": 3,
+          "index": 10
+        },
+        {
+          "coeff": 2,
+          "index": 8
+        },
+        {
+          "coeff": 1,
+          "index": 8
+        },
+        {
+          "coeff": 2,
+          "index": 7
+        },
+        {
+          "coeff": 3,
+          "index": 5
+        },
+        {
+          "coeff": 2,
+          "index": 3
+        },
+        {
+          "coeff": 1,
+          "index": 3
+        },
+        {
+          "coeff": 2,
+          "index": 2
+        }
+      ],
+      "T": "1411488254391826260559",
+      "eval_ok": true,
+      "term_count": 40,
+      "cycle_count": 10,
+      "da_cycle_pure": true,
+      "indices": [
+        69,
+        68,
+        66,
+        63,
+        62,
+        61,
+        59,
+        58,
+        53,
+        52,
+        52,
+        49,
+        44,
+        44,
+        43,
+        42,
+        40,
+        38,
+        33,
+        31,
+        30,
+        29,
+        29,
+        25,
+        24,
+        24,
+        23,
+        20,
+        16,
+        15,
+        14,
+        14,
+        10,
+        8,
+        8,
+        7,
+        5,
+        3,
+        3,
+        2
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "indices_path": [
+        69,
+        68,
+        66,
+        63,
+        62,
+        61,
+        59,
+        58,
+        53,
+        52,
+        52,
+        49,
+        44,
+        44,
+        43,
+        42,
+        40,
+        38,
+        33,
+        31,
+        30,
+        29,
+        29,
+        25,
+        24,
+        24,
+        23,
+        20,
+        16,
+        15,
+        14,
+        14,
+        10,
+        8,
+        8,
+        7,
+        5,
+        3,
+        3,
+        2
+      ]
+    },
+    "72": {
+      "puzzle": 72,
+      "terms": [
+        {
+          "coeff": 3,
+          "index": 70
+        },
+        {
+          "coeff": 2,
+          "index": 66
+        },
+        {
+          "coeff": 1,
+          "index": 64
+        },
+        {
+          "coeff": 2,
+          "index": 63
+        },
+        {
+          "coeff": 3,
+          "index": 59
+        },
+        {
+          "coeff": 2,
+          "index": 56
+        },
+        {
+          "coeff": 1,
+          "index": 53
+        },
+        {
+          "coeff": 2,
+          "index": 51
+        },
+        {
+          "coeff": 3,
+          "index": 50
+        },
+        {
+          "coeff": 2,
+          "index": 46
+        },
+        {
+          "coeff": 1,
+          "index": 45
+        },
+        {
+          "coeff": 2,
+          "index": 44
+        },
+        {
+          "coeff": 3,
+          "index": 43
+        },
+        {
+          "coeff": 2,
+          "index": 42
+        },
+        {
+          "coeff": 1,
+          "index": 42
+        },
+        {
+          "coeff": 2,
+          "index": 40
+        },
+        {
+          "coeff": 3,
+          "index": 35
+        },
+        {
+          "coeff": 2,
+          "index": 27
+        },
+        {
+          "coeff": 1,
+          "index": 27
+        },
+        {
+          "coeff": 2,
+          "index": 23
+        },
+        {
+          "coeff": 3,
+          "index": 21
+        },
+        {
+          "coeff": 2,
+          "index": 20
+        },
+        {
+          "coeff": 1,
+          "index": 20
+        },
+        {
+          "coeff": 2,
+          "index": 19
+        },
+        {
+          "coeff": 3,
+          "index": 18
+        },
+        {
+          "coeff": 2,
+          "index": 17
+        },
+        {
+          "coeff": 1,
+          "index": 15
+        },
+        {
+          "coeff": 2,
+          "index": 13
+        },
+        {
+          "coeff": 3,
+          "index": 11
+        },
+        {
+          "coeff": 2,
+          "index": 10
+        },
+        {
+          "coeff": 1,
+          "index": 9
+        },
+        {
+          "coeff": 2,
+          "index": 3
+        }
+      ],
+      "T": "3041466034261123517719",
+      "eval_ok": true,
+      "term_count": 32,
+      "cycle_count": 8,
+      "da_cycle_pure": true,
+      "indices": [
+        70,
+        66,
+        64,
+        63,
+        59,
+        56,
+        53,
+        51,
+        50,
+        46,
+        45,
+        44,
+        43,
+        42,
+        42,
+        40,
+        35,
+        27,
+        27,
+        23,
+        21,
+        20,
+        20,
+        19,
+        18,
+        17,
+        15,
+        13,
+        11,
+        10,
+        9,
+        3
+      ],
+      "coeffs": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "indices_path": [
+        70,
+        66,
+        64,
+        63,
+        59,
+        56,
+        53,
+        51,
+        50,
+        46,
+        45,
+        44,
+        43,
+        42,
+        42,
+        40,
+        35,
+        27,
+        27,
+        23,
+        21,
+        20,
+        20,
+        19,
+        18,
+        17,
+        15,
+        13,
+        11,
+        10,
+        9,
+        3
+      ]
+    }
+  },
+  "p135_projection": {
+    "puzzle": 135,
+    "expected_rhythm": [
+      3,
+      2,
+      1,
+      2
+    ],
+    "expected_cycles_guess": 10,
+    "expected_terms_guess": 40,
+    "formula": "T_135 = \u03a3 coeff_i * d_{index_i}  with coeff from [3,2,1,2]*10",
+    "index_slots_unknown": 40,
+    "available_prior_indices": 84,
+    "available_anchor_indices": [
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130
+    ],
+    "gates": [
+      "T_135 in [2^134, 2^135)",
+      "[T_135]G == P135 compressed address"
+    ],
+    "warnings_from_p71_p72": "Correct [3,2,1,2] rhythm + wrong playlist \u2192 range-valid scalar, fails address gate",
+    "constraints_from_solved": {
+      "pure_3212_rate": "4/21 playlists",
+      "common_cycle_counts": {
+        "1": 3,
+        "3": 1,
+        "8": 2,
+        "10": 2
+      },
+      "top_anchor_indices": [
+        65,
+        70
+      ],
+      "distance_mean_prior": 26.39846743295019,
+      "max_reuse_seen": 4
+    },
+    "search_target": "index path [a1..a40], NOT operator combinations",
+    "status": "index playlist missing \u2014 rhythm known"
+  },
+  "ruling": "The drummer is obvious: [3,2,1,2] repeated. The sheet music is the index playlist. P71/P72 prove rhythm without correct indices fails [T]G=P. P135 search target: 40 index slots (10 cycles), not operator combos."
+}

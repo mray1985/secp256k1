@@ -1,0 +1,118 @@
+LOG2(d)/LOG2(N) vs HASH160 / SHA256 / ADDRESS BUCKET SEARCH
+solved puzzles in band: 82
+log2(N) = 256.000000000000
+
+=== top |correlation| single bucket vs log2(d)/log2(N) ===
+  r=+1.0000  n/256
+  r=+1.0000  (n-1)/256
+  r=+1.0000  n/(128+log2(7))
+  r=-0.3301  sha[17]/255
+  r=+0.2410  h160[17]/255
+  r=-0.2211  h160[02]/255
+  r=-0.2149  sha[16]/255
+  r=+0.2035  chk[2]/255
+  r=+0.1934  sum(chk)/1020
+  r=+0.1877  sha[26]/255
+  r=-0.1871  h160[13]/255
+  r=-0.1855  sha[15]/255
+  r=-0.1849  addr[4]/58
+  r=-0.1844  sum(sha)/8160
+  r=-0.1843  sha[19]/255
+  r=-0.1812  addr[3]/58
+  r=-0.1744  h160[07]/255
+  r=+0.1641  sha[31]/255
+  r=-0.1575  sha[27]/255
+  r=+0.1562  addr[5]/58
+  r=-0.1371  sha[01]/255
+  r=+0.1350  chk[3]/255
+  r=+0.1304  sha[21]/255
+  r=+0.1256  sha[14]/255
+  r=+0.1236  sha[10]/255
+
+=== best invariant: y_d - bucket (low std) ===
+  std=0.001048  mean_diff=-0.001711  n/256
+  std=0.001048  mean_diff=+0.002196  (n-1)/256
+  std=0.115302  mean_diff=-0.171087  n/(128+log2(7))
+  std=0.120695  mean_diff=+0.175261  addr[0]/58
+  std=0.120767  mean_diff=+0.172974  payload/2^200
+  std=0.120901  mean_diff=-0.819650  log2(sha256)/log2(N)
+  std=0.120986  mean_diff=-0.570491  log2(payload)/log2(N)
+  std=0.120986  mean_diff=-0.445491  log2(h160)/log2(N)
+  std=0.143694  mean_diff=-0.317922  sum(sha)/8160
+  std=0.143819  mean_diff=-0.333117  sum(h160)/5100
+  std=0.175547  mean_diff=-0.320554  sum(chk)/1020
+  std=0.187972  mean_diff=-0.061913  addr[1]/58
+  std=0.278024  mean_diff=-0.299009  sha[31]/255
+  std=0.282302  mean_diff=-0.321104  h160[12]/255
+  std=0.283812  mean_diff=-0.326205  d mod lo / lo
+  std=0.289664  mean_diff=-0.302883  h160[17]/255
+  std=0.290330  mean_diff=-0.363380  h160[11]/255
+  std=0.291175  mean_diff=-0.322778  sha[26]/255
+  std=0.293250  mean_diff=-0.321104  chk[1]/255
+  std=0.294373  mean_diff=-0.320744  addr[2]/58
+  std=0.295129  mean_diff=-0.320954  addr[5]/58
+  std=0.296391  mean_diff=-0.323878  chk[3]/255
+  std=0.296475  mean_diff=-0.313739  sha[02]/255
+  std=0.298747  mean_diff=-0.333823  chk/2^32
+  std=0.298756  mean_diff=-0.301209  h160[10]/255
+  std=0.299052  mean_diff=-0.314074  sha[04]/255
+  std=0.299145  mean_diff=-0.332518  addr[7]/58
+  std=0.299530  mean_diff=-0.333873  chk[0]/255
+  std=0.300120  mean_diff=-0.316082  sha[13]/255
+  std=0.300516  mean_diff=-0.274523  h160[09]/255
+
+=== pairwise bucket sums (std < 0.15) ===
+  y - ((n-1)/256+addr[0]/58) std=0.00105 mean=+0.00220
+  y - (n/256+addr[0]/58) std=0.00105 mean=-0.00171
+  y - ((n-1)/256+payload/2^200) std=0.00163 mean=-0.00009
+  y - (n/256+payload/2^200) std=0.00163 mean=-0.00400
+  y - (n/256+log2(sha256)/log2(N)) std=0.00450 mean=-0.99662
+  y - ((n-1)/256+log2(sha256)/log2(N)) std=0.00450 mean=-0.99272
+  y - ((n-1)/256+log2(h160)/log2(N)) std=0.00478 mean=-0.61856
+  y - (n/256+log2(h160)/log2(N)) std=0.00478 mean=-0.62246
+  y - ((n-1)/256+log2(payload)/log2(N)) std=0.00478 mean=-0.74356
+  y - (n/256+log2(payload)/log2(N)) std=0.00478 mean=-0.74746
+  y - (n/256+sum(sha)/8160) std=0.05882 mean=-0.49489
+  y - ((n-1)/256+sum(sha)/8160) std=0.05882 mean=-0.49099
+  y - ((n-1)/256+sum(h160)/5100) std=0.06856 mean=-0.50618
+  y - (n/256+sum(h160)/5100) std=0.06856 mean=-0.51009
+  y - (n/(128+log2(7))+log2(h160)/log2(N)) std=0.11520 mean=-0.79184
+  y - (n/(128+log2(7))+log2(payload)/log2(N)) std=0.11520 mean=-0.91684
+  y - (n/(128+log2(7))+payload/2^200) std=0.11524 mean=-0.17337
+  y - (n/(128+log2(7))+log2(sha256)/log2(N)) std=0.11526 mean=-1.16600
+  y - (n/(128+log2(7))+addr[0]/58) std=0.11530 mean=-0.17109
+  y - (n/(128+log2(7))+sum(sha)/8160) std=0.11934 mean=-0.66427
+
+=== exact relations on solved set ===
+  y_d == frac_d: 1/82
+  y_d == log_pos/256: 3/82
+  y_d == n/256: 82/82
+  frac_d == h160 mod lo / lo: 1/82
+
+=== P135 predictions (unsolved) ===
+  P135 addr: 16RGFo6hjq9ym6Pj7N5H7L1NR1rVPJyw2v
+  h160: 3b6f58a75a54bfd85d1bc6c51180fdc732992326
+  checksum: 7b8f3e17
+
+  2^(y_pred*log2N) inv n/256: d_bits=135 ec=False tail...561600
+  lo*(1+bucket) n/256: d_bits=135 ec=False tail...669824
+  2^(y_pred*log2N) inv (n-1)/256: d_bits=135 ec=False tail...561600
+  lo*(1+bucket) (n-1)/256: d_bits=135 ec=False tail...616960
+  lo*(1+bucket) addr[0]/58: d_bits=135 ec=False tail...533184
+  lo*(1+bucket) payload/2^200: d_bits=135 ec=False tail...389504
+  lo*(1+bucket) log2(sha256)/log2(N): d_bits=135 ec=False tail...567168
+  lo*(1+bucket) log2(payload)/log2(N): d_bits=135 ec=False tail...839936
+  lo*(1+bucket) log2(h160)/log2(N): d_bits=135 ec=False tail...148288
+  lo*(1+bucket) sum(sha)/8160: d_bits=135 ec=False tail...732224
+  lo*(1+bucket) sum(h160)/5100: d_bits=135 ec=False tail...837440
+  lo*(1+bucket) sum(chk)/1020: d_bits=135 ec=False tail...327104
+  lo*(1+bucket) addr[1]/58: d_bits=135 ec=False tail...548032
+  lo*(1+bucket) sha[31]/255: d_bits=135 ec=False tail...932288
+  lo*(1+bucket) h160[12]/255: d_bits=135 ec=False tail...980416
+  lo*(1+bucket) d mod lo / lo: d_bits=135 ec=False tail...533184
+  linear n/256: a=1.000900 b=-0.001870 -> d135 bits=135 band=True
+    EC=False
+
+=== VERDICT ===
+  No P135 EC hit from bucket invariants.
+  Best single-bucket invariant std: 0.001048 (n/256)

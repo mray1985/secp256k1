@@ -1,0 +1,11 @@
+@echo off
+setlocal
+call "%~dp0..\paths.bat"
+cd /d "%WORKDIR%"
+echo Complement export: small_rem_7
+echo Source: rem=1650894107335658849316835064
+echo Center d=997975121504983968409448569596658584434340955014
+echo m partner=116027029874950565460596089591
+echo Range aecec08df9c9df2b09513174b8a79182d9497386:aecec08df9c9df2b09513174b8a7935482939386  (+-1000000000000)
+"%KEYHUNT%" -m bsgs -f "%PUBFILE%" -r aecec08df9c9df2b09513174b8a79182d9497386:aecec08df9c9df2b09513174b8a7935482939386 -k %K_FACTOR% -t %THREADS% -s %STATS% -S -q
+pause

@@ -1,0 +1,28 @@
+{
+  "candidate_id": "G-20260710-03",
+  "short_name": "payload_serial_dcor_gate",
+  "formula": "q=(d-2**(n-1))/2**(n-1); S=dCor(q_t,q_{t+1}); chains A=1..70 and B=75,80..130 separately; permute q order within chain for null; promote only if p_perm<0.01 on BOTH; no lag/Pearson/combine",
+  "domains": "solved d; q in [0,1)",
+  "score_definition": "empirical distance correlation on consecutive pairs; p_perm from 10000 permutations",
+  "expected_direction": "higher S; p_perm<0.01 both chains",
+  "allowed_parameters": {
+    "score": "dCor only",
+    "B_perm": 10000,
+    "chains": [
+      "1..70",
+      "75..130 step5"
+    ],
+    "p_threshold": 0.01,
+    "grid": "none"
+  },
+  "holdout_split": "two locked chains; no combining",
+  "null_families": [
+    "permute q order within each chain"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Serial dependence of creator-side band positions; not ECDSA or curve membership.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

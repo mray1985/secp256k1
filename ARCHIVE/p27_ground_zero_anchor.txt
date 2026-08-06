@@ -1,0 +1,81 @@
+P27 GROUND ZERO — canonical sqrt-fraction anchor
+
+P27 d = 111949941
+  {sqrt d} = 0.369139
+  {sqrt x} = 0.364629
+  {sqrt y} = 0.850675
+  band_frac = 0.738279
+
+GROUND ZERO offsets (apply to any puzzle pubkey fractions):
+  GZ_xd = {sqrt x} - {sqrt d} = -0.004510
+  GZ_yd = {sqrt y} - {sqrt d} = +0.481535
+  GZ_yx = {sqrt y} - {sqrt x} = +0.486045
+
+Predict:  {sqrt d} = {sqrt x} - GZ_xd  OR  {sqrt y} - GZ_yd
+          band_frac = {2 * sqrt d}
+
+=== solved: |actual - pred| from P27 x-anchor ===
+  P  1 err_x=0.4684 err_y=0.3943  actual_fd=0.0000 pred_x=0.4684 pred_y=0.6057
+  P  2 err_x=0.1926 err_y=0.3632  actual_fd=0.7925 pred_x=0.9851 pred_y=0.4293
+  P  3 err_x=0.1316 err_y=0.4850  actual_fd=0.4037 pred_x=0.2721 pred_y=0.8887
+  P  4 err_x=0.2819 err_y=0.2826  actual_fd=0.5000 pred_x=0.7819 pred_y=0.7826
+  P  5 err_x=0.3254 err_y=0.1460  actual_fd=0.1962 pred_x=0.8708 pred_y=0.3421
+  P  6 err_x=0.1591 err_y=0.3824  actual_fd=0.8074 pred_x=0.9665 pred_y=0.4249
+  P  7 err_x=0.4965 err_y=0.1782  actual_fd=0.1240 pred_x=0.6204 pred_y=0.3022
+  P  8 err_x=0.3356 err_y=0.4756  actual_fd=0.9037 pred_x=0.5680 pred_y=0.3793
+  P  9 err_x=0.3921 err_y=0.3737  actual_fd=0.4336 pred_x=0.0416 pred_y=0.0599
+  P 10 err_x=0.1963 err_y=0.1153  actual_fd=0.5028 pred_x=0.6991 pred_y=0.3875
+  P 11 err_x=0.4773 err_y=0.1377  actual_fd=0.0868 pred_x=0.5641 pred_y=0.9491
+  P 12 err_x=0.1308 err_y=0.1304  actual_fd=0.6948 pred_x=0.5640 pred_y=0.8252
+  P 13 err_x=0.4615 err_y=0.1190  actual_fd=0.1744 pred_x=0.7128 pred_y=0.2933
+  P 14 err_x=0.0721 err_y=0.2926  actual_fd=0.6821 pred_x=0.7542 pred_y=0.9747
+  P 15 err_x=0.3561 err_y=0.0198  actual_fd=0.3568 pred_x=0.0007 pred_y=0.3370
+  P 16 err_x=0.1719 err_y=0.2131  actual_fd=0.8263 pred_x=0.6543 pred_y=0.0393
+  P 17 err_x=0.2762 err_y=0.1639  actual_fd=0.2740 pred_x=0.9978 pred_y=0.4380
+  P 18 err_x=0.0488 err_y=0.2652  actual_fd=0.8000 pred_x=0.8488 pred_y=0.0652
+  P 19 err_x=0.3105 err_y=0.3540  actual_fd=0.2239 pred_x=0.5343 pred_y=0.5779
+  P 20 err_x=0.1017 err_y=0.2025  actual_fd=0.8598 pred_x=0.9614 pred_y=0.0622
+  P 21 err_x=0.0272 err_y=0.1247  actual_fd=0.3945 pred_x=0.3672 pred_y=0.2698
+  P 22 err_x=0.2314 err_y=0.1624  actual_fd=0.7601 pred_x=0.9914 pred_y=0.9225
+  P 23 err_x=0.2263 err_y=0.0697  actual_fd=0.2083 pred_x=0.9821 pred_y=0.1386
+  P 24 err_x=0.4917 err_y=0.4919  actual_fd=0.8912 pred_x=0.3995 pred_y=0.3831
+  P 25 err_x=0.2579 err_y=0.2123  actual_fd=0.4920 pred_x=0.2341 pred_y=0.2797
+  P 26 err_x=0.2997 err_y=0.1143  actual_fd=0.8504 pred_x=0.1501 pred_y=0.9647
+  P 27 err_x=0.0000 err_y=0.0000  actual_fd=0.3691 pred_x=0.3691 pred_y=0.3691
+  P 28 err_x=0.0583 err_y=0.2953  actual_fd=0.8811 pred_x=0.9394 pred_y=0.1764
+  P 29 err_x=0.0974 err_y=0.2001  actual_fd=0.2890 pred_x=0.3864 pred_y=0.4891
+  P 30 err_x=0.1088 err_y=0.2792  actual_fd=0.9722 pred_x=0.8634 pred_y=0.2514
+  P 31 err_x=0.0628 err_y=0.0819  actual_fd=0.4847 pred_x=0.5475 pred_y=0.5666
+  P 32 err_x=0.1145 err_y=0.0855  actual_fd=0.7633 pred_x=0.6488 pred_y=0.6778
+  P 33 err_x=0.3140 err_y=0.1675  actual_fd=0.3664 pred_x=0.6804 pred_y=0.5339
+  P 34 err_x=0.1091 err_y=0.4812  actual_fd=0.8592 pred_x=0.9683 pred_y=0.3404
+  P 35 err_x=0.1360 err_y=0.0109  actual_fd=0.1137 pred_x=0.9777 pred_y=0.1028
+  P130 err_x=0.4720 err_y=0.4012  actual_fd=0.8489 pred_x=0.3209 pred_y=0.2501
+
+  mean err x-anchor: 0.2629  y-anchor: 0.2406  count err_x<0.05: 6/82
+
+=== distance from ground zero (puzzle n - 27) ===
+  P  1  n-27= -26  err_x=0.4684  band_frac=0.0000
+  P 10  n-27= -17  err_x=0.1963  band_frac=0.0056
+  P 20  n-27=  -7  err_x=0.1017  band_frac=0.7195
+  P 27  n-27=  +0  err_x=0.0000  band_frac=0.7383
+  P 40  n-27= +13  err_x=0.2556  band_frac=0.8684
+  P 60  n-27= +33  err_x=0.1098  band_frac=0.9775
+  P 80  n-27= +53  err_x=0.4419  band_frac=0.8710
+  P100  n-27= +73  err_x=0.1347  band_frac=0.4540
+  P115  n-27= +88  err_x=0.2019  band_frac=0.5993
+  P130  n-27=+103  err_x=0.4720  band_frac=0.6978
+
+=== P135 projection from P27 ground zero ===
+  {sqrt x}=0.173970  {sqrt y}=0.339576
+  pred {sqrt d} from x: 0.178480  band_frac=0.356959
+  pred {sqrt d} from y: 0.858040  band_frac=0.716081
+  d_x anchor tail ...000864354304  frac_d=0.2807
+  d_y anchor tail ...951007580160  frac_d=0.6427
+  x vs y anchor disagree by band_frac 0.3591
+
+=== EC scan +/-500,000 around P27-anchored d (P135) ===
+  x_anchor center ...0864354304  hit=none
+  y_anchor center ...1007580160  hit=none
+
+  check {sqrt x}+GZ_yx=0.660015 vs {sqrt y}=0.339576  diff=0.320439

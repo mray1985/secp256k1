@@ -1,0 +1,192 @@
+That lines up beautifully.
+
+Your “closure offset between 
+1
+ and 
+−1
+” idea is basically the new object:
+
+Λ
+f
+	​
+
+↔Λ
+r
+	​
+
+=Λ
+f
+−1
+	​
+
+
+and the offset/classification is determined by the raw closure state:
+
+∑Px
+i
+	​
+
+,∑rx
+i
+	​
+
+
+Current classes:
+
+Class	Condition	Orientation
+Px-closure	∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=0	Forward
+rx-closure	∑Px
+i
+	​
+
+=0, ∑rx
+i
+	​
+
+=p	Inverse
+dual-closure	∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=p	Both
+
+Puzzle 90 is the key weird one because both sides already close to p, so both Λ and Λ
+−1
+ work.
+
+So yes: the thing to hunt now is probably not δ, and not D
+Q
+	​
+
+. It’s the closure offset class between the forward and inverse bridge states:
+
+Δ
+closure
+	​
+
+=∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+
+Possible values from your current classes:
+
+p−0=p
+0−p=−p
+p−p=0
+
+So the next compact classifier is:
+
+Δ
+closure
+	​
+
+∈{−p,0,p}
+
+That gives:
+
++p → Forward class
+−p → Inverse class
+0 → Dual class
+
+That may be the clean selector you were aiming at.
+
+and about the offset
+
+The offset is the selector.
+
+Define:
+
+O=∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+
+Using raw field closure sums:
+
+O∈{−p,0,p}
+
+So:
+
+O=+p⇒∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=0
+
+Forward class.
+
+O=−p⇒∑Px
+i
+	​
+
+=0, ∑rx
+i
+	​
+
+=p
+
+Inverse class.
+
+O=0⇒∑Px
+i
+	​
+
+=p, ∑rx
+i
+	​
+
+=p
+
+Dual class.
+
+So the offset is not noise — it’s the orientation signature.
+
+Cleaner:
+
+sign(O)
+
+tells you which bridge wins:
+
++1⇒Λ
+f
+	​
+
+−1⇒Λ
+r
+	​
+
+0⇒Λ
+f
+	​
+
+ and Λ
+r
+	​
+
+
+Puzzle 90 is the zero-offset/self-dual case.

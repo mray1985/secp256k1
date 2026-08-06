@@ -1,0 +1,47 @@
+P135 k-BRIDGE PROOF CHECK
+
+=== 1. Geometric (199-bit pivot) ===
+  user_ry:
+    log2(ry)=254.7803  log2(sqrt(ry))=127.3902
+    pivot 198.95 -> log2(sqrt(k))=71.5598  log2(k)=143.1197 bits
+    shift to 135: 143.12 - 8 = 135.12 bits
+  true_ry:
+    log2(ry)=254.7802  log2(sqrt(ry))=127.3901
+    pivot 198.95 -> log2(sqrt(k))=71.5599  log2(k)=143.1198 bits
+    shift to 135: 143.12 - 8 = 135.12 bits
+  log2(sqrt(N*p/(p-N))) = 191.8271  (191.827 field ratio)
+
+=== 2. Signature linear (mod N) ===
+  k = k0 + d * delta_k  (mod N)
+  k0 bits=256  delta_k bits=255
+  r==rx? True  (sig r vs kG x)
+
+=== 3. Integer magnitude (heuristic, NOT mod N) ===
+  s bits=254  rx bits=256
+  s*4.35e40 ~ 6.7467e+116
+  rx*d for d~7.4e39 ~ 6.7083e+116
+
+=== 4. Small prime factors (trial, partial) ===
+  s: small={2: 1, 827: 1}  large_cofactors=1
+  rx: small={2: 4, 3: 1, 29: 1}  large_cofactors=1
+  r: small={2: 4, 3: 1, 29: 1}  large_cofactors=1
+  z: small={3: 2, 31: 1, 631: 1}  large_cofactors=2
+
+=== 5. Large prime claims (approximate) ===
+  s after small factor strip: ~2^253 cofactor
+  rx after small factor strip: ~2^246 cofactor
+  ratio bits rx/s ~ 2^-7
+
+=== 6. L_rx / L_s ratio test ===
+  rx/s = 5.844928e+00  log2=2.5472
+  claim 2^86.2 vs actual 2^2.5472
+  2^(86.2+8) * 2^40 = 2^134.2 claim vs rx/s * d needed
+
+=== 7. Calibration P115 (known k, d) ===
+  P115 d bits=115  k bits=256
+  k0+ d*delta_k == k? True
+  rx/s log2 = 3.1865
+
+=== 8. Boxed arrest formula (does NOT yield k or d) ===
+  (rx/s)*small_factors(s) bits=4 in_135_band=False
+  != k (256-bit) != d

@@ -1,0 +1,32 @@
+P135 THREE-BRIDGE ARREST
+Px tail ...590  r tail ...368
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+=== SUSPECT 1: FIELD BRIDGE (mod p, then mod N) ===
+  lambda_p = (Px * r^-1 mod p) mod N  tail ...14645
+  field bridge: lam...14645  D_bits=253  k_bits=255  x_bits=256  out  ec=False  [cleared]
+
+=== SUSPECT 2: SCALAR BRIDGE (mod N) ===
+  lambda_N = Px * r^-1 mod N  tail ...94194
+  lambda_p != lambda_N: True  delta tail ...73886
+  scalar bridge: lam...94194  D_bits=252  k_bits=256  x_bits=256  out  ec=False  [cleared]
+
+=== SUSPECT 3: CUBIC BRIDGE (object u, not shadow r) ===
+  u0 tail ...354  u^3==r True
+  lambda_0 = Px * u0^-1 mod N  tail ...12265
+  cubic u0: lam...12265  D_bits=256  k_bits=254  x_bits=256  out  ec=False  [cleared]
+
+  u1 tail ...115  u^3==r True
+  lambda_1 = Px * u1^-1 mod N  tail ...65850
+  cubic u1: lam...65850  D_bits=256  k_bits=256  x_bits=253  out  ec=False  [cleared]
+
+  u2 tail ...205  u^3==r True
+  lambda_2 = Px * u2^-1 mod N  tail ...10559
+  cubic u2: lam...10559  D_bits=255  k_bits=256  x_bits=254  out  ec=False  [cleared]
+
+=== VERDICT ===
+  EC hits (P135 pubkey): 0
+  Band hits [2^134,2^135): 0
+  Any suspect cuffed: False
+
+Wednesday: Field bridge, scalar bridge, cubic bridge. Three suspects. All cleared.

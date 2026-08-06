@@ -1,0 +1,71 @@
+{
+  "targets": [
+    {
+      "puzzle": 35,
+      "L": 17179869184,
+      "L_bits": 34,
+      "u_true": 2933002608,
+      "u_true_hex": "aed21170",
+      "d_true": 20112871792,
+      "q_compressed": "0269a55ab92a0e769273e756b1d64efe6f8948eb71467ddb1b4ad387fb840e0fc5",
+      "pub_compressed": "02f6a8148a62320e149cb15c544fe8a25ab483a0095d2280d03b8a00a7feada13d",
+      "infile": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p35_bandfloor_Q.txt",
+      "expected_sqrt": 131072.0
+    },
+    {
+      "puzzle": 40,
+      "L": 549755813888,
+      "L_bits": 39,
+      "u_true": 453895599062,
+      "u_true_hex": "69ae4933d6",
+      "d_true": 1003651412950,
+      "q_compressed": "02ef9c854f0d4a1c7177f79eaf53952d96a8719387ed4ce95aa5c678211d5aea86",
+      "pub_compressed": "03a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4",
+      "infile": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p40_bandfloor_Q.txt",
+      "expected_sqrt": 741455.2001894653
+    },
+    {
+      "puzzle": 45,
+      "L": 17592186044416,
+      "L_bits": 44,
+      "u_true": 2404277042181,
+      "u_true_hex": "22fca143c05",
+      "d_true": 19996463086597,
+      "q_compressed": "0352a55ecfb87bed2e72b6c2d0eef60dca785ffe14596e60a095bc7044b7682728",
+      "pub_compressed": "026ecabd2d22fdb737be21975ce9a694e108eb94f3649c586cc7461c8abf5da71a",
+      "infile": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p45_bandfloor_Q.txt",
+      "expected_sqrt": 4194304.0
+    },
+    {
+      "puzzle": 50,
+      "L": 562949953421312,
+      "L_bits": 49,
+      "u_true": 48190542746452,
+      "u_true_hex": "2bd43c2e9354",
+      "d_true": 611140496167764,
+      "q_compressed": "023b6f03363da11c517f67ea8101388bb1de5d2b61b323d026856a3148f4d9080f",
+      "pub_compressed": "03f46f41027bbf44fafd6b059091b900dad41e6845b2241dc3254c7cdd3c5a16c6",
+      "infile": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p50_bandfloor_Q.txt",
+      "expected_sqrt": 23726566.40606289
+    },
+    {
+      "puzzle": 55,
+      "L": 18014398509481984,
+      "L_bits": 54,
+      "u_true": 12030991982387476,
+      "u_true_hex": "2abe1f9b67e114",
+      "d_true": 30045390491869460,
+      "q_compressed": "02b1f8ba606a61026d1ecaa93d9e9ceb12260c33e92809ed1ecb0850a2856accc1",
+      "pub_compressed": "0385a30d8413af4f8f9e6312400f2d194fe14f02e719b24c3f83bf1fd233a8f963",
+      "infile": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p55_bandfloor_Q.txt",
+      "expected_sqrt": 134217728.0
+    }
+  ],
+  "infiles": [
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p35_bandfloor_Q.txt",
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p40_bandfloor_Q.txt",
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p45_bandfloor_Q.txt",
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p50_bandfloor_Q.txt",
+    "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\s02_native\\infiles\\p55_bandfloor_Q.txt"
+  ]
+}

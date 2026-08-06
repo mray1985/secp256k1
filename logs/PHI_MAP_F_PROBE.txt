@@ -1,0 +1,67 @@
+========================================================================================
+Phi map F probe: decode/encode, exact F, cheap-fit holdout
+========================================================================================
+  Phi = (x + y/p)/p   p=secp256k1 prime
+  Walk: nG for n=1..1100
+  Train transitions: n=1..799   Holdout: n=800..1099
+
+----------------------------------------------------------------------------------------
+1) Exact decode <-> encode round-trip
+----------------------------------------------------------------------------------------
+  round-trip ok: 1100/1100
+
+----------------------------------------------------------------------------------------
+2) Exact F(C)=encode(decode(C)+G) vs walk C_{n+1}
+----------------------------------------------------------------------------------------
+  F(C_n)==C_{n+1}: 1099/1099
+  Algebraic skeleton (field ops, a=0):
+    x,y = decode(C)
+    lam = (Gy-y) * inv(Gx-x)  mod p
+    x'  = lam^2 - x - Gx     mod p
+    y'  = lam*(x-x') - y     mod p
+    C'  = (x' + y'/p)/p
+  VERDICT: F is exact and is EC add-G in Phi clothing (not a cheap decimal rule).
+
+----------------------------------------------------------------------------------------
+3) Empirical cheap maps for Delta_C = C_{n+1}-C_n  (float)
+----------------------------------------------------------------------------------------
+  corr(C, Delta_C) all:     -0.714968
+  corr(C, Delta_C) train:   -0.709370
+  corr(C, Delta_C) holdout: -0.729582
+  corr(C_prev, Delta) all:  0.000535
+  |Delta| mean train=3.342391e-01
+  holdout null (predict mean train Delta) RMSE=4.292798e-01 MAE=3.574399e-01
+  holdout null (predict 0)                 RMSE=4.292778e-01
+
+  Direct C' fits:
+    C' ~ -0.006858*C + 0.502148
+    holdout RMSE=2.941231e-01 MAE=2.503895e-01
+    holdout corr(pred,actual)=0.067740
+    null mean-C' RMSE=2.942524e-01
+    null C'=C   RMSE=4.292778e-01
+
+  Delta models holdout:
+    Delta ~ -1.006858*C + 0.502148
+      RMSE=2.941231e-01  MAE=2.503895e-01  corr=0.729582
+    Delta ~ -1.129677*C + 0.121974*C^2 + 0.522628
+      RMSE=2.936807e-01  MAE=2.499337e-01  corr=0.730434
+    Delta ~ -1.007170*C + -0.052611*C_prev + 0.528166
+      RMSE=2.955959e-01  MAE=2.516165e-01  corr=0.726211
+
+----------------------------------------------------------------------------------------
+4) Leading-digit bucket probe (train -> holdout)
+----------------------------------------------------------------------------------------
+  k=1: holdout RMSE=2.957146e-01  MAE=2.520731e-01  unseen_buckets=0/300
+  k=2: holdout RMSE=3.231662e-01  MAE=2.731701e-01  unseen_buckets=0/300
+  k=3: holdout RMSE=4.202175e-01  MAE=3.472146e-01  unseen_buckets=138/300
+
+========================================================================================
+VERDICT
+========================================================================================
+  decode/encode: exact on full walk.
+  Exact F(C)=Phi(P+G) works 100%: it IS field add-G after decode.
+  Cheap polynomial / bucket maps on C (and C_prev): holdout error stays
+  on the same order as predicting mean Delta (~0.3) — no usable decimal rule.
+  Next levers if continuing: symbolic simplify of F in Q(C), or differential
+  Phi(P+H)-Phi(P) for fixed jump H — still must beat decode+EC.
+

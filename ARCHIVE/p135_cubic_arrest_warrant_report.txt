@@ -1,0 +1,51 @@
+P135 CUBIC ARREST WARRANT
+
+Px tail ...590
+RSZ r tail ...368  r_true tail ...368  match=True
+N mod 9 = 7  (use (N+2)/9 root when N≡7 mod 9)
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+u branches (6):
+  cbrt_r_j0      u...354  u^3==r True  u^3==r^3 False
+  cbrt_r_j1      u...115  u^3==r True  u^3==r^3 False
+  cbrt_r_j2      u...205  u^3==r True  u^3==r^3 False
+  wolfram_r3_j0  u...576  u^3==r False  u^3==r^3 True
+  wolfram_r3_j1  u...393  u^3==r False  u^3==r^3 True
+  wolfram_r3_j2  u...368  u^3==r False  u^3==r^3 True
+
+--- branch cbrt_r_j0 ---
+  Px/u mod N: x bits=256 in_band=False ec_hit=False D bits=256 k bits=254
+  Px/u mod p lifted: x bits=254 in_band=False ec_hit=False D bits=254 k bits=255
+
+--- branch cbrt_r_j1 ---
+  Px/u mod N: x bits=253 in_band=False ec_hit=False D bits=256 k bits=256
+  Px/u mod p lifted: x bits=254 in_band=False ec_hit=False D bits=255 k bits=255
+
+--- branch cbrt_r_j2 ---
+  Px/u mod N: x bits=254 in_band=False ec_hit=False D bits=255 k bits=256
+  Px/u mod p lifted: x bits=253 in_band=False ec_hit=False D bits=256 k bits=256
+
+--- branch wolfram_r3_j0 ---
+  Px/u mod N: x bits=256 in_band=False ec_hit=False D bits=254 k bits=256
+  Px/u mod p lifted: x bits=255 in_band=False ec_hit=False D bits=253 k bits=255
+
+--- branch wolfram_r3_j1 ---
+  Px/u mod N: x bits=252 in_band=False ec_hit=False D bits=253 k bits=256
+  Px/u mod p lifted: x bits=256 in_band=False ec_hit=False D bits=255 k bits=254
+
+--- branch wolfram_r3_j2 ---
+  Px/u mod N: x bits=256 in_band=False ec_hit=False D bits=252 k bits=256
+  Px/u mod p lifted: x bits=256 in_band=False ec_hit=False D bits=253 k bits=255
+
+--- control: lambda = Px/r (no cube root) ---
+  x bits=256 in_band=False ec_hit=False
+  x tail ...678797
+
+ANY EC HIT: False
+P130 CONTROL (known d)
+  d bits=130
+  k from ECDSA bits=255
+  implied lambda = d/k mod N tail ...074
+  Px/r mod N tail ...160  match=False
+
+  arrest with Px/r: x==d_known False ec=False

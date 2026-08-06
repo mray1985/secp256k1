@@ -1,0 +1,113 @@
+@Deep research :
+
+State Engine
+Bit statistics
+Carry/borrow dynamics
+Hamming distance
+Entropy
+Factorization fingerprints
+Population counts
+Transition Engine
+P
+i
+	​
+
+→P
+i+1
+	​
+
+Forward and reverse transition matrices
+Multi-step transitions P
+2
+,P
+4
+,P
+8
+,…
+Cycle detection
+Attractor detection
+Geometry Engine
+Spectral embedding
+Random-walk embedding
+PCA
+UMAP/t-SNE (for visualization)
+Cluster stability
+Grammar Engine
+Symbolic encoding
+n-grams
+Lempel-Ziv parsing
+Context-free motif discovery
+Repeating transition phrases
+Prediction Engine
+Predict missing puzzle values
+Predict future transitions
+Confidence intervals
+Feature importance
+Cross-validation
+Cryptographic Engine
+secp256k1 scalar relationships
+GLV symmetry
+λ transforms
+modular inverses
+point doubling/addition dynamics
+Puzzle-range constraints
+Echo Engine
+Compare your echo-power datasets
+Compare tax-math datasets
+Correlate against Puzzle 135
+Detect recurring invariant signatures
+Correlation Explorer
+Instead of looking at one statistic at a time, compute every pairwise relationship:
+Pearson
+Spearman
+Mutual information
+Distance correlation
+Cross entropy
+Transfer entropy
+Invariant Finder
+Search automatically for quantities that remain nearly constant across puzzles, such as:
+sums
+products
+modular identities
+carry conservation
+parity conservation
+bit-weight conservation
+Hypothesis Lab
+Allow you to define formulas such as
+k=
+log
+G
+	​
+
+(N)
+R
+log
+2
+	​
+
+(n)
+	​
+
+
+or
+
+λr
+x
+	​
+
+≡P
+x
+	​
+
+(modN)
+
+or any custom expression, then automatically evaluate it across every puzzle, score its predictive value, and rank it against other hypotheses.
+
+The feature I'd add that I think would be the biggest step forward is an automatic invariant discovery engine. Rather than manually trying relationships, it would enumerate thousands (or millions) of algebraic combinations of the available variables and rank them by:
+
+stability,
+predictive power,
+uniqueness,
+and independence.
+
+That turns the system into a research platform that can surface patterns you might not think to test yourself. For your Puzzle 135 work, that kind of automated search is likely to be more productive     build it 

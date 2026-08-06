@@ -1,0 +1,53 @@
+[2026-07-30 13:13:22] === BSGS Runner ===
+[2026-07-30 13:13:22] Keyhunt: Z:\root\keyhunt-main\keyhunt-win-main\MinGW\keyhunt.exe
+[2026-07-30 13:13:22] PubFile: C:\Users\mitch\Desktop\secp256k1\puzzle135_keyhunt_bsgs\\P135_compressed.pub
+[2026-07-30 13:13:22] WorkDir: Z:\root\keyhunt-main\keyhunt-win-main\MinGW
+[2026-07-30 13:13:23] Threads: 4  KFactor: 512
+[2026-07-30 13:13:23] Candidates: 1..806 of 806
+[2026-07-30 13:13:23] [1/806] candidate_0001_kanga_mid - range 65bit  k=512  t=4  -S
+[2026-07-30 13:18:25]   exit=-1073741818  2756 bytes
+[2026-07-30 13:18:25] [2/806] candidate_0002_kanga_lower - range 65bit  k=512  t=4  -S
+[2026-07-30 13:38:11]   exit=-1073741819  10838 bytes
+[2026-07-30 13:38:11] [3/806] candidate_0003_kanga_upper_minus_1 - range 65bit  k=512  t=4  -S
+[2026-07-30 13:57:05]   exit=-1073741819  10189 bytes
+[2026-07-30 13:57:05] [4/806] candidate_0004_chunk_18 - range 65bit  k=512  t=4  -S
+[2026-07-30 14:12:12]   exit=-1073741818  8349 bytes
+[2026-07-30 14:12:12] [5/806] candidate_0005_b2[46] - range 65bit  k=512  t=4  -S
+[2026-07-30 14:25:24]   exit=-1073741818  0 bytes
+[2026-07-30 14:25:24] [6/806] candidate_0006_wavg2a(b1[1],b2[7]) - range 65bit  k=512  t=4  -S
+[2026-07-30 14:43:47]   exit=-1073741818  0 bytes
+[2026-07-30 14:43:47] [7/806] candidate_0007_wavg2a(b1[10],b1[27]) - range 65bit  k=512  t=4  -S
+[2026-07-30 14:55:17]   exit=-1073741818  0 bytes
+[2026-07-30 14:55:17] [8/806] candidate_0008_wavg2a(b2[10],b3[17]) - range 65bit  k=512  t=4  -S
+[2026-07-30 15:05:20]   exit=-1073741818  0 bytes
+[2026-07-30 15:05:20] [9/806] candidate_0009_wavg2a(b1[27],b4[42]) - range 65bit  k=512  t=4  -S
+[2026-07-30 15:10:23]   exit=-1073741818  0 bytes
+[2026-07-30 15:10:23] [10/806] candidate_0010_wavg2b(b1[68],b2[34]) - range 65bit  k=512  t=4  -S
+[2026-07-30 15:28:47]   exit=-1073741818  0 bytes
+[2026-07-30 15:28:47] [11/806] candidate_0011_wavg2b(b1[18],b3[57]) - range 65bit  k=512  t=4  -S
+[2026-07-30 15:47:22]   exit=-1073741818  0 bytes
+[2026-07-30 15:47:22] [12/806] candidate_0012_avg(b2[12],b3[27]) - range 65bit  k=512  t=4  -S
+[2026-07-30 15:57:19]   exit=-1073741818  0 bytes
+[2026-07-30 15:57:19] [13/806] candidate_0013_avg(b4[0],b4[66]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:07:21]   exit=-1073741818  0 bytes
+[2026-07-30 16:07:21] [14/806] candidate_0014_wavg2a(b3[31],b3[43]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:12:24]   exit=-1073741818  0 bytes
+[2026-07-30 16:12:24] [15/806] candidate_0015_wavg2b(b2[26],b4[64]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:19:25]   exit=-1073741819  0 bytes
+[2026-07-30 16:19:25] [16/806] candidate_0016_avg(b1[10],b1[68]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:32:58]   exit=-1073741818  0 bytes
+[2026-07-30 16:32:58] [17/806] candidate_0017_wavg2b(b1[18],b3[13]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:40:01]   exit=-1073741818  0 bytes
+[2026-07-30 16:40:01] [18/806] candidate_0018_wavg2b(b3[5],b3[43]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:45:04]   exit=-1073741818  0 bytes
+[2026-07-30 16:45:04] [19/806] candidate_0019_wavg2b(b1[15],b2[8]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:52:10]   exit=-1073741819  0 bytes
+[2026-07-30 16:52:10] [20/806] candidate_0020_wavg2b(b2[41],b3[43]) - range 65bit  k=512  t=4  -S
+[2026-07-30 16:57:13]   exit=-1073741818  0 bytes
+[2026-07-30 16:57:13] [21/806] candidate_0021_diff_low(b3[52],b4[2]) - range 65bit  k=512  t=4  -S
+[2026-07-30 17:04:17]   exit=-1073741818  0 bytes
+[2026-07-30 17:04:17] [22/806] candidate_0022_diff_low(b3[30],b4[2]) - range 65bit  k=512  t=4  -S
+[2026-07-30 17:09:20]   exit=-1073741818  0 bytes
+[2026-07-30 17:09:20] [23/806] candidate_0023_wavg2a(b2[13],b2[41]) - range 65bit  k=512  t=4  -S
+[2026-07-30 17:29:49]   exit=-1073741818  0 bytes
+[2026-07-30 17:29:49] [24/806] candidate_0024_diff_low(b1[48],b1[59]) - range 65bit  k=512  t=4  -S

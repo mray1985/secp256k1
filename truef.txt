@@ -1,0 +1,52 @@
+There we go — that’s the real anchor.
+
+sR=zG+rP
+
+passing means the G,R,P,z,r,s set is internally consistent as an ECDSA relation.
+
+So the stack now looks like this:
+
+Curve validity⇒PASS
+ECDSA native equation⇒PASS
+Λrx3≡X(modp)⇒PASS
+Λy+Λ(−y)⇒p−N(modN)⇒PASS
+
+But:
+
+λ
+x
+3
+	​
+
++C≡λ
+y
+2
+	​
+
+(modN)⇒FAIL
+inter-slope ratios⇒nodirectmatch
+
+So next step is not more slope tests. Next step is to insert the bridge into the ECDSA equation:
+
+sR=zG+rP
+
+Test the bridge on each term:
+
+Λ(sR)
+y
+	​
+
+Λ(zG)
+y
+	​
+
+Λ(rP)
+y
+	​
+
+Λ(zG+rP)
+y
+	​
+
+
+Then check whether the delta/reflection behavior survives after scalar multiplication and group addition. That’s where the bridge meets the actual signature law.

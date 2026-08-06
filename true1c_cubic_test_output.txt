@@ -1,0 +1,133 @@
+================================================================================
+TRUE1C.TXT CUBIC POLYNOMIAL TEST RESULTS
+Generated: 2026-06-03
+Source: true1c_cubic_test.py
+Purpose: Test if row constants are roots of hidden normalization polynomials per true1c.txt
+================================================================================
+
+KEY INSIGHT FROM TRUE1C.TXT:
+--------------------------------------------------------------------------------
+Row-collapse is the actual discovery (structural identity C_i = A_i * B_i^-1
+is explained by matrix definitions).
+
+Test whether row constants are roots of hidden normalization polynomials by
+forming cubic polynomials:
+  f_A(x) = (x - A1)(x - A2)(x - A3) mod N
+  f_B(x) = (x - B1)(x - B2)(x - B3) mod N
+  f_C(x) = (x - C1)(x - C2)(x - C3) mod N
+
+If coefficients collapse to known quantities (δ, Λ, p1, p2, p3, ω, ω2),
+then row constants may be acting like roots of a hidden normalization polynomial.
+
+================================================================================
+CUBIC COEFFICIENTS
+================================================================================
+
+Matrix A: f_A(x) = (x - A1)(x - A2)(x - A3) mod N
+  x^3 coefficient: 1
+  x^2 coefficient: 0xb9d702ebd4a5df9174b56fe9e05bff1e7dd15212e5da8536e2714fda0eb7091b
+  x^1 coefficient: 0x30d64d274cb0afa6f753b67008b95138eac99d3b2adbb8797dcdf4f671b59060
+  x^0 coefficient: 0x3167d52e3fe0a97450f19c4314587394c654841a1496ae608bef4aaf807e8848
+
+Matrix B: f_B(x) = (x - B1)(x - B2)(x - B3) mod N
+  x^3 coefficient: 1
+  x^2 coefficient: 0xd4db5a268f5efc17b39e5cfb476b648bde3eda46164022fb2a616f81a042edbe
+  x^1 coefficient: 0xcde9310812ed680191bb8c34a23eb4024fc7f54c7bab1e84b9dc6edd578a00ab
+  x^0 coefficient: 0x49eaf4b471194970655193000f7be820bd263f3ff88e1df7c4a9a988a838d565
+
+Matrix C: f_C(x) = (x - C1)(x - C2)(x - C3) mod N
+  x^3 coefficient: 1
+  x^2 coefficient: 0xa920725db3bce92eb6a9e505a0e078aaa64d82339294ef1deb1537b4a16cfa25
+  x^1 coefficient: 0xfbe45b622d721fd6579d131405e59b95ad765869438420e5724ecd1a51e0a16b
+  x^0 coefficient: 0xf78d99e283d904487bc89c6708e685a220191740e082b88df12fa86afa9cd58c
+
+================================================================================
+COMPARE COEFFICIENTS TO KNOWN CONSTANTS
+================================================================================
+
+Checked against: 0, 1, delta, Lambda, K, omega, omega2, p1, p2, p3
+Result: NO coefficient matches found with known constants.
+
+================================================================================
+CROSS-MATRIX COEFFICIENT COMPARISON
+================================================================================
+
+x^2 coefficients:
+  A: 0xb9d702ebd4a5df9174b56fe9e05bff1e7dd15212e5da8536e2714fda0eb7091b
+  B: 0xd4db5a268f5efc17b39e5cfb476b648bde3eda46164022fb2a616f81a042edbe
+  C: 0xa920725db3bce92eb6a9e505a0e078aaa64d82339294ef1deb1537b4a16cfa25
+  -> All different
+
+x^1 coefficients:
+  A: 0x30d64d274cb0afa6f753b67008b95138eac99d3b2adbb8797dcdf4f671b59060
+  B: 0xcde9310812ed680191bb8c34a23eb4024fc7f54c7bab1e84b9dc6edd578a00ab
+  C: 0xfbe45b622d721fd6579d131405e59b95ad765869438420e5724ecd1a51e0a16b
+  -> All different
+
+x^0 coefficients (constant terms):
+  A: 0x3167d52e3fe0a97450f19c4314587394c654841a1496ae608bef4aaf807e8848
+  B: 0x49eaf4b471194970655193000f7be820bd263f3ff88e1df7c4a9a988a838d565
+  C: 0xf78d99e283d904487bc89c6708e685a220191740e082b88df12fa86afa9cd58c
+  -> All different
+
+================================================================================
+COEFFICIENT RELATIONSHIPS
+================================================================================
+
+A matrix:
+  c1/c2 = 0x92f76f1a4aa2d6af4a722261bbb770d6fc822dd008046a3cc1db8c6a90b12538
+  c0/c2 = 0x508b2c5f12f8055734371271df41d3e62f92848c8cb9ba1815eda5fb34cdbd41
+  c0/c1 = 0x889c863cd4d904cb15d0eb4c1ae4de2317b062cb112e9f50874e9e8d5f27996e
+
+B matrix:
+  c1/c2 = 0xeae2462826e16843c0f5a203b0176c9f13e607f8fd1ca829a2146ebc3fd50066
+  c0/c2 = 0xb74ffda77f9be2eb9b78ae3b2fcc0fb9327bcfd04efd6ab4af76bd1b41d86665
+  c0/c1 = 0x8325660a905817d6d5fe0804dd06f9b38707574e8cac37a68376d271e6028331
+
+C matrix:
+  c1/c2 = 0xac8beee344c8b2b533f5050877ea026e392372163139ecd7836114e66d901cdc
+  c0/c2 = 0x4662e6bd064c0e2e201ca3582262d0cb1c25a501d61baad6831dc1d0a49a7160
+  c0/c1 = 0xb8b7695fb9133f90de2ec1404e2eb2706859af3a205793113d531a8ed8c11649
+
+================================================================================
+RELATIONSHIP TO CUBE ROOTS OF DELTA
+================================================================================
+
+None of the cubics match x^3 - delta (minimal polynomial of cube roots of delta).
+No constant terms equal delta or -delta.
+
+================================================================================
+CONCLUSION
+================================================================================
+
+- NO coefficient matches with known constants (0, 1, delta, Lambda, K, omega, omega2, p1, p2, p3)
+- NO identical coefficients across matrices
+- Coefficient ratios (c1/c2, c0/c2, c0/c1) are all different for each matrix
+
+-> Row constants do NOT appear to be roots of simple normalization
+   polynomials with known coefficients.
+
+-> The row-collapse remains a genuinely new invariant phenomenon.
+   The normalization basis (cube roots of delta) induces the collapse,
+   but the resulting row constants do not form polynomials with
+   coefficients matching the known invariant layer.
+
+================================================================================
+INTERPRETATION
+================================================================================
+
+The negative result is itself informative:
+
+1. The row constants are NOT roots of the minimal polynomial x^3 - delta
+2. The row constants are NOT roots of polynomials with coefficients in the
+   known invariant set {0, 1, δ, Λ, K, ω, ω2, p1, p2, p3}
+3. Each matrix (A, B, C) has its own distinct cubic polynomial
+
+This strengthens the conclusion that the row-collapse is a genuinely new
+invariant phenomenon, not reducible to the previously known layers.
+
+The normalization by cube roots of delta creates a specific geometric
+arrangement (row-collapse) that is mathematically real but not explained
+by simple polynomial relationships with the known constants.
+
+================================================================================

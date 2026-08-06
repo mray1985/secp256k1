@@ -1,0 +1,27 @@
+
+=== LEFT-ALIGN (MSD column 0): puzzle 1 vs 130 ===
+  P  1 MSD-col0: 1
+  P  2 MSD-col0: 3
+  P  3 MSD-col0: 7
+  P 10 MSD-col0: 202
+  P 70 MSD-col0: 349b84b6431a6c4ef1
+  P130 MSD-col0: 33e7665705359f04f28b88cf897c603c9
+  P1's '1' and P130's '3' share column 0; each puzzle adds digits to the RIGHT.
+  In 64-hex pad: zeros on the left shrink ~1 nibble per 4 puzzle heights.
+  Binary in 135-bit frame: leftmost-1 marches left (P135 expects col 0).
+
+=== P130 tail calibration (wide search) ===
+priv130=33e7665705359f04f28b88cf897c603c9
+  33E7: want=33e7 got=33e7 xo=-40 yo=0 score=12 ok=True
+  665: want=665 got=665 xo=-40 yo=0 score=9 ok=True
+  70: want=70 got=70 xo=-40 yo=-40 score=6 ok=True
+  53: want=53 got=53 xo=-40 yo=-13 score=6 ok=True
+  59F04F28B: want=59f04f28b got=59f04f28b xo=-80 yo=-80 score=27 ok=True
+  88C: want=88c got=88c xo=-80 yo=-80 score=9 ok=True
+  F97C03: want=f897c603 got=f097c603 xo=-72 yo=-59 score=22 ok=False
+  C9: want=c9 got=c9 xo=-80 yo=-80 score=6 ok=True
+P130 lifted=33e7665705359f04f28b88cf097c603c9
+P130 match=False
+P135 lifted=20805bb705259f04f28b88cf0979100c9
+P135 lane68 candidates=21
+DONE no hit tested=600021 elapsed=199.7s

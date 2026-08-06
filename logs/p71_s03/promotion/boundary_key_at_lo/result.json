@@ -1,0 +1,67 @@
+{
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "command": [
+    "wsl",
+    "-e",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/keyhunt",
+    "-m",
+    "address",
+    "-f",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/logs/p71_s03/promotion/boundary_key_at_lo/keyhunt_targets.txt",
+    "-r",
+    "1:8",
+    "-l",
+    "compress",
+    "-t",
+    "4"
+  ],
+  "target_address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+  "target_h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+  "start": 1,
+  "end": 8,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 0.36322130000189645,
+  "found_private_keys": [
+    "1"
+  ],
+  "verified_hits": [
+    {
+      "d": 1,
+      "d_hex": "1",
+      "in_range": true,
+      "h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "1",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD\n[+] Mode address\n[+] Search compress only\n[+] Threads : 4\n[+] Setting search for btc adddress\n[+] N = 0x100000000\n[+] Range \n[+] -- from : 0x1\n[+] -- to   : 0x8\n[+] Allocating memory for 1 elements: 0.00 MB\n[+] Bloom filter for 1 elements.\n[+] Loading data to the bloomfilter total: 0.03 MB\n[+] Sorting data ... done! 1 values were loaded and sorted\n\nBase key: 1     \nHit! Private Key: 1\npubkey: 0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798\nAddress 1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH\nrmd160 751e76e8199196d454941c45d1b3a323f1433bd6\n",
+  "stderr_tail": "",
+  "notes": [
+    "stop_on_hit=keyhunt_known_hit_calibration"
+  ],
+  "device_notes": "KeyHunt CPU compressed address mode (WSL-capable)",
+  "started_at_utc": "2026-07-10T16:41:26.846445+00:00",
+  "finished_at_utc": "2026-07-10T16:41:27.209759+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "pass": true
+  },
+  "step": "boundary_key_at_lo"
+}

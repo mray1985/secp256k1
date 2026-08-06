@@ -1,0 +1,77 @@
+========================================================================================
+Compressed x + 02/03 tail  vs  Phi (x/p + y/p^2)
+========================================================================================
+
+  Compressed = prefix(y parity) || x
+  User idea: decimal body from x; differing tail = 02 or 03
+
+----------------------------------------------------------------------------------------
+1) Negation: same x, flip 02 <-> 03
+----------------------------------------------------------------------------------------
+  walk 1..64: x unchanged under neg:     64/64
+  walk 1..64: prefix flips, x hex same:  64/64
+  walk 1..64: recover_y from (x,tail)= -P: 64/64
+  Matches Phi: X=x/p invariant; only Fine/parity changes.
+
+----------------------------------------------------------------------------------------
+2) GLV psi: new x = beta*x, SAME parity (y unchanged)
+----------------------------------------------------------------------------------------
+  walk 1..64: prefix unchanged under psi: 64/64
+  walk 1..64: x changes under psi:        64/64
+  Matches Phi: Fine invariant under GLV; coarse X moves.
+
+----------------------------------------------------------------------------------------
+3) Information: compressed vs full Phi
+----------------------------------------------------------------------------------------
+  KEEP:  x (32 bytes) + 1-bit parity  => unique affine point via curve
+  DROP:  full y magnitude in Phi Fine = y/p^2
+  Tail 02/03 is NOT a decimal fraction of y — only parity.
+  So 'differing tail' works for +/- orbit; it does not encode Fine digits.
+
+----------------------------------------------------------------------------------------
+4) Candidate print forms (samples)
+----------------------------------------------------------------------------------------
+  n=1
+    compressed hex = 0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+    form A (prefix|x/p):  02.475561529159551572470709345884621936100985485829132436550464858155768637484945
+    form B (x/p|tail):    0.475561529159551572470709345884621936100985485829132436550464858155768637484945.02
+    negation tail only:   0.475561529159551572470709345884621936100985485829132436550464858155768637484945.03
+    Phi still needs y:    Fine~y/p^2 not in compressed
+
+  n=2
+    compressed hex = 02c6047f9441ed7d6d3045406e95c07cd85c778e4b8cef3ca7abac09b95c709ee5
+    form A (prefix|x/p):  02.773506139465032624781795628183077831966827734699802272478342626659114690981577
+    form B (x/p|tail):    0.773506139465032624781795628183077831966827734699802272478342626659114690981577.02
+    negation tail only:   0.773506139465032624781795628183077831966827734699802272478342626659114690981577.03
+    Phi still needs y:    Fine~y/p^2 not in compressed
+
+  n=5
+    compressed hex = 022f8bde4d1a07209355b4a7250a5c5128e88b84bddc619ab7cba8d569b240efe4
+    form A (prefix|x/p):  02.185727971862459381384803864017652885277573094273796249683030263358959688932383
+    form B (x/p|tail):    0.185727971862459381384803864017652885277573094273796249683030263358959688932383.02
+    negation tail only:   0.185727971862459381384803864017652885277573094273796249683030263358959688932383.03
+    Phi still needs y:    Fine~y/p^2 not in compressed
+
+  n=17
+    compressed hex = 03defdea4cdb677750a420fee807eacf21eb9898ae79b9768766e4faa04a2d4a34
+    form A (prefix|x/p):  03.871061939014365784125842996700422857528066558942881524463029614613703176172435
+    form B (x/p|tail):    0.871061939014365784125842996700422857528066558942881524463029614613703176172435.03
+    negation tail only:   0.871061939014365784125842996700422857528066558942881524463029614613703176172435.02
+    Phi still needs y:    Fine~y/p^2 not in compressed
+
+----------------------------------------------------------------------------------------
+5) Does compressed-x + tail make F cheaper?
+----------------------------------------------------------------------------------------
+  No. To add you still decompress (recover y) or stay in EC.
+  Tail flip = negation only. x-body + tail has no schoolbook add rule.
+  Same junction as Phi: orbit symmetries cheap; F is still EC.
+
+========================================================================================
+VERDICT
+========================================================================================
+  Yes: compressed x + 02/03 tail is the clean 'coarse + tag' form.
+  Negation = identical x digits, flip tail. GLV = new x, same tail.
+  That matches Phi layer symmetries without storing y/p^2.
+  Cost: lose Fine decimal; recover y from curve when needed.
+  Does not replace F; only clarifies the +/- half of the orbit.
+

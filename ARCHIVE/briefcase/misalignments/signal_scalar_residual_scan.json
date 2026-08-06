@@ -1,0 +1,2877 @@
+{
+  "exhibit": "signal_scalar_residual_scan",
+  "location": "ARCHIVE/briefcase/misalignments/",
+  "model": "residual / rank / neighbor \u2014 NOT frac(signal)*width",
+  "n_solved": 82,
+  "correlations": [
+    {
+      "signal": "x_ratio",
+      "spearman": -0.2738463213048568,
+      "kendall_tau": -0.17686050015064778,
+      "abs_spearman": 0.2738463213048568,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "packet_frac",
+      "spearman": -0.2738463213048568,
+      "kendall_tau": -0.17686050015064778,
+      "abs_spearman": 0.2738463213048568,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "y_ratio",
+      "spearman": -0.16660861994891887,
+      "kendall_tau": -0.11720397710153661,
+      "abs_spearman": 0.16660861994891887,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "pmy_ratio",
+      "spearman": 0.16660861994891887,
+      "kendall_tau": 0.11720397710153661,
+      "abs_spearman": 0.16660861994891887,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "p_to_n_floor_drift",
+      "spearman": -0.11725076187024451,
+      "kendall_tau": -0.07984332630310334,
+      "abs_spearman": 0.11725076187024451,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "px2_ratio",
+      "spearman": -0.05324336090868246,
+      "kendall_tau": -0.03404639951792709,
+      "abs_spearman": 0.05324336090868246,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "gx_ratio",
+      "spearman": 0.04672398781295458,
+      "kendall_tau": 0.03404639951792709,
+      "abs_spearman": 0.04672398781295458,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "px1_ratio",
+      "spearman": 0.021081845887186822,
+      "kendall_tau": 0.0033142512805061767,
+      "abs_spearman": 0.021081845887186822,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "packet_defect_frac",
+      "spearman": 0.0,
+      "kendall_tau": 0.0,
+      "abs_spearman": 0.0,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "packet_N_frac",
+      "spearman": 0.0,
+      "kendall_tau": 0.0,
+      "abs_spearman": 0.0,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "packet_B4_frac",
+      "spearman": 0.0,
+      "kendall_tau": 0.0,
+      "abs_spearman": 0.0,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "defect_displacement_frac",
+      "spearman": 0.0,
+      "kendall_tau": 0.0,
+      "abs_spearman": 0.0,
+      "verdict": "REJECT"
+    }
+  ],
+  "residual_stats": {
+    "x_ratio": {
+      "mean": 0.06403353793188224,
+      "stdev": 0.4338843956674862,
+      "min": -0.8692190002639865,
+      "max": 0.9565299964430019
+    },
+    "y_ratio": {
+      "mean": -0.0014272928040053095,
+      "stdev": 0.4193226464162689,
+      "min": -0.8911557199352063,
+      "max": 0.7710337218698082
+    },
+    "pmy_ratio": {
+      "mean": 0.004359925473629288,
+      "stdev": 0.3584495492004122,
+      "min": -0.8333110010740087,
+      "max": 0.7837562376220463
+    },
+    "packet_frac": {
+      "mean": 0.06403353793188224,
+      "stdev": 0.4338843956674862,
+      "min": -0.8692190002639865,
+      "max": 0.9565299964430019
+    },
+    "packet_defect_frac": {
+      "mean": 0.501466316334812,
+      "stdev": 0.2696399182710583,
+      "min": 0.0,
+      "max": 0.9780104756355286
+    },
+    "packet_N_frac": {
+      "mean": 0.501466316334812,
+      "stdev": 0.2696399182710583,
+      "min": 0.0,
+      "max": 0.9780104756355286
+    },
+    "packet_B4_frac": {
+      "mean": 0.501466316334812,
+      "stdev": 0.2696399182710583,
+      "min": 0.0,
+      "max": 0.9780104756355286
+    },
+    "gx_ratio": {
+      "mean": -0.0024469029361117453,
+      "stdev": 0.394941637560944,
+      "min": -0.8294097566764401,
+      "max": 0.771595141210869
+    },
+    "px1_ratio": {
+      "mean": 0.02182325859320457,
+      "stdev": 0.36815800470539534,
+      "min": -0.7916529898952362,
+      "max": 0.8620373474791503
+    },
+    "px2_ratio": {
+      "mean": 0.003908006137885728,
+      "stdev": 0.39105208606207764,
+      "min": -0.8243272454000629,
+      "max": 0.7293963924843403
+    },
+    "p_to_n_floor_drift": {
+      "mean": -3.3827838090241573e+59,
+      "stdev": 2.6485455018431303e+60,
+      "min": -6.223216700940002e+60,
+      "max": 6.354289047538524e+60
+    },
+    "defect_displacement_frac": {
+      "mean": 0.501466316334812,
+      "stdev": 0.2696399182710583,
+      "min": 0.0,
+      "max": 0.9780104756355286
+    }
+  },
+  "P135_nearest_neighbors": [
+    {
+      "puzzle": 4,
+      "distance": 0.2737231845742837,
+      "scalar_position": 0.0,
+      "offset_from_midpoint": -0.5,
+      "d": "8"
+    },
+    {
+      "puzzle": 30,
+      "distance": 0.28162392247492857,
+      "scalar_position": 0.9244143441319466,
+      "offset_from_midpoint": 0.42441434413194656,
+      "d": "1033162084"
+    },
+    {
+      "puzzle": 18,
+      "distance": 0.37740648820515343,
+      "scalar_position": 0.5157241821289062,
+      "offset_from_midpoint": 0.01572418212890625,
+      "d": "198669"
+    },
+    {
+      "puzzle": 20,
+      "distance": 0.41254706724174106,
+      "scalar_position": 0.6466464996337891,
+      "offset_from_midpoint": 0.14664649963378906,
+      "d": "863317"
+    },
+    {
+      "puzzle": 58,
+      "distance": 0.46039573774887044,
+      "scalar_position": 0.3876168823447197,
+      "offset_from_midpoint": -0.1123831176552803,
+      "d": "199976667976342049"
+    },
+    {
+      "puzzle": 47,
+      "distance": 0.4639279658623165,
+      "scalar_position": 0.7005655069250736,
+      "offset_from_midpoint": 0.20056550692507358,
+      "d": "119666659114170"
+    },
+    {
+      "puzzle": 34,
+      "distance": 0.4645845306344634,
+      "scalar_position": 0.6453061435604468,
+      "offset_from_midpoint": 0.1453061435604468,
+      "d": "14133072157"
+    },
+    {
+      "puzzle": 22,
+      "distance": 0.4785838633537705,
+      "scalar_position": 0.43408918380737305,
+      "offset_from_midpoint": -0.06591081619262695,
+      "d": "3007503"
+    },
+    {
+      "puzzle": 64,
+      "distance": 0.49630534745025034,
+      "scalar_position": 0.9298438018605643,
+      "offset_from_midpoint": 0.42984380186056426,
+      "d": "17799667357578236628"
+    },
+    {
+      "puzzle": 66,
+      "distance": 0.5030811498543052,
+      "scalar_position": 0.2562167438642828,
+      "offset_from_midpoint": -0.24378325613571722,
+      "d": "46346217550346335726"
+    }
+  ],
+  "P135_neighbor_cluster_hint": {
+    "mean_scalar_position": 0.5440423288257101,
+    "cluster": "middle_third",
+    "note": "hint only \u2014 not a d prediction; must still pass [d]G"
+  },
+  "summary": {
+    "strong": [],
+    "promising": [],
+    "best_signal": "x_ratio",
+    "best_spearman": -0.2738463213048568,
+    "any_promising_or_strong": false
+  },
+  "rows_solved": [
+    {
+      "puzzle": 1,
+      "scalar_position": 0.0,
+      "fingerprint": {
+        "x_ratio": 0.4755615291595516,
+        "y_ratio": 0.28214803132017524,
+        "pmy_ratio": 0.7178519686798247,
+        "packet_frac": 0.4755615291595516,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 8.636168555094445e-78,
+        "px1_ratio": 0.7370130367613686,
+        "px2_ratio": 0.7874254340790797,
+        "p_to_n_floor_drift": 5.25176989996399e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.4755615291595516,
+        "scalar_minus_y_ratio": -0.28214803132017524,
+        "scalar_minus_pmy_ratio": -0.7178519686798247,
+        "scalar_minus_packet_frac": -0.4755615291595516,
+        "scalar_minus_packet_defect_frac": 0.0,
+        "scalar_minus_packet_N_frac": 0.0,
+        "scalar_minus_packet_B4_frac": 0.0,
+        "scalar_minus_gx_ratio": -8.636168555094445e-78,
+        "scalar_minus_px1_ratio": -0.7370130367613686,
+        "scalar_minus_px2_ratio": -0.7874254340790797,
+        "scalar_minus_p_to_n_floor_drift": -5.25176989996399e+59,
+        "scalar_minus_defect_displacement_frac": 0.0
+      }
+    },
+    {
+      "puzzle": 2,
+      "scalar_position": 0.5,
+      "fingerprint": {
+        "x_ratio": 0.9733968976819112,
+        "y_ratio": 0.7790606582100924,
+        "pmy_ratio": 0.2209393417899076,
+        "packet_frac": 0.9733968976819112,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.936772017160974,
+        "px1_ratio": 0.872785509435856,
+        "px2_ratio": 0.15381759288223276,
+        "p_to_n_floor_drift": -4.923042725698605e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.4733968976819112,
+        "scalar_minus_y_ratio": -0.2790606582100924,
+        "scalar_minus_pmy_ratio": 0.2790606582100924,
+        "scalar_minus_packet_frac": -0.4733968976819112,
+        "scalar_minus_packet_defect_frac": 0.5,
+        "scalar_minus_packet_N_frac": 0.5,
+        "scalar_minus_packet_B4_frac": 0.5,
+        "scalar_minus_gx_ratio": -0.436772017160974,
+        "scalar_minus_px1_ratio": -0.372785509435856,
+        "scalar_minus_px2_ratio": 0.34618240711776727,
+        "scalar_minus_p_to_n_floor_drift": 4.923042725698605e+60,
+        "scalar_minus_defect_displacement_frac": 0.5
+      }
+    },
+    {
+      "puzzle": 3,
+      "scalar_position": 0.75,
+      "fingerprint": {
+        "x_ratio": 0.3622732396310003,
+        "y_ratio": 0.582339629361608,
+        "pmy_ratio": 0.417660370638392,
+        "packet_frac": 0.3622732396310003,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.07776674608923913,
+        "px1_ratio": 0.07791796077427919,
+        "px2_ratio": 0.5598087995947205,
+        "p_to_n_floor_drift": -1.472853204224792e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.3877267603689997,
+        "scalar_minus_y_ratio": 0.167660370638392,
+        "scalar_minus_pmy_ratio": 0.332339629361608,
+        "scalar_minus_packet_frac": 0.3877267603689997,
+        "scalar_minus_packet_defect_frac": 0.75,
+        "scalar_minus_packet_N_frac": 0.75,
+        "scalar_minus_packet_B4_frac": 0.75,
+        "scalar_minus_gx_ratio": 0.6722332539107608,
+        "scalar_minus_px1_ratio": 0.6720820392257209,
+        "scalar_minus_px2_ratio": 0.19019120040527948,
+        "scalar_minus_p_to_n_floor_drift": 1.472853204224792e+60,
+        "scalar_minus_defect_displacement_frac": 0.75
+      }
+    },
+    {
+      "puzzle": 4,
+      "scalar_position": 0.0,
+      "fingerprint": {
+        "x_ratio": 0.1836227107240028,
+        "y_ratio": 0.6394400207197336,
+        "pmy_ratio": 0.3605599792802664,
+        "packet_frac": 0.1836227107240028,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6964662519180924,
+        "px1_ratio": 0.27995902375808157,
+        "px2_ratio": 0.5364182655179156,
+        "p_to_n_floor_drift": 1.4205877821621421e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.1836227107240028,
+        "scalar_minus_y_ratio": -0.6394400207197336,
+        "scalar_minus_pmy_ratio": -0.3605599792802664,
+        "scalar_minus_packet_frac": -0.1836227107240028,
+        "scalar_minus_packet_defect_frac": 0.0,
+        "scalar_minus_packet_N_frac": 0.0,
+        "scalar_minus_packet_B4_frac": 0.0,
+        "scalar_minus_gx_ratio": -0.6964662519180924,
+        "scalar_minus_px1_ratio": -0.27995902375808157,
+        "scalar_minus_px2_ratio": -0.5364182655179156,
+        "scalar_minus_p_to_n_floor_drift": -1.4205877821621421e+60,
+        "scalar_minus_defect_displacement_frac": 0.0
+      }
+    },
+    {
+      "puzzle": 5,
+      "scalar_position": 0.3125,
+      "fingerprint": {
+        "x_ratio": 0.20769877971621423,
+        "y_ratio": 0.19578099421349635,
+        "pmy_ratio": 0.8042190057865036,
+        "packet_frac": 0.20769877971621423,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9577535649593384,
+        "px1_ratio": 0.4064745343307488,
+        "px2_ratio": 0.38582668595303693,
+        "p_to_n_floor_drift": -5.417819970205884e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.10480122028378577,
+        "scalar_minus_y_ratio": 0.11671900578650365,
+        "scalar_minus_pmy_ratio": -0.4917190057865036,
+        "scalar_minus_packet_frac": 0.10480122028378577,
+        "scalar_minus_packet_defect_frac": 0.3125,
+        "scalar_minus_packet_N_frac": 0.3125,
+        "scalar_minus_packet_B4_frac": 0.3125,
+        "scalar_minus_gx_ratio": -0.6452535649593384,
+        "scalar_minus_px1_ratio": -0.09397453433074882,
+        "scalar_minus_px2_ratio": -0.07332668595303693,
+        "scalar_minus_p_to_n_floor_drift": 5.417819970205884e+59,
+        "scalar_minus_defect_displacement_frac": 0.3125
+      }
+    },
+    {
+      "puzzle": 6,
+      "scalar_position": 0.53125,
+      "fingerprint": {
+        "x_ratio": 0.9486509304954783,
+        "y_ratio": 0.12159939966369551,
+        "pmy_ratio": 0.8784006003363045,
+        "packet_frac": 0.9486509304954783,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.11715303151150018,
+        "px1_ratio": 0.534172210952782,
+        "px2_ratio": 0.5171768585517397,
+        "p_to_n_floor_drift": 5.260744128510056e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.41740093049547833,
+        "scalar_minus_y_ratio": 0.4096506003363045,
+        "scalar_minus_pmy_ratio": -0.3471506003363045,
+        "scalar_minus_packet_frac": -0.41740093049547833,
+        "scalar_minus_packet_defect_frac": 0.53125,
+        "scalar_minus_packet_N_frac": 0.53125,
+        "scalar_minus_packet_B4_frac": 0.53125,
+        "scalar_minus_gx_ratio": 0.4140969684884998,
+        "scalar_minus_px1_ratio": -0.0029222109527820006,
+        "scalar_minus_px2_ratio": 0.014073141448260329,
+        "scalar_minus_p_to_n_floor_drift": -5.260744128510056e+60,
+        "scalar_minus_defect_displacement_frac": 0.53125
+      }
+    },
+    {
+      "puzzle": 7,
+      "scalar_position": 0.1875,
+      "fingerprint": {
+        "x_ratio": 0.5871798133934734,
+        "y_ratio": 0.7409187332666319,
+        "pmy_ratio": 0.259081266733368,
+        "packet_frac": 0.5871798133934734,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9486688126527849,
+        "px1_ratio": 0.5392921675401714,
+        "px2_ratio": 0.8735280190663551,
+        "p_to_n_floor_drift": -3.949266778926274e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.39967981339347336,
+        "scalar_minus_y_ratio": -0.5534187332666319,
+        "scalar_minus_pmy_ratio": -0.07158126673336801,
+        "scalar_minus_packet_frac": -0.39967981339347336,
+        "scalar_minus_packet_defect_frac": 0.1875,
+        "scalar_minus_packet_N_frac": 0.1875,
+        "scalar_minus_packet_B4_frac": 0.1875,
+        "scalar_minus_gx_ratio": -0.7611688126527849,
+        "scalar_minus_px1_ratio": -0.3517921675401714,
+        "scalar_minus_px2_ratio": -0.6860280190663551,
+        "scalar_minus_p_to_n_floor_drift": 3.949266778926274e+60,
+        "scalar_minus_defect_displacement_frac": 0.1875
+      }
+    },
+    {
+      "puzzle": 8,
+      "scalar_position": 0.75,
+      "fingerprint": {
+        "x_ratio": 0.034126863575785385,
+        "y_ratio": 0.8245231988474224,
+        "pmy_ratio": 0.17547680115257763,
+        "packet_frac": 0.034126863575785385,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6175117609207041,
+        "px1_ratio": 0.7706257451666987,
+        "px2_ratio": 0.1952473912575159,
+        "p_to_n_floor_drift": -1.3516665869308174e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.7158731364242146,
+        "scalar_minus_y_ratio": -0.07452319884742242,
+        "scalar_minus_pmy_ratio": 0.5745231988474224,
+        "scalar_minus_packet_frac": 0.7158731364242146,
+        "scalar_minus_packet_defect_frac": 0.75,
+        "scalar_minus_packet_N_frac": 0.75,
+        "scalar_minus_packet_B4_frac": 0.75,
+        "scalar_minus_gx_ratio": 0.13248823907929586,
+        "scalar_minus_px1_ratio": -0.020625745166698684,
+        "scalar_minus_px2_ratio": 0.5547526087424841,
+        "scalar_minus_p_to_n_floor_drift": 1.3516665869308174e+59,
+        "scalar_minus_defect_displacement_frac": 0.75
+      }
+    },
+    {
+      "puzzle": 9,
+      "scalar_position": 0.82421875,
+      "fingerprint": {
+        "x_ratio": 0.2631853450513625,
+        "y_ratio": 0.5295677186186715,
+        "pmy_ratio": 0.47043228138132853,
+        "packet_frac": 0.2631853450513625,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9136595603681047,
+        "px1_ratio": 0.504098888320101,
+        "px2_ratio": 0.23271576662853657,
+        "p_to_n_floor_drift": -7.314272991970183e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5610334049486375,
+        "scalar_minus_y_ratio": 0.29465103138132853,
+        "scalar_minus_pmy_ratio": 0.35378646861867147,
+        "scalar_minus_packet_frac": 0.5610334049486375,
+        "scalar_minus_packet_defect_frac": 0.82421875,
+        "scalar_minus_packet_N_frac": 0.82421875,
+        "scalar_minus_packet_B4_frac": 0.82421875,
+        "scalar_minus_gx_ratio": -0.0894408103681047,
+        "scalar_minus_px1_ratio": 0.32011986167989903,
+        "scalar_minus_px2_ratio": 0.5915029833714635,
+        "scalar_minus_p_to_n_floor_drift": 7.314272991970183e+59,
+        "scalar_minus_defect_displacement_frac": 0.82421875
+      }
+    },
+    {
+      "puzzle": 10,
+      "scalar_position": 0.00390625,
+      "fingerprint": {
+        "x_ratio": 0.6548578149101307,
+        "y_ratio": 0.8339951122588563,
+        "pmy_ratio": 0.16600488774114372,
+        "packet_frac": 0.6548578149101307,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8333160066764401,
+        "px1_ratio": 0.56545835943398,
+        "px2_ratio": 0.7796838256558892,
+        "p_to_n_floor_drift": 3.7016438755698814e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.6509515649101307,
+        "scalar_minus_y_ratio": -0.8300888622588563,
+        "scalar_minus_pmy_ratio": -0.16209863774114372,
+        "scalar_minus_packet_frac": -0.6509515649101307,
+        "scalar_minus_packet_defect_frac": 0.00390625,
+        "scalar_minus_packet_N_frac": 0.00390625,
+        "scalar_minus_packet_B4_frac": 0.00390625,
+        "scalar_minus_gx_ratio": -0.8294097566764401,
+        "scalar_minus_px1_ratio": -0.56155210943398,
+        "scalar_minus_px2_ratio": -0.7757775756558892,
+        "scalar_minus_p_to_n_floor_drift": -3.7016438755698814e+60,
+        "scalar_minus_defect_displacement_frac": 0.00390625
+      }
+    },
+    {
+      "puzzle": 11,
+      "scalar_position": 0.1279296875,
+      "fingerprint": {
+        "x_ratio": 0.5430555567679586,
+        "y_ratio": 0.11354020267559141,
+        "pmy_ratio": 0.8864597973244086,
+        "packet_frac": 0.5430555567679586,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8075073877870459,
+        "px1_ratio": 0.24759162018241132,
+        "px2_ratio": 0.20935282304963013,
+        "p_to_n_floor_drift": 3.7112026392199585e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.4151258692679586,
+        "scalar_minus_y_ratio": 0.014389484824408591,
+        "scalar_minus_pmy_ratio": -0.7585301098244086,
+        "scalar_minus_packet_frac": -0.4151258692679586,
+        "scalar_minus_packet_defect_frac": 0.1279296875,
+        "scalar_minus_packet_N_frac": 0.1279296875,
+        "scalar_minus_packet_B4_frac": 0.1279296875,
+        "scalar_minus_gx_ratio": -0.6795777002870459,
+        "scalar_minus_px1_ratio": -0.11966193268241132,
+        "scalar_minus_px2_ratio": -0.08142313554963013,
+        "scalar_minus_p_to_n_floor_drift": -3.7112026392199585e+60,
+        "scalar_minus_defect_displacement_frac": 0.1279296875
+      }
+    },
+    {
+      "puzzle": 12,
+      "scalar_position": 0.31005859375,
+      "fingerprint": {
+        "x_ratio": 0.5429838150172444,
+        "y_ratio": 0.6175247704973049,
+        "pmy_ratio": 0.3824752295026951,
+        "packet_frac": 0.5429838150172444,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.07910708683071498,
+        "px1_ratio": 0.8931216478562264,
+        "px2_ratio": 0.5638945371265293,
+        "p_to_n_floor_drift": -6.354289047538524e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.23292522126724435,
+        "scalar_minus_y_ratio": -0.3074661767473049,
+        "scalar_minus_pmy_ratio": -0.07241663575269508,
+        "scalar_minus_packet_frac": -0.23292522126724435,
+        "scalar_minus_packet_defect_frac": 0.31005859375,
+        "scalar_minus_packet_N_frac": 0.31005859375,
+        "scalar_minus_packet_B4_frac": 0.31005859375,
+        "scalar_minus_gx_ratio": 0.230951506919285,
+        "scalar_minus_px1_ratio": -0.5830630541062264,
+        "scalar_minus_px2_ratio": -0.25383594337652926,
+        "scalar_minus_p_to_n_floor_drift": 6.354289047538524e+60,
+        "scalar_minus_defect_displacement_frac": 0.31005859375
+      }
+    },
+    {
+      "puzzle": 13,
+      "scalar_position": 0.2734375,
+      "fingerprint": {
+        "x_ratio": 0.6673990902159423,
+        "y_ratio": 0.8170197794296211,
+        "pmy_ratio": 0.18298022057037885,
+        "packet_frac": 0.6673990902159423,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.15409995832687076,
+        "px1_ratio": 0.22128581029217326,
+        "px2_ratio": 0.11131509949188444,
+        "p_to_n_floor_drift": 4.387416626754758e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.39396159021594235,
+        "scalar_minus_y_ratio": -0.5435822794296211,
+        "scalar_minus_pmy_ratio": 0.09045727942962115,
+        "scalar_minus_packet_frac": -0.39396159021594235,
+        "scalar_minus_packet_defect_frac": 0.2734375,
+        "scalar_minus_packet_N_frac": 0.2734375,
+        "scalar_minus_packet_B4_frac": 0.2734375,
+        "scalar_minus_gx_ratio": 0.11933754167312924,
+        "scalar_minus_px1_ratio": 0.05215168970782674,
+        "scalar_minus_px2_ratio": 0.16212240050811555,
+        "scalar_minus_p_to_n_floor_drift": -4.387416626754758e+60,
+        "scalar_minus_defect_displacement_frac": 0.2734375
+      }
+    },
+    {
+      "puzzle": 14,
+      "scalar_position": 0.287109375,
+      "fingerprint": {
+        "x_ratio": 0.7068156210522861,
+        "y_ratio": 0.47054947831047794,
+        "pmy_ratio": 0.5294505216895221,
+        "packet_frac": 0.7068156210522861,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.31852912048811133,
+        "px1_ratio": 0.4362802313824254,
+        "px2_ratio": 0.8569041475652884,
+        "p_to_n_floor_drift": -4.812178989580914e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.4197062460522861,
+        "scalar_minus_y_ratio": -0.18344010331047794,
+        "scalar_minus_pmy_ratio": -0.2423411466895221,
+        "scalar_minus_packet_frac": -0.4197062460522861,
+        "scalar_minus_packet_defect_frac": 0.287109375,
+        "scalar_minus_packet_N_frac": 0.287109375,
+        "scalar_minus_packet_B4_frac": 0.287109375,
+        "scalar_minus_gx_ratio": -0.03141974548811133,
+        "scalar_minus_px1_ratio": -0.1491708563824254,
+        "scalar_minus_px2_ratio": -0.5697947725652884,
+        "scalar_minus_p_to_n_floor_drift": 4.812178989580914e+60,
+        "scalar_minus_defect_displacement_frac": 0.287109375
+      }
+    },
+    {
+      "puzzle": 15,
+      "scalar_position": 0.63983154296875,
+      "fingerprint": {
+        "x_ratio": 0.9947137825552851,
+        "y_ratio": 0.22239357746537258,
+        "pmy_ratio": 0.7776064225346274,
+        "packet_frac": 0.9947137825552851,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8302405147402261,
+        "px1_ratio": 0.6770250555785662,
+        "px2_ratio": 0.3282611618661488,
+        "p_to_n_floor_drift": 1.6639735814216e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.3548822395865351,
+        "scalar_minus_y_ratio": 0.4174379655033774,
+        "scalar_minus_pmy_ratio": -0.13777487956587742,
+        "scalar_minus_packet_frac": -0.3548822395865351,
+        "scalar_minus_packet_defect_frac": 0.63983154296875,
+        "scalar_minus_packet_N_frac": 0.63983154296875,
+        "scalar_minus_packet_B4_frac": 0.63983154296875,
+        "scalar_minus_gx_ratio": -0.1904089717714761,
+        "scalar_minus_px1_ratio": -0.03719351260981618,
+        "scalar_minus_px2_ratio": 0.3115703811026012,
+        "scalar_minus_p_to_n_floor_drift": -1.6639735814216e+60,
+        "scalar_minus_defect_displacement_frac": 0.63983154296875
+      }
+    },
+    {
+      "puzzle": 16,
+      "scalar_position": 0.57196044921875,
+      "fingerprint": {
+        "x_ratio": 0.6154230360726752,
+        "y_ratio": 0.5146812885631564,
+        "pmy_ratio": 0.4853187114368435,
+        "packet_frac": 0.6154230360726752,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7221328160622105,
+        "px1_ratio": 0.5472698072370772,
+        "px2_ratio": 0.8373071566902476,
+        "p_to_n_floor_drift": 3.342360785405859e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.043462586853925234,
+        "scalar_minus_y_ratio": 0.057279160655593575,
+        "scalar_minus_pmy_ratio": 0.08664173778190648,
+        "scalar_minus_packet_frac": -0.043462586853925234,
+        "scalar_minus_packet_defect_frac": 0.57196044921875,
+        "scalar_minus_packet_N_frac": 0.57196044921875,
+        "scalar_minus_packet_B4_frac": 0.57196044921875,
+        "scalar_minus_gx_ratio": -0.15017236684346047,
+        "scalar_minus_px1_ratio": 0.024690641981672812,
+        "scalar_minus_px2_ratio": -0.2653467074714976,
+        "scalar_minus_p_to_n_floor_drift": -3.342360785405859e+60,
+        "scalar_minus_defect_displacement_frac": 0.57196044921875
+      }
+    },
+    {
+      "puzzle": 17,
+      "scalar_position": 0.4621429443359375,
+      "fingerprint": {
+        "x_ratio": 0.24768898973991937,
+        "y_ratio": 0.22360581819028674,
+        "pmy_ratio": 0.7763941818097132,
+        "packet_frac": 0.24768898973991937,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.3780163916814311,
+        "px1_ratio": 0.8373789721674977,
+        "px2_ratio": 0.9149320380925829,
+        "p_to_n_floor_drift": -1.4071372544838184e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.21445395459601813,
+        "scalar_minus_y_ratio": 0.23853712614565076,
+        "scalar_minus_pmy_ratio": -0.3142512374737757,
+        "scalar_minus_packet_frac": 0.21445395459601813,
+        "scalar_minus_packet_defect_frac": 0.4621429443359375,
+        "scalar_minus_packet_N_frac": 0.4621429443359375,
+        "scalar_minus_packet_B4_frac": 0.4621429443359375,
+        "scalar_minus_gx_ratio": 0.08412655265450641,
+        "scalar_minus_px1_ratio": -0.3752360278315602,
+        "scalar_minus_px2_ratio": -0.45278909375664544,
+        "scalar_minus_p_to_n_floor_drift": 1.4071372544838184e+60,
+        "scalar_minus_defect_displacement_frac": 0.4621429443359375
+      }
+    },
+    {
+      "puzzle": 18,
+      "scalar_position": 0.5157241821289062,
+      "fingerprint": {
+        "x_ratio": 0.05036372903405288,
+        "y_ratio": 0.4665436394017705,
+        "pmy_ratio": 0.5334563605982294,
+        "packet_frac": 0.05036372903405288,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7862024545947767,
+        "px1_ratio": 0.6283993277071751,
+        "px2_ratio": 0.321236943258772,
+        "p_to_n_floor_drift": 1.9047698817105335e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.46536045309485335,
+        "scalar_minus_y_ratio": 0.049180542727135734,
+        "scalar_minus_pmy_ratio": -0.01773217846932318,
+        "scalar_minus_packet_frac": 0.46536045309485335,
+        "scalar_minus_packet_defect_frac": 0.5157241821289062,
+        "scalar_minus_packet_N_frac": 0.5157241821289062,
+        "scalar_minus_packet_B4_frac": 0.5157241821289062,
+        "scalar_minus_gx_ratio": -0.2704782724658704,
+        "scalar_minus_px1_ratio": -0.11267514557826885,
+        "scalar_minus_px2_ratio": 0.19448723887013425,
+        "scalar_minus_p_to_n_floor_drift": -1.9047698817105335e+59,
+        "scalar_minus_defect_displacement_frac": 0.5157241821289062
+      }
+    },
+    {
+      "puzzle": 19,
+      "scalar_position": 0.3638877868652344,
+      "fingerprint": {
+        "x_ratio": 0.5210912551697803,
+        "y_ratio": 0.2714575424203083,
+        "pmy_ratio": 0.7285424575796917,
+        "packet_frac": 0.5210912551697803,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4225346876383958,
+        "px1_ratio": 0.3184478835840308,
+        "px2_ratio": 0.16046086124618894,
+        "p_to_n_floor_drift": 3.828326086227595e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.1572034683045459,
+        "scalar_minus_y_ratio": 0.09243024444492609,
+        "scalar_minus_pmy_ratio": -0.36465467071445734,
+        "scalar_minus_packet_frac": -0.1572034683045459,
+        "scalar_minus_packet_defect_frac": 0.3638877868652344,
+        "scalar_minus_packet_N_frac": 0.3638877868652344,
+        "scalar_minus_packet_B4_frac": 0.3638877868652344,
+        "scalar_minus_gx_ratio": -0.058646900773161426,
+        "scalar_minus_px1_ratio": 0.045439903281203564,
+        "scalar_minus_px2_ratio": 0.20342692561904543,
+        "scalar_minus_p_to_n_floor_drift": -3.828326086227595e+60,
+        "scalar_minus_defect_displacement_frac": 0.3638877868652344
+      }
+    },
+    {
+      "puzzle": 20,
+      "scalar_position": 0.6466464996337891,
+      "fingerprint": {
+        "x_ratio": 0.23550831057060861,
+        "y_ratio": 0.5312811971824715,
+        "pmy_ratio": 0.46871880281752853,
+        "packet_frac": 0.23550831057060861,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6579060447040708,
+        "px1_ratio": 0.5832730785541907,
+        "px2_ratio": 0.1812186108752007,
+        "p_to_n_floor_drift": 6.538117087099694e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.41113818906318045,
+        "scalar_minus_y_ratio": 0.1153653024513176,
+        "scalar_minus_pmy_ratio": 0.17792769681626053,
+        "scalar_minus_packet_frac": 0.41113818906318045,
+        "scalar_minus_packet_defect_frac": 0.6466464996337891,
+        "scalar_minus_packet_N_frac": 0.6466464996337891,
+        "scalar_minus_packet_B4_frac": 0.6466464996337891,
+        "scalar_minus_gx_ratio": -0.011259545070281707,
+        "scalar_minus_px1_ratio": 0.06337342107959831,
+        "scalar_minus_px2_ratio": 0.46542788875858837,
+        "scalar_minus_p_to_n_floor_drift": -6.538117087099694e+59,
+        "scalar_minus_defect_displacement_frac": 0.6466464996337891
+      }
+    },
+    {
+      "puzzle": 21,
+      "scalar_position": 0.7278327941894531,
+      "fingerprint": {
+        "x_ratio": 0.10333898499734791,
+        "y_ratio": 0.17711201683655575,
+        "pmy_ratio": 0.8228879831634442,
+        "packet_frac": 0.10333898499734791,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.2427616394226821,
+        "px1_ratio": 0.10002124000158308,
+        "px2_ratio": 0.796639775001069,
+        "p_to_n_floor_drift": 1.962080494751302e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.6244938091921052,
+        "scalar_minus_y_ratio": 0.5507207773528974,
+        "scalar_minus_pmy_ratio": -0.09505518897399112,
+        "scalar_minus_packet_frac": 0.6244938091921052,
+        "scalar_minus_packet_defect_frac": 0.7278327941894531,
+        "scalar_minus_packet_N_frac": 0.7278327941894531,
+        "scalar_minus_packet_B4_frac": 0.7278327941894531,
+        "scalar_minus_gx_ratio": 0.485071154766771,
+        "scalar_minus_px1_ratio": 0.62781155418787,
+        "scalar_minus_px2_ratio": -0.06880698081161585,
+        "scalar_minus_p_to_n_floor_drift": -1.962080494751302e+59,
+        "scalar_minus_defect_displacement_frac": 0.7278327941894531
+      }
+    },
+    {
+      "puzzle": 22,
+      "scalar_position": 0.43408918380737305,
+      "fingerprint": {
+        "x_ratio": 0.24550505408634393,
+        "y_ratio": 0.5622946531465915,
+        "pmy_ratio": 0.4377053468534085,
+        "packet_frac": 0.24550505408634393,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.2534045114297648,
+        "px1_ratio": 0.1895504747576,
+        "px2_ratio": 0.5649444711560561,
+        "p_to_n_floor_drift": 1.1055537954363375e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.18858412972102911,
+        "scalar_minus_y_ratio": -0.1282054693392185,
+        "scalar_minus_pmy_ratio": -0.003616163046035459,
+        "scalar_minus_packet_frac": 0.18858412972102911,
+        "scalar_minus_packet_defect_frac": 0.43408918380737305,
+        "scalar_minus_packet_N_frac": 0.43408918380737305,
+        "scalar_minus_packet_B4_frac": 0.43408918380737305,
+        "scalar_minus_gx_ratio": 0.18068467237760827,
+        "scalar_minus_px1_ratio": 0.24453870904977304,
+        "scalar_minus_px2_ratio": -0.130855287348683,
+        "scalar_minus_p_to_n_floor_drift": -1.1055537954363375e+60,
+        "scalar_minus_defect_displacement_frac": 0.43408918380737305
+      }
+    },
+    {
+      "puzzle": 23,
+      "scalar_position": 0.33485841751098633,
+      "fingerprint": {
+        "x_ratio": 0.9693460590456606,
+        "y_ratio": 0.5906285683110364,
+        "pmy_ratio": 0.40937143168896356,
+        "packet_frac": 0.9693460590456606,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.18649499815134035,
+        "px1_ratio": 0.48491439572253764,
+        "px2_ratio": 0.5457395452318017,
+        "p_to_n_floor_drift": -2.799138488072811e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.6344876415346743,
+        "scalar_minus_y_ratio": -0.25577015080005006,
+        "scalar_minus_pmy_ratio": -0.07451301417797723,
+        "scalar_minus_packet_frac": -0.6344876415346743,
+        "scalar_minus_packet_defect_frac": 0.33485841751098633,
+        "scalar_minus_packet_N_frac": 0.33485841751098633,
+        "scalar_minus_packet_B4_frac": 0.33485841751098633,
+        "scalar_minus_gx_ratio": 0.14836341935964598,
+        "scalar_minus_px1_ratio": -0.1500559782115513,
+        "scalar_minus_px2_ratio": -0.21088112772081535,
+        "scalar_minus_p_to_n_floor_drift": 2.799138488072811e+60,
+        "scalar_minus_defect_displacement_frac": 0.33485841751098633
+      }
+    },
+    {
+      "puzzle": 24,
+      "scalar_position": 0.7200322151184082,
+      "fingerprint": {
+        "x_ratio": 0.4322544229583227,
+        "y_ratio": 0.17112360893702264,
+        "pmy_ratio": 0.8288763910629774,
+        "packet_frac": 0.4322544229583227,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6438376659028394,
+        "px1_ratio": 0.33405685853314676,
+        "px2_ratio": 0.2336887185085305,
+        "p_to_n_floor_drift": 3.0267832873942732e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.2877777921600855,
+        "scalar_minus_y_ratio": 0.5489086061813856,
+        "scalar_minus_pmy_ratio": -0.10884417594456919,
+        "scalar_minus_packet_frac": 0.2877777921600855,
+        "scalar_minus_packet_defect_frac": 0.7200322151184082,
+        "scalar_minus_packet_N_frac": 0.7200322151184082,
+        "scalar_minus_packet_B4_frac": 0.7200322151184082,
+        "scalar_minus_gx_ratio": 0.07619454921556879,
+        "scalar_minus_px1_ratio": 0.38597535658526144,
+        "scalar_minus_px2_ratio": 0.4863434966098777,
+        "scalar_minus_p_to_n_floor_drift": -3.0267832873942732e+60,
+        "scalar_minus_defect_displacement_frac": 0.7200322151184082
+      }
+    },
+    {
+      "puzzle": 25,
+      "scalar_position": 0.9780104756355286,
+      "fingerprint": {
+        "x_ratio": 0.021480479192526762,
+        "y_ratio": 0.2817580433075553,
+        "pmy_ratio": 0.7182419566924447,
+        "packet_frac": 0.021480479192526762,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.988755023139254,
+        "px1_ratio": 0.3986481079715789,
+        "px2_ratio": 0.5798714128358944,
+        "p_to_n_floor_drift": -1.4970744780705447e+58,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.9565299964430019,
+        "scalar_minus_y_ratio": 0.6962524323279733,
+        "scalar_minus_pmy_ratio": 0.25976851894308384,
+        "scalar_minus_packet_frac": 0.9565299964430019,
+        "scalar_minus_packet_defect_frac": 0.9780104756355286,
+        "scalar_minus_packet_N_frac": 0.9780104756355286,
+        "scalar_minus_packet_B4_frac": 0.9780104756355286,
+        "scalar_minus_gx_ratio": -0.010744547503725443,
+        "scalar_minus_px1_ratio": 0.5793623676639497,
+        "scalar_minus_px2_ratio": 0.3981390627996342,
+        "scalar_minus_p_to_n_floor_drift": 1.4970744780705447e+58,
+        "scalar_minus_defect_displacement_frac": 0.9780104756355286
+      }
+    },
+    {
+      "puzzle": 26,
+      "scalar_position": 0.6253847479820251,
+      "fingerprint": {
+        "x_ratio": 0.3058977505751727,
+        "y_ratio": 0.029007027763135386,
+        "pmy_ratio": 0.9709929722368646,
+        "packet_frac": 0.3058977505751727,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.648175789324961,
+        "px1_ratio": 0.5063060262835037,
+        "px2_ratio": 0.18779622314132355,
+        "p_to_n_floor_drift": -2.7331039381452485e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.31948699740685244,
+        "scalar_minus_y_ratio": 0.5963777202188898,
+        "scalar_minus_pmy_ratio": -0.3456082242548395,
+        "scalar_minus_packet_frac": 0.31948699740685244,
+        "scalar_minus_packet_defect_frac": 0.6253847479820251,
+        "scalar_minus_packet_N_frac": 0.6253847479820251,
+        "scalar_minus_packet_B4_frac": 0.6253847479820251,
+        "scalar_minus_gx_ratio": -0.022791041342935858,
+        "scalar_minus_px1_ratio": 0.1190787216985214,
+        "scalar_minus_px2_ratio": 0.4375885248407016,
+        "scalar_minus_p_to_n_floor_drift": 2.7331039381452485e+60,
+        "scalar_minus_defect_displacement_frac": 0.6253847479820251
+      }
+    },
+    {
+      "puzzle": 27,
+      "scalar_position": 0.6681841164827347,
+      "fingerprint": {
+        "x_ratio": 0.10361168864723051,
+        "y_ratio": 0.9872966822892602,
+        "pmy_ratio": 0.012703317710739898,
+        "packet_frac": 0.10361168864723051,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8470653210005664,
+        "px1_ratio": 0.5663865841889623,
+        "px2_ratio": 0.3300017271638072,
+        "p_to_n_floor_drift": -5.14371926492608e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5645724278355042,
+        "scalar_minus_y_ratio": -0.31911256580652547,
+        "scalar_minus_pmy_ratio": 0.6554807987719948,
+        "scalar_minus_packet_frac": 0.5645724278355042,
+        "scalar_minus_packet_defect_frac": 0.6681841164827347,
+        "scalar_minus_packet_N_frac": 0.6681841164827347,
+        "scalar_minus_packet_B4_frac": 0.6681841164827347,
+        "scalar_minus_gx_ratio": -0.17888120451783174,
+        "scalar_minus_px1_ratio": 0.10179753229377242,
+        "scalar_minus_px2_ratio": 0.33818238931892747,
+        "scalar_minus_p_to_n_floor_drift": 5.14371926492608e+59,
+        "scalar_minus_defect_displacement_frac": 0.6681841164827347
+      }
+    },
+    {
+      "puzzle": 28,
+      "scalar_position": 0.6960085034370422,
+      "fingerprint": {
+        "x_ratio": 0.913671583761778,
+        "y_ratio": 0.03889759351504781,
+        "pmy_ratio": 0.9611024064849522,
+        "packet_frac": 0.913671583761778,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.602036609993786,
+        "px1_ratio": 0.5451493534747992,
+        "px2_ratio": 0.5411790627634229,
+        "p_to_n_floor_drift": 2.691665638456751e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.2176630803247358,
+        "scalar_minus_y_ratio": 0.6571109099219944,
+        "scalar_minus_pmy_ratio": -0.2650939030479099,
+        "scalar_minus_packet_frac": -0.2176630803247358,
+        "scalar_minus_packet_defect_frac": 0.6960085034370422,
+        "scalar_minus_packet_N_frac": 0.6960085034370422,
+        "scalar_minus_packet_B4_frac": 0.6960085034370422,
+        "scalar_minus_gx_ratio": 0.09397189344325618,
+        "scalar_minus_px1_ratio": 0.15085914996224303,
+        "scalar_minus_px2_ratio": 0.15482944067361937,
+        "scalar_minus_p_to_n_floor_drift": -2.691665638456751e+60,
+        "scalar_minus_defect_displacement_frac": 0.6960085034370422
+      }
+    },
+    {
+      "puzzle": 29,
+      "scalar_position": 0.4927569553256035,
+      "fingerprint": {
+        "x_ratio": 0.4244817616928927,
+        "y_ratio": 0.039901276394352196,
+        "pmy_ratio": 0.9600987236056479,
+        "packet_frac": 0.4244817616928927,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.11214348302867003,
+        "px1_ratio": 0.3248511795545422,
+        "px2_ratio": 0.2506670587525651,
+        "p_to_n_floor_drift": -6.598370206723156e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.06827519363271078,
+        "scalar_minus_y_ratio": 0.4528556789312513,
+        "scalar_minus_pmy_ratio": -0.46734176828004437,
+        "scalar_minus_packet_frac": 0.06827519363271078,
+        "scalar_minus_packet_defect_frac": 0.4927569553256035,
+        "scalar_minus_packet_N_frac": 0.4927569553256035,
+        "scalar_minus_packet_B4_frac": 0.4927569553256035,
+        "scalar_minus_gx_ratio": 0.38061347229693343,
+        "scalar_minus_px1_ratio": 0.1679057757710613,
+        "scalar_minus_px2_ratio": 0.24208989657303837,
+        "scalar_minus_p_to_n_floor_drift": 6.598370206723156e+59,
+        "scalar_minus_defect_displacement_frac": 0.4927569553256035
+      }
+    },
+    {
+      "puzzle": 30,
+      "scalar_position": 0.9244143441319466,
+      "fingerprint": {
+        "x_ratio": 0.05139428074410342,
+        "y_ratio": 0.6905905424498172,
+        "pmy_ratio": 0.30940945755018284,
+        "packet_frac": 0.05139428074410342,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.3811212744037079,
+        "px1_ratio": 0.5797324293405259,
+        "px2_ratio": 0.36887328991537066,
+        "p_to_n_floor_drift": -2.778338770380195e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.8730200633878431,
+        "scalar_minus_y_ratio": 0.23382380168212935,
+        "scalar_minus_pmy_ratio": 0.6150048865817637,
+        "scalar_minus_packet_frac": 0.8730200633878431,
+        "scalar_minus_packet_defect_frac": 0.9244143441319466,
+        "scalar_minus_packet_N_frac": 0.9244143441319466,
+        "scalar_minus_packet_B4_frac": 0.9244143441319466,
+        "scalar_minus_gx_ratio": 0.5432930697282387,
+        "scalar_minus_px1_ratio": 0.34468191479142063,
+        "scalar_minus_px2_ratio": 0.555541054216576,
+        "scalar_minus_p_to_n_floor_drift": 2.778338770380195e+59,
+        "scalar_minus_defect_displacement_frac": 0.9244143441319466
+      }
+    },
+    {
+      "puzzle": 31,
+      "scalar_position": 0.9580019181594253,
+      "fingerprint": {
+        "x_ratio": 0.5307074103257279,
+        "y_ratio": 0.7327356973422458,
+        "pmy_ratio": 0.2672643026577542,
+        "packet_frac": 0.5307074103257279,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9877883670016814,
+        "px1_ratio": 0.24068706399918716,
+        "px2_ratio": 0.228605525675085,
+        "p_to_n_floor_drift": 3.850353057150175e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.4272945078336974,
+        "scalar_minus_y_ratio": 0.2252662208171795,
+        "scalar_minus_pmy_ratio": 0.6907376155016711,
+        "scalar_minus_packet_frac": 0.4272945078336974,
+        "scalar_minus_packet_defect_frac": 0.9580019181594253,
+        "scalar_minus_packet_N_frac": 0.9580019181594253,
+        "scalar_minus_packet_B4_frac": 0.9580019181594253,
+        "scalar_minus_gx_ratio": -0.02978644884225612,
+        "scalar_minus_px1_ratio": 0.7173148541602381,
+        "scalar_minus_px2_ratio": 0.7293963924843403,
+        "scalar_minus_p_to_n_floor_drift": -3.850353057150175e+60,
+        "scalar_minus_defect_displacement_frac": 0.9580019181594253
+      }
+    },
+    {
+      "puzzle": 32,
+      "scalar_position": 0.44051053281873465,
+      "fingerprint": {
+        "x_ratio": 0.038169995158619345,
+        "y_ratio": 0.3117752261963338,
+        "pmy_ratio": 0.6882247738036662,
+        "packet_frac": 0.038169995158619345,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.1209763145049741,
+        "px1_ratio": 0.9683642327561981,
+        "px2_ratio": 0.9934657720851826,
+        "p_to_n_floor_drift": -2.257844627591375e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.4023405376601153,
+        "scalar_minus_y_ratio": 0.12873530662240085,
+        "scalar_minus_pmy_ratio": -0.24771424098493156,
+        "scalar_minus_packet_frac": 0.4023405376601153,
+        "scalar_minus_packet_defect_frac": 0.44051053281873465,
+        "scalar_minus_packet_N_frac": 0.44051053281873465,
+        "scalar_minus_packet_B4_frac": 0.44051053281873465,
+        "scalar_minus_gx_ratio": 0.31953421831376055,
+        "scalar_minus_px1_ratio": -0.5278536999374634,
+        "scalar_minus_px2_ratio": -0.552955239266448,
+        "scalar_minus_p_to_n_floor_drift": 2.257844627591375e+59,
+        "scalar_minus_defect_displacement_frac": 0.44051053281873465
+      }
+    },
+    {
+      "puzzle": 33,
+      "scalar_position": 0.6618142630904913,
+      "fingerprint": {
+        "x_ratio": 0.6380259017878767,
+        "y_ratio": 0.0159633995733013,
+        "pmy_ratio": 0.9840366004266987,
+        "packet_frac": 0.6380259017878767,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.08775212286060607,
+        "px1_ratio": 0.9598283051866812,
+        "px2_ratio": 0.4021457930254422,
+        "p_to_n_floor_drift": 4.3893792219178524e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.023788361302614636,
+        "scalar_minus_y_ratio": 0.64585086351719,
+        "scalar_minus_pmy_ratio": -0.3222223373362074,
+        "scalar_minus_packet_frac": 0.023788361302614636,
+        "scalar_minus_packet_defect_frac": 0.6618142630904913,
+        "scalar_minus_packet_N_frac": 0.6618142630904913,
+        "scalar_minus_packet_B4_frac": 0.6618142630904913,
+        "scalar_minus_gx_ratio": 0.5740621402298852,
+        "scalar_minus_px1_ratio": -0.29801404209618987,
+        "scalar_minus_px2_ratio": 0.2596684700650491,
+        "scalar_minus_p_to_n_floor_drift": -4.3893792219178524e+60,
+        "scalar_minus_defect_displacement_frac": 0.6618142630904913
+      }
+    },
+    {
+      "puzzle": 34,
+      "scalar_position": 0.6453061435604468,
+      "fingerprint": {
+        "x_ratio": 0.23775657582864082,
+        "y_ratio": 0.7812088636435637,
+        "pmy_ratio": 0.2187911363564363,
+        "packet_frac": 0.23775657582864082,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8237821724454611,
+        "px1_ratio": 0.27039395048576215,
+        "px2_ratio": 0.49184947368559706,
+        "p_to_n_floor_drift": -7.793162230537219e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.40754956773180595,
+        "scalar_minus_y_ratio": -0.13590272008311688,
+        "scalar_minus_pmy_ratio": 0.4265150072040105,
+        "scalar_minus_packet_frac": 0.40754956773180595,
+        "scalar_minus_packet_defect_frac": 0.6453061435604468,
+        "scalar_minus_packet_N_frac": 0.6453061435604468,
+        "scalar_minus_packet_B4_frac": 0.6453061435604468,
+        "scalar_minus_gx_ratio": -0.17847602888501435,
+        "scalar_minus_px1_ratio": 0.37491219307468465,
+        "scalar_minus_px2_ratio": 0.15345666987484974,
+        "scalar_minus_p_to_n_floor_drift": 7.793162230537219e+59,
+        "scalar_minus_defect_displacement_frac": 0.6453061435604468
+      }
+    },
+    {
+      "puzzle": 35,
+      "scalar_position": 0.17072322126477957,
+      "fingerprint": {
+        "x_ratio": 0.9635022008753327,
+        "y_ratio": 0.561984154032554,
+        "pmy_ratio": 0.43801584596744597,
+        "packet_frac": 0.9635022008753327,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5123271853404797,
+        "px1_ratio": 0.16102754751702364,
+        "px2_ratio": 0.8754702516076437,
+        "p_to_n_floor_drift": 3.0844919571638158e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.7927789796105531,
+        "scalar_minus_y_ratio": -0.3912609327677744,
+        "scalar_minus_pmy_ratio": -0.2672926247026664,
+        "scalar_minus_packet_frac": -0.7927789796105531,
+        "scalar_minus_packet_defect_frac": 0.17072322126477957,
+        "scalar_minus_packet_N_frac": 0.17072322126477957,
+        "scalar_minus_packet_B4_frac": 0.17072322126477957,
+        "scalar_minus_gx_ratio": -0.34160396407570015,
+        "scalar_minus_px1_ratio": 0.009695673747755928,
+        "scalar_minus_px2_ratio": -0.7047470303428641,
+        "scalar_minus_p_to_n_floor_drift": -3.0844919571638158e+60,
+        "scalar_minus_defect_displacement_frac": 0.17072322126477957
+      }
+    },
+    {
+      "puzzle": 36,
+      "scalar_position": 0.23364647093694657,
+      "fingerprint": {
+        "x_ratio": 0.7027503329796528,
+        "y_ratio": 0.5699030377330822,
+        "pmy_ratio": 0.43009696226691785,
+        "packet_frac": 0.7027503329796528,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4722563419929499,
+        "px1_ratio": 0.3217110458971688,
+        "px2_ratio": 0.9755386211231785,
+        "p_to_n_floor_drift": 5.8272624152394095e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.46910386204270627,
+        "scalar_minus_y_ratio": -0.3362565667961356,
+        "scalar_minus_pmy_ratio": -0.19645049132997128,
+        "scalar_minus_packet_frac": -0.46910386204270627,
+        "scalar_minus_packet_defect_frac": 0.23364647093694657,
+        "scalar_minus_packet_N_frac": 0.23364647093694657,
+        "scalar_minus_packet_B4_frac": 0.23364647093694657,
+        "scalar_minus_gx_ratio": -0.23860987105600334,
+        "scalar_minus_px1_ratio": -0.08806457496022224,
+        "scalar_minus_px2_ratio": -0.7418921501862319,
+        "scalar_minus_p_to_n_floor_drift": -5.8272624152394095e+60,
+        "scalar_minus_defect_displacement_frac": 0.23364647093694657
+      }
+    },
+    {
+      "puzzle": 37,
+      "scalar_position": 0.4588522112899227,
+      "fingerprint": {
+        "x_ratio": 0.4889528611520679,
+        "y_ratio": 0.62004315495369,
+        "pmy_ratio": 0.37995684504631,
+        "packet_frac": 0.4889528611520679,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4489688392417446,
+        "px1_ratio": 0.274313087675502,
+        "px2_ratio": 0.2367340511724301,
+        "p_to_n_floor_drift": -7.089883620314131e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.030100649862145168,
+        "scalar_minus_y_ratio": -0.1611909436637673,
+        "scalar_minus_pmy_ratio": 0.07889536624361271,
+        "scalar_minus_packet_frac": -0.030100649862145168,
+        "scalar_minus_packet_defect_frac": 0.4588522112899227,
+        "scalar_minus_packet_N_frac": 0.4588522112899227,
+        "scalar_minus_packet_B4_frac": 0.4588522112899227,
+        "scalar_minus_gx_ratio": 0.00988337204817813,
+        "scalar_minus_px1_ratio": 0.1845391236144207,
+        "scalar_minus_px2_ratio": 0.2221181601174926,
+        "scalar_minus_p_to_n_floor_drift": 7.089883620314131e+59,
+        "scalar_minus_defect_displacement_frac": 0.4588522112899227
+      }
+    },
+    {
+      "puzzle": 38,
+      "scalar_position": 0.0693586707348004,
+      "fingerprint": {
+        "x_ratio": 0.7514783077559626,
+        "y_ratio": 0.2177122636016856,
+        "pmy_ratio": 0.7822877363983144,
+        "packet_frac": 0.7514783077559626,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4351086478877755,
+        "px1_ratio": 0.8610116606300366,
+        "px2_ratio": 0.3875100316140007,
+        "p_to_n_floor_drift": 1.9289446597834773e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.6821196370211622,
+        "scalar_minus_y_ratio": -0.1483535928668852,
+        "scalar_minus_pmy_ratio": -0.712929065663514,
+        "scalar_minus_packet_frac": -0.6821196370211622,
+        "scalar_minus_packet_defect_frac": 0.0693586707348004,
+        "scalar_minus_packet_N_frac": 0.0693586707348004,
+        "scalar_minus_packet_B4_frac": 0.0693586707348004,
+        "scalar_minus_gx_ratio": -0.3657499771529751,
+        "scalar_minus_px1_ratio": -0.7916529898952362,
+        "scalar_minus_px2_ratio": -0.3181513608792003,
+        "scalar_minus_p_to_n_floor_drift": -1.9289446597834773e+60,
+        "scalar_minus_defect_displacement_frac": 0.0693586707348004
+      }
+    },
+    {
+      "puzzle": 39,
+      "scalar_position": 0.1777045763192291,
+      "fingerprint": {
+        "x_ratio": 0.17760926960091297,
+        "y_ratio": 0.7900388289907092,
+        "pmy_ratio": 0.20996117100929085,
+        "packet_frac": 0.17760926960091297,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9805848708160279,
+        "px1_ratio": 0.263677689772076,
+        "px2_ratio": 0.558713040627011,
+        "p_to_n_floor_drift": -6.775974482982987e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 9.530671831611826e-05,
+        "scalar_minus_y_ratio": -0.6123342526714801,
+        "scalar_minus_pmy_ratio": -0.03225659469006176,
+        "scalar_minus_packet_frac": 9.530671831611826e-05,
+        "scalar_minus_packet_defect_frac": 0.1777045763192291,
+        "scalar_minus_packet_N_frac": 0.1777045763192291,
+        "scalar_minus_packet_B4_frac": 0.1777045763192291,
+        "scalar_minus_gx_ratio": -0.8028802944967988,
+        "scalar_minus_px1_ratio": -0.08597311345284692,
+        "scalar_minus_px2_ratio": -0.3810084643077819,
+        "scalar_minus_p_to_n_floor_drift": 6.775974482982987e+59,
+        "scalar_minus_defect_displacement_frac": 0.1777045763192291
+      }
+    },
+    {
+      "puzzle": 40,
+      "scalar_position": 0.8256312850098766,
+      "fingerprint": {
+        "x_ratio": 0.6364691264437369,
+        "y_ratio": 0.48293551965729786,
+        "pmy_ratio": 0.5170644803427021,
+        "packet_frac": 0.6364691264437369,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.0869473246528753,
+        "px1_ratio": 0.5136074183529762,
+        "px2_ratio": 0.8499234552032869,
+        "p_to_n_floor_drift": -4.020402207491557e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.18916215856613972,
+        "scalar_minus_y_ratio": 0.34269576535257873,
+        "scalar_minus_pmy_ratio": 0.30856680466717445,
+        "scalar_minus_packet_frac": 0.18916215856613972,
+        "scalar_minus_packet_defect_frac": 0.8256312850098766,
+        "scalar_minus_packet_N_frac": 0.8256312850098766,
+        "scalar_minus_packet_B4_frac": 0.8256312850098766,
+        "scalar_minus_gx_ratio": 0.7386839603570012,
+        "scalar_minus_px1_ratio": 0.3120238666569004,
+        "scalar_minus_px2_ratio": -0.024292170193410345,
+        "scalar_minus_p_to_n_floor_drift": 4.020402207491557e+59,
+        "scalar_minus_defect_displacement_frac": 0.8256312850098766
+      }
+    },
+    {
+      "puzzle": 41,
+      "scalar_position": 0.32627265442988573,
+      "fingerprint": {
+        "x_ratio": 0.7005600045011781,
+        "y_ratio": 0.3969084076632862,
+        "pmy_ratio": 0.6030915923367137,
+        "packet_frac": 0.7005600045011781,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7645513095862166,
+        "px1_ratio": 0.8450442624604474,
+        "px2_ratio": 0.45439573303837455,
+        "p_to_n_floor_drift": 1.2189445249032568e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.3742873500712923,
+        "scalar_minus_y_ratio": -0.07063575323340049,
+        "scalar_minus_pmy_ratio": -0.276818937906828,
+        "scalar_minus_packet_frac": -0.3742873500712923,
+        "scalar_minus_packet_defect_frac": 0.32627265442988573,
+        "scalar_minus_packet_N_frac": 0.32627265442988573,
+        "scalar_minus_packet_B4_frac": 0.32627265442988573,
+        "scalar_minus_gx_ratio": -0.4382786551563309,
+        "scalar_minus_px1_ratio": -0.5187716080305617,
+        "scalar_minus_px2_ratio": -0.12812307860848882,
+        "scalar_minus_p_to_n_floor_drift": -1.2189445249032568e+60,
+        "scalar_minus_defect_displacement_frac": 0.32627265442988573
+      }
+    },
+    {
+      "puzzle": 42,
+      "scalar_position": 0.3166639075566309,
+      "fingerprint": {
+        "x_ratio": 0.9327470971608053,
+        "y_ratio": 0.8410657435838086,
+        "pmy_ratio": 0.15893425641619144,
+        "packet_frac": 0.9327470971608053,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4382702800721727,
+        "px1_ratio": 0.21995145329952975,
+        "px2_ratio": 0.8473014495396649,
+        "p_to_n_floor_drift": -2.277502369075963e+58,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.6160831896041744,
+        "scalar_minus_y_ratio": -0.5244018360271777,
+        "scalar_minus_pmy_ratio": 0.15772965114043944,
+        "scalar_minus_packet_frac": -0.6160831896041744,
+        "scalar_minus_packet_defect_frac": 0.3166639075566309,
+        "scalar_minus_packet_N_frac": 0.3166639075566309,
+        "scalar_minus_packet_B4_frac": 0.3166639075566309,
+        "scalar_minus_gx_ratio": -0.12160637251554185,
+        "scalar_minus_px1_ratio": 0.09671245425710112,
+        "scalar_minus_px2_ratio": -0.530637541983034,
+        "scalar_minus_p_to_n_floor_drift": 2.277502369075963e+58,
+        "scalar_minus_defect_displacement_frac": 0.3166639075566309
+      }
+    },
+    {
+      "puzzle": 43,
+      "scalar_position": 0.6847959722838368,
+      "fingerprint": {
+        "x_ratio": 0.6492000655408969,
+        "y_ratio": 0.22415985265531713,
+        "pmy_ratio": 0.7758401473446829,
+        "packet_frac": 0.6492000655408969,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.657056522058214,
+        "px1_ratio": 0.4651267977488165,
+        "px2_ratio": 0.8856731367102866,
+        "p_to_n_floor_drift": -1.745538502642092e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.03559590674293989,
+        "scalar_minus_y_ratio": 0.4606361196285197,
+        "scalar_minus_pmy_ratio": -0.09104417506084606,
+        "scalar_minus_packet_frac": 0.03559590674293989,
+        "scalar_minus_packet_defect_frac": 0.6847959722838368,
+        "scalar_minus_packet_N_frac": 0.6847959722838368,
+        "scalar_minus_packet_B4_frac": 0.6847959722838368,
+        "scalar_minus_gx_ratio": 0.027739450225622853,
+        "scalar_minus_px1_ratio": 0.21966917453502033,
+        "scalar_minus_px2_ratio": -0.20087716442644976,
+        "scalar_minus_p_to_n_floor_drift": 1.745538502642092e+60,
+        "scalar_minus_defect_displacement_frac": 0.6847959722838368
+      }
+    },
+    {
+      "puzzle": 44,
+      "scalar_position": 0.7513186500162874,
+      "fingerprint": {
+        "x_ratio": 0.36826220711832913,
+        "y_ratio": 0.4651781920949075,
+        "pmy_ratio": 0.5348218079050925,
+        "packet_frac": 0.36826220711832913,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.008470959356737615,
+        "px1_ratio": 0.04420319982554439,
+        "px2_ratio": 0.5875345930561264,
+        "p_to_n_floor_drift": -1.7125661662751175e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.38305644289795826,
+        "scalar_minus_y_ratio": 0.2861404579213799,
+        "scalar_minus_pmy_ratio": 0.2164968421111949,
+        "scalar_minus_packet_frac": 0.38305644289795826,
+        "scalar_minus_packet_defect_frac": 0.7513186500162874,
+        "scalar_minus_packet_N_frac": 0.7513186500162874,
+        "scalar_minus_packet_B4_frac": 0.7513186500162874,
+        "scalar_minus_gx_ratio": 0.7428476906595498,
+        "scalar_minus_px1_ratio": 0.707115450190743,
+        "scalar_minus_px2_ratio": 0.16378405696016096,
+        "scalar_minus_p_to_n_floor_drift": 1.7125661662751175e+60,
+        "scalar_minus_defect_displacement_frac": 0.7513186500162874
+      }
+    },
+    {
+      "puzzle": 45,
+      "scalar_position": 0.13666732696611916,
+      "fingerprint": {
+        "x_ratio": 0.4327810511776907,
+        "y_ratio": 0.6664207041789126,
+        "pmy_ratio": 0.33357929582108736,
+        "packet_frac": 0.4327810511776907,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6493647364887549,
+        "px1_ratio": 0.4309124560766363,
+        "px2_ratio": 0.13630649274567297,
+        "p_to_n_floor_drift": 1.2570354449648381e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.29611372421157156,
+        "scalar_minus_y_ratio": -0.5297533772127935,
+        "scalar_minus_pmy_ratio": -0.1969119688549682,
+        "scalar_minus_packet_frac": -0.29611372421157156,
+        "scalar_minus_packet_defect_frac": 0.13666732696611916,
+        "scalar_minus_packet_N_frac": 0.13666732696611916,
+        "scalar_minus_packet_B4_frac": 0.13666732696611916,
+        "scalar_minus_gx_ratio": -0.5126974095226358,
+        "scalar_minus_px1_ratio": -0.29424512911051715,
+        "scalar_minus_px2_ratio": 0.0003608342204461934,
+        "scalar_minus_p_to_n_floor_drift": -1.2570354449648381e+60,
+        "scalar_minus_defect_displacement_frac": 0.13666732696611916
+      }
+    },
+    {
+      "puzzle": 46,
+      "scalar_position": 0.46112229085167655,
+      "fingerprint": {
+        "x_ratio": 0.9895710614920484,
+        "y_ratio": 0.6250669020224712,
+        "pmy_ratio": 0.3749330979775288,
+        "packet_frac": 0.9895710614920484,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5825459850279033,
+        "px1_ratio": 0.7196246225803655,
+        "px2_ratio": 0.2908043159275861,
+        "p_to_n_floor_drift": 1.936940988180726e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.5284487706403719,
+        "scalar_minus_y_ratio": -0.16394461117079462,
+        "scalar_minus_pmy_ratio": 0.08618919287414778,
+        "scalar_minus_packet_frac": -0.5284487706403719,
+        "scalar_minus_packet_defect_frac": 0.46112229085167655,
+        "scalar_minus_packet_N_frac": 0.46112229085167655,
+        "scalar_minus_packet_B4_frac": 0.46112229085167655,
+        "scalar_minus_gx_ratio": -0.12142369417622678,
+        "scalar_minus_px1_ratio": -0.25850233172868897,
+        "scalar_minus_px2_ratio": 0.17031797492409045,
+        "scalar_minus_p_to_n_floor_drift": -1.936940988180726e+60,
+        "scalar_minus_defect_displacement_frac": 0.46112229085167655
+      }
+    },
+    {
+      "puzzle": 47,
+      "scalar_position": 0.7005655069250736,
+      "fingerprint": {
+        "x_ratio": 0.22684843761002704,
+        "y_ratio": 0.7513561809788383,
+        "pmy_ratio": 0.24864381902116167,
+        "packet_frac": 0.22684843761002704,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9020968087900426,
+        "px1_ratio": 0.3767687860025574,
+        "px2_ratio": 0.39638277638741554,
+        "p_to_n_floor_drift": 8.552720727013021e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.47371706931504654,
+        "scalar_minus_y_ratio": -0.050790674053764695,
+        "scalar_minus_pmy_ratio": 0.4519216879039119,
+        "scalar_minus_packet_frac": 0.47371706931504654,
+        "scalar_minus_packet_defect_frac": 0.7005655069250736,
+        "scalar_minus_packet_N_frac": 0.7005655069250736,
+        "scalar_minus_packet_B4_frac": 0.7005655069250736,
+        "scalar_minus_gx_ratio": -0.20153130186496904,
+        "scalar_minus_px1_ratio": 0.32379672092251616,
+        "scalar_minus_px2_ratio": 0.30418273053765804,
+        "scalar_minus_p_to_n_floor_drift": -8.552720727013021e+59,
+        "scalar_minus_defect_displacement_frac": 0.7005655069250736
+      }
+    },
+    {
+      "puzzle": 48,
+      "scalar_position": 0.3586072690006503,
+      "fingerprint": {
+        "x_ratio": 0.5693191176497576,
+        "y_ratio": 0.3615877469933141,
+        "pmy_ratio": 0.6384122530066859,
+        "packet_frac": 0.5693191176497576,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5519998078576229,
+        "px1_ratio": 0.9186116768885128,
+        "px2_ratio": 0.5120692054617295,
+        "p_to_n_floor_drift": -4.128918491596487e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.2107118486491073,
+        "scalar_minus_y_ratio": -0.002980477992663766,
+        "scalar_minus_pmy_ratio": -0.2798049840060356,
+        "scalar_minus_packet_frac": -0.2107118486491073,
+        "scalar_minus_packet_defect_frac": 0.3586072690006503,
+        "scalar_minus_packet_N_frac": 0.3586072690006503,
+        "scalar_minus_packet_B4_frac": 0.3586072690006503,
+        "scalar_minus_gx_ratio": -0.1933925388569726,
+        "scalar_minus_px1_ratio": -0.5600044078878624,
+        "scalar_minus_px2_ratio": -0.1534619364610792,
+        "scalar_minus_p_to_n_floor_drift": 4.128918491596487e+60,
+        "scalar_minus_defect_displacement_frac": 0.3586072690006503
+      }
+    },
+    {
+      "puzzle": 49,
+      "scalar_position": 0.45348233016493467,
+      "fingerprint": {
+        "x_ratio": 0.34810496406648156,
+        "y_ratio": 0.2703545725773111,
+        "pmy_ratio": 0.7296454274226889,
+        "packet_frac": 0.34810496406648156,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7123785551215861,
+        "px1_ratio": 0.8191803393198923,
+        "px2_ratio": 0.8327146966136262,
+        "p_to_n_floor_drift": 2.1681406665389897e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.1053773660984531,
+        "scalar_minus_y_ratio": 0.18312775758762356,
+        "scalar_minus_pmy_ratio": -0.27616309725775423,
+        "scalar_minus_packet_frac": 0.1053773660984531,
+        "scalar_minus_packet_defect_frac": 0.45348233016493467,
+        "scalar_minus_packet_N_frac": 0.45348233016493467,
+        "scalar_minus_packet_B4_frac": 0.45348233016493467,
+        "scalar_minus_gx_ratio": -0.25889622495665143,
+        "scalar_minus_px1_ratio": -0.36569800915495765,
+        "scalar_minus_px2_ratio": -0.3792323664486915,
+        "scalar_minus_p_to_n_floor_drift": -2.1681406665389897e+60,
+        "scalar_minus_defect_displacement_frac": 0.45348233016493467
+      }
+    },
+    {
+      "puzzle": 50,
+      "scalar_position": 0.08560360020207014,
+      "fingerprint": {
+        "x_ratio": 0.9548226004660566,
+        "y_ratio": 0.08108539872392113,
+        "pmy_ratio": 0.9189146012760788,
+        "packet_frac": 0.9548226004660566,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.04811345776042272,
+        "px1_ratio": 0.1352465539318104,
+        "px2_ratio": 0.909930845602133,
+        "p_to_n_floor_drift": 4.852262950593926e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.8692190002639865,
+        "scalar_minus_y_ratio": 0.004518201478149006,
+        "scalar_minus_pmy_ratio": -0.8333110010740087,
+        "scalar_minus_packet_frac": -0.8692190002639865,
+        "scalar_minus_packet_defect_frac": 0.08560360020207014,
+        "scalar_minus_packet_N_frac": 0.08560360020207014,
+        "scalar_minus_packet_B4_frac": 0.08560360020207014,
+        "scalar_minus_gx_ratio": 0.03749014244164742,
+        "scalar_minus_px1_ratio": -0.04964295372974026,
+        "scalar_minus_px2_ratio": -0.8243272454000629,
+        "scalar_minus_p_to_n_floor_drift": -4.852262950593926e+60,
+        "scalar_minus_defect_displacement_frac": 0.08560360020207014
+      }
+    },
+    {
+      "puzzle": 51,
+      "scalar_position": 0.8285546544961626,
+      "fingerprint": {
+        "x_ratio": 0.5485291329622795,
+        "y_ratio": 0.5041176594519868,
+        "pmy_ratio": 0.49588234054801317,
+        "packet_frac": 0.5485291329622795,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.6935512733145166,
+        "px1_ratio": 0.7364197175110659,
+        "px2_ratio": 0.7150511495266546,
+        "p_to_n_floor_drift": 2.018619869223387e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.28002552153388316,
+        "scalar_minus_y_ratio": 0.3244369950441758,
+        "scalar_minus_pmy_ratio": 0.33267231394814945,
+        "scalar_minus_packet_frac": 0.28002552153388316,
+        "scalar_minus_packet_defect_frac": 0.8285546544961626,
+        "scalar_minus_packet_N_frac": 0.8285546544961626,
+        "scalar_minus_packet_B4_frac": 0.8285546544961626,
+        "scalar_minus_gx_ratio": 0.135003381181646,
+        "scalar_minus_px1_ratio": 0.09213493698509667,
+        "scalar_minus_px2_ratio": 0.113503504969508,
+        "scalar_minus_p_to_n_floor_drift": -2.018619869223387e+60,
+        "scalar_minus_defect_displacement_frac": 0.8285546544961626
+      }
+    },
+    {
+      "puzzle": 52,
+      "scalar_position": 0.8725002169265093,
+      "fingerprint": {
+        "x_ratio": 0.4561040302004891,
+        "y_ratio": 0.1535539381150383,
+        "pmy_ratio": 0.8464460618849617,
+        "packet_frac": 0.4561040302004891,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.31390445579352777,
+        "px1_ratio": 0.24747722799951563,
+        "px2_ratio": 0.2964187417999953,
+        "p_to_n_floor_drift": 2.570537410181171e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.41639618672602013,
+        "scalar_minus_y_ratio": 0.7189462788114709,
+        "scalar_minus_pmy_ratio": 0.02605415504154751,
+        "scalar_minus_packet_frac": 0.41639618672602013,
+        "scalar_minus_packet_defect_frac": 0.8725002169265093,
+        "scalar_minus_packet_N_frac": 0.8725002169265093,
+        "scalar_minus_packet_B4_frac": 0.8725002169265093,
+        "scalar_minus_gx_ratio": 0.5585957611329815,
+        "scalar_minus_px1_ratio": 0.6250229889269936,
+        "scalar_minus_px2_ratio": 0.576081475126514,
+        "scalar_minus_p_to_n_floor_drift": -2.570537410181171e+60,
+        "scalar_minus_defect_displacement_frac": 0.8725002169265093
+      }
+    },
+    {
+      "puzzle": 53,
+      "scalar_position": 0.5018395352846268,
+      "fingerprint": {
+        "x_ratio": 0.06120240401641834,
+        "y_ratio": 0.39558976671812524,
+        "pmy_ratio": 0.6044102332818747,
+        "packet_frac": 0.06120240401641834,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.2020401312387141,
+        "px1_ratio": 0.6633311677072898,
+        "px2_ratio": 0.27546642827629186,
+        "p_to_n_floor_drift": -4.00187538336114e+57,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.4406371312682084,
+        "scalar_minus_y_ratio": 0.10624976856650153,
+        "scalar_minus_pmy_ratio": -0.10257069799724794,
+        "scalar_minus_packet_frac": 0.4406371312682084,
+        "scalar_minus_packet_defect_frac": 0.5018395352846268,
+        "scalar_minus_packet_N_frac": 0.5018395352846268,
+        "scalar_minus_packet_B4_frac": 0.5018395352846268,
+        "scalar_minus_gx_ratio": 0.29979940404591265,
+        "scalar_minus_px1_ratio": -0.16149163242266307,
+        "scalar_minus_px2_ratio": 0.2263731070083349,
+        "scalar_minus_p_to_n_floor_drift": 4.00187538336114e+57,
+        "scalar_minus_defect_displacement_frac": 0.5018395352846268
+      }
+    },
+    {
+      "puzzle": 54,
+      "scalar_position": 0.10738698705333893,
+      "fingerprint": {
+        "x_ratio": 0.2927966191312132,
+        "y_ratio": 0.9985427069885452,
+        "pmy_ratio": 0.0014572930114547865,
+        "packet_frac": 0.2927966191312132,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.09544056908028771,
+        "px1_ratio": 0.4467548879710349,
+        "px2_ratio": 0.2604484928977519,
+        "p_to_n_floor_drift": -2.7950390060548776e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.18540963207787425,
+        "scalar_minus_y_ratio": -0.8911557199352063,
+        "scalar_minus_pmy_ratio": 0.10592969404188415,
+        "scalar_minus_packet_frac": -0.18540963207787425,
+        "scalar_minus_packet_defect_frac": 0.10738698705333893,
+        "scalar_minus_packet_N_frac": 0.10738698705333893,
+        "scalar_minus_packet_B4_frac": 0.10738698705333893,
+        "scalar_minus_gx_ratio": 0.011946417973051224,
+        "scalar_minus_px1_ratio": -0.339367900917696,
+        "scalar_minus_px2_ratio": -0.15306150584441297,
+        "scalar_minus_p_to_n_floor_drift": 2.7950390060548776e+59,
+        "scalar_minus_defect_displacement_frac": 0.10738698705333893
+      }
+    },
+    {
+      "puzzle": 55,
+      "scalar_position": 0.6678542153963616,
+      "fingerprint": {
+        "x_ratio": 0.5220192382291178,
+        "y_ratio": 0.0574340937221962,
+        "pmy_ratio": 0.9425659062778038,
+        "packet_frac": 0.5220192382291178,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.651609690264213,
+        "px1_ratio": 0.6975710055013684,
+        "px2_ratio": 0.7804097562695139,
+        "p_to_n_floor_drift": 7.054288582270046e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.1458349771672438,
+        "scalar_minus_y_ratio": 0.6104201216741654,
+        "scalar_minus_pmy_ratio": -0.2747116908814422,
+        "scalar_minus_packet_frac": 0.1458349771672438,
+        "scalar_minus_packet_defect_frac": 0.6678542153963616,
+        "scalar_minus_packet_N_frac": 0.6678542153963616,
+        "scalar_minus_packet_B4_frac": 0.6678542153963616,
+        "scalar_minus_gx_ratio": 0.01624452513214858,
+        "scalar_minus_px1_ratio": -0.02971679010500683,
+        "scalar_minus_px2_ratio": -0.11255554087315234,
+        "scalar_minus_p_to_n_floor_drift": -7.054288582270046e+59,
+        "scalar_minus_defect_displacement_frac": 0.6678542153963616
+      }
+    },
+    {
+      "puzzle": 56,
+      "scalar_position": 0.2273166453323929,
+      "fingerprint": {
+        "x_ratio": 0.24679100683551558,
+        "y_ratio": 0.8751781463282432,
+        "pmy_ratio": 0.12482185367175677,
+        "packet_frac": 0.24679100683551558,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.07860541125772758,
+        "px1_ratio": 0.44672423520321086,
+        "px2_ratio": 0.30648475796127356,
+        "p_to_n_floor_drift": 4.776989560116236e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.019474361503122678,
+        "scalar_minus_y_ratio": -0.6478615009958503,
+        "scalar_minus_pmy_ratio": 0.10249479166063613,
+        "scalar_minus_packet_frac": -0.019474361503122678,
+        "scalar_minus_packet_defect_frac": 0.2273166453323929,
+        "scalar_minus_packet_N_frac": 0.2273166453323929,
+        "scalar_minus_packet_B4_frac": 0.2273166453323929,
+        "scalar_minus_gx_ratio": 0.14871123407466533,
+        "scalar_minus_px1_ratio": -0.21940758987081796,
+        "scalar_minus_px2_ratio": -0.07916811262888065,
+        "scalar_minus_p_to_n_floor_drift": -4.776989560116236e+59,
+        "scalar_minus_defect_displacement_frac": 0.2273166453323929
+      }
+    },
+    {
+      "puzzle": 57,
+      "scalar_position": 0.9185453074950023,
+      "fingerprint": {
+        "x_ratio": 0.6450443562580103,
+        "y_ratio": 0.4363000707506608,
+        "pmy_ratio": 0.5636999292493392,
+        "packet_frac": 0.6450443562580103,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.1469501662841332,
+        "px1_ratio": 0.4686602330938867,
+        "px2_ratio": 0.886295410648103,
+        "p_to_n_floor_drift": -4.845827334783124e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.27350095123699203,
+        "scalar_minus_y_ratio": 0.4822452367443415,
+        "scalar_minus_pmy_ratio": 0.3548453782456631,
+        "scalar_minus_packet_frac": 0.27350095123699203,
+        "scalar_minus_packet_defect_frac": 0.9185453074950023,
+        "scalar_minus_packet_N_frac": 0.9185453074950023,
+        "scalar_minus_packet_B4_frac": 0.9185453074950023,
+        "scalar_minus_gx_ratio": 0.771595141210869,
+        "scalar_minus_px1_ratio": 0.4498850744011156,
+        "scalar_minus_px2_ratio": 0.03224989684689927,
+        "scalar_minus_p_to_n_floor_drift": 4.845827334783124e+60,
+        "scalar_minus_defect_displacement_frac": 0.9185453074950023
+      }
+    },
+    {
+      "puzzle": 58,
+      "scalar_position": 0.3876168823447197,
+      "fingerprint": {
+        "x_ratio": 0.06772734292502561,
+        "y_ratio": 0.6785273047835559,
+        "pmy_ratio": 0.32147269521644406,
+        "packet_frac": 0.06772734292502561,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.9920670615163579,
+        "px1_ratio": 0.36692513970962953,
+        "px2_ratio": 0.5653475173653448,
+        "p_to_n_floor_drift": -6.837812035018878e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.3198895394196941,
+        "scalar_minus_y_ratio": -0.29091042243883625,
+        "scalar_minus_pmy_ratio": 0.06614418712827563,
+        "scalar_minus_packet_frac": 0.3198895394196941,
+        "scalar_minus_packet_defect_frac": 0.3876168823447197,
+        "scalar_minus_packet_N_frac": 0.3876168823447197,
+        "scalar_minus_packet_B4_frac": 0.3876168823447197,
+        "scalar_minus_gx_ratio": -0.6044501791716382,
+        "scalar_minus_px1_ratio": 0.02069174263509016,
+        "scalar_minus_px2_ratio": -0.17773063502062514,
+        "scalar_minus_p_to_n_floor_drift": 6.837812035018878e+59,
+        "scalar_minus_defect_displacement_frac": 0.3876168823447197
+      }
+    },
+    {
+      "puzzle": 59,
+      "scalar_position": 0.8217038442259545,
+      "fingerprint": {
+        "x_ratio": 0.2544935451577489,
+        "y_ratio": 0.05067012235614635,
+        "pmy_ratio": 0.9493298776438537,
+        "packet_frac": 0.2544935451577489,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8616097044171553,
+        "px1_ratio": 0.4397734440562901,
+        "px2_ratio": 0.305733010785961,
+        "p_to_n_floor_drift": -1.452745726032385e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5672102990682056,
+        "scalar_minus_y_ratio": 0.7710337218698082,
+        "scalar_minus_pmy_ratio": -0.12762603341789913,
+        "scalar_minus_packet_frac": 0.5672102990682056,
+        "scalar_minus_packet_defect_frac": 0.8217038442259545,
+        "scalar_minus_packet_N_frac": 0.8217038442259545,
+        "scalar_minus_packet_B4_frac": 0.8217038442259545,
+        "scalar_minus_gx_ratio": -0.03990586019120079,
+        "scalar_minus_px1_ratio": 0.38193040016966445,
+        "scalar_minus_px2_ratio": 0.5159708334399935,
+        "scalar_minus_p_to_n_floor_drift": 1.452745726032385e+60,
+        "scalar_minus_defect_displacement_frac": 0.8217038442259545
+      }
+    },
+    {
+      "puzzle": 60,
+      "scalar_position": 0.9689828764301732,
+      "fingerprint": {
+        "x_ratio": 0.28479408387930444,
+        "y_ratio": 0.814773361191873,
+        "pmy_ratio": 0.18522663880812698,
+        "packet_frac": 0.28479408387930444,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.30312154338394687,
+        "px1_ratio": 0.408469019882073,
+        "px2_ratio": 0.30673689623862255,
+        "p_to_n_floor_drift": 2.7688347278646194e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.6841887925508687,
+        "scalar_minus_y_ratio": 0.15420951523830018,
+        "scalar_minus_pmy_ratio": 0.7837562376220463,
+        "scalar_minus_packet_frac": 0.6841887925508687,
+        "scalar_minus_packet_defect_frac": 0.9689828764301732,
+        "scalar_minus_packet_N_frac": 0.9689828764301732,
+        "scalar_minus_packet_B4_frac": 0.9689828764301732,
+        "scalar_minus_gx_ratio": 0.6658613330462264,
+        "scalar_minus_px1_ratio": 0.5605138565481003,
+        "scalar_minus_px2_ratio": 0.6622459801915507,
+        "scalar_minus_p_to_n_floor_drift": -2.7688347278646194e+60,
+        "scalar_minus_defect_displacement_frac": 0.9689828764301732
+      }
+    },
+    {
+      "puzzle": 61,
+      "scalar_position": 0.23667356096793157,
+      "fingerprint": {
+        "x_ratio": 0.2876620518082585,
+        "y_ratio": 0.17329721248808866,
+        "pmy_ratio": 0.8267027875119113,
+        "packet_frac": 0.2876620518082585,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7945162402539602,
+        "px1_ratio": 0.6894605101427609,
+        "px2_ratio": 0.02287743804898061,
+        "p_to_n_floor_drift": -3.7794410578525207e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.05098849084032692,
+        "scalar_minus_y_ratio": 0.06337634847984291,
+        "scalar_minus_pmy_ratio": -0.5900292265439797,
+        "scalar_minus_packet_frac": -0.05098849084032692,
+        "scalar_minus_packet_defect_frac": 0.23667356096793157,
+        "scalar_minus_packet_N_frac": 0.23667356096793157,
+        "scalar_minus_packet_B4_frac": 0.23667356096793157,
+        "scalar_minus_gx_ratio": -0.5578426792860286,
+        "scalar_minus_px1_ratio": -0.4527869491748293,
+        "scalar_minus_px2_ratio": 0.21379612291895095,
+        "scalar_minus_p_to_n_floor_drift": 3.7794410578525207e+59,
+        "scalar_minus_defect_displacement_frac": 0.23667356096793157
+      }
+    },
+    {
+      "puzzle": 62,
+      "scalar_position": 0.6949864005878701,
+      "fingerprint": {
+        "x_ratio": 0.13712167091288652,
+        "y_ratio": 0.2390147295338873,
+        "pmy_ratio": 0.7609852704661126,
+        "packet_frac": 0.13712167091288652,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.2301059063386043,
+        "px1_ratio": 0.16158532324834762,
+        "px2_ratio": 0.7012930058387659,
+        "p_to_n_floor_drift": 3.0066328516077067e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5578647296749836,
+        "scalar_minus_y_ratio": 0.4559716710539828,
+        "scalar_minus_pmy_ratio": -0.06599886987824255,
+        "scalar_minus_packet_frac": 0.5578647296749836,
+        "scalar_minus_packet_defect_frac": 0.6949864005878701,
+        "scalar_minus_packet_N_frac": 0.6949864005878701,
+        "scalar_minus_packet_B4_frac": 0.6949864005878701,
+        "scalar_minus_gx_ratio": 0.4648804942492658,
+        "scalar_minus_px1_ratio": 0.5334010773395225,
+        "scalar_minus_px2_ratio": -0.006306605250895769,
+        "scalar_minus_p_to_n_floor_drift": -3.0066328516077067e+59,
+        "scalar_minus_defect_displacement_frac": 0.6949864005878701
+      }
+    },
+    {
+      "puzzle": 63,
+      "scalar_position": 0.9500958897872267,
+      "fingerprint": {
+        "x_ratio": 0.398134802636193,
+        "y_ratio": 0.6480184395314483,
+        "pmy_ratio": 0.3519815604685516,
+        "packet_frac": 0.398134802636193,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4314085063485834,
+        "px1_ratio": 0.08805854230807647,
+        "px2_ratio": 0.5138066550557305,
+        "p_to_n_floor_drift": 3.0078092826592617e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5519610871510336,
+        "scalar_minus_y_ratio": 0.30207745025577837,
+        "scalar_minus_pmy_ratio": 0.598114329318675,
+        "scalar_minus_packet_frac": 0.5519610871510336,
+        "scalar_minus_packet_defect_frac": 0.9500958897872267,
+        "scalar_minus_packet_N_frac": 0.9500958897872267,
+        "scalar_minus_packet_B4_frac": 0.9500958897872267,
+        "scalar_minus_gx_ratio": 0.5186873834386433,
+        "scalar_minus_px1_ratio": 0.8620373474791503,
+        "scalar_minus_px2_ratio": 0.43628923473149617,
+        "scalar_minus_p_to_n_floor_drift": -3.0078092826592617e+60,
+        "scalar_minus_defect_displacement_frac": 0.9500958897872267
+      }
+    },
+    {
+      "puzzle": 64,
+      "scalar_position": 0.9298438018605643,
+      "fingerprint": {
+        "x_ratio": 0.06259261195190988,
+        "y_ratio": 0.317012954664977,
+        "pmy_ratio": 0.682987045335023,
+        "packet_frac": 0.06259261195190988,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8549153063713077,
+        "px1_ratio": 0.4733272990555605,
+        "px2_ratio": 0.4640800889925296,
+        "p_to_n_floor_drift": -2.5653545592183737e+58,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.8672511899086544,
+        "scalar_minus_y_ratio": 0.6128308471955872,
+        "scalar_minus_pmy_ratio": 0.2468567565255413,
+        "scalar_minus_packet_frac": 0.8672511899086544,
+        "scalar_minus_packet_defect_frac": 0.9298438018605643,
+        "scalar_minus_packet_N_frac": 0.9298438018605643,
+        "scalar_minus_packet_B4_frac": 0.9298438018605643,
+        "scalar_minus_gx_ratio": 0.07492849548925651,
+        "scalar_minus_px1_ratio": 0.4565165028050038,
+        "scalar_minus_px2_ratio": 0.46576371286803464,
+        "scalar_minus_p_to_n_floor_drift": 2.5653545592183737e+58,
+        "scalar_minus_defect_displacement_frac": 0.9298438018605643
+      }
+    },
+    {
+      "puzzle": 65,
+      "scalar_position": 0.6571150545548307,
+      "fingerprint": {
+        "x_ratio": 0.18800426360542233,
+        "y_ratio": 0.1112706267910551,
+        "pmy_ratio": 0.888729373208945,
+        "packet_frac": 0.18800426360542233,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.3398403510874645,
+        "px1_ratio": 0.7751681236227507,
+        "px2_ratio": 0.03682761277182704,
+        "p_to_n_floor_drift": 4.230212867322548e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.46911079094940833,
+        "scalar_minus_y_ratio": 0.5458444277637755,
+        "scalar_minus_pmy_ratio": -0.2316143186541143,
+        "scalar_minus_packet_frac": 0.46911079094940833,
+        "scalar_minus_packet_defect_frac": 0.6571150545548307,
+        "scalar_minus_packet_N_frac": 0.6571150545548307,
+        "scalar_minus_packet_B4_frac": 0.6571150545548307,
+        "scalar_minus_gx_ratio": 0.31727470346736614,
+        "scalar_minus_px1_ratio": -0.11805306906792001,
+        "scalar_minus_px2_ratio": 0.6202874417830037,
+        "scalar_minus_p_to_n_floor_drift": -4.230212867322548e+59,
+        "scalar_minus_defect_displacement_frac": 0.6571150545548307
+      }
+    },
+    {
+      "puzzle": 66,
+      "scalar_position": 0.2562167438642828,
+      "fingerprint": {
+        "x_ratio": 0.3081473217595188,
+        "y_ratio": 0.4816342539588238,
+        "pmy_ratio": 0.5183657460411761,
+        "packet_frac": 0.3081473217595188,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8704437109321262,
+        "px1_ratio": 0.3283343361554946,
+        "px2_ratio": 0.36351834208498657,
+        "p_to_n_floor_drift": 1.8896615735535258e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.05193057789523603,
+        "scalar_minus_y_ratio": -0.22541751009454103,
+        "scalar_minus_pmy_ratio": -0.26214900217689335,
+        "scalar_minus_packet_frac": -0.05193057789523603,
+        "scalar_minus_packet_defect_frac": 0.2562167438642828,
+        "scalar_minus_packet_N_frac": 0.2562167438642828,
+        "scalar_minus_packet_B4_frac": 0.2562167438642828,
+        "scalar_minus_gx_ratio": -0.6142269670678435,
+        "scalar_minus_px1_ratio": -0.07211759229121184,
+        "scalar_minus_px2_ratio": -0.10730159822070379,
+        "scalar_minus_p_to_n_floor_drift": -1.8896615735535258e+60,
+        "scalar_minus_defect_displacement_frac": 0.2562167438642828
+      }
+    },
+    {
+      "puzzle": 67,
+      "scalar_position": 0.7978368306124277,
+      "fingerprint": {
+        "x_ratio": 0.07081028045384354,
+        "y_ratio": 0.9385865043530683,
+        "pmy_ratio": 0.06141349564693161,
+        "packet_frac": 0.07081028045384354,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.7184738229280673,
+        "px1_ratio": 0.40768926122312393,
+        "px2_ratio": 0.5215004583230325,
+        "p_to_n_floor_drift": -5.526340998753059e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.7270265501585842,
+        "scalar_minus_y_ratio": -0.14074967374064062,
+        "scalar_minus_pmy_ratio": 0.7364233349654961,
+        "scalar_minus_packet_frac": 0.7270265501585842,
+        "scalar_minus_packet_defect_frac": 0.7978368306124277,
+        "scalar_minus_packet_N_frac": 0.7978368306124277,
+        "scalar_minus_packet_B4_frac": 0.7978368306124277,
+        "scalar_minus_gx_ratio": 0.07936300768436044,
+        "scalar_minus_px1_ratio": 0.3901475693893038,
+        "scalar_minus_px2_ratio": 0.2763363722893952,
+        "scalar_minus_p_to_n_floor_drift": 5.526340998753059e+59,
+        "scalar_minus_defect_displacement_frac": 0.7978368306124277
+      }
+    },
+    {
+      "puzzle": 68,
+      "scalar_position": 0.4900886122142066,
+      "fingerprint": {
+        "x_ratio": 0.12451452702591659,
+        "y_ratio": 0.9391536886226987,
+        "pmy_ratio": 0.06084631137730131,
+        "packet_frac": 0.12451452702591659,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.3242230219055658,
+        "px1_ratio": 0.7362962412557686,
+        "px2_ratio": 0.13918923171831474,
+        "p_to_n_floor_drift": 5.582087351189735e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.36557408518829,
+        "scalar_minus_y_ratio": -0.4490650764084921,
+        "scalar_minus_pmy_ratio": 0.4292423008369053,
+        "scalar_minus_packet_frac": 0.36557408518829,
+        "scalar_minus_packet_defect_frac": 0.4900886122142066,
+        "scalar_minus_packet_N_frac": 0.4900886122142066,
+        "scalar_minus_packet_B4_frac": 0.4900886122142066,
+        "scalar_minus_gx_ratio": 0.1658655903086408,
+        "scalar_minus_px1_ratio": -0.24620762904156207,
+        "scalar_minus_px2_ratio": 0.35089938049589187,
+        "scalar_minus_p_to_n_floor_drift": -5.582087351189735e+59,
+        "scalar_minus_defect_displacement_frac": 0.4900886122142066
+      }
+    },
+    {
+      "puzzle": 69,
+      "scalar_position": 0.007205156139362788,
+      "fingerprint": {
+        "x_ratio": 0.29558836221150325,
+        "y_ratio": 0.8234078740117645,
+        "pmy_ratio": 0.17659212598823545,
+        "packet_frac": 0.29558836221150325,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.10170249115672798,
+        "px1_ratio": 0.2825844074924205,
+        "px2_ratio": 0.4218272302960762,
+        "p_to_n_floor_drift": -3.1190797445382793e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.28838320607214046,
+        "scalar_minus_y_ratio": -0.8162027178724017,
+        "scalar_minus_pmy_ratio": -0.16938696984887266,
+        "scalar_minus_packet_frac": -0.28838320607214046,
+        "scalar_minus_packet_defect_frac": 0.007205156139362788,
+        "scalar_minus_packet_N_frac": 0.007205156139362788,
+        "scalar_minus_packet_B4_frac": 0.007205156139362788,
+        "scalar_minus_gx_ratio": -0.0944973350173652,
+        "scalar_minus_px1_ratio": -0.2753792513530577,
+        "scalar_minus_px2_ratio": -0.4146220741567134,
+        "scalar_minus_p_to_n_floor_drift": 3.1190797445382793e+60,
+        "scalar_minus_defect_displacement_frac": 0.007205156139362788
+      }
+    },
+    {
+      "puzzle": 70,
+      "scalar_position": 0.6439841804320401,
+      "fingerprint": {
+        "x_ratio": 0.5660181069623149,
+        "y_ratio": 0.8406009120963275,
+        "pmy_ratio": 0.15939908790367258,
+        "packet_frac": 0.5660181069623149,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.30653099882005663,
+        "px1_ratio": 0.1987297988566728,
+        "px2_ratio": 0.23525209418101223,
+        "p_to_n_floor_drift": -5.748159423722616e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.07796607346972517,
+        "scalar_minus_y_ratio": -0.1966167316642874,
+        "scalar_minus_pmy_ratio": 0.4845850925283675,
+        "scalar_minus_packet_frac": 0.07796607346972517,
+        "scalar_minus_packet_defect_frac": 0.6439841804320401,
+        "scalar_minus_packet_N_frac": 0.6439841804320401,
+        "scalar_minus_packet_B4_frac": 0.6439841804320401,
+        "scalar_minus_gx_ratio": 0.33745318161198345,
+        "scalar_minus_px1_ratio": 0.4452543815753673,
+        "scalar_minus_px2_ratio": 0.40873208625102786,
+        "scalar_minus_p_to_n_floor_drift": 5.748159423722616e+60,
+        "scalar_minus_defect_displacement_frac": 0.6439841804320401
+      }
+    },
+    {
+      "puzzle": 75,
+      "scalar_position": 0.19316889756160655,
+      "fingerprint": {
+        "x_ratio": 0.4469503944503622,
+        "y_ratio": 0.6057921756064638,
+        "pmy_ratio": 0.3942078243935362,
+        "packet_frac": 0.4469503944503622,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.27408781987303243,
+        "px1_ratio": 0.09437194433341135,
+        "px2_ratio": 0.45867766121622644,
+        "p_to_n_floor_drift": 1.16423447940603e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.2537814968887557,
+        "scalar_minus_y_ratio": -0.41262327804485727,
+        "scalar_minus_pmy_ratio": -0.20103892683192964,
+        "scalar_minus_packet_frac": -0.2537814968887557,
+        "scalar_minus_packet_defect_frac": 0.19316889756160655,
+        "scalar_minus_packet_N_frac": 0.19316889756160655,
+        "scalar_minus_packet_B4_frac": 0.19316889756160655,
+        "scalar_minus_gx_ratio": -0.08091892231142589,
+        "scalar_minus_px1_ratio": 0.09879695322819519,
+        "scalar_minus_px2_ratio": -0.2655087636546199,
+        "scalar_minus_p_to_n_floor_drift": -1.16423447940603e+60,
+        "scalar_minus_defect_displacement_frac": 0.19316889756160655
+      }
+    },
+    {
+      "puzzle": 80,
+      "scalar_position": 0.8289294721848898,
+      "fingerprint": {
+        "x_ratio": 0.49246555373411544,
+        "y_ratio": 0.6157769502735753,
+        "pmy_ratio": 0.3842230497264247,
+        "packet_frac": 0.49246555373411544,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.26796528245616824,
+        "px1_ratio": 0.7154024307268343,
+        "px2_ratio": 0.7921320155390503,
+        "p_to_n_floor_drift": -2.397688853943757e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.33646391845077434,
+        "scalar_minus_y_ratio": 0.2131525219113145,
+        "scalar_minus_pmy_ratio": 0.4447064224584651,
+        "scalar_minus_packet_frac": 0.33646391845077434,
+        "scalar_minus_packet_defect_frac": 0.8289294721848898,
+        "scalar_minus_packet_N_frac": 0.8289294721848898,
+        "scalar_minus_packet_B4_frac": 0.8289294721848898,
+        "scalar_minus_gx_ratio": 0.5609641897287215,
+        "scalar_minus_px1_ratio": 0.11352704145805548,
+        "scalar_minus_px2_ratio": 0.036797456645839444,
+        "scalar_minus_p_to_n_floor_drift": 2.397688853943757e+60,
+        "scalar_minus_defect_displacement_frac": 0.8289294721848898
+      }
+    },
+    {
+      "puzzle": 85,
+      "scalar_position": 0.09034376966231544,
+      "fingerprint": {
+        "x_ratio": 0.16315217556243333,
+        "y_ratio": 0.945270318574696,
+        "pmy_ratio": 0.05472968142530404,
+        "packet_frac": 0.16315217556243333,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5324684771941088,
+        "px1_ratio": 0.19240244547883417,
+        "px2_ratio": 0.6444453789587324,
+        "p_to_n_floor_drift": -1.0494262859530625e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.07280840590011789,
+        "scalar_minus_y_ratio": -0.8549265489123805,
+        "scalar_minus_pmy_ratio": 0.035614088237011406,
+        "scalar_minus_packet_frac": -0.07280840590011789,
+        "scalar_minus_packet_defect_frac": 0.09034376966231544,
+        "scalar_minus_packet_N_frac": 0.09034376966231544,
+        "scalar_minus_packet_B4_frac": 0.09034376966231544,
+        "scalar_minus_gx_ratio": -0.4421247075317934,
+        "scalar_minus_px1_ratio": -0.10205867581651873,
+        "scalar_minus_px2_ratio": -0.554101609296417,
+        "scalar_minus_p_to_n_floor_drift": 1.0494262859530625e+59,
+        "scalar_minus_defect_displacement_frac": 0.09034376966231544
+      }
+    },
+    {
+      "puzzle": 90,
+      "scalar_position": 0.4023493269008403,
+      "fingerprint": {
+        "x_ratio": 0.3602407935292755,
+        "y_ratio": 0.6573698474087832,
+        "pmy_ratio": 0.34263015259121676,
+        "packet_frac": 0.3602407935292755,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.17875468831357297,
+        "px1_ratio": 0.35116578944900206,
+        "px2_ratio": 0.2885934170217225,
+        "p_to_n_floor_drift": 2.346728012875456e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.04210853337156478,
+        "scalar_minus_y_ratio": -0.25502052050794294,
+        "scalar_minus_pmy_ratio": 0.059719174309623535,
+        "scalar_minus_packet_frac": 0.04210853337156478,
+        "scalar_minus_packet_defect_frac": 0.4023493269008403,
+        "scalar_minus_packet_N_frac": 0.4023493269008403,
+        "scalar_minus_packet_B4_frac": 0.4023493269008403,
+        "scalar_minus_gx_ratio": 0.22359463858726733,
+        "scalar_minus_px1_ratio": 0.051183537451838235,
+        "scalar_minus_px2_ratio": 0.11375590987911782,
+        "scalar_minus_p_to_n_floor_drift": -2.346728012875456e+60,
+        "scalar_minus_defect_displacement_frac": 0.4023493269008403
+      }
+    },
+    {
+      "puzzle": 95,
+      "scalar_position": 0.2887251778456132,
+      "fingerprint": {
+        "x_ratio": 0.587804378438661,
+        "y_ratio": 0.6158666982214634,
+        "pmy_ratio": 0.3841333017785365,
+        "packet_frac": 0.587804378438661,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.4483532078838678,
+        "px1_ratio": 0.41221682780615954,
+        "px2_ratio": 0.9999787937551796,
+        "p_to_n_floor_drift": 6.223216700940002e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.29907920059304777,
+        "scalar_minus_y_ratio": -0.32714152037585026,
+        "scalar_minus_pmy_ratio": -0.0954081239329233,
+        "scalar_minus_packet_frac": -0.29907920059304777,
+        "scalar_minus_packet_defect_frac": 0.2887251778456132,
+        "scalar_minus_packet_N_frac": 0.2887251778456132,
+        "scalar_minus_packet_B4_frac": 0.2887251778456132,
+        "scalar_minus_gx_ratio": -0.1596280300382546,
+        "scalar_minus_px1_ratio": -0.12349164996054635,
+        "scalar_minus_px2_ratio": -0.7112536159095664,
+        "scalar_minus_p_to_n_floor_drift": -6.223216700940002e+60,
+        "scalar_minus_defect_displacement_frac": 0.2887251778456132
+      }
+    },
+    {
+      "puzzle": 100,
+      "scalar_position": 0.36981157668053144,
+      "fingerprint": {
+        "x_ratio": 0.8204077035772421,
+        "y_ratio": 0.5286465735965841,
+        "pmy_ratio": 0.47135342640341593,
+        "packet_frac": 0.8204077035772421,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.880226223534453,
+        "px1_ratio": 0.539864170495388,
+        "px2_ratio": 0.6397281259273698,
+        "p_to_n_floor_drift": -4.90429903750874e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.4505961268967107,
+        "scalar_minus_y_ratio": -0.15883499691605263,
+        "scalar_minus_pmy_ratio": -0.10154184972288449,
+        "scalar_minus_packet_frac": -0.4505961268967107,
+        "scalar_minus_packet_defect_frac": 0.36981157668053144,
+        "scalar_minus_packet_N_frac": 0.36981157668053144,
+        "scalar_minus_packet_B4_frac": 0.36981157668053144,
+        "scalar_minus_gx_ratio": -0.5104146468539216,
+        "scalar_minus_px1_ratio": -0.1700525938148566,
+        "scalar_minus_px2_ratio": -0.2699165492468384,
+        "scalar_minus_p_to_n_floor_drift": 4.90429903750874e+60,
+        "scalar_minus_defect_displacement_frac": 0.36981157668053144
+      }
+    },
+    {
+      "puzzle": 105,
+      "scalar_position": 0.43391395367944174,
+      "fingerprint": {
+        "x_ratio": 0.7381562312366322,
+        "y_ratio": 0.9803657421768005,
+        "pmy_ratio": 0.019634257823199466,
+        "packet_frac": 0.7381562312366322,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5210440472298672,
+        "px1_ratio": 0.8291320974585141,
+        "px2_ratio": 0.4327116713048537,
+        "p_to_n_floor_drift": 3.375986850689771e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.30424227755719047,
+        "scalar_minus_y_ratio": -0.5464517884973588,
+        "scalar_minus_pmy_ratio": 0.4142796958562423,
+        "scalar_minus_packet_frac": -0.30424227755719047,
+        "scalar_minus_packet_defect_frac": 0.43391395367944174,
+        "scalar_minus_packet_N_frac": 0.43391395367944174,
+        "scalar_minus_packet_B4_frac": 0.43391395367944174,
+        "scalar_minus_gx_ratio": -0.08713009355042545,
+        "scalar_minus_px1_ratio": -0.3952181437790724,
+        "scalar_minus_px2_ratio": 0.0012022823745880262,
+        "scalar_minus_p_to_n_floor_drift": -3.375986850689771e+60,
+        "scalar_minus_defect_displacement_frac": 0.43391395367944174
+      }
+    },
+    {
+      "puzzle": 110,
+      "scalar_position": 0.6797900857488876,
+      "fingerprint": {
+        "x_ratio": 0.037466743341644106,
+        "y_ratio": 0.988535346478827,
+        "pmy_ratio": 0.011464653521173037,
+        "packet_frac": 0.037466743341644106,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.5545917148992268,
+        "px1_ratio": 0.6999627579212279,
+        "px2_ratio": 0.262570498737128,
+        "p_to_n_floor_drift": -3.988060642576917e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.6423233424072434,
+        "scalar_minus_y_ratio": -0.30874526072993946,
+        "scalar_minus_pmy_ratio": 0.6683254322277146,
+        "scalar_minus_packet_frac": 0.6423233424072434,
+        "scalar_minus_packet_defect_frac": 0.6797900857488876,
+        "scalar_minus_packet_N_frac": 0.6797900857488876,
+        "scalar_minus_packet_B4_frac": 0.6797900857488876,
+        "scalar_minus_gx_ratio": 0.1251983708496608,
+        "scalar_minus_px1_ratio": -0.02017267217234031,
+        "scalar_minus_px2_ratio": 0.41721958701175954,
+        "scalar_minus_p_to_n_floor_drift": 3.988060642576917e+59,
+        "scalar_minus_defect_displacement_frac": 0.6797900857488876
+      }
+    },
+    {
+      "puzzle": 115,
+      "scalar_position": 0.5149424275913058,
+      "fingerprint": {
+        "x_ratio": 0.28447077801097465,
+        "y_ratio": 0.40210653379195804,
+        "pmy_ratio": 0.597893466208042,
+        "packet_frac": 0.28447077801097465,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.8244010992704449,
+        "px1_ratio": 0.8791553525353577,
+        "px2_ratio": 0.8363738694536677,
+        "p_to_n_floor_drift": -1.8316825814244775e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.23047164958033117,
+        "scalar_minus_y_ratio": 0.11283589379934778,
+        "scalar_minus_pmy_ratio": -0.08295103861673614,
+        "scalar_minus_packet_frac": 0.23047164958033117,
+        "scalar_minus_packet_defect_frac": 0.5149424275913058,
+        "scalar_minus_packet_N_frac": 0.5149424275913058,
+        "scalar_minus_packet_B4_frac": 0.5149424275913058,
+        "scalar_minus_gx_ratio": -0.3094586716791391,
+        "scalar_minus_px1_ratio": -0.3642129249440519,
+        "scalar_minus_px2_ratio": -0.32143144186236183,
+        "scalar_minus_p_to_n_floor_drift": 1.8316825814244775e+60,
+        "scalar_minus_defect_displacement_frac": 0.5149424275913058
+      }
+    },
+    {
+      "puzzle": 120,
+      "scalar_position": 0.38327435738080934,
+      "fingerprint": {
+        "x_ratio": 0.8074767433243983,
+        "y_ratio": 0.8316448017152284,
+        "pmy_ratio": 0.1683551982847716,
+        "packet_frac": 0.8074767433243983,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.844439309104336,
+        "px1_ratio": 0.08016739813212449,
+        "px2_ratio": 0.11235585854347718,
+        "p_to_n_floor_drift": 1.6629164180203582e+60,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": -0.424202385943589,
+        "scalar_minus_y_ratio": -0.448370444334419,
+        "scalar_minus_pmy_ratio": 0.21491915909603773,
+        "scalar_minus_packet_frac": -0.424202385943589,
+        "scalar_minus_packet_defect_frac": 0.38327435738080934,
+        "scalar_minus_packet_N_frac": 0.38327435738080934,
+        "scalar_minus_packet_B4_frac": 0.38327435738080934,
+        "scalar_minus_gx_ratio": -0.4611649517235266,
+        "scalar_minus_px1_ratio": 0.30310695924868486,
+        "scalar_minus_px2_ratio": 0.27091849883733216,
+        "scalar_minus_p_to_n_floor_drift": -1.6629164180203582e+60,
+        "scalar_minus_defect_displacement_frac": 0.38327435738080934
+      }
+    },
+    {
+      "puzzle": 125,
+      "scalar_position": 0.7703203399424013,
+      "fingerprint": {
+        "x_ratio": 0.2009371931472304,
+        "y_ratio": 0.16449262439860302,
+        "pmy_ratio": 0.835507375601397,
+        "packet_frac": 0.2009371931472304,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.018187894926388715,
+        "px1_ratio": 0.001124030239423335,
+        "px2_ratio": 0.7979387766133462,
+        "p_to_n_floor_drift": -3.618936446061821e+59,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.5693831467951709,
+        "scalar_minus_y_ratio": 0.6058277155437983,
+        "scalar_minus_pmy_ratio": -0.06518703565899564,
+        "scalar_minus_packet_frac": 0.5693831467951709,
+        "scalar_minus_packet_defect_frac": 0.7703203399424013,
+        "scalar_minus_packet_N_frac": 0.7703203399424013,
+        "scalar_minus_packet_B4_frac": 0.7703203399424013,
+        "scalar_minus_gx_ratio": 0.7521324450160126,
+        "scalar_minus_px1_ratio": 0.769196309702978,
+        "scalar_minus_px2_ratio": -0.02761843667094488,
+        "scalar_minus_p_to_n_floor_drift": 3.618936446061821e+59,
+        "scalar_minus_defect_displacement_frac": 0.7703203399424013
+      }
+    },
+    {
+      "puzzle": 130,
+      "scalar_position": 0.6219970416656685,
+      "fingerprint": {
+        "x_ratio": 0.38764561683653503,
+        "y_ratio": 0.31065931991785495,
+        "pmy_ratio": 0.689340680082145,
+        "packet_frac": 0.38764561683653503,
+        "packet_defect_frac": 0.0,
+        "packet_N_frac": 0.0,
+        "packet_B4_frac": 0.0,
+        "gx_ratio": 0.23282271306438163,
+        "px1_ratio": 0.955645896987844,
+        "px2_ratio": 0.656708486175621,
+        "p_to_n_floor_drift": -1.1130512898108388e+58,
+        "defect_displacement_frac": 0.0
+      },
+      "residuals": {
+        "scalar_minus_x_ratio": 0.23435142482913346,
+        "scalar_minus_y_ratio": 0.31133772174781355,
+        "scalar_minus_pmy_ratio": -0.0673436384164765,
+        "scalar_minus_packet_frac": 0.23435142482913346,
+        "scalar_minus_packet_defect_frac": 0.6219970416656685,
+        "scalar_minus_packet_N_frac": 0.6219970416656685,
+        "scalar_minus_packet_B4_frac": 0.6219970416656685,
+        "scalar_minus_gx_ratio": 0.38917432860128687,
+        "scalar_minus_px1_ratio": -0.3336488553221755,
+        "scalar_minus_px2_ratio": -0.03471144450995256,
+        "scalar_minus_p_to_n_floor_drift": 1.1130512898108388e+58,
+        "scalar_minus_defect_displacement_frac": 0.6219970416656685
+      }
+    }
+  ],
+  "ruling": "Direct projection is false. Ask whether signals order/scaffold scalar tendencies via rank/residual/neighbors."
+}

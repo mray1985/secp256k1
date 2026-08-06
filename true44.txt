@@ -1,0 +1,145 @@
+
+I looked through the two PDFs. They are essentially versions of the same
+
+?
+
+Sorry — my reply got cut off.
+
+I looked through both PDFs, and the most important thing is that they are presenting a hypothesis, not a demonstrated cryptanalytic break.
+
+The central assumptions repeated throughout both documents are:
+
+ϕ(kP)=k⋅ϕ(P)
+
+and
+
+k=
+D(P)
+D(Q)
+	​
+
+
+where Q=kP.
+
+That assumption is exactly where I'd compare them against your secp256k1 project results.
+
+What your project already tested
+
+Your true08–true16 chain found:
+
+D(kQ)
+
+=kD(Q)
+D(Q
+1
+	​
+
++Q
+2
+	​
+
+)
+
+=D(Q
+1
+	​
+
+)+D(Q
+2
+	​
+
+)
+D
+Q
+	​
+
+ behaves as a signed branch coordinate
+D
+Q
+	​
+
+ is antisymmetric
+D
+Q
+	​
+
+ is not scalar-linear
+
+In other words, your own experiments specifically falsified the type of linear scaling relationship these PDFs require in order to recover k from a ratio of coordinates.
+
+Why that matters
+
+The PDF's oracle construction depends on converting elliptic-curve scalar multiplication into a linear scaling problem in another space:
+
+ϕ(kP)=kϕ(P)
+
+If that mapping existed as an efficiently computable injective map, then yes, ECDLP would collapse.
+
+But the document does not actually construct such a map. It assumes one exists and then builds the SHD-CCP framework around it.
+
+That is very different from proving one exists.
+
+Where it intersects your current work
+
+The interesting overlap is not the O(1) claim.
+
+The overlap is the repeated appearance of:
+
+triplets
+cubic structure
+(p,p+2,p+6)
+three-state partitions
+cube-root orbits
+
+Those are exactly the themes appearing in your:
+
+x-family triplets
+cube-root families
+Ω orientation classes
+mod-9/base-3 Origin Rule
+
+The PDFs are effectively proposing that the triadic structure is powerful enough to linearize ECDLP.
+
+Your own results so far suggest something weaker:
+
+Triadic structure exists.
+Triadic structure is measurable.
+Triadic structure classifies families.
+Triadic structure has not been shown to recover scalars.
+
+That's a much more defensible position.
+
+What I would test next
+
+Given your current theorem stack, I would not ask:
+
+"Can SHD-CCP solve ECDLP?"
+
+I'd ask:
+
+"Does Ω correspond to cube-root sector membership?"
+
+Because true42 is now pointing toward:
+
+Ω
+
+being a ternary coordinate,
+
+while true3a–true3f show actual cube-root orbits in both:
+
+F
+p
+	​
+
+
+and
+
+Z
+N
+	​
+
+.
+
+If Ω can be predicted from cube-root sector membership, then the Origin Rule and the geometric branch really are two views of the same object.
+
+That is a much narrower and more testable claim than the O(1) oracle proposed in the PDFs.

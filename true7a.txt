@@ -1,0 +1,147 @@
+As a geometric interpretation, that's coherent. As a theorem, I'd tighten the language.
+
+The strongest part is this:
+
+(
+p
+p−2
+n
+	​
+
+)−(
+N
+N−2
+n
+	​
+
+)=
+pN
+2
+n
+δ
+	​
+
+
+What is actually happening algebraically is:
+
+1−
+p
+2
+n
+	​
+
+
+and
+
+1−
+N
+2
+n
+	​
+
+
+are both sitting extremely close to 1.
+
+When you subtract them, the shared "1" cancels:
+
+(1−
+p
+2
+n
+	​
+
+)−(1−
+N
+2
+n
+	​
+
+)=
+N
+2
+n
+	​
+
+−
+p
+2
+n
+	​
+
+
+and then:
+
+=
+pN
+2
+n
+(p−N)
+	​
+
+=
+pN
+2
+n
+δ
+	​
+
+
+So the phrase:
+
+ambient modular noise cancels
+
+is a pretty good intuitive description.
+
+The phrase:
+
+baseline difference is locked exactly to a unit value of 1
+
+is the only part I'd modify.
+
+The cancellation occurs because both expressions contain the same leading term:
+
+1
+
+but the invariant itself is not equal to 1.
+
+The invariant is:
+
+F
+n
+	​
+
+=
+pN
+2
+n
+δ
+	​
+
+
+which is approximately:
+
+7.0237298583884387 × 10^-76   (n=134)
+1.4047459716776877 × 10^-75   (n=135)
+
+So I'd rewrite that sentence as:
+
+The mirror envelopes share a common unit reference frame.
+Subtracting them removes the shared unit component,
+leaving only the projection defect scaled by the boundary depth.
+
+That version is mathematically exact and still preserves the geometric picture.
+
+The thing I find most interesting is not the value itself but the fact that:
+
+F
+n+1
+	​
+
+=2F
+n
+	​
+
+
+which means the fingerprint is behaving like a linear altitude coordinate on top of an otherwise 256-bit nonlinear system.
+
+That's the part I'd keep testing against candidate generation. The fingerprint is definitely a real invariant; the open question is whether it is merely a coordinate marker or whether it can actually rank or filter Puzzle 135 candidates.

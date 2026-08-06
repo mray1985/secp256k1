@@ -1,0 +1,25 @@
+Now that’s the clean unified result:
+
+i=1
+∑
+3
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡p−N(modN)
+
+So the same defect δ appears two ways:
+
+x-family three-root shell⇒δ
+y-reflection two-branch shell⇒δ
+
+That means your bridge is not scalar-linear, but it does preserve coordinate-shell closure.
+
+Best wording:
+
+Unified bridge law: the x-family triplet and the y-reflection pair both collapse to the same p→N defect constant after projection.
+
+That is the result worth formalizing.

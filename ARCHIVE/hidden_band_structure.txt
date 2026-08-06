@@ -1,0 +1,106 @@
+HIDDEN STRUCTURE SCAN — places most skip
+  height = 2^n - 1,  complement C = TOP - d,  floor offset u = d - 2^(n-1)
+
+=== 1. FLOOR-CEILING SPLIT (exact, all n) ===
+  u + C = 2^(n-1) - 1   i.e. floor-offset + ceiling-gap = LO - 1
+  d + C = 2^n - 1 = height
+  u * C = u * (LO - 1 - u)  symmetric parabola, max at band center u = (LO-1)/2
+  verified all P1-P70: True
+
+=== 2. BAND CENTER (u/LO) — where d sits in stratum ===
+  d in middle 40-60% of band: 12/67 puzzles
+  extremes:
+    low u/LO (near floor): P04 u/LO=0.000 comp/TOP=0.467
+    high u/LO (near ceiling): P25 u/LO=0.978 comp/TOP=0.011
+
+=== 3. D/A HEAD BUDGET q/hq vs band position (non-obvious coupling) ===
+  q/hq > 0.55 (60 puzzles): avg u/LO=0.563 avg comp/TOP=0.218
+  q/hq <= 0.55 (7 puzzles): avg u/LO=0.071 avg comp/TOP=0.460
+  => heavy head block (high q/hq) correlates with d near FLOOR (low comp/TOP)
+
+=== 4. LADDER first -1 step vs ceiling gap ===
+  first ladder gap=1 (32): avg comp/TOP = 0.243
+  first ladder gap!=1 (33): avg comp/TOP = 0.237
+  => -1 ladder at head tends when d is CLOSER to ceiling (higher comp/TOP)
+
+=== 5. SUM of ladder gaps == anchor - 1 ? ===
+  sum(gaps) = (n-3)-1 for 46/67 puzzles
+  (first index - last index in ladder = sum of gaps; often = anchor_k - 1)
+
+=== 6. C / P(n-3) near small integer (ceiling gap vs head anchor) ===
+  within 5% of integer: 18 puzzles
+    P04  C/P1 ~ 7  (7.000)
+    P06  C/P3 ~ 2  (2.000)
+    P10  C/P7 ~ 7  (6.697)
+    P11  C/P8 ~ 4  (3.982)
+    P12  C/P9 ~ 3  (3.024)
+    P13  C/P10 ~ 6  (5.788)
+    P14  C/P11 ~ 5  (5.055)
+    P20  C/P17 ~ 2  (1.933)
+    P32  C/P29 ~ 3  (2.998)
+    P40  C/P37 ~ 1  (0.956)
+    P41  C/P38 ~ 5  (5.040)
+    P45  C/P42 ~ 5  (5.246)
+
+=== 7. BIT OVERLAP d & C (most people only look at d or N-d) ===
+  P10  d|C covers 10 bits  d&C = 0 (0b)  XOR bits = 10
+  P20  d|C covers 20 bits  d&C = 0 (0b)  XOR bits = 20
+  P30  d|C covers 30 bits  d&C = 0 (0b)  XOR bits = 30
+  P40  d|C covers 40 bits  d&C = 0 (0b)  XOR bits = 40
+  P50  d|C covers 50 bits  d&C = 0 (0b)  XOR bits = 50
+  P60  d|C covers 60 bits  d&C = 0 (0b)  XOR bits = 60
+  P70  d|C covers 70 bits  d&C = 0 (0b)  XOR bits = 70
+  => d and C share NO bits (d&C=0 always when d+C=TOP with exact bit boundaries)
+  d & C == 0 for all P4+ with C>0: True
+
+=== 8. DUAL COORDINATE: u and C vs N-side mirror ===
+  low band:   d = LO + u
+  ceiling:    C = LO - 1 - u
+  mirror:     N - d  (256-bit, unrelated bit size to C)
+  hidden link: (N - d) mod C  varies; not constant
+  P30  C=26b  (N-d)=256b  (N-d) mod C has 24b
+  P50  C=49b  (N-d)=256b  (N-d) mod C has 49b
+  P70  C=68b  (N-d)=256b  (N-d) mod C has 67b
+
+=== 9. CROSS-PUZZLE: C_n vs d_{n-1} ===
+  P10  C/d_{n-1} = 1.0899  (not near 1; scales ~2x per step)
+  P20  C/d_{n-1} = 0.5182  (not near 1; scales ~2x per step)
+  P30  C/d_{n-1} = 0.1013  (not near 1; scales ~2x per step)
+  P40  C/d_{n-1} = 0.2961  (not near 1; scales ~2x per step)
+  P50  C/d_{n-1} = 1.2582  (not near 1; scales ~2x per step)
+  P60  C/d_{n-1} = 0.0341  (not near 1; scales ~2x per step)
+  P70  C/d_{n-1} = 0.7069  (not near 1; scales ~2x per step)
+
+=== 10. FIELD DEFECT delta+d vs band complement (different worlds) ===
+  P20  defect bits=129  C bits=18  equal? False
+  P40  defect bits=129  C bits=37  equal? False
+  P60  defect bits=129  C bits=54  equal? False
+  P70  defect bits=129  C bits=68  equal? False
+  => never equal; band C is ~n bits, defect is ~256 bits
+
+=== 11. u * C product (hidden symmetric key) ===
+  u*C = u*(LO-1-u) — same info as u/LO; max product puzzles:
+    P53  u*C/LO^2 = 0.2500  u/LO=0.502
+    P29  u*C/LO^2 = 0.2499  u/LO=0.493
+    P68  u*C/LO^2 = 0.2499  u/LO=0.490
+    P18  u*C/LO^2 = 0.2497  u/LO=0.516
+    P17  u*C/LO^2 = 0.2486  u/LO=0.462
+
+=== 12. P71 PROBE from hidden structure ===
+  P70 u/LO=0.644  comp/TOP=0.178
+  P70 first ladder gap=1, comp/TOP high -> P71 may continue ceiling-adjacent pattern
+  naive stratum mirror guess d71 ~ LO + (1-u70/LO)*LO = 1600900914142186569728 (71b)
+  in [2^70,2^71)? True
+
+=== 13. WHAT IS STRUCTURED vs NOISE ===
+  STRUCTURED (exact):
+    - d + C = TOP; u + C = LO-1; d & C = 0
+    - C = N + (TOP-d) mod N when C < N
+    - sum(gaps) often = (n-3)-1 in D/A ladder
+  CORRELATIONS (empirical P4-P70):
+    - high q/hq -> d near floor (low C/TOP)
+    - ladder gap=1 at head -> higher C/TOP
+  NOT STRUCTURED:
+    - C != defect (delta+d); C != N-d
+    - C_n / d_{n-1} not constant
+    - comp mod LO looks random

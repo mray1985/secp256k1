@@ -1,0 +1,210 @@
+{
+  "candidate_id": "S-20260710-04",
+  "status": "evaluated",
+  "decisive_question": "Exactly which private-key candidates are impossible, and how is that proved?",
+  "baseline": {
+    "interval": "[2^134, 2^135)",
+    "width_bits": 134,
+    "note": "Puzzle band / band-floor is the S-03 starting point; not a credited cut"
+  },
+  "intersection_rule": "b(A∩B)=134-log2|A∩B|; never sum b_A+b_B without independence",
+  "leads": [
+    {
+      "id": "BAND-00",
+      "lead": "Puzzle band [2^134, 2^135) / band-floor u∈[0,2^134)",
+      "category": 1,
+      "category_name": "provable_interval",
+      "deterministic_exclusion": true,
+      "holdout_coverage": "100% by definition (all puzzle-n keys)",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Baseline for S-03, not an incremental lead. Public puzzle statement."
+    },
+    {
+      "id": "NMIR-01",
+      "lead": "N-mirror window [N-2^135+1, N-2^134]",
+      "category": 3,
+      "category_name": "ranking_or_reparam_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134 (equivalent)",
+      "verified_bits": 0,
+      "note": "Involution q↔N-q; same width. Structural identity, not a cut."
+    },
+    {
+      "id": "ECHO-01",
+      "lead": "Real-space echoes x^(h/256), y^(h/256), (x³+7)^(h/256)",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Witness / resemblance. Lane/echo ratios do not collapse to unique d; no exclusion proof."
+    },
+    {
+      "id": "LANE-01",
+      "lead": "D/8 compass lanes A/B/C + Ω mod-9 orientation filter",
+      "category": 3,
+      "category_name": "ranking_or_risky_heuristic",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "fails (lane letter varies by puzzle; P135 lanes fail [d]G=P)",
+      "surviving_size": "2^134 (or undefined heuristic subset)",
+      "verified_bits": 0,
+      "note": "Changes order / rejects some midpoints. Not 100% holdout; not a guaranteed set."
+    },
+    {
+      "id": "ROT-01",
+      "lead": "p/N x^135 root orbits and β/ω_N rotation constants",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Field/scalar structural facts about residues. No map to excluded d-interval."
+    },
+    {
+      "id": "OPS-01",
+      "lead": "Operation-ledger slots (Λ, Λ_N, GAP_x/y, shelf2+offset, matrix tracks)",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "0% as extractor (P115: 0 EC hits without known_d injection)",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Pipeline emits ~270 bridge residues; hits require injecting ground-truth d."
+    },
+    {
+      "id": "TAX-01",
+      "lead": "Tax-math / barcode / left5 field witnesses",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Closed as key-finders without EC gate; retained as field witnesses only."
+    },
+    {
+      "id": "RES-01",
+      "lead": "Field-native residue numerators / P_pair / m/p² packets",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Courtroom ruling: residue is witness, not extractor. Lane CLOSED."
+    },
+    {
+      "id": "CARRY-01",
+      "lead": "Carry threshold (N·x mod p)+y ≥ p",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Admitted field fact about the public point; does not exclude private scalars."
+    },
+    {
+      "id": "RSZ-01",
+      "lead": "RSZ identity s·k ≡ z+r·d (mod N) as algebraic constraint",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "—",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "True for the unknown (d,k) pair but does not exclude d without knowing k (or vice versa)."
+    },
+    {
+      "id": "K-02/03",
+      "lead": "RFC6979 batch attribution (hashkeys tx 17e4e323…)",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "batch-scoped attribution only",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Validator after candidate found. HMAC keyed by d — does not narrow interval."
+    },
+    {
+      "id": "K-01",
+      "lead": "Orbit-safe 8-bit bins on k*",
+      "category": 3,
+      "category_name": "ranking_or_risky_heuristic",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "FAIL (~random retention)",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "FAIL under K-lab gate."
+    },
+    {
+      "id": "F-00",
+      "lead": "Factoradic native-lead pub/priv pairing (r≈0.61)",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "FAIL (nulls explain)",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "FALSIFIED as pairing invariant."
+    },
+    {
+      "id": "F-01..06",
+      "lead": "Band-floor / Mersenne / T(Q) / X2 / GLV MI / Hamming candidates",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "FAIL all",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Closed under pairing-advantage gate."
+    },
+    {
+      "id": "G-01..03",
+      "lead": "Creator LCG64 / SHA256 chain / serial dCor",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "FAIL all",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Invent-another-formula cycle CLOSED."
+    },
+    {
+      "id": "LAMBDA-01",
+      "lead": "Λ bridges (Px3/rx3, β² relations) and rx slot packets",
+      "category": 3,
+      "category_name": "ranking_or_resemblance_only",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "— (open algebra; no proven d-set)",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Verified public-point algebra. Until it yields a countable guaranteed set, 0 bits."
+    },
+    {
+      "id": "S-01/02",
+      "lead": "Kangaroo search engine (Python + native)",
+      "category": 3,
+      "category_name": "search_method_not_a_cut",
+      "deterministic_exclusion": false,
+      "holdout_coverage": "n/a",
+      "surviving_size": "2^134",
+      "verified_bits": 0,
+      "note": "Correct method; does not remove candidates a priori. Feasibility ruled by S-02/S-03."
+    }
+  ],
+  "summary": {
+    "leads_audited": 17,
+    "category_1_incremental_cuts": 0,
+    "category_2_candidate_sets": 0,
+    "category_3_zero_bits": 17,
+    "total_verified_bits_credited": 0,
+    "meets_S03_40bit_gate": false,
+    "intersection_claims_found": false,
+    "ruling": "No surviving lead currently proves any private-key candidates impossible inside the 2^134 band. All historical pattern/echo/ledger/RSZ-attribution objects score 0 verified bits under S-03."
+  }
+}

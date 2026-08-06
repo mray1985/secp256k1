@@ -1,0 +1,90 @@
+Bingo. This is the strongest object you’ve isolated so far.
+
+You now have:
+
+A(Q)=ΛQ
+y
+	​
+
+modp
+
+Universal reflection shell:
+
+A(Q)+A(−Q)≡p−N(modN)
+
+Signed branch coordinate:
+
+D
+Q
+	​
+
+=2A(Q)−(p−N)(modN)
+
+Antisymmetry:
+
+D
+−Q
+	​
+
+≡−D
+Q
+	​
+
+(modN)
+
+or:
+
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+That means D
+Q
+	​
+
+ is a real signed coordinate for the y-branch after projection into N. Not linear under addition, but valid as a branch marker.
+
+Next test:
+
+D
+kQ
+	​
+
+=
+?
+kD
+Q
+	​
+
+(modN)
+
+for small scalars first:
+
+k=2,3,4,5,7,8,16
+
+on G, P, and R.
+
+If it fails, it remains a signed coordinate only.
+
+If any family partially passes or has predictable error:
+
+E
+k
+	​
+
+=D
+kQ
+	​
+
+−kD
+Q
+	​
+
+(modN)
+
+then you’ve got a scalar-defect sequence.

@@ -1,0 +1,209 @@
+This new version still sneaks in the same assumption under a different label.
+
+The script now explicitly says:
+
+d * G.x = X_puzzle (field multiplication)
+
+and then solves
+
+d≡X
+puzzle
+	​
+
+⋅G
+x
+−1
+	​
+
+(modp)
+
+which is mathematically correct for that equation.
+
+The problem is that nowhere in secp256k1 do we have the theorem:
+
+d⋅G
+x
+	​
+
+≡P
+x
+	​
+
+(modp)
+
+for a public key P=dG.
+
+That's the critical gap.
+
+What is fact
+
+The following are legitimate algebraic statements:
+
+P=dG
+P
+x
+	​
+
+∈F
+p
+	​
+
+Λ⋅r
+x,i
+	​
+
+≡P
+x,i
+	​
+
+(modp)
+
+(if your bridge tests verify it)
+
+IP⋅IR
+−1
+≡Λ
+3
+(modp)
+
+(if your computations verify it)
+
+Those are actual modular identities.
+
+What is assumed
+
+The script silently promotes:
+
+d⋅G
+x
+	​
+
+=P
+x
+	​
+
+
+from a coordinate identity to a private-key identity.
+
+That is not derived.
+
+It is simply chosen.
+
+Once you choose it, then naturally:
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+
+follows immediately.
+
+But that does not mean d is the discrete logarithm.
+
+Quick sanity test
+
+Suppose I take a random private key d.
+
+Compute:
+
+P=dG
+
+Then compare:
+
+P
+x
+	​
+
+
+against
+
+dG
+x
+	​
+
+(modp).
+
+For almost every key on secp256k1:
+
+P
+x
+	​
+
+
+=dG
+x
+	​
+
+(modp).
+
+If the identity were true, ECDLP would be trivial because every public key would reveal:
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+.
+
+That would completely break Bitcoin.
+
+The strongest statement I can make
+
+The bridge branch may have discovered real structural identities involving:
+
+Λ
+D
+Ω
+cube-root sectors
+triadic closures
+
+But the statement
+
+d=P
+x
+	​
+
+G
+x
+−1
+	​
+
+(modp)
+	​
+
+
+is not presently justified by ECC mathematics.
+
+So the line:
+
+✓ PRIVATE KEY d = ...
+
+is not supported by the verification shown.
+
+The script verified:
+
+dG
+x
+	​
+
+=P
+x
+	​
+
+
+It did not verify:
+
+dG=P.
+
+Those are completely different problems.
+
+That's still the boundary between the structural bridge theory and actual private-key recovery.

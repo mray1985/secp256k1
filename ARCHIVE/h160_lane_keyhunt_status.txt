@@ -1,0 +1,27 @@
+﻿[2026-06-30 17:08:57] h160 lane monitor started interval=900s
+[2026-06-30 17:08:57] Range: e84818e1bf7f699aa6e28ef9edfb482100000000:e84818e1bf7f699aa6e28ef9edfb582100000000
+[2026-06-30 17:08:57] phase=BLOOM 89% | PID 1196 CPU=3353s WS=7.45GB | bloom=missing
+[2026-06-30 17:23:57] phase=BLOOM 89% | not running | bloom=7.19GB
+[2026-06-30 17:23:57] Bloom ready, restarting search without -S
+[2026-06-30 17:23:57] Starting KeyHunt build_bloom=False
+[2026-06-30 19:53:48] phase=BLOOM 89% | PID 8832 CPU=456s WS=7.44GB | bloom=7.19GB
+[2026-06-30 20:08:59] phase=BLOOM 89% | PID 8832 CPU=874s WS=7.19GB | bloom=7.19GB
+[2026-06-30 20:24:05] phase=BLOOM 89% | PID 8832 CPU=1262s WS=7.19GB | bloom=7.19GB
+[2026-06-30 20:39:10] phase=BLOOM 89% | PID 8832 CPU=1627s WS=7.19GB | bloom=7.19GB
+[2026-06-30 20:54:16] phase=BLOOM 89% | PID 8832 CPU=2060s WS=7.19GB | bloom=7.19GB
+[2026-06-30 21:09:28] phase=BLOOM 89% | PID 8832 CPU=2428s WS=7.19GB | bloom=7.19GB
+[2026-06-30 21:24:36] phase=BLOOM 89% | PID 8832 CPU=2855s WS=7.19GB | bloom=7.19GB
+[2026-06-30 21:39:45] phase=BLOOM 89% | not running | bloom=7.19GB
+[2026-06-30 21:39:52] Bloom ready, restarting search without -S
+[2026-06-30 21:39:52] Starting KeyHunt build_bloom=False
+[2026-06-30 22:12:07] phase=BLOOM 89% | not running | bloom=7.19GB
+[2026-06-30 22:12:16] Bloom ready, restarting search without -S
+[2026-06-30 22:12:16] Starting KeyHunt build_bloom=False
+[2026-07-01 00:18:12] phase=BLOOM 89% | PID 17908 CPU=428s WS=7.45GB | bloom=7.19GB
+[2026-07-01 00:33:21] phase=BLOOM 89% | PID 17908 CPU=1038s WS=7.45GB | bloom=7.19GB
+[2026-07-01 00:48:25] phase=BLOOM 89% | PID 17908 CPU=1602s WS=7.25GB | bloom=7.19GB
+[2026-07-01 01:03:31] phase=BLOOM 89% | PID 17908 CPU=2191s WS=7.22GB | bloom=7.19GB
+[2026-07-01 01:18:37] phase=BLOOM 89% | PID 17908 CPU=2782s WS=7.22GB | bloom=7.19GB
+[2026-07-01 01:33:44] phase=BLOOM 89% | not running | bloom=7.19GB
+[2026-07-01 01:33:56] Bloom ready, restarting search without -S
+[2026-07-01 01:33:56] Starting KeyHunt build_bloom=False

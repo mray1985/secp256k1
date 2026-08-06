@@ -1,0 +1,235 @@
+{
+  "exhibit": "hinge_power_signal_scan",
+  "location": "ARCHIVE/briefcase/misalignments/",
+  "formula": "signal = (v/p) ** ((n-1+HINGE)/256)",
+  "HINGE": 0.5849625007211562,
+  "example_exponents": {
+    "1": 0.0022850097684420164,
+    "65": 0.25228500976844204,
+    "130": 0.506191259768442,
+    "135": 0.525722509768442,
+    "160": 0.623378759768442
+  },
+  "example_P130": 0.506191259768442,
+  "n_solved": 82,
+  "correlations": [
+    {
+      "signal": "Px",
+      "spearman": -0.2799194601820123,
+      "kendall_tau": -0.194335643266044,
+      "abs_spearman": 0.2799194601820123,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Px3",
+      "spearman": -0.2799194601820123,
+      "kendall_tau": -0.194335643266044,
+      "abs_spearman": 0.2799194601820123,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "packet_frac_pow",
+      "spearman": -0.2799194601820123,
+      "kendall_tau": -0.194335643266044,
+      "abs_spearman": 0.2799194601820123,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "x_ratio_pow",
+      "spearman": -0.2799194601820123,
+      "kendall_tau": -0.194335643266044,
+      "abs_spearman": 0.2799194601820123,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Py",
+      "spearman": -0.22596865478047123,
+      "kendall_tau": -0.1599879481771618,
+      "abs_spearman": 0.22596865478047123,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Py_sq",
+      "spearman": -0.19554854158755067,
+      "kendall_tau": -0.14010244049412474,
+      "abs_spearman": 0.19554854158755067,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Px_cubed_plus_7",
+      "spearman": -0.19554854158755067,
+      "kendall_tau": -0.14010244049412474,
+      "abs_spearman": 0.19554854158755067,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Px_sq",
+      "spearman": -0.16814323031035064,
+      "kendall_tau": -0.11720397710153661,
+      "abs_spearman": 0.16814323031035064,
+      "verdict": "WEAK"
+    },
+    {
+      "signal": "Px_pow_minus_Gx_pow",
+      "spearman": 0.12319329561025691,
+      "kendall_tau": 0.0822536908707442,
+      "abs_spearman": 0.12319329561025691,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Px2",
+      "spearman": -0.10457117980593236,
+      "kendall_tau": -0.07743296173546249,
+      "abs_spearman": 0.10457117980593236,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Px1",
+      "spearman": -0.0957988680944855,
+      "kendall_tau": -0.06779150346489907,
+      "abs_spearman": 0.0957988680944855,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "pmy_minus_Gy",
+      "spearman": -0.089323030044472,
+      "kendall_tau": -0.0605604097619765,
+      "abs_spearman": 0.089323030044472,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "p_minus_y",
+      "spearman": 0.04474314323295045,
+      "kendall_tau": 0.026212714673094304,
+      "abs_spearman": 0.04474314323295045,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Px_minus_Gx",
+      "spearman": 0.03406617327149961,
+      "kendall_tau": 0.021994576679722808,
+      "abs_spearman": 0.03406617327149961,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Py_minus_Gy",
+      "spearman": 0.02962559860863321,
+      "kendall_tau": 0.008737571557698103,
+      "abs_spearman": 0.02962559860863321,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Px_times_Gx_inv",
+      "spearman": 0.028711362648631302,
+      "kendall_tau": 0.024404941247363664,
+      "abs_spearman": 0.028711362648631302,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Py_times_Gy_inv",
+      "spearman": -0.022921201568619227,
+      "kendall_tau": -0.020186803253992167,
+      "abs_spearman": 0.022921201568619227,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Px_plus_Gx",
+      "spearman": 0.014225076187172522,
+      "kendall_tau": 0.008737571557698103,
+      "abs_spearman": 0.014225076187172522,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "Py_pow_minus_Gy_pow",
+      "spearman": 0.013702655638600004,
+      "kendall_tau": 0.010545344983428743,
+      "abs_spearman": 0.013702655638600004,
+      "verdict": "REJECT"
+    },
+    {
+      "signal": "defect_frac_pow",
+      "spearman": 0.0,
+      "kendall_tau": 0.0,
+      "abs_spearman": 0.0,
+      "verdict": "REJECT"
+    }
+  ],
+  "P135_exponent": 0.525722509768442,
+  "P135_nearest_neighbors": [
+    {
+      "puzzle": 64,
+      "distance": 0.894378137763385,
+      "scalar_position": 0.9298438018605643,
+      "exponent": 0.248378759768442
+    },
+    {
+      "puzzle": 58,
+      "distance": 0.9001419925733499,
+      "scalar_position": 0.3876168823447197,
+      "exponent": 0.224941259768442
+    },
+    {
+      "puzzle": 53,
+      "distance": 0.919062565948707,
+      "scalar_position": 0.5018395352846268,
+      "exponent": 0.205410009768442
+    },
+    {
+      "puzzle": 115,
+      "distance": 0.9370364959977155,
+      "scalar_position": 0.5149424275913058,
+      "exponent": 0.44759750976844204
+    },
+    {
+      "puzzle": 110,
+      "distance": 0.951826874918428,
+      "scalar_position": 0.6797900857488876,
+      "exponent": 0.42806625976844204
+    },
+    {
+      "puzzle": 67,
+      "distance": 0.9994370073011106,
+      "scalar_position": 0.7978368306124277,
+      "exponent": 0.26009750976844204
+    },
+    {
+      "puzzle": 90,
+      "distance": 1.0393928167927642,
+      "scalar_position": 0.4023493269008403,
+      "exponent": 0.34994125976844204
+    },
+    {
+      "puzzle": 85,
+      "distance": 1.0523366933352285,
+      "scalar_position": 0.09034376966231544,
+      "exponent": 0.33041000976844204
+    },
+    {
+      "puzzle": 68,
+      "distance": 1.0726401657743863,
+      "scalar_position": 0.4900886122142066,
+      "exponent": 0.26400375976844204
+    },
+    {
+      "puzzle": 62,
+      "distance": 1.1485440314150719,
+      "scalar_position": 0.6949864005878701,
+      "exponent": 0.240566259768442
+    }
+  ],
+  "P135_neighbor_cluster_hint": {
+    "mean_scalar_position": 0.5489637672807764,
+    "cluster": "middle_third",
+    "confidence": "weak",
+    "actionable": false
+  },
+  "summary": {
+    "best_signal": "Px",
+    "best_spearman": -0.2799194601820123,
+    "strong": [],
+    "promising": [],
+    "beats_plain_x_ratio": true
+  },
+  "prior_plain_x_ratio_spearman": -0.2738,
+  "ruling": "Hinge-power warps each puzzle's coordinates by its range height in 256-bit space. Use as filter/fingerprint only unless rank correlation is PROMISING+."
+}

@@ -1,0 +1,204 @@
+M      = 0x92886faaf53f90a5c03d6af773a726e75097179306b980e5d28772e612e00fc7
+R      = 0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650
+S      = 0x224a322e81c044d341521f65fabdfa86d84673fb55ed7533862e37f7724931fa
+X (Px) = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+Y (Py) = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+Lambda = 0xd773b315f9871cf943f6f886ad1243bbe9d2130db214dd8ef0504cfedae1049d
+rx3    = 0x397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+
+====================================================================================================
+SECP256K1 COORDINATE RATIO & BRIDGE VERIFICATION
+====================================================================================================
+
+====================================================================================================
+STEP 1: Verify points on secp256k1 curve
+====================================================================================================
+G = (0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798, 0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8)
+  On curve: True
+
+P = (0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16, 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330)
+  On curve: True
+
+R as point on curve:
+  R1 = (0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650, 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c)
+  R1 on curve: True
+  R2 = (0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650, 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3)
+  R2 on curve: True
+
+====================================================================================================
+STEP 2: Verify Lambda * rx3 == X mod p
+====================================================================================================
+Lambda * rx3 mod p = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+X                   = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+Match: True
+
+rx from X (X * Gx^-1 mod N) = 0x1d1196c418d83dc812c5eada430081284a941fb4b1df5cbb2aaa0622ba433f53
+rx3                          = 0x397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+Match: False
+
+====================================================================================================
+STEP 3: Lambda Bridge - Lambda*y + Lambda*(-y) mod N = delta
+====================================================================================================
+
+G:
+  y       = 0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8
+  -y mod p = 0xb7c52588d95c3b9aa25b0403f1eef75702e84bb7597aabe663b82f6f04ef2777
+  lamy     = Lambda * y mod p     = 0xd907513f5a3a0fa59e2e2cc3470d1dbca8b6762c35e05725a1885e33694c8b32
+  lam-y    = Lambda * (-y) mod p   = 0x26f8aec0a5c5f05a61d1d33cb8f2e243574989d3ca1fa8da5e77a1cb96b370fd
+  delta    = (lamy + lam-y) mod N = 0x14551231950b75fc4402da1722fc9baee
+  delta == p-N: True
+
+P:
+  y       = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+  -y mod p = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+  lamy     = Lambda * y mod p     = 0xafd6740fbf3257bd9987ec5325c68aeacc63b05c0dc3913bf3bef9a1e28a12e
+  lam-y    = Lambda * (-y) mod p   = 0xf50298bf040cda842667813acda397515339c4fa3f23c6ec40c41064e1d75b01
+  delta    = (lamy + lam-y) mod N = 0x14551231950b75fc4402da1722fc9baee
+  delta == p-N: True
+
+R1:
+  y       = 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c
+  -y mod p = 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3
+  lamy     = Lambda * y mod p     = 0xdf77b8fc42e4ecb6ab205d3925de398278927bbb781a74865515d6a8445bebe5
+  lam-y    = Lambda * (-y) mod p   = 0x20884703bd1b134954dfa2c6da21c67d876d844487e58b79aaea2956bba4104a
+  delta    = (lamy + lam-y) mod N = 0x14551231950b75fc4402da1722fc9baee
+  delta == p-N: True
+
+R2:
+  y       = 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3
+  -y mod p = 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c
+  lamy     = Lambda * y mod p     = 0x20884703bd1b134954dfa2c6da21c67d876d844487e58b79aaea2956bba4104a
+  lam-y    = Lambda * (-y) mod p   = 0xdf77b8fc42e4ecb6ab205d3925de398278927bbb781a74865515d6a8445bebe5
+  delta    = (lamy + lam-y) mod N = 0x14551231950b75fc4402da1722fc9baee
+  delta == p-N: True
+
+All deltas equal: True
+Common delta: 0x14551231950b75fc4402da1722fc9baee
+p-N: 0x14551231950b75fc4402da1722fc9baee
+Match: True
+
+====================================================================================================
+STEP 4: Reflection Bridge - lambda_y + lambda_{-y} == N or N+-1
+====================================================================================================
+
+G:
+  y             = 0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8
+  -y mod p      = 0xb7c52588d95c3b9aa25b0403f1eef75702e84bb7597aabe663b82f6f04ef2777
+  lambda_y      = floor(N*y/p) mod N = 0x483ada7726a3c4655da4fbfc0e1108a8a14e1869126070ac00fdd43cb6368772
+  lambda_neg_y  = floor(N*(-y)/p) mod N = 0xb7c52588d95c3b9aa25b0403f1eef7561960c47d9ce82f8fbed48a5019ffb9ce
+  sum           = 115792089237316195423570985008687907852837564279074904382605163141518161494336
+  sum == N-1:   True
+  sum == N:     False
+  sum == N+1:   False
+  PASS:         True
+
+P:
+  y             = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+  -y mod p      = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+  lambda_y      = floor(N*y/p) mod N = 0x667a05e9a1bdd6f70142b66558bd12cda9d6389225b674bd1dde4451d9e9f099
+  lambda_neg_y  = floor(N*(-y)/p) mod N = 0x9985fa165e422908febd499aa742ed3110d8a45489922b7ea1f41a3af64c50a7
+  sum           = 115792089237316195423570985008687907852837564279074904382605163141518161494336
+  sum == N-1:   True
+  sum == N:     False
+  sum == N+1:   False
+  PASS:         True
+
+R1:
+  y             = 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c
+  -y mod p      = 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3
+  lambda_y      = floor(N*y/p) mod N = 0x6de98b9482b20dffa5ccbb87548d2dfd1475382113a7402b7bf86a970a826acf
+  lambda_neg_y  = floor(N*(-y)/p) mod N = 0x9216746b7d4df2005a334478ab72d201a639a4c59ba1601043d9f3f5c5b3d671
+  sum           = 115792089237316195423570985008687907852837564279074904382605163141518161494336
+  sum == N-1:   True
+  sum == N:     False
+  sum == N+1:   False
+  PASS:         True
+
+R2:
+  y             = 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3
+  -y mod p      = 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c
+  lambda_y      = floor(N*y/p) mod N = 0x9216746b7d4df2005a334478ab72d201a639a4c59ba1601043d9f3f5c5b3d671
+  lambda_neg_y  = floor(N*(-y)/p) mod N = 0x6de98b9482b20dffa5ccbb87548d2dfd1475382113a7402b7bf86a970a826acf
+  sum           = 115792089237316195423570985008687907852837564279074904382605163141518161494336
+  sum == N-1:   True
+  sum == N:     False
+  sum == N+1:   False
+  PASS:         True
+
+====================================================================================================
+STEP 5: Power Structure Bridge - lambda_x^3 + C == lambda_y^2 mod N
+====================================================================================================
+
+G:
+  lambda_x = 0x79be667ef9dcbbac55a06295ce870b0667e6aecc7a6dcc82ac516cab63e1bb36
+  lambda_y = 0x483ada7726a3c4655da4fbfc0e1108a8a14e1869126070ac00fdd43cb6368772
+  C=7: FAIL
+  C=7*N//p: FAIL
+  C=p-N: FAIL
+  C=0: FAIL
+
+P:
+  lambda_x = 0x145d2611c823a396ef6712ce0f712f099fd43d7affcfa07a64b9a48a6d068d6b
+  lambda_y = 0x667a05e9a1bdd6f70142b66558bd12cda9d6389225b674bd1dde4451d9e9f099
+  C=7: FAIL
+  C=7*N//p: FAIL
+  C=p-N: FAIL
+  C=0: FAIL
+
+R1:
+  lambda_x = 0xc86bec9faea4892fd98d718bdfc770cfd26bb464d2f0ca2eed59f60652147d14
+  lambda_y = 0x6de98b9482b20dffa5ccbb87548d2dfd1475382113a7402b7bf86a970a826acf
+  C=7: FAIL
+  C=7*N//p: FAIL
+  C=p-N: FAIL
+  C=0: FAIL
+
+R2:
+  lambda_x = 0xc86bec9faea4892fd98d718bdfc770cfd26bb464d2f0ca2eed59f60652147d14
+  lambda_y = 0x9216746b7d4df2005a334478ab72d201a639a4c59ba1601043d9f3f5c5b3d671
+  C=7: FAIL
+  C=7*N//p: FAIL
+  C=p-N: FAIL
+  C=0: FAIL
+
+====================================================================================================
+STEP 6: ECDSA Signature Verification
+====================================================================================================
+
+Checking R1 = (0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650, 0x6de98b9482b20dffa5ccbb87548d2dfda0218c4b941c4c55afd02232f775d63c)
+  S * R = (0xdf177b2be4b4b01ceafdd9b0c1fade3107fdf2652a19009b8ce2418608528d2b, 0xa1190f9bee684dea071b25f8842edf624b388275440dd86a592db7767bd1b723)
+  R1 is valid point: True
+
+Checking R2 = (0xc86bec9faea4892fd98d718bdfc770d0d11c3d6bfd4328f25fe9b06bfadb9650, 0x9216746b7d4df2005a334478ab72d2025fde73b46be3b3aa502fddcc088a25f3)
+  S * R = (0xdf177b2be4b4b01ceafdd9b0c1fade3107fdf2652a19009b8ce2418608528d2b, 0x5ee6f0641197b215f8e4da077bd1209db4c77d8abbf22795a6d24888842e450c)
+  R2 is valid point: True
+
+====================================================================================================
+STEP 7: Find private key d such that P = d * G
+====================================================================================================
+d1 = X * Gx^-1 mod N = 0x1d1196c418d83dc812c5eada430081284a941fb4b1df5cbb2aaa0622ba433f53
+d1 * G = (0xa4d9f1ddf67c416b66718e7d799ba5312bc34792dec1a91a58ea4e5805216bb8, 0xf7b3b2915616a9de595a407fbb79080c300e68afa64e2da8555f168fb9babe21)
+P     = (0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16, 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330)
+Match: False
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+Step 2 (Lambda * rx3 == X mod p):
+  PASS
+
+Step 3 (Lambda bridge -> delta = p-N):
+  All deltas equal: 0x14551231950b75fc4402da1722fc9baee
+  Match p-N: PASS
+
+Step 4 (Reflection bridge): PASS
+
+Step 5 (Power structure): 0/16 passed
+
+====================================================================================================
+p - N = 0x14551231950b75fc4402da1722fc9baee
+  = 432420386565659656852420866390673177326
+This is the delta value that appears at the end of the hex.
+It's simply the difference between the field prime p and curve order N.
+====================================================================================================

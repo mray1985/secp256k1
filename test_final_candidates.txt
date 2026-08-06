@@ -1,0 +1,54 @@
+TESTING FINAL CANDIDATES FROM ECHO_FROMLANE.PY
+====================================================================================================
+
+Lane C drift compensation:
+  Lane C = 35389366159777600200190959172903893991424
+  hex = 0x6800000000000000000000000000000000
+  correction = 221643484800625506451138034622948776040647
+  hex = 0x28b5a066f82937d75708d1890d584a758c7
+
+Testing candidates:
+----------------------------------------------------------------------------------------------------
+
+LaneC + corr:
+  d = 257032850960403106651328993795852670032071
+  hex = 0x2f35a066f82937d75708d1890d584a758c7
+  No match
+  Q.x = 0x2c9d48a4a7663e0c8f09440448e7e6d40b23bff29c844eec2cd3177c471ed4d8
+  Q.y = 0x1414ba5959d3a0d007c22d76e8c36767438d49f320bf93aed30eee9fbfdbd2b
+
+LaneC - corr:
+  d = -186254118640847906250947075450044882049223
+  hex = -0x2235a066f82937d75708d1890d584a758c7
+  No match
+  Q.x = 0x14f968acb44ae749996b6b9e807bbcfbb0073900c64b955283fde6f810535f69
+  Q.y = 0x80242750c740285b2f4792fe4157670fd358119c2e29c52e17e9d2ea3c6800fb
+
+====================================================================================================
+ALSO TEST: d_estimate from echo_fingerprint_analysis.py
+====================================================================================================
+
+d_estimate = 25814436557289867834500432798497747938589
+hex = 0x4bdc9fa2e5aa3fc39e54c14a126d26ad1d
+Q.x = 0xa420718a404f6fea63736d28dfd22b987e9ebe16ed4cb9930d0897e568b12236
+Q.y = 0xf88fda5810c4470daf33bbc9f76d4c07c05016b2a9ce39de264a937e56d603b0
+No match
+
+====================================================================================================
+ALSO TEST: Candidates from offset_ratio_analysis.py
+====================================================================================================
+
+LaneC + offset: hex = 0x6d605340b223ad630ba834da2f53b96ea0
+  No match
+LaneC - offset: hex = 0x629facbf4ddc529cf457cb25d0ac469160
+  No match
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+All approaches tested. If no match, the private key for Puzzle 135
+is not at any of these candidate positions.
+
+The echo invariants confirm Lane C basin (inv_m_y = 3.295 in [1.07, 4.35])
+but the exact position within Lane C requires more precise calibration.

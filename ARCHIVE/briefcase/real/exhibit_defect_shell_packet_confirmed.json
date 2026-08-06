@@ -1,0 +1,37 @@
+{
+  "exhibit": "defect_shell_packet_confirmed",
+  "location": "ARCHIVE/briefcase/real/",
+  "verdict": {
+    "status": "CONFIRMED",
+    "class": "ruler_not_key",
+    "packet_preserves_shell": true,
+    "C_is_Lambda_GAP_operator": false,
+    "d_k_recovery": false
+  },
+  "identity": {
+    "B": "4294968273",
+    "B_formula": "2^32 + 977",
+    "DELTA": "432420386565659656852420866390673177326",
+    "correction": "1.27076814769573564427030171001724224368...",
+    "packet_identity": "packet * DELTA = packet * B^4 * correction",
+    "floor_ratio": "floor(packet*DELTA) / floor(packet*B4) ≈ correction"
+  },
+  "use_for": [
+    "p/N/2^256 packet displacement",
+    "floor drift",
+    "coordinate packet shadows",
+    "modulus-architecture comparisons"
+  ],
+  "do_not_use_for": [
+    "Lambda scaling",
+    "beta slot movement",
+    "GAP_x/GAP_y conversion",
+    "d/k recovery"
+  ],
+  "probes": [
+    "verify_defect_exponent.py",
+    "probe_defect_shell_ledger_map.py",
+    "probe_correction_multiplier.py"
+  ],
+  "judge_popcorn": "The correction multiplier is a ruler, not a key. It measures the gap between courtrooms, but it does not open the locked evidence box."
+}

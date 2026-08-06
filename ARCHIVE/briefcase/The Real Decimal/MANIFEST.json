@@ -1,0 +1,69 @@
+{
+  "folder": "ARCHIVE/briefcase/The Real Decimal/",
+  "keeper": "H does not change. The decimal point changes the courtroom.",
+  "lenses": {
+    "1_fixed_binary": "v / 2^256",
+    "2_courtroom": "v / p or v / N",
+    "3_packet": "x.y / 2^256 and x.y / p (stitch first, never int(x||y))"
+  },
+  "primary_branch": "p_minus_y",
+  "counts": {
+    "puzzles": 160,
+    "with_xy_packets": 88,
+    "no_pubkey": 72,
+    "digit_min": 152,
+    "digit_max": 156,
+    "digit_mean": 154.01136363636363
+  },
+  "globals": "globals/constants.json",
+  "puzzles_glob": "puzzles/puzzle_NNN.json",
+  "P135_ledger": "P135/ledger.json",
+  "admissible_facts": [
+    {
+      "exhibit": "exhibit_y_tail_carry_scan",
+      "fact": "y = carry pressure in p→N projection; carry = floor((x.y/p)*N) − floor((x/p)*N) ∈ {0,1}",
+      "not": "private key"
+    },
+    {
+      "exhibit": "exhibit_carry_threshold_ledger",
+      "fact": "carry = 1 iff (N*x mod p)*10^d + N*y >= p*10^d",
+      "not": "private key"
+    },
+    {
+      "exhibit": "exhibit_stitch_roof_comparison",
+      "fact": "x.(y/p) and x.(y/N) give identical carry; roof threshold (N*x mod p)+y >= p",
+      "correction": "prefer x.(y/p) over decimal digit tail; decimal proved mechanism but wrong gauge"
+    },
+    {
+      "exhibit": "exhibit_field_native_pair_packet",
+      "fact": "P_pair = x/p + y/p^2 = (x*p+y)/p^2; curve wrap m/p^2 at same denominator",
+      "identity": "y^2/p^3 = x^3/p^3 + 7/p^3 - m/p^2"
+    },
+    {
+      "exhibit": "exhibit_pair_minus_wrap_scan",
+      "fact": "residue = (x*p + y - m) / p^2 = P_pair - m/p^2",
+      "not": "private key — 0 exact hits to d/N, r/N, N/p, DELTA refs"
+    },
+    {
+      "exhibit": "exhibit_residue_numerator_briefcase_scan",
+      "fact": "num mod p/N/DELTA tested across 1760 briefcase ways; 88 unique primary triplets",
+      "not": "private key — 0 exact full-mod hits"
+    },
+    {
+      "exhibit": "exhibit_residue_offset_class_scan",
+      "fact": "local (num-d) mod 2^k banded — k32 all unique, no transferable offset mask",
+      "not": "private key"
+    },
+    {
+      "exhibit": "P135/rsz_courtroom",
+      "fact": "68 field-native k candidates tested; 0 with x([k]G)=r; structural RSZ facts verified",
+      "not": "private key — residue lane closed; RSZ open but no k map from map_p_to_n/floor pair/residue num"
+    },
+    {
+      "exhibit": "exhibit_tdad_scalar_courtroom",
+      "fact": "TDAD/N scalar packet: 82/82 T_n == d_n; 82/82 [T_n]G == P; delta/N = 0",
+      "identity": "double_and_add.txt is the private-key construction transcript under /N roof",
+      "not": "P135 — no TDAD entry filed"
+    }
+  ]
+}

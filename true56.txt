@@ -1,0 +1,119 @@
+Good — the script worked, but it only ran the projection-defect side.
+
+Right now it confirmed this:
+
+D flip trail mod 9:
+
+[4, 4, 3, 0, 0, 1, 1, 7, 3, 4]
+
+So true53 is confirmed again:
+
+flip 1  = 4
+flip 10 = 4
+
+That is the phase return.
+
+But the important part did not run yet:
+
+KNOWN PUZZLE WRAP_Q TABLE
+No puzzle data filled in yet.
+
+So we have not tested the actual missing link yet.
+
+Next move
+
+Fill the PUZZLES = [] section with the known complete puzzles: 90, 100, 115, and 120.
+
+You need each row to have:
+
+name
+omega
+r
+d
+z
+
+Optional, but better:
+
+s
+k
+
+Then rerun.
+
+The result we need is:
+
+wrap_q mod 9 values
+
+Then compare them to the D flip trail:
+
+[4, 4, 3, 0, 0, 1, 1, 7, 3, 4]
+What we are looking for
+
+If the known puzzles produce wrap_q mod 9 values that match one of these, or a rotated/linear version of them:
+
+4, 4, 3, 0, 0, 1, 1, 7, 3, 4
+
+then the bridge becomes:
+
+D flip phase → wrap_q mod 9 → Origin residue → Omega
+
+That would be a real connection.
+
+If not, then the honest result is:
+
+D and Omega share 3-adic language,
+but D does not predict wrap_q yet.
+Exact correction to make
+
+Find this part:
+
+PUZZLES = [
+    # Example format:
+]
+
+and replace it with real data like:
+
+PUZZLES = [
+    {
+        "name": "90",
+        "omega": 0,
+        "r": int("PUT_R_HEX_HERE", 16),
+        "d": int("PUT_D_HEX_HERE", 16),
+        "z": int("PUT_Z_HEX_HERE", 16),
+        "s": int("PUT_S_HEX_HERE", 16),
+        "k": int("PUT_K_HEX_HERE", 16),
+    },
+    {
+        "name": "100",
+        "omega": -1,
+        "r": int("PUT_R_HEX_HERE", 16),
+        "d": int("PUT_D_HEX_HERE", 16),
+        "z": int("PUT_Z_HEX_HERE", 16),
+        "s": int("PUT_S_HEX_HERE", 16),
+        "k": int("PUT_K_HEX_HERE", 16),
+    },
+    {
+        "name": "115",
+        "omega": -1,
+        "r": int("PUT_R_HEX_HERE", 16),
+        "d": int("PUT_D_HEX_HERE", 16),
+        "z": int("PUT_Z_HEX_HERE", 16),
+        "s": int("PUT_S_HEX_HERE", 16),
+        "k": int("PUT_K_HEX_HERE", 16),
+    },
+    {
+        "name": "120",
+        "omega": 1,
+        "r": int("PUT_R_HEX_HERE", 16),
+        "d": int("PUT_D_HEX_HERE", 16),
+        "z": int("PUT_Z_HEX_HERE", 16),
+        "s": int("PUT_S_HEX_HERE", 16),
+        "k": int("PUT_K_HEX_HERE", 16),
+    },
+]
+
+Then rerun and send me this section:
+
+KNOWN PUZZLE WRAP_Q TABLE
+CORRELATION TESTS
+
+That is the actual true55 test. Right now we only proved the left side of the bridge; next run tests whether it touches ECDSA.

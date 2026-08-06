@@ -1,0 +1,54 @@
+Then the 5 Star-of-David candidates are eliminated for Puzzle 160 as both:
+
+d
+
+and
+
+k
+
+candidates.
+
+That’s useful, not a dead end.
+
+Current conclusion:
+
+Puzzle 160:
+- 5 candidates as d: all false
+- 5 candidates as k: all false
+- Therefore these candidates are not the ECDSA private/nonce pair.
+
+So the next move is not more ECDSA testing on those same 5. The next move is to generate the six reflection candidates from the actual y/−y Star-of-David shell, not just the five algebraic formulas.
+
+The candidate pool should be:
+
+(Px
+1
+	​
+
+,+y),(Px
+1
+	​
+
+,−y)
+(Px
+2
+	​
+
+,+y),(Px
+2
+	​
+
+,−y)
+(Px
+3
+	​
+
+,+y),(Px
+3
+	​
+
+,−y)
+
+then derive scalar-like candidates from each branch and test them as d and k.
+
+So the five formulas are ruled out; the six geometric branch candidates are the next proper test.

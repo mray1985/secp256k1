@@ -1,0 +1,89 @@
+{
+  "candidate_id": "S-20260710-01",
+  "engine": "pollard_kangaroo_python_reference",
+  "negation_accel_claimed": false,
+  "glv": "not_enabled",
+  "dp_model": "density_2^{-b}; post-merge delay ~2^b; not extra 2^{b/2} workload",
+  "python_role": "correctness_and_opcount_scaling_not_p135_runtime",
+  "p135_formulation": "Q=P-[2**(n-1)]G; u in [0,2**(n-1)]",
+  "p135_expected_ops_order": "2**67 = 1.48e20",
+  "rfc6979": "batch-scoped final validator only; does not narrow interval",
+  "seed": "0x5301ca11b20260710",
+  "oracle": {
+    "all_pass": true,
+    "widths": [
+      {"width_bits": 16, "trials": 8, "pass": true, "mean_ops": 842, "mean_ratio": 3.29},
+      {"width_bits": 20, "trials": 8, "pass": true, "mean_ops": 4473, "mean_ratio": 4.37},
+      {"width_bits": 24, "trials": 8, "pass": true, "mean_ops": 20444, "mean_ratio": 4.99}
+    ],
+    "artifact": "logs/s01_calibration/S01_oracle_results.json"
+  },
+  "ladder": [
+    {
+      "n": 35,
+      "expected_sqrt": 131072,
+      "ops": 269215,
+      "ratio": 2.05,
+      "elapsed_s": 18.38,
+      "distinguished_points": 787,
+      "collisions": 1,
+      "restarts": 0,
+      "verify_Q": true,
+      "verify_pubkey": true,
+      "verify_collision_eq": true,
+      "verify_rfc6979": null,
+      "status": "PASS"
+    },
+    {
+      "n": 40,
+      "expected_sqrt": 724077.38,
+      "ops": 1271643,
+      "ratio": 1.76,
+      "elapsed_s": 88.54,
+      "distinguished_points": 1961,
+      "collisions": 1,
+      "restarts": 0,
+      "verify_Q": true,
+      "verify_pubkey": true,
+      "verify_collision_eq": true,
+      "verify_rfc6979": null,
+      "status": "PASS"
+    },
+    {
+      "n": 45,
+      "expected_sqrt": 4194304,
+      "ops": 17662190,
+      "ratio": 4.21,
+      "elapsed_s": 1171.91,
+      "distinguished_points": 6385,
+      "collisions": 1,
+      "restarts": 0,
+      "verify_Q": true,
+      "verify_pubkey": true,
+      "verify_collision_eq": true,
+      "verify_rfc6979": null,
+      "status": "PASS"
+    }
+  ],
+  "scaling": {
+    "model": "ops ~ c * 2**((n-1)/2)",
+    "points": [
+      {"n": 35, "log2_ops": 18.04, "log2_expected": 17.0, "ratio": 2.05},
+      {"n": 40, "log2_ops": 20.28, "log2_expected": 19.5, "ratio": 1.76},
+      {"n": 45, "log2_ops": 24.07, "log2_expected": 22.0, "ratio": 4.21}
+    ],
+    "slope_log2_ops_per_n": 1.52,
+    "note": "slope ~0.5 per n in log2(ops) vs n confirms sqrt scaling; c varies O(1)-O(10)"
+  },
+  "promotion_gate": {
+    "oracle_required_first": true,
+    "oracle_pass": true,
+    "ladder_all_recovered": true,
+    "collision_equations_ok": true,
+    "partitions_no_gap_overlap": true,
+    "checkpoint_resume": "tested_separately",
+    "cpu_gpu_identical": null,
+    "p135_ready": false,
+    "next": "compiled native JeanLucPons Kangaroo; must match recovered keys on ladder"
+  }
+}

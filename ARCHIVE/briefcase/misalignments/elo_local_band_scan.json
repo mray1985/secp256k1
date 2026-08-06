@@ -1,0 +1,721 @@
+{
+  "exhibit": "elo_local_band_scan",
+  "location": "ARCHIVE/briefcase/misalignments/",
+  "shell": "e_lo = (n-1)/256",
+  "use": [
+    "candidate comparison",
+    "solved-puzzle normalization",
+    "distance-to-public-fingerprint scoring"
+  ],
+  "do_not_use": [
+    "deriving d directly"
+  ],
+  "local_band_stats": {
+    "radius_10": {
+      "n": 81,
+      "mean": 0.060192983056291297,
+      "stdev": 0.3514446905369201,
+      "frac_positive": 0.5432098765432098,
+      "frac_gt_0_15": 0.3333333333333333
+    },
+    "radius_20": {
+      "n": 82,
+      "mean": 0.02632930889331592,
+      "stdev": 0.23780804935692887,
+      "frac_positive": 0.524390243902439,
+      "frac_gt_0_15": 0.23170731707317074
+    },
+    "interpretation": "Positive spearman(dist, |scalar_gap|) means closer e_lo fingerprints have closer scalar positions locally. Mean near 0 => no local compass."
+  },
+  "high_bit_controls": [
+    110,
+    115,
+    120,
+    125,
+    130,
+    135,
+    140,
+    145,
+    150,
+    155,
+    160
+  ],
+  "high_bit_solved_present": [
+    110,
+    115,
+    120,
+    125,
+    130
+  ],
+  "P135_high_bit": {
+    "neighbors_solved": [
+      {
+        "puzzle": 110,
+        "status": "solved",
+        "e_lo": 0.42578125,
+        "distance_to_P135": 0.573671082086493,
+        "scalar_position": 0.6797900857488876
+      },
+      {
+        "puzzle": 115,
+        "status": "solved",
+        "e_lo": 0.4453125,
+        "distance_to_P135": 0.65049762143152,
+        "scalar_position": 0.5149424275913058
+      },
+      {
+        "puzzle": 130,
+        "status": "solved",
+        "e_lo": 0.50390625,
+        "distance_to_P135": 0.7503246988560173,
+        "scalar_position": 0.6219970416656685
+      },
+      {
+        "puzzle": 125,
+        "status": "solved",
+        "e_lo": 0.484375,
+        "distance_to_P135": 1.0397835337565233,
+        "scalar_position": 0.7703203399424013
+      },
+      {
+        "puzzle": 120,
+        "status": "solved",
+        "e_lo": 0.46484375,
+        "distance_to_P135": 1.0752532634819558,
+        "scalar_position": 0.38327435738080934
+      }
+    ],
+    "top3_mean_scalar": 0.6055765183352873,
+    "cluster_hint": "middle_third",
+    "confidence": "weak",
+    "actionable": false
+  },
+  "local_results_sample": [
+    {
+      "target": 65,
+      "radius": 10,
+      "band_solved": 16,
+      "spearman_dist_vs_scalar_gap": -0.32941176470588235,
+      "top_neighbors": [
+        {
+          "puzzle": 61,
+          "distance": 0.243373152183777,
+          "scalar_position": 0.23667356096793157
+        },
+        {
+          "puzzle": 59,
+          "distance": 0.42018180863466936,
+          "scalar_position": 0.8217038442259545
+        },
+        {
+          "puzzle": 66,
+          "distance": 0.5310500072614796,
+          "scalar_position": 0.2562167438642828
+        },
+        {
+          "puzzle": 64,
+          "distance": 0.5346675883062584,
+          "scalar_position": 0.9298438018605643
+        },
+        {
+          "puzzle": 62,
+          "distance": 0.5837877898932479,
+          "scalar_position": 0.6949864005878701
+        }
+      ],
+      "neighbor_mean_scalar": 0.5878848703013206,
+      "target_scalar": 0.6571150545548307
+    },
+    {
+      "target": 65,
+      "radius": 20,
+      "band_solved": 28,
+      "spearman_dist_vs_scalar_gap": 0.07224958949096881,
+      "top_neighbors": [
+        {
+          "puzzle": 61,
+          "distance": 0.243373152183777,
+          "scalar_position": 0.23667356096793157
+        },
+        {
+          "puzzle": 59,
+          "distance": 0.42018180863466936,
+          "scalar_position": 0.8217038442259545
+        },
+        {
+          "puzzle": 53,
+          "distance": 0.44345916765967613,
+          "scalar_position": 0.5018395352846268
+        },
+        {
+          "puzzle": 52,
+          "distance": 0.49972542360404715,
+          "scalar_position": 0.8725002169265093
+        },
+        {
+          "puzzle": 66,
+          "distance": 0.5310500072614796,
+          "scalar_position": 0.2562167438642828
+        }
+      ],
+      "neighbor_mean_scalar": 0.537786780253861,
+      "target_scalar": 0.6571150545548307
+    },
+    {
+      "target": 70,
+      "radius": 10,
+      "band_solved": 12,
+      "spearman_dist_vs_scalar_gap": -0.45454545454545453,
+      "top_neighbors": [
+        {
+          "puzzle": 80,
+          "distance": 0.47224659636454897,
+          "scalar_position": 0.8289294721848898
+        },
+        {
+          "puzzle": 60,
+          "distance": 0.49859273619564076,
+          "scalar_position": 0.9689828764301732
+        },
+        {
+          "puzzle": 69,
+          "distance": 0.5189171671850192,
+          "scalar_position": 0.007205156139362788
+        },
+        {
+          "puzzle": 63,
+          "distance": 0.5415132631960086,
+          "scalar_position": 0.9500958897872267
+        },
+        {
+          "puzzle": 75,
+          "distance": 0.5440732209061201,
+          "scalar_position": 0.19316889756160655
+        }
+      ],
+      "neighbor_mean_scalar": 0.5896764584206518,
+      "target_scalar": 0.6439841804320401
+    },
+    {
+      "target": 70,
+      "radius": 20,
+      "band_solved": 24,
+      "spearman_dist_vs_scalar_gap": -0.33652173913043476,
+      "top_neighbors": [
+        {
+          "puzzle": 80,
+          "distance": 0.47224659636454897,
+          "scalar_position": 0.8289294721848898
+        },
+        {
+          "puzzle": 60,
+          "distance": 0.49859273619564076,
+          "scalar_position": 0.9689828764301732
+        },
+        {
+          "puzzle": 57,
+          "distance": 0.5010257846096116,
+          "scalar_position": 0.9185453074950023
+        },
+        {
+          "puzzle": 69,
+          "distance": 0.5189171671850192,
+          "scalar_position": 0.007205156139362788
+        },
+        {
+          "puzzle": 56,
+          "distance": 0.525889223060817,
+          "scalar_position": 0.2273166453323929
+        }
+      ],
+      "neighbor_mean_scalar": 0.5901958915163642,
+      "target_scalar": 0.6439841804320401
+    },
+    {
+      "target": 75,
+      "radius": 10,
+      "band_solved": 8,
+      "spearman_dist_vs_scalar_gap": 0.7380952380952381,
+      "top_neighbors": [
+        {
+          "puzzle": 69,
+          "distance": 0.31705890492174826,
+          "scalar_position": 0.007205156139362788
+        },
+        {
+          "puzzle": 66,
+          "distance": 0.3920690274432101,
+          "scalar_position": 0.2562167438642828
+        },
+        {
+          "puzzle": 70,
+          "distance": 0.5440732209061201,
+          "scalar_position": 0.6439841804320401
+        },
+        {
+          "puzzle": 85,
+          "distance": 0.5572259096746517,
+          "scalar_position": 0.09034376966231544
+        },
+        {
+          "puzzle": 67,
+          "distance": 0.638379692696533,
+          "scalar_position": 0.7978368306124277
+        }
+      ],
+      "neighbor_mean_scalar": 0.35911733614208574,
+      "target_scalar": 0.19316889756160655
+    },
+    {
+      "target": 75,
+      "radius": 20,
+      "band_solved": 20,
+      "spearman_dist_vs_scalar_gap": -0.013533834586466165,
+      "top_neighbors": [
+        {
+          "puzzle": 63,
+          "distance": 0.15247887444786584,
+          "scalar_position": 0.9500958897872267
+        },
+        {
+          "puzzle": 69,
+          "distance": 0.31705890492174826,
+          "scalar_position": 0.007205156139362788
+        },
+        {
+          "puzzle": 90,
+          "distance": 0.3172301841800394,
+          "scalar_position": 0.4023493269008403
+        },
+        {
+          "puzzle": 60,
+          "distance": 0.34936175186699286,
+          "scalar_position": 0.9689828764301732
+        },
+        {
+          "puzzle": 62,
+          "distance": 0.3917254040195344,
+          "scalar_position": 0.6949864005878701
+        }
+      ],
+      "neighbor_mean_scalar": 0.6047239299690946,
+      "target_scalar": 0.19316889756160655
+    },
+    {
+      "target": 80,
+      "radius": 10,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.9999999999999998,
+      "top_neighbors": [
+        {
+          "puzzle": 70,
+          "distance": 0.47224659636454897,
+          "scalar_position": 0.6439841804320401
+        },
+        {
+          "puzzle": 90,
+          "distance": 0.7838355799475989,
+          "scalar_position": 0.4023493269008403
+        },
+        {
+          "puzzle": 75,
+          "distance": 0.8225945356092008,
+          "scalar_position": 0.19316889756160655
+        },
+        {
+          "puzzle": 85,
+          "distance": 0.8711738408438452,
+          "scalar_position": 0.09034376966231544
+        }
+      ],
+      "neighbor_mean_scalar": 0.3324615436392006,
+      "target_scalar": 0.8289294721848898
+    },
+    {
+      "target": 80,
+      "radius": 20,
+      "band_solved": 16,
+      "spearman_dist_vs_scalar_gap": 0.008823529411764706,
+      "top_neighbors": [
+        {
+          "puzzle": 95,
+          "distance": 0.27045075809784136,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 70,
+          "distance": 0.47224659636454897,
+          "scalar_position": 0.6439841804320401
+        },
+        {
+          "puzzle": 100,
+          "distance": 0.5314046888027695,
+          "scalar_position": 0.36981157668053144
+        },
+        {
+          "puzzle": 60,
+          "distance": 0.714875808428506,
+          "scalar_position": 0.9689828764301732
+        },
+        {
+          "puzzle": 69,
+          "distance": 0.7372279579812032,
+          "scalar_position": 0.007205156139362788
+        }
+      ],
+      "neighbor_mean_scalar": 0.4557417935055441,
+      "target_scalar": 0.8289294721848898
+    },
+    {
+      "target": 100,
+      "radius": 10,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.3999999999999999,
+      "top_neighbors": [
+        {
+          "puzzle": 95,
+          "distance": 0.3805328829509928,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 90,
+          "distance": 0.6375541390142355,
+          "scalar_position": 0.4023493269008403
+        },
+        {
+          "puzzle": 105,
+          "distance": 0.6494592496310084,
+          "scalar_position": 0.43391395367944174
+        },
+        {
+          "puzzle": 110,
+          "distance": 1.20507292894248,
+          "scalar_position": 0.6797900857488876
+        }
+      ],
+      "neighbor_mean_scalar": 0.4511946360436957,
+      "target_scalar": 0.36981157668053144
+    },
+    {
+      "target": 100,
+      "radius": 20,
+      "band_solved": 8,
+      "spearman_dist_vs_scalar_gap": -0.11904761904761904,
+      "top_neighbors": [
+        {
+          "puzzle": 95,
+          "distance": 0.3805328829509928,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 80,
+          "distance": 0.5314046888027695,
+          "scalar_position": 0.8289294721848898
+        },
+        {
+          "puzzle": 115,
+          "distance": 0.600920548315827,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 90,
+          "distance": 0.6375541390142355,
+          "scalar_position": 0.4023493269008403
+        },
+        {
+          "puzzle": 105,
+          "distance": 0.6494592496310084,
+          "scalar_position": 0.43391395367944174
+        }
+      ],
+      "neighbor_mean_scalar": 0.4937720716404182,
+      "target_scalar": 0.36981157668053144
+    },
+    {
+      "target": 105,
+      "radius": 10,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.7999999999999998,
+      "top_neighbors": [
+        {
+          "puzzle": 100,
+          "distance": 0.6494592496310084,
+          "scalar_position": 0.36981157668053144
+        },
+        {
+          "puzzle": 95,
+          "distance": 0.6526258536828184,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 115,
+          "distance": 0.9104042930268343,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 110,
+          "distance": 0.9385251043005234,
+          "scalar_position": 0.6797900857488876
+        }
+      ],
+      "neighbor_mean_scalar": 0.4633173169665845,
+      "target_scalar": 0.43391395367944174
+    },
+    {
+      "target": 105,
+      "radius": 20,
+      "band_solved": 8,
+      "spearman_dist_vs_scalar_gap": 0.2619047619047619,
+      "top_neighbors": [
+        {
+          "puzzle": 100,
+          "distance": 0.6494592496310084,
+          "scalar_position": 0.36981157668053144
+        },
+        {
+          "puzzle": 95,
+          "distance": 0.6526258536828184,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 85,
+          "distance": 0.70077286661032,
+          "scalar_position": 0.09034376966231544
+        },
+        {
+          "puzzle": 90,
+          "distance": 0.7531594236997559,
+          "scalar_position": 0.4023493269008403
+        },
+        {
+          "puzzle": 120,
+          "distance": 0.7678258407192824,
+          "scalar_position": 0.38327435738080934
+        }
+      ],
+      "neighbor_mean_scalar": 0.30690084169402193,
+      "target_scalar": 0.43391395367944174
+    },
+    {
+      "target": 115,
+      "radius": 10,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.7999999999999998,
+      "top_neighbors": [
+        {
+          "puzzle": 105,
+          "distance": 0.9104042930268343,
+          "scalar_position": 0.43391395367944174
+        },
+        {
+          "puzzle": 110,
+          "distance": 0.9522111170155403,
+          "scalar_position": 0.6797900857488876
+        },
+        {
+          "puzzle": 120,
+          "distance": 1.1090541215401222,
+          "scalar_position": 0.38327435738080934
+        },
+        {
+          "puzzle": 125,
+          "distance": 1.2358018978252525,
+          "scalar_position": 0.7703203399424013
+        }
+      ],
+      "neighbor_mean_scalar": 0.566824684187885,
+      "target_scalar": 0.5149424275913058
+    },
+    {
+      "target": 115,
+      "radius": 20,
+      "band_solved": 7,
+      "spearman_dist_vs_scalar_gap": 0.4285714285714285,
+      "top_neighbors": [
+        {
+          "puzzle": 130,
+          "distance": 0.4757260267546517,
+          "scalar_position": 0.6219970416656685
+        },
+        {
+          "puzzle": 100,
+          "distance": 0.600920548315827,
+          "scalar_position": 0.36981157668053144
+        },
+        {
+          "puzzle": 95,
+          "distance": 0.6798727173762436,
+          "scalar_position": 0.2887251778456132
+        },
+        {
+          "puzzle": 105,
+          "distance": 0.9104042930268343,
+          "scalar_position": 0.43391395367944174
+        },
+        {
+          "puzzle": 110,
+          "distance": 0.9522111170155403,
+          "scalar_position": 0.6797900857488876
+        }
+      ],
+      "neighbor_mean_scalar": 0.4788475671240285,
+      "target_scalar": 0.5149424275913058
+    },
+    {
+      "target": 120,
+      "radius": 10,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.7999999999999998,
+      "top_neighbors": [
+        {
+          "puzzle": 115,
+          "distance": 1.1090541215401222,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 110,
+          "distance": 1.1638157339299007,
+          "scalar_position": 0.6797900857488876
+        },
+        {
+          "puzzle": 130,
+          "distance": 1.191026124138327,
+          "scalar_position": 0.6219970416656685
+        },
+        {
+          "puzzle": 125,
+          "distance": 1.3833860140448815,
+          "scalar_position": 0.7703203399424013
+        }
+      ],
+      "neighbor_mean_scalar": 0.6467624737370659,
+      "target_scalar": 0.38327435738080934
+    },
+    {
+      "target": 120,
+      "radius": 20,
+      "band_solved": 6,
+      "spearman_dist_vs_scalar_gap": 0.9428571428571428,
+      "top_neighbors": [
+        {
+          "puzzle": 100,
+          "distance": 0.7613164824724837,
+          "scalar_position": 0.36981157668053144
+        },
+        {
+          "puzzle": 105,
+          "distance": 0.7678258407192824,
+          "scalar_position": 0.43391395367944174
+        },
+        {
+          "puzzle": 115,
+          "distance": 1.1090541215401222,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 110,
+          "distance": 1.1638157339299007,
+          "scalar_position": 0.6797900857488876
+        },
+        {
+          "puzzle": 130,
+          "distance": 1.191026124138327,
+          "scalar_position": 0.6219970416656685
+        }
+      ],
+      "neighbor_mean_scalar": 0.524091017073167,
+      "target_scalar": 0.38327435738080934
+    },
+    {
+      "target": 125,
+      "radius": 10,
+      "band_solved": 3,
+      "spearman_dist_vs_scalar_gap": 0.9999999999999998,
+      "top_neighbors": [
+        {
+          "puzzle": 130,
+          "distance": 1.0452182204153493,
+          "scalar_position": 0.6219970416656685
+        },
+        {
+          "puzzle": 115,
+          "distance": 1.2358018978252525,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 120,
+          "distance": 1.3833860140448815,
+          "scalar_position": 0.38327435738080934
+        }
+      ],
+      "neighbor_mean_scalar": 0.5067379422125945,
+      "target_scalar": 0.7703203399424013
+    },
+    {
+      "target": 125,
+      "radius": 20,
+      "band_solved": 5,
+      "spearman_dist_vs_scalar_gap": 0.19999999999999996,
+      "top_neighbors": [
+        {
+          "puzzle": 130,
+          "distance": 1.0452182204153493,
+          "scalar_position": 0.6219970416656685
+        },
+        {
+          "puzzle": 115,
+          "distance": 1.2358018978252525,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 120,
+          "distance": 1.3833860140448815,
+          "scalar_position": 0.38327435738080934
+        },
+        {
+          "puzzle": 110,
+          "distance": 1.485252217723781,
+          "scalar_position": 0.6797900857488876
+        },
+        {
+          "puzzle": 105,
+          "distance": 1.5781004551806825,
+          "scalar_position": 0.43391395367944174
+        }
+      ],
+      "neighbor_mean_scalar": 0.5267835732132226,
+      "target_scalar": 0.7703203399424013
+    },
+    {
+      "target": 130,
+      "radius": 20,
+      "band_solved": 4,
+      "spearman_dist_vs_scalar_gap": 0.3999999999999999,
+      "top_neighbors": [
+        {
+          "puzzle": 115,
+          "distance": 0.4757260267546517,
+          "scalar_position": 0.5149424275913058
+        },
+        {
+          "puzzle": 125,
+          "distance": 1.0452182204153493,
+          "scalar_position": 0.7703203399424013
+        },
+        {
+          "puzzle": 110,
+          "distance": 1.0614029776330383,
+          "scalar_position": 0.6797900857488876
+        },
+        {
+          "puzzle": 120,
+          "distance": 1.191026124138327,
+          "scalar_position": 0.38327435738080934
+        }
+      ],
+      "neighbor_mean_scalar": 0.587081802665851,
+      "target_scalar": 0.6219970416656685
+    }
+  ],
+  "ruling": "e_lo wins the shell; it does not open the door. Local-band scan tests whether the lens helps nearby, without n-confound."
+}

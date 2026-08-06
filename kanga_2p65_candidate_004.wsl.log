@@ -1,0 +1,17 @@
+Kangaroo v2.2
+Start:647EA136435BD787030C3D84B5FE7B19A6
+Stop :647EA136435BD787050C3D84B5FE7B19A6
+Keys :1
+Number of CPU thread: 4
+Range width: 2^66
+Jump Avg distance: 2^32.97
+Number of kangaroos: 2^12.00
+Suggested DP: 18
+Expected operations: 2^34.11
+Expected RAM: 14.7MB
+DP size: 18 [0xffffc00000000000]
+SolveKeyCPU Thread 1: 1024 kangaroos
+SolveKeyCPU Thread 2: 1024 kangaroos
+SolveKeyCPU Thread 0: 1024 kangaroos
+SolveKeyCPU Thread 3: 1024 kangaroos
+[15.05 MK/s][GPU 0.00 MK/s][Count 2^25.37][Dead 0][02s (Avg 20:32)][2.0/4.0MB]  [24.36 MK/s][GPU 0.00 MK/s][Count 2^26.40][Dead 0][05s (Avg 12:41)][2.0/4.1MB]  [25.74 MK/s][GPU 0.00 MK/s][Count 2^27.04][Dead 0][07s (Avg 12:00)][2.0/4.1MB]  [24.28 MK/s][GPU 0.00 MK/s][Count 2^27.48][Dead 0][10s (Avg 12:44)][2.0/4.1MB]  [23.02 MK/s][GPU 0.00 MK/s][Count 2^27.81][Dead 0][12s (Avg 13:25)][2.0/4.1MB]  [22.21 MK/s][GPU 0.00 MK/s][Count 2^28.09][Dead 0][15s (Avg 13:55)][2.0/4.2MB]  [21.29 MK/s][GPU 0.00 MK/s][Count 2^28.30][Dead 0][18s (Avg 14:31)][2.0/4.2MB]  [20.63 MK/s][GPU 0.00 MK/s][Count 2^28.48][Dead 0][20s (Avg 14:59)][2.0/4.2MB]  [21.06 MK/s][GPU 0.00 MK/s][Count 2^28.66][Dead 0][23s (Avg 14:40)][2.1/4.3MB]  [21.22 MK/s][GPU 0.00 MK/s][Count 2^28.82][Dead 0][26s (Avg 14:34)][2.1/4.3MB]  [20.96 MK/s][GPU 0.00 MK/s][Count 2^28.95][Dead 0][28s (Avg 14:45)][2.1/4.3MB]  [20.85 MK/s][GPU 0.00 MK/s][Count 2^29.08][Dead 0][31s (Avg 14:49)][2.1/4.3MB]  [19.91 MK/s][GPU 0.00 MK/s][Count 2^29.18][Dead 0][34s (Avg 15:31)][2.1/4.4MB]  [18.56 MK/s][GPU 0.00 MK/s][Count 2^29.26][Dead 0][38s (Avg 16:39)][2.1/4.4MB]  [17.55 MK/s][GPU 0.00 MK/s][Count 2^29.35][Dead 0][42s (Avg 17:36)][2.1/4.4MB]  [16.51 MK/s][GPU 0.00 MK/s][Count 2^29.42][Dead 0][46s (Avg 18:43)][2.1/4.4MB]  [15.21 MK/s][GPU 0.00 MK/s][Count 2^29.50][Dead 0][50s (Avg 20:19)][2.1/4.4MB]  [13.76 MK/s][GPU 0.00 MK/s][Count 2^29.56][Dead 0][54s (Avg 22:28)][2.1/4.5MB]  [12.70 MK/s][GPU 0.00 MK/s][Count 2^29.63][Dead 0][57s (Avg 24:21)][2.1/4.5MB]  [11.57 MK/s][GPU 0.00 MK/s][Count 2^29.69][Dead 0][01:01 (Avg 26:43)][2.1/4.5MB]  [11.10 MK/s][GPU 0.00 MK/s][Count 2^29.76][Dead 0][01:05 (Avg 27:50)][2.1/4.5MB]  [11.07 MK/s][GPU 0.00 MK/s][Count 2^29.81][Dead 0][01:09 (Avg 27:55)][2.1/4.6MB]  [10.92 MK/s][GPU 0.00 MK/s][Count 2^29.87][Dead 0][01:13 (Avg 28:19)][2.1/4.6MB]  [10.76 MK/s][GPU 0.00 MK/s][Count 2^29.92][Dead 0][01:17 (Avg 28:43)][2.1/4.6MB]  [10.48 MK/s][GPU 0.00 MK/s][Count 2^29.97][Dead 0][01:22 (Avg 29:30)][2.1/4.6MB]  [10.37 MK/s][GPU 0.00 MK/s][Count 2^30.01][Dead 0][01:26 (Avg 29:49)][2.1/4.6MB]  [10.34 MK/s][GPU 0.00 MK/s][Count 2^30.07][Dead 0][01:30 (Avg 29:54)][2.1/4.7MB]  [10.31 MK/s][GPU 0.00 MK/s][Count 2^30.11][Dead 0][01:34 (Avg 29:59)][2.1/4.7MB]  [10.30 MK/s][GPU 0.00 MK/s][Count 2^30.16][Dead 0][01:38 (Avg 30:01)][2.1/4.7MB]  [10.26 MK/s][GPU 0.00 MK/s][Count 2^30.20][Dead 0][01:42 (Avg 30:08)][2.1/4.7MB]  

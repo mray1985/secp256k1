@@ -1,0 +1,85 @@
+Yep — that locks the category:
+
+D
+Q
+	​
+
+
+is not a scalar coordinate. It is a signed branch coordinate.
+
+So the definition stands:
+
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+
+where:
+
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+
+and:
+
+δ=p−N
+
+Properties proven:
+
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+but:
+
+D
+kQ
+	​
+
+
+=kD
+Q
+	​
+
+
+So this is the right interpretation:
+
+D marks the y-branch/sign position of a point after the p→N bridge. It does not encode scalar multiplication linearly.
+
+Next step is error-sequence analysis:
+
+E
+k
+	​
+
+(Q)=D
+kQ
+	​
+
+−kD
+Q
+	​
+
+(modN)
+
+Check whether E
+k
+	​
+
+(G), E
+k
+	​
+
+(P), and E
+k
+	​
+
+(R) have repeated residue patterns, bit lengths, or ratios. That’s where structure may still exist.

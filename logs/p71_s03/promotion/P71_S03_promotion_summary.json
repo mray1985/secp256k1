@@ -1,0 +1,181 @@
+{
+  "candidate_id": "P71-S-20260710-03",
+  "status": "PASS",
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "native_gpu": false,
+  "steps": [
+    {
+      "step": "known_hit_puzzle1",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\known_hit_puzzle1\\result.json"
+    },
+    {
+      "step": "boundary_key_at_lo",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\boundary_key_at_lo\\result.json"
+    },
+    {
+      "step": "boundary_key_at_hi",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\boundary_key_at_hi\\result.json"
+    },
+    {
+      "step": "solved_n1",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n1\\result.json"
+    },
+    {
+      "step": "solved_n5",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n5\\result.json"
+    },
+    {
+      "step": "solved_n10",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n10\\result.json"
+    },
+    {
+      "step": "solved_n20",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n20\\result.json"
+    },
+    {
+      "step": "solved_n30",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n30\\result.json"
+    },
+    {
+      "step": "solved_n40",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n40\\result.json"
+    },
+    {
+      "step": "solved_n50",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n50\\result.json"
+    },
+    {
+      "step": "solved_n65",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n65\\result.json"
+    },
+    {
+      "step": "solved_n70",
+      "pass": true,
+      "gate": {
+        "expected_seen": true,
+        "expected_verified": true,
+        "inside_requested_range": true,
+        "hash160_match": true,
+        "all_reported_hits_verified": true,
+        "pass": true
+      },
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\solved_n70\\result.json"
+    },
+    {
+      "step": "checkpoint_resume",
+      "pass": true,
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\checkpoint_resume\\result.json"
+    },
+    {
+      "step": "sustained_benchmark",
+      "pass": true,
+      "R_peak": 14154683.0,
+      "R_sustained": 13309948.0,
+      "timed_out": true,
+      "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\promotion\\sustained_10min\\result.json"
+    }
+  ],
+  "R_peak": 14154683.0,
+  "R_sustained": 13309948.0,
+  "note": "KeyHunt CPU via WSL. Puzzle-1 gate + full promotion PASS. No CUDA BitCrack on host \u2014 no GPU throughput credited. R_peak=1.415e+07 R_sustained=1.331e+07 keys/s (CPU)."
+}

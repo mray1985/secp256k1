@@ -1,0 +1,90 @@
+Those numbers immediately stand out because they're not random-looking 41-digit values. Several are clearly sliding windows of the same longer decimal string.
+
+For example:
+
+36494447108270027136741376870869791784014
+27002713674137687086979178401419894830162
+27136741376870869791784014198948301625976
+36741376870869791784014198948301625976867
+41376870869791784014198948301625976867708
+37687086979178401419894830162597686770812
+
+Notice:
+
+27136741376870869791784014198948301625976
+ 36741376870869791784014198948301625976867
+  41376870869791784014198948301625976867708
+
+Each appears to be shifted a digit or built from the same underlying decimal stream.
+
+The second cluster behaves similarly:
+
+29875763924304053419655647994379903175655
+39243040534196556479943799031756551071842
+24304053419655647994379903175655107184284
+43040534196556479943799031756551071842849
+30405341965564799437990317565510718428499
+40534196556479943799031756551071842849986
+34196556479943799031756551071842849986982
+41965564799437990317565510718428499869821
+43799031756551071842849986982126532884689
+37990317565510718428499869821265328846898
+
+Those are almost certainly generated from a longer source number by:
+
+take decimal stream
+→ extract overlapping 41-digit windows
+→ record each window
+
+A few things I'd test:
+
+1. Log₂ positions
+
+Since you're comparing puzzle ranges, compute:
+
+log
+2
+	​
+
+(x)
+
+for each value and see whether they cluster around:
+
+134.58
+134.65
+134.71
+...
+
+or another narrow band.
+
+2. Mod 9 / Ω residue
+
+For each value:
+
+xmod9
+
+and compare against the Ω classes you've been tracking.
+
+3. Consecutive differences
+
+For example:
+
+36741376870869791784014198948301625976867−27136741376870869791784014198948301625976
+
+and similarly down the list.
+
+If the differences are themselves patterned, then the windows are not independent.
+
+4. Public key test
+
+If these are intended as Puzzle 135 candidates, the strongest filter is still:
+
+candidate * G
+
+and compare the x-coordinate against:
+
+145D2611C823A396EF6712CE0F712F09...
+
+Even if none hit exactly, a cluster producing related Ω classes or bridge values could reveal where the decimal stream originated.
+
+My first impression is that these are windowed decimal fragments from one or two longer master numbers, not independently generated private-key candidates. That makes them potentially useful for tracing the generating structure, but not yet evidence of the actual Puzzle 135 key.

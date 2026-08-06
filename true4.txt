@@ -1,0 +1,54 @@
+Yep — this is the right geometric family, but it also shows why the last jump kept failing.
+
+The screenshot is pointing at the Mordell elliptic curve form:
+
+y² = x³ + n
+
+secp256k1 is exactly that shape with:
+
+y² = x³ + 7 mod p
+
+So for curve-coordinate work, Puzzle 135 lives on a Mordell elliptic curve over finite field p, not on ordinary real-coordinate curves like the folium, witch of Agnesi, or cissoid. Your p-paper’s Puzzle 135 target x-coordinate and curve point are aligned with that secp256k1/Mordell form.
+
+Where this matters:
+
+Coordinate side:
+Y² ≡ X³ + 7 mod p
+
+That is where +7 belongs.
+
+But scalar side:
+
+dG = Q
+kG = R
+s*k ≡ m + r*d mod N
+
+That is not Mordell algebra directly. That is scalar multiplication over the group order N.
+
+So the correction is:
+
+Use Mordell curve structure to validate X/Y coordinate behavior over p.
+
+Use ECDSA scalar equation to move between d and k over N.
+
+The mistake was trying to make this coordinate identity:
+
+Px_i ≡ Λ * rx_i mod p
+
+turn directly into:
+
+d ≡ something mod N
+
+But the Mordell curve screenshot reminds us: the bridge between p and N is not ordinary division/multiplication. It is the map:
+
+scalar → scalar * G → point (X,Y)
+
+So the next educated step is:
+
+1. Treat every candidate v as scalar.
+2. Test vG on the curve.
+3. If checking private key: compare vG.x to Puzzle 135 X.
+4. If checking nonce: compare vG.x mod N to r.
+5. Only then use ECDSA to move from k to d.
+
+The screenshot is useful because it says: we are on the Mordell curve for coordinates, but the key lives in scalar orbit. That is the wall we kept hitting.

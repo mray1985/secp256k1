@@ -1,0 +1,24 @@
+========================================================================================
+Sharpened q_x = carry bit of x + (beta*x mod p)
+========================================================================================
+
+  x1 = beta*x mod p
+  q_x = 1 if x+x1 < p else 2
+      = 1 + floor((x+x1)/p)
+  x2 = q_x*p - x - x1
+
+  random: sharp q_x == (x+x1+x2)//p : 10000/10000
+  random: recovered x2 == beta^2*x mod p: 10000/10000
+  random: x+x1+x2 == q_x*p, x2 in [0,p): 10000/10000
+  random: q_x == 1+floor((x+x1)/p):      10000/10000
+  walk x(nG) 1..2048: sharp triple exact: 2048/2048
+
+  equiv: (x+x1<p) <=> (x1+x2<p): 5000/5000
+
+========================================================================================
+VERDICT
+========================================================================================
+  CONFIRMED: q_x is the carry bit of x + (beta*x mod p).
+  Pipeline: x -> x1=(beta*x)%p -> q_x -> x2=q_x*p-x-x1
+  Cost: 1 modmul by beta, 1 compare/add, 1 subtract. No beta^2 mul.
+

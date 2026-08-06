@@ -1,0 +1,55 @@
+{
+  "reports": [
+    {
+      "label": "65-160 all",
+      "n": 24,
+      "r_n_vs_r_over_N": 0.6102092121176961,
+      "r_n_vs_r_bits": 0.48139110288620074,
+      "r_bits_vs_r_over_N": 0.8811162169216525,
+      "partial_n_rN_given_r_bits": -0.4705912557677031,
+      "partial_n_rN_given_log2_n": -0.599008254728766,
+      "perm_within_r_bits_p": 0.078
+    },
+    {
+      "label": "65-160 solved-with-d",
+      "n": 18,
+      "r_n_vs_r_over_N": 0.3164865370417067,
+      "r_n_vs_r_bits": 0.2350342812157438,
+      "r_bits_vs_r_over_N": 0.9137475192763392,
+      "partial_n_rN_given_r_bits": -0.23090804915783286,
+      "partial_n_rN_given_log2_n": -0.31036011567903865,
+      "perm_within_r_bits_p": 0.6323333333333333
+    },
+    {
+      "label": "65-160 independent-tx-only",
+      "n": 4,
+      "note": "too few"
+    },
+    {
+      "label": "65-160 independent+solved",
+      "n": 4,
+      "note": "too few"
+    },
+    {
+      "label": "161-256 sweep",
+      "n": 96,
+      "r_n_vs_r_over_N": 0.041114416051934735,
+      "r_n_vs_r_bits": -0.04244900662569235,
+      "r_bits_vs_r_over_N": 0.8105199082748555,
+      "partial_n_rN_given_r_bits": 0.04541615851186838,
+      "partial_n_rN_given_log2_n": 0.023130674479693608,
+      "perm_within_r_bits_p": 0.65
+    },
+    {
+      "label": "1-64 all",
+      "n": 64,
+      "r_n_vs_r_over_N": 0.21498937163692308,
+      "r_n_vs_r_bits": 0.18196158724430883,
+      "r_bits_vs_r_over_N": 0.7698307122965612,
+      "partial_n_rN_given_r_bits": -0.1772280914416721,
+      "partial_n_rN_given_log2_n": -0.8767252178153142,
+      "perm_within_r_bits_p": 0.029666666666666668
+    }
+  ],
+  "verdict_band_65160": "0.61 survives bit-bucket shuffle \u2014 warrants deeper look (not closed as artifact)"
+}

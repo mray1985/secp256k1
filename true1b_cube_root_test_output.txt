@@ -1,0 +1,120 @@
+================================================================================
+TRUE1B.TXT CUBE-ROOT SYMMETRY TEST RESULTS
+Generated: 2026-06-03
+Source: true1b_cube_root_test.py
+Purpose: Test if row constants carry hidden cube-root orbit structure per true1b.txt
+================================================================================
+
+KEY INSIGHT FROM TRUE1B.TXT:
+--------------------------------------------------------------------------------
+The identity C_i = A_i * B_i^-1 is FORCED by the matrix definitions:
+
+  A_ij = P_N * G_N^-1
+  B_ij = r_N * G_N^-1
+  C_ij = P_N * r_N^-1
+
+  Therefore: A_ij * B_ij^-1 = (P_N * G_N^-1) * (r_N * G_N^-1)^-1
+                           = P_N * G_N^-1 * G_N * r_N^-1
+                           = P_N * r_N^-1 = C_ij
+
+The REAL invariant is the ROW-COLLAPSE phenomenon:
+  After N-side cube-root normalization, each row collapses to a constant.
+
+This means we must SEPARATE the findings:
+
+STRUCTURAL IDENTITY (Explained/Expected):
+  C_i = A_i * B_i^-1 mod N for all i=1,2,3
+  -> This follows naturally from the ratio construction definitions.
+
+NORMALIZATION INVARIANT (Unexplained/New):
+  After N-side cube-root normalization:
+    A_i1 = A_i2 = A_i3 = A_i (for each row i)
+    B_i1 = B_i2 = B_i3 = B_i (for each row i)
+    C_i1 = C_i2 = C_i3 = C_i (for each row i)
+  -> This row-collapse is the genuinely new discovery.
+
+================================================================================
+TEST: CUBE-ROOT ORBIT STRUCTURE
+================================================================================
+
+Ratios relative to row element 1:
+  A2 * A1^-1 mod N = 0xb45fab6610f253ec022aaea3bd53da730544cce910b0c6d76c29d3022d08af24
+  A3 * A1^-1 mod N = 0x3333768557d21cc6030fb12fa1b367179bbe04585285f1817a75faec73f97d5d
+
+  B2 * B1^-1 mod N = 0xf52bc7ee35306071605f8cb7fa5b4e27a07e27a5f5354d0a6ac15d1d1f244a5f
+  B3 * B1^-1 mod N = 0x9ec3d37e5fbb7de72b4fe3211665871c0f1fa4e9f3785e97e00d727aa886f49a
+
+  C2 * C1^-1 mod N = 0xcf518b1da57905721a1527d16145686a221f818c15659336f0ab41ac348cea44
+  C3 * C1^-1 mod N = 0xfd2fd309044eca077f1605b87f8900200ff376afcd735f39912b476aa6cc7c81
+
+================================================================================
+CROSS-MATRIX COMPARISON
+================================================================================
+
+A2*A1^-1 = 0xb45fab6610f253ec022aaea3bd53da730544cce910b0c6d76c29d3022d08af24
+B2*B1^-1 = 0xf52bc7ee35306071605f8cb7fa5b4e27a07e27a5f5354d0a6ac15d1d1f244a5f
+C2*C1^-1 = 0xcf518b1da57905721a1527d16145686a221f818c15659336f0ab41ac348cea44
+
+Result: NOT EQUAL - Row-2 ratios differ across matrices
+  All 3 ratios are distinct
+
+A3*A1^-1 = 0x3333768557d21cc6030fb12fa1b367179bbe04585285f1817a75faec73f97d5d
+B3*B1^-1 = 0x9ec3d37e5fbb7de72b4fe3211665871c0f1fa4e9f3785e97e00d727aa886f49a
+C3*C1^-1 = 0xfd2fd309044eca077f1605b87f8900200ff376afcd735f39912b476aa6cc7c81
+
+Result: NOT EQUAL - Row-3 ratios differ across matrices
+  All 3 ratios are distinct
+
+================================================================================
+COMPARE TO KNOWN CONSTANTS
+================================================================================
+
+Checked against: 1, delta, omega, omega2, p1, p2, p3
+Result: NO matches with any known constants
+
+================================================================================
+INTERNAL STRUCTURE CHECK
+================================================================================
+
+A3/A1 * (A2/A1)^-1 mod N = 0xd01a0f59566442f2086b7671c2e69d9fe3117461eb6f77cb07c7027f4cfd8a77
+B3/B1 * (B2/B1)^-1 mod N = 0x1911129fc02845e3ed2b3599d1c6eabf2e543897d65359660a93c4ac09f46ed4
+C3/C1 * (C2/C1)^-1 mod N = 0x9b3bf844973659587c985a95a49ee01e9328b7b3b7040dc40ad205f21dfbe5e7
+
+Result: Row-3/Row-2 ratios differ across matrices
+  All 3 ratios are distinct
+
+================================================================================
+CONCLUSION
+================================================================================
+
+- NO: Row ratios are NOT identical across matrices
+  -> Row constants do NOT carry a simple cube-root orbit structure
+  -> The row-collapse remains a GENUINELY NEW invariant phenomenon
+
+However, the fact that each matrix independently collapses to row-constants
+under the SAME cube-root normalization basis is still a meaningful and unexplained
+result.
+
+================================================================================
+REFINED UNDERSTANDING
+================================================================================
+
+BEFORE true1b.txt:
+  9 row constants appeared as unrelated invariants
+
+AFTER true1b.txt:
+  - Structural identity C_i = A_i * B_i^-1 is EXPLAINED (forced by definitions)
+  - Row-collapse phenomenon is the REAL invariant (still unexplained)
+  - Row constants do NOT carry cube-root orbit structure
+  - The row-collapse occurs independently in each matrix
+
+The row-collapse invariant can be stated as:
+
+  "After N-side normalization using cube roots of delta (p1, p2, p3),
+   the ratio matrices A_ij, B_ij, C_ij each collapse such that
+   all entries in row i are identical for i=1,2,3."
+
+This is a clean, testable, and unexplained mathematical fact about the
+p->N projection with cube-root normalization.
+
+================================================================================

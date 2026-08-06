@@ -1,0 +1,53 @@
+PUZZLE 160 — SHOOT BRIEF
+========================================================================
+
+TARGET (from hashkeys RSZ — full pubkey, not hash160-only)
+  compressed: 02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+  Px (row 1): 101616124637840542991531253248586524020213215258338643076214814468447630501491
+  Py: 88132823371574229813684435207239348220522140366126834573803505878170136640646
+  band: [730750818665451459101842416358141509827966271488, 1461501637330902918203684832716283019655932542976)
+  1.5x-floor prior: 1096126227998177188652763624537212264741949407232
+
+SPEND (nonce R from signature r)
+  r_sig: 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+  R point: (40567588587096510886779401934085802653423995574119754026847365368948749994020, 93506999776394773977012568374000894735649274226096876119078636851803903807856)
+  rx slot[2] (true kG_x): 40567588587096510886779401934085802653423995574119754026847365368948749994020
+
+BRIDGE (corrected lambda)
+  regression: PASS
+  detail: LAW-P OK, LAW-N OK (heaven rebirth), FAMILY BRIDGE OK
+  epsilon row: 1 (was hardcoded 0 — pubkey is row 1)
+  Lambda_p unified: True
+  shelf2: 1375246597846966813275651299920917694101767310977
+  shelf2 bits: 160
+  shelf2 / floor = 1.881964x
+
+GAP-TIER PRIORS (from P1–P70 + high puzzles)
+  gap=1 -> offset_bits=159  width 2^158
+  gap=2 -> offset_bits=158  width 2^157
+  P115-style H-10 -> ob=150 bits (not seen in P1–P70)
+
+COMPLEMENT m-LEG (N+1 partner, ~2^96)
+  D_BASE = floor((N+1)/2^96)
+  20 KeyHunt windows in puzzle160_keyhunt_bsgs/complement_exports/
+
+RANKED COMPLEMENT WINDOWS (closest to 1.5x-floor prior)
+  run_p160_comp_013_clean_11_eps_16346072691.bat f=0.6245  |df|=0.0395  center=1126542888683233323254665949792539221572272567387
+  run_p160_comp_008_clean_6_eps_212114115920.bat f=0.5292  |df|=0.0557  center=1054601304886752241697263831605029951669396806916
+  run_p160_comp_011_clean_9_grid_1693.bat f=0.6411  |df|=0.0561  center=1139617642013975815235187587466624157313351302882
+  run_p160_comp_014_small_rem_5.bat  f=0.6807  |df|=0.0957  center=1171311781543178512062158975163829804131433351107
+  run_p160_comp_018_small_rem_3.bat  f=0.7220  |df|=0.1371  center=1205362177380791960866532459524416203030698514661
+  run_p160_comp_016_small_rem_4.bat  f=0.4468  |df|=0.1382  center=996025653554917077713473378695473340804626027395
+  run_p160_comp_012_clean_10_eps_27414489625.bat f=0.4163  |df|=0.1686  center=975201273936353513185036750692854736292592702925
+  run_p160_comp_020_small_rem_7.bat  f=0.3935  |df|=0.1914  center=959921193749882981778751593175234318891876312673
+
+NEIGHBOR SOLVED (RSZ band)
+  P130 row=0 gap~3 ob=127 shelf2_bits=130
+
+ATTACK VECTORS (ranked)
+  1. Start with run_p160_comp_013_clean_11_eps_16346072691.bat, run_p160_comp_008_clean_6_eps_212114115920.bat, run_p160_comp_011_clean_9_grid_1693.bat
+  2. Then sweep the rest of the ranked complement windows
+  3. Keep shelf2/gap-tier as a secondary prior; avoid CPU scalar-by-scalar scroll
+
+GATE: d*G == P160  (x=Px row1, y=Py)
+========================================================================

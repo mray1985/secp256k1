@@ -1,0 +1,43 @@
+=== Solve k = s^-1(z + r*d) mod N for all RSZ + solved d ===
+
+P65: k=47198096938572448412586493519997056997382333080753102230902116200392371454045 (255b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 68592d1aa72720ae7333beb3bd9d6a8e69c0567fb91720318c6289d48227c05d
+P70: k=54884353499806060424599324798347397694390029189223893445085636070424818929806 (255b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 79577177c7a329a48d26bcf81b5db9e88b458bf8e76665f3a9ff4ab4f0cad08e
+P75: k=8235300171952886560581201686307287426905544159157327920602166151291662184063 (253b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_odd)  prefer_even=False
+     k_hex = 123503c481722a0b4161fc681b8c786425664c102101a649d665ca788da72e7f
+P80: k=66843170464832548241310577357432546065878926684635502972687603089711661639814 (256b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 93c7e4ce32301e1676eeef686e851d3b84a0174f7e9f0c523df966c96a24e886
+P85: k=11300465011987917527694521106395062281999464664104386990155750190971858601744 (253b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_odd)  prefer_even=False
+     k_hex = 18fbd62747eb6a108af69ae775878af10075590fc534036710c2cb6121a24710
+P90: k=2828323618732566412282741682780857811367163708805410899852579412860838950601 (251b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 0640c641a09b8b28b721f3c861916de8eb1fab230ad5fa33dd0e03739b4936c9
+P95: k=81121462214278078726157069692350691666348859269686313395859218043481650129200 (256b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_odd)  prefer_even=False
+     k_hex = b3591ed9fac56c96f20f13646c6d4a4371c1c34db9126ee203d9ecb823c46930
+P100: k=12107164864847556103224566827231474081368335030183654868671403733078048742431 (253b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 1ac46997d73e24a7167fa8b9825927cb59d23528c69328ce71de3087a8c79c1f
+P105: k=525334796830037726410016499263146623378784129823598031601674611764225983151 (249b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 0129543698812c5d61918bddd6b24712b0d757aecba20a21c7971a3b652142af
+P110: k=91808461286325083467446287269132135872868344114709590230942227665476695407802 (256b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = caf9bf64e2440011a0c52746068da91cb7f9b1e20b0a4ac0816babbb85c4bcba
+P115: k=71396278446561290368727045358794825158546572073240015435572676698333005885418 (256b)  ECDSA=True  match_hashkeys=True  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea
+P120: k=13573823780717044616572733108363070253080616936902949703105175145313273108987 (253b)  ECDSA=True  no published k  kG==R_any=True (y_even)  prefer_even=True
+     k_hex = 1e0283128ecdd93e9f8fa5b63841bacb2da3338f9178e36e29a13d534c1bd9fb
+P125: k=64622881401936118551478493969281891613757227410226785543857026718306428095650 (256b)  ECDSA=True  no published k  kG==R_any=True (y_odd)  prefer_even=False
+     k_hex = 8edf4133b6490e274b8caa8e14ffa139df1b919f785d988dc54b268f0fc98ca2
+P130: k=32882115789541217663266522539770238397656470152456859134490538870103939684786 (255b)  ECDSA=True  no published k  kG==R_any=True (y_odd)  prefer_even=False
+     k_hex = 48b29e355781af91077b51c2a572561c0c99a6b8a8d439fd3bf287bc8d8f19b2
+P135: RSZ present, d unknown — k not solvable from ECDSA
+P140: RSZ present, d unknown — k not solvable from ECDSA
+P145: RSZ present, d unknown — k not solvable from ECDSA
+P150: RSZ present, d unknown — k not solvable from ECDSA
+P155: RSZ present, d unknown — k not solvable from ECDSA
+P160: RSZ present, d unknown — k not solvable from ECDSA
+
+Solved k: 14 puzzles
+ECDSA verify: 14/14
+Match hashkeys published k: 11/11
+k*G == R (any y branch): 14/14
+k*G == R (prefer_even_y only): 9/14
+CSV C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\solve_k_all.csv

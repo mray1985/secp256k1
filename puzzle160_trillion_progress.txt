@@ -1,0 +1,19 @@
+[2026-06-11 15:03:39] Puzzle 160 trillion harvest starting
+[2026-06-11 15:03:39] d-radius=±2,000 m-radius=±2,000 chunk=1,000 workers=4
+[2026-06-11 15:03:39] d-harvest: 12 forward + 8 neg chunks (radius=2,000)
+[2026-06-11 15:03:40]   d_fwd progress 12/12
+[2026-06-11 15:03:40]   d_neg progress 8/8
+[2026-06-11 15:03:40] m anchors: 28
+[2026-06-11 15:03:40] m-harvest: 140 chunks, 28 anchors, radius=±2,000
+[2026-06-11 15:03:40]   m progress 32/140
+[2026-06-11 15:03:40] NO SOLUTION (trillion scan complete or resumed to end)
+[2026-06-11 15:03:49] Puzzle 160 trillion harvest starting
+[2026-06-11 15:03:49] d-radius=±1,000,000,000,000 m-radius=±1,000,000,000,000 chunk=5,000,000 workers=7
+[2026-06-11 15:03:50] d-harvest: 800004 forward + 800000 neg chunks (radius=1,000,000,000,000)
+[2026-06-11 15:35:18]   d_fwd progress 28/800004
+[2026-06-11 16:06:32]   d_fwd progress 56/800004
+[2026-06-11 16:51:56]   d_fwd progress 84/800004
+[2026-06-11 17:20:38]   d_fwd progress 112/800004
+[2026-06-11 17:49:34]   d_fwd progress 140/800004
+[2026-06-11 18:17:54]   d_fwd progress 168/800004
+[2026-06-11 18:46:01]   d_fwd progress 196/800004

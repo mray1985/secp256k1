@@ -1,0 +1,43 @@
+Good — modulo 720 is probably not the classifier for this bridge.
+
+The important correction you caught is the big one:
+
+A(Q)mod720
+
+=((Λmod720)(ymod720))mod720
+
+because:
+
+A(Q)=(Λymodp)
+
+and reducing mod p first changes the later mod-720 residue.
+
+So the useful result is:
+
+sR=zG+rP
+
+and therefore:
+
+A(sR)mod720=A(zG+rP)mod720
+
+which your test confirmed.
+
+But no separate mod-720 signature appeared.
+
+Next step: test residues tied to the actual field mismatch:
+
+A(Q)mod(p−N)
+x
+Q
+	​
+
+mod(p−N)
+y
+Q
+	​
+
+mod(p−N)
+
+for G, P, R, zG, rP, sR, zG+rP.
+
+Since δ=p−N is the confirmed constant, it makes more sense to classify against δ than against 720.

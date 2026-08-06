@@ -1,0 +1,88 @@
+# ============================================================
+# X-FAMILY BRIDGE TEST
+# Tests: B_i = Lambda * rx_i mod p
+# ============================================================
+
+p = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+N = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+delta = p - N
+
+Lambda = 0xd773b315f9871cf943f6f886ad1243bbe9d2130db214dd8ef0504cfedae1049d
+
+# Known target X
+X = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+
+# Fill these in
+rx1 = None
+rx2 = None
+rx3 = 0x397b9a35d79413008d49a032e181d5d7c2db3ef94f33e435b7f042d7e6a332bb
+
+X1 = None
+X2 = None
+X3 = X
+
+rxs = [rx1, rx2, rx3]
+Xs  = [X1, X2, X3]
+
+print("=" * 100)
+print("X-FAMILY BRIDGE TEST")
+print("=" * 100)
+print(f"delta = p-N = {hex(delta)}")
+print()
+
+Bs = []
+
+for i, (rx, x) in enumerate(zip(rxs, Xs), start=1):
+    print(f"--- FAMILY {i} ---")
+
+    if rx is None:
+        print("rx missing")
+        print()
+        continue
+
+    B = (Lambda * rx) % p
+    Bs.append(B)
+
+    print(f"rx{i}              = {hex(rx)}")
+    print(f"B{i}=Lambda*rx{i}  = {hex(B)}")
+
+    if x is not None:
+        print(f"X{i}               = {hex(x)}")
+        print(f"B{i} == X{i}:      {B == x}")
+        print(f"B{i} - X{i} mod p: {hex((B - x) % p)}")
+        print(f"B{i} - X{i} mod N: {hex((B - x) % N)}")
+    else:
+        print(f"X{i} missing")
+
+    print()
+
+print("=" * 100)
+print("FAMILY SUM TESTS")
+print("=" * 100)
+
+valid_rx = [rx for rx in rxs if rx is not None]
+valid_X  = [x for x in Xs if x is not None]
+
+if len(Bs) >= 2:
+    sum_B_p = sum(Bs) % p
+    sum_B_N = sum(Bs) % N
+
+    print(f"sum_B mod p = {hex(sum_B_p)}")
+    print(f"sum_B mod N = {hex(sum_B_N)}")
+    print(f"sum_B mod delta = {hex(sum(Bs) % delta)}")
+
+if len(valid_X) >= 2:
+    sum_X_p = sum(valid_X) % p
+    sum_X_N = sum(valid_X) % N
+
+    print(f"sum_X mod p = {hex(sum_X_p)}")
+    print(f"sum_X mod N = {hex(sum_X_N)}")
+    print(f"sum_X mod delta = {hex(sum(valid_X) % delta)}")
+
+if len(Bs) == len(valid_X) and len(Bs) > 0:
+    print()
+    print(f"sum_B == sum_X mod p: {sum(Bs) % p == sum(valid_X) % p}")
+    print(f"sum_B == sum_X mod N: {sum(Bs) % N == sum(valid_X) % N}")
+
+print()
+print("Run complete.")

@@ -1,0 +1,236 @@
+TAXECC FORWARD CALIBRATION — solved puzzles (known d -> node outputs)
+
+{H}=0.345702  {H/2}=0.172851  I99 pivot=198.95
+puzzles=14
+
+=== P65 ===
+  GENESIS  d=0x1a838b13505b26867  bits=65  in_band=True
+           k=0x68592d1aa72720ae7333beb3bd9d6a8e69c0567fb91720318c6289d48227c05d  bits=255
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.8298  geom_pred=142.0702  log2(k_true)=254.7053
+           gap log2(k)-geom=112.64 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=111.71
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+=== P70 ===
+  GENESIS  d=0x349b84b6431a6c4ef1  bits=70  in_band=True
+           k=0x79577177c7a329a48d26bcf81b5db9e88b458bf8e76665f3a9ff4ab4f0cad08e  bits=255
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.7495  geom_pred=142.1505  log2(k_true)=254.9229
+           gap log2(k)-geom=112.77 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=111.92
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P75 ===
+  GENESIS  d=0x4c5ce114686a1336e07  bits=75  in_band=True
+           k=0x123503c481722a0b4161fc681b8c786425664c102101a649d665ca788da72e7f  bits=253
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.2769  geom_pred=142.6231  log2(k_true)=252.1864
+           gap log2(k)-geom=109.56 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=109.19
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P80 ===
+  GENESIS  d=0xea1a5c66dcc11b5ad180  bits=80  in_band=True
+           k=0x93c7e4ce32301e1676eeef686e851d3b84a0174f7e9f0c523df966c96a24e886  bits=256
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=254.6200  geom_pred=143.2800  log2(k_true)=255.2073
+           gap log2(k)-geom=111.93 bits
+           trailing_zeros(d)=7  zero_span=2^7
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=145  log2_delta=111.21
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+=== P85 ===
+  GENESIS  d=0x11720c4f018d51b8cebba8  bits=85  in_band=True
+           k=0x18fbd62747eb6a108af69ae775878af10075590fc534036710c2cb6121a24710  bits=253
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=251.8085  geom_pred=146.0915  log2(k_true)=252.6429
+           gap log2(k)-geom=106.55 bits
+           trailing_zeros(d)=3  zero_span=2^3
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=148  log2_delta=105.64
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P90 ===
+  GENESIS  d=0x2ce00bb2136a445c71e85bf  bits=90  in_band=True
+           k=0x640c641a09b8b28b721f3c861916de8eb1fab230ad5fa33dd0e03739b4936c9  bits=251
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.3948  geom_pred=142.5052  log2(k_true)=250.6446
+           gap log2(k)-geom=108.14 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=107.64
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P95 ===
+  GENESIS  d=0x527a792b183c7f64a0e8b1f4  bits=95  in_band=True
+           k=0xb3591ed9fac56c96f20f13646c6d4a4371c1c34db9126ee203d9ecb823c46930  bits=256
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.3007  geom_pred=142.5993  log2(k_true)=255.4866
+           gap log2(k)-geom=112.89 bits
+           trailing_zeros(d)=2  zero_span=2^2
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=112.49
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P100 ===
+  GENESIS  d=0xaf55fc59c335c8ec67ed24826  bits=100  in_band=True
+           k=0x1ac46997d73e24a7167fa8b9825927cb59d23528c69328ce71de3087a8c79c1f  bits=253
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.0804  geom_pred=142.8196  log2(k_true)=252.7424
+           gap log2(k)-geom=109.92 bits
+           trailing_zeros(d)=1  zero_span=2^1
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=109.74
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+=== P105 ===
+  GENESIS  d=0x16f14fc2054cd87ee6396b33df3  bits=105  in_band=True
+           k=0x129543698812c5d61918bddd6b24712b0d757aecba20a21c7971a3b652142af  bits=249
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=250.3295  geom_pred=147.5705  log2(k_true)=248.2159
+           gap log2(k)-geom=100.65 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=149  log2_delta=100.22
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+=== P110 ===
+  GENESIS  d=0x35c0d7234df7deb0f20cf7062444  bits=110  in_band=True
+           k=0xcaf9bf64e2440011a0c52746068da91cb7f9b1e20b0a4ac0816babbb85c4bcba  bits=256
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=249.5533  geom_pred=148.3467  log2(k_true)=255.6652
+           gap log2(k)-geom=107.32 bits
+           trailing_zeros(d)=2  zero_span=2^2
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=150  log2_delta=106.67
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P115 ===
+  GENESIS  d=0x60f4d11574f5deee49961d9609ac6  bits=115  in_band=True
+           k=0x9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea  bits=256
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=True  ry=True
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.2809  geom_pred=142.6191  log2(k_true)=255.3024
+           gap log2(k)-geom=112.68 bits
+           trailing_zeros(d)=1  zero_span=2^1
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=112.30
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P120 ===
+  GENESIS  d=0xb10f22572c497a836ea187f2e1fc23  bits=120  in_band=True
+           k=0x1e0283128ecdd93e9f8fa5b63841bacb2da3338f9178e36e29a13d534c1bd9fb  bits=253
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=253.4296  geom_pred=144.4704  log2(k_true)=252.9074
+           gap log2(k)-geom=108.44 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=146  log2_delta=107.91
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=3
+  HEURISTIC d_hits: none
+
+=== P125 ===
+  GENESIS  d=0x1c533b6bb7f0804e09960225e44877ac  bits=125  in_band=True
+           k=0x8edf4133b6490e274b8caa8e14ffa139df1b919f785d988dc54b268f0fc98ca2  bits=256
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=253.3961  geom_pred=144.5039  log2(k_true)=255.1586
+           gap log2(k)-geom=110.65 bits
+           trailing_zeros(d)=2  zero_span=2^2
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=146  log2_delta=110.16
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+=== P130 ===
+  GENESIS  d=0x33e7665705359f04f28b88cf897c603c9  bits=130  in_band=True
+           k=0x48b29e355781af91077b51c2a572561c0c99a6b8a8d439fd3bf287bc8d8f19b2  bits=255
+           d*G match pubkey: x=True  y=True
+           [k]G vs R: rx=False  ry=False
+  SCHEDULE C  d_from_k roundtrip: True
+  SCHEDULE SE pivot I99=198.95
+           log2(ry)=255.4633  geom_pred=142.4367  log2(k_true)=254.1838
+           gap log2(k)-geom=111.75 bits
+           trailing_zeros(d)=0  zero_span=2^0
+           nearest SE cand: [pivot198.95_raw_ceil] k_bits=144  log2_delta=111.18
+  FORM 56  branches=6  hinge=2^floor(H2*134)=9385770
+  SCHEDULE K1  glv=3  cbrt_paths=6
+  HEURISTIC d_hits: none
+
+SUMMARY TABLE
+   P    log2k     geom      gap  k_bits  d_bits
+P 65   254.71   142.07   112.64     255      65
+P 70   254.92   142.15   112.77     255      70
+P 75   252.19   142.62   109.56     253      75
+P 80   255.21   143.28   111.93     256      80
+P 85   252.64   146.09   106.55     253      85
+P 90   250.64   142.51   108.14     251      90
+P 95   255.49   142.60   112.89     256      95
+P100   252.74   142.82   109.92     253     100
+P105   248.22   147.57   100.65     249     105
+P110   255.67   148.35   107.32     256     110
+P115   255.30   142.62   112.68     256     115
+P120   252.91   144.47   108.44     253     120
+P125   255.16   144.50   110.65     256     125
+P130   254.18   142.44   111.75     255     130
+
+mean SE gap (log2 k - geom_pred): 109.71 bits
+Schedule C roundtrips on all solved: YES (algebra)
+Schedule SE arrests true k: NO on all tested
+

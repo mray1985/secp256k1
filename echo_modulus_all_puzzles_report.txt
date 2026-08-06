@@ -1,0 +1,109 @@
+ECHO MODULUS ALL-PUZZLES REPORT
+  m = int( C^(n/256) ),  C = (x^3+7) mod p,  n = puzzle height (bit width)
+  puzzles processed: 88
+
+AGGREGATE
+  x-side dominates (x hits > y hits): 28/88
+  x-side only (>=1 x-hit, 0 y-hit):   16/88
+  P135-style (3 x-side in band, 0 y): 1/88
+  any EC match (in-band d*G=P):       0
+  any residue == known d (solved):  0
+
+Per-residue in-band counts:
+  x_mod_m        36
+  x_inv_mod_m    23
+  C_inv_mod_m    30
+  y_mod_m        34
+  y_inv_mod_m    25
+  C_mod_m        31
+
+PER PUZZLE
+
+P  1  m=1  x=0 y=0  in_band=none  -
+P  2  m=3  x=2 y=2  in_band=x_mod_m,x_inv_mod_m,y_mod_m,y_inv_mod_m  -
+P  3  m=7  x=1 y=0  in_band=x_inv_mod_m  x-only
+P  4  m=15  x=0 y=2  in_band=y_mod_m,y_inv_mod_m  -
+P  5  m=31  x=2 y=2  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m,y_inv_mod_m  -
+P  6  m=62  x=1 y=2  in_band=x_mod_m,y_mod_m,y_inv_mod_m  -
+P  7  m=127  x=1 y=1  in_band=x_mod_m,y_mod_m  -
+P  8  m=238  x=0 y=3  in_band=y_mod_m,y_inv_mod_m,C_mod_m  -
+P  9  m=447  x=0 y=2  in_band=y_mod_m,y_inv_mod_m  -
+P 10  m=979  x=1 y=2  in_band=C_inv_mod_m,y_inv_mod_m,C_mod_m  -
+P 11  m=1926  x=2 y=1  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m  -
+P 12  m=4091  x=1 y=2  in_band=x_inv_mod_m,y_inv_mod_m,C_mod_m  -
+P 13  m=8154  x=3 y=1  in_band=x_mod_m,x_inv_mod_m,C_inv_mod_m,C_mod_m  -
+P 14  m=15111  x=0 y=0  in_band=none  -
+P 15  m=32279  x=2 y=2  in_band=x_mod_m,x_inv_mod_m,y_mod_m,y_inv_mod_m  -
+P 16  m=49433  x=1 y=3  in_band=x_mod_m,y_mod_m,y_inv_mod_m,C_mod_m  -
+P 17  m=129182  x=1 y=2  in_band=x_mod_m,y_mod_m,C_mod_m  -
+P 18  m=257020  x=1 y=1  in_band=x_mod_m,C_mod_m  -
+P 19  m=515837  x=2 y=2  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m,y_inv_mod_m  -
+P 20  m=1037322  x=1 y=0  in_band=x_mod_m  x-only
+P 21  m=1876485  x=1 y=0  in_band=x_mod_m  x-only
+P 22  m=4130545  x=3 y=3  in_band=x_mod_m,x_inv_mod_m,C_inv_mod_m,y_mod_m,y_inv_mod_m,C_mod_m  -
+P 23  m=6308157  x=0 y=0  in_band=none  -
+P 24  m=15912627  x=3 y=2  in_band=x_mod_m,x_inv_mod_m,C_inv_mod_m,y_mod_m,C_mod_m  -
+P 25  m=32434249  x=1 y=1  in_band=x_inv_mod_m,C_mod_m  -
+P 26  m=63299444  x=0 y=0  in_band=none  -
+P 27  m=95212988  x=0 y=2  in_band=y_inv_mod_m,C_mod_m  -
+P 28  m=252499775  x=0 y=3  in_band=y_mod_m,y_inv_mod_m,C_mod_m  -
+P 29  m=496186128  x=1 y=0  in_band=C_inv_mod_m  x-only
+P 30  m=987167989  x=2 y=1  in_band=x_inv_mod_m,C_inv_mod_m,C_mod_m  -
+P 31  m=1524428309  x=2 y=1  in_band=x_mod_m,x_inv_mod_m,y_mod_m  -
+P 32  m=3584609309  x=2 y=1  in_band=x_mod_m,C_inv_mod_m,C_mod_m  -
+P 33  m=4878890553  x=0 y=1  in_band=y_inv_mod_m  -
+P 34  m=14369766284  x=1 y=0  in_band=C_inv_mod_m  x-only
+P 35  m=29453120973  x=1 y=1  in_band=x_inv_mod_m,C_mod_m  -
+P 36  m=64327705825  x=1 y=0  in_band=C_inv_mod_m  x-only
+P 37  m=135737011925  x=1 y=1  in_band=C_inv_mod_m,y_inv_mod_m  -
+P 38  m=260729519152  x=1 y=3  in_band=C_inv_mod_m,y_mod_m,y_inv_mod_m,C_mod_m  -
+P 39  m=472859370866  x=2 y=1  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m  -
+P 40  m=697731721825  x=0 y=0  in_band=none  -
+P 41  m=2137339092995  x=2 y=1  in_band=x_mod_m,C_inv_mod_m,C_mod_m  -
+P 42  m=3379260555104  x=1 y=0  in_band=x_mod_m  x-only
+P 43  m=8231681146495  x=1 y=0  in_band=C_inv_mod_m  x-only
+P 44  m=16977104956667  x=0 y=0  in_band=none  -
+P 45  m=32832457970634  x=2 y=1  in_band=x_mod_m,C_inv_mod_m,C_mod_m  -
+P 46  m=59399366818320  x=1 y=0  in_band=x_mod_m  x-only
+P 47  m=134156800910528  x=2 y=1  in_band=x_mod_m,C_inv_mod_m,C_mod_m  -
+P 48  m=277875072250411  x=0 y=2  in_band=y_mod_m,C_mod_m  -
+P 49  m=402774861475214  x=0 y=0  in_band=none  -
+P 50  m=1026425154019560  x=1 y=1  in_band=x_mod_m,y_mod_m  -
+P 51  m=1509007311159354  x=1 y=0  in_band=x_mod_m  x-only
+P 52  m=3848413364314001  x=2 y=2  in_band=x_mod_m,C_inv_mod_m,y_mod_m,C_mod_m  -
+P 53  m=7147327573388183  x=1 y=3  in_band=C_inv_mod_m,y_mod_m,y_inv_mod_m,C_mod_m  -
+P 54  m=9324313939132220  x=0 y=0  in_band=none  -
+P 55  m=27822008626383821  x=0 y=2  in_band=y_mod_m,C_mod_m  -
+P 56  m=35671233876454092  x=0 y=0  in_band=none  -
+P 57  m=124562544917157047  x=1 y=1  in_band=x_inv_mod_m,y_mod_m  -
+P 58  m=243559492118453359  x=1 y=1  in_band=x_mod_m,y_inv_mod_m  -
+P 59  m=471362915556412362  x=2 y=1  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m  -
+P 60  m=934183145232700343  x=2 y=0  in_band=x_mod_m,C_inv_mod_m  x-only
+P 61  m=2186282959188923016  x=0 y=0  in_band=none  -
+P 62  m=4045801468344205078  x=1 y=1  in_band=x_mod_m,y_inv_mod_m  -
+P 63  m=8928262016312692577  x=2 y=2  in_band=x_inv_mod_m,C_inv_mod_m,y_mod_m,y_inv_mod_m  -
+P 64  m=15688147117359557805  x=2 y=2  in_band=x_mod_m,x_inv_mod_m,y_mod_m,C_mod_m  -
+P 65  m=21549007732033572446  x=0 y=0  in_band=none  -
+P 66  m=60391596844557219456  x=0 y=1  in_band=y_mod_m  -
+P 67  m=118445971437596047100  x=1 y=1  in_band=x_mod_m,C_mod_m  -
+P 68  m=282761401662550106018  x=0 y=0  in_band=none  -
+P 69  m=580939172025805833884  x=0 y=2  in_band=y_mod_m,C_mod_m  -
+P 70  m=889729954408952988444  x=1 y=0  in_band=x_mod_m  x-only
+P 75  m=33006887677271111763342  x=1 y=2  in_band=x_mod_m,y_mod_m,y_inv_mod_m  -
+P 80  m=663698960353605933201138  x=0 y=0  in_band=none  -
+P 85  m=26512552159132401751977126  x=0 y=1  in_band=C_mod_m  -
+P 90  m=1190248343390837329773723283  x=1 y=3  in_band=x_mod_m,y_mod_m,y_inv_mod_m,C_mod_m  -
+P 95  m=16990688189936318147771850938  x=0 y=0  in_band=none  -
+P100  m=878861231327869556279563523299  x=1 y=0  in_band=x_inv_mod_m  x-only
+P105  m=34079628392242027245430034802353  x=3 y=1  in_band=x_mod_m,x_inv_mod_m,C_inv_mod_m,y_mod_m  -
+P110  m=1197179348626045233549175899533105  x=1 y=1  in_band=C_inv_mod_m,y_mod_m  -
+P115  m=31508267611517152514477578835188374  x=0 y=0  in_band=none  -
+P120  m=1194013284959993355213705798532430343  x=1 y=2  in_band=x_mod_m,y_mod_m,C_mod_m  -
+P125  m=38298517764902131880839829471816968583  x=1 y=1  in_band=C_inv_mod_m,y_inv_mod_m  -
+P130  m=1115819624846127730564408631562585837995  x=2 y=0  in_band=x_mod_m,x_inv_mod_m  x-only
+P135  m=35883159410670495955909009950774262134599  x=3 y=0  in_band=x_mod_m,x_inv_mod_m,C_inv_mod_m  P135-style
+P140  m=282629403514389560849275275332266774925448  x=0 y=0  in_band=none  -
+P145  m=25678529751669149136339987483995336311141447  x=1 y=1  in_band=x_mod_m,C_mod_m  -
+P150  m=466780428640662450346905785141297339788372750  x=0 y=0  in_band=none  -
+P155  m=45425643826444560670178361447011085519190322078  x=1 y=2  in_band=C_inv_mod_m,y_inv_mod_m,C_mod_m  -
+P160  m=1324600947747598442829921712661911741633439143126  x=2 y=0  in_band=x_mod_m,C_inv_mod_m  x-only

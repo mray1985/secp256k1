@@ -1,0 +1,63 @@
+PROJECTION-DEFECT FINGERPRINT: BOUNDARY REFLECTION RATIOS
+======================================================================
+
+SET 1 (N-domain boundary reflections):
+----------------------------------------
+( N - 2^134 ) / ( N - 2^135 ) = 1.000000000000000000000000000000000000188079096131566001274997845955559308521733
+( N - 2^135 ) / ( N - 2^134 ) = 0.999999999999999999999999999999999999811920903868433998725002154044440691512937
+( N - 2^134 ) / N                 = 0.999999999999999999999999999999999999811920903868433998725002154044440691548311
+( N - 2^135 ) / N                 = 0.999999999999999999999999999999999999623841807736867997450004308088881383096622
+
+SET 2 (p-domain boundary reflections):
+----------------------------------------
+( p - 2^134 ) / ( p - 2^135 ) = 0.999999999999999999999999999999999999811920903868433998725002154044440691513639
+( p - 2^135 ) / ( p - 2^134 ) = 0.999999999999999999999999999999999999808186448523393864572242571496460136455008
+( p - 2^134 ) / p                 = 0.999999999999999999999999999999999999620107352391827863297244725540900828004021
+( p - 2^135 ) / p                 = 0.999999999999999999999999999999999999623841807736867997450004308088881383096622
+
+WHAT THEY HAVE IN COMMON:
+========================
+
+1. BOUNDARY REFLECTION STRUCTURE
+   Both sets measure distances from the field/group boundary (p or N)
+   to the Puzzle 135 search interval [2^134, 2^135).
+
+2. ENCODE THE DELTA DEFECT (δ = p - N)
+   The difference between corresponding ratios isolates δ:
+   
+   F_n = ((p - 2^n)/p) - ((N - 2^n)/N) = 2^n * δ / (p * N)
+   
+   This is the PROJECTION-DEFECT FINGERPRINT from TRUE75.
+
+3. CROSS-RATIO CONSISTENCY
+   Notice that:
+   - (N - 2^134)/(N - 2^135) ≈ 1 / (N - 2^135)/(N - 2^134)  [reciprocal relationship]
+   - (p - 2^134)/(p - 2^135) ≈ 1 / (p - 2^135)/(p - 2^134)  [reciprocal relationship]
+   
+   And the ratio of p-domain to N-domain ratios encodes δ:
+   
+   (p - 2^n)/p ÷ (N - 2^n)/N = 1 + (2^n * δ) / (N * (p - 2^n))
+
+4. PUZZLE 135 BOUNDARY SIGNATURE
+   These ratios form a unique "fingerprint" for the Puzzle 135 boundary.
+   The tiny differences between N-domain and p-domain ratios are entirely
+   due to the projection defect δ = p - N.
+
+5. APPLICATION TO SOLVING
+   From TRUE75: "bag it, glue-fume it, lift the print"
+   
+   The fingerprint allows us to:
+   - Distinguish N-domain coordinates from p-domain coordinates
+   - Verify when a value has crossed the projection boundary
+   - Track the δ influence through modular arithmetic
+
+CONCLUSION:
+===========
+These are BOUNDARY REFLECTION RATIOS that encode the projection defect δ
+at the Puzzle 135 search interval. The pattern of near-1 values with tiny
+devations is the signature of δ amplifying through the 2^134 and 2^135 scale.
+
+The commonality: All eight values are boundary-distance ratios for the same
+search interval [2^134, 2^135), split between the N-domain and p-domain.
+
+This is the extracted "projection-defect fingerprint" that TRUE75 identified.

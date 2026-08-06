@@ -1,0 +1,6 @@
+P135 u-flip exhaustive corridor
+U=20962014851359949581252061
+m=[1038930257294765, 2077860514589528]
+mode=bsgs upper_half=True
+
+no hit (entire requested corridor covered)

@@ -1,0 +1,31 @@
+SCHEDULE PIPELINE V2 (hinge + wide R_base sweep)
+PIVOT_I99=198.95  CORR_142=2^142  c in [-32,32]
+HINGE=24 bits  {H/2}=0.172851
+
+=== P115 CALIBRATION LOCK ===
+ry_source == R_true: True
+rx_match: True
+ry_match: True
+k0 + d*dk == k: True
+HINGE bits=24  {H/2}=0.172851
+
+=== P115 EXPANDED SWEEP ===
+P115 candidates=2480 gen_full=0 ctrl_full=1
+  best_gen=n_bits|k0+gp*dk score=2/5
+  CTRL OK algebra_d|k0+gp*dk (algebra d)
+
+=== BLIND P70-P125 ===
+  no blind full-score wins
+
+=== BLIND NEAR-MISS (score 4/5) ===
+  none
+
+=== P135 (generated only, no ground truth) ===
+P135 candidates=2400 gen_full=0 ctrl_full=0
+  best_gen=n_bits|k0+gp*dk score=2/5
+  top generated:
+    2/5 n_bits|k0+gp*dk rx=False ry=False pub=False band=True
+    2/5 n_bits|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True
+    2/5 n_bits|k0+(gp+2^H2n)*dk rx=False ry=False pub=False band=True
+    2/5 n_bits+hinge|k0+gp*dk rx=False ry=False pub=False band=True
+    2/5 n_bits+hinge|k0+(gp+hinge)*dk rx=False ry=False pub=False band=True

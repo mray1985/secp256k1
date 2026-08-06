@@ -1,0 +1,520 @@
+PRIVATE KEY d -> HASH160 -> ADDRESS (solved puzzles)
+
+Pipeline:
+  1. P = d * G  (secp256k1 scalar multiply)
+  2. compressed pubkey = (02 if y even else 03) || x  (33 bytes)
+  3. sha256 = SHA256(compressed pubkey)
+  4. hash160 = RIPEMD160(sha256)   [NOT RIPEMD160(d)]
+  5. payload = 0x00 || hash160 || checksum4
+  6. address = Base58Check(payload)
+
+solved keys: 82
+
+=== summary table ===
+
+   P bits d_t3  y%2    h160..4  h160_t4 addr_head4                                 addr
+P  1    1    1    e       751e     3bd6       1BgG   1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH
+P  2    2    3    e       7dd6     93dc       1CUN   1CUNEBjYrCn2y1SdiUMohaKUi4wpP326Lb
+P  3    3    7    e       5ded     3f69       19Ze   19ZewH8Kk1PDbSNdJ97FP4EiCjTRaZMZQA
+P  4    4    8    e       9652     8127       1Ehq   1EhqbyUMvvs7BfL8goY6qcPbD6YKfPqb7e
+P  5    5   21    e       8f9d     2be8       1E6N   1E6NuFjCi27W5zoXg8TRdcSRq84zJeBW3k
+P  6    6   49    o       f93e     b45c       1Pit   1PitScNLyp2HCygzadCh7FveTnfmpPbfp8
+P  7    7   76    e       e219     a973       1McV   1McVt1vMtCC7yn5b9wgX1833yCcLXzueeC
+P  8    8  224    o       dce7     1715       1M92   1M92tSqNmQLYw33fuBvjmeadirh1ysMBxK
+P  9    9  467    e       7d0f     aab4       1CQF   1CQFwcjw1dwhtkVWBttNLDtqL7ivBonGPV
+P 10   10  514    o       d772     c93b       1LeB   1LeBZP5QCwwgXRtmVUvTVrraqPUokyLHqe
+P 11   11  155    o       f8c6     5acc       1PgQ   1PgQVLmst3Z314JrQn5TNiys8Hc38TcXJu
+P 12   12  683    o       85a1     f971       1DBa   1DBaumZxUkM4qMQRt2LVWyFJq5kDtSZQot
+P 13   13  216    o       f932     921e       1Pie   1Pie8JkxBT6MGPz9Nvi3fsPkr2D8q3GBc1
+P 14   14  544    o       97f9     f655       1ErZ   1ErZWg5cFCe4Vw5BzgfzB74VNLaXEiEkhk
+P 15   15  867    e       fe7c     e2a2       1QCb   1QCbW9HWnwQWiQqVo5exhAnmfqKRrCRsvW
+P 16   16  510    e       7025     e3dd       1BDy   1BDyrQ6WoF8VN3g9SAS1iKZcPzFfnDVieY
+P 17   17  823    o       b67c     2d52       1Hdu   1HduPEXZRdG26SUT5Yk83mLkPyjnZuJ7Bm
+P 18   18  669    e       ad1e     3f94       1GnN   1GnNTmTVLZiqQfLbAdp9DVdicEnB5GoERE
+P 19   19  535    o       ebfb     7dee       1NWm   1NWmZRpHH4XSPwsW6dsS3nrNWfL1yrJj4w
+P 20   20  317    o       b907     2868       1HsM   1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum
+P 21   21  764    o       29a7     4f56       14oF   14oFNXucftsHiUMY8uctg6N487riuyXs4h
+P 22   22  503    e       7ff4     b86b       1CfZ   1CfZWK1QTQE3eS9qn61dQjV89KDjZzfNcv
+P 23   23  802    o       d0a7     579e       1L2G   1L2GM8eE7mJWLdo3HZS6su1832NX2txaac
+P 24   24  676    o       0959     9e2f       1rSn    1rSnXMr63jdCuegJFuidJqWxUPV7AtUf7
+P 25   25  509    o       2f39     3dbb       15Jh   15JhYXn6Mx3oF4Y7PcTAv2wVVAuCFFQNiP
+P 26   26  862    e       bfeb     792f       1JVn   1JVnST957hGztonaWK6FougdtjxzHzRMMg
+P 27   27  941    o       0c7a     5560       128z   128z5d7nN7PkCuX5qoA4Ys6pmxUYnEy86k
+P 28   28  408    o       1306     b1da       12jb   12jbtzBb54r97TCwW3G1gCFoumpckRAPdY
+P 29   29  894    e       5a41     adec       19EE   19EEC52krRUK1RkUAEZmQdjTyHT7Gp1TYT
+P 30   30  084    o       d39c     8a08       1LHt   1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps
+P 31   31  551    o       d805     2f1d       1LhE   1LhE6sCTuGae42Axu1L1ZB7L96yi9irEBE
+P 32   32  814    e       9e42     fdc9       1FRo   1FRoHA9xewq7DjrZ1psWJVeTer8gHRqEvR
+P 33   33  912    o       4e15     3977       187s   187swFMjz1G54ycVU56B7jZFHFTNVQFDiu
+P 34   34  157    o       f6d6     1bfa       1PWA   1PWABE7oUahG2AFFQhhvViQovnCr4rEv7Q
+P 35   35  792    e       f6d8     df25       1PWC   1PWCx5fovoEaoBowAvF5k91m2Xat9bMgwb
+P 36   36  980    e       74b1     3d37       1Be2   1Be2UF9NLfyLFbtm3TCbmuocc9N1Kduci1
+P 37   37  595    e       28c3     021d       14iX   14iXhn8bGajVWegZHJ18vJLHhntcpL4dex
+P 38   38  592    o       b190     9364       1HBt   1HBtApAFA9B2YZw3G2YKSMCtb3dVnjuNe2
+P 39   39  937    e       0b30     0876       122A   122AJhKLEfkFBaGAd84pLp1kfE7xK3GdT8
+P 40   40  950    o       95a1     a82a       1EeA   1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv
+P 41   41  147    o       d156     2329       1L5s   1L5sU9qvJeuwQUdt4y1eiLmquFxKjtHr3E
+P 42   42  463    o       8efb     ae23       1E32   1E32GPWgDyeyQac4aJxm9HVoLrrEYPnM4N
+P 43   43  825    e       f920     86f7       1PiF   1PiFuqGpG8yGM5v6rNHWS3TjsG6awgEGA1
+P 44   44  071    e       80df     791e       1CkR   1CkR2uS7LmFwc3T2jV8C1BhWb5mQaoxedF
+P 45   45  597    e       f022     0753       1Nti   1NtiLNGegHWE3Mp9g2JPkgx6wUg4TW7bbk
+P 46   46  612    o       9a01     5dac       1F3J   1F3JRMWudBaj48EhwcHDdpeuy2jwACNxjP
+P 47   47  170    e       f828     07d4       1Pd8   1Pd8VvT49sHKsmqrQiP61RsVwmXCZ6ay7Z
+P 48   48  443    e       8661     a2b2       1DFY   1DFYhaB2J9q1LLZJWKTnscPWos9VBqDHzv
+P 49   49  525    e       0d2f     fdf3       12Ci   12CiUhYVTTH33w3SPUBqcpMoqnApAV4WCF
+P 50   50  764    o       de08     6a47       1MEz   1MEzite4ReNuWaL5Ds17ePKt2dCxWEofwk
+P 51   51  876    e       ef64     dbe7       1Npn   1NpnQyZ7x24ud82b7WiRNvPm6N8bqGQnaS
+P 52   52  700    o       36af     3ae7       15z9   15z9c9sVpu6fwNiK7dMAFgMYSK4GqsGZim
+P 53   53  124    e       2f48     9551       15K1   15K1YKJMiJ4fpesTVUcByoz334rHmknxmT
+P 54   54  707    o       cb66     a092       1KYU   1KYUv7nSvXx4642TKeuC2SNdTk326uUpFy
+P 55   55  460    o       db53     2fa2       1Lzh   1LzhS3k3e9Ub8i2W1V8xQFdB8n2MYCHPCa
+P 56   56  575    o       4821     cccd       17aP   17aPYR1m6pVAacXg1PTDDU7XafvK1dxvhi
+P 57   57  492    e       3286     c2a1       15c9   15c9mPGLku1HuW9LRtBf4jcHVpBUt8txKz
+P 58   58  049    o       8c2a     a60f       1Dn8   1Dn8NF8qDyyfHMktmuoQLGyjWmZXgvosXf
+P 59   59  191    e       b14e     0210       1HAX   1HAX2n9Uruu9YDt4cqRgYcvtGvZj1rbUyt
+P 60   60  382    o       cdf8     b9c5       1Kn5   1Kn5h2qpgw9mWE5jKpk8PP4qvvJ1QVy8su
+P 61   61  982    e       6813     0cbd       1AVJ   1AVJKwzs9AskraJLGHAZPiaZcrpDr1U6AB
+P 62   62  062    o       e266     b779       1Me6   1Me6EfpwZK5kQziBwBfvLiHjaPGxCKLoJi
+P 63   63  768    o       ef58     c50e       1NpY   1NpYjtLira16LfGbGwZJ5JbDPh3ai9bjf4
+P 64   64  628    o       3ee4     48a4       16jY   16jY7qLJnxb7CHZyqBP8qca9d51gAjyXQN
+P 65   65  855    e       52e7     0137       18ZM   18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe
+P 66   66  726    e       20d4     b8a5       13zb   13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so
+P 67   67  302    e       7394     9371       1BY8   1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9
+P 68   68  825    o       e0b8     8cfc       1MVD   1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ
+P 69   69  804    e       61eb     d5aa       19vk   19vkiEajfhuZ8bs8Zu2jgmC6oqZbWqhxhG
+P 70   70  481    e       5db8     1b10       19YZ   19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR
+P 75   75  367    o       badf     e5cf       1J36   1J36UjUByGroXcCvmj13U6uwaVv9caEeAt
+P 80   80  456    o       6fe5     6fab       1BCf   1BCf6rHUW6m3iH2ptsvnjgLruAiPQQepLe
+P 85   85  920    o       cd03     c281       1Kh2   1Kh22PvXERd2xpTQk3ur6pPEqFeckCJfAr
+P 90   90  863    o       d06b     674b       1L12   1L12FHH2FHjvTviyanuiFVfmzCy46RRATU
+P 95   95  212    e       5ed8     6d88       19eV   19eVSDuizydXxhohGh8Ki9WY9KsHdSwoQC
+P100  100  142    o       c7a7     bc6e       1KCg   1KCgMv8fo2TPBpddVi9jqmMmcne9uSNJ5F
+P105  105  435    o       7c95     50b0       1CMj   1CMjscKB3QW7SDyQ4c3C3DEUHiHRhiZVib
+P110  110  748    o       0e5f     f207       12Jz   12JzYkkN76xkwvcPT6AWKZtGX6w2LAgsJg
+P115  115  950    e       ea0f     39a4       1NLb   1NLbHuJebVwUZ1XqDjsAyfTRUPwDQbemfv
+P120  120  323    e       4b46     308e       17s2   17s2b9ksz5y7abUm92cHwG8jEPCzK3dLnT
+P125  125  420    e       f707     5fc8       1PXA   1PXAyUB8ZoH3WD8n5zoAthYjN15yN5CVq5
+P130  130  577    o       a249     cf75       1Fo6   1Fo65aKq8s8iquMt6weF1rku1moWVEd5Ua
+
+=== step-by-step (P1..P20) ===
+
+--- P1 ---
+  d (dec)     = 1
+  d (hex)     = 1
+  d*G         px = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+              py = 32670510020758816978083085130507043184471273380659243275938904335757337482424  (even)
+  compressed  = 0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798
+  SHA256      = 0f715baf5d4c2ed329785cef29e562f73488c8a2bb9dbc5700b361d54b9b0554
+  hash160     = 751e76e8199196d454941c45d1b3a323f1433bd6
+  checksum    = 510d1634
+  address     = 1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH
+  53125 match px=True py=True
+
+--- P2 ---
+  d (dec)     = 3
+  d (hex)     = 3
+  d*G         px = 112711660439710606056748659173929673102114977341539408544630613555209775888121
+              py = 25583027980570883691656905877401976406448868254816295069919888960541586679410  (even)
+  compressed  = 02f9308a019258c31049344f85f89d5229b531c845836f99b08601f113bce036f9
+  SHA256      = eae10cdd2f289bdad44615809cb422d2fabe9622ed706ad5d9d3ffd2cdd1c001
+  hash160     = 7dd65592d0ab2fe0d0257d571abf032cd9db93dc
+  checksum    = ac074bec
+  address     = 1CUNEBjYrCn2y1SdiUMohaKUi4wpP326Lb
+  53125 match px=True py=True
+
+--- P3 ---
+  d (dec)     = 7
+  d (hex)     = 7
+  d*G         px = 41948375291644419605210209193538855353224492619856392092318293986323063962044
+              py = 48361766907851246668144012348516735800090617714386977531302791340517493990618  (even)
+  compressed  = 025cbdf0646e5db4eaa398f365f2ea7a0e3d419b7e0330e39ce92bddedcac4f9bc
+  SHA256      = a2039429ca2d2f2bcc0725a1682aeeeb3ac1b8e77248c34fa57fcdef29d01c53
+  hash160     = 5dedfbf9ea599dd4e3ca6a80b333c472fd0b3f69
+  checksum    = 40910b7f
+  address     = 19ZewH8Kk1PDbSNdJ97FP4EiCjTRaZMZQA
+  53125 match px=True py=True
+
+--- P4 ---
+  d (dec)     = 8
+  d (hex)     = 8
+  d*G         px = 21262057306151627953595685090280431278183829487175876377991189246716355947009
+              py = 41749993296225487051377864631615517161996906063147759678534462689479575333124  (even)
+  compressed  = 022f01e5e15cca351daff3843fb70f3c2f0a1bdd05e5af888a67784ef3e10a2a01
+  SHA256      = be2b01947193835b2a70e0bed841b4dd8926e75f6a7427ba3d90a1774beacac6
+  hash160     = 9652d86bedf43ad264362e6e6eba6eb764508127
+  checksum    = 4e02d7e9
+  address     = 1EhqbyUMvvs7BfL8goY6qcPbD6YKfPqb7e
+  53125 match px=True py=True
+
+--- P5 ---
+  d (dec)     = 21
+  d (hex)     = 15
+  d*G         px = 24049875635381557237058143631624836741422505207761609709712554171343558302165
+              py = 22669890352939653242079781319904043788036611953081321775127194249638113810828  (even)
+  compressed  = 02352bbf4a4cdd12564f93fa332ce333301d9ad40271f8107181340aef25be59d5
+  SHA256      = e846c2c3a5c927c9d23d5aa249c838a91256174db96c61c9e5d340aaae9962e6
+  hash160     = 8f9dff39a81ee4abcbad2ad8bafff090415a2be8
+  checksum    = c13898f3
+  address     = 1E6NuFjCi27W5zoXg8TRdcSRq84zJeBW3k
+  53125 match px=True py=True
+
+--- P6 ---
+  d (dec)     = 49
+  d (hex)     = 31
+  d*G         px = 109846273198995465046214558810696509369395695668678477567979041624391316796720
+              py = 101711840700253487202274292900077312932162220876743713596510869779955653950519  (odd)
+  compressed  = 03f2dac991cc4ce4b9ea44887e5c7c0bce58c80074ab9d4dbaeb28531b7739f530
+  SHA256      = 5d80f01b950b9ec98536759b4b28ceadf4a4fe915642d26d0a0f42efdc16c890
+  hash160     = f93ec34e9e34a8f8ff7d600cdad83047b1bcb45c
+  checksum    = 7c419e15
+  address     = 1PitScNLyp2HCygzadCh7FveTnfmpPbfp8
+  53125 match px=True py=True
+
+--- P7 ---
+  d (dec)     = 76
+  d (hex)     = 4c
+  d*G         px = 67990777350807742601404023085488753338978132210207570380931332031538910989091
+              py = 85792528080009126161701413187313528408286619337671538805045464108358228475888  (even)
+  compressed  = 0296516a8f65774275278d0d7420a88df0ac44bd64c7bae07c3fe397c5b3300b23
+  SHA256      = 23d30f8a53167344dca3344e2f526ecfe952b22ec53f485fcb79c32be8ff7d12
+  hash160     = e2192e8a7dd8dd1c88321959b477968b941aa973
+  checksum    = 4f595951
+  address     = 1McVt1vMtCC7yn5b9wgX1833yCcLXzueeC
+  53125 match px=True py=True
+
+--- P8 ---
+  d (dec)     = 224
+  d (hex)     = e0
+  d*G         px = 3951620832557057103848397037937330228967155552456836977045923180329637950740
+              py = 95473263819178136898129622939316779429655166328021079992747693728567241822551  (odd)
+  compressed  = 0308bc89c2f919ed158885c35600844d49890905c79b357322609c45706ce6b514
+  SHA256      = 557f3f82c4ee71eb63b44b4c982c5284b28c48ec720dbce50262f780b9065190
+  hash160     = dce76b2613052ea012204404a97b3c25eac31715
+  checksum    = 5d79aa30
+  address     = 1M92tSqNmQLYw33fuBvjmeadirh1ysMBxK
+  53125 match px=True py=True
+
+--- P9 ---
+  d (dec)     = 467
+  d (hex)     = 1d3
+  d*G         px = 30474780960141219921807662305060768687772753653098971817340717083315339616503
+              py = 61319752531495161980867220483083814171916864550579329528527835522023988931626  (even)
+  compressed  = 0243601d61c836387485e9514ab5c8924dd2cfd466af34ac95002727e1659d60f7
+  SHA256      = bd6e9f3debd48aae95e11c2b883fe21ace4b0860ea5676b5e05072405dae18ae
+  hash160     = 7d0f6c64afb419bbd7e971e943d7404b0e0daab4
+  checksum    = 89291a1c
+  address     = 1CQFwcjw1dwhtkVWBttNLDtqL7ivBonGPV
+  53125 match px=True py=True
+
+--- P10 ---
+  d (dec)     = 514
+  d (hex)     = 202
+  d*G         px = 75827354541827746090915769557428734838962266972502112805530189196736906960333
+              py = 96570036462163023759491147881411408314153451204876534252590428078766327205003  (odd)
+  compressed  = 03a7a4c30291ac1db24b4ab00c442aa832f7794b5a0959bec6e8d7fee802289dcd
+  SHA256      = 85fdf64d76f2f7e5a90e36ec0b0b6da5e8621c3773e0ba594bb9fa75068e22bb
+  hash160     = d7729816650e581d7462d52ad6f732da0e2ec93b
+  checksum    = abcb389d
+  address     = 1LeBZP5QCwwgXRtmVUvTVrraqPUokyLHqe
+  53125 match px=True py=True
+
+--- P11 ---
+  d (dec)     = 1155
+  d (hex)     = 483
+  d*G         px = 62881537490095887219700399231850374465934748632261627566823792868512270937739
+              py = 13147057280235047456932561657169493651618639731944681771959256397716727593785  (odd)
+  compressed  = 038b05b0603abd75b0c57489e451f811e1afe54a8715045cdf4888333f3ebc6e8b
+  SHA256      = 41ced0f93ba060a4266f2c955d42484aa3e4f169e9b26ab35aa20d798b6e6d59
+  hash160     = f8c698da3164ef8fa4258692d118cc9a902c5acc
+  checksum    = 6078c6be
+  address     = 1PgQVLmst3Z314JrQn5TNiys8Hc38TcXJu
+  53125 match px=True py=True
+
+--- P12 ---
+  d (dec)     = 2683
+  d (hex)     = a7b
+  d*G         px = 62873230362895154212630786022242768049765907075202803363316800197224716728348
+              py = 44287605905639058437764882210076840571916049925678373415089141948008474303433  (odd)
+  compressed  = 038b00fcbfc1a203f44bf123fc7f4c91c10a85c8eae9187f9d22242b4600ce781c
+  SHA256      = d4e3872b0dcd662b65c97616f493f899b4ba79422428e6bdbaf150ecda53d217
+  hash160     = 85a1f9ba4da24c24e582d9b891dacbd1b043f971
+  checksum    = 881319cb
+  address     = 1DBaumZxUkM4qMQRt2LVWyFJq5kDtSZQot
+  53125 match px=True py=True
+
+--- P13 ---
+  d (dec)     = 5216
+  d (hex)     = 1460
+  d*G         px = 77279535011188034078516592160190105278519663645387310740933932046966334391965
+              py = 21187662028949108981404481381270595331275020854904259675645205037069861834225  (odd)
+  compressed  = 03aadaaab1db8d5d450b511789c37e7cfeb0eb8b3e61a57a34166c5edc9a4b869d
+  SHA256      = e7f16e16631ec0261aa102d0e43894e7cadd05bd80edcf0aafd618073627a27a
+  hash160     = f932d0188616c964416b91fb9cf76ba9790a921e
+  checksum    = 4f507c8e
+  address     = 1Pie8JkxBT6MGPz9Nvi3fsPkr2D8q3GBc1
+  53125 match px=True py=True
+
+--- P14 ---
+  d (dec)     = 10544
+  d (hex)     = 2930
+  d*G         px = 81843657467215387495831064399406566332608612828066495589872347702422424340313
+              py = 54485907183099442435241830545487744604431707282385107218140713089194934994051  (odd)
+  compressed  = 03b4f1de58b8b41afe9fd4e5ffbdafaeab86c5db4769c15d6e6011ae7351e54759
+  SHA256      = 7334d1e5de4a185ad636f2d835c514aa7dec265c3b04171a1a01a8449d4bd2e5
+  hash160     = 97f9281a1383879d72ac52a6a3e9e8b9a4a4f655
+  checksum    = 468715ff
+  address     = 1ErZWg5cFCe4Vw5BzgfzB74VNLaXEiEkhk
+  53125 match px=True py=True
+
+--- P15 ---
+  d (dec)     = 26867
+  d (hex)     = 68f3
+  d*G         px = 115179987075229906903259602194857104773352008368264866291918996865985783521068
+              py = 90040672269639781867601170828097460642155183514693739441068299505511569496110  (even)
+  compressed  = 02fea58ffcf49566f6e9e9350cf5bca2861312f422966e8db16094beb14dc3df2c
+  SHA256      = e0ff68c71230fb46a9d4deafb0cdaae47c8194ba9274a15d7ce8c89bfaca48ba
+  hash160     = fe7c45126731f7384640b0b0045fd40bac72e2a2
+  checksum    = 9849ab37
+  address     = 1QCbW9HWnwQWiQqVo5exhAnmfqKRrCRsvW
+  53125 match px=True py=True
+
+--- P16 ---
+  d (dec)     = 51510
+  d (hex)     = c936
+  d*G         px = 71261119111627271268814301300816751730184609798722377831958734823956300761978
+              py = 59596021694081902311438976720015207351957060174440251698640379092733344351048  (even)
+  compressed  = 029d8c5d35231d75eb87fd2c5f05f65281ed9573dc41853288c62ee94eb2590b7a
+  SHA256      = e60cf41a9a515452a1f757374158d0e1a97d3764ae048604ce892d7b08747693
+  hash160     = 7025b4efb3ff42eb4d6d71fab6b53b4f4967e3dd
+  checksum    = 24d10b05
+  address     = 1BDyrQ6WoF8VN3g9SAS1iKZcPzFfnDVieY
+  53125 match px=True py=True
+
+--- P17 ---
+  d (dec)     = 95823
+  d (hex)     = 1764f
+  d*G         px = 28680425603065441115290152280488699295594719576682295038107311098738046478531
+              py = 25891784853872784916698406928566284655180782352356802345945352320731968056623  (odd)
+  compressed  = 033f688bae8321b8e02b7e6c0a55c2515fb25ab97d85fda842449f7bfa04e128c3
+  SHA256      = fb3d988e5a8e695f81c148bec60e05b237e9dcce95ea963ef068537e1207ad41
+  hash160     = b67cb6edeabc0c8b927c9ea327628e7aa63e2d52
+  checksum    = f4a7f370
+  address     = 1HduPEXZRdG26SUT5Yk83mLkPyjnZuJ7Bm
+  53125 match px=True py=True
+
+--- P18 ---
+  d (dec)     = 198669
+  d (hex)     = 3080d
+  d*G         px = 5831721406635063654683117253506846208566679410118154188144422804291796683505
+              py = 61770026510604113021686089777374557608174938587526483912023179154647723408296  (even)
+  compressed  = 020ce4a3291b19d2e1a7bf73ee87d30a6bdbc72b20771e7dfff40d0db755cd4af1
+  SHA256      = 19b9cafb1cababfd84681777cdbc38f47a275698dab5aa9bf8904a01b2aed464
+  hash160     = ad1e852b08eba53df306ec9daa8c643426953f94
+  checksum    = d1c893f1
+  address     = 1GnNTmTVLZiqQfLbAdp9DVdicEnB5GoERE
+  53125 match px=True py=True
+
+--- P19 ---
+  d (dec)     = 357535
+  d (hex)     = 5749f
+  d*G         px = 60338245119404298188752055094151291956247541820833238489095541627141964729881
+              py = 31432635976074881250581475377260990518299484384225785790788933914681598133873  (odd)
+  compressed  = 0385663c8b2f90659e1ccab201694f4f8ec24b3749cfe5030c7c3646a709408e19
+  SHA256      = 39b5324342c3490e0cbafd32fb7560bd3bd5cc74ead2c7a19d35a5e165a35e9e
+  hash160     = ebfbe6819fcdebab061732ce91df7d586a037dee
+  checksum    = 7fbb6c04
+  address     = 1NWmZRpHH4XSPwsW6dsS3nrNWfL1yrJj4w
+  53125 match px=True py=True
+
+--- P20 ---
+  d (dec)     = 863317
+  d (hex)     = d2c55
+  d*G         px = 27269999313721489064003814688126459473916071371077568700989584042678664122236
+              py = 61518159794260916008520957000838288631389138584881336375456078921081169337009  (odd)
+  compressed  = 033c4a45cbd643ff97d77f41ea37e843648d50fd894b864b0d52febc62f6454f7c
+  SHA256      = 7dc838f915b684beac241be8ed919e71a7a8e1d15befda4df3b9154f19ba4fb9
+  hash160     = b907c3a2a3b27789dfb509b730dd47703c272868
+  checksum    = 2e201588
+  address     = 1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum
+  53125 match px=True py=True
+
+=== hash160 hex — vertical nibble stack (40 nibbles = 20 bytes) ===
+  h160[-39] P  1-P40   77598fed7df8f9f7baeb27d02b015dd94ff72b09
+  h160[-39] P 41-P120  d8f8f9f80de32cd438bc6ee3527e65b6cd5c70e4
+  h160[-39] P125-P130  fa
+  h160[-38] P  1-P40   5dd6f92cd78597e06db99f09ffc3a38ee66481b5
+  h160[-38] P 41-P120  1e900a86def6fbb82c1d82fe20301dafd0e7ceab
+  h160[-38] P125-P130  72
+  h160[-37] P  1-P40   1de5931e07ca3f7271f0afa53e7049041ddbc93a
+  h160[-37] P 41-P120  5f2d2026206a4652824f165eed9bebde06da9504
+  h160[-37] P125-P130  04
+  h160[-36] P  1-P40   e6d2de97f26129c5ceb774799ba61c5256813001
+  h160[-36] P 41-P120  6b0f2181f84f86316ae836847448b8f53b875ff6
+  h160[-36] P125-P130  79
+  h160[-35] P  1-P40   75fdfc26699fd24bb8ec859e6bab64f6e7ce0e45
+  h160[-35] P 41-P120  2845520c511677d466de34a1653a8c8ac62b732e
+  h160[-35] P125-P130  92
+  h160[-34] P  1-P40   65b8f3ebc8890854656323d8b7f9c7605de0f2f6
+  h160[-34] P 41-P120  e544b20b3b95069c0035e6f33a72adb31e22dcb1
+  h160[-34] P125-P130  22
+  h160[-33] P  1-P40   e9f6348261db111ee28a10f0236ec0f11721bd2c
+  h160[-33] P 41-P120  bfcef65537c9e3b5e71c1db3a6bb5a06e213b470
+  h160[-33] P125-P130  58
+  h160[-32] P  1-P40   829b9ea646aa8a2fdb12331195c4942e892294ad
+  h160[-32] P 41-P120  3971c0d696fefcb9f1479b6d7aba05de602f605a
+  h160[-32] P125-P130  65
+  h160[-31] P  1-P40   1deea971a634816be09ac782b6af165e985b1072
+  h160[-31] P 41-P120  7c9f6d4d6ffd5fd64f65b899d73ec33e2656f675
+  h160[-31] P125-P130  a2
+  h160[-30] P  1-P40   90ad8ed3f51d6373a8f3a79122af461a73fe1c91
+  h160[-30] P 41-P120  3526801968db471938f02479d6de8a4f663bd364
+  h160[-30] P125-P130  a0
+  h160[-29] P  1-P40   9a5f13d0b06a183fbecba4ff7d7584fe5bf18fab
+  h160[-29] P 41-P120  5b41a1bdc47efffaf953dbb1c2d16620896dd9b1
+  h160[-29] P125-P130  05
+  h160[-28] P  1-P40   1b94e4854e42631fcbd29ee334e6fe7d2fb5ed04
+  h160[-28] P 41-P120  75e26c0f60f9ad3e6cbaf00f156bba86c15907da
+  h160[-28] P125-P130  21
+  h160[-27] P  1-P40   9293ead215e4c8f40ae7ef162555414cd7d2de2a
+  h160[-27] P 41-P120  fd5fe5f05ea44ea96929b695a3d70098e228740e
+  h160[-27] P125-P130  7a
+  h160[-26] P  1-P40   6fda48de98fc9772c5b7e7aa4441ad7210e11e76
+  h160[-26] P 41-P120  9b52114a74d4b68fa0cd9042a51750e4997b349e
+  h160[-26] P125-P130  d9
+  h160[-25] P  1-P40   deddaf1ab182693e83a8aade31233e94e4cede29
+  h160[-25] P 41-P120  e22f71f686750534bc92024f479f826ab548328c
+  h160[-25] P125-P130  c0
+  h160[-24] P  1-P40   4042b8c0bdf44d8bbdb9855a0b4a7be4a5e5a27d
+  h160[-24] P 41-P120  6d5ce3e1e20349b3e4b23f2df08c4d7f8e2ab996
+  h160[-24] P125-P130  40
+  h160[-23] P  1-P40   5de6cf81d7ae47449f0d22c103b477bef0cd7c0e
+  h160[-23] P 41-P120  f5c58ddf1f2f880f2dd6433fa037bb909c6ab92b
+  h160[-23] P125-P130  32
+  h160[-22] P  1-P40   4034bf827445126d236f4f33d267b6d14f182e29
+  h160[-22] P 41-P120  c56b7f401a76c6976ae4e2c68ce0b1ebe32f861e
+  h160[-22] P125-P130  7e
+  h160[-21] P  1-P40   92c3a732e6286a46701baf0b0a366c85427dee76
+  h160[-21] P 41-P120  491dc6c1129319455b12dbea1e6370c9341538f3
+  h160[-21] P125-P130  cb
+  h160[-20] P  1-P40   45a6dd209252bc0dc675cf63c0d8795f49077069
+  h160[-20] P 41-P120  172cd6831c943ae0357ef39219642361c592b2cf
+  h160[-20] P125-P130  bf
+  h160[-19] P  1-P40   176226147d8d95b79e30fdcb52342331d5f5c75e
+  h160[-19] P 41-P120  c3008cd29d446ee7fa0394055e65765f3717c5ea
+  h160[-19] P125-P130  b4
+  h160[-18] P  1-P40   cdaea09415691201ec2908ca9b11c3b7fc8e423b
+  h160[-18] P 41-P120  ba75b8c87f3e57c0ab3e8b7c7025d5c3e8db6f9c
+  h160[-18] P125-P130  5c
+  h160[-17] P  1-P40   4586d050e29bfabfa9cb807dba7b8133d927f936
+  h160[-17] P 41-P120  209c5aab8359dfac12dc35298b9fd96be22eddb7
+  h160[-17] P125-P130  38
+  h160[-16] P  1-P40   570e8c949a28b60a3de7010316faaed76c9485f7
+  h160[-16] P 41-P120  3479e835c642407e79ef0a18c2c366c6adbb63f0
+  h160[-16] P125-P130  96
+  h160[-15] P  1-P40   d1b6bdba4dd99a0b2a932146760ce605bb8594e1
+  h160[-15] P 41-P120  512d64b5a0e026da85aca6f34159576cb777d9e9
+  h160[-15] P125-P130  f4
+  h160[-14] P  1-P40   1a3eaa493611c3467a102991c4f753faf8caca16
+  h160[-14] P 41-P120  92c2030a61bd58d14de822b496fdbd1f8e7275bc
+  h160[-14] P125-P130  9a
+  h160[-13] P  1-P40   bb3bfd77df1dfe5b68dda87c3d8bd74df23202e8
+  h160[-13] P 41-P120  f821a86f9781989e57970cbe1e05e7dcdae445e2
+  h160[-13] P125-P130  55
+  h160[-12] P  1-P40   3f3af87b778a79f52cfdb1b1a1fa35bb38f61bd6
+  h160[-12] P 41-P120  4d5aec0783e4447227e80a10c381df39008d7435
+  h160[-12] P125-P130  55
+  h160[-11] P  1-P40   a0c6f39343cc6ed386749035b41426909dcc6e44
+  h160[-11] P 41-P120  dc38391efdf3cd0ca2f1c39711c488a7f68d7376
+  h160[-11] P125-P130  4a
+  h160[-10] P  1-P40   334e006c02cbb84be4d7d35dc0f884be9a2e48ef
+  h160[-10] P 41-P120  37c3bf158fafc9bb5937fca4b977d59218da15ff
+  h160[-10] P125-P130  7c
+  h160[-9] P  1-P40   227b94824d9dab047357f48a1b9d7c22fa8d79f4
+  h160[-9] P 41-P120  e59ae706aae17ad4dd36da35c9072d7db649116b
+  h160[-9] P125-P130  2b
+  h160[-8] P  1-P40   3c2707b5baa199bfa480cb4c85f6a26ceba85efc
+  h160[-8] P 41-P120  d1fa1a7adf27d081f1a7fe5a74e4414669342437
+  h160[-8] P125-P130  47
+  h160[-7] P  1-P40   fdf64b9e009b7aa4a26382123aa9d55db2e46738
+  h160[-7] P 41-P120  a0c88123d4273f5dcbf2319cf3550938e6666f8d
+  h160[-7] P125-P130  15
+  h160[-6] P  1-P40   19d4114aee0094c966ac35565545a7600665eb0b
+  h160[-6] P 41-P120  409dfecf7a38d8b555878fe7d3210e5c89d03d3a
+  h160[-6] P125-P130  6b
+  h160[-5] P  1-P40   4d055b1c02240a76390248d1b701add8458e8a98
+  h160[-5] P 41-P120  07f213fef9c6274b9418c9f4557fd134cddbb0e6
+  h160[-5] P125-P130  7b
+  h160[-4] P  1-P40   3bb0aca3dec3a427e5371ca8d4d6f69e4f6aa312
+  h160[-4] P 41-P120  35002db7f725699d4e1791727d6c67bfa851a669
+  h160[-4] P125-P130  24
+  h160[-3] P  1-P40   39382ba1ac5f9fee23724b59375ba82f31d3090a
+  h160[-3] P 41-P120  2a87050af6d39a2cca0b0bc40b98d1e6c66b5f33
+  h160[-3] P125-P130  5c
+  h160[-2] P  1-P40   b3f1b497a9a92623dfd8f87ed951dafd9bfd2388
+  h160[-2] P 41-P120  3e697d72daba50fc2629c758183c5b5f27dc0290
+  h160[-2] P125-P130  ff
+  h160[-1] P  1-P40   dd62e571b3c715ad59e65692b26de01c7f231672
+  h160[-1] P 41-P120  22f15adbf4ee59aca01cb70a3a7fa1ca8486b0a8
+  h160[-1] P125-P130  c7
+  h160[+0] P  1-P40   6c978c354bc1e52d24e86befbf0ac8d97a57d46a
+  h160[+0] P 41-P120  937e3c423777122d1f05d9e4751ca0fb1b8e074e
+  h160[+0] P125-P130  85
+
+=== address — first 6 Base58 chars stacked ===
+  addr[0] P  1-P40   1111111111111111111111111111111111111111
+  addr[0] P 41-P120  1111111111111111111111111111111111111111
+  addr[0] P125-P130  11
+  addr[1] P  1-P40   BC9EEPMMCLPDPEQBHGNH4CLr5J229LLF8PPB4H2E
+  addr[1] P 41-P120  LEPCNFPD2MN55KL75DHKAMN683BM99JBKL9KC2N7
+  addr[1] P125-P130  PF
+  addr[2] P  1-P40   gUZh6ic9QegBirCDdnWsof2SJV8jEHhR7WWeiB2e
+  addr[2] P 41-P120  53ikt3dFCEpzKYzacnAnVepjZzYVvY3Ch1eCMJLs
+  addr[2] P125-P130  Xo
+  addr[3] P  1-P40   GNeqNtV2FBQaeZbyuNmMFZGnhnzbEtEosAC2XtAA
+  addr[3] P 41-P120  s2FRiJ8Yizn91UhP98X5J6YYMb8DkZ6f22Vgjzb2
+  addr[3] P125-P130  A6
+  addr[4] P  1-P40   ZEwbuSttwZVu8WWrPTZJNWMXYS5tCn6HwBxUhAJx
+  addr[4] P 41-P120  UGu2LRVhUiQcYvSYmN2hKEj7b1GYiEU62FSMsYHb
+  addr[4] P125-P130  y5
+  addr[5] P  1-P40   9BHyFc1ScPLmJg9QEmRxXK8MXTdz5psAFE5Fnphc
+  addr[5] P 41-P120  9PquNMvahty9K73RPFn2wftqwhQgECjrPHDvcku9
+  addr[5] P125-P130  Ua
+
+=== d decimal tail3 — stacked (does NOT map linearly to hash160) ===
+  d_t3[0] P  1-P40   1378247245162585865375865894805891795599
+  d_t3[0] P 41-P120  1480561457871745401390768738843498214793
+  d_t3[0] P125-P130  45
+  d_t3[1] P  1-P40       196261581461263160070640985115989935
+  d_t3[1] P 41-P120  4627917426702067949886625202086526143452
+  d_t3[1] P125-P130  27
+  d_t3[2] P  1-P40          474536470395743269218441427205270
+  d_t3[2] P 41-P120  7351720354604705291222885625417603225803
+  d_t3[2] P125-P130  07
+
+=== hash160 head4 recurrence ===
+  751e: 1x
+  7dd6: 1x
+  5ded: 1x
+  9652: 1x
+  8f9d: 1x
+  f93e: 1x
+  e219: 1x
+  dce7: 1x
+  7d0f: 1x
+  d772: 1x
+
+=== address head4 recurrence ===
+  1BgG: 1x
+  1CUN: 1x
+  19Ze: 1x
+  1Ehq: 1x
+  1E6N: 1x
+  1Pit: 1x
+  1McV: 1x
+  1M92: 1x
+  1CQF: 1x
+  1LeB: 1x
+
+=== y parity (compressed prefix) ===
+  even (02): 38   odd (03): 44
+

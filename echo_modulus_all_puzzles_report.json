@@ -1,0 +1,5659 @@
+{
+  "model": {
+    "echo": "m = int( C^(n/256) )",
+    "C": "(x^3 + 7) mod p",
+    "n": "puzzle height = puzzle number (bit width of d band)",
+    "band": "[2^(n-1), 2^n - 1]",
+    "x_side": [
+      "x_mod_m",
+      "x_inv_mod_m",
+      "C_inv_mod_m"
+    ],
+    "y_side": [
+      "y_mod_m",
+      "y_inv_mod_m",
+      "C_mod_m"
+    ]
+  },
+  "summary": {
+    "puzzle_count": 88,
+    "solved_count": 82,
+    "unsolved_count": 6,
+    "x_side_dominates_count": 28,
+    "x_side_dominates_rate": 0.3182,
+    "x_side_only_pattern_count": 16,
+    "p135_style_pattern_count": 1,
+    "any_ec_match_count": 0,
+    "any_equals_known_d_count": 0,
+    "per_residue_in_band": {
+      "x_mod_m": 36,
+      "x_inv_mod_m": 23,
+      "C_inv_mod_m": 30,
+      "y_mod_m": 34,
+      "y_inv_mod_m": 25,
+      "C_mod_m": 31
+    },
+    "solved_any_equals_d": []
+  },
+  "skipped_no_pubkey": [],
+  "puzzles": [
+    {
+      "puzzle": 1,
+      "height": 1,
+      "exponent": "1/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1,
+      "px": 55066263022277343669578718895168534326250603453777594175500187360389116729240,
+      "py": 32670510020758816978083085130507043184471273380659243275938904335757337482424,
+      "C": 32748224938747404814623910738487752935528512903530129802856995983256684603122,
+      "echo_m": 1,
+      "echo_decimal_tail": "1.99015752109509829275",
+      "band_lo": 1,
+      "band_hi": 1,
+      "residues": {
+        "x_mod_m": {
+          "value": 0,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 0,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 0,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 2,
+      "height": 2,
+      "exponent": "2/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 3,
+      "px": 112711660439710606056748659173929673102114977341539408544630613555209775888121,
+      "py": 25583027980570883691656905877401976406448868254816295069919888960541586679410,
+      "C": 104193826873522593991639737736096919049125888873761064059040146529970392609905,
+      "echo_m": 3,
+      "echo_decimal_tail": "3.99670312928269195067",
+      "band_lo": 2,
+      "band_hi": 3,
+      "residues": {
+        "x_mod_m": {
+          "value": 2,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 2,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 1,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 2,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 2,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 1,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 3,
+      "height": 3,
+      "exponent": "3/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 7,
+      "px": 41948375291644419605210209193538855353224492619856392092318293986323063962044,
+      "py": 48361766907851246668144012348516735800090617714386977531302791340517493990618,
+      "C": 96450596166544446384344097527393051748536233860111093772726844804975283418792,
+      "echo_m": 7,
+      "echo_decimal_tail": "7.98288408627964476304",
+      "band_lo": 4,
+      "band_hi": 7,
+      "residues": {
+        "x_mod_m": {
+          "value": 3,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 5,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 0,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 0,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 4,
+      "height": 4,
+      "exponent": "4/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 8,
+      "px": 21262057306151627953595685090280431278183829487175876377991189246716355947009,
+      "py": 41749993296225487051377864631615517161996906063147759678534462689479575333124,
+      "C": 82990125521313184298913304572568244533370608373326388832575356830610908273516,
+      "echo_m": 15,
+      "echo_decimal_tail": "15.91694764733116377123",
+      "band_lo": 8,
+      "band_hi": 15,
+      "residues": {
+        "x_mod_m": {
+          "value": 4,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 4,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 14,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 14,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 6,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 5,
+      "height": 5,
+      "exponent": "5/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 21,
+      "px": 24049875635381557237058143631624836741422505207761609709712554171343558302165,
+      "py": 22669890352939653242079781319904043788036611953081321775127194249638113810828,
+      "C": 71355287026221043031892875888979967678338174342476311301060821258280072270295,
+      "echo_m": 31,
+      "echo_decimal_tail": "31.69884801964388945353",
+      "band_lo": 16,
+      "band_hi": 31,
+      "residues": {
+        "x_mod_m": {
+          "value": 14,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 20,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 28,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 30,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 30,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 10,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 6,
+      "height": 6,
+      "exponent": "6/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 49,
+      "px": 109846273198995465046214558810696509369395695668678477567979041624391316796720,
+      "py": 101711840700253487202274292900077312932162220876743713596510869779955653950519,
+      "C": 39174481976096429720936214824980480828094112001748029707786701133077380044647,
+      "echo_m": 62,
+      "echo_decimal_tail": "62.39481680819861370578",
+      "band_lo": 32,
+      "band_hi": 63,
+      "residues": {
+        "x_mod_m": {
+          "value": 34,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 21,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 61,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 61,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 3,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 7,
+      "height": 7,
+      "exponent": "7/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 76,
+      "px": 67990777350807742601404023085488753338978132210207570380931332031538910989091,
+      "py": 85792528080009126161701413187313528408286619337671538805045464108358228475888,
+      "C": 97773680733204752392493929633224121452646826688444399460210185162626204743306,
+      "echo_m": 127,
+      "echo_decimal_tail": "127.40937398507136314393",
+      "band_lo": 64,
+      "band_hi": 127,
+      "residues": {
+        "x_mod_m": {
+          "value": 65,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 43,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 52,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 92,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 29,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 22,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 8,
+      "height": 8,
+      "exponent": "8/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 224,
+      "px": 3951620832557057103848397037937330228967155552456836977045923180329637950740,
+      "py": 95473263819178136898129622939316779429655166328021079992747693728567241822551,
+      "C": 11266534501875276596310535973797634902233161900624011692289979135733900695590,
+      "echo_m": 238,
+      "echo_decimal_tail": "238.02273901279984908124",
+      "band_lo": 128,
+      "band_hi": 255,
+      "residues": {
+        "x_mod_m": {
+          "value": 34,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 129,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 131,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 236,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 9,
+      "height": 9,
+      "exponent": "9/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 467,
+      "px": 30474780960141219921807662305060768687772753653098971817340717083315339616503,
+      "py": 61319752531495161980867220483083814171916864550579329528527835522023988931626,
+      "C": 2568621595033825728409218013079588026113191208417633224157170797387184903017,
+      "echo_m": 447,
+      "echo_decimal_tail": "447.83936999924237986877",
+      "band_lo": 256,
+      "band_hi": 511,
+      "residues": {
+        "x_mod_m": {
+          "value": 24,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 88,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 259,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 340,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 127,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 10,
+      "height": 10,
+      "exponent": "10/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 514,
+      "px": 75827354541827746090915769557428734838962266972502112805530189196736906960333,
+      "py": 96570036462163023759491147881411408314153451204876534252590428078766327205003,
+      "C": 37386530427035747593092203140326004575935230797043020097287622115435418192091,
+      "echo_m": 979,
+      "echo_decimal_tail": "979.76446963097050316218",
+      "band_lo": 512,
+      "band_hi": 1023,
+      "residues": {
+        "x_mod_m": {
+          "value": 370,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 426,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 908,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 106,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 822,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 717,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 11,
+      "height": 11,
+      "exponent": "11/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1155,
+      "px": 62881537490095887219700399231850374465934748632261627566823792868512270937739,
+      "py": 13147057280235047456932561657169493651618639731944681771959256397716727593785,
+      "C": 27804305488909649267144788011321533077235461066739027967831759202207767171739,
+      "echo_m": 1926,
+      "echo_decimal_tail": "1926.22910066335736240421",
+      "band_lo": 1024,
+      "band_hi": 2047,
+      "residues": {
+        "x_mod_m": {
+          "value": 985,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 1357,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 1261,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 1761,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 307,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 12,
+      "height": 12,
+      "exponent": "12/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 2683,
+      "px": 62873230362895154212630786022242768049765907075202803363316800197224716728348,
+      "py": 44287605905639058437764882210076840571916049925678373415089141948008474303433,
+      "C": 112914658509136730185450118897227110042440745220661858894878824566570755467799,
+      "echo_m": 4091,
+      "echo_decimal_tail": "4091.17137001921183678258",
+      "band_lo": 2048,
+      "band_hi": 4095,
+      "residues": {
+        "x_mod_m": {
+          "value": 76,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 2207,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 1498,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1632,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 3161,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 2548,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 13,
+      "height": 13,
+      "exponent": "13/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 5216,
+      "px": 77279535011188034078516592160190105278519663645387310740933932046966334391965,
+      "py": 21187662028949108981404481381270595331275020854904259675645205037069861834225,
+      "C": 105736499594273499432646928166661569529179759807764294964948419906043103751681,
+      "echo_m": 8154,
+      "echo_decimal_tail": "8154.29505995836934333813",
+      "band_lo": 4096,
+      "band_hi": 8191,
+      "residues": {
+        "x_mod_m": {
+          "value": 6473,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 4613,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 6965,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 1757,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1499,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 6803,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 3,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 14,
+      "height": 14,
+      "exponent": "14/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 10544,
+      "px": 81843657467215387495831064399406566332608612828066495589872347702422424340313,
+      "py": 54485907183099442435241830545487744604431707282385107218140713089194934994051,
+      "C": 26389475783465458717100181606697705712460614445019491968299428763826484084819,
+      "echo_m": 15111,
+      "echo_decimal_tail": "15111.13184637109424326571",
+      "band_lo": 8192,
+      "band_hi": 16383,
+      "residues": {
+        "x_mod_m": {
+          "value": 1498,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 2653,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 6189,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 6534,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 15,
+      "height": 15,
+      "exponent": "15/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 26867,
+      "px": 115179987075229906903259602194857104773352008368264866291918996865985783521068,
+      "py": 90040672269639781867601170828097460642155183514693739441068299505511569496110,
+      "C": 89588762327936588195255683737191321062385465571928869773089968883667569659098,
+      "echo_m": 32279,
+      "echo_decimal_tail": "32279.07683836925734953441",
+      "band_lo": 16384,
+      "band_hi": 32767,
+      "residues": {
+        "x_mod_m": {
+          "value": 26291,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 24123,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 67,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 28738,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 31413,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 4336,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 16,
+      "height": 16,
+      "exponent": "16/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 51510,
+      "px": 71261119111627271268814301300816751730184609798722377831958734823956300761978,
+      "py": 59596021694081902311438976720015207351957060174440251698640379092733344351048,
+      "C": 1271602034777058394657085276496461443109823647464934225465040684311727435239,
+      "echo_m": 49433,
+      "echo_decimal_tail": "49433.56719511034250581325",
+      "band_lo": 32768,
+      "band_hi": 65535,
+      "residues": {
+        "x_mod_m": {
+          "value": 46246,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 26508,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 3386,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 46362,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 41111,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 38031,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 17,
+      "height": 17,
+      "exponent": "17/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 95823,
+      "px": 28680425603065441115290152280488699295594719576682295038107311098738046478531,
+      "py": 25891784853872784916698406928566284655180782352356802345945352320731968056623,
+      "C": 93048250670864490272321329975337294747347997662224989491112583048205539385614,
+      "echo_m": 129182,
+      "echo_decimal_tail": "129182.37946945269539443164",
+      "band_lo": 65536,
+      "band_hi": 131071,
+      "residues": {
+        "x_mod_m": {
+          "value": 111125,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 21863,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 91373,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 17227,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 108850,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 18,
+      "height": 18,
+      "exponent": "18/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 198669,
+      "px": 5831721406635063654683117253506846208566679410118154188144422804291796683505,
+      "py": 61770026510604113021686089777374557608174938587526483912023179154647723408296,
+      "C": 87450468766358250327487930823944303621568559046404589778197734136995072542716,
+      "echo_m": 257020,
+      "echo_decimal_tail": "257020.43281671152323754865",
+      "band_lo": 131072,
+      "band_hi": 262143,
+      "residues": {
+        "x_mod_m": {
+          "value": 252425,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 2016,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 185816,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 19,
+      "height": 19,
+      "exponent": "19/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 357535,
+      "px": 60338245119404298188752055094151291956247541820833238489095541627141964729881,
+      "py": 31432635976074881250581475377260990518299484384225785790788933914681598133873,
+      "C": 93022824074755329888600612644653625305983201223213834321965224518659963238007,
+      "echo_m": 515837,
+      "echo_decimal_tail": "515837.01593285071670666089",
+      "band_lo": 262144,
+      "band_hi": 524287,
+      "residues": {
+        "x_mod_m": {
+          "value": 254951,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 371646,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 425465,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 351919,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 262620,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 35920,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 20,
+      "height": 20,
+      "exponent": "20/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 863317,
+      "px": 27269999313721489064003814688126459473916071371077568700989584042678664122236,
+      "py": 61518159794260916008520957000838288631389138584881336375456078921081169337009,
+      "C": 100855348930755252482626254136436704857874851190039074633241858099336600476720,
+      "echo_m": 1037322,
+      "echo_decimal_tail": "1037322.93316170539392216652",
+      "band_lo": 524288,
+      "band_hi": 1048575,
+      "residues": {
+        "x_mod_m": {
+          "value": 853260,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 185709,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 74808,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 21,
+      "height": 21,
+      "exponent": "21/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1811764,
+      "px": 11965836972506588223997128401045962469020054936532040942669396711946779550878,
+      "py": 20508170458539512907339144104761652653989862605562274795589281214845594026553,
+      "C": 29858229004847033381631258142656226768924472558881703787592204124333520920763,
+      "echo_m": 1876485,
+      "echo_decimal_tail": "1876485.00110299760423670271",
+      "band_lo": 1048576,
+      "band_hi": 2097151,
+      "residues": {
+        "x_mod_m": {
+          "value": 1079238,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 663983,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1017632,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 646128,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 22,
+      "height": 22,
+      "exponent": "22/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 3007503,
+      "px": 28427543130978074585626614985345471977959286787477589552057226505098203151171,
+      "py": 50682816582500312841297567883708830117558309276952202558634043072443816047348,
+      "C": 96887440732731150586099639448145815700812789564457450045028574786843391032526,
+      "echo_m": 4130545,
+      "echo_decimal_tail": "4130545.03808468008631075312",
+      "band_lo": 2097152,
+      "band_hi": 4194303,
+      "residues": {
+        "x_mod_m": {
+          "value": 3846986,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 4099576,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 2789351,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 3758738,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 2446252,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 2524636,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 3,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 23,
+      "height": 23,
+      "exponent": "23/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 5598802,
+      "px": 112242605370855911626219397372182973708357660307191681275644769547017645510731,
+      "py": 68390115887979834732633364824402183781075100352900279452463611034517340924735,
+      "C": 4851446481394088661653065050832460411529653764036649776966087770294398087843,
+      "echo_m": 6308157,
+      "echo_decimal_tail": "6308157.01398002985140084621",
+      "band_lo": 4194304,
+      "band_hi": 8388607,
+      "residues": {
+        "x_mod_m": {
+          "value": 3349284,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 2592698,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 2723009,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1935092,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 3637598,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 24,
+      "height": 24,
+      "exponent": "24/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 14428676,
+      "px": 50051642716414720463187965900760752759743717926024251995580996834432353782028,
+      "py": 95977329040668870486165415718601595529707258475317259821694622043699258647209,
+      "C": 65853714836830184540880015716859124605011413408466748430679548171429868059385,
+      "echo_m": 15912627,
+      "echo_decimal_tail": "15912627.67106600203161963061",
+      "band_lo": 8388608,
+      "band_hi": 16777215,
+      "residues": {
+        "x_mod_m": {
+          "value": 11540725,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 15109651,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 9706814,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 11239148,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 4039997,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 8544851,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 3,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 25,
+      "height": 25,
+      "exponent": "25/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 33185509,
+      "px": 2487269563521372588638256629682732896198248350279877738175192749508256023898,
+      "py": 83166736743316151169117427554752633507423263386878521247276704816202397537877,
+      "C": 81786079839118765480984352516374274859183293675424089730046602444850022218449,
+      "echo_m": 32434249,
+      "echo_decimal_tail": "32434249.02935947289911764839",
+      "band_lo": 16777216,
+      "band_hi": 33554431,
+      "residues": {
+        "x_mod_m": {
+          "value": 10400052,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 24846915,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 13424311,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 2212698,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 14311290,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 22053882,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 26,
+      "height": 26,
+      "exponent": "26/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 54538862,
+      "px": 35420539632094692837984746081431277047695579008914218444685265805648713712655,
+      "py": 3358784347258280833624896144913156994018140069677567813380874750873563501770,
+      "C": 65130384049844948541515279364130290051617767025604873290036615935372201918240,
+      "echo_m": 63299444,
+      "echo_decimal_tail": "63299444.80121992486219821366",
+      "band_lo": 33554432,
+      "band_hi": 67108863,
+      "residues": {
+        "x_mod_m": {
+          "value": 16820143,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 28363615,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 33290962,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 31137548,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 27,
+      "height": 27,
+      "exponent": "27/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 111949941,
+      "px": 11997413897869137388527643229179287173219648582998689290732186100840539639502,
+      "py": 1470943697971973524954639516409046856461552667680474329056749594236581993569,
+      "C": 4465398825630579147054643457259554384309080880128448850348566809658493516250,
+      "echo_m": 95212988,
+      "echo_decimal_tail": "95212988.90475002276566323419",
+      "band_lo": 67108864,
+      "band_hi": 134217727,
+      "residues": {
+        "x_mod_m": {
+          "value": 41029434,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 55792329,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 67219625,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 81672954,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 28,
+      "height": 28,
+      "exponent": "28/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 227634408,
+      "px": 105795941560543818913296116066690952042698430189737497838953392383707833745575,
+      "py": 4504033619411268082483771859364632124471726090349020722551531509720449239959,
+      "C": 66171649858776583974173898529110806807369274556556760081810852058286881831535,
+      "echo_m": 252499775,
+      "echo_decimal_tail": "252499775.29019691341899374150",
+      "band_lo": 134217728,
+      "band_hi": 268435455,
+      "residues": {
+        "x_mod_m": {
+          "value": 28156225,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 179307509,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 222704589,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 162338985,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 29,
+      "height": 29,
+      "exponent": "29/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 400708894,
+      "px": 49151630029556619633156338398973320854679402706053926415074712059863391894326,
+      "py": 111171837080378547467348261794472043463254055018894513032574226962726028294900,
+      "C": 57750067752607193639767614171355142716652590295571028311046794659533878863929,
+      "echo_m": 496186128,
+      "echo_decimal_tail": "496186128.56782650060893673096",
+      "band_lo": 268435456,
+      "band_hi": 536870911,
+      "residues": {
+        "x_mod_m": {
+          "value": 120566342,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 383582233,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 128054708,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 9284185,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 30,
+      "height": 30,
+      "exponent": "30/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1033162084,
+      "px": 5951051142208904686425222322481077221567316087439359378589043642169505163867,
+      "py": 79964921717795829095410138525196146121807237625496125940956045028689169447181,
+      "C": 56511531810813390531630581985586811489056569276244883492669141859587326019968,
+      "echo_m": 987167989,
+      "echo_decimal_tail": "987167989.00199131101889174181",
+      "band_lo": 536870912,
+      "band_hi": 1073741823,
+      "residues": {
+        "x_mod_m": {
+          "value": 381354319,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 915668818,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 603782860,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 449822608,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 104141987,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 550681857,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 31,
+      "height": 31,
+      "exponent": "31/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 2102388551,
+      "px": 61451719815341661281682897810187322803922811401468501217986913974289877761320,
+      "py": 30947091983295757773862695542244568955870624650687256254668336429089021717649,
+      "C": 6834238154976450849129580588611804041168048088511414771764122407555173426620,
+      "echo_m": 1524428309,
+      "echo_decimal_tail": "1524428309.79419338161176803391",
+      "band_lo": 1073741824,
+      "band_hi": 2147483647,
+      "residues": {
+        "x_mod_m": {
+          "value": 1165833517,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 1481131999,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 596686858,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1181914326,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 327903845,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 339695622,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 32,
+      "height": 32,
+      "exponent": "32/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 3093472814,
+      "px": 4419783485594778575869456570338791525369265264676694041444820246718062386793,
+      "py": 36101104813710326932550768335617430651283103709568167696655528050073806182880,
+      "C": 27260550831004819366492195269641854370406191922976795645188917295178610000527,
+      "echo_m": 3584609309,
+      "echo_decimal_tail": "3584609309.70672193177916894134",
+      "band_lo": 2147483648,
+      "band_hi": 4294967295,
+      "residues": {
+        "x_mod_m": {
+          "value": 3458934778,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 1458232866,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 2728859061,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 1167014459,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1007211735,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 2329269871,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 33,
+      "height": 33,
+      "exponent": "33/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 7137437912,
+      "px": 73878352155540948447620718403427774498001293452248256430485902449521386501497,
+      "py": 1848435387922639343210666794185885301104293211960891296513791058289918232927,
+      "C": 1438416677028868026774013204191445639109550806706890850161076011768854899538,
+      "echo_m": 4878890553,
+      "echo_decimal_tail": "4878890553.62476882332100279505",
+      "band_lo": 4294967296,
+      "band_hi": 8589934591,
+      "residues": {
+        "x_mod_m": {
+          "value": 3899785778,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 2265053468,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 585179197,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 4024526590,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 4341321460,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 2452387840,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 34,
+      "height": 34,
+      "exponent": "34/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 14133072157,
+      "px": 27530330645108713416987374469727331790531665526622602610141848066918764259216,
+      "py": 90457806451997906746295114102505195833866791735127929013755472762572742813627,
+      "C": 30173195431671656428943607703441256124379860698004457530210708892299313823719,
+      "echo_m": 14369766284,
+      "echo_decimal_tail": "14369766284.71062810809656971858",
+      "band_lo": 8589934592,
+      "band_hi": 17179869183,
+      "residues": {
+        "x_mod_m": {
+          "value": 3256322152,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 8657847507,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 4402739663,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 2585585539,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 2492691067,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 35,
+      "height": 35,
+      "exponent": "35/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 20112871792,
+      "px": 111565932824107072002273648098027536630611694584547792392039443258564110295357,
+      "py": 65073319313695146178520529869101114308349376191091055110226007524833442301678,
+      "C": 37516098159681485119841995840008428165248069785144454874323032396600376251522,
+      "echo_m": 29453120973,
+      "echo_decimal_tail": "29453120973.26206156222514608411",
+      "band_lo": 17179869184,
+      "band_hi": 34359738367,
+      "residues": {
+        "x_mod_m": {
+          "value": 2811411206,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 28919181149,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 8907028234,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 6042437599,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 18548511621,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 36,
+      "height": 36,
+      "exponent": "36/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 42387769980,
+      "px": 81372929267933625950466299134420767116313809747786657449875828371774815844854,
+      "py": 49801825835509570606281703408037944345584045565504136549095842398335950992396,
+      "C": 72396831519769445064949424449525278116711537583900172094397325980078877174674,
+      "echo_m": 64327705825,
+      "echo_decimal_tail": "64327705825.44244488364249664402",
+      "band_lo": 34359738368,
+      "band_hi": 68719476735,
+      "residues": {
+        "x_mod_m": {
+          "value": 16290990529,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 27695112269,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 56102214724,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 8670137546,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 25799125699,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 37,
+      "height": 37,
+      "exponent": "37/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 100251560595,
+      "px": 56616873331361319339778585167167551785831939866134116855199265267823699497557,
+      "py": 43995996907931450546017529821179402661741047506605583961822715323191270746432,
+      "C": 106227455657816087717133121086217520599782125967329794551483874871000376118011,
+      "echo_m": 135737011925,
+      "echo_decimal_tail": "135737011925.57664869079204240422",
+      "band_lo": 68719476736,
+      "band_hi": 137438953471,
+      "residues": {
+        "x_mod_m": {
+          "value": 52493697232,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 42632547993,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 134733351966,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 15913869782,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 87809396543,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 61844747636,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 38,
+      "height": 38,
+      "exponent": "38/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 146971536592,
+      "px": 87015243271585780626985033128071698022561841908393138262300130220799103430854,
+      "py": 25209357855024485003220583383100568569907435221588726049011254238934071668031,
+      "C": 81109335983516311296134162926226161794732797278751507663390297633087910517321,
+      "echo_m": 260729519152,
+      "echo_decimal_tail": "260729519152.28862324317879109918",
+      "band_lo": 137438953472,
+      "band_hi": 274877906943,
+      "residues": {
+        "x_mod_m": {
+          "value": 56533177926,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 156716365657,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 195713651439,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 197716360479,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 147335067273,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 39,
+      "height": 39,
+      "exponent": "39/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 323724968937,
+      "px": 20565748395003466184666204343636157310765094829742621599321518588759629653315,
+      "py": 24311842649879211620913578563307151382181113982951839068539255115674165497966,
+      "C": 43066368966227815970129741945670212833964430047245828069695887543759097504431,
+      "echo_m": 472859370866,
+      "echo_decimal_tail": "472859370866.71657009333915092403",
+      "band_lo": 274877906944,
+      "band_hi": 549755813887,
+      "residues": {
+        "x_mod_m": {
+          "value": 58144804901,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 326863461107,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 293437017427,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 465994374762,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 250289343153,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 40,
+      "height": 40,
+      "exponent": "40/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1003651412950,
+      "px": 73698089885969865917178217585365130397293864653143545863290470632977971667156,
+      "py": 55920112788027504860697624221258924004816541552996850637631037640326076931751,
+      "C": 6303854738565845060822456677171761170118701265060332668389682537205909861394,
+      "echo_m": 697731721825,
+      "echo_decimal_tail": "697731721825.72088470909965171374",
+      "band_lo": 549755813888,
+      "band_hi": 1099511627775,
+      "residues": {
+        "x_mod_m": {
+          "value": 152777898106,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 116872888396,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 190722933029,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 359785160876,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 186723318776,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 416288572819,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 41,
+      "height": 41,
+      "exponent": "41/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1458252205147,
+      "px": 81119306557295043947776230900539651493257160932663731932698523086255548483211,
+      "py": 69833235478127881789123626297864036834549011744885041054439092651501655231589,
+      "C": 96945304264886609749853996631925874774515502486390806261002974828935786657772,
+      "echo_m": 2137339092995,
+      "echo_decimal_tail": "2137339092995.05099117240049385400",
+      "band_lo": 1099511627776,
+      "band_hi": 2199023255551,
+      "residues": {
+        "x_mod_m": {
+          "value": 2098215974066,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 680465012441,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 1678766890488,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 1018617492004,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 83982279409,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1623495505892,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 42,
+      "height": 42,
+      "exponent": "42/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 2895374552463,
+      "px": 108004735110291605052926238280029015934272711127582669764909355573652864904374,
+      "py": 18403329601810133637568039936681058795765401650711307099623243826143290446421,
+      "C": 23235455260918641910243182738484484506697573112563323598679938292485420512211,
+      "echo_m": 3379260555104,
+      "echo_decimal_tail": "3379260555104.28882442692239507219",
+      "band_lo": 2199023255552,
+      "band_hi": 4398046511103,
+      "residues": {
+        "x_mod_m": {
+          "value": 2667744172278,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 2134422973467,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1495151413333,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1001845907197,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1433685722995,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 43,
+      "height": 43,
+      "exponent": "43/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 7409811047825,
+      "px": 75172231921983061963707078453586218075235954430194816683547821744757539658477,
+      "py": 89836151575228064517341400809867031783033609174401477513286549833346046540900,
+      "C": 78020879405344719513693594931068186433313620403660604354270756134812201400139,
+      "echo_m": 8231681146495,
+      "echo_decimal_tail": "8231681146495.33081555333760992627",
+      "band_lo": 4398046511104,
+      "band_hi": 8796093022207,
+      "residues": {
+        "x_mod_m": {
+          "value": 4191564926242,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 2147329331818,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 6323923109754,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 1707811825025,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 2534001035354,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 44,
+      "height": 44,
+      "exponent": "44/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 15404761757071,
+      "px": 42641850349376588048456683523298482342861890575005255055023690152751482106678,
+      "py": 53863954730306949225788464513829000943283845993231532239006941853900022216012,
+      "C": 94135200058435154947876297122926246888078924545594837892260329312805730571798,
+      "echo_m": 16977104956667,
+      "echo_decimal_tail": "16977104956667.79055903723420317100",
+      "band_lo": 8796093022208,
+      "band_hi": 17592186044415,
+      "residues": {
+        "x_mod_m": {
+          "value": 6440024329299,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 3306125356433,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 8307760742590,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1703713994186,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 6236409259959,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 8199090640917,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 45,
+      "height": 45,
+      "exponent": "45/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 19996463086597,
+      "px": 50112622098186670293522308964212376217170487478698098151184560544369839286042,
+      "py": 77166245647879752064031295604889546052840057843077005375531342667030458077622,
+      "C": 78117478037208494875227535349289891393990653452899513717049029520476212155519,
+      "echo_m": 32832457970634,
+      "echo_decimal_tail": "32832457970634.00574903583333709487",
+      "band_lo": 17592186044416,
+      "band_hi": 35184372088831,
+      "residues": {
+        "x_mod_m": {
+          "value": 18022770088610,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 29901765340933,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 6621971714902,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 23560281819373,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 46,
+      "height": 46,
+      "exponent": "46/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 51408670348612,
+      "px": 114584500658952982261284867257664334263474393257290087756987875227521301436489,
+      "py": 72377802498278766546639322951454786203104057764824801286631323494589545738903,
+      "C": 45091024601853928179734157554633339946805744874448206303988629359002754358166,
+      "echo_m": 59399366818320,
+      "echo_decimal_tail": "59399366818320.82867790011526904553",
+      "band_lo": 35184372088832,
+      "band_hi": 70368744177663,
+      "residues": {
+        "x_mod_m": {
+          "value": 44380606260489,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 29839809452743,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 12070841403367,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 28046122530006,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 47,
+      "height": 47,
+      "exponent": "47/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 119666659114170,
+      "px": 26267254531086005924446289926216963278177394500745127274874595717966452048278,
+      "py": 87001101956910744728114859046409945791202748241449154110581074788749206277690,
+      "C": 89207435451997453339687041225451177663874181062856498403013923774047759722447,
+      "echo_m": 134156800910528,
+      "echo_decimal_tail": "134156800910528.02386300388331850342",
+      "band_lo": 70368744177664,
+      "band_hi": 140737488355327,
+      "residues": {
+        "x_mod_m": {
+          "value": 73441682541526,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 125748174996143,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 48534533155386,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 71015622572111,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 48,
+      "height": 48,
+      "exponent": "48/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 191206974700443,
+      "px": 65922650075410856534993974163056939852640429077251888193523115047858400845499,
+      "py": 41869000666969933530739468879784369787478474775480842047778880811132270629206,
+      "C": 108109652823286509349789669311505416802325977127803815529831509843443262571840,
+      "echo_m": 277875072250411,
+      "echo_decimal_tail": "277875072250411.51246796015102098620",
+      "band_lo": 140737488355328,
+      "band_hi": 281474976710655,
+      "residues": {
+        "x_mod_m": {
+          "value": 65321649409950,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 42935557291022,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 50863796633383,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 210209223048126,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 26622264443101,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 150897075044800,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 49,
+      "height": 49,
+      "exponent": "49/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 409118905032525,
+      "px": 40307801063138778132376559836123589321449883390877564180282544683931835372676,
+      "py": 84487168443727713049778009853790282775917750548090902002744386003675529530292,
+      "C": 20137207847022029487425557974532819882093895857329122507709860186654169466499,
+      "echo_m": 402774861475214,
+      "echo_decimal_tail": "402774861475214.34296966590925777850",
+      "band_lo": 281474976710656,
+      "band_hi": 562949953421311,
+      "residues": {
+        "x_mod_m": {
+          "value": 120694995976226,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 233508292264179,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 65066156060820,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 63619829022201,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 50,
+      "height": 50,
+      "exponent": "50/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 611140496167764,
+      "px": 110560903758971929709743161563183868968201998016819862389797221564458485814982,
+      "py": 106403041512432555215316396882584033752066537554388330180776939978150437217531,
+      "C": 72110035092431855636959266025925384360957876371022136825879066474024181605195,
+      "echo_m": 1026425154019560,
+      "echo_decimal_tail": "1026425154019560.01689038215942597490",
+      "band_lo": 562949953421312,
+      "band_hi": 1125899906842623,
+      "residues": {
+        "x_mod_m": {
+          "value": 680689410974382,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 646229743039371,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 224326497632235,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 51,
+      "height": 51,
+      "exponent": "51/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 2058769515153876,
+      "px": 63515334313235940978997497997309110945131154723579807607384497547958713837455,
+      "py": 58372837009371438499600708449369979083506963697147052846447906363256905894908,
+      "C": 15526662703128387466911205858440921328595966783670321975686827039866153270904,
+      "echo_m": 1509007311159354,
+      "echo_decimal_tail": "1509007311159354.19882803750963850623",
+      "band_lo": 1125899906842624,
+      "band_hi": 2251799813685247,
+      "residues": {
+        "x_mod_m": {
+          "value": 1416384847453923,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 149952915576558,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1114351600407244,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 52,
+      "height": 52,
+      "exponent": "52/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 4216495639600700,
+      "px": 52813238566474594496574906867435567565233423293475819066208762163447782904999,
+      "py": 11348986220809871653839523839334759039030561731332891013140184168576420844775445430900580367997716475231995684878717886068467787757180564041492407422686701,
+      "C": 53399937233887621394585979172934208794454261602806185402843838691926535737064,
+      "echo_m": 3848413364314001,
+      "echo_decimal_tail": "3848413364314001.74022744226273003007",
+      "band_lo": 2251799813685248,
+      "band_hi": 4503599627370495,
+      "residues": {
+        "x_mod_m": {
+          "value": 2597510333048718,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 3130594605994809,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 2656074136166672,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 912725332323485,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 2891476260109791,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 53,
+      "height": 53,
+      "exponent": "53/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 6763683971478124,
+      "px": 7086754227407391658152234626386289704606906620229921345536119461826835276617,
+      "py": 45806165569194256586261502717728099690457099843611552664107027616191159246392,
+      "C": 37888320626620011360415489406568235525712799362588853825798894981087228962831,
+      "echo_m": 7147327573388183,
+      "echo_decimal_tail": "7147327573388183.99495707706293618447",
+      "band_lo": 4503599627370496,
+      "band_hi": 9007199254740991,
+      "residues": {
+        "x_mod_m": {
+          "value": 3278720051680085,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 1414510732563109,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 6163825466832355,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 6670904090576457,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 7128296591863479,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 6357212440931865,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 54,
+      "height": 54,
+      "exponent": "54/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 9974455244496707,
+      "px": 33903532250825920011423262729318037347523984276123141340942803818961706296726,
+      "py": 168743002427289881765681417490337978467882455308235152692948563217619698893,
+      "C": 5102856924807840152832933637517227984938558168758752600471386459542121297349,
+      "echo_m": 9324313939132220,
+      "echo_decimal_tail": "9324313939132220.94978660050961878861",
+      "band_lo": 9007199254740992,
+      "band_hi": 18014398509481983,
+      "residues": {
+        "x_mod_m": {
+          "value": 7205904261827766,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 3774711445331609,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1263277116581853,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 61033149764577,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1840789168943829,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 55,
+      "height": 55,
+      "exponent": "55/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 30045390491869460,
+      "px": 60445698216621826856287952149610390835450647855250491824511024996101472713059,
+      "py": 6650413705544923593404974197957088657590778889830546541291909209606529242729,
+      "C": 34765914415555121113604774183270645530152833003939138557679057323085221303645,
+      "echo_m": 27822008626383821,
+      "echo_decimal_tail": "27822008626383821.89433770406555562822",
+      "band_lo": 18014398509481984,
+      "band_hi": 36028797018963967,
+      "residues": {
+        "x_mod_m": {
+          "value": 14034406055676285,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 14361305586009136,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 37336053505146,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 18788042501521115,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 11151462911244817,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 26155007976687196,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 56,
+      "height": 56,
+      "exponent": "56/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 44218742292676575,
+      "px": 28576446286465130798687394270835338936156158272521290958787272130765482596762,
+      "py": 101338706018188911277721114497155019368847601339832684197459624859833147765647,
+      "C": 4653074775535436335422391252689659562064343767772860763176793597702144394247,
+      "echo_m": 35671233876454092,
+      "echo_decimal_tail": "35671233876454092.76136101892849785719",
+      "band_lo": 36028797018963968,
+      "band_hi": 72057594037927935,
+      "residues": {
+        "x_mod_m": {
+          "value": 9239922295373486,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 31790751335762263,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 31700956794264391,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 7099853620141123,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 25924538353650919,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 57,
+      "height": 57,
+      "exponent": "57/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 138245758910846492,
+      "px": 74691033661854708945097969794875545130743253282866857528646094060486887766762,
+      "py": 50520096726607883683128959576900318161316692878968149241991939304173485276380,
+      "C": 60156711556969636899785621462052651031748538744381614826564644542963015235295,
+      "echo_m": 124562544917157047,
+      "echo_decimal_tail": "124562544917157047.14488340789036686860",
+      "band_lo": 72057594037927936,
+      "band_hi": 144115188075855871,
+      "residues": {
+        "x_mod_m": {
+          "value": 32006055538844469,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 118657575029624982,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 67683617733443015,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 107563178279656358,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 24343393926727392,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 13445212460775996,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 58,
+      "height": 58,
+      "exponent": "58/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 199976667976342049,
+      "px": 7842290535780881515467118634686610054213231290193967407475681065888263921474,
+      "py": 37223995011863042135269033180096052877832679834151924259363842760832235837987,
+      "C": 55065236041639029517729594353040823698490713134807153397386896759189477068150,
+      "echo_m": 243559492118453359,
+      "echo_decimal_tail": "243559492118453359.14727235728059558795",
+      "band_lo": 144115188075855872,
+      "band_hi": 288230376151711743,
+      "residues": {
+        "x_mod_m": {
+          "value": 182996796831074726,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 62001534550418386,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 2769804636871786,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 85423440858589776,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 195641916027102196,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 55961262551791611,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 59,
+      "height": 59,
+      "exponent": "59/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 525070384258266191,
+      "px": 29468339291227022490967140728449087203757816877061952957844349023051015394437,
+      "py": 5867199329528628582491486657327247741547599271992614464633076311922995064508,
+      "C": 48349232212639115590903144793228640427515449747367555209041356681117760027663,
+      "echo_m": 471362915556412362,
+      "echo_decimal_tail": "471362915556412362.53577430124322110635",
+      "band_lo": 288230376151711744,
+      "band_hi": 576460752303423487,
+      "residues": {
+        "x_mod_m": {
+          "value": 134702022025633331,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 419351130564751733,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 447392497800802711,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 385487464664583456,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 265576049033809813,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 60,
+      "height": 60,
+      "exponent": "60/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1135041350219496382,
+      "px": 32976901974812130467888454680865813064186458215596336709018932995219129999629,
+      "py": 94344309747317421167124060163550008068954848013402657284162153757492808086031,
+      "C": 47189276276359913007517371903118919105592260613350156670245099811346670359854,
+      "echo_m": 934183145232700343,
+      "echo_decimal_tail": "934183145232700343.05747671693002197113",
+      "band_lo": 576460752303423488,
+      "band_hi": 1152921504606846975,
+      "residues": {
+        "x_mod_m": {
+          "value": 721303487422996366,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 555745799142065115,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 641236092145893835,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 471170542213414289,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 147809747674183295,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 63728687609691424,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 61,
+      "height": 61,
+      "exponent": "61/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1425787542618654982,
+      "px": 33308989973171342073697220435010985741081235541259067848310503357357122078015,
+      "py": 95725642944317286839874181564660753559887752233498128945789602194633150111324,
+      "C": 92605454593406082793232233471826380389714279921567407283628931601113490940617,
+      "echo_m": 2186282959188923016,
+      "echo_decimal_tail": "2186282959188923016.26407240869857559174",
+      "band_lo": 1152921504606846976,
+      "band_hi": 2305843009213693951,
+      "residues": {
+        "x_mod_m": {
+          "value": 939862242274131183,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 592987679762148212,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 966647029692815817,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 62,
+      "height": 62,
+      "exponent": "62/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 3908372542507822062,
+      "px": 15877604754714859824235961000680666017735583517798512888980505728230641434280,
+      "py": 27676014891220873617147919511945292449354083613136393884603452417089983439557,
+      "C": 67440702563089589535494789868404097296255839072807226394981959094548600564298,
+      "echo_m": 4045801468344205078,
+      "echo_decimal_tail": "4045801468344205078.23128144356376698360",
+      "band_lo": 2305843009213693952,
+      "band_hi": 4611686018427387903,
+      "residues": {
+        "x_mod_m": {
+          "value": 3197699285523046450,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 382020116233112175,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 2454466898282430019,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 531615280401142176,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 63,
+      "height": 63,
+      "exponent": "63/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 8993229949524469768,
+      "px": 46100860595331327753782525134281403195505409441031099411610412192590360561017,
+      "py": 40756680259664337787317293734418135936366600101587916741588241469787632977445,
+      "C": 101459099813588525811299537835836989550765511505553076525737896092759861549899,
+      "echo_m": 8928262016312692577,
+      "echo_decimal_tail": "8928262016312692577.26959683266793348951",
+      "band_lo": 4611686018427387904,
+      "band_hi": 9223372036854775807,
+      "residues": {
+        "x_mod_m": {
+          "value": 2381462309680356314,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 7122892267355049184,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 7370533610959816105,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 7485629004259629089,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 8288235741817414691,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 1823652654842443387,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 64,
+      "height": 64,
+      "exponent": "64/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 17799667357578236628,
+      "px": 7247729308732252718492345551507130715155957421128527268563563649761751702861,
+      "py": 36707592335952288811734416422045697926733415491378770888054924918276179427221,
+      "C": 60574050222707083912728203433838404592054676261091944607037630550581483303490,
+      "echo_m": 15688147117359557805,
+      "echo_decimal_tail": "15688147117359557805.75579706650057276069",
+      "band_lo": 9223372036854775808,
+      "band_hi": 18446744073709551615,
+      "residues": {
+        "x_mod_m": {
+          "value": 11464619716160720506,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 9903002942638649701,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 13165644118404558291,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 14363540501798219390,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 65,
+      "height": 65,
+      "exponent": "65/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 30568377312064202855,
+      "px": 21769406468394979245979020739332080729679479243955596515614749275274212371227,
+      "py": 102907830890434238525231690377346540046672568029169549965500018466490455252476,
+      "C": 13930276509101361575513736695876875072132244385166388678603133333676240307117,
+      "echo_m": 21549007732033572446,
+      "echo_decimal_tail": "21549007732033572446.87485505608852613326",
+      "band_lo": 18446744073709551616,
+      "band_hi": 36893488147419103231,
+      "residues": {
+        "x_mod_m": {
+          "value": 7215135357196647665,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 6389962042370699671,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 10431807606849922763,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 17021183721019004228,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 14332506370626834239,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 66,
+      "height": 66,
+      "exponent": "66/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 46346217550346335726,
+      "px": 35681022179418186873973468373280332442853574053612577039287936543695937260509,
+      "py": 55769436514148338618765508764324988000805241152238207056637568135859289137720,
+      "C": 53236798425987772940806818648141095825058462300682436545783705745872471364884,
+      "echo_m": 60391596844557219456,
+      "echo_decimal_tail": "60391596844557219456.45442061529548676847",
+      "band_lo": 36893488147419103232,
+      "band_hi": 73786976294838206463,
+      "residues": {
+        "x_mod_m": {
+          "value": 30976379019451851485,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 4014831156049758197,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 37839865032685944120,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 17846413596296359444,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 67,
+      "height": 67,
+      "exponent": "67/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 132656943602386256302,
+      "px": 8199270313230837952220440610769591593514599319024034412022685032436710272885,
+      "py": 108680892268991160269437367347039106826837182347366220564480894908240312674034,
+      "C": 49983171650621649500285869040821337626374091888327767905958007962725606094301,
+      "echo_m": 118445971437596047100,
+      "echo_decimal_tail": "118445971437596047100.36556320415019128435",
+      "band_lo": 73786976294838206464,
+      "band_hi": 147573952589676412927,
+      "residues": {
+        "x_mod_m": {
+          "value": 111814450645786432085,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 67124018836031131001,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 30618440892211236234,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 107708322321734683801,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 68,
+      "height": 68,
+      "exponent": "68/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 219898266213316039825,
+      "px": 14417797224727152153976629935434818279260229220775673176904981236836807719451,
+      "py": 7045521516762001123429259792443693948241323099305435512759425298741909160811,
+      "C": 98532987367332367098297883220366889021132231476063243044152811059335544232576,
+      "echo_m": 282761401662550106018,
+      "echo_decimal_tail": "282761401662550106018.20635366366738817241",
+      "band_lo": 147573952589676412928,
+      "band_hi": 295147905179352825855,
+      "residues": {
+        "x_mod_m": {
+          "value": 85288143907844247457,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 24013949118076744287,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 119389080282322580979,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 30947610768985270843,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 21435452933540406744,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 69,
+      "height": 69,
+      "exponent": "69/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 297274491920375905804,
+      "px": 34226794014706530115784623034813193918417475105517896498394700850822182845011,
+      "py": 95344118026279051459253088692659149181807495503617143902697063322064304017214,
+      "C": 109127460317861266950860709286036849005716415560335326191425788008216333638219,
+      "echo_m": 580939172025805833884,
+      "echo_decimal_tail": "580939172025805833884.89407188175481852788",
+      "band_lo": 295147905179352825856,
+      "band_hi": 590295810358705651711,
+      "residues": {
+        "x_mod_m": {
+          "value": 33495855530248088211,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 61937697282615068591,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 116627749205424264471,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 473433041492630649338,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 536056404439989154875,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 70,
+      "height": 70,
+      "exponent": "70/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 970436974005023690481,
+      "px": 65540419151317157747671900246361345335112119010416684680126380557251106866307,
+      "py": 97334935826427332895556897785451550753483104566423636378820548368192638516448,
+      "C": 41155703805981755020087812249969251424919540591154472918778836382849862837751,
+      "echo_m": 889729954408952988444,
+      "echo_decimal_tail": "889729954408952988444.90859303204051753170",
+      "band_lo": 590295810358705651712,
+      "band_hi": 1180591620717411303423,
+      "residues": {
+        "x_mod_m": {
+          "value": 697007042803821789463,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 555814800493781200819,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 22381966703125786940,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 63691727717623348515,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 75,
+      "height": 75,
+      "exponent": "75/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 22538323240989823823367,
+      "px": 51753319958850014318422825155241699590216770953661144053284309216551720208213,
+      "py": 70145941657091582687860683718295708577963266312639151937200559702470585069731,
+      "C": 73030389504535246483072766602050313326252345130787236398426481454522845560103,
+      "echo_m": 33006887677271111763342,
+      "echo_decimal_tail": "33006887677271111763342.68533045280056954549",
+      "band_lo": 18889465931478580854784,
+      "band_hi": 37778931862957161709567,
+      "residues": {
+        "x_mod_m": {
+          "value": 20104607971167060863577,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 995921832091661560177,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 18947957016337949367539,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 24907498346174692491881,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 18020378339982676613215,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 80,
+      "height": 80,
+      "exponent": "80/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1105520030589234487939456,
+      "px": 57023615344285030823290121311389598839835447585845466159247235392572779796956,
+      "py": 44489989660955945872089157326859328201485774189878427594519890127683524442731,
+      "C": 16994470569327836424063596090305842523112791429213443860291284300753048434130,
+      "echo_m": 663698960353605933201138,
+      "echo_decimal_tail": "663698960353605933201138.55965226800120580468",
+      "band_lo": 604462909807314587353088,
+      "band_hi": 1208925819614629174706175,
+      "residues": {
+        "x_mod_m": {
+          "value": 541170157522685456258592,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 602704063563450519982859,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 459630500558666338938419,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 60922119081643342391482,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 85,
+      "height": 85,
+      "exponent": "85/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 21090315766411506144426920,
+      "px": 18891731271987559180564311775835658084708517714299226869460971567942463645498,
+      "py": 6337264155528691980680833078963835238690084422326491171223553853162872183891,
+      "C": 37106845639163878420083044434549958116271815170672198372696812273150943926786,
+      "echo_m": 26512552159132401751977126,
+      "echo_decimal_tail": "26512552159132401751977126.75692188534134234958",
+      "band_lo": 19342813113834066795298816,
+      "band_hi": 38685626227668133590597631,
+      "residues": {
+        "x_mod_m": {
+          "value": 1964435729720611002277618,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 17863161543674679520351835,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 1205635699642524006442625,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 25866822644081268288938936,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 90,
+      "height": 90,
+      "exponent": "90/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 868012190417726402719548863,
+      "px": 41713034111263466851930038147996148669581275117010008356397839417328763635925,
+      "py": 76118228033078757471841976306410062476790021765122360602050786936435027981363,
+      "C": 103549238728268379059983065224353924271346037059342997644063129230047054329981,
+      "echo_m": 1190248343390837329773723283,
+      "echo_decimal_tail": "1190248343390837329773723283.57959916138852317135",
+      "band_lo": 618970019642690137449562112,
+      "band_hi": 1237940039285380274899124223,
+      "residues": {
+        "x_mod_m": {
+          "value": 1175386084413934521095295828,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 577426414283264187031065660,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 46834818323564973758379994,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 1088789908878071400917516542,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 907041358591070289151188417,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 1144780012240103657199331640,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 3,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 95,
+      "height": 95,
+      "exponent": "95/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 25525831956644113617013748212,
+      "px": 68063097042254603112450010924849517033325884137594647726407681444771642515525,
+      "py": 71312491678750984954701657627055428744583136893281915291066395899455670806806,
+      "C": 11830131194022787566675423900801510445957848208410786485526396972950700304890,
+      "echo_m": 16990688189936318147771850938,
+      "echo_decimal_tail": "16990688189936318147771850938.71594141062831763633",
+      "band_lo": 19807040628566084398385987584,
+      "band_hi": 39614081257132168796771975167,
+      "residues": {
+        "x_mod_m": {
+          "value": 3995589939307943191954428163,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 4244402085792602430961937401,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 6824902804930281168249232808,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 4498215532419084025325549132,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 100,
+      "height": 100,
+      "exponent": "100/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 868221233689326498340379183142,
+      "px": 94996722023597679036042775432142722866975674982521337987691298170952592385559,
+      "py": 61213091224897107699092739640017491283561943079669346364651076989993654499173,
+      "C": 45335247000352258612894257165757587739860389876207647522106414366079987350062,
+      "echo_m": 878861231327869556279563523299,
+      "echo_decimal_tail": "878861231327869556279563523299.41546554600757882118",
+      "band_lo": 633825300114114700748351602688,
+      "band_hi": 1267650600228229401496703205375,
+      "residues": {
+        "x_mod_m": {
+          "value": 508723727987894524017599026211,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 641485027857786953505176271462,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 358329076629705741274335939204,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 562221758138326257780017571538,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 560787653731848155670689334038,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 104058823018154706465356202921,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 105,
+      "height": 105,
+      "exponent": "105/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 29083230144918045706788529192435,
+      "px": 85472652198433121950841823744746716770135193065697857406943610820940839638907,
+      "py": 2273491733972386163740165494026048845412452493532013887904800652580241064735,
+      "C": 75722603996001972189847956085577341775443197012869796282243900010827410025826,
+      "echo_m": 34079628392242027245430034802353,
+      "echo_decimal_tail": "34079628392242027245430034802353.09659421918873251424",
+      "band_lo": 20282409603651670423947251286016,
+      "band_hi": 40564819207303340847894502572031,
+      "residues": {
+        "x_mod_m": {
+          "value": 27746096699901742693565665235547,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 33030735000489636402267592433738,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": 25846539028214390435072733172842,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 21560667356829652226649914464344,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 1478879764124091157882937376817,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 12134635642348668270742851481756,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "C_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 3,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": true,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 110,
+      "height": 110,
+      "exponent": "110/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1090246098153987172547740458951748,
+      "px": 4338352488447277069681865763767263000525504203189618609162334752999592040061,
+      "py": 1327516183598579617836816008839248279861745347961002707181648029680335235001,
+      "C": 95917491721669350016886039687840784503374847819097661689824510982838370042244,
+      "echo_m": 1197179348626045233549175899533105,
+      "echo_decimal_tail": "1197179348626045233549175899533105.80695985201846304743",
+      "band_lo": 649037107316853453566312041152512,
+      "band_hi": 1298074214633706907132624082305023,
+      "residues": {
+        "x_mod_m": {
+          "value": 372046209182170442773317917959401,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 292975380695586731913484054313861,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 977907977709117691620822025019104,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 797295076634457283503361239257816,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 585482775774997843037442469382176,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 41586214788586706225577986211789,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 115,
+      "height": 115,
+      "exponent": "115/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 31464123230573852164273674364426950,
+      "px": 32939465712855543687621080654651021859979376333843015892822995152318610898773,
+      "py": 46560755643746305144975040470607841658328142774650200719470619734417618747604,
+      "C": 62588256918226842622187354287916790471368729312817333427397440534855808792033,
+      "echo_m": 31508267611517152514477578835188374,
+      "echo_decimal_tail": "31508267611517152514477578835188374.96021898958427849518",
+      "band_lo": 20769187434139310514121985316880384,
+      "band_hi": 41538374868278621028243970633760767,
+      "residues": {
+        "x_mod_m": {
+          "value": 11704045309564859352606762309136025,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 12136604994766787026422314995014281,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 14595631116532642866856534565069537,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 7205793516302709464986375128969456,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 15976507165042624260394115431679021,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 120,
+      "height": 120,
+      "exponent": "120/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 919343500840980333540511050618764323,
+      "px": 93499419120076195219278579763555015417347613618260420189054155605804414805552,
+      "py": 19494200143356336257404688340550956357466777176798681646526975620299854296492,
+      "C": 92105635985242802529279295092235243121608395324604605747695473587683941160692,
+      "echo_m": 1194013284959993355213705798532430343,
+      "echo_decimal_tail": "1194013284959993355213705798532430343.70247065855544001234",
+      "band_lo": 664613997892457936451903530140172288,
+      "band_hi": 1329227995784915872903807060280344575,
+      "residues": {
+        "x_mod_m": {
+          "value": 947776610938445883404731402518919649,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 207282275382496792830296944856403593,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 512730914793544071908721919487494132,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 702766098367795788415273876815500017,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_inv_mod_m": {
+          "value": 392113847391030576214521589184979925,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1141278134075333868709541277306792127,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "y_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 125,
+      "height": 125,
+      "exponent": "125/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 37650549717742544505774009877315221420,
+      "px": 23266937399999944120243183575366069139753606644194491618844068395400303144974,
+      "py": 19046944643243374794723275227850600835724258179117516648603681200280499231816,
+      "C": 93402105576467711795975955518071188848478253553902970126295805172829178207858,
+      "echo_m": 38298517764902131880839829471816968583,
+      "echo_decimal_tail": "38298517764902131880839829471816968583.92113187513207503240",
+      "band_lo": 21267647932558653966460912964485513216,
+      "band_hi": 42535295865117307932921825928971026431,
+      "residues": {
+        "x_mod_m": {
+          "value": 2442209393268973692637782709709541283,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 14318219508719687007897065870427811489,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 28702143616380874797310256229675200212,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "y_mod_m": {
+          "value": 20197409203175786279896197921442579630,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 23487797000812305110933942744844519987,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_mod_m": {
+          "value": 4074941001378502438639771524165646422,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_inv_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 130,
+      "height": 130,
+      "exponent": "130/256",
+      "pubkey_source": "53125",
+      "solved": true,
+      "known_d": 1103873984953507439627945351144005829577,
+      "px": 44886295857190546091508615621464465421050773292389158775895365558788257183826,
+      "py": 79820197542983972470655013754473404410649480536210503962616926227235987362275,
+      "C": 78293112806674883728082835351024986493704535419699925234813921884749437465430,
+      "echo_m": 1115819624846127730564408631562585837995,
+      "echo_decimal_tail": "1115819624846127730564408631562585837995.77032894248040795391",
+      "band_lo": 680564733841876926926749214863536422912,
+      "band_hi": 1361129467683753853853498429727072845823,
+      "residues": {
+        "x_mod_m": {
+          "value": 1027350230720607128141815461470517224221,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "x_inv_mod_m": {
+          "value": 749216887138953453390962992039201456191,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": false
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 40317964639929139491411267863173327410,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 376107069762462859207023719604144298310,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 135,
+      "height": 135,
+      "exponent": "135/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 9210836494447108270027136741376870869791784014198948301625976867708124077590,
+      "py": 46351506704828816385393879789131775975171267756561783641521771795450741674800,
+      "C": 80184233617433755134183875136831551618578922487806929476230322368028862899169,
+      "echo_m": 35883159410670495955909009950774262134599,
+      "echo_decimal_tail": "35883159410670495955909009950774262134599.22886917588389643847",
+      "band_lo": 21778071482940061661655974875633165533184,
+      "band_hi": 43556142965880123323311949751266331066367,
+      "residues": {
+        "x_mod_m": {
+          "value": 30327761932568162915376568522755475014120,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 30073640099755441117314759043535009640089,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 32329395230660542798236150581366381555169,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 17704302510751183409044990982198533323660,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 7093690313041113388372178467855570261116,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 1821172956558706237157828905675925360051,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "x_inv_mod_m",
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 3,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": true,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 140,
+      "height": 140,
+      "exponent": "140/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 14209337303565764460094546138159026146027198320188098929659045244992519759424,
+      "py": 112811665967762242085501977147851451381351584829682616476865345769307248405225,
+      "C": 6259097416800668626316462978500484916753590877278978460415054454530496301553,
+      "echo_m": 282629403514389560849275275332266774925448,
+      "echo_decimal_tail": "282629403514389560849275275332266774925448.85492461906911267800",
+      "band_lo": 696898287454081973172991196020261297061888,
+      "band_hi": 1393796574908163946345982392040522594123775,
+      "residues": {
+        "x_mod_m": {
+          "value": 14115619641011260931156899649036403153928,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 264497731465246865732162445678245163563785,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 167699663712597824641755690461902950199849,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 250076174441823649094656518955194022605313,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 145,
+      "height": 145,
+      "exponent": "145/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 79546357666492376471204367748066065712056842674356469879774509426893943528165,
+      "py": 42952877954946956869894297869747676194508811965881633116318958850539873930467,
+      "C": 43686228001278366096792844567005637059043309366829395486944701211816496638480,
+      "echo_m": 25678529751669149136339987483995336311141447,
+      "echo_decimal_tail": "25678529751669149136339987483995336311141447.92638267307027933789",
+      "band_lo": 22300745198530623141535718272648361505980416,
+      "band_hi": 44601490397061246283071436545296723011960831,
+      "residues": {
+        "x_mod_m": {
+          "value": 22472593153479023766252485328002805020812767,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 18005075303751753901851468301116715503826411,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 12545826059613764524031371026651424711840418,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 21093591588480925201109986870214891372542989,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 24688238365972261076847460146459623295908679,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 1,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 150,
+      "height": 150,
+      "exponent": "150/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 8806017346776867877012283004761366835309521271076888190363318858957589908553,
+      "py": 112690780870766937827387219360730856764309477352700964252346263824826336784567,
+      "C": 17190383666562119253237287024980158202009768434084586557410689480216345730354,
+      "echo_m": 466780428640662450346905785141297339788372750,
+      "echo_decimal_tail": "466780428640662450346905785141297339788372750.95869789750003679933",
+      "band_lo": 713623846352979940529142984724747568191373312,
+      "band_hi": 1427247692705959881058285969449495136382746623,
+      "residues": {
+        "x_mod_m": {
+          "value": 153510684422300279432752857098178454987082053,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 287431746939876105240788246532691289441127717,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 4553199174988609067752625541921987293536317,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 40837946711900095679741761668350687317874153,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 277273314389538756898963073314804138749169354,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [],
+      "x_side_in_band_count": 0,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 155,
+      "height": 155,
+      "exponent": "155/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 41982973105772075382875095283055987165486468246400605191592543377033832170998,
+      "py": 111259536060426502150461830235057069604619334410550020200750011090715384957403,
+      "C": 114762635240156804900388600785512174582481246436457053766080930414744818508619,
+      "echo_m": 45425643826444560670178361447011085519190322078,
+      "echo_decimal_tail": "45425643826444560670178361447011085519190322078.97585862426939818655",
+      "band_lo": 22835963083295358096932575511191922182123945984,
+      "band_hi": 45671926166590716193865151022383844364247891967,
+      "residues": {
+        "x_mod_m": {
+          "value": 13429769313086175955844624867806400048595369596,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 26393852838470793731821351664030359991194094121,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 17700577807441478375708365954862868963879902205,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": 44418411312769505896730081377114076145265059299,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 39688979587561750957622886236459748959504968275,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "C_inv_mod_m",
+        "y_inv_mod_m",
+        "C_mod_m"
+      ],
+      "x_side_in_band_count": 1,
+      "y_side_in_band_count": 2,
+      "x_side_dominates": false,
+      "x_side_only_pattern": false,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    },
+    {
+      "puzzle": 160,
+      "height": 160,
+      "exponent": "160/256",
+      "pubkey_source": "53125",
+      "solved": false,
+      "known_d": null,
+      "px": 101616124637840542991531253248586524020213215258338643076214814468447630501491,
+      "py": 88132823371574229813684435207239348220522140366126834573803505878170136640646,
+      "C": 98931842703096536383023310437099867537616869159883637007323156957547593127931,
+      "echo_m": 1324600947747598442829921712661911741633439143126,
+      "echo_decimal_tail": "1324600947747598442829921712661911741633439143126.89880073632140416049",
+      "band_lo": 730750818665451459101842416358141509827966271488,
+      "band_hi": 1461501637330902918203684832716283019655932542975,
+      "residues": {
+        "x_mod_m": {
+          "value": 1129676721776190238453106137508328168787105281791,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "x_inv_mod_m": {
+          "value": 126179362104809292512363672198903135316191988525,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_inv_mod_m": {
+          "value": 877919817815501482079440345308971556480874685579,
+          "in_band": true,
+          "ec_match": false,
+          "equals_known_d": null
+        },
+        "y_mod_m": {
+          "value": 436061417654139289340605511995274622321262915414,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "y_inv_mod_m": {
+          "value": null,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        },
+        "C_mod_m": {
+          "value": 154011778283914806041152429159960691688573224637,
+          "in_band": false,
+          "ec_match": null,
+          "equals_known_d": null
+        }
+      },
+      "in_band": [
+        "x_mod_m",
+        "C_inv_mod_m"
+      ],
+      "x_side_in_band_count": 2,
+      "y_side_in_band_count": 0,
+      "x_side_dominates": true,
+      "x_side_only_pattern": true,
+      "p135_style_pattern": false,
+      "ec_match_residues": [],
+      "equals_known_d_residues": []
+    }
+  ]
+}

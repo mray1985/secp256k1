@@ -1,0 +1,130 @@
+Puzzle 160 — pubkey alignment vs P_160
+P_160 x = 101616124637840542991531253248586524020213215258338643076214814468447630501491
+P_160 y = 88132823371574229813684435207239348220522140366126834573803505878170136640646
+barcodes analyzed: 37
+exact (x,y)==P hits: 0
+x==Px only hits: 0
+y==Py only hits: 0
+(N+1) trace closures (shell==end): 37/37
+
+================================================================================
+TOP 15 by decimal prefix match (x+y digits matching P)
+================================================================================
+rmd_wrap9    prefix_sum=  5 (x=3, y=2)  at trace step 140  fingerprint_top=y inv N(68)  closure=True
+  trace step=140 op=double prefix(x,y)=(3,2) x_dist=146596496760613577244569700625424896459501925356668733200426584938138391189 y_dist=191623083203746385965314040676257280937774046282187834237646776243475512855 [near]
+px_w4        prefix_sum=  5 (x=3, y=2)  at trace step 270  fingerprint_top=p-y(79)  closure=True
+  trace step=270 op=double prefix(x,y)=(3,2) x_dist=239315582931590292921810656174480249404397432760183009628720376864975801883 y_dist=398123983921364995817485284084977190445747830116131521992819938846726573936 [near]
+px_w3        prefix_sum=  5 (x=2, y=3)  at trace step 413  fingerprint_top=x inv p(75)  closure=True
+  trace step=413 op=double prefix(x,y)=(2,3) x_dist=945446888502851169221075302989025852053159132269830161982817922567829199775 y_dist=32097461957065697702311156638971415406007903464226220102122919635679375838 [near]
+py           prefix_sum=  5 (x=3, y=2)  at trace step 218  fingerprint_top=p-y(79)  closure=True
+  trace step=218 op=double prefix(x,y)=(3,2) x_dist=91504094248246148607312969533231301913260908954448395800140532661150024670817 y_dist=79281165465156801910967789845019147655399898900618115946243315663592669950257 [near]
+s_w4         prefix_sum=  4 (x=3, y=1)  at trace step 264  fingerprint_top=Px(78)  closure=True
+  trace step=264 op=double prefix(x,y)=(3,1) x_dist=268764129720812623370696490849389677492204057873197115046046382914746045681 y_dist=481077159581719294341960161882360900414000303194179935947392331020636197974 [near]
+px_w1        prefix_sum=  4 (x=2, y=2)  at trace step 390  fingerprint_top=p-x(79)  closure=True
+  trace step=390 op=da     prefix(x,y)=(2,2) x_dist=968001546436786553878976466358459405565778112546006889420239203697610417859 y_dist=469542080394860202750463022843110356349272683319275113645511981785735188485 [near]
+b0_r         prefix_sum=  4 (x=2, y=2)  at trace step 425  fingerprint_top=x inv p(79)  closure=True
+  trace step=425 op=double prefix(x,y)=(2,2) x_dist=1414031395523344942146537797416700106723882199958066906834840914320813795510 y_dist=52731408718737636268052812374007575295883998669169976491645266504449318443 [near]
+b4_s         prefix_sum=  4 (x=2, y=2)  at trace step 236  fingerprint_top=y inv p(74)  closure=True
+  trace step=236 op=double prefix(x,y)=(2,2) x_dist=760152718080523748674463118530415933609829329831367323983953168356716705699 y_dist=734497002011351145612135257198159937071771359782810001085422690694597724325 [near]
+px_w2        prefix_sum=  4 (x=2, y=2)  at trace step 306  fingerprint_top=y inv N(77)  closure=True
+  trace step=306 op=double prefix(x,y)=(2,2) x_dist=1102418773719372272662279921350484081646977964719822632329100405225371808015 y_dist=610221041506409221507341217696439538420136587742986950669611133169327779990 [near]
+b3_addr      prefix_sum=  4 (x=3, y=1)  at trace step 388  fingerprint_top=Px(86)  closure=True
+  trace step=388 op=da     prefix(x,y)=(3,1) x_dist=154819092667444179080865840060988309082581063925402400388245256975165706875 y_dist=1740140435544783675134105339896199890423970349473986821534038877574090699138 [near]
+s_w6         prefix_sum=  4 (x=3, y=1)  at trace step 096  fingerprint_top=p-y(81)  closure=True
+  trace step=096 op=double prefix(x,y)=(3,1) x_dist=129704798969037527602116558036225956216107135252615184613931578336378954704 y_dist=2723974330370382486178320592529164865119624061391324015282874969425504156138 [near]
+rmd_wrap10   prefix_sum=  4 (x=3, y=1)  at trace step 183  fingerprint_top=p-y(76)  closure=True
+  trace step=183 op=da     prefix(x,y)=(3,1) x_dist=255152306915882501163760188178559756987788122949601157276883030468247847498 y_dist=2708155349483223007946831021505094114777283125909737074276258625843056711631 [near]
+px_w6        prefix_sum=  4 (x=3, y=1)  at trace step 329  fingerprint_top=x inv N(80)  closure=True
+  trace step=329 op=double prefix(x,y)=(3,1) x_dist=113368696206744801737795631867819894523291673594047618029343241854573190283 y_dist=3640144072314623972870406166163926217529981319653760974733311306954239118199 [near]
+b2_rmd160    prefix_sum=  4 (x=2, y=2)  at trace step 025  fingerprint_top=p-y(77)  closure=True
+  trace step=025 op=da     prefix(x,y)=(2,2) x_dist=4095765533040173155236564221979707900552692031579899644015595088175861362068 y_dist=67558956466775580986470741403209951767210121262317383332389344216062590165 [near]
+s_w1         prefix_sum=  4 (x=2, y=2)  at trace step 411  fingerprint_top=Px(77)  closure=True
+  trace step=411 op=da     prefix(x,y)=(2,2) x_dist=3683043610526774175773124737305618319946240897601949065111172135679256101827 y_dist=533886823184216021072001097206162913783257428291683656450178011073240061353 [near]
+
+================================================================================
+TOP 15 by fingerprint contains (P_160 shell on trace coords)
+================================================================================
+s_w2         contains=  93 pattern=Px        start+end=  12 (Px)  closure=True
+rmd_wrap2    contains=  93 pattern=Px        start+end=  11 (Px)  closure=True
+b3_addr      contains=  86 pattern=Px        start+end=  16 (Px)  closure=True
+addr_w2      contains=  83 pattern=y inv N   start+end=  10 (Px)  closure=True
+y2modp       contains=  82 pattern=y inv N   start+end=  11 (Px)  closure=True
+rmd_wrap1    contains=  82 pattern=Px        start+end=   7 (Px)  closure=True
+s_w6         contains=  81 pattern=p-y       start+end=   5 (Px)  closure=True
+px_w6        contains=  80 pattern=x inv N   start+end=  13 (Px)  closure=True
+addr_w0      contains=  80 pattern=y inv N   start+end=  10 (Px)  closure=True
+py           contains=  79 pattern=p-y       start+end=  12 (Px)  closure=True
+b0_r         contains=  79 pattern=x inv p   start+end=  11 (Px)  closure=True
+b1_px        contains=  79 pattern=Px        start+end=  11 (Px)  closure=True
+px_w4        contains=  79 pattern=p-y       start+end=  11 (Px)  closure=True
+rmd_wrap4    contains=  79 pattern=y inv N   start+end=  11 (Px)  closure=True
+px_w5        contains=  79 pattern=Px        start+end=  10 (Px)  closure=True
+
+================================================================================
+CLOSEST x to Px (per barcode best step)
+================================================================================
+rmd_wrap9    trace step=349 op=double prefix(x,y)=(4,0) x_dist=11536052918511349850788628986711161783327749596953484715567892405030310968 y_dist=74961215686775021906877238609595113018390525842069769406137606552167082729324 [near]
+s_w0         trace step=039 op=da     prefix(x,y)=(3,0) x_dist=17086319128988186548885392677665851661038711810213899296379865787831055941 y_dist=78110543898661917139923051030132137955412539390669423793638136646054839330005 [near]
+px_w2        trace step=217 op=da     prefix(x,y)=(4,0) x_dist=18587162688241993539356931674955646662366951220552006007706663178388130047 y_dist=10707081671384255309714339866776821634791338154521182531731205009266882011950 [near]
+y2modp       trace step=033 op=da     prefix(x,y)=(4,0) x_dist=18711987034560838166845950777988955974585500838712463791803804058317584178 y_dist=36276155668967240734952704452371863365251574937822797466807126371212275727034 [near]
+px_w5        trace step=339 op=double prefix(x,y)=(3,0) x_dist=25255502283668134058774728070821429333024716711970475240316043754995369426 y_dist=44025038515926007963577363542264746752064972421974084080951860256069318940552 [near]
+b3_addr      trace step=003 op=da     prefix(x,y)=(3,0) x_dist=26449716689356111682598570508714450831287042272686485040112291445282641523 y_dist=17643132551944063919006450234404950500442867401620081300168309363542194253391 [near]
+px_w1        trace step=212 op=double prefix(x,y)=(3,0) x_dist=27740218697655817961090813177591825500233210335527487460153122488941137629 y_dist=3044775058417389675021992790676789702947654342471714857488749794131480252608 [near]
+px_w6        trace step=117 op=da     prefix(x,y)=(3,1) x_dist=36598678592436156147832285255794052121498500926322555312769607522991609468 y_dist=6558091799648198913613903186242542485606674512688780300627906109551423506914 [near]
+rmd_wrap1    trace step=181 op=da     prefix(x,y)=(3,0) x_dist=38043328710643691226005667728428969928309226703059649109338186130698498035 y_dist=24881206839898002254830606975843355527825653184744838012379749520075617601005 [near]
+b5_z         trace step=020 op=double prefix(x,y)=(3,0) x_dist=42069020212857897482304684310967269064537477461841285296608942528997071742 y_dist=48878405007758629813382016426036413324428470454787476569289350225374325396450 [near]
+
+================================================================================
+CLOSEST y to Py (per barcode best step)
+================================================================================
+b3_addr      trace step=437 op=da     prefix(x,y)=(0,4) x_dist=63872561786445707411318530600553393004730406651490125719169531442585942685123 y_dist=2973247602065028193755387725769452655397284633977409130350899662960019052 [near]
+b1_px        trace step=118 op=double prefix(x,y)=(0,3) x_dist=71395713883937561377190579928960306041019914497031246392700082007340157141358 y_dist=8676214618620101147044033590780761083057976663684340429506196784396398624 [near]
+px_w4        trace step=106 op=double prefix(x,y)=(0,3) x_dist=63938102327186445603074708419666167123783233178171172422641458762993610752523 y_dist=13664031322259178197163468122836342161332563392058626308713401191867272008 [near]
+s_w1         trace step=344 op=da     prefix(x,y)=(0,3) x_dist=63084134323544707395471869945688644596969013066590346257648111205443601746246 y_dist=15402951986504963629310205114858237781227257412150282770106130324533175297 [near]
+s_w5         trace step=130 op=double prefix(x,y)=(1,3) x_dist=88093792823292037224742134794509054456795874259911794997134325195457198875646 y_dist=16871450836543847485870138805221315095603526770521855407356654273337700774 [near]
+rmd_wrap0    trace step=361 op=double prefix(x,y)=(1,3) x_dist=9828066005883568771835746269625214613736881927997526529785672394635756703389 y_dist=17440988774950865128343887878469236067719597306939847516062411426316442058 [near]
+py           trace step=332 op=da     prefix(x,y)=(0,3) x_dist=64600542116800373217776960199833824497735790253895138261585639930708820117625 y_dist=17639760625332152848440430053620585516791547876231144037235646488046201721 [near]
+s_w4         trace step=094 op=double prefix(x,y)=(0,3) x_dist=17186471654028087063296110106237593608472542740432014825892195102884962333613 y_dist=18325654831301822973670916173107729523397483694115691899335294927415126193 [near]
+b0_r         trace step=311 op=da     prefix(x,y)=(0,3) x_dist=4624700132876551050212785972858175482179122770347988299204843612472406692856 y_dist=25663080290699443917917653362989554852390149561643335045128351647743497638 [near]
+px_w2        trace step=171 op=da     prefix(x,y)=(0,3) x_dist=101013899512300466649826857534577772860368534735138188832535962748921383828231 y_dist=31319903219230845192259646174416815010200625617561271862365038874110510895 [near]
+
+================================================================================
+PER-BARCODE SUMMARY
+================================================================================
+addr_w0      m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=259  fp=y inv N(80)  closure=True
+addr_w1      m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=394  fp=Px(72)  closure=True
+addr_w2      m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=273  fp=y inv N(83)  closure=True
+b0_r         m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=425  fp=x inv p(79)  closure=True
+b1_px        m==Px? True  m_px_prefix= 78  best_prefix=(2,1) step=177  fp=Px(79)  closure=True
+b2_rmd160    m==Px? False m_px_prefix=  1  best_prefix=(2,2) step=025  fp=p-y(77)  closure=True
+b3_addr      m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=388  fp=Px(86)  closure=True
+b4_s         m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=236  fp=y inv p(74)  closure=True
+b5_z         m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=196  fp=Px(72)  closure=True
+px_w0        m==Px? False m_px_prefix=  1  best_prefix=(2,1) step=125  fp=p-y(74)  closure=True
+px_w1        m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=390  fp=p-x(79)  closure=True
+px_w2        m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=306  fp=y inv N(77)  closure=True
+px_w3        m==Px? False m_px_prefix=  0  best_prefix=(2,3) step=413  fp=x inv p(75)  closure=True
+px_w4        m==Px? False m_px_prefix=  0  best_prefix=(3,2) step=270  fp=p-y(79)  closure=True
+px_w5        m==Px? False m_px_prefix=  1  best_prefix=(3,1) step=370  fp=Px(79)  closure=True
+px_w6        m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=329  fp=x inv N(80)  closure=True
+py           m==Px? False m_px_prefix=  0  best_prefix=(3,2) step=218  fp=p-y(79)  closure=True
+rmd_wrap0    m==Px? False m_px_prefix=  0  best_prefix=(1,3) step=361  fp=Px(77)  closure=True
+rmd_wrap1    m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=420  fp=Px(82)  closure=True
+rmd_wrap10   m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=183  fp=p-y(76)  closure=True
+rmd_wrap11   m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=134  fp=Py(79)  closure=True
+rmd_wrap2    m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=283  fp=Px(93)  closure=True
+rmd_wrap3    m==Px? False m_px_prefix=  0  best_prefix=(4,0) step=315  fp=p-x(77)  closure=True
+rmd_wrap4    m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=328  fp=y inv N(79)  closure=True
+rmd_wrap5    m==Px? False m_px_prefix=  0  best_prefix=(3,0) step=152  fp=Px(78)  closure=True
+rmd_wrap6    m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=388  fp=p-y(74)  closure=True
+rmd_wrap7    m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=103  fp=Px(71)  closure=True
+rmd_wrap8    m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=192  fp=y inv p(75)  closure=True
+rmd_wrap9    m==Px? False m_px_prefix=  0  best_prefix=(3,2) step=140  fp=y inv N(68)  closure=True
+s_w0         m==Px? False m_px_prefix=  0  best_prefix=(4,0) step=424  fp=p-x(78)  closure=True
+s_w1         m==Px? False m_px_prefix=  0  best_prefix=(2,2) step=411  fp=Px(77)  closure=True
+s_w2         m==Px? False m_px_prefix=  0  best_prefix=(2,1) step=121  fp=Px(93)  closure=True
+s_w3         m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=150  fp=x inv p(79)  closure=True
+s_w4         m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=264  fp=Px(78)  closure=True
+s_w5         m==Px? False m_px_prefix=  0  best_prefix=(1,3) step=130  fp=y inv p(73)  closure=True
+s_w6         m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=096  fp=p-y(81)  closure=True
+y2modp       m==Px? False m_px_prefix=  0  best_prefix=(3,1) step=208  fp=y inv N(82)  closure=True

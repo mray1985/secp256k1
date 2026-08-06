@@ -1,0 +1,78 @@
+Gx_i normalized
+Px_i normalized
+rx_i normalized
+
+then:
+
+Px_i / Gx_i = CP1
+rx_i / Gx_i = CR1
+Px_i / rx_i = Λ
+
+That was all over mod p, and your p-paper confirms that bridge cleanly.
+
+Now the N-side version should be:
+
+Normalize Gx_i, Px_i, rx_i into mod N
+using the N-side defect/cube-root branch system.
+
+Then test:
+
+PxN_i / GxN_i mod N
+rxN_i / GxN_i mod N
+PxN_i / rxN_i mod N
+
+But the important part is this: we need to define the N-domain normalized objects first.
+
+Use the defect-root branches:
+
+p1, p2, p3 = cube roots of Δ = p - N mod N
+
+Then build:
+
+G_N(i,j)  = Gx_i * p_j^-1 mod N
+P_N(i,j)  = Px_i * p_j^-1 mod N
+r_N(i,j)  = rx_i * p_j^-1 mod N
+
+Then repeat the p-side cancellation tests:
+
+P_N(i,j) * G_N(i,j)^-1 mod N
+
+r_N(i,j) * G_N(i,j)^-1 mod N
+
+P_N(i,j) * r_N(i,j)^-1 mod N
+
+What we want to see is whether the N-side gives stable constants like the p-side did:
+
+P_N / G_N = CP_N
+r_N / G_N = CR_N
+P_N / r_N = Λ_N
+
+If it does, then we have a true N-side bridge candidate. That is much safer than forcing the p-side Λ into scalar recovery.
+
+The next calculation block should be exactly this:
+
+For every i,j:
+
+A_ij = P_N(i,j) * G_N(i,j)^-1 mod N
+B_ij = r_N(i,j) * G_N(i,j)^-1 mod N
+C_ij = P_N(i,j) * r_N(i,j)^-1 mod N
+
+Then check:
+
+Do all A_ij collapse?
+Do all B_ij collapse?
+Do all C_ij collapse?
+
+Or do they collapse by row, column, or branch cycle?
+
+Only after that do we compare the N-side bridge constants against:
+
+delta_k
+Cq
+RQ
+Rq
+Λ mod N
+ω / ω2
+Puzzle 135 range
+
+That is the educated next step: rebuild the bridge inside N first, then test whether it touches k/d.

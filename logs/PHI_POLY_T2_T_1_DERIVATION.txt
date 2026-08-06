@@ -1,0 +1,132 @@
+========================================================================================
+From polynomial t^2 + t + 1 = 0  - dual rings (p) and (N)
+========================================================================================
+
+CLOSED (do not revisit): naive Phi ops; q_x<->q_d; orientation; r*~d.
+METHOD: derive from the polynomial; numerical checks only confirm.
+
+----------------------------------------------------------------------------------------
+0) Same minimal polynomial, two rings
+----------------------------------------------------------------------------------------
+  t^2 + t + 1 = 0
+  Roots are primitive cube roots of unity (order 3).
+  Field side:  t |-> beta  in F_p
+  Scalar side: t |-> lambda in Z/NZ
+  beta^2+beta+1 == 0 mod p?  True
+  lambda^2+lambda+1 == 0 mod N? True
+  beta^3 == 1 mod p?   True
+  lambda^3 == 1 mod N? True
+  Integer lift 1+beta+beta2 = p?  True
+  Integer lift 1+lambda+lambda2 = N? True
+
+----------------------------------------------------------------------------------------
+1) Symbolic derivation (identical in both rings)
+----------------------------------------------------------------------------------------
+--- Ring Z/pZ, root t, lift 1+t+t^2 = p ---
+  Polynomial: t^2 + t + 1 == 0 (mod p)
+  Integer lifts: check (1+t+t2) % p == 0
+  Chosen nonnegative reps: 1+t+t2 == p?  True
+
+  THEOREM (orbit sum).
+    Let a in 1..p-1, a1=(t*a) %p, a2=(t2*a) %p.
+    Then a + a1 + a2 = q*{name} with q in {1,2}.
+  PROOF.
+    t*a = k1*{name} + a1,  t2*a = k2*{name} + a2.
+    a+a1+a2 = a + t*a + t2*a - (k1+k2)*{name}
+             = a(1+t+t2) - (k1+k2)*{name}
+             = a*p - (k1+k2)*p   [using 1+t+t2=p]
+             = {name}*(a - k1 - k2).
+    For a in 1..mod-1, classical floor(y)+floor(z) vs floor(y+z) with
+    y=t*a/mod, z=t2*a/mod, y+z = a - a/mod, floor(y+z)=a-1,
+    hence a-k1-k2 in {1,2}. QED.
+
+  THEOREM (carry reconstruction; no t^2 mul).
+    a1 = (t*a) mod {name}
+    q  = 1 if a+a1 < {name} else 2
+       = 1 + floor((a+a1)/{name})
+    a2 = q*{name} - a - a1
+  PROOF.
+    From 1+t+t2=0 mod {name}:  t2 == -1-t  =>  t2*a == -a - t*a  (mod {name}).
+    So a2 == -(a+a1) (mod {name}).
+    Canonical lift in [0,{name}):
+      if a+a1 < {name}:  a2 = {name} - (a+a1) = {name}-a-a1  => q=1
+      if a+a1 >= {name}: a2 = 2*{name}-(a+a1)           => q=2
+    Equiv: q = 1 + floor((a+a1)/{name}), a2 = q*{name}-a-a1.
+    Meaning: q is the carry bit of adding a and a1 across {name}. QED.
+
+  COROLLARY.
+    Computing t2*a mod {name} is redundant once (a1,q) are known.
+    Pipeline: a --*t--> a1 --carry--> q --sub--> a2.
+
+--- Ring Z/NZ, root t, lift 1+t+t^2 = N ---
+  Polynomial: t^2 + t + 1 == 0 (mod N)
+  Integer lifts: check (1+t+t2) % N == 0
+  Chosen nonnegative reps: 1+t+t2 == N?  True
+
+  THEOREM (orbit sum).
+    Let a in 1..N-1, a1=(t*a) %N, a2=(t2*a) %N.
+    Then a + a1 + a2 = q*{name} with q in {1,2}.
+  PROOF.
+    t*a = k1*{name} + a1,  t2*a = k2*{name} + a2.
+    a+a1+a2 = a + t*a + t2*a - (k1+k2)*{name}
+             = a(1+t+t2) - (k1+k2)*{name}
+             = a*N - (k1+k2)*N   [using 1+t+t2=N]
+             = {name}*(a - k1 - k2).
+    For a in 1..mod-1, classical floor(y)+floor(z) vs floor(y+z) with
+    y=t*a/mod, z=t2*a/mod, y+z = a - a/mod, floor(y+z)=a-1,
+    hence a-k1-k2 in {1,2}. QED.
+
+  THEOREM (carry reconstruction; no t^2 mul).
+    a1 = (t*a) mod {name}
+    q  = 1 if a+a1 < {name} else 2
+       = 1 + floor((a+a1)/{name})
+    a2 = q*{name} - a - a1
+  PROOF.
+    From 1+t+t2=0 mod {name}:  t2 == -1-t  =>  t2*a == -a - t*a  (mod {name}).
+    So a2 == -(a+a1) (mod {name}).
+    Canonical lift in [0,{name}):
+      if a+a1 < {name}:  a2 = {name} - (a+a1) = {name}-a-a1  => q=1
+      if a+a1 >= {name}: a2 = 2*{name}-(a+a1)           => q=2
+    Equiv: q = 1 + floor((a+a1)/{name}), a2 = q*{name}-a-a1.
+    Meaning: q is the carry bit of adding a and a1 across {name}. QED.
+
+  COROLLARY.
+    Computing t2*a mod {name} is redundant once (a1,q) are known.
+    Pipeline: a --*t--> a1 --carry--> q --sub--> a2.
+
+----------------------------------------------------------------------------------------
+2) Dual dictionary
+----------------------------------------------------------------------------------------
+  polynomial root     beta (mod p)          lambda (mod N)
+  base element        x  (field coord)      u  (scalar / r-orbit)
+  first image         x1 = beta*x mod p     u1 = lambda*u mod N
+  carry bit           q_x                   q_u  (or q_r if u=r)
+  third member        x2 = q_x*p - x - x1   u2 = q_u*N - u - u1
+  orbit sum           x+x1+x2 = q_x*p       u+u1+u2 = q_u*N
+  meaning of q        carry of x+x1 / p     carry of u+u1 / N
+
+  KEEP SEPARATE until each side is fully derived.
+  Do NOT identify q_x with q_u / q_d without a new exact theorem.
+
+----------------------------------------------------------------------------------------
+3) Numerical confirmation only (not discovery)
+----------------------------------------------------------------------------------------
+  p-side random: q match 8000/8000  a2 match 8000/8000  sum identity 8000/8000
+  N-side random: q match 8000/8000  a2 match 8000/8000  sum identity 8000/8000
+  p-side on x(nG) 1..1024: 1024/1024
+
+----------------------------------------------------------------------------------------
+4) What this does NOT claim
+----------------------------------------------------------------------------------------
+  - No map q_x -> q_u / q_d (closed as statistical; no theorem).
+  - No orientation bridge (falsified).
+  - No Phi decimal group law.
+  - Signature r-orbits: same N-side algebra if u=r; still separate from x.
+
+========================================================================================
+VERDICT
+========================================================================================
+  Structure comes from t^2+t+1=0 over two rings with lift 1+t+t^2 = modulus.
+  Carry reconstruction is the same theorem twice (p with beta, N with lambda).
+  Duality is algebraic parallelism, not a numerical bridge.
+

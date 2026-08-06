@@ -1,0 +1,36 @@
+P135 d-SWEEP
+band d in [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)  defect(d)=δ+d  window [22210491869505721318508395742023838710510, 43988563352445782980164370617657004243693]
+notebook: Λ_N(d)=Λ_N+ d_shift tested with d_shift = candidate d
+ecdsa available: True
+
+BASELINE (d_shift=0):
+  Lambda_N row3 = 107329397079532295557318141750802481743365519021307735330654746890138631346025
+  x_carry rows OK: 1/3
+  row remainders: r1=255b r2=255b r3=0
+
+  row1 d ≡ rem*qx^-1 mod N -> 90037201683217830568866177113950313448830490224679540586190968685193370999890 (out of band)
+  row2 d ≡ rem*qx^-1 mod N -> 90436853422834144141458880656835747147783005802130435674692000648621503277459 (out of band)
+  row3 carry: already integer at d_shift=0
+NOTE: shelf2+2^k endpoint probes removed — use p135_gap_tier_sweep.py for gap-tier INTERVALS [2^(H-gap-1), 2^(H-gap)).
+CANDIDATES IN BAND: 15
+
+score d_bits  x3   y kdist     best defW  ec source
+---------------------------------------------------
+   15    135   0   Y     0    kx_r1    Y   N kx_r1_as_d
+   15    135   0   Y     0    kx_r2    Y   N kx_r2_as_d
+   15    135   0   Y     0    ky_r1    Y   N ky_r1_as_d
+   15    135   0   Y     0    ky_r2    Y   N ky_r2_as_d
+ -115    135   0   Y   130    kx_r1    Y   N shelf2+d2 residue (shelf2^3 mod LO)
+ -115    135   0   Y   130    kx_r2    Y   N shelf2+shelf_y - shelf2
+ -115    135   0   Y   130    kx_r2    Y   N cube_lift3
+ -116    135   0   Y   131    ky_r1    Y   N shelf2+matrix t0 col2-col1
+ -116    135   0   Y   131    kx_r2    Y   N TOP
+ -117    135   0   Y   132    ky_r1    Y   N shelf2+C_plus1 - C_floor
+ -117    135   0   Y   132    ky_r1    Y   N shelf2+shrink (N-q) mod LO
+ -117    135   0   Y   132    ky_r1    Y   N shelf2+matrix t2 col2-col1
+ -118    135   0   Y   133    ky_r1    Y   N shelf3
+ -119    135   0   Y   134    ky_r1    Y   N cube_lift2
+ -119    135   0   Y   134    ky_r1    Y   N LO
+
+EC hits (d*G==P): 0
+All-3-row x-carry with Λ_N+d: 0

@@ -1,0 +1,38 @@
+========================================================================================
+Phi triple add: left decode+EC+encode  vs  right C_{n+m}
+========================================================================================
+----------------------------------------------------------------------------------------
+Example: 1G + 2G = 3G
+----------------------------------------------------------------------------------------
+  C1=0.475561529160
+  C2=0.773506139465
+  right C3=0.973396897682
+  left  encode(decode(C1)+decode(C2))=0.973396897682
+  left == right: True
+  naive (C1+C2) mod 1 == right: False
+
+----------------------------------------------------------------------------------------
+Exact left side on all triples
+----------------------------------------------------------------------------------------
+  encode(decode(Cn)+decode(Cm)) == C_{n+m}: 19900/19900
+
+----------------------------------------------------------------------------------------
+Naive combine falsify  train s<= 120  holdout s in [121,200]
+----------------------------------------------------------------------------------------
+  (Ca+Cb) mod 1                 train exact 0/7140 MAE=0.3444  hold exact 0/12760 MAE=0.3465
+  (Ca+Cb)/2                     train exact 0/7140 MAE=0.3118  hold exact 0/12760 MAE=0.3069
+  Ca*Cb                         train exact 0/7140 MAE=0.3671  hold exact 0/12760 MAE=0.3817
+  |Ca-Cb|                       train exact 0/7140 MAE=0.3501  hold exact 0/12760 MAE=0.3517
+  max(Ca,Cb)                    train exact 0/7140 MAE=0.3619  hold exact 0/12760 MAE=0.3457
+  min(Ca,Cb)                    train exact 0/7140 MAE=0.3405  hold exact 0/12760 MAE=0.3543
+  (Ca+Cb) mod 1 avg mix         train exact 0/7140 MAE=0.3401  hold exact 0/12760 MAE=0.3296
+  (num_a+num_b) mod p^2         train exact 0/7140 MAE=0.3444  hold exact 0/12760 MAE=0.3465
+
+========================================================================================
+VERDICT
+========================================================================================
+  Keep the right: C_{n+m} is ground truth.
+  Exact left encode(decode(Cn)+decode(Cm)) matches 100% — that IS EC add.
+  Decimal combines (sum mod 1, product, num add mod p^2, ...): 0 exact on holdout.
+  Wrap-at-1 is field geometry for x/p, not the group law on Phi.
+

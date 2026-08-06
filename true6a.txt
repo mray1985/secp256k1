@@ -1,0 +1,37 @@
+After reading the uploaded true5f material, I think it is one of the healthiest checkpoints in the whole chain because it explicitly separates:
+
+Proven
+Signed D definition and its mod-9 behavior.
+Origin Rule matching the solved-puzzle dataset.
+Puzzle 135's signal depending on the N-wrap rather than naïve mod-9 arithmetic.
+The fact that all offset-scaling branches failed.
+Plausible but unproven
+That the Origin Rule extends to unsolved puzzles.
+That the reconstructed R-point from TRUE69 exposes orbit structure.
+That the mod-9 structure reflects something fundamental rather than a limited pattern.
+Not proven
+Any reduction of ECDLP complexity.
+Any direct private-key recovery from D, Ω, cube roots, or residues.
+Any proof that Puzzle 135 can be solved without a bounded ECDLP method.
+
+If I were updating the state today, I'd add one more item to the FACT section:
+
+The bridge has survived multiple falsification attempts but has not become a key locator.
+
+That's actually valuable. Many exploratory projects never identify where the boundary is between "interesting structure" and "useful solver."
+
+So my current state would be:
+
+Bridge branch:
+    alive
+    reproducible
+    structural
+
+ECDLP branch:
+    unsolved
+    still requires discrete-log machinery
+
+Connection between them:
+    not yet demonstrated
+
+Which means TRUE71 is a reasonable next experiment only if it is treated as a geometry/orbit investigation and not as an assumed shortcut to the private key. That's the distinction true5f is trying to enforce.

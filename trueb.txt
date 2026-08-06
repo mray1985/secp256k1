@@ -1,0 +1,70 @@
+Good — that confirms the branch script did what it was supposed to do.
+
+The result means:
+
+A
+G
+	​
+
+, A
+P
+	​
+
+, A
+R
+	​
+
+
+do not directly equal the obvious known values. So the branch values are not simple aliases for M,R,S,X,Y,rx3,δ,λ
+x
+	​
+
+,d.
+
+Next step should be:
+
+A
+i
+	​
+
+ vs λ
+x
+	​
+
+
+Specifically test:
+
+A
+i
+	​
+
+−λ
+x
+	​
+
+(modp)
+A
+i
+	​
+
+⋅λ
+x
+−1
+	​
+
+(modp)
+A
+i
+2
+	​
+
+−λ
+x
+3
+	​
+
+(modp)
+
+for G,P,R.
+
+Because the pair-sum shell is solved. Now we need to see whether each individual branch is positioned relative to the x-bridge.

@@ -1,0 +1,164 @@
+{
+  "puzzles": {
+    "135": {
+      "meta": {
+        "n": 135,
+        "shelf2_bits": 135,
+        "gap_bits": 133,
+        "predicted_offset_bits": [
+          132,
+          133,
+          134
+        ],
+        "law_row": 0,
+        "n_k": 281,
+        "sources_sample": {
+          "1": [
+            "bridge:C_plus1 - C_floor",
+            "bridge:LO-C_minus1 - C_floor",
+            "align_delta:shelf2 (LO+(L2-L1 mod LO)) + (C_plus1 - "
+          ],
+          "2": [
+            "small_k"
+          ],
+          "3": [
+            "small_k"
+          ],
+          "4": [
+            "small_k"
+          ],
+          "5": [
+            "small_k"
+          ],
+          "6": [
+            "small_k"
+          ],
+          "7": [
+            "small_k"
+          ],
+          "8": [
+            "small_k"
+          ],
+          "9": [
+            "small_k"
+          ],
+          "10": [
+            "small_k"
+          ],
+          "11": [
+            "small_k"
+          ],
+          "12": [
+            "small_k"
+          ],
+          "13": [
+            "small_k"
+          ],
+          "14": [
+            "small_k"
+          ],
+          "15": [
+            "small_k"
+          ],
+          "16": [
+            "small_k"
+          ],
+          "17": [
+            "small_k"
+          ],
+          "18": [
+            "small_k"
+          ],
+          "19": [
+            "small_k"
+          ],
+          "20": [
+            "small_k"
+          ]
+        }
+      },
+      "hits": [],
+      "solved": false
+    },
+    "160": {
+      "meta": {
+        "n": 160,
+        "shelf2_bits": 160,
+        "gap_bits": 159,
+        "predicted_offset_bits": [
+          157,
+          158,
+          159
+        ],
+        "law_row": 0,
+        "n_k": 311,
+        "sources_sample": {
+          "1": [
+            "bridge:C_plus1 - C_floor",
+            "bridge:LO-C_minus1 - C_floor",
+            "align_delta:shelf2 (LO+(L2-L1 mod LO)) + (C_plus1 - "
+          ],
+          "2": [
+            "small_k"
+          ],
+          "3": [
+            "small_k"
+          ],
+          "4": [
+            "small_k"
+          ],
+          "5": [
+            "small_k"
+          ],
+          "6": [
+            "small_k"
+          ],
+          "7": [
+            "small_k"
+          ],
+          "8": [
+            "small_k"
+          ],
+          "9": [
+            "small_k"
+          ],
+          "10": [
+            "small_k"
+          ],
+          "11": [
+            "small_k"
+          ],
+          "12": [
+            "small_k"
+          ],
+          "13": [
+            "small_k"
+          ],
+          "14": [
+            "small_k"
+          ],
+          "15": [
+            "small_k"
+          ],
+          "16": [
+            "small_k"
+          ],
+          "17": [
+            "small_k"
+          ],
+          "18": [
+            "small_k"
+          ],
+          "19": [
+            "small_k"
+          ],
+          "20": [
+            "small_k"
+          ]
+        }
+      },
+      "hits": [],
+      "solved": false
+    }
+  }
+}

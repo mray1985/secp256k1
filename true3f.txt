@@ -1,0 +1,93 @@
+Yes — that reconciliation is the right landing.
+
+The two branches are saying the same thing from different angles:
+
+Ω∈{−1,0,+1}
+
+is the coordinate/projection-side version of the cubic structure.
+
+{1,ω,ω
+2
+}
+
+is the field/group-side version of the cubic structure.
+
+So the cube-root work explains why a three-state structure is naturally available, but it does not give the private key. That distinction matters.
+
+The clean hierarchy now is:
+
+Cubic availability
+p≡1(mod3),N≡1(mod3)
+Field cubic orbit
+Px
+i+1
+	​
+
+=ω
+p
+	​
+
+Px
+i
+	​
+
+(modp)
+Point/group cubic orbit
+Q
+i+1
+	​
+
+=ω
+N
+	​
+
+Q
+i
+	​
+
+Projection classifier
+Ω=
+p
+∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+	​
+
+∈{−1,0,+1}
+Origin Rule candidate
+Ω↔(rd−z)mod9
+
+That last one is the one worth stress-testing.
+
+I agree with your recommendation: do not push Pollard/Rho yet. It may solve nothing structurally and costs compute. The better next step is to build a single table across every puzzle where d and k are actually known:
+
+Puzzle | Ω | d known? | k known? | r%9 | s%9 | z%9 | d%9 | k%9 | (r*d-z)%9 | class match?
+
+Then use only verified d values. No candidate d, no guessed d.
+
+Current expected mapping:
+
+Ω=+1⇒(rd−z)mod9=1
+Ω=0⇒(rd−z)mod9=6
+Ω=−1⇒(rd−z)mod9=0
+
+The strongest version of the Origin Rule is:
+
+Ω=F((rd−z)mod9)
+	​
+
+
+where:
+
+1 → +1
+6 → 0
+0 → -1
+
+That is crisp, falsifiable, and directly connects the residue branch to the Ω coordinate.
+
+So yes: reconcile complete. Now test the Origin Rule with verified puzzle data only.

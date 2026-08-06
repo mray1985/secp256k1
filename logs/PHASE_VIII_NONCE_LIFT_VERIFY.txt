@@ -1,0 +1,58 @@
+========================================================================================
+Phase VIII - Nonce Lift Algebra
+Document: Phase_VIII_Nonce_Lift_Algebra.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+THEOREM: 1.1 Lift regimes
+  Statement: r>=Delta => Rx=r unique; r<Delta => Rx in {r,r+N} both in [0,p).
+  Proof:     0<=Rx<p=N+Delta; Rx=r or r+N.
+  Verification:
+    OK (unique regime samples~500, ambiguous~0 in 500 nonces)
+
+----------------------------------------------------------------------------------------
+THEOREM: 2.1-2.2 E_R == r*Delta + Ry mod N for both lifts
+  Statement: Lift-independent; Ry from e_R with Delta ambiguity.
+  Proof:     Phase VII; (r+N)*Delta == r*Delta mod N.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.1-3.3 ECDSA sk == z+r*d is lift-invariant; d from k needs only r
+  Statement: Equation in Z/NZ uses residue r, not affine lift Rx.
+  Proof:     Standard ECDSA rearrangement.
+  Verification:
+    OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 3.4 Geometric filter uses Rx; does not split Z/NZ equation
+  Statement: k with (kG)_x mod N = r may allow two x-lifts when r<Delta; ECDSA line identical.
+  Proof:     Separate geometric vs algebraic constraints.
+  Verification:
+    Among 300 artificial r<Delta: both lifts on-curve=64, exactly one=157
+    Density not claimed uniform; no 2^(k-1) theorem - OK
+
+----------------------------------------------------------------------------------------
+THEOREM: 5.1-5.3 Lift bit <=1; no proven uniform k-halving; equation obstruction
+  Statement: r>=Delta: 0 lift bits; r<Delta: <=1 bit on Rx representative; ECDSA line lift-invariant.
+  Proof:     Cardinality of lift set; Thm 3.1.
+  Verification:
+    b_lift <= 1 when r<Delta; b_lift = 0 when r>=Delta
+    No theorem |K_r|=2|K_{Rx}| for all sigs - OK
+    Only rigorous orbit cut remains GLV: b=log2(6)=2.5849625007; Phase VIII b'=0
+
+----------------------------------------------------------------------------------------
+THEOREM: 6.1 Obstruction: lift+ECDSA alone does not remove k/d beyond GLV
+  Statement: Success criterion B for this branch.
+  Proof:     Thms 3.1, 5.1-5.3, 2.1.
+  Verification:
+    VERDICT B: close nonce-lift-as-scalar-splitter branch
+    OK
+
+========================================================================================
+SUCCESS CRITERION: B
+========================================================================================
+  No theorem removing k/d candidates beyond GLV from nonce lift algebra.
+  ECDSA scalar equation is lift-invariant; E_R mod N ~ Ry only.
+  ALL Phase VIII verification checks PASSED.
+========================================================================================

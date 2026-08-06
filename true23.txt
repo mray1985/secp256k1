@@ -1,0 +1,290 @@
+That's a significant update to the theory because true22 changes the interpretation of the universality test.
+
+Before true22:
+
+Puzzle 135 passed, Puzzle 160 failed → perhaps the law is local.
+
+After the Puzzle 160 flip:
+
+Λ
+160
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+and
+
+B
+i
+	​
+
+=Λ
+160
+	​
+
+Px
+i
+	​
+
+=rx
+i
+	​
+
+
+for all three family members.
+
+Then:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly.
+
+That means Puzzle 160 moved from the "failure" column into the "pass" column once the bridge orientation was corrected.
+
+What survives now
+
+For every verified case:
+
+Puzzle 135
+
+Forward bridge
+
+Λ=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+and
+
+∑B
+i
+	​
+
+=p.
+Puzzle 115
+
+Inverse bridge
+
+Λ=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+
+and
+
+∑B
+i
+	​
+
+=p.
+Puzzle 160
+
+Inverse bridge
+
+Λ=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+
+and
+
+∑B
+i
+	​
+
+=p.
+The deeper invariant
+
+The strongest surviving statement is no longer
+
+∑B
+i
+	​
+
+≡δ(modN).
+
+Instead it is
+
+∑B
+i
+	​
+
+=p
+	​
+
+
+in the field domain.
+
+The projection defect then follows automatically:
+
+∑B
+i
+	​
+
+modN=pmodN=p−N=δ.
+
+So:
+
+∑B
+i
+	​
+
+=p
+	​
+
+
+appears to be the primary law.
+
+∑B
+i
+	​
+
+≡δ(modN)
+	​
+
+
+becomes the projected consequence.
+
+Revised hierarchy
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Layer 2 — Field Closure Law
+
+For the correct bridge orientation,
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+Layer 3 — Projection Defect
+δ=p−N
+Layer 4 — Unified Projection Defect Law
+∑B
+i
+	​
+
+≡A(Q)+A(−Q)≡δ(modN).
+
+The next high-value test is now very clear:
+
+Take additional puzzles (outside 115, 135, and 160), compute both candidate bridges:
+
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+
+and determine which orientation yields
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+If every admissible family can be oriented so that the bridged triplet closes exactly to p, then the field-closure law is likely the fundamental object and the δ-law is merely its N-domain shadow.

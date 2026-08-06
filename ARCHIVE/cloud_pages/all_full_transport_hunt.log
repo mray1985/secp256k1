@@ -1,0 +1,2700 @@
+=== ALL FULL TRANSPORT HUNT REPORT ===
+puzzles: 159 of 159 requested
+samples/sign: 100000  heaven_head3: False  bridge_only: False
+
+=== P1 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 1b  offset_bits [-2, -1, 0] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=2 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=2 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=2 kept=0 ec_hits=0
+
+=== P2 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 2b  offset_bits [-1, 0] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+
+=== P3 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 3b  offset_bits [1, 2] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P3 d=7 [bridge:shelf2 (LO+(L2-L1 mod LO)) + (C_plus1 - C_floor)] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+
+=== P4 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 4b  offset_bits [1, 2, 3] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P4 d=8 [bridge:shelf2 (LO+(L2-L1 mod LO)) + (L3-L1 mod LO)] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=3 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=3 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=3 kept=0 ec_hits=0
+
+=== P5 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 5b  offset_bits [2, 3, 4] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P5 d=21 [bridge:shelf2 (LO+(L2-L1 mod LO)) + (L3-L1 mod LO)] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=5 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=5 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=5 kept=0 ec_hits=0
+
+=== P6 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 6b  offset_bits [3, 4] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P6 d=49 [bridge:shelf2 (LO+(L2-L1 mod LO)) + (cube lift - shelf (d3))] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=7 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=7 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=7 kept=0 ec_hits=0
+
+=== P7 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 7b  offset_bits [5, 6] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P7 d=76 [bridge:shelf2 (LO+(L2-L1 mod LO)) + (dy residue (shelf_y^3 mod LO))] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=28 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=28 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=28 kept=0 ec_hits=0
+
+=== P8 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 8b  offset_bits [5, 6, 7] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P8 d=224 [bridge:shelf_y (LO+(lambda_yN-L1 mod LO)) + (d3 residue (shelf3^3 mod LO))] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=1 kept=0 ec_hits=0
+
+=== P9 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 9b  offset_bits [7, 8] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+  *** EC HIT P9 d=467 [bridge:shelf3 (LO+(L3-L1 mod LO)) + (dy residue (shelf_y^3 mod LO))] ***
+    bridge phase ec_hits=1
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=38 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=38 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=38 kept=0 ec_hits=0
+
+=== P10 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 10b  offset_bits [8, 9] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=84 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=84 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=84 kept=0 ec_hits=0
+
+=== P11 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 11b  offset_bits [8, 9] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=121 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=121 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=121 kept=0 ec_hits=0
+
+=== P12 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 12b  offset_bits [9, 10, 11] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=1016 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=1016 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=1016 kept=0 ec_hits=0
+
+=== P13 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 13b  offset_bits [10, 11] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=162 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=162 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=162 kept=0 ec_hits=0
+
+=== P14 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 14b  offset_bits [12, 13] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=2318 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=2318 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=2318 kept=0 ec_hits=0
+
+=== P15 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 15b  offset_bits [12, 13] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=7065 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=7065 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=7065 kept=0 ec_hits=0
+
+=== P16 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 16b  offset_bits [14, 15] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=11549 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=11549 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=11549 kept=0 ec_hits=0
+
+=== P17 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 17b  offset_bits [14, 15, 16] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=7544 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=7544 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=7544 kept=0 ec_hits=0
+
+=== P18 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 18b  offset_bits [15, 16, 17] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=19348 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=19348 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=19348 kept=0 ec_hits=0
+
+=== P19 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 19b  offset_bits [16, 17] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=36068 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=36068 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=36068 kept=0 ec_hits=0
+
+=== P20 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 20b  offset_bits [18, 19] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=111422 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=111422 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=111422 kept=0 ec_hits=0
+
+=== P21 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 21b  offset_bits [19, 20] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=28794 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=28794 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=28794 kept=0 ec_hits=0
+
+=== P22 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 22b  offset_bits [20, 21] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=10228 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=10228 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=10228 kept=0 ec_hits=0
+
+=== P23 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 23b  offset_bits [20, 21] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=20774 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=20774 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=20774 kept=0 ec_hits=0
+
+=== P24 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 24b  offset_bits [21, 22] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=73724 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=73724 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=73724 kept=0 ec_hits=0
+
+=== P25 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 25b  offset_bits [22, 23, 24] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=73022 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=73022 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=73022 kept=0 ec_hits=0
+
+=== P26 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 26b  offset_bits [24, 25] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=45938 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=45938 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=45938 kept=0 ec_hits=0
+
+=== P27 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 27b  offset_bits [24, 25, 26] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=65485 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=65485 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=65485 kept=0 ec_hits=0
+
+=== P28 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 28b  offset_bits [25, 26] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=41705 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=41705 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=41705 kept=0 ec_hits=0
+
+=== P29 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 29b  offset_bits [26, 27] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=85878 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=85878 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=85878 kept=0 ec_hits=0
+
+=== P30 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 30b  offset_bits [27, 28, 29] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=20005 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=20005 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=20005 kept=0 ec_hits=0
+
+=== P31 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 31b  offset_bits [28, 29] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=51019 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=51019 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=51019 kept=0 ec_hits=0
+
+=== P32 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 32b  offset_bits [29, 30, 31] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=6363 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=6363 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=6363 kept=0 ec_hits=0
+
+=== P33 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 33b  offset_bits [31, 32] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=32137 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=32137 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=32137 kept=0 ec_hits=0
+
+=== P34 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 34b  offset_bits [31, 32, 33] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=13471 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=13471 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=13471 kept=0 ec_hits=0
+
+=== P35 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 35b  offset_bits [32, 33] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=5204 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=5204 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=5204 kept=0 ec_hits=0
+
+=== P36 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 36b  offset_bits [34, 35] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=19350 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=19350 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=19350 kept=0 ec_hits=0
+
+=== P37 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 37b  offset_bits [34, 35] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=37825 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=37825 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=37825 kept=0 ec_hits=0
+
+=== P38 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 38b  offset_bits [36, 37] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=37719 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=37719 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=37719 kept=0 ec_hits=0
+
+=== P39 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 39b  offset_bits [36, 37, 38] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=46217 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=46217 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=46217 kept=0 ec_hits=0
+
+=== P40 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 40b  offset_bits [38, 39] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=2915 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=2915 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=2915 kept=0 ec_hits=0
+
+=== P41 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 41b  offset_bits [39, 40] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=7571 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=7571 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=7571 kept=0 ec_hits=0
+
+=== P42 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 42b  offset_bits [39, 40] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=63223 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=63223 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=63223 kept=0 ec_hits=0
+
+=== P43 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 43b  offset_bits [41, 42] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=29514 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=29514 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=29514 kept=0 ec_hits=0
+
+=== P44 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 44b  offset_bits [42, 43] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=84924 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=84924 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=84924 kept=0 ec_hits=0
+
+=== P45 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 45b  offset_bits [42, 43] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=67998 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=67998 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=67998 kept=0 ec_hits=0
+
+=== P46 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 46b  offset_bits [43, 44] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=53219 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=53219 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=53219 kept=0 ec_hits=0
+
+=== P47 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 47b  offset_bits [44, 45, 46] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=34454 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=34454 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=34454 kept=0 ec_hits=0
+
+=== P48 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 48b  offset_bits [46, 47] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=89322 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=89322 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=89322 kept=0 ec_hits=0
+
+=== P49 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 49b  offset_bits [46, 47, 48] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=26922 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=26922 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=26922 kept=0 ec_hits=0
+
+=== P50 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 50b  offset_bits [47, 48] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=72471 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=72471 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=72471 kept=0 ec_hits=0
+
+=== P51 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 51b  offset_bits [48, 49, 50] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=87451 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=87451 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=87451 kept=0 ec_hits=0
+
+=== P53 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 53b  offset_bits [50, 51, 52] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=21242 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=21242 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=21242 kept=0 ec_hits=0
+
+=== P54 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 54b  offset_bits [52, 53] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=33077 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=33077 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=33077 kept=0 ec_hits=0
+
+=== P55 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 55b  offset_bits [52, 53, 54] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=59768 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=59768 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=59768 kept=0 ec_hits=0
+
+=== P56 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 56b  offset_bits [53, 54, 55] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=61599 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=61599 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=61599 kept=0 ec_hits=0
+
+=== P57 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 57b  offset_bits [55, 56] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=16228 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=16228 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=16228 kept=0 ec_hits=0
+
+=== P58 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 58b  offset_bits [55, 56, 57] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=55834 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=55834 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=55834 kept=0 ec_hits=0
+
+=== P59 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 59b  offset_bits [56, 57, 58] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=25603 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=25603 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=25603 kept=0 ec_hits=0
+
+=== P60 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 60b  offset_bits [57, 58, 59] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=36366 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=36366 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=36366 kept=0 ec_hits=0
+
+=== P61 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 61b  offset_bits [59, 60] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=90756 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=90756 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=90756 kept=0 ec_hits=0
+
+=== P62 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 62b  offset_bits [59, 60, 61] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=84185 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=84185 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=84185 kept=0 ec_hits=0
+
+=== P63 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 63b  offset_bits [61, 62] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=43195 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=43195 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=43195 kept=0 ec_hits=0
+
+=== P64 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 64b  offset_bits [61, 62, 63] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=71820 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=71820 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=71820 kept=0 ec_hits=0
+
+=== P65 FULL TRANSPORT HUNT ===
+  rx ...962 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=55 head3=556
+  lhs tail ...292 rhs tail ...962
+  shelf2 65b  offset_bits [63, 64] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=17938 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=17938 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=17938 kept=0 ec_hits=0
+
+=== P66 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 66b  offset_bits [63, 64, 65] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=22775 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=22775 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=22775 kept=0 ec_hits=0
+
+=== P67 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 67b  offset_bits [64, 65, 66] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=69407 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=69407 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=69407 kept=0 ec_hits=0
+
+=== P68 FULL TRANSPORT HUNT ===
+  rx ...219 (bridge row 1 (no known_k / no RSZ))
+  anchor gap head2=29 head3=292
+  lhs tail ...776 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 68b  offset_bits [65, 66, 67] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=65239 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=65239 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=65239 kept=0 ec_hits=0
+
+=== P69 FULL TRANSPORT HUNT ===
+  rx ...368 (bridge row 2 (no known_k / no RSZ))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 69b  offset_bits [67, 68] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=39013 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=39013 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=39013 kept=0 ec_hits=0
+
+=== P70 FULL TRANSPORT HUNT ===
+  rx ...294 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=10 head3=101
+  lhs tail ...760 rhs tail ...962
+  shelf2 70b  offset_bits [67, 68] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=29367 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=29367 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=29367 kept=0 ec_hits=0
+
+=== P71 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 71b  offset_bits [68, 69] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=47033 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=47033 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=47033 kept=0 ec_hits=0
+
+=== P72 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 72b  offset_bits [69, 70] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=26484 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=26484 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=26484 kept=0 ec_hits=0
+
+=== P73 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 73b  offset_bits [70, 71] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=36758 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=36758 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=36758 kept=0 ec_hits=0
+
+=== P74 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 74b  offset_bits [71, 72] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=68380 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=68380 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=68380 kept=0 ec_hits=0
+
+=== P75 FULL TRANSPORT HUNT ===
+  rx ...981 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=92 head3=924
+  lhs tail ...873 rhs tail ...962
+  shelf2 75b  offset_bits [73, 74] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=62351 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=62351 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=62351 kept=0 ec_hits=0
+
+=== P76 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 76b  offset_bits [73, 74] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=42095 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=42095 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=42095 kept=0 ec_hits=0
+
+=== P77 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 77b  offset_bits [74, 75] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=28953 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=28953 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=28953 kept=0 ec_hits=0
+
+=== P78 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 78b  offset_bits [75, 76] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=64477 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=64477 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=64477 kept=0 ec_hits=0
+
+=== P79 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 79b  offset_bits [76, 77] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=17762 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=17762 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=17762 kept=0 ec_hits=0
+
+=== P80 FULL TRANSPORT HUNT ===
+  rx ...472 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=80 head3=804
+  lhs tail ...268 rhs tail ...962
+  shelf2 80b  offset_bits [77, 78, 79] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=10121 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=10121 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=10121 kept=0 ec_hits=0
+
+=== P81 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 81b  offset_bits [78, 79] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=29441 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=29441 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=29441 kept=0 ec_hits=0
+
+=== P82 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 82b  offset_bits [79, 80] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=35280 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=35280 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=35280 kept=0 ec_hits=0
+
+=== P83 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 83b  offset_bits [80, 81] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=67641 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=67641 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=67641 kept=0 ec_hits=0
+
+=== P84 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 84b  offset_bits [81, 82] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=83821 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=83821 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=83821 kept=0 ec_hits=0
+
+=== P85 FULL TRANSPORT HUNT ===
+  rx ...703 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=93 head3=935
+  lhs tail ...384 rhs tail ...962
+  shelf2 85b  offset_bits [82, 83, 84] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=72822 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=72822 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=72822 kept=0 ec_hits=0
+
+=== P86 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 86b  offset_bits [83, 84] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=95956 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=95956 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=95956 kept=0 ec_hits=0
+
+=== P87 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 87b  offset_bits [84, 85] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=97978 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=97978 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=97978 kept=0 ec_hits=0
+
+=== P88 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 88b  offset_bits [85, 86] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=98989 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=98989 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=98989 kept=0 ec_hits=0
+
+=== P89 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 89b  offset_bits [86, 87] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=99495 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=99495 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=99495 kept=0 ec_hits=0
+
+=== P90 FULL TRANSPORT HUNT ===
+  rx ...142 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=61 head3=611
+  lhs tail ...532 rhs tail ...962
+  shelf2 90b  offset_bits [87, 88] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=35832 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=35832 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=35832 kept=0 ec_hits=0
+
+=== P91 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 91b  offset_bits [88, 89] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=99874 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=99874 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=99874 kept=0 ec_hits=0
+
+=== P92 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 92b  offset_bits [89, 90] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=64 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=64 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=64 kept=0 ec_hits=0
+
+=== P93 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 93b  offset_bits [90, 91] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=50033 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=50033 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=50033 kept=0 ec_hits=0
+
+=== P94 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 94b  offset_bits [91, 92] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=24984 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=24984 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=24984 kept=0 ec_hits=0
+
+=== P95 FULL TRANSPORT HUNT ===
+  rx ...850 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=46 head3=461
+  lhs tail ...066 rhs tail ...962
+  shelf2 95b  offset_bits [93, 94] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=85670 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=85670 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=85670 kept=0 ec_hits=0
+
+=== P96 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 96b  offset_bits [93, 94] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=18754 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=18754 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=18754 kept=0 ec_hits=0
+
+=== P97 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 97b  offset_bits [94, 95] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=59378 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=59378 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=59378 kept=0 ec_hits=0
+
+=== P98 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 98b  offset_bits [95, 96] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=79689 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=79689 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=79689 kept=0 ec_hits=0
+
+=== P99 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 99b  offset_bits [96, 97] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=10156 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=10156 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=10156 kept=0 ec_hits=0
+
+=== P100 FULL TRANSPORT HUNT ===
+  rx ...660 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=35 head3=355
+  lhs tail ...078 rhs tail ...962
+  shelf2 100b  offset_bits [97, 98] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=6643 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=6643 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=6643 kept=0 ec_hits=0
+
+=== P101 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 101b  offset_bits [98, 99] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=27539 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=27539 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=27539 kept=0 ec_hits=0
+
+=== P102 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 102b  offset_bits [99, 100] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=36231 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=36231 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=36231 kept=0 ec_hits=0
+
+=== P103 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 103b  offset_bits [100, 101] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=68116 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=68116 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=68116 kept=0 ec_hits=0
+
+=== P104 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 104b  offset_bits [101, 102] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=84058 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=84058 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=84058 kept=0 ec_hits=0
+
+=== P105 FULL TRANSPORT HUNT ===
+  rx ...826 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=42 head3=426
+  lhs tail ...157 rhs tail ...962
+  shelf2 105b  offset_bits [103, 104] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=96870 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=96870 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=96870 kept=0 ec_hits=0
+
+=== P106 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 106b  offset_bits [103, 104] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=46014 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=46014 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=46014 kept=0 ec_hits=0
+
+=== P107 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 107b  offset_bits [104, 105] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=73008 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=73008 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=73008 kept=0 ec_hits=0
+
+=== P108 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 108b  offset_bits [105, 106] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=13497 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=13497 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=13497 kept=0 ec_hits=0
+
+=== P109 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 109b  offset_bits [106, 107] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=56749 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=56749 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=56749 kept=0 ec_hits=0
+
+=== P110 FULL TRANSPORT HUNT ===
+  rx ...400 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=10 head3=101
+  lhs tail ...216 rhs tail ...962
+  shelf2 110b  offset_bits [107, 108, 109] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=28123 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=28123 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=28123 kept=0 ec_hits=0
+
+=== P111 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 111b  offset_bits [108, 109] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=39187 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=39187 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=39187 kept=0 ec_hits=0
+
+=== P112 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 112b  offset_bits [109, 110] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=69594 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=69594 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=69594 kept=0 ec_hits=0
+
+=== P113 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 113b  offset_bits [110, 111] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=84797 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=84797 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=84797 kept=0 ec_hits=0
+
+=== P114 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 114b  offset_bits [111, 112] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=92399 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=92399 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=92399 kept=0 ec_hits=0
+
+=== P115 FULL TRANSPORT HUNT ===
+  rx ...818 (k*G_gen from known_k (hashkeys RSZ when available))
+  anchor gap head2=44 head3=443
+  lhs tail ...533 rhs tail ...962
+  shelf2 115b  offset_bits [112, 113, 114] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=2667 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=2667 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=2667 kept=0 ec_hits=0
+
+=== P116 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 116b  offset_bits [113, 114] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=1901 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=1901 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=1901 kept=0 ec_hits=0
+
+=== P117 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 117b  offset_bits [114, 115] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=49050 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=49050 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=49050 kept=0 ec_hits=0
+
+=== P118 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 118b  offset_bits [115, 116] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=25475 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=25475 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=25475 kept=0 ec_hits=0
+
+=== P119 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 119b  offset_bits [116, 117] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=62738 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=62738 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=62738 kept=0 ec_hits=0
+
+=== P120 FULL TRANSPORT HUNT ===
+  rx ...490 (hashkeys RSZ r -> R (puzzle 120 spend tx))
+  anchor gap head2=10 head3=103
+  lhs tail ...486 rhs tail ...962
+  shelf2 120b  offset_bits [117, 118] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=74447 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=74447 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=74447 kept=0 ec_hits=0
+
+=== P121 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 121b  offset_bits [118, 119] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=9316 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=9316 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=9316 kept=0 ec_hits=0
+
+=== P122 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 122b  offset_bits [119, 120] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=45342 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=45342 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=45342 kept=0 ec_hits=0
+
+=== P123 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 123b  offset_bits [120, 121] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=72672 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=72672 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=72672 kept=0 ec_hits=0
+
+=== P124 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 124b  offset_bits [121, 122] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=13665 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=13665 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=13665 kept=0 ec_hits=0
+
+=== P125 FULL TRANSPORT HUNT ===
+  rx ...500 (hashkeys RSZ r -> R (puzzle 125 spend tx))
+  anchor gap head2=10 head3=102
+  lhs tail ...075 rhs tail ...962
+  shelf2 125b  offset_bits [123, 124] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=44620 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=44620 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=44620 kept=0 ec_hits=0
+
+=== P126 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 126b  offset_bits [123, 124] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=21584 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=21584 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=21584 kept=0 ec_hits=0
+
+=== P127 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 127b  offset_bits [124, 125] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=39208 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=39208 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=39208 kept=0 ec_hits=0
+
+=== P128 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 128b  offset_bits [125, 126] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=30396 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=30396 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=30396 kept=0 ec_hits=0
+
+=== P129 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 129b  offset_bits [126, 127] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=34802 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=34802 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=34802 kept=0 ec_hits=0
+
+=== P130 FULL TRANSPORT HUNT ===
+  rx ...032 (hashkeys RSZ r -> R (puzzle 130 spend tx))
+  anchor gap head2=78 head3=781
+  lhs tail ...927 rhs tail ...962
+  shelf2 130b  offset_bits [127, 128, 129] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=49638 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=49638 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=49638 kept=0 ec_hits=0
+
+=== P131 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 131b  offset_bits [128, 129] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=16300 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=16300 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=16300 kept=0 ec_hits=0
+
+=== P132 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 132b  offset_bits [129, 130] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=58151 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=58151 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=58151 kept=0 ec_hits=0
+
+=== P133 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 133b  offset_bits [130, 131] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=20925 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=20925 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=20925 kept=0 ec_hits=0
+
+=== P134 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 134b  offset_bits [131, 132] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=39538 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=39538 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=39538 kept=0 ec_hits=0
+
+=== P135 FULL TRANSPORT HUNT ===
+  rx ...368 (hashkeys RSZ r -> R (puzzle 135 spend tx))
+  anchor gap head2=14 head3=148
+  lhs tail ...768 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 135b  offset_bits [132, 133, 134] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=30231 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=30231 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=30231 kept=0 ec_hits=0
+
+=== P136 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 136b  offset_bits [133, 134] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=65116 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=65116 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=65116 kept=0 ec_hits=0
+
+=== P137 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 137b  offset_bits [134, 135] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=82558 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=82558 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=82558 kept=0 ec_hits=0
+
+=== P138 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 138b  offset_bits [135, 136] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=8722 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=8722 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=8722 kept=0 ec_hits=0
+
+=== P139 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 139b  offset_bits [136, 137] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=54362 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=54362 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=54362 kept=0 ec_hits=0
+
+=== P140 FULL TRANSPORT HUNT ===
+  rx ...000 (hashkeys RSZ r -> R (puzzle 140 spend tx))
+  anchor gap head2=11 head3=110
+  lhs tail ...943 rhs tail ...962
+  shelf2 140b  offset_bits [137, 138, 139] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=95073 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=95073 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=95073 kept=0 ec_hits=0
+
+=== P141 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 141b  offset_bits [138, 139] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=11410 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=11410 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=11410 kept=0 ec_hits=0
+
+=== P142 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 142b  offset_bits [139, 140] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=55706 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=55706 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=55706 kept=0 ec_hits=0
+
+=== P143 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 143b  offset_bits [140, 141] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=22148 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=22148 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=22148 kept=0 ec_hits=0
+
+=== P144 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 144b  offset_bits [141, 142] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=61075 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=61075 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=61075 kept=0 ec_hits=0
+
+=== P145 FULL TRANSPORT HUNT ===
+  rx ...203 (hashkeys RSZ r -> R (puzzle 145 spend tx))
+  anchor gap head2=62 head3=629
+  lhs tail ...794 rhs tail ...962
+  shelf2 145b  offset_bits [142, 143, 144] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=34445 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=34445 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=34445 kept=0 ec_hits=0
+
+=== P146 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 146b  offset_bits [143, 144] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=90269 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=90269 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=90269 kept=0 ec_hits=0
+
+=== P147 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 147b  offset_bits [144, 145] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=95135 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=95135 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=95135 kept=0 ec_hits=0
+
+=== P148 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 148b  offset_bits [145, 146] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=2433 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=2433 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=2433 kept=0 ec_hits=0
+
+=== P149 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 149b  offset_bits [146, 147] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=51217 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=51217 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=51217 kept=0 ec_hits=0
+
+=== P150 FULL TRANSPORT HUNT ===
+  rx ...479 (hashkeys RSZ r -> R (puzzle 150 spend tx))
+  anchor gap head2=10 head3=105
+  lhs tail ...264 rhs tail ...962
+  shelf2 150b  offset_bits [147, 148, 149] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=64530 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=64530 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=64530 kept=0 ec_hits=0
+
+=== P151 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 151b  offset_bits [148, 149] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=62197 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=62197 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=62197 kept=0 ec_hits=0
+
+=== P152 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 152b  offset_bits [149, 150] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=81099 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=81099 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=81099 kept=0 ec_hits=0
+
+=== P153 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 153b  offset_bits [150, 151] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=90550 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=90550 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=90550 kept=0 ec_hits=0
+
+=== P154 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 154b  offset_bits [151, 152] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=95275 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=95275 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=95275 kept=0 ec_hits=0
+
+=== P155 FULL TRANSPORT HUNT ===
+  rx ...452 (hashkeys RSZ r -> R (puzzle 155 spend tx))
+  anchor gap head2=69 head3=690
+  lhs tail ...055 rhs tail ...962
+  shelf2 155b  offset_bits [152, 153, 154] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=25070 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=25070 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=25070 kept=0 ec_hits=0
+
+=== P156 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 156b  offset_bits [153, 154] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=51182 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=51182 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=51182 kept=0 ec_hits=0
+
+=== P157 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 157b  offset_bits [154, 155] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=75591 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=75591 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=75591 kept=0 ec_hits=0
+
+=== P158 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 158b  offset_bits [155, 156] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=12205 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=12205 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=12205 kept=0 ec_hits=0
+
+=== P159 FULL TRANSPORT HUNT ===
+  rx ...739 (bridge row 3 (no known_k / no RSZ))
+  anchor gap head2=52 head3=529
+  lhs tail ...255 rhs tail ...962
+  heaven ycomp head3=889
+  shelf2 159b  offset_bits [156, 157] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=56103 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=56103 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=56103 kept=0 ec_hits=0
+
+=== P160 FULL TRANSPORT HUNT ===
+  rx ...020 (hashkeys RSZ r -> R (puzzle 160 spend tx))
+  anchor gap head2=73 head3=733
+  lhs tail ...898 rhs tail ...962
+  shelf2 160b  offset_bits [157, 158, 159] (+gap±1)
+
+  phase 1: bridge alignment + shelf2 terms
+    bridge phase ec_hits=0
+  phase2_head3: samples=100000 gap_head=3 heaven_head=0
+    tested=76393 kept=0 ec_hits=0
+  phase3_head2: samples=100000 gap_head=2 heaven_head=0
+    tested=76393 kept=0 ec_hits=0
+  phase4_exact_gap: samples=100000 gap_head=0 heaven_head=0
+    tested=76393 kept=0 ec_hits=0
+
+=== SUMMARY ===
+  P2: kept=1 ec_hits=0
+  P3: kept=3 ec_hits=1
+  P4: kept=7 ec_hits=1
+  P5: kept=15 ec_hits=1
+  P6: kept=26 ec_hits=1
+  P7: kept=47 ec_hits=1
+  P8: kept=45 ec_hits=1
+  P9: kept=90 ec_hits=1
+  P10: kept=131 ec_hits=0
+  P11: kept=138 ec_hits=0
+  P12: kept=167 ec_hits=0
+  P13: kept=171 ec_hits=0
+  P14: kept=214 ec_hits=0
+  P15: kept=240 ec_hits=0
+  P16: kept=205 ec_hits=0
+  P17: kept=233 ec_hits=0
+  P18: kept=376 ec_hits=0
+  P19: kept=510 ec_hits=0
+  P20: kept=1198 ec_hits=0
+  P21: kept=420 ec_hits=0
+  P22: kept=250 ec_hits=0
+  P23: kept=360 ec_hits=0
+  P24: kept=788 ec_hits=0
+  P25: kept=884 ec_hits=0
+  P26: kept=607 ec_hits=0
+  P27: kept=822 ec_hits=0
+  P28: kept=600 ec_hits=0
+  P29: kept=841 ec_hits=0
+  P30: kept=401 ec_hits=0
+  P31: kept=639 ec_hits=0
+  P32: kept=246 ec_hits=0
+  P33: kept=467 ec_hits=0
+  P34: kept=312 ec_hits=0
+  P35: kept=210 ec_hits=0
+  P36: kept=369 ec_hits=0
+  P37: kept=516 ec_hits=0
+  P38: kept=494 ec_hits=0
+  P39: kept=582 ec_hits=0
+  P40: kept=219 ec_hits=0
+  P41: kept=237 ec_hits=0
+  P42: kept=99 ec_hits=0
+  P43: kept=425 ec_hits=0
+  P44: kept=659 ec_hits=0
+  P45: kept=839 ec_hits=0
+  P46: kept=585 ec_hits=0
+  P47: kept=467 ec_hits=0
+  P48: kept=1041 ec_hits=0
+  P49: kept=421 ec_hits=0
+  P50: kept=874 ec_hits=0
+  P51: kept=958 ec_hits=0
+  P53: kept=380 ec_hits=0
+  P54: kept=471 ec_hits=0
+  P55: kept=785 ec_hits=0
+  P56: kept=799 ec_hits=0
+  P57: kept=303 ec_hits=0
+  P58: kept=676 ec_hits=0
+  P59: kept=431 ec_hits=0
+  P60: kept=525 ec_hits=0
+  P61: kept=599 ec_hits=0
+  P62: kept=869 ec_hits=0
+  P63: kept=600 ec_hits=0
+  P64: kept=817 ec_hits=0
+  P65: kept=265 ec_hits=0
+  P66: kept=403 ec_hits=0
+  P67: kept=871 ec_hits=0
+  P68: kept=780 ec_hits=0
+  P69: kept=516 ec_hits=0
+  P70: kept=2899 ec_hits=0
+  P71: kept=590 ec_hits=0
+  P72: kept=420 ec_hits=0
+  P73: kept=552 ec_hits=0
+  P74: kept=846 ec_hits=0
+  P75: kept=799 ec_hits=0
+  P76: kept=572 ec_hits=0
+  P77: kept=424 ec_hits=0
+  P78: kept=803 ec_hits=0
+  P79: kept=77 ec_hits=0
+  P80: kept=293 ec_hits=0
+  P81: kept=416 ec_hits=0
+  P82: kept=396 ec_hits=0
+  P83: kept=753 ec_hits=0
+  P84: kept=946 ec_hits=0
+  P85: kept=865 ec_hits=0
+  P86: kept=850 ec_hits=0
+  P87: kept=916 ec_hits=0
+  P88: kept=900 ec_hits=0
+  P89: kept=980 ec_hits=0
+  P90: kept=512 ec_hits=0
+  P91: kept=923 ec_hits=0
+  P92: kept=161 ec_hits=0
+  P93: kept=634 ec_hits=0
+  P94: kept=422 ec_hits=0
+  P95: kept=1013 ec_hits=0
+  P96: kept=339 ec_hits=0
+  P97: kept=771 ec_hits=0
+  P98: kept=90 ec_hits=0
+  P99: kept=256 ec_hits=0
+  P100: kept=79 ec_hits=0
+  P101: kept=438 ec_hits=0
+  P102: kept=513 ec_hits=0
+  P103: kept=777 ec_hits=0
+  P104: kept=981 ec_hits=0
+  P105: kept=1062 ec_hits=0
+  P106: kept=594 ec_hits=0
+  P107: kept=832 ec_hits=0
+  P108: kept=276 ec_hits=0
+  P109: kept=683 ec_hits=0
+  P110: kept=2929 ec_hits=0
+  P111: kept=566 ec_hits=0
+  P112: kept=838 ec_hits=0
+  P113: kept=899 ec_hits=0
+  P114: kept=916 ec_hits=0
+  P115: kept=218 ec_hits=0
+  P116: kept=71 ec_hits=0
+  P117: kept=543 ec_hits=0
+  P118: kept=78 ec_hits=0
+  P119: kept=86 ec_hits=0
+  P120: kept=7363 ec_hits=0
+  P121: kept=246 ec_hits=0
+  P122: kept=597 ec_hits=0
+  P123: kept=847 ec_hits=0
+  P124: kept=292 ec_hits=0
+  P125: kept=4577 ec_hits=0
+  P126: kept=401 ec_hits=0
+  P127: kept=538 ec_hits=0
+  P128: kept=461 ec_hits=0
+  P129: kept=456 ec_hits=0
+  P130: kept=647 ec_hits=0
+  P131: kept=75 ec_hits=0
+  P132: kept=688 ec_hits=0
+  P133: kept=359 ec_hits=0
+  P134: kept=547 ec_hits=0
+  P135: kept=446 ec_hits=0
+  P136: kept=762 ec_hits=0
+  P137: kept=875 ec_hits=0
+  P138: kept=256 ec_hits=0
+  P139: kept=692 ec_hits=0
+  P140: kept=5949 ec_hits=0
+  P141: kept=301 ec_hits=0
+  P142: kept=687 ec_hits=0
+  P143: kept=81 ec_hits=0
+  P144: kept=74 ec_hits=0
+  P145: kept=525 ec_hits=0
+  P146: kept=1039 ec_hits=0
+  P147: kept=1100 ec_hits=0
+  P148: kept=170 ec_hits=0
+  P149: kept=646 ec_hits=0
+  P150: kept=6354 ec_hits=0
+  P151: kept=811 ec_hits=0
+  P152: kept=83 ec_hits=0
+  P153: kept=84 ec_hits=0
+  P154: kept=1090 ec_hits=0
+  P155: kept=406 ec_hits=0
+  P156: kept=592 ec_hits=0
+  P157: kept=889 ec_hits=0
+  P158: kept=285 ec_hits=0
+  P159: kept=82 ec_hits=0
+  P160: kept=894 ec_hits=0
+EC hits: [3, 4, 5, 6, 7, 8, 9]
+anchors -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\all_full_transport_anchors.csv
+csv -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\all_full_transport_hunt.csv
+report -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\all_full_transport_hunt_report.txt
+log -> C:\Users\mitch\Desktop\secp256k1\ARCHIVE\cloud_pages\all_full_transport_hunt.log

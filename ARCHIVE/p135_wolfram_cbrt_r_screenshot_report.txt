@@ -1,0 +1,26 @@
+P135 WOLFRAM SCREENSHOT 2026-06-26 22:06:54
+Query: x^3 == r (mod N)  [NOT r^3]
+
+r = 90653255469745952335985143920649543885181555095025199315947044135806663628368
+N = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+
+Wolfram roots (u_i^3 == r mod N):
+  u0 = 60306493601561808992883156812493196524332758705505276597570417047811988715354  tail ...354
+  u1 = 80680475098094210808563355244266594980678106283607197002762527030679177866205  tail ...205
+  u2 = 90597209774976371045695457960616024200664263569037335164877382204545156407115  tail ...115
+
+Code check: pow(r,(N+2)//9,N) + GLV rotations -> SAME three roots (match=True)
+
+Contrast prior screenshot 21:39:03:
+  Query was x^3 == 24879821969881342698453870499117630300356777343725767668138372196708140311764
+  That RHS = r^3 mod N (cube of signature r), not r itself.
+  One branch there was u = r (tail ...368).
+
+P135 arrest warrant (Px=...590, s/z from hashkeys RSZ):
+  branch u0 Px/u mod N -> x bits=256, no band, no EC
+  branch u1 Px/u mod N -> x bits=254, no band, no EC
+  branch u2 Px/u mod N -> x bits=253, no band, no EC
+  (field-lift paths also no hit)
+
+Verdict: screenshot confirms correct scalar cube-root branch selection.
+Arrest formula with lambda_i = Px/u_i still does not recover P135.

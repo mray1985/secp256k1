@@ -1,0 +1,99 @@
+Next step: TRUE70 should be a bounded ECDLP setup, not more bridge testing.
+
+TRUE69 completed the bridge story:
+
+x
+kG
+	​
+
+=r−δ(modp)
+
+That means the signature point R=kG is now reconstructed as a real curve point. Good. But it still does not give k without solving a discrete log.
+
+So freeze this:
+
+Projection-Origin Bridge: complete structural layer.
+Not a scalar locator.
+
+Now move to:
+
+TRUE70: Bounded Kangaroo for Puzzle 135
+
+Target:
+
+P=dG
+
+Range:
+
+2
+134
+≤d<2
+135
+
+Use Pollard Kangaroo, not Pollard Rho.
+
+Why Kangaroo?
+
+Because Puzzle 135 has a known interval. Rho ignores the interval; Kangaroo uses it.
+
+Clean TRUE70 plan:
+
+Set:
+
+a=2
+134
+,b=2
+135
+−1
+
+Convert target:
+
+P
+target
+	​
+
+=(X,Y)
+
+Shift target:
+
+P
+′
+=P
+target
+	​
+
+−aG
+
+Solve:
+
+P
+′
+=xG
+
+where:
+
+0≤x<b−a=2
+134
+−1
+
+Then:
+
+d=a+x
+
+Verify:
+
+dG=P
+target
+	​
+
+
+Everything from TRUE59–69 now becomes filters/verification metadata, not the main solving method.
+
+The big takeaway:
+
+D, Ω, δ, mod-9, and kG reconstruction classify the structure.
+Kangaroo is still needed to locate d inside the interval.
+
+So yeah — the next clean file is:
+
+true70_kangaroo_puzzle135.py

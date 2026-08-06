@@ -1,0 +1,49 @@
+solved puzzles with d: 81 (excluded 1 anomalies)
+
+=== corr(log2(d), metric) ===
+  corr(log2(d), delta_x): +0.0590
+  corr(log2(d), delta_y): +0.1283
+  corr(log2(d), min_delta): +0.1684
+  corr(log2(d), log2(sqrt(x))): -0.0590
+  corr(log2(d), log2(sqrt(y))): -0.1283
+  corr(log2(d), puzzle n): +1.0000
+
+=== corr(log2(d)-134, metric)  [band position] ===
+  corr(log_pos, delta_x): +0.0590
+  corr(log_pos, delta_y): +0.1283
+  corr(log_pos, min_delta): +0.1684
+  corr(log_pos, log2(sqrt(x))): -0.0590
+  corr(log_pos, log2(sqrt(y))): -0.1283
+  corr(log_pos, puzzle n): +1.0000
+
+=== coord half-log vs log2(d)/2 (expect ~strong if linked) ===
+  corr(log2(d), log2(sqrt(x)) - log2(d)/2): -0.9991
+  corr(log2(d), log2(sqrt(y)) - log2(d)/2): -0.9985
+  corr(log_pos, residual_y): -0.9985
+  corr(log_pos, delta_y): +0.1283
+
+=== H - log2(d)/2 vs hinge gaps ===
+  corr(H-log2(d)/2, delta_y): -0.1283
+  corr(H-log2(d)/2, min_delta): -0.1684
+
+=== closer-side split: corr(log_pos, min_delta) ===
+  closer=x: +0.3161  n=42
+  closer=y: -0.0832  n=39
+
+=== sanity: log2(d) vs puzzle n (should be ~1.0) ===
+  corr(log2(d), n): +1.0000
+
+=== anchor puzzles ===
+  P130: log2(d)=129.698 log_pos=-4.302 min_d=0.6141 dy=0.6141
+
+=== tightest min_delta (solved) ===
+  P 15 log_pos=-119.286 min_d=0.3495 closer=x
+  P 46 log_pos=-88.453 min_d=0.3533 closer=x
+  P  2 log_pos=-132.415 min_d=0.3652 closer=x
+  P 23 log_pos=-111.583 min_d=0.3682 closer=x
+  P 35 log_pos=-99.773 min_d=0.3725 closer=x
+  P 29 log_pos=-105.422 min_d=0.3751 closer=y
+  P 50 log_pos=-84.882 min_d=0.3790 closer=x
+  P  6 log_pos=-128.385 min_d=0.3837 closer=x
+  P 67 log_pos=-67.154 min_d=0.3914 closer=y
+  P 42 log_pos=-92.603 min_d=0.3959 closer=x

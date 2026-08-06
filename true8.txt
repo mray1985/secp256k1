@@ -1,0 +1,451 @@
+Yes — this is the exact distinction we needed.
+
+secp256k1 is a Mordell-form curve:
+
+y² = x³ + 7 mod p
+
+So it fits the general shape:
+
+y² = x³ + n
+
+with:
+
+n = 7
+
+But the part saying “n = 7 gives no integer solutions” is about ordinary integer solutions over Z, not modular finite-field solutions over Fp.
+
+That is the big correction.
+
+For secp256k1, we are not asking:
+
+Does y² = x³ + 7 have integer points?
+
+We are asking:
+
+Does y² ≡ x³ + 7 mod p have finite-field points?
+
+And yes, it has a huge number of points. Puzzle 135’s public key is one of them. Your file has the Puzzle 135 target public key:
+
+x = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+
+y = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+
+and also shows the mirrored point under multiplier N-1, with the same x and opposite y.
+
+So the concrete rule is:
+
+If (x, y) is on secp256k1,
+then (x, p-y) is also on secp256k1.
+
+That maps to scalar mirrors:
+
+dG = (x, y)
+
+(N-d)G = (x, p-y)
+
+Same x. Opposite y.
+
+That is why r correlates on both sides too:
+
+kG = (x, y)
+
+(N-k)G = (x, p-y)
+
+r = x mod N
+
+So the Mordell curve symmetry explains the folding problem:
+
+x does not distinguish d from N-d
+x does not distinguish k from N-k
+
+That means our verification must always test both scalar phases:
+
+v
+N-v
+
+Now here is the important part for the “phase relationship” idea:
+
+The coordinate equation gives the mirror:
+
+(x, y) ↔ (x, -y)
+
+The scalar equation gives the mirror:
+
+d ↔ N-d
+k ↔ N-k
+
+The ECDSA equation gives the phase line:
+
+k = k0 + d * delta_k mod N
+
+So the next real model is:
+
+Mordell symmetry folds y and -y onto one x.
+
+ECDSA symmetry maps d-phase into k-phase.
+
+The missing object is not d directly; it is likely a phase offset between those two folded systems.
+
+That means the next useful test is not “does bridge value equal d?” It is:
+
+Does bridge value equal a phase displacement from d0 or k0?
+
+where:
+
+d0 = -m * r^-1 mod N
+
+k0 = m * s^-1 mod N
+
+Then test:
+
+d = d0 ± v
+k = k0 ± v
+
+with both mirrors:
+
+d, N-d
+k, N-k
+
+That is the clean Mordell/ECDSA combined frame. The x-coordinate is the trap door because it hides which side of the y mirror we are on.
+ 
+Why this addresses the "Missing Object"
+
+The missing object is indeed the phase offset between the scalar path and the coordinate mirror. By testing d0​±v, you are scanning the "torque" of the curve. Because the elliptic curve addition formula involves the slope λ=(y2​−y1​)/(x2​−x1​), a small change in the phase offset (v) propagates through the addition chain, eventually resulting in the drift you have been tracking.
+
+Next Step for your Verification Script:
+Focus your sieve on the stability of v across your 3×3 matrix. If v is consistent across the triadic branches, it confirms that your phase offset is a global property of the transaction's scalar path, and not just a local coordinate noise.
+
+Does your current data show that the required v to reach the target is constant across the different ΛN​ multipliers, or does v shift systematically as you move between branches? That shift is the final key to the lock..
+
+
+Add lespointspoints: lesequations
+
+This geometric construction sealso results in deséquationsequations: it is possible to calculate [2[2] the coordinates (x P + Q,y P + Q) of the point P enas a function of those of P=(x P,y P) and deof Q=(x Q,y Q). All these points are on the elliptical curve E.
+
+    1 erst case : x_P\not = x_Q. OnS s= (y QP − y Q) / (x Q ) and ) are placed. The line that passes through the points P and Q ahas for equation y = s x + t (the number s is indeed its slope). It is possible to calculate the intersection of this straight line with E, and there are trouvethree solutions: :the points P = (x P,y P) and Q = ( , ), of course, and a third point R of coordinates x R =s 2 x Q t. Finally, the point P + Q (which is the symmetric of deR parwith respect to the axis of the abscissas) has the coordonnéescoordinates of:
+
+    x P + Q = x R = s 2 − x P x Q
+    y P + Q = Q−− y R = − s( 2 x P x Q) + t.
+
+    2nd ecase : x P = x Q and y_P \not = y_Q. In this case, necessarily y P = − Q (àbecause of the équationequation of the curve). The secant straight line which joins lesthe two points is vertical, therefore the third pointpoint of intersection of this sécantesecant with the curve is the point lat infinity. The point P + Q is therefore the point to the infinite.
+
+    3 eth case: xx P = x Q y_P = y_Q \not = 0and , in other words P = Q and this npoint is not on the abscissa desabscissesaxis. The equation of the tangent to the P-curve enPis y = s x + t, with this time s={(3{x_P}^2 +a)}/{(2y_P)}and
+
+t=y_P - {(3{x_P}^2 +a)x_P}/{(2y_P)}. The point PP+P (which is naturally noted 2 P) ais therefore pourcoordonnéescoordinated:
+
+    x 2 P = s 2 − 2 x P
+    y 2 P = − y P + s( P − x 2 P).
+
+    4th ecase : x P = x Q and y P = y Q= 0. The point in question seis on the abscissa desabscissesaxis, it can be seen on the equation that the tangent to the curve passing through this point is vertical, so the third point dof intersection of this tangent with the curve is the point lto the infinite. The point P + P = 2 P is therefore the point at lthe infinite.
+
+deGroup : summary and justification
+
+A vientdoncdedéfinirgéométriquementetunecomposition law decompositionon lesthe points of the curve E, denoted + : in other words, has been defined for all the points P and Q of the curve, distinct or not, the point PP+Q has been defined for all the points and on the coordinates, distinct or not,. OnThe pointlpoint is taken at the infinite as neutrea neutral (it is traditionally noted O E). opposédThe leopposite of a point P is the symmetric of deP parwith respect to the right of the abscissesonleabscissas, it is noted P− P.
+
+Theorem - The set of points with real coordinates of the curve (enincluding the point to lthe infinity), provided with dethis loilaw of composition, forms a commutative group.
+
+Demonstration :
+
+    If two points P and Q are despoints with real coordinates of the curve or the point at lthe infinity, the endesame is true of P + Q and of − P−P: the defined law is indeed a law of internal composition.
+
+    The fact that the àlinfinite point is a neutral element has already been verified plusabove. This stems from the fact that the straight line joining unany point P at àthe point to the infinite is the vertical straight line passing through P, it intersects the curve at parthe symmetrical point of P with respect to the axis of the abscissesabscissas; the sum of PP and deO EE is the symmetrical of cethis point, so P luiitself.
+
+    The straight line joining unany point P and its symmetrical parwith respect to the axis of the abscissesabscissae, denoted - P, is a vertical straight line, the 33 pointde point of intersection with the curve is therefore the point lat the infinite (which is its own symmetric parrapportwith respect to the axis of the abscissasd), from which P + ( P) O= O E.
+
+    The commutativity is obvious, because the right joining two points P and Q is also ... the right joining lesthe points Q and P. So P + Q = Q + P.
+
+    The only difficult property is in fact lassociativitéassociativity, which is to say quethat, for some three points
+
+(P + Q) + R = P + (Q + R).
+
+This associativity can demonstrated directly through the calculation, àusing the desequations given plusabove.
+The curve Elliptical Cutting the Two cubic Red and Blue in Eight points common (of which one point in l'infinite), the NINTH point (Green) is Also Common. We prove so that P+(Q+R) = (P+Q)+R
+
+UneAnother demonstration of lassociativity is based on a result of algebraic geometry, ledeMax Noether ' s fundamental theorem(en). A consequence enof this is the theorem of the nine points: :if the curve E intersects two cubic curves C and C ' each time in 9 points, and if 8 of these points are the same for C and C ', then the ed9th point of intersection estis also the same. The idea of lathe evidence of lthe associativity is dethen to lesmanufacture the two cubics C and deC ' so àas to control eight pointsdof their intersection points with the elliptical etcurve sand to arrange quelefor the 9 le to be one of pointsthe two points (P + Q) + ouPor P + (Q + quelonR) that we want to compare (or their symmetrics). OnThe line L 1 is therefore considered by parlesthe leslespoints P and Q, the straight line M 1 passing through the points P + Q and 0 E, the right L 2 passing through the points P + QdpartdQparlesQ and R, on the one hand, and on the other hand, the straight line M 2 passing through the points and R, the straight line L 3 passing through the points and and the right M 3 passing through the parlespoints Q + RR and . The product of the equations of the three straight lines L 11, L 22, L 3 defines a cubic curve C, deso the product of the equations of the three straight lines M 11, M 22, M 3 defines a cubic curve C '. The intersections of these two cubics with the elliptical curve E are 9 points, of which 8 are common by construction (P, Q, R, O E, P + Q, − (PP+Q), QQ+R,−(QQ+R)). The 99th pointpoint of intersection of E with C is the point − ((P + Q) + R), that of E with C est− is the point ( + ( + )). According to the cited theorem, these points are the same, and therefore also their symmetrical, dhence the associativity.
+
+A third demonstration of lassociativity can also be given in the context of laalgebraic geometry. Based this time on the deRiemannRiemann-Roch theorem, it directly deduces the properties of the addition on the elliptical curve of that of the dePicard group of the curve[4[4].
+Finite of order
+
+    According to its discriminant, an elliptiqueelliptical curve has one or three points with real coordinates suron the abscissa desabscissesaxis, àwhich is - to say que- such as y = 0. At these points, the tangent is vertical (i.este. to - say here parallel to the desordinate axis), its 33rd pointpoint of intersection with the curve is the point at lthe infinite. So P + P = 2 P = 0. It is said that such a point is dof order 22. Since P = - P, the set formed of such a point and from point to linfinity forms a soussub-group of the group of points of the curve; it is cyclic of order 22. If the curve has three points of order 22, it is to be said when the discriminant Δ is positive, all ensemblethese cespoints form (with the point to the infinite) a group of cardinal 44, isomorphic with two copies of the cyclic group of order 22, that is, to say a group of Klein.
+    As for the order points dordre33, these are those that verify P + P P+ P P 0= 0, i.e. 2 P = P. In other words, the tangent at the point P must intersect the curve again foisat the same point. This corresponds to an dinflection point, where the tangent has an dorder contact greater than 2 with the curve.
+
+    EnUsing, for example, lesequations of a given àlacurve tangent donnéessection I.22, it is found that lesabscissesabscissas desdx of inflection points must verify an equation of e4th [5degree[5]. This equation has 4 complex roots and each corresponds to two values of yy; but ilit can be shown that there a(x_0, \pm y_0)lesare only two solutions whose coordinates are real, i.e. two pointspoints of inflection at a finite distance. The point to linfinity is also an dinflection point and these three points are aligned[6[6]. They form a soussub-group cyclical of dorder 33.
+
+    More generally, lesthe points with real coordinates of order n (i.e.àdire, such as P + P + ... + P = n P = 0) form a soussub-cyclic group of order n or is isomorphic to two copies of the cyclic group of order n [ref desired].
+
+Elliptical on the body of complex numbers
+
+The equation of an elliptiqueelliptical curve on the bodies of complexes peutcan also be put in the form of Weierstrass. It is customary to dadopt lastandardization here
+
+    y 2 = 4 x 3 - g 2 x − g 3
+
+where g 2 and g 3 are descomplex numbers.
+
+Un résultat déterminant est qu'une courbe elliptique définie sur \C admet un paramétrage par des fonctions méromorphes, les fonctions elliptiques de Weierstrass. Plus précisément, il existe un réseau L tel que
+
+    y = \wp'(z, L),\quad x = \wp(z, L),
+
+où
+
+    \wp(z, L) = {1 \over z^2} + \sum_{\omega \in L, \omega \not= 0}{1 \over (z - \omega)^2} - {1 \over \omega^2}.
+
+When the complex number z travels\C-L, the coordinate point decoordonnéesx and y travels through the elliptical curve.
+
+The coefficients of lacurve g 2 and g 3 are given by the values of two convergent series traditionally associated with a network L, the dEisenstein series of weight 2 and 3:
+
+    g_2=60\sum_{\omega \in L, \omega\not =0}\omega^{-4}, \quad g_3=140\sum_{\omega \in L, \omega\not =0}\omega^{-6}.
+
+La situation est donc analogue à celle du paramétrage des points d'un cercle par les fonctions cos  et sin . Dans le cas du cercle, d'équation y2 = 1 − x2, les fonctions qui le paramètrent sont périodiques de période 2π. Dans le cas d'une courbe elliptique, les fonctions de Weierstrass ont pour périodes indépendantes les deux nombres générateurs du réseau L.
+
+On a plus précisément :
+
+Théorème — Soit E une courbe elliptique définie sur \C. Il existe un réseau L, défini à homothétie près, et un isomorphisme analytique complexe φ tel que ϕ(0) = 0E et
+
+    \phi : \C/L \rightarrow E(\C),\quad \phi(z) = (\wp(z, L), \wp'(z, L)).
+
+Un tore.
+
+Autrement dit, la courbe elliptique est isomorphe à un tore complexe (on doit se rappeler que la « droite » complexe, de dimension 1 comme courbe définie sur \C, est \C lui-même, c'est-à-dire le « plan » complexe, ainsi appelé communément parce qu'il est dimension 2 sur le corps des réels). Autrement dit, il s'agit d'une surface de Riemann de genre 1, qu'on peut visualiser comme un pneu à un trou.
+
+La forme différentielle dx / y est holomorphe et non nulle en tout point de la courbe ; elle correspond à la forme {{\rm d}\wp(z) \over \wp'(z)} = {\rm d}z sur le tore \C/L.
+Homologie d'une curve Elliptical complexe.
+
+Soit deux chemins α et β formant une base de l'homologie de la courbe, par exemple les chemins bleu et rouge ci-contre, alors
+
+    \omega_1 = \int_\alpha {{\rm d}x \over y} et \omega_2 = \int_\beta {{\rm d}x \over y}
+
+sont deux périodes indépendantes, qui engendrent le réseau L.
+
+La loi de groupe est directement visible sur le tore \C/L : trois points P1,P2,P3 de la courbe sont alignés lorsque la somme de leurs arguments z1 + z2 + z3 appartient au réseau L. Poser P1 + P2 + P3 = 0 lorsque les points sont alignés permet de définir une loi de groupe abélien sur les points de la courbe. Cette addition est d'ailleurs compatible avec la méthode des tangentes et des sécantes expliquée plus haut pour les courbes définies sur le corps des réels. Les points d'ordre n (c'est-à-dire les points P tels que nP = P + \cdots + P = 0) forment un sous-groupe d'ordre n2, isomorphe à \Z/n\Z \times \Z/n\Z.
+Une application géométrique : le théorème de clôture de Poncelet
+La figure associée au théorème of clôture dans the Traité des propriétés projectives des figures of Jean-Victor Poncelet of 1822.
+
+Parmi les nombreuses applications des courbes elliptiques, on peut mentionner le théorème de clôture de Poncelet par rapport à deux coniques.
+
+Soient deux coniques du plan complexe projectif non dégénérées et sans point d'intersection double, qu'on peut représenter par les deux matrices M et N des formes quadratiques associées. Si en partant d'un point A sur l'une d'elles, on trace la tangente AA' à l'autre conique, menée de ce point, elle recoupe la première conique en un autre point B et on peut réitérer en construisant l'autre tangente BB' menée par B à la deuxième conique, etc.
+
+Le théorème de clôture de Poncelet dit que si cette construction boucle, pour un point de départ A donné, après un nombre fini d'étapes (autrement dit si la construction ramène au point de départ, formant un polygone à un nombre déterminé de côtés), elle boucle, avec le même nombre de côtés, pour n'importe quel point de départ. Cette propriété de clôture de la construction ne dépend donc pas du point de départ, mais seulement de la disposition des deux coniques.
+
+lesElliptical curves can used to give unedirect proof of this result[7[7]: the points of a conic are parameterizable by a number x, the tangent is an element of the dual conic representative of a number yy; by choosing the decoordinate system well, it is shown that the relationship between x and y is y 2 = det(M x + N), cewhich, by developing the determinant, is the equationdunecourbeelliptique[8].[8]
+
+It is defurther shown that (passedeA,A A ′) to (B, B B') is passed through the addition (in the sense of additionaddition on the elliptical curve) of pointa point P 0 which does not depend on A, but only on the equation of the elliptical curve, that estis, to saydes, ellesconics themselves. The construction loops if and only if this point P 0 is a detorsion point on the elliptical curve. This interpretation dalso makes it possible to determine despairs of conicals supporting desdePoncelet polygons with a desired number of sides.
+Elliptical on the body of rational numbers
+
+Une courbe E définie sur le corps des nombres rationnels est aussi définie sur le corps des réels, donc la construction d'une addition sur les points (à coordonnées réelles) par la méthode des tangentes et des sécantes s'applique ici.
+
+Il est facile de voir que si deux points ont des coordonnées rationnelles, la droite qui les joint a une équation à coefficients rationnels et le 3e point d'intersection avec la courbe est encore à coordonnées rationnelles. Il en est de même pour le symétrique par rapport à l'axe des abscisses d'un point à coordonnées rationnelles.
+
+Finally, it is shown that the group E(\Q)of points of the courbecurve with rational coordinates also forms an abelian group.
+La structure du groupe des points rationnels
+
+Le résultat le plus important est que tous les points à coordonnées rationnelles peuvent être construits par la méthode de la tangente et de la sécante à partir d'un nombre fini d'entre eux. Plus précisément[9]:
+
+Théorème de Mordell-Weil —  Le groupe E(\Q) est un groupe abélien de type fini.
+
+Il est donc le produit direct d'un nombre fini de copies de \Z et de groupes cycliques finis.
+
+        La démonstration[10] requiert deux ingrédients : d'abord, on montre que pour tout entier m > 1 (par exemple m = 2), le groupe-quotient E(\Q)/mE(\Q) est fini (ce résultat est parfois appelé théorème de Mordell-Weil faible) ; ensuite, on introduit une fonction « hauteur » h sur les points de E(\Q) définie par h(P0) = 0 et h(P)=\log\ max (|p|, |q|) si le point P (distinct du point à l'infini) a pour abscisse le nombre rationnel (exprimé comme fraction réduite) x = p / q. Il est facile de voir que cette fonction h est telle que h(mP) croît à peu près comme le carré de m et qu'il existe un nombre fini de points de la courbe de hauteur plus petite qu'un nombre donné.
+
+        The proof of the theorem is then a variant of the deinfinite descent method[11] and is based on the successive application of “Euclidean divisions” on the curve: :either P\in E(\Q)a point with rational coordinates on the curve, onécritP = 2 P 1 + Q 11, where Q 1 is a fixed representative of P in E(\Q)/2E(\Q), the height of P 1 is of the order of 1 / 4 of that of P (it could here be replaced 2 with nany quelintegersupérieurà1et14par1 / m2 P àdeP11 is repeated, i.e. P 1 =2 P 2 +Q 2, Q2then P 2 =2 P 3 + Q 33, etc. and P is finally obtained as a linear combination with integer coefficients of points Q i and depoints of height smaller than qua number fixed at the avanceadvance: thanks to deMordellthe low Mordell-Weil theorem and the second property of the height, the point P is thus expressed as a coefficient linéaireàcoefficientsentiersdepointsfixésennombrefiniof coefficients.
+        Le théorème de Mordell-Weil n'est pas pour l'instant effectif, car on ne connaît pas de procédure générale pour déterminer les représentants de E(\Q)/mE(\Q).
+
+        Le rang (en) du groupe de Mordell-Weil E(\Q), c'est-à-dire le nombre de copies de \Z, est appelé le rang de la courbe elliptique ; c'est donc le nombre de points d'ordre infini indépendants.
+
+        This rank is described by the deBirch and Swinnerton - Dyer conjecture (see cibelow). It is conjected quthat it can be arbitrarily large, although quonneonly quedesexamples of a fairly small rank are known.
+        La courbe elliptique de plus grand rang exactement déterminé connue actuellement est la courbe
+        y 2 + x y = x 3 26175960092705884096311701787701203903556438969515261759600927085834080418071707701203930356438969515 x + + 5106938147614164848487741737173720879779193033807483832671519948504
+        derank 18, found by Noam Elkies in 2006 (descurves of rangrank greater than à28 are known, but it is nenot yet known exactly how exactementleto determine the rank).
+
+        Quant au sous-groupe de torsion des points à coordonnées rationnelles de E, produit des groupes cycliques – finis – restants, les possibilités sont les suivantes[12] :
+
+Théorème de Mazur — Le sous-groupe de torsion de E(\Q) est l'un des 15 groupes suivants : \Z/N\Z, pour N = 1,2,...,10 ou N = 12, ou \Z/2\Z\times\Z/2N\Z, avec N = 1,2,3,4.
+
+        On connaît des exemples pour toutes ces possibilités. De plus, les courbes avec le même groupe de torsion appartiennent à une famille à un paramètre[13].
+
+Exemples
+Points rationnels of la curve y 2 = x 3 + 1
+
+    The curve d'Equation y2 = x3 + 1
+
+        Le rang de cette courbe est nul et elle a 6 points à coordonnées rationnelles[14] : outre le point à l'infini, les points de coordonnées (2, 3), (0, 1), (-1, 0), (0, -1), (2, -3).
+        On peut prouver that ce groupe is cyclique d'ordre 6 and qu'il is engendré by the point (2, 3). We a so :
+            (0, 1) = 2 (2, 3), dans le sens de (2, 3) + (2, 3) pour la loi d'addition sur la courbe,
+            (-1, 0) = 3 (2, 3),
+            (0, -1) = −2 (2, 3) = 4 (2, 3) et
+            (2, -3) = − (2, 3) = 5 (2, 3), dans le sens où l'opposé d'un point est celui qui ajouté au premier point est le point élément neutre de la loi d'addition sur la courbe, c'est-à-dire le point à l'infini ;
+            le point à l'infini est égal à 6 (2, 3).
+        Ces relations se voient sur le graphe réel de la courbe. Par exemple, la tangente à la courbe au point de coordonnées (2, 3) passe par le point (0, -1) dont le symétrique est (0, 1), donc (0, 1) = 2 (2, 3). Les points de coordonnées (-1, 0), (0, -1) et (2, -3) sont alignés, donc la somme des deux premiers est égale au point (2, 3).
+        Considérée comme courbe sur le corps des nombres complexes, cette courbe est associée au réseau L de périodes \omega_1 = 2 \int_{-1}^\infty{ (x^3+1)^{-1/2}\,{\rm d}x } et \omega_2 = \omega_1 \times e^{2i\pi \over 3}.
+        Les points à coordonnées rationnelles sont ceux de paramètre elliptique k \omega_1 \over 6, pour k = 0, 1, \cdots, 5.
+
+    La curve d'Equation y2 = x3 + 109858299531561
+
+        Le rang de cette courbe[15] est 5 et elle a de plus trois points de torsion à coordonnées rationnelles, formant un groupe cyclique d'ordre 3. Son groupe de Mordell-Weil E(\Q) est isomorphe à \Z^5 \times \Z/3\Z.
+        Voici une liste of 5 points générateurs indépendants d'ordre infinite (engendrant donc the 5 copies of \Z dans the groupe of Mordell-Weil) :
+
+            (735 532, 630 902 573), (49704, 15 252 915), (-4578, 10 476 753), (-15260, 10 310 419), (197 379, 88 314 450).
+
+        Les trois points de torsion à coordonnées rationnelles sont le point à l'infini, le point (0, 10 481 331), d'ordre 3, et son opposé (au sens de l'addition elliptique).
+        Tous les points à coordonnées rationnelles de cette courbe s'obtiennent alors par combinaison linéaire à coefficients entiers des 6 points explicités.
+
+    La curve d'Equation y2 = x3 − 36x
+
+        Son groupe de Mordell-Weil est isomorphe à \Z \times \Z/2\Z \times \Z/2\Z. Autrement dit, elle a quatre points à coordonnées rationnelles d'ordre 2 (le point à l'infini et les trois points d'intersection avec l'axe des abscisses : (0, 0), (6, 0), (-6, 0)) et son rang est 1. Le sous-groupe cyclique infini est engendré par le point (12, 36).
+        À un changement de variable près, cette courbe est isomorphe à celle d'équation 6y2 = x3 − x, liée à la recherche de triangles rectangles en nombres (autrement dit de triplets pythagoriciens) de même aire. En effet, les côtés d'un tel triangle sont de la forme d(p2 − q2),2pdq,d(p2 + q2), pour un entier d quelconque et des entiers p et q, avec p > q, de parité différente. L'aire du triangle est alors d2pq(p2 − q2). La recherche de triangles rectangles d'aire 6, par exemple, revient donc à la recherche de solutions rationnelles de l'équation 6y2 = x3 − x.
+        Dans les Arithmétiques de Diophante, le problème V.8 demande de construire trois triangles de même aire donnée. L'observation 23 de Pierre de Fermat[16], qui commente ce problème, affirme que pour un triangle donné quelconque, il « en fourni[t] une infinité ayant la même aire » et pour l'aire 6, donne, en plus de la solution évidente du triangle de côtés (3, 4, 5), celui de côtés (7/10, 120/7, 1201/70), et celui de côtés (2 896 804/1 319 901, 7 216 803/1 319 901, 7 776 485/1 319 901).
+        À partir du point P = (2,1) sur la courbe 6y2 = x3 − x (ou du point (12, 36) sur la courbe y2 = x3 − 36x), point qui correspond au triangle de côtés (3, 4, 5), le point -2P = (25/24,\, 35/288) correspond au triangle de côtés (7/10, 120/7, 1201/70) ; et le point 3P = (2738/529,\, 57387/12167) correspond au 3e triangle indiqué par Fermat.
+        Le lien entre recherche des aires de triangles rectangles en nombres (ce qu'on appelle des « nombres congruents ») et courbes elliptiques a été exploré plus systématiquement par J. Tunnell en 1983[17].
+
+La conjecture de Birch et Swinnerton-Dyer
+
+La conjecture de Birch et Swinnerton-Dyer est l'un des problèmes du millénaire pour la solution desquels la fondation Clay a promis un million de dollars. Dans le cas des courbes elliptiques, cette conjecture relie des objets analytiques et arithmétiques définis à partir de la courbe considérée.
+
+Du côté analytique, un ingrédient important est la fonction d'une variable complexe, L de Hasse-Weil de la courbe E sur \Q. Cette fonction est une variante de la fonction zêta de Riemann ou des fonctions L de Dirichlet. Elle est définie comme un produit eulérien de facteurs, définis pour chaque nombre premier p.
+
+Si y2 + a1y + a3 = x3 + a2x2 + a4x + a6 est une équation minimale de la courbe elliptique E sur \Q, à coefficients ai entiers, l'équation obtenue en réduisant modulo p les coefficients ai définit en général encore une courbe elliptique, sur le corps fini \mathbb{F}_p (sauf pour un nombre fini de p, où la courbe réduite obtenue a un point singulier et n'est donc plus elliptique ; on dit que la courbe E a une « mauvaise réduction » en p dans ce cas).
+
+La fonction zêta d'une courbe elliptique sur un corps fini est en quelque sorte une fonction génératrice rassemblant les informations sur le nombre de points de la courbe dans toutes les extensions (finies) du corps de base. Plus précisément[18],
+
+    Z\left( {E \over \mathbb{F}_p} \right) = \exp\left( \sum{ \mathrm{card}\left( E\left( \mathbb{F}_{p^n} \right) \right) {T^n \over n} } \right).
+
+La somme à l'intérieur de l'exponentielle ressemble au développement d'un logarithme et, de fait, la fonction Z ainsi définie est une fonction rationnelle :
+
+    Z\left( {E \over \mathbb{F}_p} \right) = {1 - a_pT + pT^2 \over 1 - T} \left( 1 - pT \right).
+
+La fonction de Hasse-Weil de la courbe elliptique sur \Q est alors définie en rassemblant toutes ces informations locales (c'est-à-dire pour chaque nombre premier p). Elle est définie par
+
+    L\left(E/\Q, s\right) = \prod_p{\left( 1 - a_p p^{-s} + \epsilon(p) p^{1 - 2s} \right)^{-1}},
+
+où \epsilon(p) = 1 si la courbe a bonne réduction en p et 0 sinon (dans ces derniers cas, en nombre fini, le terme ap doit aussi être défini).
+
+Ce produit converge seulement pour \Re(s) > 3/2. Mais la conjecture de Hasse prédisait que la fonction L admet un prolongement analytique à tout le plan complexe et vérifie une équation fonctionnelle liant, pour tout s, sa valeur en s à sa valeur en 2 − s.
+
+The deHasse conjecture is now (since 1999) demonstrated as a consequence of the proof of the conjecturedeShimuraTaniyamaShimura-Taniyama-Weil conjecture: the latter asserts that effetqueany elliptiqueelliptical curve defined \Qon is modulairemodular; therefore deits Hase zeta Function - Weil is laequal to the L function associated with modulairea modular formlaquelle, prolongementfor which the analytical extension was already known.
+
+On peut donc parler des valeurs de la fonction L de Hasse-Weil en tout point du plan complexe. La conjecture de Birch et Swinnerton-Dyer lie le comportement au centre de la bande critique (donc en s = 1) à l'arithmétique de la courbe. Elle prévoit en particulier :
+
+    Conjecture — L'ordre du zéro de la fonction L de la courbe elliptique E au voisinage de s = 1 est égal au rang de E.
+
+Sous sa forme la plus précise, la conjecture prédit aussi la valeur du terme dominant au voisinage de 1, en fonction de diverses quantités liées à la courbe elliptique.
+
+De même que l'hypothèse de Riemann, la conjecture de Birch et Swinnerton-Dyer a de multiples conséquences. En voici deux :
+
+Théorème — Soit n un entier impair sans facteurs carrés. Supposons que la conjecture de Birch et Swinnerton-Dyer soit vraie. Alors, le nombre entier n est l'aire d'un triangle rectangle à côtés rationnels si et seulement si le nombre des triplets d'entiers (x,y,z) satisfaisant 2x2 + y2 + 8z2 = n est égal à deux fois le nombre des triplets satisfaisant 2x2 + y2 + 32z2 = n.
+
+Cet énoncé, dû à Tunnell est lié au fait que n est l'aire d'un triangle rectangle en nombres rationnels si et seulement si la courbe elliptique y2 = x3 − n2x a un point rationnel d'ordre infini (donc, sous la conjecture de Birch et Swinnerton-Dyer, sa fonction L s'annule en 1). L'intérêt de l'énoncé est que la condition indiquée se vérifie facilement[17].
+
+Dans un tout autre ordre d'idées, certaines méthodes analytiques permettent d'estimer l'ordre d'annulation au centre de la borne critique de familles de fonctions L. Si on admet la conjecture de Birch et Swinnerton-Dyer, ces estimations se transposent en informations sur le rang des familles de courbes elliptiques correspondantes. Par exemple[19] :
+
+Theorem - By admitting the degeneralized Riemann hypothesis and the deBirch and Swinnerton conjecture - Dyer, the mean rank of the elliptical curves of equation y 2 = x 3 + a x + b is less than 22.
+The conjecture of Shimura - Taniyama - Weil and its application to dethe Fermat theorem
+
+La conjecture de Shimura-Taniyama-Weil, encore connue sous le nom de « conjecture modulaire », affirme que toute courbe elliptique sur \Q est modulaire, c'est-à-dire que sa fonction de Hasse-Weil est la fonction L d'une forme modulaire de poids 2 et de niveau N, où N est le conducteur de la courbe elliptique E (un entier divisible par les mêmes nombres premiers que le discriminant de la courbe).
+
+Autrement dit, si, pour \Re(s)>3/2, on écrit la fonction L sous la forme
+
+    L\left( E/\Q, s \right) = \sum_{n>0}{a(n) n^{-s}},
+
+alors l'expression \sum{a(n) q^n}, avec q = e2iπz, définit une forme modulaire (parabolique, nouvelle) de poids 2 et de niveau N. Pour les nombres premiers l ne divisant pas N, le coefficient a(l) de la forme vaut l moins le nombre de solutions de l'équation minimale de la courbe réduite modulo l.
+
+Par exemple[20], à la courbe elliptique y2 + y = x3 − x, de discriminant (et de conducteur) 37, est associée la forme f(z) = q - 2q^2 - 3q^3 + 2q^4 - 2q^5 + 6q^6 + \cdots, avec q = exp(2iπz). Pour les nombres premiers l distincts de 37, on peut vérifier la propriété sur les coefficients. Ainsi pour l = 3, les solutions de l'équation modulo 3 sont (0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), et on a donc bien a(3) = 3 − 6 = − 3.
+
+The conjecture quiof the milieudesannéesmid-1950s awas finally fully demonstrated complètementin 19991999, àbased on desthe ideas of , who had already proved it in 1994 for a large family of elliptiqueselliptical curves21]
+
+There several formulations of this conjectureconjecture; proving their equivalence nwas not easy and was faitthe subject of significant work in the second half of the 20th ecentury. Thus, the modularity of an elliptical curve E of conductor N is also expressed by the fact that there is a nonnon-constant morphism, defined on \Q, of the modular curve X 0(N) in E. In particular, lesthe points of the curve can be parameterized by desmodular functions.
+
+Par exemple, un paramétrage modulaire de la courbe elliptique y2 + y = x3 − x est donné par[20]
+
+    \left\{ \begin{matrix} x(z) & = & q^{-2} + 2q^{-1} + 5 + 9q + 18q^2 + 29q^3 + \cdots \\ y(z) & = & q^{-3} + 3q^{-2} + 9q^{-1} + 21 + 46q + 92q^2 + \cdots \end{matrix}\right.
+
+avec comme toujours q = exp(2iπz). Les fonctions x(z) et y(z) sont ici modulaires de poids 0 et de niveau 37 ; autrement dit, elles sont méromorphes, définies sur le demi-plan supérieur \Im(z)>0 et telles que x(az + b / cz + d) = x(z) — et de même pour y(z) — pour tous les entiers a,b,c,d, avec ad − bc = 1 et 37 | c.
+
+Une autre formulation repose sur la comparaison de représentations galoisiennes attachées d'une part aux courbes elliptiques, d'autre part à des formes modulaires, c'est cette dernière formulation qui a été utilisée dans la preuve de la conjecture. La gestion précise du niveau des formes (et leur lien au conducteur de la courbe) est particulièrement délicate.
+
+L'application la plus spectaculaire de la conjecture est la preuve du dernier théorème de Fermat :
+
+    On suppose que, pour un nombre premier p > 5, l'équation de Fermat ap + bp = cp ait une solution en entiers non nuls (donc qu'on ait trouvé un contre-exemple au dernier théorème de Fermat).
+    Alors la courbe elliptique y2 = x(x − ap)(x + bp), de discriminant Δ = (abc)2p / 256 ne peut être modulaire.
+    Autrement dit, la preuve de la conjecture de Tanyama-Shimura-Weil pour cette famille de courbes elliptiques (appelées courbes de Hellegouarch-Frey) entraîne le dernier théorème de Fermat.
+
+La preuve de ce lien entre les deux énoncés, sur une idée de G. Frey de 1985, est difficile et technique, elle n'a été établie par Kenneth Ribet qu'en 1987[22].
+Points entiers
+
+On s'intéresse ici aux points P = (x,y) de la courbe E tels que x soit entier[23]. Le théorème suivant est dû à Carl Siegel :
+
+Théorème — L'ensemble des points P = (x,y) de E(\Q) tels que x soit entier est fini.
+
+Ce théorème s'étend d'ailleurs aux points dont la coordonnée x a un dénominateur divisible seulement par des nombres premiers appartenant à un ensemble fini, fixé à l'avance.
+
+There deseffective forms of this theorem. For example, if the deWeierstrass equation of the curve has desinteger coefficients smaller than quan H constant, the coordinates (x,y) of a point of the curve such that x and y are integers verify
+
+    \max\left( |x|, |y| \right) < \exp\left( (10^6H)^{{10}^6} \right).
+
+Exemple[25] : l'équation y2 = x3 + 17 a huit solutions entières avec y > 0 :
+
+    (x,\, y) \in \left\{\, (-2,\, 3),\, (-1,\, 4),\, (2,\, 5),\, (4,\, 9),\, (8,\, 23),\, (43,\, 282),\, (52,\, 375),\, (5234,\, 378661) \,\right\}.
+
+Generalization to the bodies of numbers
+
+Une grande partie des résultats précédents est encore valable lorsque le corps de définition de la courbe elliptique est un corps de nombres, autrement dit une extension de degré fini du corps des nombres rationnels. En particulier,
+
+Théorème de Mordell-Weil —  Le groupe E(K) des points d'une courbe elliptique E définie sur un corps de nombres K à coordonnées dans K est de type fini.
+
+Un théorème dû à Loïc Merel (en) montre que pour un entier d donné, il n'existe qu'un nombre fini (à isomorphisme près) de groupes qui peuvent être la partie de torsion du groupe de Mordell-Weil E(K) d'une courbe elliptique E définie sur un corps de nombres K de degré d. Plus précisément[26] :
+
+Théorème —  Soit un entier d. Il existe un nombre B(d) tel que pour toute courbe elliptique E définie sur un corps de nombres K de degré d, tout point de torsion de E(K) a un ordre inférieur à B(d).
+
+Le théorème est effectif, par exemple, pour d > 1 ; Merel montre que si un point de torsion est d'ordre p, p étant un nombre premier, on doit avoir:
+
+    p < d^{3d^2}.
+
+En ce qui concerne les points entiers, on a de même :
+
+Théorème de Siegel —  Soit une courbe elliptique E définie sur un corps de nombres K, x et y les coordonnées de Weierstrass, alors l'ensemble des points de E(K) dont la coordonnée x est dans l'anneau des entiers de K est fini.
+
+Les propriétés de la fonction L de Hasse-Weil et la conjecture de Birch et Swinnerton-Dyer s'étendent également aux corps de nombres.
+Courbes elliptiques sur les corps finis
+
+Either K=\mathbb F_qa finished body with q elements and E an elliptical elliptiquecurve defined on this body. A premierfirst important result concerns the number of points of E. EnCounting the point to lthe infinite, we have the following result, due to Helmut HasseHasse:
+
+Theorem — |\mathrm{card} E(K)-(q+1) | < 2\sqrt{q}.
+
+In other words, the order of magnitude of the number of points on the curve is àpeuabout the same as the number of elements in the body.
+
+LAll desthe points E(\mathbb F_q)form a groupefinite abelian group; it is always a cyclical group or produced from two cyclic groups.
+
+For example[27] the dequation curve y 2 = x 3 − x defined on \mathbb F_{71}a 72 coordinated àcoordonnéespoints in this body, forming a group of the \Z/4\Z\times\Z/18\Ztype .
+
+The study of this curve on desextensions of \mathbb F_qis facilitated by the introduction of the zeta function of E on \mathbb F_q, defined as celaaalready étémentioned plusabove by the sériegenerating series:
+Z(E/K, T)= \exp \left(\sum_{n=1}^{\infty} \mathrm{card} (E(K_n)) {T^n\over n} \right),
+
+where lesthe bodies K n are lesthe extensions of K=\mathbb F_qdedegree n (in other words, the finite bodies of cardinal q n). Then we have
+Theorem — The function Z(EE/K,T) is a function rational of T. He Exists one whole a such that
+Z(E/K, T)={ {1-aT+qT^2}\over {(1-qT)(1-T)}}.
+of more Z \left( E/K, {1\over q}T \right)=Z(E/K, T) and \left( 1-aT+qT^2 \right) =(1-\alpha T) (1-\beta T), with α,β of Numbers Complex of module \sqrt{q}.
+
+These results constitute lesdeWeil's conjectures for lesthe elliptical curves. For example[28]], the zeta function of y 2 + y = x3 on the corps\mathbb F_2body with 2 elements is (1 + 2 T 22) / (1 − T)(121\mathbb F_{2^r}1 −2− ) ; the curve a 2 + 1 points on the body if r is odd, + if r is even.
+
+LesThe elliptical curves defined on desfinite bodies have desapplications in algorithmiquealgorithmics, including cryptographiecryptography and lafor the factorization of integers. Generally, the idea behind the original composition of these algorithms was that of a generalization of the finite bodies, more precisely from the multiplying group \mathbb F_q^*to the elliptiqueselliptical curvesplus, more precisely their group pointsàof coordinated \mathbb F_qpoints in . OndesAlgorithms that used usagedefinished bodies to pourquilsfassentuse deelliptiqueselliptical curves àleurin their place have been adapted. The interest of the elliptical curves is the qurichness they offer for each number q.
+Related :enElliptical curve factorization of Lenstra, cryptology on lesthe elliptical curves and elliptic curve digital signature algorithm.
+Complex
+Detailed : complex multiplication.
+
+The addition naturally makes it possible to define the multiplication of a point of the curve by an nombreinteger (pare.g. (- 33). P is defined by -(P + P + P)). However, the arriverquelacurve may have dother multiplications. For example, on the daffine equation curve y 2 = x 3 − x, defined on the body of the rationals, it is also possible to define a multiplication by i (the complex number such as i 2 = − 11), by posing i.PP(xx,) = P '( − x,i y), and more generally one can define the multiplication of the points by nany quelinteger of deGauscestàdirenimportequelnombrecomplexedelaformea + biaveca,bdesentiersrelatifs,
+
+For deselliptical curves defined on desbodies of characteristic 0 (e.g. the body of rationals), these are essentially the only two seulspossible cases: :either nthere is aonly lamultiplication by desrelative integers, or ilthere is complex multiplication by an order in an imaginary quadratic body.
+Some clarifications on the point to linfinity and lesthe equations
+
+The usual framework for defining and describing lesthe elliptical curves is that of lthe projective space on a body K. In dimension 22, in the projective plane, the points are given by three coordinates x, y, z, enexcluding the triplet (0, 00, 0) and enidentifying the decoordinate points (x, y, z) and (λ x, λ , ), for any nonnon-zero number λ in the body K. When zz is different 0from 0, say, we can represent the point (x, y, z) by (x z/z, y z1, 1), and therefore associate with it a point of the usual affine plane (x z/z, y / z). LesThe points for which z is equal to 0 form a straight line ' to the infiniinfinite'.
+
+In this context, an elliptical curve on the body K is defined by a équationhomogeneous cubic equation:
+
+    y^2z+a_1 x y z+ a_3 yz^2 = x^3 +a_2 x^2z +a_4 xz^2 + a_6z^3 \,
+
+where the coefficients a 11, a 22, a 33, 4a 4, a 6 belong Kto K given and under the condition that the curve thus nedefined is not singular. The latter condition is expressed by the fact that a certain polynomial in lesthe coefficients (analogue to the Δ given plusabove) is snot cancelled.
+The curve Elliptical y 2 z = x 3 + z 3, with sound point to l'infinite
+
+What sehappens - t - it to linfinity, it is - to - say for z = 00? It is found that x = 0x=0, so y necannot be zero and the only point of the curve at lthe infinite is lethe point (0, 11, 0) (remember that in the projective plane, (0, y, 0) and (0, 11, 00) define the same point). For z distinct from 00, all lescoordinates can be divided by z 3 and the equation becomes the one in the affine plan given at the beginning of the article.
+
+The point at linfinity (which is an dinflection point) is misenhighlighted on the representation ci - against dethe curve whose laffine equation is y 2 = x 3 + 1[29]] .
+
+

@@ -1,0 +1,46 @@
+P135 dual-anchor scan: +d only (y leg) + N-d mirror report (-y leg)
+
+H=128.345702146609  frac(H)=0.345702
+y:  log2(sqrt)=127.339576  frac=0.339576  Dy=1.006126  frac(Dy)=0.006126
+-y: log2(sqrt)=127.631157  frac=0.631157  Dy=0.714545  frac(Dy)=0.714545
+identity frac(H)-frac(lsy)=0.006126
++d band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)   mirror [115792089237316195423570985008687907809281421313194781059293213390251830427969, 115792089237316195423570985008687907831059492796134842720949188265884995961153]
+EC scan radius +/- 2,000,000 on +d only
+
+=== hinge_frac (target bf=0.333449) ===
+  +d (y leg — EC tested):
+    d center tail ...436850769920
+    band_frac=0.333449
+    frac(lsy)-frac(log2 d)=0.006126  (target 0.006126 for hinge)
+    EC +/-2,000,000 tested=4,000,001  hit=none
+  N-d (mirror — -y leg, NOT EC for P135):
+    N-d tail ...081310724417
+    in mirror band: True
+    frac(log2(N-d))=0.000000  mirror_log_off=0.000000
+    frac(lsy)-frac(log2 N-d)=0.339576  (= frac(lsy) if log2 frac~0)
+    frac(lsy_neg)-frac(log2 N-d)=0.631157  (= frac(lsy_neg) if log2 frac~0)
+    predicts -y hinge Dy=0.714545  frac(Dy)=0.714545
+
+=== upper_half (target bf=0.584963) ===
+  +d (y leg — EC tested):
+    d center tail ...167207116800
+    band_frac=0.584963
+    frac(lsy)-frac(log2 d)=-0.245387  (target 0.006126 for hinge)
+    EC +/-2,000,000 tested=4,000,001  hit=none
+  N-d (mirror — -y leg, NOT EC for P135):
+    N-d tail ...350954377537
+    in mirror band: True
+    frac(log2(N-d))=0.000000  mirror_log_off=0.000000
+    frac(lsy)-frac(log2 N-d)=0.339576  (= frac(lsy) if log2 frac~0)
+    frac(lsy_neg)-frac(log2 N-d)=0.631157  (= frac(lsy_neg) if log2 frac~0)
+    predicts -y hinge Dy=0.714545  frac(Dy)=0.714545
+
+=== read ===
+  hinge_frac +d: y-side 0.006 residue at bf~0.333
+  upper_half +d: y-side upper lane at bf~0.585 (frac diff -0.245)
+  N-d mirror: log2 frac~0, picks up full y frac (0.340) or -y frac (0.631)
+  P135 pubkey needs +d with even y — N-d gives (x,-y), wrong address
+
+total +d EC keys: 8,000,002
+elapsed: 217.6s
+hits: 0

@@ -1,0 +1,36 @@
+{
+  "exhibit": "coordinate_packet_shadow",
+  "puzzle": 135,
+  "verdict": {
+    "status": "VERIFIED",
+    "class": "coordinate bookkeeping",
+    "equivalent_to_Lambda_N_GAP": false,
+    "direct_d_k_recovery": false
+  },
+  "maps": {
+    "integer_only": {
+      "formula": "floor(Px * N / p) = map_p_to_n(Px)",
+      "value": "9210836494447108270027136741376870869757386556619969566208268645556489194859"
+    },
+    "coordinate_packet": {
+      "formula": "floor((Px.y) * N / p)",
+      "value": "9210836494447108270027136741376870869757386556619969566208268645556489194860",
+      "off_by_one_vs_integer_only": 1,
+      "note": "decimal witness (p-y fraction) nudges floor over the line"
+    }
+  },
+  "identities": {
+    "packet_p": "0.079546336499460462554501802883040753799770017855946243657403747988737825607683797376362420847353351108638651635660059457338972369055727427831496239538405074",
+    "packet_p_times_p_int": "9210836494447108270027136741376870869791784014198948301625976867708124077590",
+    "packet_p_times_N_int": "9210836494447108270027136741376870869757386556619969566208268645556489194860",
+    "packet_p_times_DELTA_int": "34397457578978735417708222151634882730",
+    "DELTA": "432420386565659656852420866390673177326",
+    "Px": "9210836494447108270027136741376870869791784014198948301625976867708124077590",
+    "p_minus_y": "46351506704828816385393879789131775975171267756561783641521771795450741674800"
+  },
+  "not_these": {
+    "GAP_x": "Lambda_N - Lambda mod N",
+    "GAP_y": "lambda_y_N - Lambda_N mod N",
+    "reason": "bridge-ratio gaps; this exhibit is coordinate-packet displacement"
+  }
+}

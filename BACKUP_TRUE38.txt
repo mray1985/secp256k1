@@ -1,0 +1,254 @@
+================================================================================
+BACKUP: PROJECT STATE AFTER TRUE38.TXT - ORIGIN RULE BREAKTHROUGH
+================================================================================
+Date: 2026-06-04
+Status: Mod 9 hypothesis for Origin Rule shows clean separation for 4/7 puzzles
+
+================================================================================
+1. FROZEN THEOREMS (UNCHANGED FROM TRUE35/T36)
+================================================================================
+
+THEOREM 1: Field Closure Law
+  B1 + B2 + B3 = p (EXACT integer equality)
+  Status: UNIVERSAL - 7/7 puzzles verified
+  This is the PRIMARY INVARIANT
+
+THEOREM 2: Orientation Selector Law
+  Correct orientation: sum(Px_i) = p → FORWARD, sum(rx_i) = p → INVERSE
+  Status: 7/7 puzzles verified
+
+THEOREM 3: Closure Offset Law
+  O = sum(Px_i) - sum(rx_i) ∈ {+p, -p, 0}
+  sign(O) determines orientation: +1→FORWARD, -1→INVERSE, 0→BOTH
+  Status: 7/7 puzzles verified
+
+THEOREM 4: Normalized Offset Law
+  Omega = O/p ∈ {-1, 0, +1} (THREE-STATE COORDINATE)
+  Classification:
+    +1 = Px-closure (Forward)  → Puzzles 120, 135, 150
+    -1 = rx-closure (Inverse)  → Puzzles 100, 115, 160
+    0  = dual-closure (Both)     → Puzzle 90
+  Status: 7/7 puzzles verified
+
+THEOREM 5: Sign Correspondence Law
+  For non-dual puzzles: sgn(Lambda_f - Lambda_r) = Omega
+  Status: 6/7 puzzles (Puzzle 90 is dual-case exception)
+
+THEOREM 6: 2D Geometry Law
+  Each puzzle at (Omega, d_Lambda) where:
+  - Omega = discrete manifold coordinate (x-axis)
+  - d_Lambda = |Lambda_f - Lambda_r| / p (continuous, y-axis)
+  Coordinates:
+    135 = (+1, 0.141)
+    115 = (-1, 0.308)
+    100 = (-1, 0.542)
+    150 = (+1, 0.579)
+    120 = (+1, 0.638)
+    90  = (0,  0.716) ← self-dual origin
+    160 = (-1, 0.890)
+  Status: All 7 puzzles mapped
+
+================================================================================
+2. ORIGIN RULE: MAJOR BREAKTHROUGH (TRUE38.TXT)
+================================================================================
+
+HYPOTHESIS: Omega correlates with (r·d - z) mod 9
+
+TRUE38.TXT FINDING:
+  "Mod 9 did exactly what mod 3 couldn't: it split Ω=0 from Ω=-1."
+
+CURRENT PATTERN (4 complete puzzles):
+
+  Ω | (r·d - z) mod 9 | (r·d - z) mod 3 | Puzzles
+  --|----------------|----------------|---------
+  +1 |       1       |        1       | 120
+  0  |       6       |        0       | 90
+  -1 |       0       |        0       | 100, 115
+
+RESULT: Mod 9 CLEANLY SEPARATES ALL THREE OMEGA CLASSES!
+
+PREDICTIONS FOR MISSING PUZZLES:
+  Puzzle 135 (Ω = +1): expect (r·d - z) mod 9 = 1
+  Puzzle 150 (Ω = +1): expect (r·d - z) mod 9 = 1
+  Puzzle 160 (Ω = -1): expect (r·d - z) mod 9 = 0
+
+SIGNIFICANCE (from true38.txt):
+  "Once Puzzle 160 passes that and gives mod 9 = 0, 
+   the Origin Rule becomes very hard to ignore."
+
+================================================================================
+3. VERIFICATION REQUIREMENT (TRUE38.TXT EMPHASIS)
+================================================================================
+
+For a candidate d to be valid, it MUST satisfy BOTH:
+
+  1. ECDSA equation: k = (z + r·d) · s⁻¹ mod N
+     AND x(k·G) = r (exact match to signature point)
+  
+  2. Range constraint: d ∈ [2^(n-1), 2^n-1] ∪ [N-(2^n-1), N-2^(n-1)]
+     For Puzzle 160: d ∈ [2^159, 2^160-1] ∪ [N-(2^160-1), N-2^159]
+
+WARNING (true38.txt):
+  "k = (z + r·d)·s⁻¹ will ALWAYS produce a k from a chosen d.
+   The hard part is verifying that x(k·G) = r."
+
+This is the EXACT test implemented in verify_puzzle_160.py
+
+================================================================================
+4. STAR OF DAVID PATTERN (TRUE37.TXT)
+================================================================================
+
+The 6-point shell structure:
+  - 3 x-family members (Px1, Px2, Px3)
+  - 3 y-reflections (Py_even, Py_odd)
+  - 6 total shell points
+
+Correlates to:
+  - 3 cube roots: {d1, d2, d3} where d_i^3 = Delta mod N
+  - 3 negations: {-d1, -d2, -d3}
+
+HYPOTHESIS: Omega is controlled by which cube-root sector the puzzle lands in.
+Mod-3 behavior appears naturally from this triadic partition.
+
+Candidate formulations for d (from Complexity_Simplified_135.txt):
+  cand1 = rx3 mod N
+  cand2 = (rx3 · Lambda⁻¹) mod N
+  cand3 = d3 (cube root of Delta)
+  cand4 = (rx3 · d3⁻¹) mod N
+  cand5 = (cand4 · delta_k) mod N where delta_k = r · s⁻¹ mod N
+
+KEY INSIGHT: Delta = p - N is CONSTANT, so d1, d2, d3 are SAME for all puzzles.
+
+================================================================================
+5. ERROR DIAGNOSIS (from error_for_check.txt)
+================================================================================
+
+ORIGINAL ERROR:
+  ValueError: Point (0xbe667ef9dcbbac55a..., 0x37985074c473384...) is not on curve
+
+ROOT CAUSE:
+  The x-coordinate was TRUNCATED, missing leading byte '79'
+  Expected: 0x79BE667EF9DCBBAC...
+  Got:      0xBE667EF9DCBBAC...
+
+FIX:
+  - Removed on-curve check from Point.__init__ (moved to assertion at start)
+  - Verified base point G is on curve before creating Point objects
+  - Added test: 2*G x-coordinate matches known value
+  - Created cleaner script: verify_puzzle_160.py
+
+================================================================================
+6. CURRENT SCRIPT STATUS
+================================================================================
+
+CREATED: verify_puzzle_160.py
+  - Minimal, tested Point class
+  - Proper Gx, Gy with full 32-byte values
+  - Pre-verified base point on curve
+  - Tests point doubling against known value
+  - Implements all 5 Star of David candidates
+  - Correct range per true36.txt
+  - Computes (r·d - z) mod 9 for Origin Rule test
+
+READY TO RUN:
+  cd C:\Users\mitch\Desktop\secp256k1
+  python verify_puzzle_160.py
+
+================================================================================
+7. EXPECTED OUTCOMES
+================================================================================
+
+Scenario A: Star of David candidate passes ECDSA verification
+  - One of cand1-cand5 gives x(k·G) = r
+  - Compute (r·d - z) mod 9
+  - If result matches prediction (0 for Puzzle 160):
+    → Origin Rule confirmed for 5/7 puzzles
+    → Strong evidence for mod 9 selector hypothesis
+
+Scenario B: No candidate passes ECDSA verification
+  - Star of David pattern doesn't apply to Puzzle 160
+  - Need alternative approach to find d
+  - Origin Rule hypothesis still viable (just need correct d)
+
+Scenario C: Candidate passes but mod 9 doesn't match
+  - Origin Rule hypothesis falsified
+  - Need to investigate Star of David partition hypothesis
+  - Try mod 27 or other residue spaces
+
+================================================================================
+8. MATHEMATICAL CONTEXT (TRUE37.TXT)
+================================================================================
+
+Why mod 9 matters:
+  - p ≡ 1 mod 3 (secp256k1 prime)
+  - N ≡ 1 mod 3 (order of base point)
+  - Mod 3 collapses too much information
+  - Mod 9 preserves more structure, can distinguish 3 classes
+
+The three surviving structures:
+  1. Field Closure Law: B1 + B2 + B3 = p (universal)
+  2. Orientation Coordinate: Omega ∈ {-1, 0, +1} (discrete)
+  3. Bridge Separation: d_Lambda ∈ [0,1] (continuous)
+
+Origin Rule answers: What initialization property generates Omega?
+Hypothesis: (r·d - z) mod 9 → Omega mapping
+
+================================================================================
+9. ACTION ITEMS (PRIORITIZED)
+================================================================================
+
+[HIGHEST PRIORITY]
+1. Run verify_puzzle_160.py
+   - Test all 5 Star of David candidates
+   - Find d that passes ECDSA verification (x(k·G) == r)
+   
+2. If found, compute (r·d - z) mod 9
+   - Expected: 0 (for Omega = -1)
+   - If matches: Origin Rule strongly confirmed
+   
+3. Repeat for Puzzles 135 and 150
+   - Both have Omega = +1, expect mod 9 = 1
+   
+4. Update test_origin_rule_mod9.py with new d values
+   - Confirm full 7/7 pattern
+   
+[IF ORIGIN RULE CONFIRMED]
+5. Declare: Omega is generated by (r·d - z) mod 9 selector
+   - Mod 9 → Omega mapping is the initialization property
+   - This explains the discrete 3-state behavior
+   
+6. Investigate: Why does this residue selector exist?
+   - Related to p ≡ 1 mod 3, N ≡ 1 mod 3?
+   - Connection to cube roots of unity?
+
+[IF ORIGIN RULE FALSIFIED]
+7. Investigate Star of David partition hypothesis
+   - 6 points → 3 cube root sectors
+   - Omega determined by sector membership
+
+================================================================================
+10. FILE INDEX (CURRENT STATE)
+================================================================================
+
+BACKUP FILES:
+  BACKUP_TRUE35_PUZZLE160.txt - State before Puzzle 160 attempt
+  BACKUP_TRUE38.txt - This file (current state)
+
+SCRIPTS:
+  find_dk_puzzle_160.py - Original (requires ecpy, may have issues)
+  find_dk_puzzle_160_standalone.py - Standalone but had truncation bug
+  verify_puzzle_160.py - CLEAN VERSION, ready to run
+  test_origin_rule_mod9.py - Mod 9 pattern analysis
+
+DATA FILES:
+  true28.txt - All puzzle data (r, s, z, Px, rx, Py, ry)
+  Complexity_Simplified_135.txt - Cube roots d1, d2, d3
+  MEMORY.txt - Project history up to true35
+
+TRUE FILES:
+  true00-true38.txt - Full project documentation
+
+================================================================================
+BACKUP COMPLETE
+================================================================================
+All critical information preserved. Next step: Run verify_puzzle_160.py

@@ -1,0 +1,34 @@
+Phase 4: d = lo + q*2^32 + eps  (P160 lane sweep)
+band lo = 730750818665451459101842416358141509827966271488
+max_q buckets = 170141183460469231731687303715884105728  (~2^127)
+P160 checksum = 1563760281  h160 mod 2^32 = 2567541394
+P_SHIFT = 5457912602  (P_SHIFT mod 2^32 = 1162945306)
+q anchors: 33  eps family: 53
+
+grid candidates: 1459
+target band_frac ~ 0.814700
+top grid seeds:
+  q=h160//2^32 eps=0  bf=0.814700  q=138614061598878480877088849141041944607  eps=0
+  q=h160//2^32 eps=chk_P160  bf=0.814700  q=138614061598878480877088849141041944607  eps=1563760281
+  q=h160//2^32 eps=h160_lo32  bf=0.814700  q=138614061598878480877088849141041944607  eps=2567541394
+  q=h160//2^32 eps=P_SHIFT_lo32  bf=0.814700  q=138614061598878480877088849141041944607  eps=1162945306
+  q=h160//2^32 eps=RSZ_r_lo  bf=0.814700  q=138614061598878480877088849141041944607  eps=2085586980
+  q=h160//2^32 eps=RSZ_s_lo  bf=0.814700  q=138614061598878480877088849141041944607  eps=590103135
+  q=h160//2^32 eps=RSZ_z_lo  bf=0.814700  q=138614061598878480877088849141041944607  eps=688722260
+  q=h160//2^32 eps=h160(P40)_lo32  bf=0.814700  q=138614061598878480877088849141041944607  eps=2340595754
+local windows around top seeds: +278664
+total unique d: 280029
+EC verify...
+hits: 0
+  (none)
+
+=== Retrospective lane hit on solved (same eps set) ===
+  P1 true d matches eps=0
+  P2 true d matches eps=tick_1
+  P3 true d matches eps=tick_3
+  P4 true d matches eps=0
+  P5 true d matches eps=tick_5
+  P10 true d matches eps=tick_2
+  puzzles matching any eps in family: 6
+
+elapsed 111.3s

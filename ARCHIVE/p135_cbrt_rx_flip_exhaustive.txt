@@ -1,0 +1,18 @@
+P135 cbrt(rx) flip exhaustive
+rx tail ...628368
+cbrt(rx) dec ~ 4.49222121914583157683347142071669243628790707445889164843386 * 10^25
+U = int(cbrt) = 44922212191458315768334714
+U digits = 86 bits
+m_start = 484795169706292
+m_end   = 969590339412582
+row_count = 484795169706291 (~2^49)
+first d = 21778071482940093642494669282845327820488
+last  d = 43556142965880097440564955649059118971548
+upper_half_only = False
+
+mod-N cube roots of rx (scalar court, not real cbrt):
+  u0 tail ...715354  (mod N)
+  u1 tail ...866205  (mod N)
+  u2 tail ...407115  (mod N)
+
+no hit (entire cbrt(rx) corridor covered)

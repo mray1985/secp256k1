@@ -1,0 +1,84 @@
+========================================================================================
+THEOREM — Carry Reconstruction for Reduced Primitive Cube-Root Orbits
+========================================================================================
+(corrected: equality case a+a1=M; carry bit c vs orbit class q=1+c)
+
+----------------------------------------------------------------------------------------
+LEMMA (Forced lift)
+----------------------------------------------------------------------------------------
+  M >= 2, t in [0,M), t^2+t+1 == 0 (mod M), t2=(t*t)%M in [0,M).
+  Then 1+t+t2 = M.
+  PROOF: 1 <= 1+t+t2 <= 2M-1 and == 0 mod M => equals M. QED.
+
+----------------------------------------------------------------------------------------
+LEMMA (No equality a+a1=M when M prime, t nontrivial)
+----------------------------------------------------------------------------------------
+  Assume M prime, a in {1,...,M-1}, a1=(t*a) mod M.
+  Suppose a+a1 = M. Then a+t*a == 0 (mod M), i.e. (1+t)a == 0.
+  Since a != 0 and M prime, 1+t == 0 (mod M), i.e. t == -1.
+  But t^2+t+1==0 and t==-1 => 1-1+1=1 != 0. Contradiction.
+  Equiv: nontrivial cube root => 1+t != 0 => gcd(1+t,M)=1 when M prime.
+  Therefore a+a1 != M for all nonzero a. QED.
+
+----------------------------------------------------------------------------------------
+GENERAL reconstruction (any M; includes equality edge)
+----------------------------------------------------------------------------------------
+  From t^2 = -t-1 (mod M): a2_true = (t2*a) mod M = (-a-a1) mod M.
+  Piecewise canonical lift:
+    a2 = M-a-a1           if 0 < a+a1 < M
+    a2 = 0                if a+a1 = M
+    a2 = 2M-a-a1          if M < a+a1 < 2M
+  (Bug fixed: when a+a1=M, use 0, not 2M-(a+a1)=M which is outside [0,M).)
+  Always: a2 = (-a-a1) mod M.
+
+----------------------------------------------------------------------------------------
+THEOREM (prime M / nontrivial cube-root case — secp256k1)
+----------------------------------------------------------------------------------------
+  Let M be prime, and let t be a nontrivial solution of
+    t^2 + t + 1 = 0  (mod M).
+  Let t2 = t^2 mod M, representatives in [0,M).
+  For any a in {1,...,M-1}, define
+    a1 = (t*a) mod M
+    c  = floor((a+a1)/M)     # carry BIT in {0,1}
+    q  = 1 + c               # orbit-sum CLASS in {1,2}
+    a2 = q*M - a - a1
+  Then:
+    a2 = (t2*a) mod M
+    a + a1 + a2 = q*M
+    q in {1,2}
+  The equality a+a1=M cannot occur (previous lemma), so the clean
+  two-branch formula never hits the a2=0 edge.
+
+  PROOF sketch: polynomial => a2 == -(a+a1) (mod M); lift with
+  c=floor((a+a1)/M) in {0,1} only (equality excluded); a2=(1+c)M-a-a1.
+
+  Terminology:
+    c = carry bit of a+a1 across M
+    q = 1+c = orbit sum class (a+a1+a2)/M
+
+----------------------------------------------------------------------------------------
+COROLLARIES (secp256k1)
+----------------------------------------------------------------------------------------
+  Field:  c_x = floor((x+(beta*x mod p))/p)
+          q_x = 1 + c_x
+          x2  = q_x*p - x - x1
+  Scalar: c_u = floor((u+(lambda*u mod N))/N)
+          q_u = 1 + c_u
+          u2  = q_u*N - u - u1
+
+----------------------------------------------------------------------------------------
+Confirmation
+----------------------------------------------------------------------------------------
+  p/beta: theorem 8000/8000; equality a+a1=M hits: 0
+  N/lambda: theorem 8000/8000; equality a+a1=M hits: 0
+
+  General edge (illustration): if a+a1=M were allowed, a2 must be 0,
+  and a+a1+a2=M (q=1), not 2M. secp primes never enter that branch.
+
+========================================================================================
+STATUS
+========================================================================================
+  Abstract theorem requires M prime (or gcd(1+t,M)=1) for clean q=1+c form.
+  Carry bit c distinguished from orbit class q=1+c.
+  Equality bug documented and excluded for secp256k1 instances.
+

@@ -1,0 +1,51 @@
+================================================================================
+TRUE16.TXT - FROZEN RESULT (Formal Theorem Statement)
+================================================================================
+
+This is a good place to freeze the result and separate what is proven
+from what is interpretation.
+
+PROVEN:
+
+X-bridge:
+  B_i = Lambda * rx_i (mod p)
+  B_i = Px_i
+  for i=1,2,3.
+
+X-shell:
+  sum(B1 + B2 + B3) = p
+  therefore sum(B_i) ≡ p-N = delta (mod N)
+
+Y-shell:
+  A(Q) = Lambda * Q_y (mod p)
+  A(Q) + A(-Q) ≡ delta (mod N)
+  for Q=G,P,R.
+
+Unified bridge law:
+  sum(Lambda * rx_i) ≡ A(Q) + A(-Q) ≡ p-N (mod N)
+  for the tested families.
+
+Signed branch coordinate:
+  D_Q = 2*A(Q) - delta (mod N)
+  D_{-Q} = N - D_Q
+
+ALSO PROVEN (Negative Results):
+
+The bridge is NOT:
+  - scalar-linear
+  - addition-linear
+  - a group homomorphism
+  - a direct scalar locator
+
+And: d_i = (Gx_i - B_i) mod N do NOT match D_Q or -D_Q.
+
+FORMAL THEOREM STATEMENT:
+"The x-family triplet and the y-reflection pair independently collapse to the
+same projection defect delta = p-N under the bridge transformation. The
+collapse occurs at the shell level only; no one-to-one correspondence between
+individual x-family defects and signed y-branch coordinates has been established."
+
+This is a mathematically tighter statement than "the shells are the same object,"
+while still preserving everything that has been actually verified.
+
+================================================================================

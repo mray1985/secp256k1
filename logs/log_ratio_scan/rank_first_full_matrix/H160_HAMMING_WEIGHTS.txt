@@ -1,0 +1,166 @@
+h160 Hamming weight ranks (all 160)
+n  h160_hamming  rank  status
+  1   78   44  solved
+  2   86  122  solved
+  3   92  150  solved
+  4   83   99  solved
+  5   88  137  solved
+  6   85  114  solved
+  7   78   45  solved
+  8   69    4  solved
+  9   84  107  solved
+ 10   81   77  solved
+ 11   74   19  solved
+ 12   78   46  solved
+ 13   78   47  solved
+ 14   80   65  solved
+ 15   74   20  solved
+ 16   96  157  solved
+ 17   86  123  solved
+ 18   79   58  solved
+ 19   93  153  solved
+ 20   80   66  solved
+ 21   73   14  solved
+ 22   83  100  solved
+ 23   82   86  solved
+ 24   76   30  solved
+ 25   80   67  solved
+ 26   81   78  solved
+ 27   84  108  solved
+ 28   80   68  solved
+ 29   84  109  solved
+ 30   78   48  solved
+ 31   89  142  solved
+ 32   82   87  solved
+ 33   89  143  solved
+ 34   88  138  solved
+ 35   88  139  solved
+ 36   82   88  solved
+ 37   74   21  solved
+ 38   82   89  solved
+ 39   77   38  solved
+ 40   77   39  solved
+ 41   85  115  solved
+ 42   80   69  solved
+ 43   76   31  solved
+ 44   78   49  solved
+ 45   82   90  solved
+ 46   73   15  solved
+ 47   72   10  solved
+ 48   85  116  solved
+ 49   89  144  solved
+ 50   84  110  solved
+ 51   93  154  solved
+ 52   85  117  solved
+ 53   76   32  solved
+ 54   85  118  solved
+ 55   89  145  solved
+ 56   80   70  solved
+ 57   80   71  solved
+ 58   79   59  solved
+ 59   81   79  solved
+ 60   84  111  solved
+ 61   79   60  solved
+ 62   80   72  solved
+ 63   86  124  solved
+ 64   78   50  solved
+ 65   82   91  solved
+ 66   73   16  solved
+ 67   83  101  solved
+ 68   87  126  solved
+ 69   78   51  solved
+ 70   78   52  solved
+ 71   87  127  unsolved
+ 72   87  128  unsolved
+ 73   85  119  unsolved
+ 74   88  140  unsolved
+ 75   87  129  solved
+ 76   83  102  unsolved
+ 77   76   33  unsolved
+ 78   66    2  unsolved
+ 79   84  112  unsolved
+ 80   92  151  solved
+ 81   82   92  unsolved
+ 82   78   53  unsolved
+ 83   71    7  unsolved
+ 84   79   61  unsolved
+ 85   79   62  solved
+ 86   78   54  unsolved
+ 87   79   63  unsolved
+ 88   87  130  unsolved
+ 89   74   22  unsolved
+ 90   76   34  solved
+ 91   85  120  unsolved
+ 92   80   73  unsolved
+ 93   83  103  unsolved
+ 94   70    6  unsolved
+ 95   75   24  solved
+ 96   83  104  unsolved
+ 97   96  158  unsolved
+ 98   96  159  unsolved
+ 99   89  146  unsolved
+100   90  147  solved
+101   75   25  unsolved
+102   76   35  unsolved
+103   87  131  unsolved
+104   87  132  unsolved
+105   88  141  solved
+106   77   40  unsolved
+107   81   80  unsolved
+108   85  121  unsolved
+109   72   11  unsolved
+110   75   26  solved
+111   71    8  unsolved
+112   75   27  unsolved
+113   80   74  unsolved
+114   73   17  unsolved
+115   91  149  solved
+116   74   23  unsolved
+117   82   93  unsolved
+118   75   28  unsolved
+119   77   41  unsolved
+120   82   94  solved
+121   81   81  unsolved
+122   72   12  unsolved
+123   83  105  unsolved
+124   77   42  unsolved
+125   82   95  solved
+126   71    9  unsolved
+127   78   55  unsolved
+128   68    3  unsolved
+129   75   29  unsolved
+130   73   18  solved
+131   76   36  unsolved
+132   84  113  unsolved
+133   77   43  unsolved
+134   83  106  unsolved
+135   82   96  unsolved
+136   81   82  unsolved
+137   65    1  unsolved
+138   76   37  unsolved
+139   87  133  unsolved
+140   94  155  unsolved
+141   92  152  unsolved
+142   94  156  unsolved
+143   82   97  unsolved
+144   80   75  unsolved
+145   81   83  unsolved
+146   81   84  unsolved
+147   87  134  unsolved
+148   79   64  unsolved
+149   87  135  unsolved
+150   86  125  unsolved
+151   78   56  unsolved
+152   87  136  unsolved
+153   97  160  unsolved
+154   72   13  unsolved
+155   90  148  unsolved
+156   78   57  unsolved
+157   82   98  unsolved
+158   80   76  unsolved
+159   69    5  unsolved
+160   81   85  unsolved
+FOCUS P135: wt=82 rank=96
+FOCUS P150: wt=86 rank=125
+FOCUS P155: wt=90 rank=148
+FOCUS P160: wt=81 rank=85

@@ -1,0 +1,81 @@
+Yep — check passes.
+
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+(modp)
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+So:
+
+Λ
+f
+	​
+
+Λ
+r
+	​
+
+≡1(modp)
+
+They are guaranteed inverses.
+
+The orientation selector is now just:
+
+{Λ,Λ
+−1
+}
+
+The next clean test is even simpler:
+
+If ∑Px
+i
+	​
+
+=p, choose forward.
+If ∑rx
+i
+	​
+
+=p, choose inverse.
+
+Because forward maps rx
+i
+	​
+
+→Px
+i
+	​
+
+, and inverse maps Px
+i
+	​
+
+→rx
+i
+	​
+
+. So the winning orientation may simply be the side whose triplet already closes to p.

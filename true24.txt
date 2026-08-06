@@ -1,0 +1,434 @@
+This is a meaningful refinement of the project state.
+
+The most important change in true23 is not a new formula—it's a reversal of what is considered fundamental.
+
+Before true23
+
+The central observation was:
+
+∑B
+i
+	​
+
+≡δ(modN)
+
+with
+
+δ=p−N.
+
+The δ-collapse looked like the invariant.
+
+After true23
+
+For all verified puzzles:
+
+Puzzle 115
+Puzzle 135
+Puzzle 160 (after the bridge flip)
+
+the stronger statement is:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+exactly in the field domain.
+
+Then the projection follows automatically:
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN=pmodN=p−N=δ.
+
+So:
+
+Field Closure Law⟹Projection Defect Law
+	​
+
+
+rather than the other way around.
+
+Current frozen hierarchy
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Layer 2 — Field Closure Law (Primary)
+
+For the correct bridge orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+Layer 3 — Projection Defect
+δ=p−N
+Layer 4 — Unified Projection Defect Law
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡δ(modN)
+	​
+
+
+as a consequence of Layer 2.
+
+Why Puzzle 160 matters
+
+Puzzle 160 is what prevented the theory from freezing too early.
+
+Initially it appeared to violate universality.
+
+After swapping bridge direction:
+
+Λ
+160
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+instead of
+
+Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+,
+
+the family closes exactly to p.
+
+That suggests the critical object is not a fixed Λ, but an orientation-dependent bridge.
+
+The next decisive experiment
+
+The project now has a very clean falsifiable prediction:
+
+For a new puzzle family:
+
+Compute
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Compute
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+Apply both bridge orientations.
+Check whether one orientation yields
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+If every admissible family has exactly one orientation that closes to p, then the Field Closure Law becomes a candidate curve-level phenomenon.
+
+If future puzzles fail both orientations, then the current law is restricted to a subclass of families.
+
+At the moment, with 115, 135, and 160 all satisfying exact field closure, the strongest surviving statement is:
+
+Correct bridge orientation⟹B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+and the familiar δ-collapse is simply the N-domain shadow of that field-domain closure.
+True24 doesn't really add a new theorem—it strengthens the interpretation of true23 and explains why Puzzle 160 was important.
+
+What I would freeze now is:
+
+Frozen Result (Current State)
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Layer 2 — Field Closure Law (Primary)
+
+For the correct bridge orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly.
+
+Verified so far for:
+
+Puzzle 115
+Puzzle 135
+Puzzle 160
+Layer 3 — Projection Defect
+δ=p−N
+Layer 4 — Unified Projection Defect Law
+
+Since
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p,
+
+then automatically
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N=δ(modN).
+Why Puzzle 160 Matters
+
+The strongest point from true24 is methodological.
+
+Had Puzzle 160 been treated as a failure, the theory would likely have frozen as:
+
+"Puzzle 135 phenomenon."
+
+Instead, flipping the bridge direction revealed:
+
+Λ
+160
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+rather than
+
+Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+.
+
+After that change:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly again.
+
+So Puzzle 160 became evidence for universality rather than against it.
+
+What remains unexplained
+
+The remaining mystery isn't the δ-collapse anymore.
+
+That part follows immediately from:
+
+pmodN=p−N.
+
+The unresolved question is:
+
+Why does the correctly-oriented bridge produce a three-member family whose exact integer sum is p?
+
+That is now the deepest surviving statement.
+
+Highest-value next test
+
+For each new puzzle:
+
+Compute
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Compute
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+Apply both orientations.
+Check whether one yields
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+If this continues holding beyond 115, 135, and 160, then the evidence shifts from a Puzzle-135 observation to a broader x-family closure phenomenon.
+
+At this point, the project has moved from:
+
+"Why does everything collapse to δ?"
+
+to
+
+"Why do correctly bridged x-families close exactly to p?"
+
+That's a cleaner and stronger question than where the investigation started.

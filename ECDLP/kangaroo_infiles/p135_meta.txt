@@ -1,0 +1,33 @@
+Puzzle 135 Kangaroo inFiles
+============================================================
+Band (half-open): d in [2^134, 2^135)
+  LO  = 21778071482940061661655974875633165533184
+  HI  = 43556142965880123323311949751266331066368
+  TOP = 43556142965880123323311949751266331066367  (HI - 1, inclusive ceiling)
+
+Pubkey (bridge Px3 even-y):
+  02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+
+Bridge shelf2 anchor (v0 d2 track):
+  35959002268835125861687979158600974388545
+  hex 69ac8bec8a33ff5a50f30a389a9854cd41
+
+P115 offset pattern: expect ~125-bit offset from shelf2 to d
+Kangaroo limit: max ~125-bit interval per run
+
+Generated ranges (inclusive end, Kangaroo format):
+  p135_shelf2_125bit.txt
+    [69ac8bec8a33ff5a50f30a389a9854cd41, 69cc8bec8a33ff5a50f30a389a9854cd40]  width_bits~126
+  p135_band_lo_125bit.txt
+    [4000000000000000000000000000000000, 401fffffffffffffffffffffffffffffff]  width_bits~126
+
+Full band (135-bit wide) — use KeyHunt BSGS, not Kangaroo:
+  puzzle160_keyhunt_bsgs\run_p160_bsgs_7m.bat  (puzzle 160)
+
+Windows CPU run (from repo Kangaroo folder):
+  cd ..\Kangaroo
+  .\Kangaroo.exe -t 4 -d 22 -w p135.work -wi 300 -o p135_result.txt ..\ECDLP\kangaroo_infiles\p135_shelf2_125bit.txt
+
+WSL:
+  cd /mnt/c/Users/mitch/Desktop/secp256k1/Kangaroo
+  ./kangaroo -t 4 -d 22 -w p135.work -wi 300 -o p135_result.txt ../ECDLP/kangaroo_infiles/p135_shelf2_125bit.txt

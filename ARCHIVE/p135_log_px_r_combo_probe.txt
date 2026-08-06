@@ -1,0 +1,126 @@
+P135 LOG Px <-> r COMBINATION PROBE
+Px tail ...590  r tail ...368
+band [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066368)
+
+=== cores ===
+  core(Px) mod log2(N) = 247.8511728194  frac=0.9681686438
+  core(r) mod log2(N) = 1.7480370459  frac=0.0068282697
+
+=== A. difference (Px - r) in log space ===
+  vPx - vr = 246.1031357734  mod log2(N) = 246.1031357734  frac=0.9613403741
+  delta frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...090176
+  delta frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...090176
+  delta frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...481472
+  delta frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...959872
+  delta frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...959872
+  delta frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...527552
+  delta_raw frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...090176
+  delta_raw frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...090176
+  delta_raw frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...481472
+  delta_raw frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...959872
+  delta_raw frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...959872
+  delta_raw frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...527552
+
+=== B. ratio log2(Px/r) combinations ===
+  log2(Px/r) = -3.2989547422
+  log2(Px/r) lo*(1+f): d_bits=135 band=ok ec=False tail...139840
+  log2(Px/r) lo+ f*lo: d_bits=135 band=ok ec=False tail...139840
+  log2(Px/r) lo*2^f: d_bits=135 band=ok ec=False tail...223744
+  log2(Px/r)_modLN frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...074304
+  log2(Px/r)_modLN frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...074304
+  log2(Px/r)_modLN frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...707584
+  log2(Px/r)_modLN frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...697536
+  log2(Px/r)_modLN frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...697536
+  log2(Px/r)_modLN frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...307328
+  3*log2(Px/r) = -9.8968642266
+  3*log2(Px/r) lo*(1+f): d_bits=135 band=ok ec=False tail...936192
+  3*log2(Px/r) lo+ f*lo: d_bits=135 band=ok ec=False tail...936192
+  3*log2(Px/r) lo*2^f: d_bits=135 band=ok ec=False tail...009792
+  3*log2(Px/r)_modLN frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...090176
+  3*log2(Px/r)_modLN frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...090176
+  3*log2(Px/r)_modLN frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...306176
+  3*log2(Px/r)_modLN frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...521984
+  3*log2(Px/r)_modLN frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...521984
+  3*log2(Px/r)_modLN frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...874432
+  3*log2(Px/r)+log2(7) = -7.0895093045
+  3*log2(Px/r)+log2(7) lo*(1+f): d_bits=135 band=ok ec=False tail...165632
+  3*log2(Px/r)+log2(7) lo+ f*lo: d_bits=135 band=ok ec=False tail...165632
+  3*log2(Px/r)+log2(7) lo*2^f: d_bits=135 band=ok ec=False tail...205376
+  3*log2(Px/r)+log2(7)_modLN frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...753152
+  3*log2(Px/r)+log2(7)_modLN frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...753152
+  3*log2(Px/r)+log2(7)_modLN frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...639232
+  3*log2(Px/r)+log2(7)_modLN frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...177472
+  3*log2(Px/r)+log2(7)_modLN frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...177472
+  3*log2(Px/r)+log2(7)_modLN frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...496064
+  3*log2(Px/r) mod 1 = 0.1031357734
+  3*log2(Px/r) mod 1 lo*(1+f): d_bits=135 band=ok ec=False tail...936192
+  3*log2(Px/r) mod 1 lo+ f*lo: d_bits=135 band=ok ec=False tail...936192
+  3*log2(Px/r) mod 1 lo*2^f: d_bits=135 band=ok ec=False tail...009792
+  (3*log2(Px/r)+log2(7)) mod 1 = 0.9104906955
+  (3*log2(Px/r)+log2(7)) mod 1 lo*(1+f): d_bits=135 band=ok ec=False tail...165632
+  (3*log2(Px/r)+log2(7)) mod 1 lo+ f*lo: d_bits=135 band=ok ec=False tail...165632
+  (3*log2(Px/r)+log2(7)) mod 1 lo*2^f: d_bits=135 band=ok ec=False tail...205376
+  log2(Px^3*7/r^3) = -7.0895093045
+  log2(Px^3*7/r^3) lo*(1+f): d_bits=135 band=ok ec=False tail...165632
+  log2(Px^3*7/r^3) lo+ f*lo: d_bits=135 band=ok ec=False tail...165632
+  log2(Px^3*7/r^3) lo*2^f: d_bits=135 band=ok ec=False tail...205376
+  log2(Px^3*7/r^3)_modLN frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...753152
+  log2(Px^3*7/r^3)_modLN frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...753152
+  log2(Px^3*7/r^3)_modLN frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...639232
+  log2(Px^3*7/r^3)_modLN frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...177472
+  log2(Px^3*7/r^3)_modLN frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...177472
+  log2(Px^3*7/r^3)_modLN frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...496064
+
+=== C. frac(Px) - frac(r) and product ===
+  frac(Px)-frac(r) mod1 = 0.9613403741
+  frac(Px)*frac(r) mod1 = 0.0066109166
+  frac(Px)+frac(r) mod1 = 0.9749969135
+  f_diff lo*(1+f): d_bits=135 band=ok ec=False tail...090176
+  f_diff lo+ f*lo: d_bits=135 band=ok ec=False tail...090176
+  f_diff lo*2^f: d_bits=135 band=ok ec=False tail...481472
+  f_prod lo*(1+f): d_bits=135 band=ok ec=False tail...562048
+  f_prod lo+ f*lo: d_bits=135 band=ok ec=False tail...562048
+  f_prod lo*2^f: d_bits=135 band=ok ec=False tail...701312
+  f_sum lo*(1+f): d_bits=135 band=ok ec=False tail...013248
+  f_sum lo+ f*lo: d_bits=135 band=ok ec=False tail...013248
+  f_sum lo*2^f: d_bits=135 band=ok ec=False tail...111360
+
+=== D. lambda from log combo -> arrest warrant ===
+
+=== E. cubic u branches vs Px difference ===
+  u0 vPx-vu mod LN = 247.867272 frac_diff=0.968232
+  Px-u0 frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...106816
+  Px-u0 frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...106816
+  Px-u0 frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...880768
+  Px-u0 frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...686528
+  Px-u0 frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...686528
+  Px-u0 frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...449024
+  fracPx-fracu0 lo*(1+f): d_bits=135 band=ok ec=False tail...106816
+  fracPx-fracu0 lo+ f*lo: d_bits=135 band=ok ec=False tail...106816
+  fracPx-fracu0 lo*2^f: d_bits=135 band=ok ec=False tail...880768
+  u1 vPx-vu mod LN = 246.105812 frac_diff=0.961351
+  Px-u1 frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...819712
+  Px-u1 frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...819712
+  Px-u1 frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...551424
+  Px-u1 frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...721088
+  Px-u1 frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...721088
+  Px-u1 frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...071296
+  fracPx-fracu1 lo*(1+f): d_bits=135 band=ok ec=False tail...819712
+  fracPx-fracu1 lo+ f*lo: d_bits=135 band=ok ec=False tail...819712
+  fracPx-fracu1 lo*2^f: d_bits=135 band=ok ec=False tail...551424
+  u2 vPx-vu mod LN = 246.607554 frac_diff=0.963311
+  Px-u2 frac=v/LN lo*(1+f): d_bits=135 band=ok ec=False tail...096896
+  Px-u2 frac=v/LN lo+ f*lo: d_bits=135 band=ok ec=False tail...096896
+  Px-u2 frac=v/LN lo*2^f: d_bits=135 band=ok ec=False tail...103744
+  Px-u2 frac=v mod1 lo*(1+f): d_bits=135 band=ok ec=False tail...242304
+  Px-u2 frac=v mod1 lo+ f*lo: d_bits=135 band=ok ec=False tail...242304
+  Px-u2 frac=v mod1 lo*2^f: d_bits=135 band=ok ec=False tail...459264
+  fracPx-fracu2 lo*(1+f): d_bits=135 band=ok ec=False tail...096896
+  fracPx-fracu2 lo+ f*lo: d_bits=135 band=ok ec=False tail...096896
+  fracPx-fracu2 lo*2^f: d_bits=135 band=ok ec=False tail...103744
+
+=== F. solved P130 sanity (combo predicts d?) ===
+  P130 frac_diff=0.991947 d_est bits=130 ec=False x==d False
+
+=== VERDICT ===
+  No EC hit from Px<->r log combinations.

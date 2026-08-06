@@ -1,0 +1,25 @@
+.LOG 
+
+10:40 PM 1/12/2026
+Consider a particle in a time-independent scalar potential.
+The Schroedinger equation for such a particle is iħ∂Ψ(r,t)/∂t = -(ħ2/(2m))∇2Ψ(r,t) + U(r)Ψ(r,t).
+The wave function is a function of position r and time t.
+Is separation of variables possible?
+Assume solutions of the form Ψ(r,t) = Φ(r)ζ(t) exist.   
+Inserting Ψ(r,t) = Φ(r)ζ(t) into the Schroedinger equation we obtain
+(iħ/ζ(t)) ∂ζ(t)/∂t  = (1/Φ(r))[-(ħ2/(2m))∇2Φ(r) ] + U(r)Φ(r).
+The left hand side of the equation is a function of t, independent of r, and the right hand side is a function of r, independent of t.  Both sides must therefore be equal to a constant, which we call E.  The left hand side then yields
+
+iħ∂ζ(t))/∂t = Eζ(t).   ζ(t) = A exp(-iEt/ħ) = A exp(-iωt).
+
+Here ω is the frequency of the wave function solution, and the de Broglie relation identifies E as the energy of the particle. 
+The right hand side yields H Φ(r) = E Φ(r), with  H = -(ħ2/(2m))∇2 + U(r) being a differential operator, or
+∇2Φ(r) + (2m/ħ2)(E - U(r))Φ(r) = 0.
+
+Summary
+If U = U(r), then solutions of the type Φ(r)ζ(t) exist.  They are called stationary solutions or stationary states.  They correspond to states in which the particle has a well defined energy E = ħω. 
+Φ(r) is a solution of HΦ(r) = EΦ(r), the time-independent Schroedinger equation.  It is an energy eigenfunction, since the time-independent Schroedinger equation is an eigenvalue equation of the linear operator H.  The allowed energies are called the eigenvalues of H.
+If solutions Φn(r) can be found, for different values of En, then the linear combination 
+Ψ(r,t) = ∑n cnΦn(r)exp(-iEnt/ħ)
+is also a solution of the Schroedinger equation, because the Schroedinger equation is a linear equation.
+However, such a linear combination does not represent a particle with a well defined energy.

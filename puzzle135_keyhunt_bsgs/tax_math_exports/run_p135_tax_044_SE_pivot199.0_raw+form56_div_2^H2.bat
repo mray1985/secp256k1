@@ -1,0 +1,11 @@
+@echo off
+setlocal
+call "%~dp0..\paths.bat"
+cd /d "%WORKDIR%"
+echo P135 tax-math anchor BSGS #44
+echo d0=421dd7d41f65fc00000000000000000000  band_pos=3.31%  stages=3
+echo Range 421dd7d41f65fbffffffffffff80000000:421dd7d41f65fc0000000000007fffffff  span=100000000
+echo NOTE: span=100000000 < KeyHunt default min 100000000000; use -n 0x100000000 or your 2^32 profile
+REM Bloom already built in WORKDIR — do not pass -S
+"%KEYHUNT%" -m bsgs -f "%PUBFILE%" -r 421dd7d41f65fbffffffffffff80000000:421dd7d41f65fc0000000000007fffffff -k %K_FACTOR% -t %THREADS% -s %STATS% -q
+pause

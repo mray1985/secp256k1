@@ -1,0 +1,9 @@
+P135 prefix constraint: 30 hex zeros + first nibble in 4567
+  LO=21778071482940061661655974875633165533184 HI=43556142965880123323311949751266331066367
+  LO hex sig: 4000000000000000000000000000000000
+  HI hex sig: 7fffffffffffffffffffffffffffffffff
+Phase 1: 1612 kanga match prefix30+4567
+Phase 2: lifted135=20805bb7052b604261808815abccecd65
+Phase 3: lane scroll ±200k around kanga centroid per nibble
+  lane 6: 1612 seeds center~34399634311167696067319966643381303205203
+DONE no hit tested=401617 elapsed=168.4s rate=2385/s

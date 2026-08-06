@@ -1,0 +1,250 @@
+HINGE EQUIVALENCE CATALOG — all puzzles
+P27 ground zero: GZ_xd=-0.004510  GZ_yd=+0.481535  GZ_yx=+0.486045
+Thresholds: TIGHT=0.05  VERY_TIGHT=0.01
+Puzzles: 88  solved: 82
+
+=== EQUIVALENCE DEFINITIONS ===
+
+Tier A — algebraic identities (must hold when defined):
+  ID01  {H} - {sqrt y} = {Delta_y}           (fractional hinge gap on y)
+  ID02  band_frac(d) = {2 * sqrt d}
+  ID03  band_frac(d) = {log2(d) - (n-1)}
+  ID04  y^2 = x^3 + 7 (mod p)                (curve equation)
+  ID05  x(d*G) = x((N-d)*G)                    (negated point same x)
+  ID06  y + (-y) = p (mod p)
+
+Tier S — structural:
+  S01   d in puzzle band [2^(n-1), 2^n)
+  S02   complement = (2^n - 1) - d            (height mask)
+  S03   Px is one of 3 cube roots of (Py^2 - 7)
+  S04   true cube-root slot index (0/1/2)
+
+Tier H — hinge alignment (|error| < 0.05):
+  H01   |E_x| tight    E_x = {sqrt x} - {H/2}
+  H02   |E_y(+y)| tight
+  H03   |E_y(-y)| tight
+  H04   |E_x - E_d| tight
+  H05   -y beats +y on |E_y| (same x)
+  H06   Delta_y < Delta_x  (y closer to hinge in full log2 gap)
+  H07   Delta_x < Delta_y  (x closer)
+
+Tier GZ — P27 ground-zero transfer (|gap - P27 offset| < 0.05):
+  GZ01  {sqrt x}-{sqrt d} ~= GZ_xd
+  GZ02  {sqrt y}-{sqrt d} ~= GZ_yd
+  GZ03  {sqrt y}-{sqrt x} ~= GZ_yx
+  GZ01_tight_001  same with threshold 0.01
+
+Tier M — mirror pair (d,N-d) and (y,-y):
+  M01   (sqrt x - sqrt d)+(sqrt y - sqrt d) == (sqrt x - sqrt(N-d))+(sqrt(-y)-sqrt(N-d))  mod 1
+  M02   {sqrt(xy/d^2)} == {sqrt(x*(-y)/(N-d)^2)}  mod 1
+  M03   mirror sum S_L == -S_R  mod 1
+
+Tier ALG — exact per-puzzle links:
+  ALG01 ({sqrt y}-{sqrt d}) - ({sqrt x}-{sqrt d}) = {sqrt y}-{sqrt x}  (signed gaps)
+
+Tier L — lambda band:
+  L01   |E_x - E_d(lambda_band,true slot)| < 0.05
+
+Tier T — dataset records:
+  T01   tightest |{sqrt x}-{sqrt d}| in full solved set (P27)
+
+=== INVERTED INDEX: equivalence -> puzzles ===
+
+ID01_H_minus_sqrt_y_eq_frac_Dy
+  YES: 88/88  (solved YES: 82)  NA: 0  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160]
+
+ID04_curve_y2_eq_x3_plus_7
+  YES: 87/88  (solved YES: 81)  NA: 0  NO: 1
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160]
+
+ID05_neg_scalar_same_x
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+ID06_y_plus_neg_y_eq_p
+  YES: 87/88  (solved YES: 81)  NA: 0  NO: 1
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160]
+
+ID02_band_frac_eq_2_sqrt_d
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+ID03_band_frac_eq_log2d_minus_n1
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+S01_d_in_band
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+S02_complement_eq_height_minus_d
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+S03_px_is_cube_root_slot
+  YES: 88/88  (solved YES: 82)  NA: 0  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160]
+
+S04_true_slot_index
+  YES: 0/88  (solved YES: 0)  NA: 6  NO: 0
+  puzzles: []
+
+H06_y_closer_hinge_than_x
+  YES: 44/88  (solved YES: 40)  NA: 0  NO: 44
+  puzzles: [3, 4, 7, 8, 9, 10, 18, 20, 21, 22, 24, 25, 29, 30, 32, 34, 39, 43, 44, 45, 47, 49, 52, 53, 56, 58, 60, 61, 62, 64, 65, 66, 67, 69, 70, 75, 90, 95, 115, 130, 135, 140, 150, 155]
+
+H07_x_closer_hinge_than_y
+  YES: 44/88  (solved YES: 42)  NA: 0  NO: 44
+  puzzles: [1, 2, 5, 6, 11, 12, 13, 14, 15, 16, 17, 19, 23, 26, 27, 28, 31, 33, 35, 36, 37, 38, 40, 41, 42, 46, 48, 50, 51, 54, 55, 57, 59, 63, 68, 80, 85, 100, 105, 110, 120, 125, 145, 160]
+
+H01_tight_Ex
+  YES: 4/88  (solved YES: 2)  NA: 0  NO: 84
+  puzzles: [26, 66, 135, 150]
+
+H02_tight_Ey_plus_y
+  YES: 8/88  (solved YES: 7)  NA: 0  NO: 80
+  puzzles: [3, 12, 36, 37, 53, 80, 115, 135]
+
+H03_tight_Ey_minus_y
+  YES: 6/88  (solved YES: 4)  NA: 0  NO: 82
+  puzzles: [23, 41, 75, 95, 140, 150]
+
+H05_neg_y_beats_plus_y_on_Ey
+  YES: 40/88  (solved YES: 37)  NA: 0  NO: 48
+  puzzles: [2, 6, 7, 8, 9, 10, 16, 17, 18, 20, 23, 24, 25, 29, 30, 35, 38, 39, 41, 45, 46, 49, 50, 51, 56, 60, 61, 62, 65, 68, 69, 70, 75, 90, 95, 100, 130, 140, 150, 155]
+
+H04_tight_Ex_minus_Ed
+  YES: 4/88  (solved YES: 4)  NA: 6  NO: 78
+  puzzles: [18, 21, 27, 49]
+
+GZ01_P27_x_offset
+  YES: 6/88  (solved YES: 6)  NA: 6  NO: 76
+  puzzles: [18, 21, 27, 49, 61, 64]
+
+GZ02_P27_y_offset
+  YES: 11/88  (solved YES: 11)  NA: 6  NO: 71
+  puzzles: [15, 27, 35, 41, 43, 49, 52, 58, 67, 75, 95]
+
+GZ03_P27_yx_offset
+  YES: 10/88  (solved YES: 10)  NA: 6  NO: 72
+  puzzles: [4, 9, 19, 24, 25, 27, 31, 32, 49, 68]
+
+GZ01_tight_001
+  YES: 1/88  (solved YES: 1)  NA: 6  NO: 81
+  puzzles: [27]
+
+T01_tightest_xd_in_dataset
+  YES: 1/88  (solved YES: 1)  NA: 0  NO: 87
+  puzzles: [27]
+
+M01_mirror_sum_mod1
+  YES: 10/88  (solved YES: 10)  NA: 6  NO: 72
+  puzzles: [3, 35, 38, 47, 58, 59, 90, 95, 110, 125]
+
+M03_mirror_sum_neg_mod1
+  YES: 10/88  (solved YES: 10)  NA: 6  NO: 72
+  puzzles: [5, 10, 15, 26, 39, 41, 59, 66, 70, 90]
+
+M02_combined_mirror_ratio
+  YES: 10/88  (solved YES: 10)  NA: 6  NO: 72
+  puzzles: [3, 35, 38, 47, 58, 59, 90, 95, 110, 125]
+
+ALG01_yx_link
+  YES: 82/88  (solved YES: 82)  NA: 6  NO: 0
+  puzzles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+
+L01_lambda_band_Ex_minus_Ed
+  YES: 8/88  (solved YES: 8)  NA: 7  NO: 73
+  puzzles: [3, 4, 8, 21, 32, 45, 61, 75]
+
+=== PER-PUZZLE EQUIVALENCE TAGS (YES only) ===
+
+P  1 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P  2 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P  3 [YES] (15 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H02_tight_Ey_plus_y, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P  4 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ03_P27_yx_offset, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P  5 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P  6 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P  7 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P  8 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P  9 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, GZ03_P27_yx_offset, ALG01_yx_link
+P 10 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 11 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 12 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H02_tight_Ey_plus_y, ALG01_yx_link
+P 13 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 14 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 15 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, GZ02_P27_y_offset, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 16 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 17 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 18 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, H04_tight_Ex_minus_Ed, GZ01_P27_x_offset, ALG01_yx_link
+P 19 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, GZ03_P27_yx_offset, ALG01_yx_link
+P 20 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 21 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H04_tight_Ex_minus_Ed, GZ01_P27_x_offset, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P 22 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, ALG01_yx_link
+P 23 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 24 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, GZ03_P27_yx_offset, ALG01_yx_link
+P 25 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, GZ03_P27_yx_offset, ALG01_yx_link
+P 26 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H01_tight_Ex, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 27 [YES] (17 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H04_tight_Ex_minus_Ed, GZ01_P27_x_offset, GZ02_P27_y_offset, GZ03_P27_yx_offset, GZ01_tight_001, T01_tightest_xd_in_dataset, ALG01_yx_link
+P 28 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 29 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 30 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 31 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, GZ03_P27_yx_offset, ALG01_yx_link
+P 32 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ03_P27_yx_offset, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P 33 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 34 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, ALG01_yx_link
+P 35 [YES] (15 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, GZ02_P27_y_offset, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 36 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H02_tight_Ey_plus_y, ALG01_yx_link
+P 37 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H02_tight_Ey_plus_y, ALG01_yx_link
+P 38 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 39 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 40 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 41 [YES] (15 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey, GZ02_P27_y_offset, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 42 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 43 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ02_P27_y_offset, ALG01_yx_link
+P 44 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, ALG01_yx_link
+P 45 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P 46 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 47 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 48 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 49 [YES] (16 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, H04_tight_Ex_minus_Ed, GZ01_P27_x_offset, GZ02_P27_y_offset, GZ03_P27_yx_offset, ALG01_yx_link
+P 50 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 51 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 52 [YES] (10 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID05_neg_scalar_same_x, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ02_P27_y_offset, ALG01_yx_link
+P 53 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H02_tight_Ey_plus_y, ALG01_yx_link
+P 54 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 55 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 56 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 57 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 58 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ02_P27_y_offset, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 59 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, M01_mirror_sum_mod1, M03_mirror_sum_neg_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 60 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 61 [YES] (14 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, GZ01_P27_x_offset, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P 62 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 63 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 64 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ01_P27_x_offset, ALG01_yx_link
+P 65 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 66 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 67 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, GZ02_P27_y_offset, ALG01_yx_link
+P 68 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, GZ03_P27_yx_offset, ALG01_yx_link
+P 69 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P 70 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, M03_mirror_sum_neg_mod1, ALG01_yx_link
+P 75 [YES] (15 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey, GZ02_P27_y_offset, ALG01_yx_link, L01_lambda_band_Ex_minus_Ed
+P 80 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H02_tight_Ey_plus_y, ALG01_yx_link
+P 85 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P 90 [YES] (15 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, M01_mirror_sum_mod1, M03_mirror_sum_neg_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P 95 [YES] (16 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey, GZ02_P27_y_offset, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P100 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P105 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P110 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P115 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H02_tight_Ey_plus_y, ALG01_yx_link
+P120 [YES] (11 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, ALG01_yx_link
+P125 [YES] (13 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y, M01_mirror_sum_mod1, M02_combined_mirror_ratio, ALG01_yx_link
+P130 [YES] (12 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID05_neg_scalar_same_x, ID06_y_plus_neg_y_eq_p, ID02_band_frac_eq_2_sqrt_d, ID03_band_frac_eq_log2d_minus_n1, S01_d_in_band, S02_complement_eq_height_minus_d, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey, ALG01_yx_link
+P135 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H02_tight_Ey_plus_y
+P140 [NO] (7 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+P145 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y
+P150 [NO] (8 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H01_tight_Ex, H03_tight_Ey_minus_y, H05_neg_y_beats_plus_y_on_Ey
+P155 [NO] (6 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H06_y_closer_hinge_than_x, H05_neg_y_beats_plus_y_on_Ey
+P160 [NO] (5 eq): ID01_H_minus_sqrt_y_eq_frac_Dy, ID04_curve_y2_eq_x3_plus_7, ID06_y_plus_neg_y_eq_p, S03_px_is_cube_root_slot, H07_x_closer_hinge_than_y

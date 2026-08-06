@@ -1,0 +1,5 @@
+{
+  "base": 96,
+  "report": "Puzzle 160 eps-ladder  base=2^96  step=2^57=144115188075855872\nm band [2^96, 2^97)  eps in [0, 549755813887]  (549,755,813,888 points)\nd partner target [2^159, 2^160)  NP1 bits=256\n\nDivisor scan eps=[0,999999] workers=3\nexact m|(N+1) hits: 0  (0.9s)\n  (none in range)\n\nNo d*G == P_160 from this pass.",
+  "solution": null
+}

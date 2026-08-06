@@ -1,0 +1,38 @@
+{
+  "candidate_id": "G-20260710-02",
+  "short_name": "sha256_chained_puzzle_keys",
+  "formula": "h=SHA256(int32be(d_n)); u_hat=int(h) mod 2**(n+4); d_hat=2**(n+4)+u_hat; exact d_hat==d_{n+5}; chain 75->80->...->130; no LE/high-bits/hex/repeat/alt-hash",
+  "domains": "solved d on five-step chain 75..130",
+  "score_definition": "exact equality on each edge; one miss closes",
+  "expected_direction": "all edges exact (unlikely)",
+  "allowed_parameters": {
+    "encoding": "32-byte big-endian zero-padded",
+    "hash": "SHA-256 once",
+    "bits_taken": "low (n+4) bits of hash as integer",
+    "chain": [
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130
+    ],
+    "grid": "none"
+  },
+  "holdout_split": "all locked edges; no parameter inference",
+  "null_families": [
+    "one mismatch closes"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Creator-side deterministic hash chain on known keys; not ECDSA or curve membership.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

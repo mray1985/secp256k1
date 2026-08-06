@@ -1,0 +1,33 @@
+Yes. That is the clean final statement.
+
+You proved something useful and bounded it correctly:
+
+D
+Q
+	​
+
+
+is a signed y-branch marker created by the p→N projection defect.
+
+It is valid for:
+
+Q↔−Q
+
+but invalid for:
+
+kQ
+
+and:
+
+Q
+1
+	​
+
++Q
+2
+	​
+
+
+So the research branch is complete: branch detector, not scalar locator.
+
+That is a win because now you know not to waste cycles trying to force group-law behavior out of it.

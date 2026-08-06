@@ -1,0 +1,29 @@
+{
+  "candidate_id": "F-20260709-05",
+  "short_name": "glv_orbit_mutual_information",
+  "formula": "a=argmin_j (lam**j * d mod N); b=argmin_j (beta**j * Px mod p); ties->min j; S=I(a;b) bits; Delta=I_real-mean I(a;b_pi); NO match-rate/Pearson/argmax; NO doubling/offsets",
+  "domains": "d mod N; Px in F_p; a,b in {0,1,2}",
+  "score_definition": "mutual information I(a;b) with log2 over 3x3 table",
+  "expected_direction": "higher",
+  "allowed_parameters": {
+    "lambda": "0x5363ad4cc05c30e0a5261c028812645a122e22ea20816678df02967c1b23bd72",
+    "beta": "0x7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee",
+    "label": "argmin ties->min j",
+    "score": "MI bits only",
+    "grid": "none"
+  },
+  "holdout_split": "train 1..50; test 51..70; ranges 1..35 / 36..70",
+  "null_families": [
+    "shuffle b via pi",
+    "random n-bit",
+    "random EC",
+    "nearby height",
+    "sawtooth control"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Orbit labels of d and Px are not fixed by curve equation; wrong Px attachment should destroy I(a;b) if any pairing signal exists.",
+  "registered_date": "2026-07-09",
+  "evaluated_date": "2026-07-09",
+  "locked": true
+}

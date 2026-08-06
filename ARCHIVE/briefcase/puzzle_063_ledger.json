@@ -1,0 +1,184 @@
+{
+  "puzzle": 63,
+  "verdict": {
+    "status": "SOLVED",
+    "rsz_source": "blockstream spend tx",
+    "x_beta_triple": "VERIFIED",
+    "slot_2_to_3_x": "rx3 = rx2 * \u03b2",
+    "y_side": "ry2 = ry3",
+    "\u039b": "46282887490409463083944165075711029612325030593247263021136909168563264118391",
+    "\u039b1": "55934039319053557629028059845828374359626431835676821173811216036892585410"
+  },
+  "operations": [
+    {
+      "phase": "00_identity",
+      "name": "Puzzle 63 catalog row",
+      "formula": "privatekeys.pw / blockchain",
+      "lines": [
+        "puzzle = 63",
+        "address = 1NpYjtLira16LfGbGwZJ5JbDPh3ai9bjf4",
+        "key range [2^62, 2^63) = [4611686018427387904, 9223372036854775807)",
+        "range_min hex = 0x4000000000000000",
+        "range_max hex = 0x7fffffffffffffff",
+        "btc_value = 0.63",
+        "hash160 = ef58afb697b094423ce90721fbb19a359ef7c50e",
+        "solved = True",
+        "private key d = 8993229949524469768",
+        "solve_date = 2019-07-12",
+        "public_key leaked = True"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "01_pubkey",
+      "name": "compressed pubkey \u2192 Px, Py",
+      "formula": "0365ec2994b8cc0a20d40dd69edfe55ca32a54bcbbaa6b0ddcff36049301a54579",
+      "lines": [
+        "pub_compressed = 0365ec2994b8cc0a20d40dd69edfe55ca32a54bcbbaa6b0ddcff36049301a54579",
+        "Px = 46100860595331327753782525134281403195505409441031099411610412192590360561017",
+        "\t65ec2994b8cc0a20d40dd69edfe55ca32a54bcbbaa6b0ddcff36049301a54579",
+        "Py = 75035408977651857636253691274269771916903384564052647297869342538121201694218",
+        "\ta5e48954fe16122f21dbea8310088434f09eaa9f4daf4c9a5a2bca77c155b60a",
+        "bit_length(d) = 63"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "02_curve_law",
+      "name": "y\u00b2 = x\u00b3 + 7 mod p",
+      "formula": "two branches only: y and p-y",
+      "lines": [
+        "Px\u00b3 + 7 mod p = 101459099813588525811299537835836989550765511505553076525737896092759861549899",
+        "Py\u00b2 mod p = 101459099813588525811299537835836989550765511505553076525737896092759861549899",
+        "on_curve: True",
+        "y branch = 40756680259664337787317293734418135936366600101587916741588241469787632977445",
+        "p-y branch = 75035408977651857636253691274269771916903384564052647297869342538121201694218"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "03_x_beta_triple",
+      "name": "three x \u03b2-slots",
+      "formula": "Px3 = pubkey x; Px2 = Px3/\u03b2; Px1 = Px3/\u03b2\u00b2",
+      "lines": [
+        "\u03b2\u00b3 mod p = 1",
+        "Px1 = 10196482589044774901181041778186001892129880104148493152221165597664060748122",
+        "Px2 = 59494746052940092768607418096220502765634695120460971475626006217654413362524",
+        "Px3 = 46100860595331327753782525134281403195505409441031099411610412192590360561017",
+        "Px2 * \u03b2 = Px3: True"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "04_shared_y_branches",
+      "name": "slot labels, not three y branches",
+      "formula": "Py1 = Py2 = Py3 on selected parity",
+      "lines": [
+        "Py1 = Py2 = Py3 = 75035408977651857636253691274269771916903384564052647297869342538121201694218",
+        "ry note: y-side uses parity branch y or p-y only"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "05_n_shadow_py",
+      "name": "map_p_to_n(Py)",
+      "formula": "lam_py + lam_py_neg = N-1",
+      "lines": [
+        "map_p_to_n(Py) = 75035408977651857636253691274269771916623168179928782850004169043568561500548",
+        "map_p_to_n(-Py) = 40756680259664337787317293734418135936214396099146121532600994097949599993788",
+        "sum mod N = 115792089237316195423570985008687907852837564279074904382605163141518161494336"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "06_rsz",
+      "name": "blockchain / hashkeys RSZ",
+      "formula": "s*k = z + r*d mod N",
+      "lines": [
+        "source = blockstream spend tx",
+        "txid = 05bbdfd6137521f4d1f4c857d92fc60c54309f4ef35ecad9b3b67d018cccff15",
+        "input_index = 0",
+        "r = 98721349004421898102810501443537099641204707176252354700953066851320353529177",
+        "\tda424dad5048e85895d087730799b1e7fbd4fadb3534a835166c8a39d5341d59",
+        "s = 9315422352879153067624339150774600954347171923698756403071109269299671449557",
+        "z = 13541560391406519522936400815323614194472420812256787708424031360852105286082",
+        "pub_compressed = 0365ec2994b8cc0a20d40dd69edfe55ca32a54bcbbaa6b0ddcff36049301a54579",
+        "k (computed) = 20472497289282758012841087424869008689184875795171545865264037687119162756724",
+        "s*k mod N = 13508784398615689118009267918801624826431995208091229979605470620110130567954",
+        "z+r*d mod N = 13508784398615689118009267918801624826431995208091229979605470620110130567954",
+        "ECDSA verify: True"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "07_r_beta_triple",
+      "name": "rx3 = rx2 * \u03b2",
+      "formula": "spend-line x slots",
+      "lines": [
+        "rx2 = 98721349004421898102810501443537099641204707176252354700953066851320353529177",
+        "rx3 = 75975243681472524200513115753323763003603886224246638968276121470029773446354",
+        "rx3 = rx2 * \u03b2: True"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "08_lambda_x_bridge",
+      "name": "\u039b and \u039b1",
+      "formula": "Px3/rx3 = \u039b; Px3/rx2 = \u039b1",
+      "lines": [
+        "\u039b = Px3/rx3 = 46282887490409463083944165075711029612325030593247263021136909168563264118391",
+        "\u039b1 = Px3/rx2 = 55934039319053557629028059845828374359626431835676821173811216036892585410",
+        "\u039b/\u039b1 = \u03b2\u00b2: True",
+        "P135 reference \u039b = 97451685862885086182458552040892158509924235661624603229050850812487253689501",
+        "per-puzzle \u039b"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "09_y_parity_bridge",
+      "name": "ry2 = ry3; lambda_y = Py/ry",
+      "formula": "no y-side \u03b2 rotation",
+      "lines": [
+        "ry2 = 12242581800820837806569706485575036634444172277955285250529596185626361911976",
+        "ry3 = 12242581800820837806569706485575036634444172277955285250529596185626361911976",
+        "ry2 == ry3: True",
+        "lambda_y = 48538704395767368203564818922117322212343810181899078248062276059934041464950"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    },
+    {
+      "phase": "10_n_shadow_bridges",
+      "name": "Lambda_N, GAP_x, GAP_y",
+      "formula": "N-side shadow bookkeeping",
+      "lines": [
+        "Lambda_N = 113269848676496958465371504903710266135739425294833135953139049253745295958113",
+        "lambda_y_N = 87241573211769188330973930940978796987156400964987872366225083988549617863928",
+        "GAP_x = 66986961186087495381427339827999236523414394701585872932002140085182031839722",
+        "GAP_y = 89763813772588425289173411045956438704254539949229640795691197876322483400152"
+      ],
+      "verified": true,
+      "note": "",
+      "quarantine": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+========================================================================================
+Signed decomposition vs canonical radix-p encoding of P and -P
+========================================================================================
+
+  Same x, branches y and p-y ARE P and -P.
+  Distinction is only encoding: signed Phi_- vs canonical Phi(-P).
+
+  walk 1..256: canonical Phi(P) == Phi_+ :     256/256
+  walk 1..256: (Phi_++Phi_-)/2 == x/p :        256/256
+  walk 1..256: (Phi_+-Phi_-)/2 == y/p^2 :      256/256
+  walk 1..256: Phi(-P) == Phi_- + 1/p :        256/256
+
+  Borrow picture: signed digit (-y) -> legal digit (p-y) costs +1/p
+  (radix-p normalize), holding printed x/p fixed in the Phi_- + 1/p form.
+
+  Two valid views:
+    symmetric signed:   x/p ± y/p^2
+    canonical nonnegative: (x*p + y)/p^2  and  (x*p + (p-y))/p^2
+
+  Center = x-channel; displacement = signed y-channel.
+

@@ -1,0 +1,36 @@
+================================================================================
+PUZZLE 71 HARVESTER (hash160 / address target)
+================================================================================
+target_addr=1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU
+target_h160=f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8
+band=[1180591620717411303424, 2361183241434822606847]
+anchors=92 radius=±50000
+
+  anchors 10/92 checked~950,010 elapsed=52.1s
+  anchors 20/92 checked~1,950,020 elapsed=111.0s
+  anchors 30/92 checked~2,950,030 elapsed=167.2s
+  anchors 40/92 checked~3,950,040 elapsed=231.1s
+  anchors 50/92 checked~4,950,050 elapsed=306.0s
+  anchors 60/92 checked~5,950,060 elapsed=380.1s
+  anchors 70/92 checked~6,950,070 elapsed=452.7s
+  anchors 80/92 checked~7,950,080 elapsed=528.8s
+  anchors 90/92 checked~8,950,090 elapsed=604.2s
+  anchors 92/92 checked~9,100,092 elapsed=615.7s
+NO SOLUTION in harvester windows
+checked~9,100,092 elapsed=615.7s
+First 15 anchors:
+  d=1180591620717411303424  LO
+  d=1186434070221683200223  mirror(barcode_21)
+  d=1190335240218339730306  P70+P68
+  d=1219611141124123553407  barcode_16
+  d=1235534079193055071004  barcode_20
+  d=1241235534079193055071  barcode_19
+  d=1249990608998653771186  q5_slice_mid
+  d=1255215939322490858563  mirror(barcode_13)
+  d=1258637808013424319364  barcode_11
+  d=1258800556981371132959  mirror(barcode_14)
+  d=1261691910368242407723  mirror(q10_slice_mid)
+  d=1267711465925399596285  P70+P69
+  d=1319389597279896238949  q5_slice_hi
+  d=1319389597279896238950  q6_slice_lo
+  d=1342431936492198895840  barcode_12

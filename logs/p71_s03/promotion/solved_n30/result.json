@@ -1,0 +1,67 @@
+{
+  "backend": "keyhunt",
+  "binary": "C:\\Users\\mitch\\Desktop\\secp256k1\\keyhunt",
+  "command": [
+    "wsl",
+    "-e",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/keyhunt",
+    "-m",
+    "address",
+    "-f",
+    "/mnt/c/Users/mitch/Desktop/secp256k1/logs/p71_s03/promotion/solved_n30/keyhunt_targets.txt",
+    "-r",
+    "3d94cd5c:3d94cd6c",
+    "-l",
+    "compress",
+    "-t",
+    "4"
+  ],
+  "target_address": "1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps",
+  "target_h160": "d39c4704664e1deb76c9331e637564c257d68a08",
+  "start": 1033162076,
+  "end": 1033162092,
+  "R_peak": null,
+  "R_sustained": null,
+  "rate_samples": [],
+  "keys_tested_reported": null,
+  "wall_s": 0.2765577999962261,
+  "found_private_keys": [
+    "3d94cd64"
+  ],
+  "verified_hits": [
+    {
+      "d": 1033162084,
+      "d_hex": "3d94cd64",
+      "in_range": true,
+      "h160": "d39c4704664e1deb76c9331e637564c257d68a08",
+      "address": "1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps",
+      "accepted": true,
+      "reason": "hash160_match"
+    }
+  ],
+  "rejected_hits": [],
+  "expect_private": "3d94cd64",
+  "expect_match": true,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_tail": "[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD\n[+] Mode address\n[+] Search compress only\n[+] Threads : 4\n[+] Setting search for btc adddress\n[+] N = 0x100000000\n[+] Range \n[+] -- from : 0x3d94cd5c\n[+] -- to   : 0x3d94cd6c\n[+] Allocating memory for 1 elements: 0.00 MB\n[+] Bloom filter for 1 elements.\n[+] Loading data to the bloomfilter total: 0.03 MB\n[+] Sorting data ... done! 1 values were loaded and sorted\n\nBase key: 3d94cd5c     \nHit! Private Key: 3d94cd64\npubkey: 030d282cf2ff536d2c42f105d0b8588821a915dc3f9a05bd98bb23af67a2e92a5b\nAddress 1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps\nrmd160 d39c4704664e1deb76c9331e637564c257d68a08\n",
+  "stderr_tail": "",
+  "notes": [
+    "stop_on_hit=keyhunt_known_hit_calibration"
+  ],
+  "device_notes": "KeyHunt CPU compressed address mode (WSL-capable)",
+  "started_at_utc": "2026-07-10T16:41:28.602158+00:00",
+  "finished_at_utc": "2026-07-10T16:41:28.878810+00:00",
+  "s03_calibration_gate": {
+    "expected_seen": true,
+    "expected_verified": true,
+    "inside_requested_range": true,
+    "hash160_match": true,
+    "all_reported_hits_verified": true,
+    "pass": true
+  },
+  "step": "solved_n30"
+}

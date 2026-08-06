@@ -1,0 +1,17 @@
+{
+  "candidate_id": "S-20260710-05",
+  "status": "locked",
+  "freeze": "No new run without a preregistered explicit set and a measurable bit cut.",
+  "required_tuple": [
+    "F",
+    "S",
+    "|S|",
+    "justification"
+  ],
+  "baseline": {
+    "d_interval": "[2^134, 2^135)",
+    "W": "2^134",
+    "b_removed": 0
+  },
+  "conclusion": "The tested factoradic, creator-sequence, curve-derived, transaction-derived, barcode, tax-math, echo, rotation, and residue hypotheses do not presently exclude any private-key candidate within the known Puzzle 135 interval."
+}

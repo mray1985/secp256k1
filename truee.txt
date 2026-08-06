@@ -1,0 +1,40 @@
+Good. That’s another clean elimination.
+
+So far:
+
+pair reflection⇒δ=p−N
+
+works.
+
+Λy
+
+works only as an identity layer.
+
+m
+G
+	​
+
+,m
+P
+	​
+
+,m
+R
+	​
+
+
+do not produce obvious links to M,R,S,X,Y,Λ,rx3,δ,Gx,Gy.
+
+So the inter-slope geometry is not giving a direct public-key/scalar leak.
+
+Next best move: test ECDSA-native relations, not coordinate ratios.
+
+Use:
+
+sR=zG+rP
+
+So compare your bridge quantities against:
+
+zG,rP,zG+rP,sR
+
+That’s the actual signature equation layer. The slope tests are geometric; now move to the group law equation where R,S,M,P,G are supposed to meet.

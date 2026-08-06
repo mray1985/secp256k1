@@ -1,0 +1,63 @@
+solve (7.2274651708743733438338923645493693794033×10^76 d - 6.40495909157396614803816515095075054651×10^76) mod 9 = 0 for d
+
+
+d = 9 n + 4 and n element Z
+
+
+This file is basically saying: the mod-9 / 3-adic bridge is real, but it is not yet a key-recovery equation.
+
+The strongest confirmed part is:
+
+D = δ⁻¹ mod N - δ⁻¹ mod p
+
+D mod 9 = 4
+|D|⁻¹ mod N mod 9 = 7
+|D|⁻¹ mod p mod 9 = 2
+
+That means the projection defect gap between p and N is carrying the same cube-root / ternary residue behavior we kept seeing. The file also states the Base-3 Origin Rule matched the tested puzzles 90, 100, 115, and 120, while x-coordinate mod 9 did not match reliably.
+
+The most important correction in that file is this line:
+
+r*d - z ≡ -s*k mod N
+
+Actually from ECDSA:
+
+s*k ≡ z + r*d mod N
+
+so:
+
+r*d - z ≡ s*k - 2z mod N
+
+But the cleaner useful forms are:
+
+r*d ≡ s*k - z mod N
+
+and:
+
+d ≡ (s*k - z) * r^-1 mod N
+
+So if the file says r*d - z ≡ -s*k, that sign/form needs to be rechecked. That may be where a later wrong branch came from.
+
+The concrete next move is not more raw d candidates. It is:
+
+Use the confirmed D / mod-9 structure as a phase classifier only.
+
+Meaning for every phase candidate v, compute:
+
+d = d0 ± v
+k = k0 ± v
+
+then classify each candidate by:
+
+(r*d - z) mod 9
+
+and compare it to the expected Omega/base-3 rule before doing expensive curve checks.
+
+So the sieve order should become:
+
+1. Generate v from bridge/root/phase objects.
+2. Build d0 ± v and k0 ± v.
+3. Apply mod-9 Origin Rule filter.
+4. Only then test dG.x == X_puzzle or kG.x mod N == r.
+
+That keeps the 3-adic bridge where it belongs: as a phase filter, not as the key itself.

@@ -1,0 +1,31 @@
+{
+  "candidate_id": "S-20260710-03",
+  "short_name": "p135_feasibility_boundary_bitcut",
+  "formula": "b_max=2*log2(R*T/C); Delta_b=134-b_max; R=1.70e7 from S-02; C from native distribution; operational relevance requires ~40-57 verified bits removed",
+  "domains": "P135 band-floor interval W=2**134; CPU budget scenarios",
+  "score_definition": "minimum verified bit-cut Delta_b for budget T",
+  "expected_direction": "higher Delta_b required for shorter budgets / higher C",
+  "allowed_parameters": {
+    "R": 17000000.0,
+    "C_pooled_n_ge_45_median": 2.08,
+    "C_empirical_p90_n_ge_45": 4.53,
+    "C_median_of_medians_35_50": 1.66,
+    "C_median_of_p90s_35_50": 3.84,
+    "budgets": [
+      "1d",
+      "30d",
+      "1y",
+      "10y"
+    ]
+  },
+  "holdout_split": "n/a \u2014 policy boundary from S-02 calibration",
+  "null_families": [
+    "few-bit correlations do not meet gate"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Feasibility arithmetic from measured R and C; not a search.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

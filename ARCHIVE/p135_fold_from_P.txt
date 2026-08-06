@@ -1,0 +1,35 @@
+FOLD FROM P — floor LO / height TOP (not band mid)
+P x ...708124077590  y ...450741674800
+LO (floor)=...65533184  TOP (height)=...31066367
+{sqrt_x}=0.173970  {sqrt_y}=0.339576  {Delta_y}=0.006126
+fold_bf = {Delta_y} = 0.006126  (band_frac shift toward LO/TOP)
+anchors=12  BSGS margin=+/-5,000,000
+
+target P known — BSGS: find d with d*G = P near each fold anchor
+
+--- P_x/direct d...0864354304 ---
+  none
+--- P_x/height_mirror d...8632245247 ---
+  none
+--- P_x/toward_floor d...9785780224 ---
+  none
+--- P_x/toward_top d...3820463104 ---
+  none
+--- P_y/direct d...1007580160 ---
+  none
+--- P_y/height_mirror d...8489019391 ---
+  none
+--- P_y/toward_floor d...2227179520 ---
+  none
+--- P_y/toward_top d...2994627584 ---
+  none
+--- P_Dy/direct d...7725271040 ---
+  none
+--- P_Dy/height_mirror d...1771328511 ---
+  none
+--- P_Dy/toward_floor d...8042717184 ---
+  none
+--- P_Dy/toward_top d...6242570240 ---
+  none
+
+wall=10.1s  result=not found

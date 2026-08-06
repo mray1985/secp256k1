@@ -1,0 +1,57 @@
+COMPLEMENT LADDER TEST
+  HI = 2^n - 1
+  C  = HI - d
+  d XOR C = HI  (bit partition of n-bit height)
+
+=== P70: D/A ladder vs complement bit positions ===
+  d bits=70  C bits=68  popcount(C)=36
+  D/A ladder (25): [67, 66, 63, 62, 59, 56, 50, 48, 45, 44, 39, 34, 30, 28, 27, 23, 22, 21, 17, 13, 11, 10, 8, 4, 1]
+  C bit pos  (36): [67, 65, 64, 62, 61, 58, 54, 53, 52, 51, 49, 48, 46, 43, 40, 39, 37, 36, 35, 34, 31, 30, 29, 26, 24, 23, 20, 17, 16, 15, 13, 12, 8, 3, 2, 1]
+  D/A gaps:   [1, 3, 1, 3, 3, 6, 2, 3, 1, 5, 5, 4, 2, 1, 4, 1, 1, 4, 4, 2, 1, 2, 4, 3]
+  C gaps:     [2, 1, 2, 1, 3, 4, 1, 1, 1, 2, 1, 2, 3, 3, 1, 2, 1, 1, 1, 3, 1, 1, 3, 2, 1, 3, 3, 1, 1, 2, 1, 4, 5, 1, 1]
+  identical lists? False
+  identical gaps?  False
+
+  Note: same HI partition, different order/count — D/A is depletion indices,
+  C bits are literal 0-bits of d in the n-bit window.
+
+=== P70 -> P71 +1 SHIFT (D/A hypothesis) ===
+  P70 ladder: [67, 66, 63, 62, 59, 56, 50, 48, 45, 44, 39, 34, 30, 28, 27, 23, 22, 21, 17, 13, 11, 10, 8, 4, 1]
+  P71 +1:     [68, 67, 64, 63, 60, 57, 51, 49, 46, 45, 40, 35, 31, 29, 28, 24, 23, 22, 18, 14, 12, 11, 9, 5, 2]
+  ladder +1 match: True
+  P70 gaps:   [1, 3, 1, 3, 3, 6, 2, 3, 1, 5, 5, 4, 2, 1, 4, 1, 1, 4, 4, 2, 1, 2, 4, 3]
+  P71 gaps:   [1, 3, 1, 3, 3, 6, 2, 3, 1, 5, 5, 4, 2, 1, 4, 1, 1, 4, 4, 2, 1, 2, 4, 3]
+  gaps match: True
+
+=== P70 -> P71 +1 SHIFT (complement bit positions) ===
+  P70 C positions (36): [67, 65, 64, 62, 61, 58, 54, 53, 52, 51, 49, 48]...
+  P71 C from +1-shift d (34): [68, 67, 66, 65, 63, 62, 61, 60, 57, 55, 51, 50]...
+  C pos +1 match: False
+  P70 C gaps: [2, 1, 2, 1, 3, 4, 1, 1, 1, 2, 1, 2]...
+  P71 C gaps: [1, 1, 1, 2, 1, 1, 1, 3, 2, 4, 1, 2]...
+  C gap match: False
+
+=== CONSECUTIVE SOLVED: D/A ladder n+1 == ladder(n)+1 ? ===
+  consecutive pairs P1-P70: 69
+  D/A ladder(n+1) == ladder(n)+1: 0/69
+  D/A gaps match:                1/69
+  C bit pos(n+1) == pos(n)+1:    2/69
+  C gaps match:                  2/69
+
+=== SAMPLE: complement bit ladders (every 5th + P69-P70) ===
+  P10 popcount(C)=  8  positions[:8]=[8, 7, 6, 5, 4, 3, 2, 0]  gaps[:6]=[1, 1, 1, 1, 1, 1]
+  P15 popcount(C)=  6  positions[:8]=[12, 10, 9, 8, 3, 2]  gaps[:6]=[2, 1, 1, 5, 1]
+  P20 popcount(C)= 10  positions[:8]=[17, 15, 14, 12, 9, 8, 7, 5]  gaps[:6]=[2, 1, 2, 3, 1, 1]
+  P65 popcount(C)= 36  positions[:8]=[62, 60, 58, 57, 56, 55, 54, 50]  gaps[:6]=[2, 2, 1, 1, 1, 1]
+  P66 popcount(C)= 28  positions[:8]=[64, 62, 61, 60, 59, 58, 55, 54]  gaps[:6]=[2, 1, 1, 1, 1, 3]
+  P67 popcount(C)= 36  positions[:8]=[63, 62, 59, 58, 57, 56, 49, 48]  gaps[:6]=[1, 3, 1, 1, 1, 7]
+  P68 popcount(C)= 35  positions[:8]=[66, 60, 58, 54, 51, 50, 46, 45]  gaps[:6]=[6, 2, 4, 3, 1, 4]
+  P69 popcount(C)= 34  positions[:8]=[67, 66, 65, 64, 63, 62, 61, 57]  gaps[:6]=[1, 1, 1, 1, 1, 1]
+  P70 popcount(C)= 36  positions[:8]=[67, 65, 64, 62, 61, 58, 54, 53]  gaps[:6]=[2, 1, 2, 1, 3, 4]
+
+=== VERDICT ===
+  Exact always: d + C = HI, d & C = 0, d XOR C = HI
+  D/A ladder == C bit positions: NO (different objects)
+  P70->P71 +1 on D/A ladder: YES (by construction of shift hypothesis)
+  P70->P71 +1 on C bit positions from +1-shift d: test above
+  Consecutive puzzle +1 shift rarely exact for either ladder

@@ -1,0 +1,80 @@
+That’s a strong narrowing result.
+
+So the current bridge facts are:
+
+A(Q)=ΛQ
+y
+	​
+
+modp
+
+is a coordinate projection.
+
+It preserves equality:
+
+Q
+1
+	​
+
+=Q
+2
+	​
+
+⇒A(Q
+1
+	​
+
+)=A(Q
+2
+	​
+
+)
+
+but it does not preserve:
+
+Q
+1
+	​
+
++Q
+2
+	​
+
+
+or
+
+kQ
+
+and D
+A
+	​
+
+ does not reduce to the addition slope μ.
+
+So the next step should be to stop testing A(Q) as a group-law map and instead test it as a coordinate classifier.
+
+Use A(Q) to classify points by:
+
+A(Q)mod720
+A(Q)mod6!
+A(Q)mod256
+A(Q)mod2
+n
+
+That connects directly back to your “modulo 720” thread.
+
+Test for G, P, R, zG, rP, sR, and zG+rP:
+
+A(Q)mod720
+Q
+y
+	​
+
+mod720
+Q
+x
+	​
+
+mod720
+
+If the video/mod-720 clue matters, this is where it should start showing up: not as a group law, but as a residue-class signature of the projected coordinates.

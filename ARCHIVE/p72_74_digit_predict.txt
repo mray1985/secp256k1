@@ -1,0 +1,56 @@
+P71-P74 DIGIT-WINDOW PREDICTIONS
+(four keys that fill the 70-74 vs 71-75 sliding-window hole)
+
+P70 KNOWN  d=970436974005023690481  len=21  miss=ALL  band_frac=0.6440
+P75 KNOWN  d=22538323240989823823367  len=23  miss=1  band_frac=0.1932
+P71 LOCAL d=1180591620717411303466  len=22  miss=ALL  band_frac=0.000000  (2^70+42)
+
+=== P71 PREDICT ===
+  structure: len~22  missing=ALL  band_frac~0.0
+  note: floor+42 pattern
+  frac_0.00                d=1180591620717411303424  len=22 miss=ALL  EC/h160=no
+  floor+42                 d=1180591620717411303466  len=22 miss=ALL  EC/h160=no
+  floor+49                 d=1180591620717411303473  len=22 miss=ALL  EC/h160=no
+  floor+76                 d=1180591620717411303500  len=22 miss=ALL  EC/h160=no
+  floor+21                 d=1180591620717411303445  len=22 miss=ALL  EC/h160=no
+  mirror_P70_frac_0.644    d=1940873948010047340544  len=22 miss=26  EC/h160=no
+
+=== P72 PREDICT ===
+  structure: len~22  missing=8  band_frac~0.05
+  note: P85/P125 miss 8 at high n
+  frac_0.05                d=2479242403506563743744  len=22 miss=18  EC/h160=no
+  floor+42                 d=2361183241434822606890  len=22 miss=57  EC/h160=no
+  floor+49                 d=2361183241434822606897  len=22 miss=5  EC/h160=no
+  floor+76                 d=2361183241434822606924  len=22 miss=57  EC/h160=no
+  floor+21                 d=2361183241434822606869  len=22 miss=57  EC/h160=no
+  lin_71_75_0.048          d=2475210032357048942592  len=22 miss=6  EC/h160=no
+  mirror_P70_frac_0.644    d=3881747896020094681088  len=22 miss=5  EC/h160=no
+
+=== P73 PREDICT ===
+  structure: len~22  missing=ALL  band_frac~0.1
+  note: mid climb to P75
+  frac_0.10                d=5194603131156609761280  len=22 miss=ALL  EC/h160=no
+  floor+42                 d=4722366482869645213738  len=22 miss=0  EC/h160=no
+  floor+49                 d=4722366482869645213745  len=22 miss=0  EC/h160=no
+  floor+76                 d=4722366482869645213772  len=22 miss=0  EC/h160=no
+  floor+21                 d=4722366482869645213717  len=22 miss=0  EC/h160=no
+  lin_71_75_0.097          d=5178473646558550556672  len=22 miss=9  EC/h160=no
+  mirror_P70_frac_0.644    d=7763495792040189362176  len=22 miss=ALL  EC/h160=no
+
+=== P74 PREDICT ===
+  structure: len~23  missing=5  band_frac~0.15
+  note: P100 misses 5
+  frac_0.15                d=10861442910600183939072  len=23 miss=5  EC/h160=no
+  floor+42                 d=9444732965739290427434  len=22 miss=18  EC/h160=no
+  floor+49                 d=9444732965739290427441  len=22 miss=8  EC/h160=no
+  floor+76                 d=9444732965739290427468  len=22 miss=1  EC/h160=no
+  floor+21                 d=9444732965739290427413  len=22 miss=8  EC/h160=no
+  lin_71_75_0.145          d=10813054456806006325248  len=23 miss=79  EC/h160=no
+  mirror_P70_frac_0.644    d=15526991584080378724352  len=23 miss=ALL  EC/h160=no
+
+INTERPRETATION
+  P71: floor+42 (all 10 digits, len 22) — matches local PUZZLE71_SOLVED
+  P72-P74: NOT linear between P70(64%) and P75(19%); climb from floor
+  Digit rule: all-10 or single missing from {8,5,1} rotation
+  Best anchors to scan: floor+42/49/76 and lin_71_75 fractions
+  Verify any candidate with hash160(address) — none hit in coarse anchors above

@@ -1,0 +1,446 @@
+PROJECT TIMELINE SUMMARY
+================================================================================
+
+PHASE 1 (true.txt → true0.txt):
+- Verified cube roots and Latin square patterns
+- Established bridge defect DA concept
+
+PHASE 2 (true1.txt → true6.txt):
+- Developed normalization matrices for N-side
+- Established forward/reverse Lambda bridge
+- Confirmed Puzzle 135 uses forward bridge
+- Tested many candidate values - all failed
+
+PHASE 3 (true0a.txt → true0f.txt):
+- Proved y-branch detector D_Q
+- Tested branch-to-branch structure
+- Confirmed x-bridge for all three family members
+- Verified ECDSA native equation
+
+PHASE 4 (true9.txt → truef.txt):
+- Tested slope bridge (identity, not revealing)
+- Tested inter-slope ratios (no direct match)
+- Inserted bridge into ECDSA equation
+- Confirmed bridge preserves equality but not addition
+
+PHASE 5 (true10.txt → true15.txt):
+- Discovered x-family bridge is real (all 3 pass)
+- Found sum discrepancy: ∑Px_i - ∑B_i = δ mod N
+- Delta distributed across all three terms
+- Unified bridge law confirmed
+- NO individual shell-to-shell mapping
+- FINAL: Unified law holds at aggregate level only
+=======
+================================================================================
+PROJECT TIMELINE SUMMARY
+================================================================================
+
+PHASE 1 (true.txt → true0.txt):
+- Verified cube roots and Latin square patterns
+- Established bridge defect DA concept
+
+PHASE 2 (true1.txt → true6.txt):
+- Developed normalization matrices for N-side
+- Established forward/reverse Lambda bridge
+- Confirmed Puzzle 135 uses forward bridge
+- Tested many candidate values - all failed
+
+PHASE 3 (true0a.txt → true0f.txt):
+- Proved y-branch detector D_Q
+- Tested branch-to-branch structure
+- Confirmed x-bridge for all three family members
+- Verified ECDSA native equation
+
+PHASE 4 (true9.txt → truef.txt):
+- Tested slope bridge (identity, not revealing)
+- Tested inter-slope ratios (no direct match)
+- Inserted bridge into ECDSA equation
+- Confirmed bridge preserves equality but not addition
+
+PHASE 5 (true10.txt → true15.txt):
+- Discovered x-family bridge is real (all 3 pass)
+- Found sum discrepancy: ∑Px_i - ∑B_i = δ mod N
+- Delta distributed across all three terms
+- Unified bridge law confirmed
+- NO individual shell-to-shell mapping
+- FINAL: Unified law holds at aggregate level only
+
+PHASE 6 (true16.txt → true19.txt):
+- true16.txt: Frozen result - Formal theorem statement of Unified Projection Defect Law
+- true17.txt: Discussion - Unified law is strong result, D_Q fully characterized
+- true18.txt: New object identified - N-side row-constant invariants from cube-root normalization
+- true19.txt: Identity check specification - Compare row constants against all known values
+- EXECUTED: true19_identity_check.py confirms row constants are GENUINELY NEW invariants================================================================================
+COMPREHENSIVE SUMMARY: ALL TRUE FILES (true.txt → true15.txt)
+Generated: 2026-06-03
+Purpose: 100% catch-up reference for secp256k1 project
+================================================================================
+
+TABLE OF CONTENTS:
+1. Early Work (true.txt, true0.txt)
+2. Mordell Curve Structure (true2.txt, true4.txt, true8.txt)
+3. Lambda Bridge Development (true1.txt, true5.txt, true6.txt)
+4. Bridge Testing (true0b.txt → true0f.txt)
+5. X-Family Bridge (true10.txt, true11.txt)
+6. Unified Law (true12.txt, true13.txt)
+7. Distribution Analysis (true14.txt, true15.txt)
+8. Reference Data (true9.txt, truea.txt, truec.txt, trued.txt, truee.txt, truef.txt)
+9. Special Values (truersmxy.txt, truew.txt)
+
+================================================================================
+SECTION 1: EARLY WORK
+================================================================================
+
+true.txt:
+- Verified T roots: t1^3 = t2^3 = t3^3 = ω2 - 1 mod N
+- Verified Cq roots: c1^3 = c2^3 = c3^3 = Cq mod N
+- C/T ratio matrix forms a Latin square: cyclic permutation [A, B, C]
+- Pattern confirmed: each c_i is constant multiple of t_j family
+
+true0.txt:
+- Bridge A(Q) = Λ·Q_y mod p preserves equality but NOT addition
+- DA = A(zG+rP) - A(zG) - A(rP) ≠ 0 (mod p)
+- DA is the bridge defect term - next object to study
+- Compare DA against: p-N, r, s, z, X, Y, Λ, rx3
+- Check DA + (p-DA) mod N for reflection behavior
+
+================================================================================
+SECTION 2: MORDELL CURVE STRUCTURE
+================================================================================
+
+true2.txt:
+- secp256k1 is Mordell-form: y² = x³ + 7 mod p
+- For nonce point R = kG = (x, y), mirror is -R = (N-k)G = (x, p-y)
+- Both k and N-k produce same x-coordinate, same r = x mod N
+- r does NOT distinguish between d and N-d, or k and N-k
+- Verification must test BOTH: v and N-v
+- For candidate v: check x(vG) mod N == r AND x((N-v)G) mod N == r
+- If pass: d = (s·k - m) · r⁻¹ mod N, check dG.x == Puzzle135_X
+
+true4.txt:
+- Coordinate side: y² ≡ x³ + 7 mod p (Mordell form)
+- Scalar side: dG = Q, kG = R, s·k ≡ m + r·d mod N
+- +7 belongs on coordinate side, NOT scalar side
+- Correction: bridge Λ·rx_i ≡ Px_i mod p does NOT directly give d
+- Must use: scalar → scalar·G → point (X,Y)
+- Coordinate identity does not turn directly into scalar identity
+
+true8.txt:
+- Confirms: secp256k1 is Mordell curve y² = x³ + 7 mod p
+- Integer solutions over Z vs finite-field solutions over Fp
+- Curve has many points over Fp; Puzzle 135 public key is one of them
+- Symmetry: (x, y) on curve ⇒ (x, p-y) on curve
+- Scalar mirrors: dG = (x, y), (N-d)G = (x, p-y)
+- Same x, opposite y - this is why r correlates on both sides
+- Mordell symmetry folds y and -y onto one x
+- ECDSA symmetry maps d-phase into k-phase
+- Missing object is phase offset between folded systems
+
+================================================================================
+SECTION 3: LAMBDA BRIDGE DEVELOPMENT
+================================================================================
+
+true1.txt:
+- Normalize Gx_i, Px_i, rx_i mod N using N-side defect/cube-root branches
+- p1, p2, p3 = cube roots of Δ = p-N mod N
+- Build: G_N(i,j) = Gx_i · p_j⁻¹ mod N
+- Build: P_N(i,j) = Px_i · p_j⁻¹ mod N
+- Build: r_N(i,j) = rx_i · p_j⁻¹ mod N
+- Test ratios:
+  * A_ij = P_N(i,j) · G_N(i,j)⁻¹ mod N
+  * B_ij = r_N(i,j) · G_N(i,j)⁻¹ mod N
+  * C_ij = P_N(i,j) · r_N(i,j)⁻¹ mod N
+- Check: Do A_ij, B_ij, C_ij collapse by row, column, or cycle?
+
+true5.txt:
+- CR1 ≡ K × CP1 mod p
+- K = CR1 × CP1⁻¹ mod p = Λ⁻¹ mod p
+- Λ = CP1 × CR1⁻¹ mod p
+- Two directions:
+  * FORWARD: Px_i ≡ Λ × rx_i mod p (Λ = 97451685862885086182458552040892158509924235661624603229050850812487253689501)
+  * REVERSE: rx_i ≡ K × Px_i mod p (K = 81068098917365752067418111170832400985023864499927122630942305971544277876663)
+- Puzzle 135 uses FORWARD bridge: X_puzzle = Px3 = Λ × rx3 mod p
+- Bridge is in Fp (coordinate field)
+- To find d (scalar in FN): find d such that d·G.x = X_puzzle
+
+true6.txt:
+- FORWARD BRIDGE: Px_i ≡ Λ × rx_i mod p (Λ = CP1 × CR1⁻¹ mod p)
+- REVERSE BRIDGE: rx_i ≡ K × Px_i mod p (K = Λ⁻¹ mod p)
+- Lambda bridge has TWO directions
+- Tested many candidates - ALL NO MATCH:
+  * 10 lower-135-bit candidates
+  * Full candidates (d_cand_3, d_cand_4, d_cand_5)
+  * Lambda bridge values (Lambda_N, Lambda_inv_N, K_N, K_inv_N)
+  * Latin square constants (A, B, C)
+  * Normalization matrix values
+  * R values and combinations
+- NEXT: Generate from ECDSA equation: s·k ≡ m + r·d mod N
+
+================================================================================
+SECTION 4: BRIDGE TESTING (true0a.txt → true0f.txt)
+================================================================================
+
+true0a.txt:
+- Stop testing pair-sum (proven)
+- Test branch-to-branch structure:
+  * A_G = Λ·y_G mod p
+  * A_P = Λ·y_P mod p
+  * A_R = Λ·y_R mod p
+- Compare: A_P - A_R, A_P - A_G, A_R - A_G (mod N)
+- Test ratios: A_P·A_R⁻¹, A_P·A_G⁻¹ (mod N)
+- Goal: Find if individual lambda-y branches correlate with λ_x, s, r, m, d
+
+true0b.txt:
+- Y-BRANCH DETECTOR COMPLETE
+- A(Q) = Λ·Q_y mod p
+- A(Q) + A(-Q) ≡ p-N mod N (for G, P, R, R1, R2)
+- D_Q = 2·A(Q) - (p-N) mod N
+- D_{-Q} = N - D_Q
+- Properties: Valid for Q↔-Q, Invalid for kQ and Q1+Q2
+- Conclusion: D_Q is a BRANCH DETECTOR, NOT a scalar locator
+
+true0c.txt:
+- Split into two paths:
+  * Path 1: Formalize y-branch result
+  * Path 2: Return to x-bridge
+- Strongest unresolved: Λ·rx3 ≡ X mod p
+- Test Λ·rx1, Λ·rx2, Λ·rx3 against Px1, Px2, Px3
+- If all three pass: x-family bridge is real
+
+true0d.txt:
+- Clean test: B_i = Λ·rx_i mod p
+- Compare B_i to X_i for i=1,2,3
+- Test family sums: (B1+B2+B3) mod p vs (X1+X2+X3) mod p
+- Test family sums mod N: (B1+B2+B3) mod N vs (X1+X2+X3) mod N
+- If x-family behaves like y-reflection shell, see stable constant
+
+true0e.txt:
+- Test Λ·rx_i ≡ Px_i mod p for i=1,2,3
+- If all pass: x-family bridge is real, not single-hit
+- If only rx3 passes: single-hit bridge
+
+true0f.txt:
+- Same as true0e.txt (redundant confirmation)
+
+================================================================================
+SECTION 5: X-FAMILY BRIDGE
+================================================================================
+
+true10.txt:
+- Λ·rx_i ≡ Px_i mod p for all i=1,2,3 ✓
+- X-family bridge is REAL
+- Sum discrepancy:
+  * ∑B_i ≡ p-N mod N
+  * ∑Px_i ≡ 2(p-N) mod N
+- If B_i = Px_i mod p, extra δ appears after projecting to N
+- One family crosses N/p boundary one additional time
+- Test: ∑Px_i - ∑B_i mod N
+- Expected: p-N
+- Check individual: (Px_i - B_i) mod N
+- One of three should contribute extra δ, or distributed
+
+true11.txt:
+- Λ·rx_i ≡ Px_i mod p for all i=1,2,3 ✓
+- ∑B_i = p (exactly) ✓
+- Therefore ∑B_i mod N = p-N = δ ✓
+- For Gx-family: ∑Gx_i = 2p, so ∑Gx_i mod N = 2δ ✓
+- (∑Gx_i - ∑B_i) mod N = δ ✓
+- Important: d1 + d2 + d3 ≡ δ mod N
+- But NO individual d_i equals δ
+- Defect is DISTRIBUTED across all three x-family terms
+
+================================================================================
+SECTION 6: UNIFIED LAW
+================================================================================
+
+true12.txt:
+- x-family three-root shell → δ
+- y-reflection two-branch shell → δ
+- Both collapse to same p→N defect constant
+- Unified bridge law: ∑(Λ·rx_i) ≡ A_y + A_{-y} ≡ p-N mod N
+- Bridge is NOT scalar-linear, but DOES preserve coordinate-shell closure
+
+true13.txt:
+- LEVEL 1 (Direct computational proofs):
+  * δ = p-N
+  * A(Q) + A(-Q) ≡ δ mod N (for G, P, R)
+  * ∑B_i = p, therefore ∑B_i ≡ δ mod N
+- LEVEL 2 (Interpretation):
+  * x-shell → δ and y-shell → δ
+  * Have NOT shown B_i ↔ A(Q) one-to-one correspondence
+  * Strongest statement: Two independent constructions both project to δ
+- Next test: Individual x-family defects d_i = (Gx_i - B_i) mod N
+- Check if d_i relates to signed branch coordinate D_Q
+
+================================================================================
+SECTION 7: DISTRIBUTION ANALYSIS (true14.txt → true15.txt)
+================================================================================
+
+true14.txt:
+- d_i = (Gx_i - B_i) mod N
+- Compare against: D_Q, -D_Q, D_G, D_P, D_R
+- If no individual match: unified law remains shared collapse to δ
+  (not individual shell mapping)
+
+true15.txt (FINAL CONCLUSION):
+- ∑d_i ≡ δ mod N ✓
+- d_i ⇒ D_Q, -D_Q for Q=G,P,R ✗ (NO matches)
+- FINAL RESULT:
+  * Unified shell law holds ONLY at aggregate level
+  * ∑(Λ·rx_i) ≡ A(Q) + A(-Q) ≡ p-N mod N
+  * But: d_i = (Gx_i - B_i) mod N ⇒ D_Q, -D_Q
+  * x-shell and y-shell share same collapse constant δ
+  * NO one-to-one mapping between individual x-family defects and signed y-branch markers
+
+================================================================================
+SECTION 8: REFERENCE DATA FILES
+================================================================================
+
+true9.txt:
+- A(Q) = Λ·Q_y mod p
+- A(Q) + A(-Q) ≡ p-N mod N
+- Then: A_y / A_{-y} mod N? (failed - not constant)
+- Slope bridge: Λx_i / A_i ≡ x_i / y_i mod p (identity, always passes)
+- Next: Compare slopes m_G, m_P, m_R to each other
+- Test: m_P - m_R, m_P - m_G, m_R - m_G (mod p)
+- Test ratios: m_P·m_R⁻¹, m_P·m_G⁻¹, m_R·m_G⁻¹ (mod p)
+
+trued.txt:
+- Slope bridge is algebraically valid but not externally revealing
+- Λx_i / A_i ≡ x_i / y_i mod p (identity, cancels out)
+- Compare inter-slope ratios:
+  * m_P - m_R, m_P - m_G, m_R - m_G (mod p)
+  * m_P·m_R⁻¹, m_P·m_G⁻¹, m_R·m_G⁻¹ (mod p)
+- Inter-slope ratios don't link to M, R, S, X, Y, Λ, rx3, δ, Gx, Gy
+
+truee.txt:
+- Inter-slope ratios: NO direct links
+- Next: Test ECDSA-native relations (not coordinate ratios)
+- Use: sR = zG + rP
+- Compare bridge quantities against: zG, rP, zG+rP, sR
+
+truef.txt:
+- ECDSA equation sR = zG + rP passes ✓
+- Stack:
+  * Curve validity: PASS
+  * ECDSA native equation: PASS
+  * Λ·rx3 ≡ X mod p: PASS
+  * Λy + Λ(-y) ≡ p-N mod N: PASS
+  * λx³ + C ≡ λy² mod N: FAIL
+  * Inter-slope ratios: NO match
+- Next: Insert bridge into ECDSA equation
+- Test: Λ(sR)_y, Λ(zG)_y, Λ(rP)_y, Λ(zG+rP)_y
+
+================================================================================
+SECTION 9: SPECIAL VALUES
+================================================================================
+
+truersmxy.txt:
+- Contains: M, R, S, N-M, Px, Py, N-S, modular inverses
+- Px = 0x145D2611C823A396EF6712CE0F712F09B9B4F3135E3E0AA3230FB9B6D08D1E16
+- Py = 0x667A05E9A1BDD6F70142B66558BD12CE2C0F9CBC7001B20C8A6A109C80DC5330
+- R = 0xC86BEC9FAEA4892FD98D718BDFC770D0D11C3D6BFD4328F25FE9B06BFADB9650
+- M = 0x92886FAAF53F90A5C03D6AF773A726E75097179306B980E5D28772E612E00FC7
+- S = 0x224A322E81C044D341521F65FABDFA86D84673FB55ED7533862E37F7724931FA
+
+truew.txt:
+- Valid N-side roots:
+  * ω = 0x78074008874160198520644763525212887401909906723592317393988542598630163514318
+  * ω2 = 0x37718080363155996902926221483475020450927657555482586988616620542887997980018
+
+================================================================================
+KEY VALUES REFERENCE
+================================================================================
+
+p = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+N = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+delta = p - N = 432420386565659656852420866390673177326 = 0x14551231950B75FC4402DA1722FC9BAEE
+
+Lambda = CP1 × CR1⁻¹ mod p = 97451685862885086182458552040892158509924235661624603229050850812487253689501
+K = Lambda⁻¹ mod p = 81068098917365752067418111170832400985023864499927122630942305971544277876663
+
+Gx = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+Gy = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+
+Px1 = 51866120889717641461810659005716431188799022756838843706514074509901265629059
+Px2 = 54715131853151445691733189261594605794679177894602772031317532630299444965014
+Px3 = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+
+rx1 = 114930704126154877082883546730544079307369404418439078397954295509919169851219
+rx2 = 90653255469745952335985143920649543885181555095025199315947044135806663628368
+rx3 = 26000218878731561428273279366182192513989009817816850365013828370091835863739
+
+Y = 0x667A05E9A1BDD6F70142B66558BD12CE2C0F9CBC7001B20C8A6A109C80DC5330
+R_y = 0x6DE98B9482B20DFFA5CCBB87548D2DFDA0218C4B941C4C55AFD02232F775D63C
+
+M = 0x92886FAAF53F90A5C03D6AF773A726E75097179306B980E5D28772E612E00FC7
+S = 0x224A322E81C044D341521F65FABDFA86D84673FB55ED7533862E37F7724931FA
+r = 0xC86BEC9FAEA4892FD98D718BDFC770D0D11C3D6BFD4328F25FE9B06BFADB9650
+
+================================================================================
+PROJECT TIMELINE SUMMARY
+================================================================================
+
+PHASE 1 (true.txt → true0.txt):
+- Verified cube roots and Latin square patterns
+- Established bridge defect DA concept
+
+PHASE 2 (true1.txt → true6.txt):
+- Developed normalization matrices for N-side
+- Established forward/reverse Lambda bridge
+- Confirmed Puzzle 135 uses forward bridge
+- Tested many candidate values - all failed
+
+PHASE 3 (true0a.txt → true0f.txt):
+- Proved y-branch detector D_Q
+- Tested branch-to-branch structure
+- Confirmed x-bridge for all three family members
+- Verified ECDSA native equation
+
+PHASE 4 (true9.txt → truef.txt):
+- Tested slope bridge (identity, not revealing)
+- Tested inter-slope ratios (no direct match)
+- Inserted bridge into ECDSA equation
+- Confirmed bridge preserves equality but not addition
+
+PHASE 5 (true10.txt → true15.txt):
+- Discovered x-family bridge is real (all 3 pass)
+- Found sum discrepancy: ∑Px_i - ∑B_i = δ mod N
+- Delta distributed across all three terms
+- Unified bridge law confirmed
+- NO individual shell-to-shell mapping
+- FINAL: Unified law holds at aggregate level only
+
+================================================================================
+FINAL STATE (true15.txt)
+================================================================================
+
+WHAT WORKS:
+✓ Curve validity (secp256k1: y² = x³ + 7 mod p)
+✓ ECDSA equation: sR = zG + rP mod p
+✓ Lambda bridge: Λ·rx_i ≡ Px_i mod p (all i=1,2,3)
+✓ Reflection shell: A(Q) + A(-Q) ≡ δ mod N (for G, P, R)
+✓ X-family shell: ∑(Λ·rx_i) ≡ δ mod N
+✓ D_Q antisymmetry: D_{-Q} = N - D_Q
+✓ Unified law: Both shells collapse to δ = p-N
+
+WHAT FAILS:
+✗ λx³ + C ≡ λy² mod N (curve equation doesn't transfer)
+✗ D(kQ) = k·D_Q (not scalar-linear)
+✗ D(Q1+Q2) = D(Q1) + D(Q2) (not addition-linear)
+✗ A(kQ) = k·A(Q) mod p (bridge not linear under scalar mult)
+✗ A(Q1+Q2) = A(Q1) + A(Q2) mod p (bridge not linear under addition)
+✗ d_i = D_Q or -D_Q for any i, Q (no individual shell mapping)
+✗ Inter-slope ratios don't match known values
+
+CONCLUSION:
+The bridge A(Q) = Λ·Q_y mod p is a coordinate-shell detector, NOT a 
+scalar locator. It creates two independent constructions (x-shell and y-shell) 
+that both project to the same constant δ = p-N, but without individual term 
+correspondence. The p→N projection defect is real and bounded; it does not 
+encode ECDSA scalar information in a straightforward algebraic way.
+
+================================================================================
+true16.txt - FROZEN RESULT (Formal Theorem Statement)  
+  
+This file separates proven results from interpretation. 

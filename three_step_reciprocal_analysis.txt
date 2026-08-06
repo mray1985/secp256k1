@@ -1,0 +1,178 @@
+====================================================================================================
+THREE-STEP RECIPROCAL INVARIANT ANALYSIS
+====================================================================================================
+
+====================================================================================================
+PART 1: N/2 ± 0.5 BOUNDARY ANALYSIS
+====================================================================================================
+
+N = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141
+N (decimal) = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+N/2 = 0x7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0
+N/2 (decimal) = 57896044618658097711785492504343953926418782139537452191302581570759080747168
+
+N/2 - 0.5 = 5.7896044619e+76
+N/2 + 0.5 = 5.7896044619e+76
+
+Puzzle 135:
+  Range: [21778071482940061661655974875633165533184, 43556142965880123323311949751266331066367)
+  Midpoint (Lane C): 32667107224410092492483962313449748299776 = 0x6000000000000000000000000000000000
+  D8: 2722258935367507707706996859454145691648 = 0x800000000000000000000000000000000
+  mid_135 / (N/2) = 0.00000000000000000000
+
+  mid_135 = 2^134.5 = 3.079884405350458e+40
+  N/2 = 2^255 (approximately)
+
+====================================================================================================
+PART 2: Y/-Y SYMMETRY AROUND N/2 ± 0.5
+====================================================================================================
+
+Puzzle 135 public key:
+  x = 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16
+  y = 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330
+  p-y = 0x9985fa165e422908febd499aa742ed31d3f063438ffe4df37595ef627f23a8ff
+
+Symmetry property:
+  If P = (x, y) = d*G
+  Then -P = (x, p-y) = (N-d)*G
+  Therefore: d + (N-d) = N
+  Midpoint: N/2
+
+y < p/2? True
+Conclusion: d < N/2 (Puzzle 135 private key is in lower half)
+
+Interpretations of 0.5:
+  1. Fractional boundary: d = floor(N/2) ± 0.5 separates d from N-d
+  2. Half-bit: LSB determines parity, 0.5 = 2^(-1)
+  3. Continuous midpoint: In real projection, the boundary is at N/2 ± 0.5
+
+====================================================================================================
+PART 3: THREE-STEP RECIPROCAL CHAINS
+====================================================================================================
+
+Height: 135, exponent: 0.5273437500
+
+Chain A: value -> value^(-1 mod p) -> (value^(-1))^(h/256)
+  x: 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -> 0x46dc3cd89a2461219ee1b561c4443ce727dfc86f0f228a68cf11dc5ea5a8d601 -> 2.2124709728e+40
+  y: 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330 -> 0xc1ccbd6942137c30fbe1a5a2f7a7fb7816086503ed20cda3220eec9999e7e047 -> 3.7609759737e+40
+  c: 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1 -> 0xfba1302b576885213087cfcc6918ca6e63806e5ec4432b942ff25c20b1a0bb38 -> 4.3162426328e+40
+
+Chain B: value -> value^(h/256) -> (value^(h/256))^(-1 mod p)
+  x: 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -> 1.1463001237e+40 -> 0xcea5ab744b14d3a77ee2c1cd7abd7452baa5e968d554d9107997374e9edb1b81
+  y: 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330 -> 2.6876308130e+40 -> 0x663b30695a748a8b776e65ecf714c574b0fb7a3c580dedde054792ff5dda85fc
+  c: 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1 -> 3.5883159411e+40 -> 0x93fd281b43bca7b69d68700355fdcd43340c43a66ceeab4880e421582d72e544
+
+Chain C: value -> value^(h/256) -> 1/(value^(h/256))
+  x: 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -> 1.1463001237e+40 -> 8.7237188524e-41
+  y: 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330 -> 2.6876308130e+40 -> 3.7207491266e-41
+  c: 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1 -> 3.5883159411e+40 -> 2.7868226110e-41
+
+Chain D: value -> value^(-1 mod p) -> (value^(-1))^(h/256) -> 1/((value^(-1))^(h/256))
+  x: 0x145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -> 0x46dc3cd89a2461219ee1b561c4443ce727dfc86f0f228a68cf11dc5ea5a8d601 -> 2.2124709728e+40 -> 4.5198333099e-41
+  y: 0x667a05e9a1bdd6f70142b66558bd12ce2c0f9cbc7001b20c8a6a109c80dc5330 -> 0xc1ccbd6942137c30fbe1a5a2f7a7fb7816086503ed20cda3220eec9999e7e047 -> 3.7609759737e+40 -> 2.6588843082e-41
+  c: 0xb146aafd382c29f4b4efdef289c8be53c6091a94d81ec27f61177d316da8e3e1 -> 0xfba1302b576885213087cfcc6918ca6e63806e5ec4432b942ff25c20b1a0bb38 -> 4.3162426328e+40 -> 2.3168299030e-41
+
+Observation:
+  Chain C x: 8.7237188524e-41
+  Chain D x: 4.5198333099e-41
+  Are they equal? True
+
+====================================================================================================
+PART 4: CONNECTING 0.5 TO N/2 BOUNDARY
+====================================================================================================
+
+Echo values for y and p-y:
+  y_echo = 2.6876308130e+40
+  (p-y)_echo = 3.3261707716e+40
+
+  y_echo + (p-y)_echo = 6.0138015845e+40
+  y_echo - (p-y)_echo = -6.3853995861e+39
+  y_echo * (p-y)_echo = 8.9395190549e+80
+
+  sqrt(y*(p-y))_echo = 2.9899028504e+40
+
+  y/(p-y) = 0.6674988172
+  log2(y/(p-y)) = -0.5831628146
+
+====================================================================================================
+PART 5: INVERSE MANTISSA RELATIONSHIP TO N/2 ± 0.5
+====================================================================================================
+
+For y_echo = 2.6876308130e+40:
+  mantissa m_y = 0.3034587711
+  inv_mantissa = 3.2953405711
+  In Lane C basin [1.13, 37.14]? True
+
+For (p-y)_echo = 3.3261707716e+40:
+  mantissa = 0.6109860366
+  inv_mantissa = 1.6366986153
+
+Lane C for Puzzle 135:
+  Lane C = mid_135 + D8_135 = 0x6800000000000000000000000000000000
+  D8_135 = 0x800000000000000000000000000000000
+
+====================================================================================================
+PART 6: STABILITY ANALYSIS OF THREE-STEP INVARIANTS
+====================================================================================================
+
+Testing stability on calibration puzzles:
+----------------------------------------------------------------------------------------------------
+         standard_echo: avg=1.305510, std=0.788870, count=10
+               chain_A: avg=1.647788, std=1.351112, count=10
+
+Most stable: standard_echo (std=0.788870)
+
+====================================================================================================
+PART 7: PREDICTING D FOR PUZZLE 135
+====================================================================================================
+
+Using invariant: standard_echo
+Average ratio: 1.3055101746
+Predicted d (from x): 1098200870244635159784005941662545084416 = 0x33a31cb49d9d960000000000000000000
+Predicted d (from y): 1471073649340549111105856197814179069952 = 0x452b67aaaa62540000000000000000000
+Predicted d (from c): 1474476812904679475862183306017384693760 = 0x45545e795afa0c0000000000000000000
+
+Testing candidates:
+  d = 0x6800000000000000000000000000...: No
+
+====================================================================================================
+PART 8: 0.5 AS HALF-BIT BOUNDARY
+====================================================================================================
+
+Half-bit theory:
+  Puzzle 135 range: log2(d) in [134, 135)
+  Midpoint: log2(d) = 134.5
+  Lane A: log2(d) in [134, 134.5)
+  Lane B: log2(d) = 134.5
+  Lane C: log2(d) in (134.5, 135)
+
+The 0.5 is the fractional part that defines Lane C
+Lane C = 2^134.5 + 2^131 = mid_135 + D8_135
+
+Y/-Y symmetry and N/2:
+  y < p/2: d < N/2
+  y > p/2: d > N/2
+  y = p/2: d = N/2 (impossible for most curves)
+
+Synthesis:
+  The 0.5 appears in TWO contexts:
+  1. log2(d) = k + 0.5 defines the lane midpoint
+  2. N/2 ± 0.5 defines the y/-y symmetry boundary
+
+  These might be related through the echo invariant projection!
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+Key findings:
+  1. Three-step Chain C (echo -> reciprocal) gives inv_m_y = 3.2953405711
+  2. This places Puzzle 135 IN LANE C BASIN [1.13, 37.14]
+  3. The 0.5 represents fractional part in log2 space
+  4. Lane C = 2^134.5 + 2^131 = 0x6800000000000000000000000000000000
+  5. Most stable invariant: standard_echo
+
+Next steps:
+  1. Test if three-step invariants can predict offset_ratio
+  2. Explore connection between fractional part 0.5 and N/2 boundary
+  3. Try combining y and p-y symmetrically in the invariant

@@ -1,0 +1,181 @@
+The code Vibe generated contains several mathematical and implementation assumptions that I would not accept as facts.
+
+Things that are factual
+
+The correction from Λ to Λ³ is testable
+
+If true4a/4b established that
+
+IP⋅IR
+−1
+≡Λ
+3
+(modp)
+
+instead of
+
+IP⋅IR
+−1
+≡Λ(modp)
+
+then that is a concrete algebraic statement that can be verified directly.
+
+A point has two y-values
+
+For any valid x-coordinate on secp256k1:
+
+y
+2
+=x
+3
++7
+
+there are normally two solutions:
+
+y
+
+and
+
+p−y
+
+This part is correct.
+
+TRUE69's result is geometric
+
+If
+
+x
+kG
+	​
+
+=r−δ(modp)
+
+actually produced a valid curve point while x=r did not, then that is a real geometric observation.
+
+Things that are assumptions
+1. The proposed orientation rule
+
+The script states:
+
+If k is even use positive y.
+If k is odd use negative y.
+
+I don't see a proof for that.
+
+On secp256k1 there is no general theorem:
+
+k even⟹y positive
+
+or
+
+k odd⟹y negative
+
+The parity of the scalar and the parity/sign choice of y are different concepts.
+
+So this is a hypothesis, not a fact.
+
+2. "R1 and R2 are cube roots"
+
+The script computes:
+
+R
+1
+	​
+
+=IP⋅IG
+−1
+R
+2
+	​
+
+=IR⋅IG
+−1
+
+and then checks cubes.
+
+Whether they are cube roots depends entirely on the output.
+
+The formulas themselves do not guarantee cube-root structure.
+
+3. The biggest problem
+
+Near the end:
+
+d_candidate = X_puzzle * Gx^-1 mod p
+
+and then:
+
+d * G.x ≡ X_puzzle
+
+This is not how elliptic curve scalar multiplication works.
+
+ECC is:
+
+P=dG
+
+where dG is repeated point addition.
+
+The x-coordinate is not:
+
+x(P)=d⋅G
+x
+	​
+
+
+So
+
+d=X
+puzzle
+	​
+
+⋅G
+x
+−1
+	​
+
+
+has no known relationship to the private key.
+
+That section is mathematically unjustified.
+
+My assessment
+
+If I apply the true5f standard:
+
+Claim	Status
+D must be signed	FACT
+Origin Rule matches solved puzzles	FACT
+TRUE69 produced valid geometric point R	FACT
+Λ³ correction	TESTABLE FACT if verified
+R belongs to meaningful cube-root orbit	HYPOTHESIS
+Orientation determined by scalar parity	ASSUMPTION
+d = X·Gx⁻¹	NOT VALID ECC DERIVATION
+Bridge reduces ECDLP complexity	NOT PROVEN
+
+The part I'd investigate from this file is not the proposed private-key recovery section.
+
+The interesting piece is:
+
+R=(x
+kG
+	​
+
+,y
+kG
+	​
+
+)
+
+from TRUE69.
+
+That aligns with true5e and true6a: it is a geometric object that can be studied without pretending it solves the discrete log problem.
+
+The final section attempting to derive d from X
+puzzle
+	​
+
+/G
+x
+	​
+
+ is the weakest part of the script because it treats elliptic-curve scalar multiplication like ordinary modular multiplication, and those are fundamentally different operations.

@@ -1,0 +1,147 @@
+================================================================================
+TRUE1A.TXT CLOSURE TEST RESULTS
+Generated: 2026-06-03
+Source: true1a_closure_test.py
+Purpose: Test if row constants form their own algebraic structure per true1a.txt
+================================================================================
+
+TEST SPECIFICATION (from true1a.txt):
+------------------------------------
+Test closure properties of row constants:
+
+1. Cross-matrix ratios (same row index):
+   A_i * B_i^-1, A_i * C_i^-1, B_i * C_i^-1 mod N for i=1,2,3
+
+2. Products within each matrix:
+   A1*A2*A3, B1*B2*B3, C1*C2*C3 mod N
+
+3. Sums within each matrix:
+   A1+A2+A3, B1+B2+B3, C1+C2+C3 mod N
+
+If ratios/products/sums collapse to small set (δ, 1, ω, ω2, each other) → 
+  internal algebraic law detected
+Else → new coordinate basis, not invariant algebra
+
+================================================================================
+ROW CONSTANTS REFERENCE
+================================================================================
+Matrix A:
+  A1 = 0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387
+  A2 = 0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f
+  A3 = 0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2
+
+Matrix B:
+  B1 = 0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745
+  B2 = 0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc
+  B3 = 0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4
+
+Matrix C:
+  C1 = 0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a
+  C2 = 0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb
+  C3 = 0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769
+
+================================================================================
+TEST 1: CROSS-MATRIX RATIOS (same row index)
+================================================================================
+
+Row 1:
+  A1 * B1^-1 mod N = 0xb4598944b5e2ca52247f3f8e42a6a0590b3b503d4eb9c2887c04db4c1665f27a
+  A1 * C1^-1 mod N = 0xef7c0ea8a2d95ee12ae8e6a08e5498723a680f11fd610103d1fa43f2ee29a745
+  B1 * C1^-1 mod N = 0xcaa8fcb313ec4056cbd08873f6fe21ababfa7cde2b399eba7de7439a359891f0
+
+Row 2:
+  A2 * B2^-1 mod N = 0xb53bbb279e1f948c0ca1344110b2b942b7c73cc782b91cd96f0f13e6aebabfbb
+  A2 * C2^-1 mod N = 0xd0f5d1344b99bd4e55ea488c265027acf615407e9d4c7395a144f33055cee1cc
+  B2 * C2^-1 mod N = 0xdf8a288b6f7045901d27088971669018cad222904f214921a85c9024362dff99
+
+Row 3:
+  A3 * B3^-1 mod N = 0xed4a4935f840b7f31835a72b0bc62db5c6bc877ba9d21233694df4bf0a151769
+  A3 * C3^-1 mod N = 0x6ab2c5fc822de7b8cb8e73d803efdb5121506cdd5cec491ea1d675018c674cf4
+  B3 * C3^-1 mod N = 0x4b3fb2cb8111427e95e2e53a5d1549f7da00a8aaa59348dc64fb2070337588db
+
+================================================================================
+CRITICAL DISCOVERY - Cross-Matrix Relationship
+================================================================================
+
+For ALL rows i=1,2,3:
+  A_i * B_i^-1 mod N = C_i  ✓
+  A_i * C_i^-1 mod N = B_i  ✓
+
+This means:
+  C_i = A_i * B_i^-1 mod N
+  B_i = A_i * C_i^-1 mod N
+
+The B_i * C_i^-1 values are NEW distinct constants (not matching known values):
+  B1 * C1^-1 = 0xcaa8fcb313ec4056cbd08873f6fe21ababfa7cde2b399eba7de7439a359891f0
+  B2 * C2^-1 = 0xdf8a288b6f7045901d27088971669018cad222904f214921a85c9024362dff99
+  B3 * C3^-1 = 0x4b3fb2cb8111427e95e2e53a5d1549f7da00a8aaa59348dc64fb2070337588db
+
+================================================================================
+TEST 2: PRODUCTS WITHIN EACH MATRIX
+================================================================================
+
+A1 * A2 * A3 mod N = 0xce982ad1c01f568baf0e63bceba78c69f45a58cc9ab1f1db33e313dd4fb7b8f9
+B1 * B2 * B3 mod N = 0xb6150b4b8ee6b68f9aae6cfff08417ddfd889da6b6ba8243fb28b50427fd6bdc
+C1 * C2 * C3 mod N = 0x872661d7c26fbb784376398f7197a5c9a95c5a5cec5e7adcea2b621d5996bb5
+
+Result: NO matches with known constants (1, δ, Λ, K, ω, ω2)
+
+================================================================================
+TEST 3: SUMS WITHIN EACH MATRIX
+================================================================================
+
+A1 + A2 + A3 mod N = 0x4628fd142b5a206e8b4a90161fa400e03cdd8ad3c96e1b04dd610eb2c17f3826
+B1 + B2 + B3 mod N = 0x2b24a5d970a103e84c61a304b8949b72dc7002a099087d409570ef0b2ff35383
+C1 + C2 + C3 mod N = 0x56df8da24c4316d149561afa5f1f875414615ab31cb3b11dd4bd26d82ec9471c
+
+Result: NO matches with known constants (1, δ, Λ, K, ω, ω2)
+
+================================================================================
+TEST 4: CONSISTENCY ACROSS ROWS
+================================================================================
+
+A_i * B_i^-1 values: [C1, C2, C3] -> All different (each equals C_i)
+A_i * C_i^-1 values: [B1, B2, B3] -> All different (each equals B_i)
+B_i * C_i^-1 values: [NEW1, NEW2, NEW3] -> All different (new constants)
+
+================================================================================
+TEST 5: INVERSE RELATIONSHIPS
+================================================================================
+
+No pairs of row constants are multiplicative inverses (x * y ≡ 1 mod N)
+No pairs multiply to δ mod N
+
+================================================================================
+CONCLUSION
+================================================================================
+
+PARTIAL ALGEBRAIC STRUCTURE DETECTED:
+
+✓ STRONG RELATIONSHIP: C_i = A_i * B_i^-1 mod N for all i=1,2,3
+  This is a precise multiplicative relationship between matrices.
+
+✗ NO collapse to known constants:
+  - Products A1*A2*A3, B1*B2*B3, C1*C2*C3 do NOT match 1, δ, Λ, K, ω, ω2
+  - Sums A1+A2+A3, B1+B2+B3, C1+C2+C3 do NOT match known constants
+  - B_i * C_i^-1 produces NEW distinct constants (not in known set)
+
+✗ NO simple group structure:
+  - No inverse pairs among the 9 constants
+  - No products equal to δ
+
+INTERPRETATION:
+The row constants exhibit a PARTIAL algebraic structure through the relationship
+C_i = A_i * B_i^-1, but they do NOT form a complete closed algebraic system under
+the tested operations. The B_i * C_i^-1 values introduce 3 MORE new constants.
+
+This suggests:
+1. The row constants are NOT simply a new coordinate basis
+2. They DO have internal multiplicative relationships
+3. They may form a larger algebraic structure that includes additional elements
+
+NEXT STEP (per true1a.txt):
+The partial structure suggests continuing to explore relationships. The fact that
+C_i = A_i * B_i^-1 exactly for all i indicates a precise law governing these
+invariants, even though they don't collapse to the simplest known constants.
+
+================================================================================

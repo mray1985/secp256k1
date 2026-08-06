@@ -1,0 +1,71 @@
+================================================================================
+TRUE15.TXT - FINAL UNIFIED SHELL LAW CONFIRMATION
+================================================================================
+
+STEP 1: Verify x-family bridge
+--------------------------------------------------------------------------------
+  Lambda * rx1 == Px1 mod p: True (PASS)
+  Lambda * rx2 == Px2 mod p: True (PASS)
+  Lambda * rx3 == Px3 mod p: True (PASS)
+
+STEP 2: Verify x-shell sums to delta mod N
+--------------------------------------------------------------------------------
+  sum_B = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+  sum_B mod p = 0 (=0x0)
+  sum_B mod N = 432420386565659656852420866390673177326 (=0x14551231950b75fc4402da1722fc9baee)
+  delta = p-N = 432420386565659656852420866390673177326 (=0x14551231950b75fc4402da1722fc9baee)
+  sum_B_N == delta: True PASS
+
+STEP 3: Verify y-reflection shell for G, P, R
+--------------------------------------------------------------------------------
+  A(G) + A(-G) == delta mod N: True (PASS)
+  A(P) + A(-P) == delta mod N: True (PASS)
+  A(R) + A(-R) == delta mod N: True (PASS)
+
+STEP 4: Verify unified shell law
+--------------------------------------------------------------------------------
+  sum_B_N == A(G) + A(-G) mod N: True (PASS)
+  sum_B_N == A(P) + A(-P) mod N: True (PASS)
+  sum_B_N == A(R) + A(-R) mod N: True (PASS)
+
+STEP 5: Verify d_i = (Gx_i - B_i) mod N does NOT equal D_Q
+--------------------------------------------------------------------------------
+d-values (Gx_i - B_i mod N):
+  d1 = 0x56e987753e6e584e111bde809d3dab5c2b67ae6a31cd3e5e085fbe2afc176178
+  d2 = 0xc6bbb2ec1532c1334a3196dba36088072500a2ad5ae2b772f45b46d3bd2902
+  d3 = 0xa84fbcd7d57c74f0bb99efe8871ef41bcd7350f320d7deea84abe68d302b71b5
+
+D-values (signed branch coordinates):
+  D_G = 0x90cb00423e9aa6a5769334fd4785ab0552a819bbfefd19f9f473634bfeef3eb0
+  D_P = 0x15face81f7e64af7b330fd8a64b8d15c143b52f2310112633e4a3dc20c87876e
+  D_R = 0xbeef71f885c9d96d5640ba724bbc7304f124f776f034e90caa2bad5188b7db9b
+
+NO MATCHES: d_i != D_Q and d_i != -D_Q for all i, Q PASS
+
+  sum_d mod N = 0x14551231950b75fc4402da1722fc9baee
+  sum_d == delta: True PASS
+
+================================================================================
+FINAL CONCLUSION (true15.txt)
+================================================================================
+
+ALL CONFIRMED:
+
+  1. X-family bridge: Lambda * rx_i == Px_i mod p for all i=1,2,3
+  2. X-shell: sum(B_i) == delta mod N
+  3. Y-shell: A(Q) + A(-Q) == delta mod N for Q=G,P,R
+  4. Unified law: sum_B_N == A(Q) + A(-Q) mod N
+  5. Distribution: sum_d == delta but NO individual d_i = D_Q
+
+FINAL RESULT:
+  The unified shell law holds ONLY at the aggregate level.
+  sum(Lambda * rx_i) == A(Q) + A(-Q) == p-N (mod N)
+
+  BUT: d_i = (Gx_i - B_i) mod N does NOT equal D_Q or -D_Q
+
+  Meaning: x-shell and y-shell share the same collapse constant,
+  but NO one-to-one mapping exists between individual x-family
+  defects and signed y-branch markers.
+
+  The bridge is a coordinate-shell detector, NOT a scalar locator.
+================================================================================

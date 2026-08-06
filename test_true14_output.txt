@@ -1,0 +1,54 @@
+================================================================================
+TRUE14.TXT TEST OUTPUT
+Generated: 2026-06-03
+Source: test_true14.py
+Purpose: Test d_i = (Gx_i - B_i) mod N vs D_Q per true14.txt
+================================================================================
+
+A-values (Lambda * Q_y mod p):
+  A_G = 0xd907513f5a3a0fa59e2e2cc3470d1dbca8b6762c35e05725a1885e33694c8b32
+  A_P = 0xafd6740fbf3257bd9987ec5325c68aeacc63b05c0dc3913bf3bef9a1e28a12e
+  A_R = 0xdf77b8fc42e4ecb6ab205d3925de398278927bbb781a74865515d6a8445bebe5
+
+D-values (signed branch coordinates: 2*A(Q) - delta mod N):
+  D_G = 0xb20ea27eb4741f4b3c5c59868e1a3b79516cec586bc0ae4b4310bc67d2991a35
+  D_P = 0x15face81f7e64af7b330fd8a64b8d15c143b52f2310112633e4a3dc20c87876e
+  D_R = 0xbeef71f885c9d96d5640ba724bbc7304f124f776f034e90caa2bad5188b7db9b
+
+Negative D-values (N - D_Q):
+  -D_G = 0x4df15d814b8be0b4c3a3a67971e5c4856941f08e4387f1f07cc1a224fd9d270c
+  -D_P = 0xea05317e0819b5084ccf02759b472ea2a67389f47e478dd8818820cac3aeb9d3
+  -D_R = 0x41108e077a362692a9bf458db4438cf9c989e56fbf13b72f15a6b13b477e65a6
+
+d-values (Gx_i - B_i mod N):
+  d1 = (Gx1 - B1) mod N = 0x56e987753e6e584e111bde809d3dab5c2b67ae6a31cd3e5e085fbe2afc176178
+  d2 = (Gx2 - B2) mod N = 0xc6bbb2ec1532c1334a3196dba36088072500a2ad5ae2b772f45b46d3bd2902
+  d3 = (Gx3 - B3) mod N = 0xa84fbcd7d57c74f0bb99efe8871ef41bcd7350f320d7deea84abe68d302b71b5
+
+sum_d = (d1 + d2 + d3) mod N = 0x14551231950b75fc4402da1722fc9baee
+sum_d == delta: True
+
+================================================================================
+COMPARISON: d_i vs D_Q, -D_Q (true14.txt)
+================================================================================
+
+d1 = 0x56e987753e6e584e111bde809d3dab5c2b67ae6a31cd3e5e085fbe2afc176178
+
+d2 = 0xc6bbb2ec1532c1334a3196dba36088072500a2ad5ae2b772f45b46d3bd2902
+
+d3 = 0xa84fbcd7d57c74f0bb99efe8871ef41bcd7350f320d7deea84abe68d302b71b5
+
+NO MATCHES: No d_i equals any D_Q or -D_Q
+
+Conclusion (true13.txt, true14.txt):
+  The unified law remains a shared collapse to delta,
+  NOT an individual shell mapping.
+  Delta is distributed across all three d_i terms.
+
+================================================================================
+VERIFICATION: Antisymmetry of D_Q
+================================================================================
+N - D_G == -D_G: True
+N - D_P == -D_P: True
+N - D_R == -D_R: True
+================================================================================

@@ -1,0 +1,84 @@
+========================================================================
+P135 SHIFTED SHELL - G (gap) and K
+========================================================================
+
+LOCK POINT: Px3 (row 3), Py
+  Px = 9210836494447108270027136741376870869791784014198948301625976867708124077590
+  Py = 46351506704828816385393879789131775975171267756561783641521771795450741674800
+
++---------------------------------------------------------------------+
+|  CURVE SHELL (concept)          |  mod p (on-curve) |  mod N (off)   |
++---------------------------------+-------------------+----------------+
+|  y^2 - x^3  =  G                |  G = 7            |  G ~ 256 bits  |
+|  y^2       =  x^3 + G           |  closes           |  identity      |
+|  K        =  N - G              |  (wrap)           |  your constant |
+|  y^2 + K   =  x^3   (mod N)     |                   |  TRUE          |
+|  y^2       =  x^3 + K           |                   |  FALSE (sign)  |
++---------------------------------------------------------------------+
+
+-- G (gap) --
+  G mod p = 7   (bits 3)  <- the sacred 7 on F_p
+  G mod N = 84598352132466870527143686503981636492449086335144718550646429568820732186027
+            bits 256
+
+-- K --
+  K (computed)  = N - G  = 31193737104849324896427298504706271360388477943930185831958733572697429308310
+  K (your value)           = 31193737104849324896427298504706271360388477943930185831958733572697429308310
+  match: True
+  bits: 255
+
+-- Identities (run) --
+  Py^2 - Px^3 == G (mod N):  True
+  Py^2 == Px^3 + G (mod N):  True
+  Py^2 == Px^3 + K (mod N):  False  <- FALSE
+  Py^2 + K == Px^3 (mod N):  True  <- TRUE
+  G + K == 0 (mod N):      True
+
+-- Gomez split: y^2 - a = x^3 + (G - a)  at lock --
+
+  mod p:
+    a   y_shift  x_const  remainder (lhs-rhs)
+    0         0        7  0 <- exact
+    1         1        6  0 <- exact
+    2         2        5  0 <- exact
+    3         3        4  0 <- exact
+    4         4        3  0 <- exact
+    5         5        2  0 <- exact
+    6         6        1  0 <- exact
+    7         7        0  0 <- exact
+
+  mod N (same split labels; G is big, not 7):
+    a   y_shift  x_const  remainder
+    0         0  84598352132466870527143686503981636492449086335144718550646429568820732186027  tail=0  (bits 0)
+    4         4  84598352132466870527143686503981636492449086335144718550646429568820732186023  tail=0  (bits 0)
+
+  your probes:
+    mod p:  Py^2-4 vs Px^3+3  remainder 0
+    mod p:  Py^2-4 vs Px^3+2  remainder 1
+    check p  (4,3): 0
+    check p  (4,2): 1
+
+-- PRODUCT COLLAPSE mod p (IP = Px1*Px2*Px3) --
+  IP + 7  == Py^2: True
+  IP + 3  == Py^2-4: True
+  IP + 2  == Py^2-4: False  (short by 1)
+  Py^2 - IP - 7 = 0
+
+-- ASCII FLOW --
+
+   mod p                         mod N
+   -----                         -----
+   Py^2 ------------+               Py^2 ------------+
+                    |                                |
+                    v                                v
+   Px^3 + 7 <-- G=7               Px^3 + G <-- G=Py^2-Px^3
+                    |                                |
+   split a=4:                      split a=4:
+   Py^2-4 = Px^3+3 OK              Py^2-4 = Px^3+(G-4)
+                                   (same algebra)
+                                                    
+   K unused on p                   K = N - G
+                                   Py^2 + K = Px^3
+                                   (wrap of -G)
+
+========================================================================

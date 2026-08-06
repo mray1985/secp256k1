@@ -1,0 +1,61 @@
+system,n,ok,candidates,ec_hits,hit_d,hit_source,detail
+bridge_regression,135,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,135,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,135,True,243,0,,,
+pair_term_regress,135,True,0,0,,,formulas=0
+gap_tier_bridge,135,True,26,0,,,
+shift_combo_carry,135,True,9,0,,,
+carry_band_reps,135,True,3,0,,,
+tangent_ec_probes,135,True,6,0,,,
+bridge_direct_terms,135,True,28,0,,,
+shelf2_align_hunt,135,True,154,0,,,
+bridge_regression,140,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,140,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,140,True,267,0,,,
+pair_term_regress,140,True,0,0,,,formulas=0
+gap_tier_bridge,140,True,24,0,,,
+shift_combo_carry,140,True,9,0,,,
+carry_band_reps,140,True,3,0,,,
+tangent_ec_probes,140,True,6,0,,,
+bridge_direct_terms,140,True,34,0,,,
+shelf2_align_hunt,140,True,197,0,,,
+bridge_regression,145,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,145,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,145,True,265,0,,,
+pair_term_regress,145,True,0,0,,,formulas=0
+gap_tier_bridge,145,True,32,0,,,
+shift_combo_carry,145,True,9,0,,,
+carry_band_reps,145,True,3,0,,,
+tangent_ec_probes,145,True,6,0,,,
+bridge_direct_terms,145,True,36,0,,,
+shelf2_align_hunt,145,True,192,0,,,
+bridge_regression,150,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,150,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,150,True,265,0,,,
+pair_term_regress,150,True,0,0,,,formulas=0
+gap_tier_bridge,150,True,32,0,,,
+shift_combo_carry,150,True,9,0,,,
+carry_band_reps,150,True,3,0,,,
+tangent_ec_probes,150,True,6,0,,,
+bridge_direct_terms,150,True,34,0,,,
+shelf2_align_hunt,150,True,178,0,,,
+bridge_regression,155,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,155,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,155,True,243,0,,,
+pair_term_regress,155,True,0,0,,,formulas=0
+gap_tier_bridge,155,True,28,0,,,
+shift_combo_carry,155,True,9,0,,,
+carry_band_reps,155,True,3,0,,,
+tangent_ec_probes,155,True,6,0,,,
+bridge_direct_terms,155,True,32,0,,,
+shelf2_align_hunt,155,True,166,0,,,
+bridge_regression,160,True,0,0,,,LAW-P OK; LAW-N OK (heaven rebirth); FAMILY BRIDGE OK
+lambda_laws,160,True,0,0,,,LAW-P=True LAW-N=True
+phase17_candidates,160,True,267,0,,,
+pair_term_regress,160,True,0,0,,,formulas=0
+gap_tier_bridge,160,True,26,0,,,
+shift_combo_carry,160,True,9,0,,,
+carry_band_reps,160,True,3,0,,,
+tangent_ec_probes,160,True,6,0,,,
+bridge_direct_terms,160,True,28,0,,,
+shelf2_align_hunt,160,True,177,0,,,

@@ -1,0 +1,29 @@
+LOG
+
+
+A:	Attest = A test
+B:	Basket = Bass kit
+C:	Crispy = Chris pee
+D:	Dairy = Dare Ree
+E:	Errand = Air and
+F:	Female = Fee male
+G:	Girl = Grrr rule
+H:	Helium = He...Liam
+I:	Irritate = Ear a tate
+J:	Jello = Jail...oh
+K:	Kilo = Key low
+L:	Larynx = Lair Knicks!!!
+M:	Marinade = Mare in aide
+N:	Narrow = Nair row
+O:	Oracle = Or uhhh cool
+P:	Piano = Pee an' oh
+Q:	Quietly = Quiet Lee
+R	Radiance = Ray dee antz
+S:	Sacred = Say cred
+T:	Trampoline = Tramp, oh lean
+U:	Urine = You're in
+V:	Victor = Vick tore
+W:	Weasel = We Zul
+X:	X-ray = Ex-Ray
+Y:	Yellow = Yell OHHH
+Z:	Zulu = Zoo Loo

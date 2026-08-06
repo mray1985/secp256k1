@@ -1,0 +1,102 @@
+========================================================================================
+Phi layer invariants: X = x/p, Fine = y/p^2, C = X + Fine
+========================================================================================
+
+  Goal: find cheap layer rules / invariants under T_neg, T_lambda, F
+  without paying a full EC addition for F itself.
+
+----------------------------------------------------------------------------------------
+1) Negation on layers
+----------------------------------------------------------------------------------------
+  Exact: x' = x, y' = p-y
+  => X' = X  (coarse invariant)
+  => Fine' = (p-y)/p^2 = 1/p - Fine
+  => C' = C + 1/p - 2*Fine
+
+  walk 1..64: X'==X:                    64/64
+  walk 1..64: Fine'==1/p - Fine:        64/64
+  walk 1..64: C'==C + 1/p - 2*Fine:     64/64
+  Cost: split Fine from C (decode y) + one sub; NO field inv, NO EC add.
+  Requires Fine (hence y). Digits-only without split: no (float hides Fine).
+
+----------------------------------------------------------------------------------------
+2) GLV T_lambda on layers
+----------------------------------------------------------------------------------------
+  psi: (x,y)->(beta*x mod p, y)
+  => Fine' = Fine  (fine layer INVARIANT)
+  => X' = (beta*x mod p)/p   NOT equal to (beta*X) mod 1 in general
+     (wrap when beta*x >= p)
+
+  walk 1..64: Fine'==Fine:                         64/64
+  walk 1..64: X'==(beta*x mod p)/p exact:          64/64
+  walk 1..64: X'=={beta*x/p} (frac of beta*X*p?): 64/64
+  walk 1..64: times beta*x wrapped (>=1*p):        64/64
+  So Fine is GLV-invariant. Coarse needs one mul-mod-p (decode x).
+  Still cheaper than scalar*LAMBDA; not a C-digit multiply.
+
+  walk 1..64: Fine invariant under psi^2:          64/64
+
+----------------------------------------------------------------------------------------
+3) Addition F on layers — any cheap invariant?
+----------------------------------------------------------------------------------------
+  Test candidates that do NOT run full EC add (compare to true F):
+    a) Fine_out == Fine_n + Fine_m          (fine sum)
+    b) Fine_out == Fine_n + Fine_m - k/p^2  (carry probe, k small)
+    c) X_out == (X_n + X_m) mod 1           (coarse mod-1)
+    d) Fine_out == Fine_n  or  Fine_m       (preserve one fine)
+    e) X_out == X_n  (coarse of one input)
+
+  pairs tested (a,b in 1..20, a<b): 190
+    exact fine_sum: 0/190
+    exact fine_sum_pm1: 0/190
+    exact fine_sum_pm2: 0/190
+    exact X_mod1: 0/190
+    exact fine_eq_n: 0/190
+    exact fine_eq_m: 0/190
+    exact X_eq_n: 0/190
+    exact X_eq_m: 0/190
+    exact fine_sum_abs_err_lt_2: 0/190
+  |yo - (ya+yb)| median=64663941901614037948264158948738092496371972192347267997448996147264417688711  (field ints; ~p/2 if random)
+  |yo - (ya+yb)| min=488583778901927069472032605059694807659359781533289244295587413920967012722 max=187456721465903295245345250861407188735926383786369426294811608269990797259115
+
+  If F had a layer-additive structure, fine_sum or X_mod1 would hit >>0.
+  Expect ~0 — addition mixes layers through slope/inv.
+
+----------------------------------------------------------------------------------------
+4) Sixfold orbit — which layer is shared?
+----------------------------------------------------------------------------------------
+  n=1: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+  n=2: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+  n=5: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+  n=17: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+  n=31: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+  n=63: Fine shared on +orbit=True -orbit=True  Fine(-)=1/p-Fine(+)=True  X shared on ±pairs=True
+
+----------------------------------------------------------------------------------------
+5) Layer reading of equivariance (sanity)
+----------------------------------------------------------------------------------------
+  Under T_lambda: Fine(F(Ta,Tb)) == Fine(F(a,b))  because psi preserves y
+  and psi is a homomorphism: psi(P+Q)=psi(P)+psi(Q).
+
+  pairs: Fine(F(Ta,Tb))==Fine(F(a,b)): 45/45
+  pairs: F(Ta,Tb)==T(F(a,b)) full:     45/45
+
+----------------------------------------------------------------------------------------
+6) Solved-key holdout (puzzles>100, skip 135)
+----------------------------------------------------------------------------------------
+  cal n<=100: 76  holdout: 6
+  holdout T_neg: X'==X 6/6  Fine'=1/p-Fine 6/6  C formula 6/6
+  holdout T_lambda: Fine'==Fine 6/6
+  holdout pairs F: Fine_sum exact 0/6  X_mod1 exact 0/6
+
+========================================================================================
+VERDICT
+========================================================================================
+  YES — visible layer structure, but only for ORBIT symmetries:
+    • Negation: X invariant; Fine -> 1/p - Fine; C -> C + 1/p - 2*Fine
+    • GLV:      Fine invariant; X -> (beta*x mod p)/p
+  NO  — addition F has no cheap layer rule (fine sum / X mod-1 ~ 0 exact).
+  Split makes orbit moves transparent; F still needs full EC (slope + inv).
+  Decode cost to read layers: 2 mul by p (same as before).
+  Cheaper than EC add: yes for T_neg / T_lambda; no substitute for F.
+

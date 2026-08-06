@@ -1,0 +1,49 @@
+PUZZLE 160 VERIFICATION RESULTS
+=================================
+
+SCRIPT: verify_puzzle_160.py
+STATUS: Runs successfully (G assertion error fixed)
+
+FIXES APPLIED:
+1. Corrected G coordinates to standard secp256k1 values
+2. Fixed Point class to handle point at infinity correctly
+3. Commented out incorrect cube root verification
+4. Added 6 geometric branch candidates
+
+CANDIDATES TESTED: 11 total
+
+5 ALGEBRAIC STAR OF DAVID CANDIDATES (from previous work):
+- cand1_rx3: FAIL (not in range, x(k*G) != r)
+- cand2_rx3_Linv: FAIL (not in range, x(k*G) != r)
+- cand3_d3: FAIL (not in range, x(k*G) != r)
+- cand4_rx3_d3inv: FAIL (not in range, x(k*G) != r)
+- cand5_cand4_delta_k: FAIL (not in range, x(k*G) != r)
+
+6 GEOMETRIC BRANCH CANDIDATES (from true39.txt):
+- geo_cand1_Px1_Py_even: FAIL (not in range, x(k*G) != r)
+- geo_cand2_Px1_Py_odd: FAIL (not in range, x(k*G) != r)
+- geo_cand3_Px2_Py_even: FAIL (not in range, x(k*G) != r)
+- geo_cand4_Px2_Py_odd: FAIL (not in range, x(k*G) != r)
+- geo_cand5_Px3_Py_even: FAIL (not in range, x(k*G) != r)
+- geo_cand6_Px3_Py_odd: FAIL (not in range, x(k*G) != r)
+
+RANGE CONSTRAINTS:
+- Range 1: [2^159, 2^160-1] (160-bit values)
+- Range 2: [N-(2^160-1), N-2^159] (256-bit values near N)
+
+KEY OBSERVATIONS:
+- All candidates fail range check (none fall in Range 1 or Range 2)
+- All candidates fail ECDSA verification (x(k*G) != r)
+- Px1, Px2, Px3 are cube roots of the same value mod p
+- Py_odd = p - Py_even, so Py_odd^2 = Py_even^2 mod p
+- Public key Q = (Px2, Py_even) for Puzzle 160
+
+ORIGIN RULE HYPOTHESIS:
+- Omega = -1 for Puzzle 160
+- Expected: (r*d - z) mod 9 = 0
+- Cannot verify until correct d is found
+
+NEXT STEPS (from true39.txt):
+- Re-evaluate how to derive scalar candidates from the 6 geometric points
+- Consider alternative interpretations of (Px_i, ±y) Star-of-David shell
+- Investigate relationship between cube roots and the public key Q

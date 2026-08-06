@@ -1,0 +1,11 @@
+row-2 offset == combo hits: {}
+P135 testing 9 offsets (+ direction)
+  s1 off_bits=134 d=4cf10ab54bd8e70aa605... EC=False
+  s2 off_bits=132 d=769d96a1d60ce664f6f8... EC=False
+  s1+s2 off_bits=134 d=59e2156a97b1ce154c0b... EC=False
+  s1-s2 off_bits=133 d=40000000000000000000... EC=False
+  s2-s1 off_bits=134 d=535917d91467feb4a1e6... EC=False
+  s1+s2+s3 off_bits=134 d=59e2156a97b1ce154c0b... EC=False
+  gap_row off_bits=134 d=63897660f82bbc8ef56c... EC=False
+  gap_lo off_bits=133 d=46680d23c88f17a9fbe0... EC=False
+no hit

@@ -1,0 +1,35 @@
+========================================================================================
+Phi(nG) walk n=1..1100   Phi=(x*p+y)/p^2
+========================================================================================
+  Method: start at G, repeated +G (actual EC). C_n changes with the point.
+
+----------------------------------------------------------------------------------------
+User Phi spot-check (rounded 156 digits)
+----------------------------------------------------------------------------------------
+  101G  round_match=True  trunc_last_diff_only=False
+  224G  round_match=True  trunc_last_diff_only=False
+  514G  round_match=True  trunc_last_diff_only=True
+  1100G  round_match=True  trunc_last_diff_only=True
+
+----------------------------------------------------------------------------------------
+C_n -> C_{n+1} over 1099 steps
+----------------------------------------------------------------------------------------
+  unique Delta_C: 1099 / 1099
+  signs: {'+': 544, '-': 555}
+  constant? False
+  all == 1/p? False
+  |Delta_C| min=8.536975e-05 max=9.778241e-01 mean=3.405718e-01
+
+  fixed-C counter hits Phi(nG)==(n+Phi(G))/p : 0/1100
+
+----------------------------------------------------------------------------------------
+Doubling diagnostic: Phi(2n) vs Phi(n) leading digit agree (n=1..550)
+----------------------------------------------------------------------------------------
+  leading agree min=0 max=3 mean=0.15
+
+========================================================================================
+VERDICT
+========================================================================================
+  User 101G..1100G Phi list matches EC (rounding on last digit).
+  No reusable constant Delta_C on the +G walk.
+  Predictor target remains: map C_n -> C_{n+1} without recomputing (n+1)G.

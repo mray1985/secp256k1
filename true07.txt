@@ -1,0 +1,101 @@
+Now that is useful.
+
+You’ve got two levels now:
+
+A(Q)+A(−Q)≡p−N(modN)
+
+universal shell.
+
+And:
+
+D
+Q
+	​
+
+=A(Q)−A(−Q)(modN)
+
+point-specific position inside that shell.
+
+Since:
+
+A(Q)+A(−Q)=δ
+
+then:
+
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+
+So D
+Q
+	​
+
+ is not a new independent object from A(Q), but it is a cleaner normalized branch marker.
+
+The important result:
+
+D
+sR
+	​
+
+=D
+zG+rP
+	​
+
+
+passes because the points are equal.
+
+But:
+
+D
+zG
+	​
+
++D
+rP
+	​
+
+
+=D
+zG+rP
+	​
+
+
+so the normalized branch marker is still nonlinear under addition.
+
+Next step: test whether D
+Q
+	​
+
+ matches point negation exactly:
+
+D
+−Q
+	​
+
+=
+?
+−D
+Q
+	​
+
+(modN)
+
+Given the definition, I expect:
+
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+If that passes for every point, then D
+Q
+	​
+
+ is a legitimate signed branch coordinate.

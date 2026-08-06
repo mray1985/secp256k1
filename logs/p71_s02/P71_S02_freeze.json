@@ -1,0 +1,56 @@
+{
+  "status": "UPDATED_MEASURED_CPU",
+  "freeze": "Scanner ready; search not economically ready. No P71 experiment unless explicit S subset [2^70, 2^71) or new scanner calibration (GPU).",
+  "operational_conclusion": "Scanner ready; search not economically ready.",
+  "launch": false,
+  "gpu_lane": "OPENCL_IGPU_EVALUATED_CUDA_NA",
+  "R_opencl_igpu_sustained_keys_per_s": 4590000.0,
+  "R_opencl_device": "Intel HD Graphics 530 / clBitCrack 0.31",
+  "note_opencl_slower_than_cpu": true,
+  "admission_tuple": ["F", "S", "|S|", "justification"],
+  "band_inclusive": {
+    "lo_hex": "400000000000000000",
+    "hi_hex": "7fffffffffffffffff",
+    "lo": 1180591620717411303424,
+    "hi": 2361183241434822606847,
+    "width": "2^70",
+    "width_bits": 70
+  },
+  "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+  "hash160": "F6F5431D25BBF7B12E8ADD9AF5E3475C44A0A5B8",
+  "kangaroo": false,
+  "R_sustained_keys_per_s": 13300000.0,
+  "R_peak_keys_per_s": 14154683.0,
+  "R_source": "P71-S03 KeyHunt CPU 4 threads 600s sustained",
+  "full_band_years": {
+    "T_mean": 1.41e6,
+    "T_worst": 2.81e6
+  },
+  "b_cut_mean": {
+    "1_day": 28.94,
+    "30_days": 24.03,
+    "1_year": 20.42,
+    "10_years": 17.1
+  },
+  "b_cut_worst": {
+    "1_day": 29.94,
+    "30_days": 25.03,
+    "1_year": 21.42,
+    "10_years": 18.1
+  },
+  "one_year_mean_bits_required": 20.42,
+  "audited_verified_bits": 0,
+  "formula": "b_cut = 70 - log2(2*R*T)",
+  "does_not_transfer_from_p135": [
+    "pubkey",
+    "Q-DLP",
+    "RSZ",
+    "RFC6979",
+    "echoes",
+    "rotations"
+  ],
+  "next_actions_allowed": [
+    "Faster discrete GPU/CUDA with measured R above CPU baseline",
+    "Lead supplies explicit S with |S| reduction ~2^20.4 for one-year CPU mean"
+  ]
+}

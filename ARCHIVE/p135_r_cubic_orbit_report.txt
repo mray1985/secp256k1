@@ -1,0 +1,65 @@
+P135 R CUBIC ORBIT — field vs N-side
+
+r_sig = P135_R_TRUE_X  (r < N: True, r < p: True)
+r tail ...368
+
+Row-2 tower target: gap_h2=14 gap_h3=148 lhs...768
+Row-3 (wrong bridge slot rx[2]): gap_h2=52 gap_h3=529 lhs...255
+
+=== baseline ===
+  true r_sig     rx...368  {'gap': 14891216110272241377756063318957640422262002593900921218990858127611733871194, 'h2': '14', 'h3': '148', 'lhs_tail': '768', 'row2': True, 'row3': False}
+  wrong rx[2]    rx...739  {'gap': 5293597410154139910193700026630175873435457359764659897865122845449990427707, 'h2': '52', 'h3': '529', 'lhs_tail': '255', 'row2': False, 'row3': True}
+  DEFAULT_RX[1]  rx...368  (same as r_sig: True)
+
+=== cube preimages u: u^3 = r (mod N) ===
+  r is cubic residue mod N: True
+  no cube root found via standard formula (investigate separately)
+
+=== field orbit R_eff = beta^i * Rx_j (mod p) ===
+  beta tail ...254  beta^3==1 mod p: True
+  i=0 j=0  R_eff...219  gap h2=29 h3=292
+  i=1 j=0  R_eff...368  gap h2=14 h3=148 *** ROW-2
+  i=2 j=0  R_eff...739  gap h2=52 h3=529 row-3
+  i=0 j=1  R_eff...368  gap h2=14 h3=148 *** ROW-2
+  i=1 j=1  R_eff...739  gap h2=52 h3=529 row-3
+  i=2 j=1  R_eff...219  gap h2=29 h3=292
+  i=0 j=2  R_eff...739  gap h2=52 h3=529 row-3
+  i=1 j=2  R_eff...219  gap h2=29 h3=292
+  i=2 j=2  R_eff...368  gap h2=14 h3=148 *** ROW-2
+  row-2 hits: [(1, 0, '368'), (0, 1, '368'), (2, 2, '368')]
+
+=== nine field bridge ratios Lambda = Px[2] / R_eff (mod p) ===
+  i=0 j=0  R...219  Lambda bits=256  gap row2=False
+  i=1 j=0  R...368  Lambda bits=255  gap row2=True
+  i=2 j=0  R...739  Lambda bits=256  gap row2=False
+  i=0 j=1  R...368  Lambda bits=255  gap row2=True
+  i=1 j=1  R...739  Lambda bits=256  gap row2=False
+  i=2 j=1  R...219  Lambda bits=256  gap row2=False
+  i=0 j=2  R...739  Lambda bits=256  gap row2=False
+  i=1 j=2  R...219  Lambda bits=256  gap row2=False
+  i=2 j=2  R...368  Lambda bits=255  gap row2=True
+
+=== N-side signature orbit r_j = w^j * r_sig (mod N) ===
+  (NOT u^3=r; this rotates r by cube roots of unity)
+  j=0  r_j...368  gap h2=14 h3=148  row2=True
+  j=1  r_j...393  gap h2=14 h3=148  row2=True
+  j=2  r_j...576  gap h2=14 h3=148  row2=True
+
+=== nine N bridge ratios lambda = Px[k] / r_j (mod N) ===
+  j=0 k=0  r...368  lambda bits=255  row2=True
+  j=0 k=1  r...368  lambda bits=256  row2=True
+  j=0 k=2  r...368  lambda bits=254  row2=True
+  j=1 k=0  r...393  lambda bits=256  row2=True
+  j=1 k=1  r...393  lambda bits=254  row2=True
+  j=1 k=2  r...393  lambda bits=256  row2=True
+  j=2 k=0  r...576  lambda bits=256  row2=True
+  j=2 k=1  r...576  lambda bits=252  row2=True
+  j=2 k=2  r...576  lambda bits=254  row2=True
+
+=== conclusion ===
+  Wrong cubic rep: bridge rx[2] (...739) -> row-3 tower 52/529.
+  Correct rep: true RSZ r_sig (...368) = DEFAULT_RX[1] -> row-2 tower 14/148.
+  Field: beta^i * Rx_j hits ...368 (row-2) at (i,j) in {(1,0),(0,1),(2,2)}.
+  N-orbit w^j*r keeps gap head 14/148 for all j (tower class stable under N unity).
+  Cube preimage u (u^3=r) is a different map from unity-rotation; needs separate root.
+

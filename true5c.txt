@@ -1,0 +1,86 @@
+Yep — TRUE67 gives the real pivot.
+
+The key failure is this:
+
+rmod9=0,zmod9=0
+
+So the shortcut:
+
+(rd−z)mod9
+
+collapses to 0 if you reduce too early.
+
+But the Origin Rule was always:
+
+((rd−z)modN)mod9
+
+That means the wrap through N is the actual source of the residue signal.
+
+So TRUE67 actually proves something important:
+
+The Ω signal is not local mod 9 arithmetic.
+It comes from N-domain wraparound.
+
+That is a big clarification.
+
+Current freeze:
+
+D = structural bridge invariant
+Ω = N-wrap residue classifier
+D/Ω are not phase-offset scalars
+
+Next step should be TRUE68: N-wrap quotient analysis.
+
+Compute:
+
+q=⌊
+N
+rd−z
+	​
+
+⌋
+
+Because:
+
+(rd−z)modN=(rd−z)−qN
+
+and since:
+
+r≡0(mod9),z≡0(mod9)
+
+the residue comes entirely from:
+
+−qNmod9.
+
+Since:
+
+Nmod9=7
+
+then:
+
+((rd−z)modN)mod9≡−7qmod9.
+
+That means Ω is really tracking:
+
+qmod9
+
+For Puzzle 135, Ω=+1 needs:
+
+((rd−z)modN)mod9∈{1,4,7}
+
+so:
+
+−7qmod9∈{1,4,7}
+
+Because 7
+−1
+≡4(mod9), this becomes:
+
+qmod9∈{2,5,8}.
+
+So TRUE68 should test:
+
+For Ω=+1:
+q mod 9 ∈ {2,5,8}
+
+That is the next real object.

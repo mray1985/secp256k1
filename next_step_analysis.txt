@@ -1,0 +1,67 @@
+NEXT STEP ANALYSIS: inv_m_y vs offset_ratio correlation
+====================================================================================================
+
+Step 1: Compute inv_m_y and offset_ratio for all calibration puzzles
+----------------------------------------------------------------------------------------------------
+Height  70: lane=C, inv_m_y=  1.073535, offset_ratio=  0.151873
+Height  75: lane=A, inv_m_y=  1.268790, offset_ratio= -1.454649
+Height  80: lane=C, inv_m_y=  1.758226, offset_ratio=  1.631436
+Height  85: lane=A, inv_m_y=  1.643979, offset_ratio= -2.277250
+Height  90: lane=A, inv_m_y=  1.270283, offset_ratio=  0.218795
+Height 100: lane=A, inv_m_y=  1.560618, offset_ratio= -0.041507
+Height 110: lane=C, inv_m_y=  4.348785, offset_ratio=  0.438321
+Height 120: lane=A, inv_m_y=  1.257679, offset_ratio=  0.066195
+Height 125: lane=C, inv_m_y=  1.372567, offset_ratio=  1.162563
+Height 130: lane=C, inv_m_y=  1.374662, offset_ratio= -0.024024
+
+Step 2: Lane C puzzles - inv_m_y vs offset_ratio
+----------------------------------------------------------------------------------------------------
+Lane C puzzles: 5
+
+Height |    inv_m_y | offset_ratio |  lane
+--------------------------------------------------
+    70 |   1.073535 |     0.151873 |     C
+    80 |   1.758226 |     1.631436 |     C
+   110 |   4.348785 |     0.438321 |     C
+   125 |   1.372567 |     1.162563 |     C
+   130 |   1.374662 |    -0.024024 |     C
+
+Step 3: Linear regression for Lane C
+----------------------------------------------------------------------------------------------------
+Regression: offset_ratio = -0.023761 * inv_m_y + 0.719213
+
+R^2 = 0.002068
+
+Puzzle 135 prediction:
+  inv_m_y = 3.295341
+  predicted offset_ratio = 0.640911
+  predicted correction = 1744726737971064569407345631937981054976
+  candidate = LaneC + 1744726737971064569407345631937981054976
+  candidate (hex) = 0x6d2096259e110700000000000000000000
+
+  Testing candidate...
+  No match
+  Q.x = 0x64f378fa42478b0755eb1d4fc43512172c441c...
+
+Step 4: Test LaneC ± k*D8 for k in [0.0, 0.1, 0.2, ..., 1.0]
+----------------------------------------------------------------------------------------------------
+Lane C = 0x6800000000000000000000000000000000
+D8 = 0x800000000000000000000000000000000
+
+
+Step 5: Finer granularity test (k in [0.1, 0.7] with step 0.05)
+----------------------------------------------------------------------------------------------------
+  No matches found in finer granularity test
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+Analysis complete.
+Puzzle 135 inv_m_y = 3.295341 (confirmed Lane C basin)
+
+If no matches found, the next approach is:
+1. Use inv_m_y to interpolate offset_ratio from Lane C calibration
+2. Try quadratic or other nonlinear relationships
+3. Use the origin rule (mod 9) to predict bridge direction
+4. Combine echo invariants with mod9 fingerprint

@@ -1,0 +1,147 @@
+After reading the TRUE64–5D summary, I think there are three things that should be considered "frozen" and one thing that should be considered "still open."
+
+Frozen
+
+1. D is a structural invariant, not a search offset
+
+The correction from TRUE64 is important:
+
+D=δ
+−1
+(modN)−δ
+−1
+(modp)
+
+must remain signed before the mod-9 inspection.
+
+That gives:
+
+Dmod9=4
+∣D∣
+N
+−1
+	​
+
+mod9=7
+∣D∣
+p
+−1
+	​
+
+mod9=2
+
+and matches the bridge theorem exactly.
+
+2. The Origin Rule is behaving like a classifier
+
+For the solved puzzles:
+
+Ω	residue class
++1	{1,4,7}
+0	{0}
+-1	{2,3,5,6,8}
+
+and your 6/6 solved-puzzle table still holds.
+
+That means Ω is giving information about which sector a solution belongs to, not where the solution is.
+
+3. TRUE69 is the strongest Puzzle-135 result
+
+This is the one result I would keep returning to:
+
+x
+kG
+	​
+
+=r−δ(modp)
+
+That moved the investigation from residue arithmetic back onto an actual curve point.
+
+Most of TRUE59–TRUE68 were manipulating candidate arithmetic.
+
+TRUE69 produced an actual geometric object.
+
+Open
+
+The summary itself admits:
+
+The bridge is structural, not algorithmic.
+
+and
+
+Final key recovery requires ECDLP solving.
+
+So there is still no demonstrated derivation that reduces the discrete-log complexity of Puzzle 135.
+
+The filters reduce classes.
+
+They do not yet reduce the interval from:
+
+[2
+134
+,2
+135
+)
+
+to something computationally tractable.
+
+Where I'd push next
+
+Not another D-scaling test.
+
+Not another residue test.
+
+Not another mod-9 partition.
+
+Instead:
+
+TRUE71 candidate
+
+Study the reconstructed point from TRUE69.
+
+You now have:
+
+R=(x
+kG
+	​
+
+,y
+kG
+	​
+
+)
+
+with
+
+x
+kG
+	​
+
+=r−δ.
+
+Questions:
+
+Which cube-root orbit does R belong to?
+Does Ω correspond to orbit membership of R?
+Does applying ω
+p
+	​
+
+ to x
+kG
+	​
+
+ cycle through the same sectors seen in the solved puzzles?
+Does the reconstructed R-point inherit the same triadic closure structure as the public-key side?
+
+If that works, you would finally connect:
+
+ECDSA nonce geometry
+        ↕
+cube-root orbit geometry
+        ↕
+Origin Rule
+
+which is the one connection that has not yet been fully tested in the material you've uploaded.
+
+The summary itself points in that direction because every offset branch has now failed, while the geometric branch keeps surviving.

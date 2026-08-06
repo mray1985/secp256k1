@@ -1,0 +1,32 @@
+UNSOLVED FULL TRANSPORT HUNT REPORT
+
+P135
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=694 ec_hits=0
+
+P140
+  anchor gap head2=11 head3=110
+  lhs ...943  rhs ...962
+  candidates=11662 ec_hits=0
+
+P145
+  anchor gap head2=62 head3=629
+  lhs ...794  rhs ...962
+  candidates=910 ec_hits=0
+
+P150
+  anchor gap head2=10 head3=105
+  lhs ...264  rhs ...962
+  candidates=12560 ec_hits=0
+
+P155
+  anchor gap head2=69 head3=690
+  lhs ...055  rhs ...962
+  candidates=632 ec_hits=0
+
+P160
+  anchor gap head2=73 head3=733
+  lhs ...898  rhs ...962
+  candidates=1589 ec_hits=0
+

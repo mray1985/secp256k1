@@ -1,0 +1,61 @@
+WHAT LINES UP — hinge experiment synthesis
+
+=== 1. EXACT IDENTITIES (algebra, always true) ===
+  {H} = 0.345702   {H/2} = 0.172851
+  {H} - {log2 sqrt y} = {Delta_y}  (P135: 0.345702 - 0.339576 = 0.006126)
+  band_frac(d) = {2 * log2 sqrt d}  (doubling identity)
+
+=== 2. TIGHTEST |E_x - E_d| on true branch (per-slot d) ===
+  P 27 shared_d     |Ex-Ed|=0.004510 Ex=+0.1918 Ed=+0.1963
+  P 27 d_cbrt_slot  |Ex-Ed|=0.004510 Ex=+0.1918 Ed=+0.1963
+  P 27 d_true_oracle |Ex-Ed|=0.004510 Ex=+0.1918 Ed=+0.1963
+  P 45 lambda_band  |Ex-Ed|=0.006456 Ex=+0.2230 Ed=+0.2295
+  P 48 lambda_row   |Ex-Ed|=0.009169 Ex=+0.4208 Ed=+0.4300
+  P 66 lambda_row   |Ex-Ed|=0.011454 Ex=-0.0220 Ed=-0.0335
+  P 85 lambda_row   |Ex-Ed|=0.012182 Ex=+0.5193 Ed=+0.5315
+  P 35 lambda_row   |Ex-Ed|=0.014270 Ex=+0.8003 Ed=+0.8146
+  P  4 lambda_band  |Ex-Ed|=0.015073 Ex=+0.6046 Ed=+0.6196
+  P 32 lambda_band  |Ex-Ed|=0.016442 Ex=+0.4714 Ed=+0.4879
+
+=== 3. TIGHTEST |E_x| / |E_y| single pubkey ===
+  P 66 Ex=-0.022005 Ey=+0.127303
+  P 26 Ex=-0.027290 Ey=+0.100571
+  P 69 Ex=-0.052020 Ey=+0.514137
+  P 25 Ex=+0.056734 Ey=+0.415569
+  P 54 Ex=-0.058866 Ey=-0.056949
+  P115 Ey=-0.002877 Ex=-0.079675
+  P 53 Ey=-0.014664 Ex=+0.812015
+  P  3 Ey=+0.024499 Ex=+0.094724
+  P 80 Ey=-0.035694 Ex=+0.316196
+  P 12 Ey=-0.038983 Ex=+0.386639
+
+=== 4. SAME x: -y often beats +y on |E_y| (true slot) ===
+  P 23 Ey_plus=+0.0100 Ey_minus=+0.2745
+  P 41 Ey_plus=+0.2895 Ey_minus=-0.0123
+  P 53 Ey_plus=-0.0147 Ey_minus=+0.2911
+  P 75 Ey_plus=-0.0172 Ey_minus=+0.2927
+  P115 Ey_plus=-0.0029 Ey_minus=+0.2833
+  -y tighter than +y: 35/82 puzzles
+
+=== 5. lambda_band |Ex-Ed| < 0.05 ===
+  P 45 -0.006456
+  P  4 -0.015073
+  P 32 -0.016442
+  P  3 -0.024906
+  P  8 +0.025118
+  P 21 -0.030942
+  P 61 -0.031274
+  P 75 +0.033343
+  count 8/81
+
+=== 6. WHAT DOES NOT LINE UP ===
+  mean |Ex|=0.441  mean |Ey|=0.328  (not clustered at 0)
+  oracle 3x2 min |Ey| mean ~0.246 still wide
+  log2(d) vs hinge gap: corr ~0 (independent)
+  upper-half bf~0.585 vs frac hinge 0.006: incompatible same d
+
+=== 7. P135 SUMMARY (outlier) ===
+  Ex = +0.001  (best in dataset)
+  Ey(+y) = +0.285  but Ey(-y) = -0.006 at SAME x  (hinge-perfect on -y leg)
+  true x slot required; wrong cube-root slot adds ~0.25 to Ex
+  d not tested (unsolved); x-side hinge alignment without d

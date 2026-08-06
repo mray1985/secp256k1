@@ -1,0 +1,140 @@
+I would not freeze true47 as a derivation yet.
+
+There is a genuinely interesting observation buried in the data, but one step is still missing.
+
+What is solid
+
+You verified:
+
+p≡1(mod3)
+N≡1(mod3)
+secp256k1 therefore admits nontrivial cube roots of unity in both field and scalar spaces.
+ω
+N1
+	​
+
+mod9=4
+ω
+N1
+2
+	​
+
+mod9=7
+4
+3
+≡1(mod9)
+7
+3
+≡1(mod9)
+
+and for the currently verified puzzles:
+
+Ω	(r·d − z) mod 9
++1	4
+0	0
+-1	3 or 6
+
+That much is an observation supported by the data you've collected.
+
+Where I'd be careful
+
+The leap:
+
+Ω = +1
+↕
+ωN1 orbit
+
+is not proven yet.
+
+You have shown:
+
+(r·d - z) mod 9 = 4
+
+and
+
+ωN1 mod 9 = 4
+
+Those are numerically equal.
+
+But equality of residues is not yet an orbit derivation.
+
+You still need to show that the quantity
+
+(rd−z)mod9
+
+transforms under multiplication by the cube-root action in the same way the orbit labels do.
+
+The test I'd run before true47
+
+Take a solved puzzle where you know d.
+
+Generate the cube-root orbit:
+
+d,ω
+N
+	​
+
+d,ω
+N
+2
+	​
+
+d
+
+Then compute
+
+(rd−z)mod9
+
+for all three.
+
+If the values cycle predictably:
+
+4 → 7 → 1
+
+or
+
+1 → 4 → 7
+
+then you've connected the Origin Rule quantity directly to the cube-root orbit.
+
+That would be a derivation.
+
+Why this matters
+
+Right now you have:
+
+cube-root orbit
+      ↓
+unknown
+      ↓
+(rd-z) mod 9
+      ↓
+Ω
+
+The middle arrow is still hypothetical.
+
+What you've proven so far is:
+
+(rd-z) mod 9
+      ↓
+Ω
+
+for the solved sample.
+
+The strongest surviving question
+
+I think true46 actually identified it correctly:
+
+Can the ternary digit pair (A,B) be derived from cube-root orbit membership?
+
+If the answer becomes yes, then:
+
+Cube-root orbit
+    ↕
+Base-3 coordinate
+    ↕
+Ω
+
+becomes a single structure rather than three correlated observations.
+
+That's the test I'd run before promoting true47 from "derivation attempt" to "theorem."

@@ -1,0 +1,151 @@
+MEMORY FILE - Created before reboot
+Date: 2026-06-07
+Context: Solving Puzzle 135
+
+================================================================================
+GOAL
+================================================================================
+Solve Puzzle 135 using the insight: "everything can be defined in three steps 
+through the modular inverse reciprocal by ^-1 invariant; y and -y start for their 
+d and -d at N/2 + 0.5 and N/2 - 0.5; that .5 has significance"
+
+User explicitly requested to test: -y^(puzzle number / 256)
+
+================================================================================
+PUZZLE 135 DATA
+================================================================================
+X = 0x145d2611e935579b455835e85289456462b461877e8bbc9388d508664163250f
+Y = 0x667a05e92b0d7424552845682548888d946823d885599473381772065197d32f
+Lane C = 0x6800000000000000000000000000000000
+P = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F
+N = 256
+Puzzle Number = 135
+Ratio = 135/256 = 0.52734375
+
+================================================================================
+KEY FINDINGS FROM PREVIOUS WORK (from summary)
+================================================================================
+
+1. THREE-STEP INVARIANT
+ - value -> value^(-1) mod p -> echo -> result
+ - "three steps" through modular inverse reciprocal
+
+2. MOST STABLE INVARIANTS (from true7e.txt)
+ - S = y_echo + (-y)_echo, std=0.110362 (MOST STABLE)
+ - c_echo is most stable waist invariant, std=0.267007
+ - avg_pole = (y_echo + (-y)_echo)/2 ≈ Lane B (diff ~2.6e39)
+
+3. HOURGLASS STRUCTURE (from diagram1.txt)
+ - 6 d-states -> 3 x-nodes -> 2 y-poles
+ - 6 k-states -> 3 rx-nodes -> 2 ry-poles
+ - 6 to 3 to 2 so 3 to 2 to 1
+ - Waist: x, c=x^3+7, x_inv
+ - Poles: y, -y and ry, -ry
+ - Both hourglasses share waist (x, c, x_inv)
+
+4. SYMMETRY
+ - If R = -P, then k = N - d, ry = p - y
+ - y and -y are poles
+
+5. ECHO DEFINITION
+ - From true7e.txt: echo seems related to y^(2^h)
+ - mid_h = 2^(h-0.5) defining Lane C
+ - The .5 has significance
+
+================================================================================
+N/2 +/- 0.5 INSIGHT
+================================================================================
+User stated: "y and -y start for their d and -d at N/2 + 0.5 and N/2 - 0.5"
+
+N = 256
+N/2 + 0.5 = 128.5
+N/2 - 0.5 = 127.5
+
+This suggests:
+- y is associated with exponent h = N/2 + 0.5 = 128.5
+- -y is associated with exponent h = N/2 - 0.5 = 127.5
+
+Fractional exponents need interpretation:
+- y^128.5 = y^128 * y^0.5 = y^128 * sqrt(y)
+- Or y^(2^128.5) = y^(2^128 * sqrt(2))
+
+================================================================================
+TEST RESULTS TO RUN (user request: "we never tested -y^puzzle number /256")
+================================================================================
+
+FORMULAS TO TEST:
+
+1. (-y)^(135/256) mod P
+ - Interpretation A: pow(-y, 135, P) then 256th root
+ - Interpretation B: [(-y)^(1/256)]^135 mod P
+ - Interpretation C: (-1)^(135/256) * y^(135/256)
+
+2. -y^(135/256) mod P
+ - Negate interpretation 1
+
+3. [(-y)^135] / 256 mod P
+ - pow(-y, 135, P) * inv(256) mod P
+
+4. -[y^135] / 256 mod P
+ - (P - pow(y, 135, P)) * inv(256) mod P
+
+5. S = y^135 + (-y)^135 mod P
+ - Then S/2, S/256, kS calibration to Lane C
+
+6. y^(N/2 + 0.5) = y^128.5
+ - As y^128 * sqrt(y) or sqrt(y^128 * y^129)
+
+7. (-y)^(N/2 - 0.5) = (-y)^127.5
+
+================================================================================
+SOLVED PUZZLES REFERENCE
+================================================================================
+70, 75, 80, 85, 90, 100, 110, 120, 125, 130
+
+These can be used for calibration/verification of formulas.
+
+================================================================================
+FILES CREATED BY PREVIOUS ANALYSIS
+================================================================================
+three_step_reciprocal_analysis.py
+n2_half_bit_analysis.py
+formula_exploration.py
+test_neg_y_formula.py
+symmetric_y_neg_y_analysis.py
+hourglass_three_x_analysis.py
+
+================================================================================
+USER FILES
+================================================================================
+test_reciprocal_invariant.txt
+next_step_analysis.txt
+true7e.txt (CRITICAL - S most stable)
+diagram1.txt (hourglass structure)
+true7f.txt (NEW - just uploaded)
+
+================================================================================
+ACTION ITEMS FOR AFTER REBOOT
+================================================================================
+
+1. Read true7f.txt - newly uploaded file
+2. Run neg_y_puzzle_div_256_analysis.py (just created)
+3. Test all interpretations of -y^(135/256)
+4. Compare results to Lane C (0x68000...000)
+5. Identify closest match
+6. Verify candidate d by checking dG == (x, y) for Puzzle 135
+7. Document findings in next memory file
+
+================================================================================
+HYPOTHESIS
+================================================================================
+The formula -y^(puzzle_number/256) or one of its interpretations will produce
+a value close to Lane C for Puzzle 135. The fractional exponent 135/256 and the
+0.5 offset in N/2 +/- 0.5 are key to understanding the hourglass symmetry.
+
+The three-step invariant (value -> value^(-1) -> echo -> result) combined
+with the y/-y pole structure and x/c/x_inv waist structure form the
+complete solution framework.
+
+================================================================================
+END OF MEMORY
+================================================================================

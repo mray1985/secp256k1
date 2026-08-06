@@ -1,0 +1,54 @@
+solved puzzles: 81
+
+frac(x) = x - floor(x)  (log2 fractional part / right of decimal)
+
+=== corr(frac_log2(d), hinge metric) ===
+  frac_log2(d) vs delta_y:     -0.0212
+  frac_log2(d) vs delta_x:     +0.2892
+  frac_log2(d) vs min_delta:   +0.0909
+  frac_log2(d) vs log2(sqrt y):+0.0212
+  frac_log2(d) vs log2(sqrt x):-0.2892
+
+=== corr(band_frac = log2(d)-(n-1), hinge metric) ===
+  band_frac vs delta_y:        -0.0212
+  band_frac vs delta_x:        +0.2892
+  band_frac vs min_delta:      +0.0909
+  band_frac vs frac(delta_y):  +0.0742
+  band_frac vs frac(log2 sqrt y): -0.0157
+
+=== fractional-to-fractional (the key test) ===
+  frac_log2(d) vs frac(delta_y):     +0.0742
+  frac_log2(d) vs frac(delta_x):     -0.1099
+  frac_log2(d) vs frac(log2 sqrt y): -0.0157
+  frac_log2(d) vs frac(log2 sqrt x): -0.1789
+  band_frac vs frac(delta_y):        +0.0742
+  band_frac vs frac(log2 sqrt y):    -0.0157
+  frac(delta_y) vs frac(log2 sqrt y): +0.2165
+  frac(delta_x) vs frac(log2 sqrt x): +0.1679
+
+=== H fractional anchor ===
+  H = 128.34570214660883
+  frac(H) = 0.345702
+  band_frac mean = 0.5578
+  frac(delta_y) mean = 0.5202
+  frac(log2 sqrt y) mean = 0.6156
+  mean |frac(dy) - frac(H)| = 0.2620
+
+=== anchor puzzles ===
+  P130: band_frac=0.697771 frac_log2d=0.697771 dy=0.6141 frac(dy)=0.614058 frac(lsy)=0.731645 closer=y
+  P135 (unsolved): dy=1.0061 frac(dy)=0.006126 frac(lsy)=0.339576  (no d yet)
+  P135 upper-half mid: band_frac=0.584963  |frac(dy)-band_frac|=0.578836  |frac(lsy)-band_frac|=0.245387
+
+=== closest frac(dy) to frac(H) (solved) ===
+  P 33 frac(dy)=0.330246 band_frac=0.732759 dy=3.3302
+  P 68 frac(dy)=0.365045 band_frac=0.575398 dy=2.3650
+  P 29 frac(dy)=0.375075 band_frac=0.577979 dy=0.3751
+  P 62 frac(dy)=0.378116 band_frac=0.761274 dy=1.3781
+  P 67 frac(dy)=0.391421 band_frac=0.846262 dy=0.3914
+  P 31 frac(dy)=0.297533 band_frac=0.969382 dy=1.2975
+  P 19 frac(dy)=0.286303 band_frac=0.447725 dy=1.2863
+  P 55 frac(dy)=0.406677 band_frac=0.737993 dy=2.4067
+
+=== scatter: band_frac vs frac(dy) extremes ===
+  lowest band_frac: P1(0.000,0.258), P4(0.000,0.082), P10(0.006,0.477), P69(0.010,0.486)
+  highest band_frac: P63(0.964,0.099), P31(0.969,0.298), P60(0.977,0.493), P25(0.984,0.584)

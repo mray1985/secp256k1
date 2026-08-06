@@ -1,0 +1,129 @@
+========================================================================================
+Directed three-position orbit gaps (q_x==q_d CLOSED)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+A) q_d vs y-half within sixfold orbit
+----------------------------------------------------------------------------------------
+  d=1..256: q_d=1 on {d,lam d,lam2 d} and q_d=2 on neg half with y->p-y: 256/256
+  (Confirmed: q_d labels the +/- y-half of the sixfold orbit.)
+
+  NOTE: directed gaps sum to mod OR 2*mod (not always mod).
+  User's delta0+delta1+delta2=p holds only on the q_gap=1 subclass.
+
+----------------------------------------------------------------------------------------
+B) x-ordering permutation vs q_x
+----------------------------------------------------------------------------------------
+  Contingency q_x vs q_gap_x (directed cycle wrap class):
+    (q_x=1, q_gap_x=1): 142
+    (q_x=1, q_gap_x=2): 121
+    (q_x=2, q_gap_x=1): 133
+    (q_x=2, q_gap_x=2): 116
+
+  q_x=1 n=263:
+    perm 012:   53  (20.2%)
+    perm 021:   48  (18.3%)
+    perm 102:   40  (15.2%)
+    perm 120:   43  (16.3%)
+    perm 201:   46  (17.5%)
+    perm 210:   33  (12.5%)
+    nonzero perms: 6/6
+  q_x=2 n=249:
+    perm 012:   42  (16.9%)
+    perm 021:   46  (18.5%)
+    perm 102:   32  (12.9%)
+    perm 120:   56  (22.5%)
+    perm 201:   35  (14.1%)
+    perm 210:   38  (15.3%)
+    nonzero perms: 6/6
+  perms appearing in q_x=1: ['012', '021', '102', '120', '201', '210']
+  perms appearing in q_x=2: ['012', '021', '102', '120', '201', '210']
+  intersection: ['012', '021', '102', '120', '201', '210']
+  exclusive to 1: []
+  exclusive to 2: []
+
+----------------------------------------------------------------------------------------
+C) Directed gaps: (dx) vs (dd) pattern agreement
+----------------------------------------------------------------------------------------
+  [walk 1..512] n=512
+    same argmax gap idx:  181/512 (35.4%)  chance~33.3%
+    same argmin gap idx:  180/512 (35.2%)  chance~33.3%
+    same rank pattern:    92/512 (18.0%)  chance~1/6
+    ranks cyclic equal:   251/512 (49.0%)
+    ranks reverse/cyc:    261/512 (51.0%)
+    bary rx_i+rd_i==1:    0/512
+    bary rx_i+rd_i+s==1:  0/512
+    perm_x == perm_d:     91/512 (17.8%)  chance~1/6
+    q_gap_x == q_gap_d:   247/512 (48.2%)
+
+  [walk q_x=1] n=263
+    same argmax gap idx:  99/263 (37.6%)  chance~33.3%
+    same argmin gap idx:  100/263 (38.0%)  chance~33.3%
+    same rank pattern:    69/263 (26.2%)  chance~1/6
+    ranks cyclic equal:   173/263 (65.8%)
+    ranks reverse/cyc:    90/263 (34.2%)
+    bary rx_i+rd_i==1:    0/263
+    bary rx_i+rd_i+s==1:  0/263
+    perm_x == perm_d:     47/263 (17.9%)  chance~1/6
+    q_gap_x == q_gap_d:   122/263 (46.4%)
+
+  [walk q_x=2] n=249
+    same argmax gap idx:  82/249 (32.9%)  chance~33.3%
+    same argmin gap idx:  80/249 (32.1%)  chance~33.3%
+    same rank pattern:    23/249 (9.2%)  chance~1/6
+    ranks cyclic equal:   78/249 (31.3%)
+    ranks reverse/cyc:    171/249 (68.7%)
+    bary rx_i+rd_i==1:    0/249
+    bary rx_i+rd_i+s==1:  0/249
+    perm_x == perm_d:     44/249 (17.7%)  chance~1/6
+    q_gap_x == q_gap_d:   125/249 (50.2%)
+
+----------------------------------------------------------------------------------------
+D) Solved keys holdout
+----------------------------------------------------------------------------------------
+  [cal puzzles<=100] n=76
+    same argmax gap idx:  26/76 (34.2%)  chance~33.3%
+    same argmin gap idx:  30/76 (39.5%)  chance~33.3%
+    same rank pattern:    13/76 (17.1%)  chance~1/6
+    ranks cyclic equal:   29/76 (38.2%)
+    ranks reverse/cyc:    47/76 (61.8%)
+    bary rx_i+rd_i==1:    0/76
+    bary rx_i+rd_i+s==1:  0/76
+    perm_x == perm_d:     16/76 (21.1%)  chance~1/6
+    q_gap_x == q_gap_d:   44/76 (57.9%)
+
+  [holdout puzzles>100] n=6
+    same argmax gap idx:  2/6 (33.3%)  chance~33.3%
+    same argmin gap idx:  3/6 (50.0%)  chance~33.3%
+    same rank pattern:    2/6 (33.3%)  chance~1/6
+    ranks cyclic equal:   4/6 (66.7%)
+    ranks reverse/cyc:    2/6 (33.3%)
+    bary rx_i+rd_i==1:    0/6
+    bary rx_i+rd_i+s==1:  0/6
+    perm_x == perm_d:     2/6 (33.3%)  chance~1/6
+    q_gap_x == q_gap_d:   3/6 (50.0%)
+
+  cal perm_x by q_x:
+    q_x=1: {'102': 7, '012': 10, '021': 11, '201': 6, '210': 9, '120': 2}
+    q_x=2: {'012': 6, '210': 5, '102': 9, '021': 2, '120': 5, '201': 4}
+  holdout perm_x by q_x:
+    q_x=1: {'021': 1, '120': 1, '102': 1}
+    q_x=2: {'201': 1, '021': 2}
+
+----------------------------------------------------------------------------------------
+E) Can gap pattern recover which mate is 'home' d? (sanity)
+----------------------------------------------------------------------------------------
+  Home is always index 0 by construction; prediction target is matching
+  x-position of dG's x among the three — trivial for x0.
+  Nontrivial: given only unordered {x0,x1,x2} + q_x, recover beta-cycle orientation.
+  walk q_x=1 argmax_dx hist: {2: 105, 0: 72, 1: 86}
+  walk q_x=2 argmax_dx hist: {2: 73, 0: 88, 1: 88}
+
+========================================================================================
+VERDICT
+========================================================================================
+  q_d selects +/- y-half: CONFIRMED.
+  q_x==q_d: remains CLOSED.
+  Directed gaps: sum in {1,2}*modulus; normalize barycentric for partition-of-1.
+  See perm supports & gap agreement vs chance above.
+

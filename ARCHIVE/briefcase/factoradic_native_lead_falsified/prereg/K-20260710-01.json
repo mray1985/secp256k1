@@ -1,0 +1,26 @@
+{
+  "candidate_id": "K-20260710-01",
+  "short_name": "orbit_safe_byte_bin_recurrence",
+  "formula": "k*=min(k,N-k); c=2*k*/N; b=min(255,floor(256*c)); B_train={b(k_i):i in train}; R(k)=1 iff b(k) in B_train; 8-bit LOCKED; no r,s,z features",
+  "domains": "k* in 1..floor(N/2); b in 0..255",
+  "score_definition": "holdout retention; survivor_fraction=|B_train|/256",
+  "expected_direction": "retention 100% with |B|/256 << 1",
+  "allowed_parameters": {
+    "bits": 8,
+    "orbit": "k*=min(k,N-k)",
+    "grid": "none"
+  },
+  "holdout_split": "train n<=50; test n>50; LOSO by source",
+  "null_families": [
+    "random uniform k*",
+    "random EC k*",
+    "k<->N-k control",
+    "LOSO source"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Uses only historical k* magnitude bins; not P=[d]G or curve equation.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": "2026-07-10",
+  "locked": true
+}

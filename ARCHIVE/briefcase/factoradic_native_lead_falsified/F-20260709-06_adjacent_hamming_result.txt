@@ -1,0 +1,85 @@
+========================================================================
+F-20260709-06 Adjacent Hamming coupling
+========================================================================
+S_real (Spearman)     = +0.0411
+S_shuffled mean       = -0.0062  (sd=0.1217)
+ADVANTAGE             = +0.0473
+p_shuffle             = 0.7293
+circular-shift mean   = -0.0003
+random n-bit EC mean  = +0.0312
+unrelated random mean = +0.0041
+control sawtooth adv  = +0.1239
+
+train edges (n_left<=50): S=-0.0552  Delta=-0.0498
+test  edges (n_left>=51): S=+0.3131  Delta=+0.3190
+range early (n<=35):      S=+0.0054
+range late  (n>=36):      S=-0.0221
+
+PROMOTION GATE:
+  [ NO ] advantage_gt_floor
+  [ NO ] p_shuffle_ok
+  [ NO ] beats_rand_nbit
+  [ OK ] beats_rand_ec
+  [ NO ] holds_oos
+  [ NO ] direction_consistent
+  beats_control: False
+VERDICT: FAIL
+
+Question: Does any local similarity in the private-key sequence
+          survive into local public-key similarity?
+
+{
+  "candidate_id": "F-20260709-06",
+  "question": "Does any local similarity in the private-key sequence survive into local public-key similarity?",
+  "S_real": 0.041100693131477316,
+  "advantage": 0.047292264754624794,
+  "p_shuffle": 0.7292707292707292,
+  "circular_shift_mean": -0.0003274178480757994,
+  "rand_ec_mean": 0.03121161799387718,
+  "unrelated_mean": 0.004075844417511324,
+  "train": {
+    "S": -0.05515432733395528,
+    "delta": -0.04984970083167433
+  },
+  "test": {
+    "S": 0.31305552836873796,
+    "delta": 0.319027472228791
+  },
+  "gate": {
+    "advantage_gt_floor": false,
+    "p_shuffle_ok": false,
+    "beats_rand_nbit": false,
+    "beats_rand_ec": true,
+    "holds_oos": false,
+    "direction_consistent": false
+  },
+  "verdict": "FAIL",
+  "prereg": {
+    "candidate_id": "F-20260709-06",
+    "short_name": "adjacent_hamming_coupling",
+    "formula": "h_d=HW(pad_{n_{i+1}}(d_i) XOR d_{i+1})/n_{i+1}; h_P=HW(SEC_compressed(P_i) XOR SEC_compressed(P_{i+1}))/264; S=SpearmanCorr(h_d,h_P); edge holdout (1,2)..(50,51) vs later; NO uncompressed/Pearson/factoradic/GLV/doubling",
+    "domains": "edges consecutive by n; h_d,h_P in [0,1]",
+    "score_definition": "Spearman correlation of adjacent Hamming rates",
+    "expected_direction": "higher",
+    "allowed_parameters": {
+      "encoding": "compressed SEC only",
+      "score": "Spearman only",
+      "grid": "none",
+      "holdout": "edges (1,2)..(50,51) train; later test"
+    },
+    "holdout_split": "train edges through (50,51); test edges with n>=51; ranges n<=35 vs n>=36",
+    "null_families": [
+      "shuffle public order",
+      "circular shift of P",
+      "random exact-n-bit with EC points",
+      "unrelated random EC sequence",
+      "sawtooth control"
+    ],
+    "not_dl_recompute": true,
+    "not_curve_membership_only": true,
+    "trivial_exclusion_justification": "Neighbor Hamming rates are not fixed by curve membership; permuting public order should destroy any real coupling.",
+    "registered_date": "2026-07-09",
+    "evaluated_date": "2026-07-09",
+    "locked": true
+  }
+}

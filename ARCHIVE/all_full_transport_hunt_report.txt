@@ -1,0 +1,797 @@
+ALL FULL TRANSPORT HUNT REPORT
+
+P1
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=0 ec_hits=0
+
+P2
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=1 ec_hits=0
+
+P3
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=3 ec_hits=1
+
+P4
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=7 ec_hits=1
+
+P5
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=15 ec_hits=1
+
+P6
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=26 ec_hits=1
+
+P7
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=47 ec_hits=1
+
+P8
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=45 ec_hits=1
+
+P9
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=90 ec_hits=1
+
+P10
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=131 ec_hits=0
+
+P11
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=138 ec_hits=0
+
+P12
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=167 ec_hits=0
+
+P13
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=171 ec_hits=0
+
+P14
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=214 ec_hits=0
+
+P15
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=240 ec_hits=0
+
+P16
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=205 ec_hits=0
+
+P17
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=233 ec_hits=0
+
+P18
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=376 ec_hits=0
+
+P19
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=510 ec_hits=0
+
+P20
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=1198 ec_hits=0
+
+P21
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=420 ec_hits=0
+
+P22
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=250 ec_hits=0
+
+P23
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=360 ec_hits=0
+
+P24
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=788 ec_hits=0
+
+P25
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=884 ec_hits=0
+
+P26
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=607 ec_hits=0
+
+P27
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=822 ec_hits=0
+
+P28
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=600 ec_hits=0
+
+P29
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=841 ec_hits=0
+
+P30
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=401 ec_hits=0
+
+P31
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=639 ec_hits=0
+
+P32
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=246 ec_hits=0
+
+P33
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=467 ec_hits=0
+
+P34
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=312 ec_hits=0
+
+P35
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=210 ec_hits=0
+
+P36
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=369 ec_hits=0
+
+P37
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=516 ec_hits=0
+
+P38
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=494 ec_hits=0
+
+P39
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=582 ec_hits=0
+
+P40
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=219 ec_hits=0
+
+P41
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=237 ec_hits=0
+
+P42
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=99 ec_hits=0
+
+P43
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=425 ec_hits=0
+
+P44
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=659 ec_hits=0
+
+P45
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=839 ec_hits=0
+
+P46
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=585 ec_hits=0
+
+P47
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=467 ec_hits=0
+
+P48
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=1041 ec_hits=0
+
+P49
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=421 ec_hits=0
+
+P50
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=874 ec_hits=0
+
+P51
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=958 ec_hits=0
+
+P53
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=380 ec_hits=0
+
+P54
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=471 ec_hits=0
+
+P55
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=785 ec_hits=0
+
+P56
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=799 ec_hits=0
+
+P57
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=303 ec_hits=0
+
+P58
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=676 ec_hits=0
+
+P59
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=431 ec_hits=0
+
+P60
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=525 ec_hits=0
+
+P61
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=599 ec_hits=0
+
+P62
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=869 ec_hits=0
+
+P63
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=600 ec_hits=0
+
+P64
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=817 ec_hits=0
+
+P65
+  anchor gap head2=55 head3=556
+  lhs ...292  rhs ...962
+  candidates=265 ec_hits=0
+
+P66
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=403 ec_hits=0
+
+P67
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=871 ec_hits=0
+
+P68
+  anchor gap head2=29 head3=292
+  lhs ...776  rhs ...962
+  candidates=780 ec_hits=0
+
+P69
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=516 ec_hits=0
+
+P70
+  anchor gap head2=10 head3=101
+  lhs ...760  rhs ...962
+  candidates=2899 ec_hits=0
+
+P71
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=590 ec_hits=0
+
+P72
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=420 ec_hits=0
+
+P73
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=552 ec_hits=0
+
+P74
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=846 ec_hits=0
+
+P75
+  anchor gap head2=92 head3=924
+  lhs ...873  rhs ...962
+  candidates=799 ec_hits=0
+
+P76
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=572 ec_hits=0
+
+P77
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=424 ec_hits=0
+
+P78
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=803 ec_hits=0
+
+P79
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=77 ec_hits=0
+
+P80
+  anchor gap head2=80 head3=804
+  lhs ...268  rhs ...962
+  candidates=293 ec_hits=0
+
+P81
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=416 ec_hits=0
+
+P82
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=396 ec_hits=0
+
+P83
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=753 ec_hits=0
+
+P84
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=946 ec_hits=0
+
+P85
+  anchor gap head2=93 head3=935
+  lhs ...384  rhs ...962
+  candidates=865 ec_hits=0
+
+P86
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=850 ec_hits=0
+
+P87
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=916 ec_hits=0
+
+P88
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=900 ec_hits=0
+
+P89
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=980 ec_hits=0
+
+P90
+  anchor gap head2=61 head3=611
+  lhs ...532  rhs ...962
+  candidates=512 ec_hits=0
+
+P91
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=923 ec_hits=0
+
+P92
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=161 ec_hits=0
+
+P93
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=634 ec_hits=0
+
+P94
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=422 ec_hits=0
+
+P95
+  anchor gap head2=46 head3=461
+  lhs ...066  rhs ...962
+  candidates=1013 ec_hits=0
+
+P96
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=339 ec_hits=0
+
+P97
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=771 ec_hits=0
+
+P98
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=90 ec_hits=0
+
+P99
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=256 ec_hits=0
+
+P100
+  anchor gap head2=35 head3=355
+  lhs ...078  rhs ...962
+  candidates=79 ec_hits=0
+
+P101
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=438 ec_hits=0
+
+P102
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=513 ec_hits=0
+
+P103
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=777 ec_hits=0
+
+P104
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=981 ec_hits=0
+
+P105
+  anchor gap head2=42 head3=426
+  lhs ...157  rhs ...962
+  candidates=1062 ec_hits=0
+
+P106
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=594 ec_hits=0
+
+P107
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=832 ec_hits=0
+
+P108
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=276 ec_hits=0
+
+P109
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=683 ec_hits=0
+
+P110
+  anchor gap head2=10 head3=101
+  lhs ...216  rhs ...962
+  candidates=2929 ec_hits=0
+
+P111
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=566 ec_hits=0
+
+P112
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=838 ec_hits=0
+
+P113
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=899 ec_hits=0
+
+P114
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=916 ec_hits=0
+
+P115
+  anchor gap head2=44 head3=443
+  lhs ...533  rhs ...962
+  candidates=218 ec_hits=0
+
+P116
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=71 ec_hits=0
+
+P117
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=543 ec_hits=0
+
+P118
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=78 ec_hits=0
+
+P119
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=86 ec_hits=0
+
+P120
+  anchor gap head2=10 head3=103
+  lhs ...486  rhs ...962
+  candidates=7363 ec_hits=0
+
+P121
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=246 ec_hits=0
+
+P122
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=597 ec_hits=0
+
+P123
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=847 ec_hits=0
+
+P124
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=292 ec_hits=0
+
+P125
+  anchor gap head2=10 head3=102
+  lhs ...075  rhs ...962
+  candidates=4577 ec_hits=0
+
+P126
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=401 ec_hits=0
+
+P127
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=538 ec_hits=0
+
+P128
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=461 ec_hits=0
+
+P129
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=456 ec_hits=0
+
+P130
+  anchor gap head2=78 head3=781
+  lhs ...927  rhs ...962
+  candidates=647 ec_hits=0
+
+P131
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=75 ec_hits=0
+
+P132
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=688 ec_hits=0
+
+P133
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=359 ec_hits=0
+
+P134
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=547 ec_hits=0
+
+P135
+  anchor gap head2=14 head3=148
+  lhs ...768  rhs ...962
+  candidates=446 ec_hits=0
+
+P136
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=762 ec_hits=0
+
+P137
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=875 ec_hits=0
+
+P138
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=256 ec_hits=0
+
+P139
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=692 ec_hits=0
+
+P140
+  anchor gap head2=11 head3=110
+  lhs ...943  rhs ...962
+  candidates=5949 ec_hits=0
+
+P141
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=301 ec_hits=0
+
+P142
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=687 ec_hits=0
+
+P143
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=81 ec_hits=0
+
+P144
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=74 ec_hits=0
+
+P145
+  anchor gap head2=62 head3=629
+  lhs ...794  rhs ...962
+  candidates=525 ec_hits=0
+
+P146
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=1039 ec_hits=0
+
+P147
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=1100 ec_hits=0
+
+P148
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=170 ec_hits=0
+
+P149
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=646 ec_hits=0
+
+P150
+  anchor gap head2=10 head3=105
+  lhs ...264  rhs ...962
+  candidates=6354 ec_hits=0
+
+P151
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=811 ec_hits=0
+
+P152
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=83 ec_hits=0
+
+P153
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=84 ec_hits=0
+
+P154
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=1090 ec_hits=0
+
+P155
+  anchor gap head2=69 head3=690
+  lhs ...055  rhs ...962
+  candidates=406 ec_hits=0
+
+P156
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=592 ec_hits=0
+
+P157
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=889 ec_hits=0
+
+P158
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=285 ec_hits=0
+
+P159
+  anchor gap head2=52 head3=529
+  lhs ...255  rhs ...962
+  candidates=82 ec_hits=0
+
+P160
+  anchor gap head2=73 head3=733
+  lhs ...898  rhs ...962
+  candidates=894 ec_hits=0
+

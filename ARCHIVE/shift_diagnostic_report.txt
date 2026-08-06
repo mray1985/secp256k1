@@ -1,0 +1,943 @@
+SHIFT DIAGNOSTIC — derive s_i from (Λ+s)qx - Qx = c·N
+Compare s_i to d, o, x(dG), y(dG) on solved puzzles.
+
+=== ROW-2 DETAIL ===
+
+P15  eps_row=2  d_bits=15  o_bits=14  gap=1
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=255  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=255  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=251  s-d bits=255  s-o bits=255
+    s/d mod N bits=253
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=15  s-o bits=14
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=15  s-o bits=14
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=15  s-o bits=14
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=15  s-o bits=14
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P35  eps_row=2  d_bits=35  o_bits=34  gap=1
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=252  c_bits=255  s-d bits=252  s-o bits=252
+    s/d mod N bits=256
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=252  c_bits=255  s-d bits=252  s-o bits=252
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=35  s-o bits=34
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=35  s-o bits=34
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=35  s-o bits=34
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=35  s-o bits=34
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P45  eps_row=2  d_bits=45  o_bits=43  gap=2
+  x(dG) bits=255  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=254  exact_s_count=7
+    s_min bits=253  c_bits=254  s-d bits=253  s-o bits=253
+    s/d mod N bits=256
+  [unified_Λ(eps) row2] rem_bits=252  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=254  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=45  s-o bits=43
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=45  s-o bits=43
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=45  s-o bits=43
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=45  s-o bits=43
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P50  eps_row=2  d_bits=50  o_bits=49  gap=1
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=254  exact_s_count=7
+    s_min bits=253  c_bits=255  s-d bits=253  s-o bits=253
+    s/d mod N bits=252
+  [unified_Λ(eps) row2] rem_bits=252  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=50  s-o bits=49
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=50  s-o bits=49
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=50  s-o bits=49
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=50  s-o bits=49
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P70  eps_row=2  d_bits=70  o_bits=66  gap=4
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=255  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=254  s-d bits=255  s-o bits=255
+    s/d mod N bits=253
+  [unified_Λ(eps) row2] rem_bits=250  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=256  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=70  s-o bits=66
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=70  s-o bits=66
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=70  s-o bits=66
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=70  s-o bits=66
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P90  eps_row=2  d_bits=90  o_bits=89  gap=1
+  x(dG) bits=255  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=255  c_floor_bits=256  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=256  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=90  s-o bits=89
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=90  s-o bits=89
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=90  s-o bits=89
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=90  s-o bits=89
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P100  eps_row=2  d_bits=100  o_bits=98  gap=2
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=243  exact_s_count=7
+    s_min bits=255  c_bits=246  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=251  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=254
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=100  s-o bits=98
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=246  exact_s_count=7
+    s_min bits=0  c_bits=246  s-d bits=100  s-o bits=98
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=100  s-o bits=98
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=100  s-o bits=98
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P120  eps_row=2  d_bits=120  o_bits=118  gap=2
+  x(dG) bits=256  y(dG) bits=254
+
+  [unified_Λ(eps) row1] rem_bits=254  c_floor_bits=253  exact_s_count=7
+    s_min bits=251  c_bits=253  s-d bits=251  s-o bits=251
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=251  c_floor_bits=255  exact_s_count=7
+    s_min bits=254  c_bits=256  s-d bits=254  s-o bits=254
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=120  s-o bits=118
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=120  s-o bits=118
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=120  s-o bits=118
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=120  s-o bits=118
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+=== ALL SOLVED (batch list) ===
+
+P5  eps_row=0  d_bits=5  o_bits=4  gap=1
+  x(dG) bits=254  y(dG) bits=254
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=5  s-o bits=4
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=252  exact_s_count=7
+    s_min bits=254  c_bits=250  s-d bits=254  s-o bits=254
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=252  exact_s_count=7
+    s_min bits=250  c_bits=252  s-d bits=250  s-o bits=250
+    s/d mod N bits=255
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=5  s-o bits=4
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=5  s-o bits=4
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=5  s-o bits=4
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P10  eps_row=1  d_bits=10  o_bits=8  gap=2
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=253  c_floor_bits=255  exact_s_count=7
+    s_min bits=252  c_bits=255  s-d bits=252  s-o bits=252
+    s/d mod N bits=256
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=10  s-o bits=8
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=253  c_floor_bits=255  exact_s_count=7
+    s_min bits=251  c_bits=255  s-d bits=251  s-o bits=251
+    s/d mod N bits=253
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=10  s-o bits=8
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=10  s-o bits=8
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=10  s-o bits=8
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P20  eps_row=1  d_bits=20  o_bits=19  gap=1
+  x(dG) bits=254  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=256  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=20  s-o bits=19
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=254  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=250  exact_s_count=7
+    s_min bits=0  c_bits=250  s-d bits=20  s-o bits=19
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=20  s-o bits=19
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=20  s-o bits=19
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P25  eps_row=0  d_bits=25  o_bits=21  gap=4
+  x(dG) bits=251  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=25  s-o bits=21
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=252  c_floor_bits=250  exact_s_count=7
+    s_min bits=255  c_bits=253  s-d bits=255  s-o bits=255
+    s/d mod N bits=253
+  [unified_Λ(eps) row3] rem_bits=255  c_floor_bits=251  exact_s_count=7
+    s_min bits=253  c_bits=251  s-d bits=253  s-o bits=253
+    s/d mod N bits=255
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=25  s-o bits=21
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=25  s-o bits=21
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=25  s-o bits=21
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P30  eps_row=0  d_bits=30  o_bits=28  gap=2
+  x(dG) bits=252  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=30  s-o bits=28
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=254  c_floor_bits=252  exact_s_count=7
+    s_min bits=255  c_bits=252  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=254  c_bits=246  s-d bits=254  s-o bits=254
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=30  s-o bits=28
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=30  s-o bits=28
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=246  exact_s_count=7
+    s_min bits=0  c_bits=246  s-d bits=30  s-o bits=28
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P40  eps_row=1  d_bits=40  o_bits=38  gap=2
+  x(dG) bits=256  y(dG) bits=255
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=252  c_bits=255  s-d bits=252  s-o bits=252
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=40  s-o bits=38
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=253  c_floor_bits=255  exact_s_count=7
+    s_min bits=253  c_bits=255  s-d bits=253  s-o bits=253
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=40  s-o bits=38
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=40  s-o bits=38
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=40  s-o bits=38
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P55  eps_row=0  d_bits=55  o_bits=53  gap=2
+  x(dG) bits=256  y(dG) bits=252
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=55  s-o bits=53
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=255  c_floor_bits=255  exact_s_count=7
+    s_min bits=253  c_bits=255  s-d bits=253  s-o bits=253
+    s/d mod N bits=254
+  [unified_Λ(eps) row3] rem_bits=254  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=256  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=55  s-o bits=53
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=250  exact_s_count=7
+    s_min bits=0  c_bits=250  s-d bits=55  s-o bits=53
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=55  s-o bits=53
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P60  eps_row=0  d_bits=60  o_bits=59  gap=1
+  x(dG) bits=255  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=60  s-o bits=59
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=252  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row3] rem_bits=253  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=254
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=60  s-o bits=59
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=60  s-o bits=59
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=60  s-o bits=59
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P65  eps_row=1  d_bits=65  o_bits=61  gap=4
+  x(dG) bits=254  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=253  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=65  s-o bits=61
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=253  c_floor_bits=248  exact_s_count=7
+    s_min bits=255  c_bits=250  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=65  s-o bits=61
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=65  s-o bits=61
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=250  exact_s_count=7
+    s_min bits=0  c_bits=250  s-d bits=65  s-o bits=61
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P75  eps_row=1  d_bits=75  o_bits=74  gap=1
+  x(dG) bits=255  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=254  c_bits=250  s-d bits=254  s-o bits=254
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=75  s-o bits=74
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=254
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=75  s-o bits=74
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=75  s-o bits=74
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=75  s-o bits=74
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P80  eps_row=0  d_bits=80  o_bits=79  gap=1
+  x(dG) bits=255  y(dG) bits=255
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=80  s-o bits=79
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=254  c_floor_bits=252  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=252  exact_s_count=7
+    s_min bits=254  c_bits=254  s-d bits=254  s-o bits=254
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=80  s-o bits=79
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=80  s-o bits=79
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=80  s-o bits=79
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P85  eps_row=0  d_bits=85  o_bits=84  gap=1
+  x(dG) bits=254  y(dG) bits=252
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=85  s-o bits=84
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=255  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=256  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=85  s-o bits=84
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=85  s-o bits=84
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=85  s-o bits=84
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P95  eps_row=1  d_bits=95  o_bits=94  gap=1
+  x(dG) bits=256  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=255  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=253
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=95  s-o bits=94
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=253  c_bits=254  s-d bits=253  s-o bits=253
+    s/d mod N bits=254
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=95  s-o bits=94
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=95  s-o bits=94
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=95  s-o bits=94
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P105  eps_row=1  d_bits=105  o_bits=104  gap=1
+  x(dG) bits=256  y(dG) bits=251
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=256  exact_s_count=7
+    s_min bits=255  c_bits=257  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=105  s-o bits=104
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=251  s-d bits=255  s-o bits=255
+    s/d mod N bits=252
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=254  exact_s_count=7
+    s_min bits=0  c_bits=254  s-d bits=105  s-o bits=104
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=105  s-o bits=104
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=105  s-o bits=104
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P110  eps_row=0  d_bits=110  o_bits=109  gap=1
+  x(dG) bits=252  y(dG) bits=250
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=249  exact_s_count=7
+    s_min bits=0  c_bits=249  s-d bits=110  s-o bits=109
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=254  c_floor_bits=250  exact_s_count=7
+    s_min bits=255  c_bits=252  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=251  exact_s_count=7
+    s_min bits=254  c_bits=253  s-d bits=254  s-o bits=254
+    s/d mod N bits=255
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=249  exact_s_count=7
+    s_min bits=0  c_bits=249  s-d bits=110  s-o bits=109
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=110  s-o bits=109
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=253  exact_s_count=7
+    s_min bits=0  c_bits=253  s-d bits=110  s-o bits=109
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P115  eps_row=0  d_bits=115  o_bits=105  gap=10
+  x(dG) bits=255  y(dG) bits=255
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=249  exact_s_count=7
+    s_min bits=0  c_bits=249  s-d bits=115  s-o bits=105
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=253  c_floor_bits=256  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=256  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=249  exact_s_count=7
+    s_min bits=0  c_bits=249  s-d bits=115  s-o bits=105
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=115  s-o bits=105
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=115  s-o bits=105
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P125  eps_row=1  d_bits=125  o_bits=124  gap=1
+  x(dG) bits=254  y(dG) bits=254
+
+  [unified_Λ(eps) row1] rem_bits=256  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+  [unified_Λ(eps) row2] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=125  s-o bits=124
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row3] rem_bits=255  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=255  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=125  s-o bits=124
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=252  exact_s_count=7
+    s_min bits=0  c_bits=252  s-d bits=125  s-o bits=124
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=255  exact_s_count=7
+    s_min bits=0  c_bits=255  s-d bits=125  s-o bits=124
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+P130  eps_row=0  d_bits=130  o_bits=127  gap=3
+  x(dG) bits=255  y(dG) bits=256
+
+  [unified_Λ(eps) row1] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=130  s-o bits=127
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [unified_Λ(eps) row2] rem_bits=256  c_floor_bits=254  exact_s_count=7
+    s_min bits=255  c_bits=254  s-d bits=255  s-o bits=255
+    s/d mod N bits=256
+  [unified_Λ(eps) row3] rem_bits=256  c_floor_bits=253  exact_s_count=7
+    s_min bits=255  c_bits=254  s-d bits=255  s-o bits=255
+    s/d mod N bits=255
+
+  [per-row Λ_i row1] rem_bits=0  c_floor_bits=256  exact_s_count=7
+    s_min bits=0  c_bits=256  s-d bits=130  s-o bits=127
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row2] rem_bits=0  c_floor_bits=248  exact_s_count=7
+    s_min bits=0  c_bits=248  s-d bits=130  s-o bits=127
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+  [per-row Λ_i row3] rem_bits=0  c_floor_bits=251  exact_s_count=7
+    s_min bits=0  c_bits=251  s-d bits=130  s-o bits=127
+    s_min/x(dG) mod N = 0 (0b)
+    s_min/y(dG) mod N = 0 (0b)
+    s_min/Px_row mod N = 0 (0b)
+    s_min/lam_y mod N = 0 (0b)
+
+CROSS-PUZZLE PATTERN (unified Λ, exact integer carry)
+
+  row tests with exact s: 78
+  any s == d: 0
+  any s == o: 0
+  minimal |s| == d: 0
+
+P135 (unsolved) — exact shift structure only
+
+  row1: 7 exact shift classes (sampled)
+    s_bits=254 c_bits=255 band_o_gap=1
+    s_bits=256 c_bits=256 band_o_gap=1
+    s_bits=257 c_bits=254 band_o_gap=1
+  row2: 7 exact shift classes (sampled)
+    s_bits=254 c_bits=254 band_o_gap=1
+    s_bits=256 c_bits=255 band_o_gap=1
+    s_bits=257 c_bits=253 band_o_gap=1
+  row3: 7 exact shift classes (sampled)
+    s_bits=0 c_bits=255 band_o_gap=?
+    s_bits=256 c_bits=252 band_o_gap=2
+    s_bits=256 c_bits=256 band_o_gap=2
+
+VERDICT:
+  If s==d and s==o counts are 0: shift is a distinct object from scalar/offset.
+  If per-row Λ_i gives s=0 on own row with integer c: own-row carry is exact;
+  unified Λ requires row-specific shift — test f_i(d) not global shift.

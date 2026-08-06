@@ -1,0 +1,23 @@
+DIAGONAL ONES — Spearman self-alignment
+
+In any correlation matrix, the main diagonal is the identity of each column with itself:
+
+        Px vs Px       = 1.0000  -> displayed 1.0000
+       sVH vs sVH      = 1.0000  -> displayed 1.0000
+      sCHK vs sCHK     = 1.0000  -> displayed 1.0000
+      h160 vs h160     = 1.0000  -> displayed 1.0000
+         z vs z        = 1.0000  -> displayed 1.0000
+         r vs r        = 1.0000  -> displayed 1.0000
+
+Visually the 1's form a top-left to bottom-right diagonal.
+That is definitional (perfect rank self-match), not a curve discovery.
+
+Strongest |off-diagonal| in core matrix:
+  Px vs sVH: +0.3017
+  Px vs r: +0.2435
+  Px vs h160: +0.1922
+  z vs r: -0.1600
+  sCHK vs r: -0.1541
+  sCHK vs h160: +0.1355
+  sVH vs r: -0.1297
+  h160 vs z: -0.0965

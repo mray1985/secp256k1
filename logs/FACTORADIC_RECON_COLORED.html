@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Factoradic reconstruction — colored by order</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #666;
+    --paper: #f7f4ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #ffe0c2 0%, transparent 55%),
+      radial-gradient(900px 500px at 90% 0%, #cfe0ff 0%, transparent 50%),
+      radial-gradient(800px 500px at 50% 100%, #d8f5e2 0%, transparent 45%),
+      var(--paper);
+    color: var(--ink);
+    padding: 28px 22px 60px;
+  }
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 650;
+    font-size: 1.85rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .sub {
+    color: var(--muted);
+    max-width: 72ch;
+    line-height: 1.45;
+    margin-bottom: 18px;
+  }
+  code, .d code {
+    font-family: "IBM Plex Mono", Consolas, monospace;
+    font-size: 0.82rem;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 22px;
+  }
+  .leg {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 2px solid;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .wrap {
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(6px);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1100px;
+  }
+  th {
+    text-align: left;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #444;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+    background: rgba(255,255,255,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  td {
+    padding: 9px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  tr.row {
+    background: color-mix(in srgb, var(--bg) 22%, white);
+    color: var(--ink);
+  }
+  tr.row:hover {
+    background: color-mix(in srgb, var(--bg) 38%, white);
+  }
+  tr.jump td {
+    border-top: 3px solid var(--acc);
+  }
+  td.n, td.k, td.a, td.ok {
+    font-variant-numeric: tabular-nums;
+    font-weight: 650;
+  }
+  td.k b {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--fg);
+  }
+  td.ok { color: #1a7a3a; }
+  .bar {
+    width: 72px;
+    height: 8px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 99px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .fill {
+    height: 100%;
+    background: var(--bg);
+  }
+  .fnum { font-size: 0.78rem; color: #444; }
+  .phases { font-size: 0.75rem; color: #555; white-space: nowrap; }
+  .recon {
+    font-family: "IBM Plex Mono", Consolas, monospace;
+    font-size: 0.72rem;
+    line-height: 1.7;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 70vw;
+  }
+  .digits {
+    font-family: "IBM Plex Mono", Consolas, monospace;
+    font-size: 0.68rem;
+    color: #555;
+    margin-top: 4px;
+  }
+  .peel {
+    font-family: "IBM Plex Mono", Consolas, monospace;
+    font-size: 0.65rem;
+    color: #666;
+    margin-top: 3px;
+    line-height: 1.45;
+  }
+  .lead {
+    background: var(--bg);
+    color: var(--fg);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .term {
+    color: #333;
+    padding: 0 2px;
+    white-space: nowrap;
+  }
+  .zero {
+    color: #aaa;
+    padding: 0 2px;
+    white-space: nowrap;
+  }
+  .foot {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+  <h1>Factoradic reconstruction — colored by order</h1>
+  <p class="sub">
+    Every puzzle key rebuilt as <code>d = Σ (a<sub>k</sub> · k!)</code> with
+    <b>multiply then add</b> (<code>term = a·k!</code>).
+    Rows sharing the same factoradic order <code>max_k</code> share a color
+    (orange / blue / green / magenta / cyan / gold / purple / red-orange).
+    <b>Full sequences</b>: every nonzero <code>a×k!</code> term, the complete digit
+    vector <code>[max_k..0]</code> (zeros included), and the peel chain
+    <code>d − a·k! → rem</code> down to 0. Lead term is the solid chip;
+    bar = <code>digit_frac = a/k</code>. Phases = digit · cell · plateau · mass.
+  </p>
+  <div class="legend">
+    <span class="leg" style="background:rgb(255,140,40);color:rgb(40,20,0);border-color:rgb(255,180,90)">max_k=1 · 1 puzzles</span><span class="leg" style="background:rgb(50,110,220);color:rgb(230,240,255);border-color:rgb(120,170,255)">max_k=2 · 1 puzzles</span><span class="leg" style="background:rgb(40,170,90);color:rgb(10,40,20);border-color:rgb(100,220,140)">max_k=3 · 3 puzzles</span><span class="leg" style="background:rgb(200,60,140);color:rgb(255,230,245);border-color:rgb(240,120,180)">max_k=4 · 2 puzzles</span><span class="leg" style="background:rgb(30,170,180);color:rgb(10,40,45);border-color:rgb(90,220,230)">max_k=5 · 3 puzzles</span><span class="leg" style="background:rgb(210,180,40);color:rgb(40,35,0);border-color:rgb(240,220,100)">max_k=6 · 2 puzzles</span><span class="leg" style="background:rgb(160,80,220);color:rgb(245,235,255);border-color:rgb(200,150,255)">max_k=7 · 3 puzzles</span><span class="leg" style="background:rgb(220,80,60);color:rgb(255,235,230);border-color:rgb(255,140,120)">max_k=8 · 4 puzzles</span><span class="leg" style="background:rgb(255,140,40);color:rgb(40,20,0);border-color:rgb(255,180,90)">max_k=9 · 3 puzzles</span><span class="leg" style="background:rgb(50,110,220);color:rgb(230,240,255);border-color:rgb(120,170,255)">max_k=10 · 3 puzzles</span><span class="leg" style="background:rgb(40,170,90);color:rgb(10,40,20);border-color:rgb(100,220,140)">max_k=11 · 4 puzzles</span><span class="leg" style="background:rgb(200,60,140);color:rgb(255,230,245);border-color:rgb(240,120,180)">max_k=12 · 3 puzzles</span><span class="leg" style="background:rgb(30,170,180);color:rgb(10,40,45);border-color:rgb(90,220,230)">max_k=13 · 4 puzzles</span><span class="leg" style="background:rgb(210,180,40);color:rgb(40,35,0);border-color:rgb(240,220,100)">max_k=14 · 4 puzzles</span><span class="leg" style="background:rgb(160,80,220);color:rgb(245,235,255);border-color:rgb(200,150,255)">max_k=15 · 5 puzzles</span><span class="leg" style="background:rgb(220,80,60);color:rgb(255,235,230);border-color:rgb(255,140,120)">max_k=16 · 3 puzzles</span><span class="leg" style="background:rgb(255,140,40);color:rgb(40,20,0);border-color:rgb(255,180,90)">max_k=17 · 4 puzzles</span><span class="leg" style="background:rgb(50,110,220);color:rgb(230,240,255);border-color:rgb(120,170,255)">max_k=18 · 4 puzzles</span><span class="leg" style="background:rgb(40,170,90);color:rgb(10,40,20);border-color:rgb(100,220,140)">max_k=19 · 5 puzzles</span><span class="leg" style="background:rgb(200,60,140);color:rgb(255,230,245);border-color:rgb(240,120,180)">max_k=20 · 5 puzzles</span><span class="leg" style="background:rgb(30,170,180);color:rgb(10,40,45);border-color:rgb(90,220,230)">max_k=21 · 4 puzzles</span><span class="leg" style="background:rgb(210,180,40);color:rgb(40,35,0);border-color:rgb(240,220,100)">max_k=22 · 1 puzzles</span><span class="leg" style="background:rgb(220,80,60);color:rgb(255,235,230);border-color:rgb(255,140,120)">max_k=24 · 1 puzzles</span><span class="leg" style="background:rgb(255,140,40);color:rgb(40,20,0);border-color:rgb(255,180,90)">max_k=25 · 1 puzzles</span><span class="leg" style="background:rgb(50,110,220);color:rgb(230,240,255);border-color:rgb(120,170,255)">max_k=26 · 1 puzzles</span><span class="leg" style="background:rgb(40,170,90);color:rgb(10,40,20);border-color:rgb(100,220,140)">max_k=27 · 1 puzzles</span><span class="leg" style="background:rgb(200,60,140);color:rgb(255,230,245);border-color:rgb(240,120,180)">max_k=28 · 1 puzzles</span><span class="leg" style="background:rgb(30,170,180);color:rgb(10,40,45);border-color:rgb(90,220,230)">max_k=29 · 1 puzzles</span><span class="leg" style="background:rgb(210,180,40);color:rgb(40,35,0);border-color:rgb(240,220,100)">max_k=30 · 1 puzzles</span><span class="leg" style="background:rgb(160,80,220);color:rgb(245,235,255);border-color:rgb(200,150,255)">max_k=31 · 1 puzzles</span><span class="leg" style="background:rgb(220,80,60);color:rgb(255,235,230);border-color:rgb(255,140,120)">max_k=32 · 1 puzzles</span><span class="leg" style="background:rgb(255,140,40);color:rgb(40,20,0);border-color:rgb(255,180,90)">max_k=33 · 1 puzzles</span><span class="leg" style="background:rgb(50,110,220);color:rgb(230,240,255);border-color:rgb(120,170,255)">max_k=34 · 1 puzzles</span>
+  </div>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>n</th>
+          <th>order max_k</th>
+          <th>a</th>
+          <th>digit_frac</th>
+          <th>phases</th>
+          <th>ok</th>
+          <th>full reconstruction (every nonzero a×k!) + digits + peel</th>
+          <th>d</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">1</td>
+  <td class="k"><b>1</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:100%"></div></div>
+    <span class="fnum">1.00</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    1.00 · 0.00 · 0.00 · 1.00
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,0]</div>
+    <div class="peel">peel: −1×1!→0</div>
+  </td>
+  <td class="d"><code>1</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">2</td>
+  <td class="k"><b>2</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <span class="fnum">0.50</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.50 · 0.50 · 0.25 · 0.67
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,1,0]</div>
+    <div class="peel">peel: −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>3</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">3</td>
+  <td class="k"><b>3</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:33%"></div></div>
+    <span class="fnum">0.33</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.33 · 0.17 · 0.06 · 0.86
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,0,1,0]</div>
+    <div class="peel">peel: −1×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>7</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">4</td>
+  <td class="k"><b>3</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:33%"></div></div>
+    <span class="fnum">0.33</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.33 · 0.33 · 0.11 · 0.75
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,1,0,0]</div>
+    <div class="peel">peel: −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>8</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">5</td>
+  <td class="k"><b>3</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:100%"></div></div>
+    <span class="fnum">1.00</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    1.00 · 0.50 · 0.83 · 0.86
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,1,1,0]</div>
+    <div class="peel">peel: −3×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>21</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">6</td>
+  <td class="k"><b>4</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <span class="fnum">0.50</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.50 · 0.04 · 0.26 · 0.98
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×4! = 48">2×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,0,0,1,0]</div>
+    <div class="peel">peel: −2×4!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>49</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">7</td>
+  <td class="k"><b>4</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:75%"></div></div>
+    <span class="fnum">0.75</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.75 · 0.17 · 0.54 · 0.95
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×4! = 72">3×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,0,2,0,0]</div>
+    <div class="peel">peel: −3×4!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>76</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">8</td>
+  <td class="k"><b>5</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:20%"></div></div>
+    <span class="fnum">0.20</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.20 · 0.87 · 0.17 · 0.54
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×5! = 120">1×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,4,1,1,0,0]</div>
+    <div class="peel">peel: −1×5!→104 · −4×4!→8 · −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>224</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">9</td>
+  <td class="k"><b>5</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:60%"></div></div>
+    <span class="fnum">0.60</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.60 · 0.89 · 0.58 · 0.77
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×5! = 360">3×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,4,1,2,1,0]</div>
+    <div class="peel">peel: −3×5!→107 · −4×4!→11 · −1×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>467</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">10</td>
+  <td class="k"><b>5</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+    <span class="fnum">0.80</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.80 · 0.28 · 0.66 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×5! = 480">4×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,1,1,2,0,0]</div>
+    <div class="peel">peel: −4×5!→34 · −1×4!→10 · −1×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>514</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">11</td>
+  <td class="k"><b>6</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:17%"></div></div>
+    <span class="fnum">0.17</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.17 · 0.60 · 0.10 · 0.62
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×6! = 720">1×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,3,3,0,1,1,0]</div>
+    <div class="peel">peel: −1×6!→435 · −3×5!→75 · −3×4!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>1155</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">12</td>
+  <td class="k"><b>6</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <span class="fnum">0.50</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.50 · 0.73 · 0.45 · 0.81
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×6! = 2160">3×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,4,1,3,0,1,0]</div>
+    <div class="peel">peel: −3×6!→523 · −4×5!→43 · −1×4!→19 · −3×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>2683</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">13</td>
+  <td class="k"><b>7</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:14%"></div></div>
+    <span class="fnum">0.14</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.14 · 0.03 · 0.00 · 0.97
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×7! = 5040">1×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="1×5! = 120">1×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,0,1,2,1,1,0,0]</div>
+    <div class="peel">peel: −1×7!→176 · −1×5!→56 · −2×4!→8 · −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>5216</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">14</td>
+  <td class="k"><b>7</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:29%"></div></div>
+    <span class="fnum">0.29</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.29 · 0.09 · 0.16 · 0.96
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×7! = 10080">2×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,0,3,4,1,1,0,0]</div>
+    <div class="peel">peel: −2×7!→464 · −3×5!→104 · −4×4!→8 · −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>10544</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">15</td>
+  <td class="k"><b>7</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:71%"></div></div>
+    <span class="fnum">0.71</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.71 · 0.33 · 0.62 · 0.94
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×7! = 25200">5×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="1×5! = 120">1×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,2,1,4,1,2,1,0]</div>
+    <div class="peel">peel: −5×7!→1667 · −2×6!→227 · −1×5!→107 · −4×4!→11 · −1×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>26867</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">16</td>
+  <td class="k"><b>8</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:12%"></div></div>
+    <span class="fnum">0.12</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.12 · 0.28 · 0.03 · 0.78
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×8! = 40320">1×8!</span> + <span class="term" title="2×7! = 10080">2×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,2,1,3,1,1,0,0,0]</div>
+    <div class="peel">peel: −1×8!→11190 · −2×7!→1110 · −1×6!→390 · −3×5!→30 · −1×4!→6 · −1×3!→0</div>
+  </td>
+  <td class="d"><code>51510</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">17</td>
+  <td class="k"><b>8</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:25%"></div></div>
+    <span class="fnum">0.25</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.25 · 0.38 · 0.17 · 0.84
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×8! = 80640">2×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,3,0,0,2,2,1,1,0]</div>
+    <div class="peel">peel: −2×8!→15183 · −3×7!→63 · −2×4!→15 · −2×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>95823</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">18</td>
+  <td class="k"><b>8</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <span class="fnum">0.50</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.50 · 0.93 · 0.49 · 0.81
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×8! = 161280">4×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,7,2,5,2,3,1,1,0]</div>
+    <div class="peel">peel: −4×8!→37389 · −7×7!→2109 · −2×6!→669 · −5×5!→69 · −2×4!→21 · −3×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>198669</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">19</td>
+  <td class="k"><b>8</b></td>
+  <td class="a">8</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:100%"></div></div>
+    <span class="fnum">1.00</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    1.00 · 0.87 · 0.98 · 0.90
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="8×8! = 322560">8×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [8,6,6,3,2,1,0,1,0]</div>
+    <div class="peel">peel: −8×8!→34975 · −6×7!→4735 · −6×6!→415 · −3×5!→55 · −2×4!→7 · −1×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>357535</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">20</td>
+  <td class="k"><b>9</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:22%"></div></div>
+    <span class="fnum">0.22</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.22 · 0.38 · 0.15 · 0.84
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×9! = 725760">2×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,3,3,2,0,1,2,0,1,0]</div>
+    <div class="peel">peel: −2×9!→137557 · −3×8!→16597 · −3×7!→1477 · −2×6!→37 · −1×4!→13 · −2×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>863317</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">21</td>
+  <td class="k"><b>9</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:44%"></div></div>
+    <span class="fnum">0.44</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.44 · 0.99 · 0.44 · 0.80
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×9! = 1451520">4×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="3×6! = 2160">3×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,8,7,3,2,0,0,2,0,0]</div>
+    <div class="peel">peel: −4×9!→360244 · −8×8!→37684 · −7×7!→2404 · −3×6!→244 · −2×5!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1811764</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">22</td>
+  <td class="k"><b>9</b></td>
+  <td class="a">8</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:89%"></div></div>
+    <span class="fnum">0.89</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.89 · 0.29 · 0.81 · 0.97
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="8×9! = 2903040">8×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [8,2,4,5,0,2,2,1,1,0]</div>
+    <div class="peel">peel: −8×9!→104463 · −2×8!→23823 · −4×7!→3663 · −5×6!→63 · −2×4!→15 · −2×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>3007503</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">23</td>
+  <td class="k"><b>10</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:10%"></div></div>
+    <span class="fnum">0.10</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.10 · 0.54 · 0.05 · 0.65
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×10! = 3628800">1×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,5,3,6,6,0,3,1,2,0,0]</div>
+    <div class="peel">peel: −1×10!→1970002 · −5×9!→155602 · −3×8!→34642 · −6×7!→4402 · −6×6!→82 · −3×4!→10 · −1×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>5598802</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">24</td>
+  <td class="k"><b>10</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:30%"></div></div>
+    <span class="fnum">0.30</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.30 · 0.98 · 0.30 · 0.75
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×10! = 10886400">3×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,9,6,6,5,4,4,3,1,0,0]</div>
+    <div class="peel">peel: −3×10!→3542276 · −9×9!→276356 · −6×8!→34436 · −6×7!→4196 · −5×6!→596 · −4×5!→116 · −4×4!→20 · −3×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>14428676</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">25</td>
+  <td class="k"><b>10</b></td>
+  <td class="a">9</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+    <span class="fnum">0.90</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.90 · 0.15 · 0.81 · 0.98
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="9×10! = 32659200">9×10!</span> + <span class="term" title="1×9! = 362880">1×9!</span> + <span class="term" title="4×8! = 161280">4×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [9,1,4,0,2,5,4,2,0,1,0]</div>
+    <div class="peel">peel: −9×10!→526309 · −1×9!→163429 · −4×8!→2149 · −2×6!→709 · −5×5!→109 · −4×4!→13 · −2×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>33185509</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">26</td>
+  <td class="k"><b>11</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:9%"></div></div>
+    <span class="fnum">0.09</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.09 · 0.37 · 0.03 · 0.73
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×11! = 39916800">1×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="zero" title="0×9! = 0">0×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,4,0,2,5,1,2,2,2,1,0,0]</div>
+    <div class="peel">peel: −1×11!→14622062 · −4×10!→106862 · −2×8!→26222 · −5×7!→1022 · −1×6!→302 · −2×5!→62 · −2×4!→14 · −2×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>54538862</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">27</td>
+  <td class="k"><b>11</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:18%"></div></div>
+    <span class="fnum">0.18</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.18 · 0.80 · 0.16 · 0.71
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×11! = 79833600">2×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="8×9! = 2903040">8×9!</span> + <span class="term" title="4×8! = 161280">4×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,8,8,4,4,2,0,0,3,1,1,0]</div>
+    <div class="peel">peel: −2×11!→32116341 · −8×10!→3085941 · −8×9!→182901 · −4×8!→21621 · −4×7!→1461 · −2×6!→21 · −3×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>111949941</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">28</td>
+  <td class="k"><b>11</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:45%"></div></div>
+    <span class="fnum">0.45</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.45 · 0.70 · 0.43 · 0.88
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×11! = 199584000">5×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="7×9! = 2540160">7×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="3×6! = 2160">3×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,7,7,2,5,3,5,2,0,0,0,0]</div>
+    <div class="peel">peel: −5×11!→28050408 · −7×10!→2648808 · −7×9!→108648 · −2×8!→28008 · −5×7!→2808 · −3×6!→648 · −5×5!→48 · −2×4!→0</div>
+  </td>
+  <td class="d"><code>227634408</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">29</td>
+  <td class="k"><b>11</b></td>
+  <td class="a">10</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:91%"></div></div>
+    <span class="fnum">0.91</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.91 · 0.04 · 0.82 · 1.00
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="10×11! = 399168000">10×11!</span> + <span class="zero" title="0×10! = 0">0×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [10,0,4,2,1,5,0,3,3,2,0,0]</div>
+    <div class="peel">peel: −10×11!→1540894 · −4×9!→89374 · −2×8!→8734 · −1×7!→3694 · −5×6!→94 · −3×4!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>400708894</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">30</td>
+  <td class="k"><b>12</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:17%"></div></div>
+    <span class="fnum">0.17</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.17 · 0.16 · 0.10 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×12! = 958003200">2×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="7×9! = 2540160">7×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="3×6! = 2160">3×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,1,9,7,1,0,3,2,0,0,2,0,0]</div>
+    <div class="peel">peel: −2×12!→75158884 · −1×11!→35242084 · −9×10!→2582884 · −7×9!→42724 · −1×8!→2404 · −3×6!→244 · −2×5!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1033162084</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">31</td>
+  <td class="k"><b>12</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:33%"></div></div>
+    <span class="fnum">0.33</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.33 · 0.39 · 0.28 · 0.91
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×12! = 1916006400">4×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,4,7,3,5,4,4,0,2,3,2,1,0]</div>
+    <div class="peel">peel: −4×12!→186382151 · −4×11!→26714951 · −7×10!→1313351 · −3×9!→224711 · −5×8!→23111 · −4×7!→2951 · −4×6!→71 · −2×4!→23 · −3×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>2102388551</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">32</td>
+  <td class="k"><b>12</b></td>
+  <td class="a">6</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <span class="fnum">0.50</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.50 · 0.46 · 0.45 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="6×12! = 2874009600">6×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="5×10! = 18144000">5×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="7×8! = 282240">7×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [6,5,5,4,7,0,2,0,0,2,1,0,0]</div>
+    <div class="peel">peel: −6×12!→219463214 · −5×11!→19879214 · −5×10!→1735214 · −4×9!→283694 · −7×8!→1454 · −2×6!→14 · −2×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>3093472814</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">33</td>
+  <td class="k"><b>13</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:8%"></div></div>
+    <span class="fnum">0.08</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.08 · 0.15 · 0.01 · 0.87
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×13! = 6227020800">1×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="10×11! = 399168000">10×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="8×9! = 2903040">8×9!</span> + <span class="term" title="7×8! = 282240">7×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="1×5! = 120">1×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,1,10,8,8,7,6,2,1,1,1,1,0,0]</div>
+    <div class="peel">peel: −1×13!→910417112 · −1×12!→431415512 · −10×11!→32247512 · −8×10!→3217112 · −8×9!→314072 · −7×8!→31832 · −6×7!→1592 · −2×6!→152 · −1×5!→32 · −1×4!→8 · −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>7137437912</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">34</td>
+  <td class="k"><b>13</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:15%"></div></div>
+    <span class="fnum">0.15</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.15 · 0.27 · 0.10 · 0.88
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×13! = 12454041600">2×13!</span> + <span class="term" title="3×12! = 1437004800">3×12!</span> + <span class="term" title="6×11! = 239500800">6×11!</span> + <span class="zero" title="0×10! = 0">0×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,3,6,0,6,8,4,6,5,1,2,0,1,0]</div>
+    <div class="peel">peel: −2×13!→1679030557 · −3×12!→242025757 · −6×11!→2524957 · −6×9!→347677 · −8×8!→25117 · −4×7!→4957 · −6×6!→637 · −5×5!→37 · −1×4!→13 · −2×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>14133072157</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">35</td>
+  <td class="k"><b>13</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:23%"></div></div>
+    <span class="fnum">0.23</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.23 · 0.23 · 0.17 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×13! = 18681062400">3×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="11×11! = 439084800">11×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,2,11,9,5,6,1,1,0,4,2,2,0,0]</div>
+    <div class="peel">peel: −3×13!→1431809392 · −2×12!→473806192 · −11×11!→34721392 · −9×10!→2062192 · −5×9!→247792 · −6×8!→5872 · −1×7!→832 · −1×6!→112 · −4×4!→16 · −2×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>20112871792</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">36</td>
+  <td class="k"><b>13</b></td>
+  <td class="a">6</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:46%"></div></div>
+    <span class="fnum">0.46</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.46 · 0.81 · 0.45 · 0.88
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="10×12! = 4790016000">10×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [6,10,5,9,9,2,7,5,4,2,2,0,0,0]</div>
+    <div class="peel">peel: −6×13!→5025645180 · −10×12!→235629180 · −5×11!→36045180 · −9×10!→3385980 · −9×9!→120060 · −2×8!→39420 · −7×7!→4140 · −5×6!→540 · −4×5!→60 · −2×4!→12 · −2×3!→0</div>
+  </td>
+  <td class="d"><code>42387769980</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">37</td>
+  <td class="k"><b>14</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:7%"></div></div>
+    <span class="fnum">0.07</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.07 · 0.15 · 0.01 · 0.87
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="2×13! = 12454041600">2×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="3×11! = 119750400">3×11!</span> + <span class="term" title="5×10! = 18144000">5×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,2,1,3,5,6,3,6,4,3,3,0,1,1,0]</div>
+    <div class="peel">peel: −1×14!→13073269395 · −2×13!→619227795 · −1×12!→140226195 · −3×11!→20475795 · −5×10!→2331795 · −6×9!→154515 · −3×8!→33555 · −6×7!→3315 · −4×6!→435 · −3×5!→75 · −3×4!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>100251560595</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">38</td>
+  <td class="k"><b>14</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:7%"></div></div>
+    <span class="fnum">0.07</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.07 · 0.69 · 0.05 · 0.59
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="7×12! = 3353011200">7×12!</span> + <span class="term" title="9×11! = 359251200">9×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,9,7,9,10,4,1,3,1,0,4,2,2,0,0]</div>
+    <div class="peel">peel: −1×14!→59793245392 · −9×13!→3750058192 · −7×12!→397046992 · −9×11!→37795792 · −10×10!→1507792 · −4×9!→56272 · −1×8!→15952 · −3×7!→832 · −1×6!→112 · −4×4!→16 · −2×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>146971536592</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">39</td>
+  <td class="k"><b>14</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:21%"></div></div>
+    <span class="fnum">0.21</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.21 · 0.71 · 0.19 · 0.81
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×14! = 261534873600">3×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="9×11! = 359251200">9×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,9,12,9,10,9,2,0,4,2,2,1,1,1,0]</div>
+    <div class="peel">peel: −3×14!→62190095337 · −9×13!→6146908137 · −12×12!→398888937 · −9×11!→39637737 · −10×10!→3349737 · −9×9!→83817 · −2×8!→3177 · −4×6!→297 · −2×5!→57 · −2×4!→9 · −1×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>323724968937</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">40</td>
+  <td class="k"><b>14</b></td>
+  <td class="a">11</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:79%"></div></div>
+    <span class="fnum">0.79</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.79 · 0.51 · 0.75 · 0.96
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="7×13! = 43589145600">7×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="3×11! = 119750400">3×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [11,7,2,3,6,4,2,1,0,4,2,3,2,0,0]</div>
+    <div class="peel">peel: −11×14!→44690209750 · −7×13!→1101064150 · −2×12!→143060950 · −3×11!→23310550 · −6×10!→1537750 · −4×9!→86230 · −2×8!→5590 · −1×7!→550 · −4×5!→70 · −2×4!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1003651412950</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">41</td>
+  <td class="k"><b>15</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:7%"></div></div>
+    <span class="fnum">0.07</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.07 · 0.12 · 0.01 · 0.90
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×15! = 1307674368000">1×15!</span> + <span class="term" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="10×13! = 62270208000">10×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="3×10! = 10886400">3×10!</span> + <span class="term" title="2×9! = 725760">2×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="term" title="2×7! = 10080">2×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,1,10,2,4,3,2,1,2,6,5,2,3,0,1,0]</div>
+    <div class="peel">peel: −1×15!→150577837147 · −1×14!→63399545947 · −10×13!→1129337947 · −2×12!→171334747 · −4×11!→11667547 · −3×10!→781147 · −2×9!→55387 · −1×8!→15067 · −2×7!→4987 · −6×6!→667 · −5×5!→67 · −2×4!→19 · −3×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>1458252205147</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">42</td>
+  <td class="k"><b>15</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:13%"></div></div>
+    <span class="fnum">0.13</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.13 · 0.21 · 0.08 · 0.90
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×15! = 2615348736000">2×15!</span> + <span class="term" title="3×14! = 261534873600">3×14!</span> + <span class="term" title="2×13! = 12454041600">2×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="term" title="2×10! = 7257600">2×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="zero" title="0×8! = 0">0×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,3,2,12,7,2,6,0,5,6,0,2,2,1,1,0]</div>
+    <div class="peel">peel: −2×15!→280025816463 · −3×14!→18490942863 · −2×13!→6036901263 · −12×12!→288882063 · −7×11!→9464463 · −2×10!→2206863 · −6×9!→29583 · −5×7!→4383 · −6×6!→63 · −2×4!→15 · −2×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>2895374552463</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">43</td>
+  <td class="k"><b>15</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:33%"></div></div>
+    <span class="fnum">0.33</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.33 · 0.67 · 0.31 · 0.88
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×15! = 6538371840000">5×15!</span> + <span class="term" title="9×14! = 784604620800">9×14!</span> + <span class="term" title="13×13! = 80951270400">13×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="3×11! = 119750400">3×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="term" title="2×9! = 725760">2×9!</span> + <span class="term" title="7×8! = 282240">7×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,9,13,12,3,4,2,7,4,5,0,2,2,2,1,0]</div>
+    <div class="peel">peel: −5×15!→871439207825 · −9×14!→86834587025 · −13×13!→5883316625 · −12×12!→135297425 · −3×11!→15547025 · −4×10!→1031825 · −2×9!→306065 · −7×8!→23825 · −4×7!→3665 · −5×6!→65 · −2×4!→17 · −2×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>7409811047825</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">44</td>
+  <td class="k"><b>15</b></td>
+  <td class="a">11</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:73%"></div></div>
+    <span class="fnum">0.73</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.73 · 0.78 · 0.72 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="11×15! = 14384418048000">11×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="11×12! = 5269017600">11×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [11,11,9,11,1,8,3,6,4,4,2,1,1,0,1,0]</div>
+    <div class="peel">peel: −11×15!→1020343709071 · −11×14!→61382505871 · −9×13!→5339318671 · −11×12!→70301071 · −1×11!→30384271 · −8×10!→1353871 · −3×9!→265231 · −6×8!→23311 · −4×7!→3151 · −4×6!→271 · −2×5!→31 · −1×4!→7 · −1×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>15404761757071</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">45</td>
+  <td class="k"><b>15</b></td>
+  <td class="a">15</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:100%"></div></div>
+    <span class="fnum">1.00</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    1.00 · 0.29 · 0.95 · 0.98
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="15×15! = 19615115520000">15×15!</span> + <span class="term" title="4×14! = 348713164800">4×14!</span> + <span class="term" title="5×13! = 31135104000">5×13!</span> + <span class="term" title="3×12! = 1437004800">3×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="1×9! = 362880">1×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [15,4,5,3,1,6,1,5,7,5,0,1,2,0,1,0]</div>
+    <div class="peel">peel: −15×15!→381347566597 · −4×14!→32634401797 · −5×13!→1499297797 · −3×12!→62292997 · −1×11!→22376197 · −6×10!→603397 · −1×9!→240517 · −5×8!→38917 · −7×7!→3637 · −5×6!→37 · −1×4!→13 · −2×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>19996463086597</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">46</td>
+  <td class="k"><b>16</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:12%"></div></div>
+    <span class="fnum">0.12</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.12 · 0.46 · 0.09 · 0.81
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×16! = 41845579776000">2×16!</span> + <span class="term" title="7×15! = 9153720576000">7×15!</span> + <span class="term" title="4×14! = 348713164800">4×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,7,4,9,9,7,6,3,8,5,4,4,2,0,2,0,0]</div>
+    <div class="peel">peel: −2×16!→9563090572612 · −7×15!→409369996612 · −4×14!→60656831812 · −9×13!→4613644612 · −9×12!→302630212 · −7×11!→23212612 · −6×10!→1439812 · −3×9!→351172 · −8×8!→28612 · −5×7!→3412 · −4×6!→532 · −4×5!→52 · −2×4!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>51408670348612</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">47</td>
+  <td class="k"><b>16</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:31%"></div></div>
+    <span class="fnum">0.31</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.31 · 0.72 · 0.29 · 0.87
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×16! = 104613949440000">5×16!</span> + <span class="term" title="11×15! = 14384418048000">11×15!</span> + <span class="term" title="7×14! = 610248038400">7×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="4×12! = 1916006400">4×12!</span> + <span class="term" title="2×11! = 79833600">2×11!</span> + <span class="term" title="1×10! = 3628800">1×10!</span> + <span class="term" title="2×9! = 725760">2×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,11,7,9,4,2,1,2,5,0,6,0,3,3,0,0,0]</div>
+    <div class="peel">peel: −5×16!→15052709674170 · −11×15!→668291626170 · −7×14!→58043587770 · −9×13!→2000400570 · −4×12!→84394170 · −2×11!→4560570 · −1×10!→931770 · −2×9!→206010 · −5×8!→4410 · −6×6!→90 · −3×4!→18 · −3×3!→0</div>
+  </td>
+  <td class="d"><code>119666659114170</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">48</td>
+  <td class="k"><b>16</b></td>
+  <td class="a">9</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:56%"></div></div>
+    <span class="fnum">0.56</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.56 · 0.14 · 0.51 · 0.98
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="9×16! = 188305108992000">9×16!</span> + <span class="term" title="2×15! = 2615348736000">2×15!</span> + <span class="term" title="3×14! = 261534873600">3×14!</span> + <span class="term" title="4×13! = 24908083200">4×13!</span> + <span class="zero" title="0×12! = 0">0×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [9,2,3,4,0,1,9,3,8,5,4,3,0,0,1,1,0]</div>
+    <div class="peel">peel: −9×16!→2901865708443 · −2×15!→286516972443 · −3×14!→24982098843 · −4×13!→74015643 · −1×11!→34098843 · −9×10!→1439643 · −3×9!→351003 · −8×8!→28443 · −5×7!→3243 · −4×6!→363 · −3×5!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>191206974700443</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">49</td>
+  <td class="k"><b>17</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:6%"></div></div>
+    <span class="fnum">0.06</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.06 · 0.15 · 0.01 · 0.87
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×17! = 355687428096000">1×17!</span> + <span class="term" title="2×16! = 41845579776000">2×16!</span> + <span class="term" title="8×15! = 10461394944000">8×15!</span> + <span class="term" title="12×14! = 1046139494400">12×14!</span> + <span class="term" title="12×13! = 74724249600">12×13!</span> + <span class="term" title="7×12! = 3353011200">7×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="term" title="1×10! = 3628800">1×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,2,8,12,12,7,7,1,6,5,7,1,0,1,3,1,1,0]</div>
+    <div class="peel">peel: −1×17!→53431476936525 · −2×16!→11585897160525 · −8×15!→1124502216525 · −12×14!→78362722125 · −12×13!→3638472525 · −7×12!→285461325 · −7×11!→6043725 · −1×10!→2414925 · −6×9!→237645 · −5×8!→36045 · −7×7!→765 · −1×6!→45 · −1×4!→21 · −3×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>409118905032525</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">50</td>
+  <td class="k"><b>17</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:6%"></div></div>
+    <span class="fnum">0.06</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.06 · 0.72 · 0.04 · 0.58
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×17! = 355687428096000">1×17!</span> + <span class="term" title="12×16! = 251073478656000">12×16!</span> + <span class="term" title="3×15! = 3923023104000">3×15!</span> + <span class="term" title="5×14! = 435891456000">5×14!</span> + <span class="term" title="3×13! = 18681062400">3×13!</span> + <span class="term" title="4×12! = 1916006400">4×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,12,3,5,3,4,1,10,4,3,1,6,2,3,2,0,0,0]</div>
+    <div class="peel">peel: −1×17!→255453068071764 · −12×16!→4379589415764 · −3×15!→456566311764 · −5×14!→20674855764 · −3×13!→1993793364 · −4×12!→77786964 · −1×11!→37870164 · −10×10!→1582164 · −4×9!→130644 · −3×8!→9684 · −1×7!→4644 · −6×6!→324 · −2×5!→84 · −3×4!→12 · −2×3!→0</div>
+  </td>
+  <td class="d"><code>611140496167764</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">51</td>
+  <td class="k"><b>17</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:29%"></div></div>
+    <span class="fnum">0.29</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.29 · 0.79 · 0.28 · 0.86
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×17! = 1778437140480000">5×17!</span> + <span class="term" title="13×16! = 271996268544000">13×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="5×14! = 435891456000">5×14!</span> + <span class="term" title="8×13! = 49816166400">8×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="zero" title="0×10! = 0">0×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="3×6! = 2160">3×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,13,6,5,8,9,1,0,3,6,7,3,2,1,2,0,0,0]</div>
+    <div class="peel">peel: −5×17!→280332374673876 · −13×16!→8336106129876 · −6×15!→490059921876 · −5×14!→54168465876 · −8×13!→4352299476 · −9×12!→41285076 · −1×11!→1368276 · −3×9!→279636 · −6×8!→37716 · −7×7!→2436 · −3×6!→276 · −2×5!→36 · −1×4!→12 · −2×3!→0</div>
+  </td>
+  <td class="d"><code>2058769515153876</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">52</td>
+  <td class="k"><b>17</b></td>
+  <td class="a">11</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:65%"></div></div>
+    <span class="fnum">0.65</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.65 · 0.85 · 0.64 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="11×17! = 3912561709056000">11×17!</span> + <span class="term" title="14×16! = 292919058432000">14×16!</span> + <span class="term" title="8×15! = 10461394944000">8×15!</span> + <span class="term" title="6×14! = 523069747200">6×14!</span> + <span class="term" title="4×13! = 24908083200">4×13!</span> + <span class="term" title="11×12! = 5269017600">11×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="2×7! = 10080">2×7!</span> + <span class="term" title="3×6! = 2160">3×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [11,14,8,6,4,11,5,8,4,6,2,3,5,0,3,1,0,0]</div>
+    <div class="peel">peel: −11×17!→303933930544700 · −14×16!→11014872112700 · −8×15!→553477168700 · −6×14!→30407421500 · −4×13!→5499338300 · −11×12!→230320700 · −5×11!→30736700 · −8×10!→1706300 · −4×9!→254780 · −6×8!→12860 · −2×7!→2780 · −3×6!→620 · −5×5!→20 · −3×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>4216495639600700</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">53</td>
+  <td class="k"><b>18</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:6%"></div></div>
+    <span class="fnum">0.06</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.06 · 0.06 · 0.00 · 0.95
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×18! = 6402373705728000">1×18!</span> + <span class="term" title="1×17! = 355687428096000">1×17!</span> + <span class="zero" title="0×16! = 0">0×16!</span> + <span class="term" title="4×15! = 5230697472000">4×15!</span> + <span class="term" title="4×14! = 348713164800">4×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,1,0,4,4,6,12,7,10,3,1,7,4,5,0,0,2,0,0]</div>
+    <div class="peel">peel: −1×18!→361310265750124 · −1×17!→5622837654124 · −4×15!→392140182124 · −4×14!→43427017324 · −6×13!→6064892524 · −12×12!→316873324 · −7×11!→37455724 · −10×10!→1167724 · −3×9!→79084 · −1×8!→38764 · −7×7!→3484 · −4×6!→604 · −5×5!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>6763683971478124</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">54</td>
+  <td class="k"><b>18</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:6%"></div></div>
+    <span class="fnum">0.06</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.06 · 0.56 · 0.03 · 0.64
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×18! = 6402373705728000">1×18!</span> + <span class="term" title="10×17! = 3556874280960000">10×17!</span> + <span class="zero" title="0×16! = 0">0×16!</span> + <span class="term" title="11×15! = 14384418048000">11×15!</span> + <span class="term" title="9×14! = 784604620800">9×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="9×11! = 359251200">9×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="7×8! = 282240">7×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,10,0,11,9,6,1,9,9,5,7,1,1,5,4,1,2,1,0]</div>
+    <div class="peel">peel: −1×18!→3572081538768707 · −10×17!→15207257808707 · −11×15!→822839760707 · −9×14!→38235139907 · −6×13!→873015107 · −1×12!→394013507 · −9×11!→34762307 · −9×10!→2103107 · −5×9!→288707 · −7×8!→6467 · −1×7!→1427 · −1×6!→707 · −5×5!→107 · −4×4!→11 · −1×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>9974455244496707</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">55</td>
+  <td class="k"><b>18</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:22%"></div></div>
+    <span class="fnum">0.22</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.22 · 0.69 · 0.21 · 0.85
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×18! = 25609494822912000">4×18!</span> + <span class="term" title="12×17! = 4268249137152000">12×17!</span> + <span class="term" title="8×16! = 167382319104000">8×16!</span> + <span class="zero" title="0×15! = 0">0×15!</span> + <span class="term" title="3×14! = 261534873600">3×14!</span> + <span class="zero" title="0×13! = 0">0×13!</span> + <span class="term" title="5×12! = 2395008000">5×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="zero" title="0×10! = 0">0×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,12,8,0,3,0,5,7,0,9,3,3,0,2,0,3,1,0,0]</div>
+    <div class="peel">peel: −4×18!→4435895668957460 · −12×17!→167646531805460 · −8×16!→264212701460 · −3×14!→2677827860 · −5×12!→282819860 · −7×11!→3402260 · −9×9!→136340 · −3×8!→15380 · −3×7!→260 · −2×5!→20 · −3×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>30045390491869460</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">56</td>
+  <td class="k"><b>18</b></td>
+  <td class="a">6</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:33%"></div></div>
+    <span class="fnum">0.33</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.33 · 0.91 · 0.33 · 0.87
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="6×18! = 38414242234368000">6×18!</span> + <span class="term" title="16×17! = 5690998849536000">16×17!</span> + <span class="term" title="5×16! = 104613949440000">5×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="13×13! = 80951270400">13×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="8×11! = 319334400">8×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [6,16,5,6,11,13,2,8,6,4,2,1,4,4,0,2,1,1,0]</div>
+    <div class="peel">peel: −6×18!→5804500058308575 · −16×17!→113501208772575 · −5×16!→8887259332575 · −6×15!→1041213124575 · −11×14!→82251921375 · −13×13!→1300650975 · −2×12!→342647775 · −8×11!→23313375 · −6×10!→1540575 · −4×9!→89055 · −2×8!→8415 · −1×7!→3375 · −4×6!→495 · −4×5!→15 · −2×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>44218742292676575</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">57</td>
+  <td class="k"><b>19</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:5%"></div></div>
+    <span class="fnum">0.05</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.05 · 0.14 · 0.01 · 0.88
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×19! = 121645100408832000">1×19!</span> + <span class="term" title="2×18! = 12804747411456000">2×18!</span> + <span class="term" title="10×17! = 3556874280960000">10×17!</span> + <span class="term" title="11×16! = 230150688768000">11×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="13×13! = 80951270400">13×13!</span> + <span class="zero" title="0×12! = 0">0×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="zero" title="0×10! = 0">0×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="term" title="7×8! = 282240">7×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="4×5! = 480">4×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,2,10,11,6,11,13,0,4,0,6,7,4,2,4,3,3,1,0,0]</div>
+    <div class="peel">peel: −1×19!→16600658502014492 · −2×18!→3795911090558492 · −10×17!→239036809598492 · −11×16!→8886120830492 · −6×15!→1040074622492 · −11×14!→81113419292 · −13×13!→162148892 · −4×11!→2481692 · −6×9!→304412 · −7×8!→22172 · −4×7!→2012 · −2×6!→572 · −4×5!→92 · −3×4!→20 · −3×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>138245758910846492</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">58</td>
+  <td class="k"><b>19</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:5%"></div></div>
+    <span class="fnum">0.05</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.05 · 0.64 · 0.03 · 0.61
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×19! = 121645100408832000">1×19!</span> + <span class="term" title="12×18! = 76828484468736000">12×18!</span> + <span class="term" title="4×17! = 1422749712384000">4×17!</span> + <span class="term" title="3×16! = 62768369664000">3×16!</span> + <span class="term" title="13×15! = 16999766784000">13×15!</span> + <span class="term" title="6×14! = 523069747200">6×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="10×12! = 4790016000">10×12!</span> + <span class="zero" title="0×11! = 0">0×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="7×9! = 2540160">7×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,12,4,3,13,6,6,10,0,7,7,2,6,1,5,3,2,2,1,0]</div>
+    <div class="peel">peel: −1×19!→78331567567510049 · −12×18!→1503083098774049 · −4×17!→80333386390049 · −3×16!→17565016726049 · −13×15!→565249942049 · −6×14!→42180194849 · −6×13!→4818070049 · −10×12!→28054049 · −7×10!→2652449 · −7×9!→112289 · −2×8!→31649 · −6×7!→1409 · −1×6!→689 · −5×5!→89 · −3×4!→17 · −2×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>199976667976342049</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">59</td>
+  <td class="k"><b>19</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:21%"></div></div>
+    <span class="fnum">0.21</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.21 · 0.32 · 0.17 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×19! = 486580401635328000">4×19!</span> + <span class="term" title="6×18! = 38414242234368000">6×18!</span> + <span class="zero" title="0×17! = 0">0×17!</span> + <span class="term" title="3×16! = 62768369664000">3×16!</span> + <span class="term" title="9×15! = 11769069312000">9×15!</span> + <span class="term" title="13×14! = 1133317785600">13×14!</span> + <span class="term" title="11×13! = 68497228800">11×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="term" title="6×9! = 2177280">6×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="1×5! = 120">1×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,6,0,3,9,13,11,2,4,4,6,5,3,0,1,2,3,2,1,0]</div>
+    <div class="peel">peel: −4×19!→38489982622938191 · −6×18!→75740388570191 · −3×16!→12972018906191 · −9×15!→1202949594191 · −13×14!→69631808591 · −11×13!→1134579791 · −2×12!→176576591 · −4×11!→16909391 · −4×10!→2394191 · −6×9!→216911 · −5×8!→15311 · −3×7!→191 · −1×5!→71 · −2×4!→23 · −3×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>525070384258266191</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">60</td>
+  <td class="k"><b>19</b></td>
+  <td class="a">9</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:47%"></div></div>
+    <span class="fnum">0.47</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.47 · 0.33 · 0.44 · 0.96
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="9×19! = 1094805903679488000">9×19!</span> + <span class="term" title="6×18! = 38414242234368000">6×18!</span> + <span class="term" title="5×17! = 1778437140480000">5×17!</span> + <span class="term" title="2×16! = 41845579776000">2×16!</span> + <span class="zero" title="0×15! = 0">0×15!</span> + <span class="term" title="10×14! = 871782912000">10×14!</span> + <span class="term" title="7×13! = 43589145600">7×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="11×11! = 439084800">11×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="2×9! = 725760">2×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="2×7! = 10080">2×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [9,6,5,2,0,10,7,12,11,7,2,2,2,6,3,0,3,2,0,0]</div>
+    <div class="peel">peel: −9×19!→40235446540008382 · −6×18!→1821204305640382 · −5×17!→42767165160382 · −2×16!→921585384382 · −10×14!→49802472382 · −7×13!→6213326782 · −12×12!→465307582 · −11×11!→26222782 · −7×10!→821182 · −2×9!→95422 · −2×8!→14782 · −2×7!→4702 · −6×6!→382 · −3×5!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1135041350219496382</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">61</td>
+  <td class="k"><b>19</b></td>
+  <td class="a">11</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:58%"></div></div>
+    <span class="fnum">0.58</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.58 · 0.72 · 0.56 · 0.94
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="11×19! = 1338096104497152000">11×19!</span> + <span class="term" title="13×18! = 83230858174464000">13×18!</span> + <span class="term" title="12×17! = 4268249137152000">12×17!</span> + <span class="term" title="9×16! = 188305108992000">9×16!</span> + <span class="term" title="3×15! = 3923023104000">3×15!</span> + <span class="term" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="2×13! = 12454041600">2×13!</span> + <span class="term" title="6×12! = 2874009600">6×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="3×10! = 10886400">3×10!</span> + <span class="term" title="2×9! = 725760">2×9!</span> + <span class="term" title="4×8! = 161280">4×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [11,13,12,9,3,1,2,6,4,3,2,4,1,4,0,0,3,2,0,0]</div>
+    <div class="peel">peel: −11×19!→87691438121502982 · −13×18!→4460579947038982 · −12×17!→192330809886982 · −9×16!→4025700894982 · −3×15!→102677790982 · −1×14!→15499499782 · −2×13!→3045458182 · −6×12!→171448582 · −4×11!→11781382 · −3×10!→894982 · −2×9!→169222 · −4×8!→7942 · −1×7!→2902 · −4×6!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1425787542618654982</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">62</td>
+  <td class="k"><b>20</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:5%"></div></div>
+    <span class="fnum">0.05</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.05 · 0.61 · 0.03 · 0.62
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×20! = 2432902008176640000">1×20!</span> + <span class="term" title="12×19! = 1459741204905984000">12×19!</span> + <span class="term" title="2×18! = 12804747411456000">2×18!</span> + <span class="term" title="8×17! = 2845499424768000">8×17!</span> + <span class="term" title="3×16! = 62768369664000">3×16!</span> + <span class="term" title="12×15! = 15692092416000">12×15!</span> + <span class="term" title="7×14! = 610248038400">7×14!</span> + <span class="term" title="1×13! = 6227020800">1×13!</span> + <span class="term" title="11×12! = 5269017600">11×12!</span> + <span class="term" title="9×11! = 359251200">9×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,12,2,8,3,12,7,1,11,9,6,4,8,3,5,3,4,1,0,0,0]</div>
+    <div class="peel">peel: −1×20!→1475470534331182062 · −12×19!→15729329425198062 · −2×18!→2924582013742062 · −8×17!→79082588974062 · −3×16!→16314219310062 · −12×15!→622126894062 · −7×14!→11878855662 · −1×13!→5651834862 · −11×12!→382817262 · −9×11!→23566062 · −6×10!→1793262 · −4×9!→341742 · −8×8!→19182 · −3×7!→4062 · −5×6!→462 · −3×5!→102 · −4×4!→6 · −1×3!→0</div>
+  </td>
+  <td class="d"><code>3908372542507822062</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">63</td>
+  <td class="k"><b>20</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:15%"></div></div>
+    <span class="fnum">0.15</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.15 · 0.70 · 0.13 · 0.81
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×20! = 7298706024529920000">3×20!</span> + <span class="term" title="13×19! = 1581386305314816000">13×19!</span> + <span class="term" title="17×18! = 108840352997376000">17×18!</span> + <span class="term" title="12×17! = 4268249137152000">12×17!</span> + <span class="term" title="1×16! = 20922789888000">1×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="2×14! = 174356582400">2×14!</span> + <span class="term" title="11×13! = 68497228800">11×13!</span> + <span class="term" title="12×12! = 5748019200">12×12!</span> + <span class="term" title="2×11! = 79833600">2×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,13,17,12,1,6,2,11,12,2,7,5,5,5,4,0,3,2,2,0,0]</div>
+    <div class="peel">peel: −3×20!→1694523924994549768 · −13×19!→113137619679733768 · −17×18!→4297266682357768 · −12×17!→29017545205768 · −1×16!→8094755317768 · −6×15!→248709109768 · −2×14!→74352527368 · −11×13!→5855298568 · −12×12!→107279368 · −2×11!→27445768 · −7×10!→2044168 · −5×9!→229768 · −5×8!→28168 · −5×7!→2968 · −4×6!→88 · −3×4!→16 · −2×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>8993229949524469768</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">64</td>
+  <td class="k"><b>20</b></td>
+  <td class="a">7</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:35%"></div></div>
+    <span class="fnum">0.35</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.35 · 0.32 · 0.32 · 0.96
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="7×20! = 17030314057236480000">7×20!</span> + <span class="term" title="6×19! = 729870602452992000">6×19!</span> + <span class="term" title="6×18! = 38414242234368000">6×18!</span> + <span class="term" title="3×17! = 1067062284288000">3×17!</span> + <span class="zero" title="0×16! = 0">0×16!</span> + <span class="term" title="1×15! = 1307674368000">1×15!</span> + <span class="zero" title="0×14! = 0">0×14!</span> + <span class="term" title="13×13! = 80951270400">13×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="term" title="10×11! = 399168000">10×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="4×8! = 161280">4×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="zero" title="0×6! = 0">0×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [7,6,6,3,0,1,0,13,9,10,9,4,4,3,0,5,4,2,0,0,0]</div>
+    <div class="peel">peel: −7×20!→769353300341756628 · −6×19!→39482697888764628 · −6×18!→1068455654396628 · −3×17!→1393370108628 · −1×15!→85695740628 · −13×13!→4744470228 · −9×12!→433455828 · −10×11!→34287828 · −9×10!→1628628 · −4×9!→177108 · −4×8!→15828 · −3×7!→708 · −5×5!→108 · −4×4!→12 · −2×3!→0</div>
+  </td>
+  <td class="d"><code>17799667357578236628</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">65</td>
+  <td class="k"><b>20</b></td>
+  <td class="a">12</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:60%"></div></div>
+    <span class="fnum">0.60</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.60 · 0.56 · 0.58 · 0.96
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="12×20! = 29194824098119680000">12×20!</span> + <span class="term" title="11×19! = 1338096104497152000">11×19!</span> + <span class="term" title="5×18! = 32011868528640000">5×18!</span> + <span class="term" title="9×17! = 3201186852864000">9×17!</span> + <span class="term" title="11×16! = 230150688768000">11×16!</span> + <span class="term" title="10×15! = 13076743680000">10×15!</span> + <span class="term" title="9×14! = 784604620800">9×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="term" title="8×11! = 319334400">8×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="zero" title="0×9! = 0">0×9!</span> + <span class="zero" title="0×8! = 0">0×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [12,11,5,9,11,10,9,6,9,8,10,0,0,7,1,3,3,3,2,1,0]</div>
+    <div class="peel">peel: −12×20!→1373553213944522855 · −11×19!→35457109447370855 · −5×18!→3445240918730855 · −9×17!→244054065866855 · −11×16!→13903377098855 · −10×15!→826633418855 · −9×14!→42028798055 · −6×13!→4666673255 · −9×12!→355658855 · −8×11!→36324455 · −10×10!→36455 · −7×7!→1175 · −1×6!→455 · −3×5!→95 · −3×4!→23 · −3×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>30568377312064202855</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">66</td>
+  <td class="k"><b>20</b></td>
+  <td class="a">19</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:95%"></div></div>
+    <span class="fnum">0.95</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.95 · 0.05 · 0.90 · 1.00
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="19×20! = 46225138155356160000">19×20!</span> + <span class="zero" title="0×19! = 0">0×19!</span> + <span class="term" title="18×18! = 115242726703104000">18×18!</span> + <span class="term" title="16×17! = 5690998849536000">16×17!</span> + <span class="term" title="6×16! = 125536739328000">6×16!</span> + <span class="term" title="15×15! = 19615115520000">15×15!</span> + <span class="term" title="5×14! = 435891456000">5×14!</span> + <span class="term" title="13×13! = 80951270400">13×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="6×11! = 239500800">6×11!</span> + <span class="term" title="5×10! = 18144000">5×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [19,0,18,16,6,15,5,13,1,6,5,9,1,1,5,0,1,3,2,0,0]</div>
+    <div class="peel">peel: −19×20!→121079394990175726 · −18×18!→5836668287071726 · −16×17!→145669437535726 · −6×16!→20132698207726 · −15×15!→517582687726 · −5×14!→81691231726 · −13×13!→739961326 · −1×12!→260959726 · −6×11!→21458926 · −5×10!→3314926 · −9×9!→49006 · −1×8!→8686 · −1×7!→3646 · −5×6!→46 · −1×4!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>46346217550346335726</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">67</td>
+  <td class="k"><b>21</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:10%"></div></div>
+    <span class="fnum">0.10</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.10 · 0.60 · 0.08 · 0.77
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×21! = 102181884343418880000">2×21!</span> + <span class="term" title="12×20! = 29194824098119680000">12×20!</span> + <span class="term" title="10×19! = 1216451004088320000">10×19!</span> + <span class="term" title="9×18! = 57621363351552000">9×18!</span> + <span class="term" title="17×17! = 6046686277632000">17×17!</span> + <span class="term" title="5×16! = 104613949440000">5×16!</span> + <span class="term" title="8×15! = 10461394944000">8×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="11×13! = 68497228800">11×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="zero" title="0×11! = 0">0×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="zero" title="0×8! = 0">0×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,12,10,9,17,5,8,11,11,9,0,4,5,0,6,2,5,0,3,2,0,0]</div>
+    <div class="peel">peel: −2×21!→30475059258967376302 · −12×20!→1280235160847696302 · −10×19!→63784156759376302 · −9×18!→6162793407824302 · −17×17!→116107130192302 · −5×16!→11493180752302 · −8×15!→1031785808302 · −11×14!→72824605102 · −11×13!→4327376302 · −9×12!→16361902 · −4×10!→1846702 · −5×9!→32302 · −6×7!→2062 · −2×6!→622 · −5×5!→22 · −3×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>132656943602386256302</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">68</td>
+  <td class="k"><b>21</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:19%"></div></div>
+    <span class="fnum">0.19</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.19 · 0.30 · 0.16 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×21! = 204363768686837760000">4×21!</span> + <span class="term" title="6×20! = 14597412049059840000">6×20!</span> + <span class="term" title="7×19! = 851515702861824000">7×19!</span> + <span class="term" title="13×18! = 83230858174464000">13×18!</span> + <span class="term" title="6×17! = 2134124568576000">6×17!</span> + <span class="term" title="9×16! = 188305108992000">9×16!</span> + <span class="term" title="12×15! = 15692092416000">12×15!</span> + <span class="term" title="9×14! = 784604620800">9×14!</span> + <span class="term" title="1×13! = 6227020800">1×13!</span> + <span class="term" title="7×12! = 3353011200">7×12!</span> + <span class="term" title="10×11! = 399168000">10×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="8×9! = 2903040">8×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,6,7,13,6,9,12,9,1,7,10,7,8,1,0,2,5,1,0,0,1,0]</div>
+    <div class="peel">peel: −4×21!→15534497526478279825 · −6×20!→937085477418439825 · −7×19!→85569774556615825 · −13×18!→2338916382151825 · −6×17!→204791813575825 · −9×16!→16486704583825 · −12×15!→794612167825 · −9×14!→10007547025 · −1×13!→3780526225 · −7×12!→427515025 · −10×11!→28347025 · −7×10!→2945425 · −8×9!→42385 · −1×8!→2065 · −2×6!→625 · −5×5!→25 · −1×4!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>219898266213316039825</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">69</td>
+  <td class="k"><b>21</b></td>
+  <td class="a">5</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:24%"></div></div>
+    <span class="fnum">0.24</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.24 · 0.82 · 0.23 · 0.86
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="5×21! = 255454710858547200000">5×21!</span> + <span class="term" title="17×20! = 41359334139002880000">17×20!</span> + <span class="term" title="3×19! = 364935301226496000">3×19!</span> + <span class="term" title="14×18! = 89633231880192000">14×18!</span> + <span class="term" title="16×17! = 5690998849536000">16×17!</span> + <span class="term" title="8×16! = 167382319104000">8×16!</span> + <span class="term" title="15×15! = 19615115520000">15×15!</span> + <span class="term" title="4×14! = 348713164800">4×14!</span> + <span class="term" title="7×13! = 43589145600">7×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="term" title="1×9! = 362880">1×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="term" title="7×7! = 35280">7×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="1×5! = 120">1×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [5,17,3,14,16,8,15,4,7,2,4,4,1,2,7,4,1,0,0,2,0,0]</div>
+    <div class="peel">peel: −5×21!→41819781061828705804 · −17×20!→460446922825825804 · −3×19!→95511621599329804 · −14×18!→5878389719137804 · −16×17!→187390869601804 · −8×16!→20008550497804 · −15×15!→393434977804 · −4×14!→44721813004 · −7×13!→1132667404 · −2×12!→174664204 · −4×11!→14997004 · −4×10!→481804 · −1×9!→118924 · −2×8!→38284 · −7×7!→3004 · −4×6!→124 · −1×5!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>297274491920375905804</code></td>
+</tr>
+<tr class="row" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">70</td>
+  <td class="k"><b>21</b></td>
+  <td class="a">18</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:86%"></div></div>
+    <span class="fnum">0.86</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.86 · 0.99 · 0.86 · 0.95
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="18×21! = 919636959090769920000">18×21!</span> + <span class="term" title="20×20! = 48658040163532800000">20×20!</span> + <span class="term" title="17×19! = 2067966706950144000">17×19!</span> + <span class="term" title="11×18! = 70426110763008000">11×18!</span> + <span class="term" title="10×17! = 3556874280960000">10×17!</span> + <span class="term" title="1×16! = 20922789888000">1×16!</span> + <span class="term" title="3×15! = 3923023104000">3×15!</span> + <span class="term" title="2×14! = 174356582400">2×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="4×8! = 161280">4×8!</span> + <span class="term" title="6×7! = 30240">6×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [18,20,17,11,10,1,3,2,6,2,5,10,3,4,6,5,2,3,1,1,1,0]</div>
+    <div class="peel">peel: −18×21!→50800014914253770481 · −20×20!→2141974750720970481 · −17×19!→74008043770826481 · −11×18!→3581933007818481 · −10×17!→25058726858481 · −1×16!→4135936970481 · −3×15!→212913866481 · −2×14!→38557284081 · −6×13!→1195159281 · −2×12!→237156081 · −5×11!→37572081 · −10×10!→1284081 · −3×9!→195441 · −4×8!→34161 · −6×7!→3921 · −5×6!→321 · −2×5!→81 · −3×4!→9 · −1×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>970436974005023690481</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">75</td>
+  <td class="k"><b>22</b></td>
+  <td class="a">20</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:91%"></div></div>
+    <span class="fnum">0.91</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.91 · 0.05 · 0.87 · 1.00
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="20×22! = 22480014555552153600000">20×22!</span> + <span class="term" title="1×21! = 51090942171709440000">1×21!</span> + <span class="term" title="2×20! = 4865804016353280000">2×20!</span> + <span class="term" title="19×19! = 2311256907767808000">19×19!</span> + <span class="term" title="6×18! = 38414242234368000">6×18!</span> + <span class="term" title="6×17! = 2134124568576000">6×17!</span> + <span class="term" title="6×16! = 125536739328000">6×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="6×14! = 523069747200">6×14!</span> + <span class="term" title="11×13! = 68497228800">11×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="1×10! = 3628800">1×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [20,1,2,19,6,6,6,6,6,11,1,5,1,5,5,1,5,2,3,2,1,1,0]</div>
+    <div class="peel">peel: −20×22!→58308685437670223367 · −1×21!→7217743265960783367 · −2×20!→2351939249607503367 · −19×19!→40682341839695367 · −6×18!→2268099605327367 · −6×17!→133975036751367 · −6×16!→8438297423367 · −6×15!→592251215367 · −6×14!→69181468167 · −11×13!→684239367 · −1×12!→205237767 · −5×11!→5653767 · −1×10!→2024967 · −5×9!→210567 · −5×8!→8967 · −1×7!→3927 · −5×6!→327 · −2×5!→87 · −3×4!→15 · −2×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>22538323240989823823367</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">80</td>
+  <td class="k"><b>24</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:4%"></div></div>
+    <span class="fnum">0.04</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.04 · 0.78 · 0.03 · 0.56
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×24! = 620448401733239439360000">1×24!</span> + <span class="term" title="18×23! = 465336301299929579520000">18×23!</span> + <span class="term" title="17×22! = 19108012372219330560000">17×22!</span> + <span class="term" title="12×21! = 613091306060513280000">12×21!</span> + <span class="term" title="5×20! = 12164510040883200000">5×20!</span> + <span class="term" title="16×19! = 1946321606541312000">16×19!</span> + <span class="term" title="17×18! = 108840352997376000">17×18!</span> + <span class="term" title="11×17! = 3912561709056000">11×17!</span> + <span class="term" title="14×16! = 292919058432000">14×16!</span> + <span class="zero" title="0×15! = 0">0×15!</span> + <span class="term" title="3×14! = 261534873600">3×14!</span> + <span class="term" title="6×13! = 37362124800">6×13!</span> + <span class="term" title="11×12! = 5269017600">11×12!</span> + <span class="term" title="6×11! = 239500800">6×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,18,17,12,5,16,17,11,14,0,3,6,11,6,8,3,5,1,1,2,0,2,2,0,0]</div>
+    <div class="peel">peel: −1×24!→485071628855995048579456 · −18×23!→19735327556065469059456 · −17×22!→627315183846138499456 · −12×21!→14223877785625219456 · −5×20!→2059367744742019456 · −16×19!→113046138200707456 · −17×18!→4205785203331456 · −11×17!→293223494275456 · −14×16!→304435843456 · −3×14!→42900969856 · −6×13!→5538845056 · −11×12!→269827456 · −6×11!→30326656 · −8×10!→1296256 · −3×9!→207616 · −5×8!→6016 · −1×7!→976 · −1×6!→256 · −2×5!→16 · −2×3!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1105520030589234487939456</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">85</td>
+  <td class="k"><b>25</b></td>
+  <td class="a">1</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:4%"></div></div>
+    <span class="fnum">0.04</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.04 · 0.36 · 0.01 · 0.74
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="1×25! = 15511210043330985984000000">1×25!</span> + <span class="term" title="8×24! = 4963587213865915514880000">8×24!</span> + <span class="term" title="23×23! = 594596384994354462720000">23×23!</span> + <span class="term" title="18×22! = 20232013099996938240000">18×22!</span> + <span class="term" title="13×21! = 664182248232222720000">13×21!</span> + <span class="term" title="10×20! = 24329020081766400000">10×20!</span> + <span class="term" title="13×19! = 1581386305314816000">13×19!</span> + <span class="term" title="2×18! = 12804747411456000">2×18!</span> + <span class="term" title="15×17! = 5335311421440000">15×17!</span> + <span class="term" title="15×16! = 313841848320000">15×16!</span> + <span class="term" title="8×15! = 10461394944000">8×15!</span> + <span class="term" title="14×14! = 1220496076800">14×14!</span> + <span class="term" title="8×13! = 49816166400">8×13!</span> + <span class="term" title="3×12! = 1437004800">3×12!</span> + <span class="term" title="2×11! = 79833600">2×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="term" title="7×9! = 2540160">7×9!</span> + <span class="term" title="5×8! = 201600">5×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="3×4! = 72">3×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [1,8,23,18,13,10,13,2,15,15,8,14,8,3,2,9,7,5,1,4,3,3,1,1,0,0]</div>
+    <div class="peel">peel: −1×25!→5579105723080520160426920 · −8×24!→615518509214604645546920 · −23×23!→20922124220250182826920 · −18×22!→690111120253244586920 · −13×21!→25928872021021866920 · −10×20!→1599851939255466920 · −13×19!→18465633940650920 · −2×18!→5660886529194920 · −15×17!→325575107754920 · −15×16!→11733259434920 · −8×15!→1271864490920 · −14×14!→51368414120 · −8×13!→1552247720 · −3×12!→115242920 · −2×11!→35409320 · −9×10!→2750120 · −7×9!→209960 · −5×8!→8360 · −1×7!→3320 · −4×6!→440 · −3×5!→80 · −3×4!→8 · −1×3!→2 · −1×2!→0</div>
+  </td>
+  <td class="d"><code>21090315766411506144426920</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">90</td>
+  <td class="k"><b>26</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:8%"></div></div>
+    <span class="fnum">0.08</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.08 · 0.15 · 0.04 · 0.93
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×26! = 806582922253211271168000000">2×26!</span> + <span class="term" title="3×25! = 46533630129992957952000000">3×25!</span> + <span class="term" title="24×24! = 14890761641597746544640000">24×24!</span> + <span class="zero" title="0×23! = 0">0×23!</span> + <span class="term" title="4×22! = 4496002911110430720000">4×22!</span> + <span class="term" title="7×21! = 357636595201966080000">7×21!</span> + <span class="term" title="9×20! = 21896118073589760000">9×20!</span> + <span class="term" title="7×19! = 851515702861824000">7×19!</span> + <span class="zero" title="0×18! = 0">0×18!</span> + <span class="term" title="16×17! = 5690998849536000">16×17!</span> + <span class="term" title="4×16! = 83691159552000">4×16!</span> + <span class="term" title="7×15! = 9153720576000">7×15!</span> + <span class="term" title="5×14! = 435891456000">5×14!</span> + <span class="term" title="9×13! = 56043187200">9×13!</span> + <span class="term" title="5×12! = 2395008000">5×12!</span> + <span class="term" title="3×11! = 119750400">3×11!</span> + <span class="term" title="7×10! = 25401600">7×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="zero" title="0×4! = 0">0×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,3,24,0,4,7,9,7,0,16,4,7,5,9,5,3,7,5,6,0,1,5,0,3,2,1,0]</div>
+    <div class="peel">peel: −2×26!→61429268164515131551548863 · −3×25!→14895638034522173599548863 · −24×24!→4876392924427054908863 · −4×22!→380390013316624188863 · −7×21!→22753418114658108863 · −9×20!→857300041068348863 · −7×19!→5784338206524863 · −16×17!→93339356988863 · −4×16!→9648197436863 · −7×15!→494476860863 · −5×14!→58585404863 · −9×13!→2542217663 · −5×12!→147209663 · −3×11!→27459263 · −7×10!→2057663 · −5×9!→243263 · −6×8!→1343 · −1×6!→623 · −5×5!→23 · −3×3!→5 · −2×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>868012190417726402719548863</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(40,170,90);--fg:rgb(10,40,20);--acc:rgb(100,220,140)">
+  <td class="n">95</td>
+  <td class="k"><b>27</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:7%"></div></div>
+    <span class="fnum">0.07</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.07 · 0.34 · 0.05 · 0.85
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×27! = 21777738900836704321536000000">2×27!</span> + <span class="term" title="9×26! = 3629623150139450720256000000">9×26!</span> + <span class="term" title="7×25! = 108578470303316901888000000">7×25!</span> + <span class="term" title="15×24! = 9306726025998591590400000">15×24!</span> + <span class="term" title="22×23! = 568744368255469486080000">22×23!</span> + <span class="term" title="14×22! = 15736010188886507520000">14×22!</span> + <span class="term" title="4×21! = 204363768686837760000">4×21!</span> + <span class="term" title="10×20! = 24329020081766400000">10×20!</span> + <span class="term" title="2×19! = 243290200817664000">2×19!</span> + <span class="term" title="3×18! = 19207121117184000">3×18!</span> + <span class="term" title="13×17! = 4623936565248000">13×17!</span> + <span class="term" title="13×16! = 271996268544000">13×16!</span> + <span class="term" title="12×15! = 15692092416000">12×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="8×13! = 49816166400">8×13!</span> + <span class="term" title="3×12! = 1437004800">3×12!</span> + <span class="term" title="1×11! = 39916800">1×11!</span> + <span class="term" title="8×10! = 29030400">8×10!</span> + <span class="term" title="3×9! = 1088640">3×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="1×6! = 720">1×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,9,7,15,22,14,4,10,2,3,13,13,12,11,8,3,1,8,3,3,0,1,2,2,0,2,0,0]</div>
+    <div class="peel">peel: −2×27!→3748093055807409295477748212 · −9×26!→118469905667958575221748212 · −7×25!→9891435364641673333748212 · −15×24!→584709338643081743348212 · −22×23!→15964970387612257268212 · −14×22!→228960198725749748212 · −4×21!→24596430038911988212 · −10×20!→267409957145588212 · −2×19!→24119756327924212 · −3×18!→4912635210740212 · −13×17!→288698645492212 · −13×16!→16702376948212 · −12×15!→1010284532212 · −11×14!→51323329012 · −8×13!→1507162612 · −3×12!→70157812 · −1×11!→30241012 · −8×10!→1210612 · −3×9!→121972 · −3×8!→1012 · −1×6!→292 · −2×5!→52 · −2×4!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>25525831956644113617013748212</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(200,60,140);--fg:rgb(255,230,245);--acc:rgb(240,120,180)">
+  <td class="n">100</td>
+  <td class="k"><b>28</b></td>
+  <td class="a">2</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:7%"></div></div>
+    <span class="fnum">0.07</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.07 · 0.85 · 0.07 · 0.70
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="2×28! = 609776689223427721003008000000">2×28!</span> + <span class="term" title="23×27! = 250443997359622099697664000000">23×27!</span> + <span class="term" title="19×26! = 7662537761405507076096000000">19×26!</span> + <span class="term" title="21×25! = 325735410909950705664000000">21×25!</span> + <span class="term" title="19×24! = 11788519632931549347840000">19×24!</span> + <span class="term" title="18×23! = 465336301299929579520000">18×23!</span> + <span class="term" title="17×22! = 19108012372219330560000">17×22!</span> + <span class="term" title="18×21! = 919636959090769920000">18×21!</span> + <span class="term" title="20×20! = 48658040163532800000">20×20!</span> + <span class="term" title="14×19! = 1703031405723648000">14×19!</span> + <span class="term" title="2×18! = 12804747411456000">2×18!</span> + <span class="term" title="10×17! = 3556874280960000">10×17!</span> + <span class="term" title="10×16! = 209227898880000">10×16!</span> + <span class="term" title="11×15! = 14384418048000">11×15!</span> + <span class="term" title="3×14! = 261534873600">3×14!</span> + <span class="zero" title="0×13! = 0">0×13!</span> + <span class="term" title="8×12! = 3832012800">8×12!</span> + <span class="term" title="7×11! = 279417600">7×11!</span> + <span class="term" title="1×10! = 3628800">1×10!</span> + <span class="term" title="9×9! = 3265920">9×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [2,23,19,21,19,18,17,18,20,14,2,10,10,11,3,0,8,7,1,9,8,5,6,2,4,1,0,0,0]</div>
+    <div class="peel">peel: −2×28!→258444544465898777337371183142 · −23×27!→8000547106276677639707183142 · −19×26!→338009344871170563611183142 · −21×25!→12273933961219857947183142 · −19×24!→485414328288308599343142 · −18×23!→20078026988379019823142 · −17×22!→970014616159689263142 · −18×21!→50377657068919343142 · −20×20!→1719616905386543142 · −14×19!→16585499662895142 · −2×18!→3780752251439142 · −10×17!→223877970479142 · −10×16!→14650071599142 · −11×15!→265653551142 · −3×14!→4118677542 · −8×12!→286664742 · −7×11!→7247142 · −1×10!→3618342 · −9×9!→352422 · −8×8!→29862 · −5×7!→4662 · −6×6!→342 · −2×5!→102 · −4×4!→6 · −1×3!→0</div>
+  </td>
+  <td class="d"><code>868221233689326498340379183142</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(30,170,180);--fg:rgb(10,40,45);--acc:rgb(90,220,230)">
+  <td class="n">105</td>
+  <td class="k"><b>29</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:10%"></div></div>
+    <span class="fnum">0.10</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.10 · 0.29 · 0.08 · 0.91
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×29! = 26525285981219105863630848000000">3×29!</span> + <span class="term" title="8×28! = 2439106756893710884012032000000">8×28!</span> + <span class="term" title="10×27! = 108888694504183521607680000000">10×27!</span> + <span class="term" title="24×26! = 9678995067038535254016000000">24×26!</span> + <span class="term" title="17×25! = 263690570736626761728000000">17×25!</span> + <span class="term" title="9×24! = 5584035615599154954240000">9×24!</span> + <span class="term" title="17×23! = 439484284561044602880000">17×23!</span> + <span class="term" title="2×22! = 2248001455555215360000">2×22!</span> + <span class="term" title="17×21! = 868546016919060480000">17×21!</span> + <span class="term" title="11×20! = 26761922089943040000">11×20!</span> + <span class="zero" title="0×19! = 0">0×19!</span> + <span class="term" title="9×18! = 57621363351552000">9×18!</span> + <span class="term" title="8×17! = 2845499424768000">8×17!</span> + <span class="term" title="12×16! = 251073478656000">12×16!</span> + <span class="term" title="2×15! = 2615348736000">2×15!</span> + <span class="term" title="2×14! = 174356582400">2×14!</span> + <span class="term" title="5×13! = 31135104000">5×13!</span> + <span class="term" title="2×12! = 958003200">2×12!</span> + <span class="term" title="9×11! = 359251200">9×11!</span> + <span class="term" title="10×10! = 36288000">10×10!</span> + <span class="zero" title="0×9! = 0">0×9!</span> + <span class="term" title="6×8! = 241920">6×8!</span> + <span class="term" title="1×7! = 5040">1×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="term" title="2×5! = 240">2×5!</span> + <span class="term" title="4×4! = 96">4×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,8,10,24,17,9,17,2,17,11,0,9,8,12,2,2,5,2,9,10,0,6,1,6,2,4,3,0,1,0]</div>
+    <div class="peel">peel: −3×29!→2557944163698939843157681192435 · −8×28!→118837406805228959145649192435 · −10×27!→9948712301045437537969192435 · −24×26!→269717234006902283953192435 · −17×25!→6026663270275522225192435 · −9×24!→442627654676367270952435 · −17×23!→3143370115322668072435 · −2×22!→895368659767452712435 · −17×21!→26822642848392232435 · −11×20!→60720758449192435 · −9×18!→3099395097640435 · −8×17!→253895672872435 · −12×16!→2822194216435 · −2×15!→206845480435 · −2×14!→32488898035 · −5×13!→1353794035 · −2×12!→395790835 · −9×11!→36539635 · −10×10!→251635 · −6×8!→9715 · −1×7!→4675 · −6×6!→355 · −2×5!→115 · −4×4!→19 · −3×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>29083230144918045706788529192435</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(210,180,40);--fg:rgb(40,35,0);--acc:rgb(240,220,100)">
+  <td class="n">110</td>
+  <td class="k"><b>30</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:13%"></div></div>
+    <span class="fnum">0.13</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.13 · 0.11 · 0.10 · 0.97
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×30! = 1061011439248764234545233920000000">4×30!</span> + <span class="term" title="3×29! = 26525285981219105863630848000000">3×29!</span> + <span class="term" title="8×28! = 2439106756893710884012032000000">8×28!</span> + <span class="term" title="24×27! = 261332866810040451858432000000">24×27!</span> + <span class="term" title="22×26! = 8872412144785323982848000000">22×26!</span> + <span class="term" title="3×25! = 46533630129992957952000000">3×25!</span> + <span class="term" title="23×24! = 14270313239864507105280000">23×24!</span> + <span class="term" title="3×23! = 77556050216654929920000">3×23!</span> + <span class="term" title="5×22! = 5620003638888038400000">5×22!</span> + <span class="term" title="20×21! = 1021818843434188800000">20×21!</span> + <span class="term" title="5×20! = 12164510040883200000">5×20!</span> + <span class="term" title="15×19! = 1824676506132480000">15×19!</span> + <span class="term" title="9×18! = 57621363351552000">9×18!</span> + <span class="term" title="17×17! = 6046686277632000">17×17!</span> + <span class="term" title="3×16! = 62768369664000">3×16!</span> + <span class="term" title="3×15! = 3923023104000">3×15!</span> + <span class="term" title="14×14! = 1220496076800">14×14!</span> + <span class="term" title="11×13! = 68497228800">11×13!</span> + <span class="term" title="6×12! = 2874009600">6×12!</span> + <span class="term" title="6×11! = 239500800">6×11!</span> + <span class="term" title="5×10! = 18144000">5×10!</span> + <span class="term" title="5×9! = 1814400">5×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="4×7! = 20160">4×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="5×5! = 600">5×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="zero" title="0×3! = 0">0×3!</span> + <span class="term" title="2×2! = 4">2×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,3,8,24,22,3,23,3,5,20,5,15,9,17,3,3,14,11,6,6,5,5,3,4,5,5,1,0,2,0,0]</div>
+    <div class="peel">peel: −4×30!→29234658905222938002506538951748 · −3×29!→2709372924003832138875690951748 · −8×28!→270266167110121254863658951748 · −24×27!→8933300300080803005226951748 · −22×26!→60888155295479022378951748 · −3×25!→14354525165486064426951748 · −23×24!→84211925621557321671748 · −3×23!→6655875404902391751748 · −5×22!→1035871766014353351748 · −20×21!→14052922580164551748 · −5×20!→1888412539281351748 · −15×19!→63736033148871748 · −9×18!→6114669797319748 · −17×17!→67983519687748 · −3×16!→5215150023748 · −3×15!→1292126919748 · −14×14!→71630842948 · −11×13!→3133614148 · −6×12!→259604548 · −6×11!→20103748 · −5×10!→1959748 · −5×9!→145348 · −3×8!→24388 · −4×7!→4228 · −5×6!→628 · −5×5!→28 · −1×4!→4 · −2×2!→0</div>
+  </td>
+  <td class="d"><code>1090246098153987172547740458951748</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(160,80,220);--fg:rgb(245,235,255);--acc:rgb(200,150,255)">
+  <td class="n">115</td>
+  <td class="k"><b>31</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:10%"></div></div>
+    <span class="fnum">0.10</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.10 · 0.83 · 0.09 · 0.78
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×31! = 24668515962533768453176688640000000">3×31!</span> + <span class="term" title="25×30! = 6631321495304776465907712000000000">25×30!</span> + <span class="term" title="18×29! = 159151715887314635181785088000000">18×29!</span> + <span class="term" title="16×28! = 4878213513787421768024064000000">16×28!</span> + <span class="term" title="23×27! = 250443997359622099697664000000">23×27!</span> + <span class="term" title="13×26! = 5242788994645873262592000000">13×26!</span> + <span class="term" title="10×25! = 155112100433309859840000000">10×25!</span> + <span class="term" title="2×24! = 1240896803466478878720000">2×24!</span> + <span class="term" title="7×23! = 180964117172194836480000">7×23!</span> + <span class="term" title="12×22! = 13488008733331292160000">12×22!</span> + <span class="term" title="7×21! = 357636595201966080000">7×21!</span> + <span class="term" title="18×20! = 43792236147179520000">18×20!</span> + <span class="term" title="1×19! = 121645100408832000">1×19!</span> + <span class="term" title="1×18! = 6402373705728000">1×18!</span> + <span class="term" title="1×17! = 355687428096000">1×17!</span> + <span class="term" title="16×16! = 334764638208000">16×16!</span> + <span class="term" title="11×15! = 14384418048000">11×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="3×13! = 18681062400">3×13!</span> + <span class="term" title="4×12! = 1916006400">4×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="1×10! = 3628800">1×10!</span> + <span class="term" title="8×9! = 2903040">8×9!</span> + <span class="term" title="2×8! = 80640">2×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="4×6! = 2880">4×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,25,18,16,23,13,10,2,7,12,7,18,1,1,1,16,11,11,3,4,4,1,8,2,0,4,3,1,1,0,0,0]</div>
+    <div class="peel">peel: −3×31!→6795607268040083711096985724426950 · −25×30!→164285772735307245189273724426950 · −18×29!→5134056847992610007488636426950 · −16×28!→255843334205188239464572426950 · −23×27!→5399336845566139766908426950 · −13×26!→156547850920266504316426950 · −10×25!→1435750486956644476426950 · −2×24!→194853683490165597706950 · −7×23!→13889566317970761226950 · −12×22!→401557584639469066950 · −7×21!→43920989437502986950 · −18×20!→128753290323466950 · −1×19!→7108189914634950 · −1×18!→705816208906950 · −1×17!→350128780810950 · −16×16!→15364142602950 · −11×15!→979724554950 · −11×14!→20763351750 · −3×13!→2082289350 · −4×12!→166282950 · −4×11!→6615750 · −1×10!→2986950 · −8×9!→83910 · −2×8!→3270 · −4×6!→390 · −3×5!→30 · −1×4!→6 · −1×3!→0</div>
+  </td>
+  <td class="d"><code>31464123230573852164273674364426950</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(220,80,60);--fg:rgb(255,235,230);--acc:rgb(255,140,120)">
+  <td class="n">120</td>
+  <td class="k"><b>32</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:9%"></div></div>
+    <span class="fnum">0.09</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.09 · 0.49 · 0.08 · 0.86
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×32! = 789392510801080590501654036480000000">3×32!</span> + <span class="term" title="15×31! = 123342579812668842265883443200000000">15×31!</span> + <span class="term" title="24×30! = 6366068635492585407271403520000000">24×30!</span> + <span class="term" title="27×29! = 238727573830971952772677632000000">27×29!</span> + <span class="term" title="11×28! = 3353771790728852465516544000000">11×28!</span> + <span class="term" title="23×27! = 250443997359622099697664000000">23×27!</span> + <span class="term" title="24×26! = 9678995067038535254016000000">24×26!</span> + <span class="term" title="7×25! = 108578470303316901888000000">7×25!</span> + <span class="term" title="23×24! = 14270313239864507105280000">23×24!</span> + <span class="term" title="10×23! = 258520167388849766400000">10×23!</span> + <span class="term" title="15×22! = 16860010916664115200000">15×22!</span> + <span class="zero" title="0×21! = 0">0×21!</span> + <span class="term" title="9×20! = 21896118073589760000">9×20!</span> + <span class="term" title="18×19! = 2189611807358976000">18×19!</span> + <span class="term" title="14×18! = 89633231880192000">14×18!</span> + <span class="term" title="8×17! = 2845499424768000">8×17!</span> + <span class="term" title="6×16! = 125536739328000">6×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="2×13! = 12454041600">2×13!</span> + <span class="term" title="8×12! = 3832012800">8×12!</span> + <span class="term" title="4×11! = 159667200">4×11!</span> + <span class="term" title="6×10! = 21772800">6×10!</span> + <span class="term" title="7×9! = 2540160">7×9!</span> + <span class="term" title="8×8! = 322560">8×8!</span> + <span class="zero" title="0×7! = 0">0×7!</span> + <span class="term" title="5×6! = 3600">5×6!</span> + <span class="term" title="3×5! = 360">3×5!</span> + <span class="term" title="1×4! = 24">1×4!</span> + <span class="term" title="3×3! = 18">3×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,15,24,27,11,23,24,7,23,10,15,0,9,18,14,8,6,6,1,2,8,4,6,7,8,0,5,3,1,3,0,1,0]</div>
+    <div class="peel">peel: −3×32!→129950990039899743038857014138764323 · −15×31!→6608410227230900772973570938764323 · −24×30!→242341591738315365702167418764323 · −27×29!→3614017907343412929489786764323 · −11×28!→260246116614560463973242764323 · −23×27!→9802119254938364275578764323 · −24×26!→123124187899829021562764323 · −7×25!→14545717596512119674764323 · −23×24!→275404356647612569484323 · −10×23!→16884189258762803084323 · −15×22!→24178342098687884323 · −9×20!→2282224025098124323 · −18×19!→92612217739148323 · −14×18!→2978985858956323 · −8×17!→133486434188323 · −6×16!→7949694860323 · −6×15!→103648652323 · −1×14!→16470361123 · −2×13!→4016319523 · −8×12!→184306723 · −4×11!→24639523 · −6×10!→2866723 · −7×9!→326563 · −8×8!→4003 · −5×6!→403 · −3×5!→43 · −1×4!→19 · −3×3!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>919343500840980333540511050618764323</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(255,140,40);--fg:rgb(40,20,0);--acc:rgb(255,180,90)">
+  <td class="n">125</td>
+  <td class="k"><b>33</b></td>
+  <td class="a">4</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:12%"></div></div>
+    <span class="fnum">0.12</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.12 · 0.34 · 0.10 · 0.92
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="4×33! = 34733270475247545982072777605120000000">4×33!</span> + <span class="term" title="11×32! = 2894439206270628831839398133760000000">11×32!</span> + <span class="term" title="2×31! = 16445677308355845635451125760000000">2×31!</span> + <span class="term" title="24×30! = 6366068635492585407271403520000000">24×30!</span> + <span class="term" title="3×29! = 26525285981219105863630848000000">3×29!</span> + <span class="term" title="5×28! = 1524441723058569302507520000000">5×28!</span> + <span class="term" title="22×27! = 239555127909203747536896000000">22×27!</span> + <span class="term" title="2×26! = 806582922253211271168000000">2×26!</span> + <span class="term" title="12×25! = 186134520519971831808000000">12×25!</span> + <span class="term" title="8×24! = 4963587213865915514880000">8×24!</span> + <span class="zero" title="0×23! = 0">0×23!</span> + <span class="term" title="7×22! = 7868005094443253760000">7×22!</span> + <span class="term" title="3×21! = 153272826515128320000">3×21!</span> + <span class="term" title="9×20! = 21896118073589760000">9×20!</span> + <span class="term" title="6×19! = 729870602452992000">6×19!</span> + <span class="term" title="7×18! = 44816615940096000">7×18!</span> + <span class="term" title="12×17! = 4268249137152000">12×17!</span> + <span class="term" title="7×16! = 146459529216000">7×16!</span> + <span class="term" title="6×15! = 7846046208000">6×15!</span> + <span class="term" title="1×14! = 87178291200">1×14!</span> + <span class="term" title="3×13! = 18681062400">3×13!</span> + <span class="term" title="9×12! = 4311014400">9×12!</span> + <span class="term" title="3×11! = 119750400">3×11!</span> + <span class="term" title="9×10! = 32659200">9×10!</span> + <span class="zero" title="0×9! = 0">0×9!</span> + <span class="term" title="1×8! = 40320">1×8!</span> + <span class="term" title="3×7! = 15120">3×7!</span> + <span class="term" title="6×6! = 4320">6×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="2×3! = 12">2×3!</span> + <span class="zero" title="0×2! = 0">0×2!</span> + <span class="zero" title="0×1! = 0">0×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [4,11,2,24,3,5,22,2,12,8,0,7,3,9,6,7,12,7,6,1,3,9,3,9,0,1,3,6,0,2,2,0,0,0]</div>
+    <div class="peel">peel: −4×33!→2917279242494998523701232272195221420 · −11×32!→22840036224369691861834138435221420 · −2×31!→6394358916013846226383012675221420 · −24×30!→28290280521260819111609155221420 · −3×29!→1764994540041713247978307221420 · −5×28!→240552816983143945470787221420 · −22×27!→997689073940197933891221420 · −2×26!→191106151686986662723221420 · −12×25!→4971631167014830915221420 · −8×24!→8043953148915400341420 · −7×22!→175948054472146581420 · −3×21!→22675227957018261420 · −9×20!→779109883428501420 · −6×19!→49239280975509420 · −7×18!→4422665035413420 · −12×17!→154415898261420 · −7×16!→7956369045420 · −6×15!→110322837420 · −1×14!→23144546220 · −3×13!→4463483820 · −9×12!→152469420 · −3×11!→32719020 · −9×10!→59820 · −1×8!→19500 · −3×7!→4380 · −6×6!→60 · −2×4!→12 · −2×3!→0</div>
+  </td>
+  <td class="d"><code>37650549717742544505774009877315221420</code></td>
+</tr>
+<tr class="row jump" style="--bg:rgb(50,110,220);--fg:rgb(230,240,255);--acc:rgb(120,170,255)">
+  <td class="n">130</td>
+  <td class="k"><b>34</b></td>
+  <td class="a">3</td>
+  <td class="frac">
+    <div class="bar"><div class="fill" style="width:9%"></div></div>
+    <span class="fnum">0.09</span>
+  </td>
+  <td class="phases" title="digit / cell / plateau / mass">
+    0.09 · 0.74 · 0.08 · 0.80
+  </td>
+  <td class="ok">✓</td>
+  <td class="recon">
+    <div><span class="lead" title="3×34! = 885698397118812422542855828930560000000">3×34!</span> + <span class="term" title="25×33! = 217082940470297162387954860032000000000">25×33!</span> + <span class="term" title="4×32! = 1052523347734774120668872048640000000">4×32!</span> + <span class="term" title="4×31! = 32891354616711691270902251520000000">4×31!</span> + <span class="term" title="27×30! = 7161827214929158583180328960000000">27×30!</span> + <span class="term" title="8×29! = 70734095949917615636348928000000">8×29!</span> + <span class="zero" title="0×28! = 0">0×28!</span> + <span class="term" title="9×27! = 97999825053765169446912000000">9×27!</span> + <span class="term" title="6×26! = 2419748766759633813504000000">6×26!</span> + <span class="term" title="20×25! = 310224200866619719680000000">20×25!</span> + <span class="term" title="9×24! = 5584035615599154954240000">9×24!</span> + <span class="term" title="4×23! = 103408066955539906560000">4×23!</span> + <span class="term" title="3×22! = 3372002183332823040000">3×22!</span> + <span class="term" title="19×21! = 970727901262479360000">19×21!</span> + <span class="zero" title="0×20! = 0">0×20!</span> + <span class="term" title="9×19! = 1094805903679488000">9×19!</span> + <span class="term" title="15×18! = 96035605585920000">15×18!</span> + <span class="term" title="3×17! = 1067062284288000">3×17!</span> + <span class="term" title="4×16! = 83691159552000">4×16!</span> + <span class="term" title="12×15! = 15692092416000">12×15!</span> + <span class="term" title="11×14! = 958961203200">11×14!</span> + <span class="term" title="3×13! = 18681062400">3×13!</span> + <span class="term" title="1×12! = 479001600">1×12!</span> + <span class="term" title="5×11! = 199584000">5×11!</span> + <span class="term" title="4×10! = 14515200">4×10!</span> + <span class="term" title="4×9! = 1451520">4×9!</span> + <span class="term" title="3×8! = 120960">3×8!</span> + <span class="term" title="5×7! = 25200">5×7!</span> + <span class="term" title="2×6! = 1440">2×6!</span> + <span class="zero" title="0×5! = 0">0×5!</span> + <span class="term" title="2×4! = 48">2×4!</span> + <span class="term" title="1×3! = 6">1×3!</span> + <span class="term" title="1×2! = 2">1×2!</span> + <span class="term" title="1×1! = 1">1×1!</span> + <span class="zero" title="0×0! = 0">0×0!</span></div>
+    <div class="digits">digits[max_k..0] = [3,25,4,4,27,8,0,9,6,20,9,4,3,19,0,9,15,3,4,12,11,3,1,5,4,4,3,5,2,0,2,1,1,1,0]</div>
+    <div class="peel">peel: −3×34!→218175587834695017085089522213445829577 · −25×33!→1092647364397854697134662181445829577 · −4×32!→40124016663080576465790132805829577 · −4×31!→7232662046368885194887881285829577 · −27×30!→70834831439726611707552325829577 · −8×29!→100735489808996071203397829577 · −9×27!→2735664755230901756485829577 · −6×26!→315915988471267942981829577 · −20×25!→5691787604648223301829577 · −9×24!→107751989049068347589577 · −4×23!→4343922093528441029577 · −3×22!→971919910195617989577 · −19×21!→1192008933138629577 · −9×19!→97203029459141577 · −15×18!→1167423873221577 · −3×17!→100361588933577 · −4×16!→16670429381577 · −12×15!→978336965577 · −11×14!→19375762377 · −3×13!→694699977 · −1×12!→215698377 · −5×11!→16114377 · −4×10!→1599177 · −4×9!→147657 · −3×8!→26697 · −5×7!→1497 · −2×6!→57 · −2×4!→9 · −1×3!→3 · −1×2!→1 · −1×1!→0</div>
+  </td>
+  <td class="d"><code>1103873984953507439627945351144005829577</code></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="foot">
+    Exact rebuild 82/82 ·
+    orders 1–34 · source factoradic_private_keys.csv ·
+    also wrote FACTORADIC_RECON_COLORED.txt
+  </p>
+</body>
+</html>

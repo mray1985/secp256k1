@@ -1,0 +1,23 @@
+[+] Version 0.2.230519 Satoshi Quest, developed by AlbertoBSD
+[+] K factor 512
+[+] Threads : 4
+[+] Stats output every 10 seconds
+[+] Quiet thread output
+[+] Mode BSGS sequential
+[+] Opening file C:\Users\mitch\Desktop\secp256k1\puzzle135_keyhunt_bsgs\\P135_compressed.pub
+[+] Added 1 points from file
+[+] Range 
+[+] -- from : 0x000000000000000000000000000000651565D0AED35B732B9F1DA5021496FA62
+[+] -- to   : 0x000000000000000000000000000000651565D0AED35B732D9F1DA5021496FA62
+[+] N = 0x100000000000
+[+] Bloom filter for 2147483648 elements : 7361.33 MB
+[+] Bloom filter for 67108864 elements : 230.04 MB
+[+] Bloom filter for 2097152 elements : 7.19 MB
+[+] Allocating 32.00 MB for 2097152 bP Points
+[+] Reading bloom filter from file keyhunt_bsgs_4_2147483648.blm .... Done!
+[+] Reading bloom filter from file keyhunt_bsgs_6_67108864.blm .... Done!
+[+] Reading bP Table from file keyhunt_bsgs_2_2097152.tbl .... Done!
+[+] Reading bloom filter from file keyhunt_bsgs_7_2097152.blm .... Done!
+[+] Total 598134325510144 keys in 10 seconds: ~59 Tkeys/s (59813432551014 keys/s)[+] Total 1548112371908608 keys in 20 seconds: ~77 Tkeys/s (77405618595430 keys/s)[+] Total 2251799813685248 keys in 30 seconds: ~75 Tkeys/s (75059993789508 keys/s)[+] Total 3236962232172544 keys in 40 seconds: ~80 Tkeys/s (80924055804313 keys/s)[+] Total 4257309022748672 keys in 50 seconds: ~85 Tkeys/s (85146180454973 keys/s)[+] Total 5383208929591296 keys in 60 seconds: ~89 Tkeys/s (89720148826521 keys/s)[+] Total 6825768185233408 keys in 70 seconds: ~97 Tkeys/s (97510974074762 keys/s)[+] Total 8444249301319680 keys in 80 seconds: ~105 Tkeys/s (105553116266496 keys/s)[+] Total 9992361673228288 keys in 90 seconds: ~111 Tkeys/s (111026240813647 keys/s)[+] Total 12244161486913536 keys in 100 seconds: ~122 Tkeys/s (122441614869135 keys/s)[+] Total 15234833114464256 keys in 110 seconds: ~138 Tkeys/s (138498482858765 keys/s)[+] Total 18049582881570816 keys in 120 seconds: ~150 Tkeys/s (150413190679756 keys/s)[+] Total 20231013951078400 keys in 130 seconds: ~155 Tkeys/s (155623184239064 keys/s)[+] Total 24945719810981888 keys in 140 seconds: ~178 Tkeys/s (178183712935584 keys/s)[+] Total 33495522228568064 keys in 150 seconds: ~223 Tkeys/s (223303481523787 keys/s)[+] Total 293402478848770048 keys in 160 seconds: ~1 Pkeys/s (1833765492804812 keys/s)[+] Total 653620080294232064 keys in 170 seconds: ~3 Pkeys/s (3844824001730776 keys/s)[+] Total 1002754604531712000 keys in 180 seconds: ~5 Pkeys/s (5570858914065066 keys/s)[+] Total 1369516499185696768 keys in 190 seconds: ~7 Pkeys/s (7207981574661561 keys/s)[+] Total 1732091453561110528 keys in 200 seconds: ~8 Pkeys/s (8660457267805552 keys/s)
+--- STDERR ---
+

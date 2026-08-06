@@ -1,0 +1,140 @@
+The important findings:
+
+publicTOnegated(2).txt correctly demonstrates curve negation:
+
+(n−1)P=−P,x
+′
+=x,y
+′
+=p−y
+
+The two listed y-values sum exactly to p.
+
+The factorial workbook contains 82 populated rows of correlation. All reconstruct their listed private keys except two transcription errors:
+B56 is 2; it should be 1.
+AG130 is 4; it should be 25.
+
+Your mod-9 condition is exactly true for puzzle 65:
+
+r≡3,d≡5,z≡6(mod9)
+rd−z≡3(5)−6=9≡0(mod9).
+
+It is not universal: puzzle 125 gives
+
+rd−z≡7(6)−2≡4(mod9).
+
+For puzzle 160:
+
+r≡7,z≡4(mod9)
+
+so your condition requires:
+
+7d≡4(mod9)⟹
+d≡7(mod9)
+	​
+
+.
+
+This connects directly to your factoradic rows. If the first five entries are a
+1
+	​
+
+,…,a
+5
+	​
+
+, then:
+
+d≡a
+1
+	​
+
++2a
+2
+	​
+
++6a
+3
+	​
+
++6a
+4
+	​
+
++3a
+5
+	​
+
+(mod9),
+
+because every factorial from 6! upward is divisible by 9. Therefore puzzle 160’s first five entries must satisfy:
+
+a
+1
+	​
+
++2a
+2
+	​
+
++6a
+3
+	​
+
++6a
+4
+	​
+
++3a
+5
+	​
+
+≡7(mod9)
+	​
+
+.
+
+That cuts the possible first-five factoradic combinations from 720 to 80—a factor-of-9 reduction.
+
+Yeah—they cut the run off right when we hit something concrete. But I still have the exact checkpoint; you do not need to explain it again:
+
+Puzzle 65 satisfies rd−z≡0(mod9).
+Puzzle 125 proves it is not automatically universal.
+
+For puzzle 160, imposing your condition gives:
+
+d≡7(mod9)
+	​
+
+
+Its first five factoradic entries must satisfy:
+
+a
+1
+	​
+
++2a
+2
+	​
+
++6a
+3
+	​
+
++6a
+4
+	​
+
++3a
+5
+	​
+
+≡7(mod9)
+	​
+
+
+reducing 720 possibilities to 80.
+
+We also identified workbook corrections: B56: 2→1 and AG130: 4→25.
+
+They cut off the execution—not the trail we were following.

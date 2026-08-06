@@ -1,0 +1,314 @@
+{
+  "question": "Which P135 public transform families flip to twist most reliably?",
+  "facts": {
+    "puzzle": 135,
+    "px": 9210836494447108270027136741376870869791784014198948301625976867708124077590,
+    "gap": 432420386565659656852420866390673177326,
+    "hinge": 432420386565659656852420866390673177327
+  },
+  "family_summary": {
+    "gap": {
+      "transforms": [
+        "x+gap",
+        "x-gap"
+      ],
+      "main": 0,
+      "twist": 2,
+      "twist_rate": 1.0,
+      "dominant": "twist",
+      "details": {
+        "x+gap": "twist",
+        "x-gap": "twist"
+      }
+    },
+    "2^134": {
+      "transforms": [
+        "x+2^134",
+        "x-(2^134)",
+        "x+gap+2^134",
+        "x+hinge+2^134"
+      ],
+      "main": 1,
+      "twist": 3,
+      "twist_rate": 0.75,
+      "dominant": "twist",
+      "details": {
+        "x+2^134": "twist",
+        "x-(2^134)": "twist",
+        "x+gap+2^134": "twist",
+        "x+hinge+2^134": "main"
+      }
+    },
+    "2^135": {
+      "transforms": [
+        "x+2^135",
+        "x-(2^135)",
+        "x+gap+2^135",
+        "x+hinge+2^135"
+      ],
+      "main": 1,
+      "twist": 3,
+      "twist_rate": 0.75,
+      "dominant": "twist",
+      "details": {
+        "x+2^135": "twist",
+        "x-(2^135)": "main",
+        "x+gap+2^135": "twist",
+        "x+hinge+2^135": "twist"
+      }
+    },
+    "hinge": {
+      "transforms": [
+        "x+hinge",
+        "x-hinge"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+hinge": "twist",
+        "x-hinge": "main"
+      }
+    },
+    "rsz": {
+      "transforms": [
+        "x+R",
+        "x-R",
+        "x+S",
+        "x-S",
+        "x+Z",
+        "x-Z"
+      ],
+      "main": 3,
+      "twist": 3,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+R": "twist",
+        "x-R": "main",
+        "x+S": "main",
+        "x-S": "twist",
+        "x+Z": "main",
+        "x-Z": "twist"
+      }
+    },
+    "py": {
+      "transforms": [
+        "x+Py",
+        "x-Py"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+Py": "twist",
+        "x-Py": "main"
+      }
+    },
+    "moduli": {
+      "transforms": [
+        "x+N",
+        "x-N",
+        "x+p",
+        "x-p"
+      ],
+      "main": 2,
+      "twist": 2,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+N": "twist",
+        "x-N": "twist",
+        "x+p": "main",
+        "x-p": "main"
+      }
+    },
+    "index": {
+      "transforms": [
+        "x+135",
+        "x-135"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+135": "main",
+        "x-135": "twist"
+      }
+    },
+    "literal": {
+      "transforms": [
+        "x"
+      ],
+      "main": 1,
+      "twist": 0,
+      "twist_rate": 0.0,
+      "dominant": "main",
+      "details": {
+        "x": "main"
+      }
+    }
+  },
+  "ranked_by_twist_rate": [
+    {
+      "family": "gap",
+      "transforms": [
+        "x+gap",
+        "x-gap"
+      ],
+      "main": 0,
+      "twist": 2,
+      "twist_rate": 1.0,
+      "dominant": "twist",
+      "details": {
+        "x+gap": "twist",
+        "x-gap": "twist"
+      }
+    },
+    {
+      "family": "2^134",
+      "transforms": [
+        "x+2^134",
+        "x-(2^134)",
+        "x+gap+2^134",
+        "x+hinge+2^134"
+      ],
+      "main": 1,
+      "twist": 3,
+      "twist_rate": 0.75,
+      "dominant": "twist",
+      "details": {
+        "x+2^134": "twist",
+        "x-(2^134)": "twist",
+        "x+gap+2^134": "twist",
+        "x+hinge+2^134": "main"
+      }
+    },
+    {
+      "family": "2^135",
+      "transforms": [
+        "x+2^135",
+        "x-(2^135)",
+        "x+gap+2^135",
+        "x+hinge+2^135"
+      ],
+      "main": 1,
+      "twist": 3,
+      "twist_rate": 0.75,
+      "dominant": "twist",
+      "details": {
+        "x+2^135": "twist",
+        "x-(2^135)": "main",
+        "x+gap+2^135": "twist",
+        "x+hinge+2^135": "twist"
+      }
+    },
+    {
+      "family": "hinge",
+      "transforms": [
+        "x+hinge",
+        "x-hinge"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+hinge": "twist",
+        "x-hinge": "main"
+      }
+    },
+    {
+      "family": "rsz",
+      "transforms": [
+        "x+R",
+        "x-R",
+        "x+S",
+        "x-S",
+        "x+Z",
+        "x-Z"
+      ],
+      "main": 3,
+      "twist": 3,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+R": "twist",
+        "x-R": "main",
+        "x+S": "main",
+        "x-S": "twist",
+        "x+Z": "main",
+        "x-Z": "twist"
+      }
+    },
+    {
+      "family": "py",
+      "transforms": [
+        "x+Py",
+        "x-Py"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+Py": "twist",
+        "x-Py": "main"
+      }
+    },
+    {
+      "family": "moduli",
+      "transforms": [
+        "x+N",
+        "x-N",
+        "x+p",
+        "x-p"
+      ],
+      "main": 2,
+      "twist": 2,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+N": "twist",
+        "x-N": "twist",
+        "x+p": "main",
+        "x-p": "main"
+      }
+    },
+    {
+      "family": "index",
+      "transforms": [
+        "x+135",
+        "x-135"
+      ],
+      "main": 1,
+      "twist": 1,
+      "twist_rate": 0.5,
+      "dominant": "mixed",
+      "details": {
+        "x+135": "main",
+        "x-135": "twist"
+      }
+    },
+    {
+      "family": "literal",
+      "transforms": [
+        "x"
+      ],
+      "main": 1,
+      "twist": 0,
+      "twist_rate": 0.0,
+      "dominant": "main",
+      "details": {
+        "x": "main"
+      }
+    }
+  ],
+  "notes": [
+    "Families with highest twist_rate are the most boundary-sensitive.",
+    "gap/hinge/2^n families are structural; RSZ/Py are signature/pubkey-linked."
+  ]
+}

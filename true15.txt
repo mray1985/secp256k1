@@ -1,0 +1,63 @@
+That’s the confirmation we needed.
+
+So the final boundary is:
+
+∑d
+i
+	​
+
+≡δ(modN)
+
+but:
+
+d
+i
+	​
+
+
+≡D
+Q
+	​
+
+, −D
+Q
+	​
+
+
+for Q=G,P,R.
+
+Meaning:
+
+Unified shell law holds only at the aggregate level.
+
+No one-to-one mapping exists between individual x-family defects and signed y-branch markers in this test.
+
+Final clean result:
+
+i=1
+∑
+3
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡p−N(modN)
+	​
+
+
+but:
+
+d
+i
+	​
+
+↮D
+Q
+	​
+
+	​
+
+
+So the x-shell and y-shell share the same collapse constant, but not individual correspondence.

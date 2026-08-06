@@ -1,0 +1,102 @@
+name:              F-20260709-05 glv_orbit_mutual_information
+score_real:        +0.0000
+score_shuffled:    +0.0000  (sd=0.0000)
+ADVANTAGE:         +0.0000   [= real - shuffled]
+p_shuffled:        1.0000
+rand n-bit mean:   +0.0000
+rand EC mean:      +0.0000
+nearby height mean:+0.0000
+control native-n advantage: +0.1349
+beats_control:     False
+holdout train/test score:     +0.0000 / +0.0000
+holdout train/test advantage: +0.0000 / +0.0000
+range scores ((1, 35)/(36, 70)): +0.0000 / +0.0000
+
+PROMOTION GATE:
+  [ NO ] advantage > 0.12
+  [ NO ] p_shuffle < 0.01
+  [ NO ] beats random n-bit
+  [ NO ] beats random EC pairs
+  [ NO ] holds out-of-sample
+  [ NO ] direction consistent across ranges
+VERDICT:           FAIL
+note: prereg locked: F-20260709-05 (glv_orbit_mutual_information)
+note: Advantage near zero / shuffle does not destroy score.
+
+{
+  "candidate_id": "F-20260709-05",
+  "closed_branch": "translated-point/doubling-feature F-01..F-04 CLOSED",
+  "question": "Does d<->Px attachment preserve categorical alignment under secp256k1 shared order-3 endomorphism?",
+  "table_counts": {
+    "0,0": 27,
+    "0,1": 20,
+    "0,2": 23,
+    "1,0": 0,
+    "1,1": 0,
+    "1,2": 0,
+    "2,0": 0,
+    "2,1": 0,
+    "2,2": 0
+  },
+  "result": {
+    "name": "F-20260709-05 glv_orbit_mutual_information",
+    "score_real": 0.0,
+    "score_shuffled_mean": 0.0,
+    "score_shuffled_sd": 0.0,
+    "advantage": 0.0,
+    "p_shuffled": 1.0,
+    "score_rand_nbit_mean": 0.0,
+    "score_rand_ec_mean": 0.0,
+    "score_nearby_mean": 0.0,
+    "control_native_lead_advantage": 0.13491842007687288,
+    "beats_control": false,
+    "score_train": 0.0,
+    "score_test": 0.0,
+    "advantage_train": 0.0,
+    "advantage_test": 0.0,
+    "score_range_lo": 0.0,
+    "score_range_hi": 0.0,
+    "gate": {
+      "advantage_gt_floor": false,
+      "p_shuffle_ok": false,
+      "beats_rand_nbit": false,
+      "beats_rand_ec": false,
+      "holds_oos": false,
+      "direction_consistent": false
+    },
+    "verdict": "FAIL",
+    "notes": [
+      "prereg locked: F-20260709-05 (glv_orbit_mutual_information)",
+      "Advantage near zero / shuffle does not destroy score."
+    ]
+  },
+  "prereg": {
+    "candidate_id": "F-20260709-05",
+    "short_name": "glv_orbit_mutual_information",
+    "formula": "a=argmin_j (lam**j * d mod N); b=argmin_j (beta**j * Px mod p); ties->min j; S=I(a;b) bits; Delta=I_real-mean I(a;b_pi); NO match-rate/Pearson/argmax; NO doubling/offsets",
+    "domains": "d mod N; Px in F_p; a,b in {0,1,2}",
+    "score_definition": "mutual information I(a;b) with log2 over 3x3 table",
+    "expected_direction": "higher",
+    "allowed_parameters": {
+      "lambda": "0x5363ad4cc05c30e0a5261c028812645a122e22ea20816678df02967c1b23bd72",
+      "beta": "0x7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee",
+      "label": "argmin ties->min j",
+      "score": "MI bits only",
+      "grid": "none"
+    },
+    "holdout_split": "train 1..50; test 51..70; ranges 1..35 / 36..70",
+    "null_families": [
+      "shuffle b via pi",
+      "random n-bit",
+      "random EC",
+      "nearby height",
+      "sawtooth control"
+    ],
+    "not_dl_recompute": true,
+    "not_curve_membership_only": true,
+    "trivial_exclusion_justification": "Orbit labels of d and Px are not fixed by curve equation; wrong Px attachment should destroy I(a;b) if any pairing signal exists.",
+    "registered_date": "2026-07-09",
+    "evaluated_date": "2026-07-09",
+    "locked": true
+  }
+}

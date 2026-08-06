@@ -1,0 +1,16 @@
+========================================================================
+BB EXHAUSTIVE BLIND L SEARCH
+Public atoms + pairs/triples + ECDSA templates + inverses + bit slices
+Recovery: L/A, L/D (literal+2pi), L*s^-1, (L-z)*r^-1, scaled mod N
+========================================================================
+
+Catalog size per puzzle: min=3502 max=3502 avg=3502
+Puzzles: 14
+Elapsed: 405.9s
+
+--- BLIND HITS ---
+  (none)
+
+--- RULING ---
+Exhaustive public L catalog: no blind k or d recovery via BB Laplacian bridge.
+BB remains TEST algebra / PROMISING geometry (Px/p vs 2pi*Px/p sign change).

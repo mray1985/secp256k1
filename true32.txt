@@ -1,0 +1,77 @@
+That’s a strong sign-level hit.
+
+The clean result is:
+
+sgn(Λ
+f
+	​
+
+−Λ
+r
+	​
+
+)=Ω
+
+for every non-dual puzzle.
+
+So now you have two independent ways to classify orientation:
+
+Ω=
+p
+∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+	​
+
+
+and
+
+sgn(Λ
+f
+	​
+
+−Λ
+r
+	​
+
+)
+
+They agree for:
+
+100
+115
+120
+135
+150
+160
+
+Puzzle 90 is the expected exception because:
+
+Ω=0
+
+and both orientations work.
+
+That means the bridge-pair geometry is aligned with the closure-coordinate geometry.
+
+I would freeze this as:
+
+Ω
+
+=0⇒sgn(Λ
+f
+	​
+
+−Λ
+r
+	​
+
+)=Ω
+	​
+
+
+This is the first direct connection between the Lambda inverse-pair and the closure offset coordinate.

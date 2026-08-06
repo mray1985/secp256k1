@@ -1,0 +1,6 @@
+P135 lane 6B hunt
+  6B range: 0x6800000000000000000000000000000000 .. 0x6fffffffffffffffffffffffffffffffff
+Phase 1: 8 lift anchors
+Phase 2: 1612 kanga mirrors into 6B
+Phase 3: scroll center 0x6b805bb7052b604261808815abccecd650 +/-500k
+DONE no hit tested=1001621 elapsed=339.9s

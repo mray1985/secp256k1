@@ -1,0 +1,19 @@
+Bitcoin Core
+
+NIST
+
+NSA
+
+GCHQ
+
+MIT cryptography groups
+
+Stanford applied crypto lab
+
+KU Leuven cryptanalysis team
+
+IACR (crypto research organization)
+
+Every blockchain security firm
+
+Every government using ECC

@@ -1,0 +1,133 @@
+{
+  "n_rows": 184,
+  "n_with_d": 82,
+  "n_with_pubkey": 184,
+  "ecdsa_resid_zero_count": 82,
+  "x_kG_eq_r_count": 82,
+  "marginal_r_over_N_vs_n": 0.07118923690001504,
+  "best_coupled": {
+    "feature": "kd_mod_over_N",
+    "pearson_n": 0.32373478854081333,
+    "panel": "solved_k"
+  },
+  "kd_mod_note": {
+    "r_n_log2_d": 0.9999627166475954,
+    "interpretation": "k*d mod N tracks n because d ~ 2^(n-1) by puzzle definition; not independent nonce structure"
+  },
+  "notes": {
+    "d_minus_T_tautology": "double_and_add.txt final value equals d for solved puzzles \u2014 not an independent check"
+  },
+  "panels": {
+    "all_roof": {
+      "label": "all with pubkey",
+      "n": 184,
+      "correlations": {
+        "roof_stitch_norm": 0.10184593469924792,
+        "roof_stitch_signed": -0.08289720089184943,
+        "r_minus_px_map_over_N": -0.008935642150542905,
+        "rem_minus_r_mod_p_over_p": -0.02440721738037048,
+        "defect_px_minus_p_times_map_over_N": 0.0
+      },
+      "perm_p": {
+        "roof_stitch_norm": 0.1575,
+        "roof_stitch_signed": 0.267,
+        "r_minus_px_map_over_N": 0.9105,
+        "rem_minus_r_mod_p_over_p": 0.724,
+        "defect_px_minus_p_times_map_over_N": 1.0
+      }
+    },
+    "161_256_roof": {
+      "label": "161-256 roof",
+      "n": 96,
+      "correlations": {
+        "roof_stitch_norm": 0.02696722467410374,
+        "roof_stitch_signed": 0.004287730035928462,
+        "r_minus_px_map_over_N": 0.0113803557495835,
+        "rem_minus_r_mod_p_over_p": 0.02877955932788878,
+        "defect_px_minus_p_times_map_over_N": 0.0
+      },
+      "perm_p": {
+        "roof_stitch_norm": 0.802,
+        "roof_stitch_signed": 0.9685,
+        "r_minus_px_map_over_N": 0.9055,
+        "rem_minus_r_mod_p_over_p": 0.7855,
+        "defect_px_minus_p_times_map_over_N": 1.0
+      }
+    },
+    "solved_k": {
+      "label": "solved with d (k recovered)",
+      "n": 82,
+      "correlations": {
+        "k_over_N": -0.14747207433593704,
+        "k_inv_over_N": -0.06055900111040934,
+        "k_minus_d_signed": -0.02872285268494801,
+        "kinv_minus_inv5_signed": -0.1758775825172437,
+        "kd_mod_over_N": 0.32373478854081333,
+        "d_minus_T_over_N": 0.0,
+        "k_minus_T_signed": -0.02872285268494801
+      },
+      "perm_p": {
+        "k_over_N": 0.1775,
+        "k_inv_over_N": 0.573,
+        "k_minus_d_signed": 0.8075,
+        "kinv_minus_inv5_signed": 0.1135,
+        "kd_mod_over_N": 0.0,
+        "d_minus_T_over_N": 1.0,
+        "k_minus_T_signed": 0.8075
+      }
+    },
+    "solved_roof": {
+      "label": "solved roof stitch",
+      "n": 82,
+      "correlations": {
+        "roof_stitch_norm": -0.015517668799222652,
+        "roof_stitch_signed": 0.09678460712325239,
+        "r_minus_px_map_over_N": 0.05039861456462603,
+        "rem_minus_r_mod_p_over_p": -0.006690029376547519,
+        "defect_px_minus_p_times_map_over_N": 0.0
+      },
+      "perm_p": {
+        "roof_stitch_norm": 0.893,
+        "roof_stitch_signed": 0.406,
+        "r_minus_px_map_over_N": 0.643,
+        "rem_minus_r_mod_p_over_p": 0.9495,
+        "defect_px_minus_p_times_map_over_N": 1.0
+      }
+    },
+    "tdad_subset": {
+      "label": "TDAD transcript puzzles",
+      "n": 82,
+      "correlations": {
+        "d_minus_T_over_N": 0.0,
+        "k_minus_T_signed": -0.02872285268494801,
+        "kinv_minus_inv5_signed": -0.1758775825172437
+      },
+      "perm_p": {
+        "d_minus_T_over_N": 1.0,
+        "k_minus_T_signed": 0.8075,
+        "kinv_minus_inv5_signed": 0.1135
+      }
+    }
+  },
+  "p135_z_vs_161_256": {
+    "roof_stitch_norm": 0.6366581233549911,
+    "roof_stitch_signed": -0.8462021854413094,
+    "r_minus_px_map_over_N": 1.6323351488154223,
+    "rem_minus_r_mod_p_over_p": -0.4396381560091489,
+    "defect_px_minus_p_times_map_over_N": 0.0
+  },
+  "p135_row": {
+    "n": 135,
+    "band": "65-160",
+    "has_d": false,
+    "has_pubkey": true,
+    "roof_stitch_norm": 0.703350457805303,
+    "roof_stitch_signed": -0.296649542194697,
+    "px_map_over_N": 0.07954633649946047,
+    "r_minus_px_map_over_N": 0.7033504578053029,
+    "rem_Nx_mod_p_over_p": 0.6154587361424699,
+    "r_mod_p_over_p": 0.7828967943047634,
+    "rem_minus_r_mod_p_over_p": -0.16743805816229357,
+    "defect_px_minus_p_times_map_over_N": 8.636168555094445e-78
+  }
+}

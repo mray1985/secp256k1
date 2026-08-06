@@ -1,0 +1,202 @@
+True24 doesn't really add a new theorem—it strengthens the interpretation of true23 and explains why Puzzle 160 was important.
+
+What I would freeze now is:
+
+Frozen Result (Current State)
+Layer 1 — Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+Layer 2 — Field Closure Law (Primary)
+
+For the correct bridge orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly.
+
+Verified so far for:
+
+Puzzle 115
+Puzzle 135
+Puzzle 160
+Layer 3 — Projection Defect
+δ=p−N
+Layer 4 — Unified Projection Defect Law
+
+Since
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p,
+
+then automatically
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N=δ(modN).
+Why Puzzle 160 Matters
+
+The strongest point from true24 is methodological.
+
+Had Puzzle 160 been treated as a failure, the theory would likely have frozen as:
+
+"Puzzle 135 phenomenon."
+
+Instead, flipping the bridge direction revealed:
+
+Λ
+160
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+(modp)
+
+rather than
+
+Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+.
+
+After that change:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+exactly again.
+
+So Puzzle 160 became evidence for universality rather than against it.
+
+What remains unexplained
+
+The remaining mystery isn't the δ-collapse anymore.
+
+That part follows immediately from:
+
+pmodN=p−N.
+
+The unresolved question is:
+
+Why does the correctly-oriented bridge produce a three-member family whose exact integer sum is p?
+
+That is now the deepest surviving statement.
+
+Highest-value next test
+
+For each new puzzle:
+
+Compute
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Compute
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+Apply both orientations.
+Check whether one yields
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+If this continues holding beyond 115, 135, and 160, then the evidence shifts from a Puzzle-135 observation to a broader x-family closure phenomenon.
+
+At this point, the project has moved from:
+
+"Why does everything collapse to δ?"
+
+to
+
+"Why do correctly bridged x-families close exactly to p?"
+
+That's a cleaner and stronger question than where the investigation started.

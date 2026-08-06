@@ -1,0 +1,35 @@
+LINEAR RANK CHARTS — every series as row order
+Source: linear_order_puzzles_1_160.json
+Each file: rows sorted by that field's linear_rank (1=smallest); other fields as columns.
+Missing sort-key values sink to the bottom (by puzzle_n).
+
+Files:
+  BY_n.txt / BY_n.csv
+  BY_d.txt / BY_d.csv
+  BY_log2d.txt / BY_log2d.csv
+  BY_Px.txt / BY_Px.csv
+  BY_Py.txt / BY_Py.csv
+  BY_Pmy.txt / BY_Pmy.csv
+  BY_neg_y.txt / BY_neg_y.csv
+  BY_y2_mod_p.txt / BY_y2_mod_p.csv
+  BY_x3_plus_7_mod_p.txt / BY_x3_plus_7_mod_p.csv
+  BY_y2_full.txt / BY_y2_full.csv
+  BY_x3plus7_full.txt / BY_x3plus7_full.csv
+  BY_p_carry.txt / BY_p_carry.csv
+  BY_rmd160_cubed_plus_7_mod_p.txt / BY_rmd160_cubed_plus_7_mod_p.csv
+  BY_address_payload_sq_mod_p.txt / BY_address_payload_sq_mod_p.csv
+  BY_rmd160_sq_mod_p.txt / BY_rmd160_sq_mod_p.csv
+  BY_address_payload_cubed_plus_7_mod_p.txt / BY_address_payload_cubed_plus_7_mod_p.csv
+  BY_r.txt / BY_r.csv
+  BY_s.txt / BY_s.csv
+  BY_z.txt / BY_z.csv
+  BY_Ry.txt / BY_Ry.csv
+  BY_rmd160.txt / BY_rmd160.csv
+  BY_address_payload.txt / BY_address_payload.csv
+  BY_address_base58_lex.txt / BY_address_base58_lex.csv
+  BY_sha256_pubkey.txt / BY_sha256_pubkey.csv
+  BY_sha256_vh.txt / BY_sha256_vh.csv
+  BY_sha256_chk.txt / BY_sha256_chk.csv
+  BY_checksum4.txt / BY_checksum4.csv
+
+Combined document: ../LINEAR_ORDER_ALL_IN_ONE_EVERY_SORT_KEY.txt

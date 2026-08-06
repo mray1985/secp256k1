@@ -1,0 +1,18 @@
+MODULAR / RANK DISTANCE PROFILE
+X3p,Y2p = (x^3+7 mod p), (y^2 mod p) — EQUAL on curve => Delta_Rk_modp always 0 (trivial)
+Delta_Rk_full = Rank(x3plus7_full)-Rank(y2_full) — NON-trivial (unreduced)
+
+  n   X3p   Y2p  dMod   X3f   Y2f  dFull   sVH  sCHK  hWt sInvZ  status
+  1    24    24     0    51    26     25   132    51   44    48  Solved Anchor
+  2    82    82     0    86    21     65    46   112  122    27  Solved Anchor
+  3    73    73     0    41    40      1    98    42  150    16  Solved Anchor
+  4    62    62     0    20    31    -11    33    48   99    63  Solved Anchor
+  5    51    51     0    23    18      5    78   120  137    61  Solved Anchor
+  6    30    30     0    82    81      1   145    81  114     5  Solved Anchor
+ 88                                         65     3  130        UNSOLVED GAP (no pubkey)
+135    59    59     0    12    38    -26    85    79   96    71  UNSOLVED GAP
+140     8     8     0    15    88    -73   118    72  155    88  UNSOLVED GAP
+145    33    33     0    71    33     38   102    75   83    21  UNSOLVED GAP
+150    16    16     0    11    87    -76    58     7  125    32  UNSOLVED GAP
+155    88    88     0    42    86    -44    62   135  148    84  UNSOLVED GAP
+160    78    78     0    79    68     11   101    56   85    72  UNSOLVED GAP

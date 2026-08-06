@@ -1,0 +1,125 @@
+================================================================================
+TRUE1D.TXT CRITICAL TEST RESULTS
+Generated: 2026-06-03
+Source: true1d_different_basis_test.py
+Purpose: Test if row-collapse survives with DIFFERENT cube-root basis elements
+================================================================================
+
+KEY INSIGHT FROM TRUE1D.TXT:
+--------------------------------------------------------------------------------
+The row-collapse may be an algebraic consequence of the normalization procedure,
+not a new invariant.
+
+In current construction:
+  A_ij = (Px_i * p_j^-1) * (Gx_i * p_j^-1)^-1
+        = Px_i * p_j^-1 * p_j * Gx_i^-1
+        = Px_i * Gx_i^-1
+
+The p_j terms CANCEL, making A_ij independent of j.
+
+This explains the row-collapse!
+
+================================================================================
+VERIFICATION: Current Construction Algebra
+================================================================================
+
+Row 1:
+  Direct: Px_1 * Gx_1^-1 = 0xf3dda1f49ee8a341f6e62501e50e5228cd38e59d28a20c8512a1c23b04d77387
+  Normalized: [0xf3dda1f49..., 0xf3dda1f49..., 0xf3dda1f49...]
+  -> All normalized = Direct (p_j terms cancel perfectly)
+  -> All normalized ratios are EQUAL (row-collapse confirmed)
+
+Row 2:
+  Direct: Px_2 * Gx_2^-1 = 0x5331395851afea2907cdf62a140f9c538ac38a26215f8556a0e7e0cd1f5b384f
+  Normalized: [0x53313958..., 0x53313958..., 0x53313958...]
+  -> All normalized = Direct (p_j terms cancel perfectly)
+  -> All normalized ratios are EQUAL (row-collapse confirmed)
+
+Row 3:
+  Direct: Px_3 * Gx_3^-1 = 0xff1a21c73ac193038c9674ea268612615a3ed4ddddfdc9a0a97c28c43db90ed2
+  Normalized: [0xff1a21c7..., 0xff1a21c7..., 0xff1a21c7...]
+  -> All normalized = Direct (p_j terms cancel perfectly)
+  -> All normalized ratios are EQUAL (row-collapse confirmed)
+
+Conclusion: Row-collapse in original construction is EXPLAINED by algebraic
+cancellation of p_j terms.
+
+================================================================================
+NEW TEST: Different Basis Elements (p_i vs p_j)
+================================================================================
+
+Construct: A'_ij = (Px_i * p_i^-1) * (Gx_i * p_j^-1)^-1
+                     = Px_i * p_i^-1 * p_j * Gx_i^-1
+
+If row-collapse survives with i != j, it's a genuine invariant.
+If it disappears, it's explained by the normalization procedure.
+
+A'_ij matrix (different basis elements):
+  Row 1: [0xf3dda1f49..., 0xf476fa416..., 0x17ab63c9f...] (3 unique)
+  Row 2: [0xce264fbd3..., 0x53313958..., 0xdea876ea6...] (3 unique)
+  Row 3: [0xeec2be92c..., 0x12231fa60..., 0xff1a21c73...] (3 unique)
+
+Result: Row-collapse DISAPPEARS with different basis elements
+  -> Row-collapse is EXPLAINED by normalization procedure
+  -> The p_j terms cancel when same basis is used
+
+================================================================================
+CONTROL: Original Construction (same basis p_j)
+================================================================================
+
+A_ij matrix (same basis element):
+  Row 1: [0xf3dda1f49..., 0xf3dda1f49..., 0xf3dda1f49...] (1 unique)
+  Row 2: [0x53313958..., 0x53313958..., 0x53313958...] (1 unique)
+  Row 3: [0xff1a21c73..., 0xff1a21c73..., 0xff1a21c73...] (1 unique)
+
+Original: 3/3 rows collapse
+
+================================================================================
+CONCLUSION
+================================================================================
+
+- EXPLAINED: Row-collapse disappears with different basis
+
+The row-collapse is a DIRECT CONSEQUENCE of using the SAME cube-root basis
+element for both numerator and denominator.
+
+When A_ij = (Px_i * p_j^-1) * (Gx_i * p_j^-1)^-1,
+the p_j terms cancel: p_j^-1 * (p_j^-1)^-1 = p_j^-1 * p_j = 1
+
+Therefore: A_ij = Px_i * Gx_i^-1 (independent of j)
+
+This is NOT a new invariant - it's algebraic cancellation.
+
+The N-side Normalization Layer (Layer 4) is EXPLAINED, not a genuinely new
+mathematical discovery.
+
+================================================================================
+REFINED UNDERSTANDING
+================================================================================
+
+BEFORE true1d.txt:
+  Layer 4: N-Side Normalization Layer (appeared to be new invariant)
+
+AFTER true1d.txt:
+  Layer 4 is EXPLAINED by algebraic cancellation in the normalization
+  construction. The row-collapse is a procedural artifact, not a new
+  mathematical invariant.
+
+The hierarchy now consists of ONLY THREE verified layers:
+
+Layer 1 — Coordinate Bridge
+  A(Q) = Lambda * Q_y mod p
+
+Layer 2 — Projection Defect
+  delta = p - N
+
+Layer 3 — Unified Projection Defect Law
+  sum(Lambda * rx_i) ≡ A(Q) + A(-Q) ≡ delta mod N
+
+The apparent "row-collapse invariant" has been DEMOTED from Layer 4 to
+"explained procedural artifact."
+
+This is a STRONG RESULT: we have eliminated a false discovery and refined
+the hierarchy to only genuinely verified invariants.
+
+================================================================================

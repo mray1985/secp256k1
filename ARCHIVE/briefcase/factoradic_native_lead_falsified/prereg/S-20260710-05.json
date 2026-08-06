@@ -1,0 +1,32 @@
+{
+  "candidate_id": "S-20260710-05",
+  "short_name": "new_lead_admission_gate",
+  "formula": "No new run without preregistered (F, S, |S|, justification); b_removed=134-log2(|S|); reject ranking/resemblance/unbounded/holdout-fail; tiers 0-20 irrelevant ... 48+ launch after reproduction",
+  "domains": "procedural gate for all future P135 leads",
+  "score_definition": "admission only if four objects supplied and b_removed measurable",
+  "expected_direction": "freeze zero-bit pattern churn",
+  "allowed_parameters": {
+    "required": [
+      "F",
+      "S",
+      "|S|",
+      "justification"
+    ],
+    "baseline_W_bits": 134,
+    "launch_verify": "[d]G=P135",
+    "rfc6979": "secondary only"
+  },
+  "holdout_split": "any holdout miss => reject before coding",
+  "null_families": [
+    "ranking",
+    "resemblance",
+    "unbounded set",
+    "target-tuned"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Procedural admission gate; not a search claim.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

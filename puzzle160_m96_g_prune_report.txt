@@ -1,0 +1,43 @@
+Puzzle 160 — m-shell [2^95, 2^96) G-prefix prune
+P_160 shell = m * P_160,  walk = (N+1) * shell
+m band LO=2^95=39614081257132168796771975168  HI=2^96-1=79228162514264337593543950335
+d band [2^159, 2^160)
+G fingerprint prefixes (3 dig): {'Px': '550', 'Py': '326', 'p-x': '607', 'p-y': '831', 'x inv p': '160', 'x inv N': '134', 'y inv p': '505', 'y inv N': '917'}
+
+=== Cleanest shells (low G-prefix leak) ===
+  m_76851317638836407465737631809 m=76851317638836407465737631809  G_contains=475 G_start=7  Px_hits=74  closure=True  np1_div=False d_band=False
+  m_47536897508558602556126370198 m=47536897508558602556126370198  G_contains=478 G_start=5  Px_hits=81  closure=True  np1_div=False d_band=False
+  m_70513064637695260458254115785 m=70513064637695260458254115785  G_contains=479 G_start=3  Px_hits=71  closure=True  np1_div=False d_band=False
+  m_52290587259414462811739007216 m=52290587259414462811739007216  G_contains=485 G_start=5  Px_hits=74  closure=True  np1_div=False d_band=False
+  C            m=64372882042839774294754459648  G_contains=487 G_start=5  Px_hits=77  closure=True  np1_div=False d_band=False
+  m_74474472763408477337931313300 m=74474472763408477337931313300  G_contains=487 G_start=8  Px_hits=80  closure=True  np1_div=False d_band=False
+  m_75266754388551120713866752803 m=75266754388551120713866752803  G_contains=491 G_start=3  Px_hits=75  closure=True  np1_div=False d_band=False
+  m_73682191138265833961995873797 m=73682191138265833961995873797  G_contains=491 G_start=6  Px_hits=81  closure=True  np1_div=False d_band=False
+  m_51498305634271819435803567713 m=51498305634271819435803567713  G_contains=494 G_start=6  Px_hits=76  closure=True  np1_div=False d_band=False
+  m_55459713759985036315480765228 m=55459713759985036315480765228  G_contains=498 G_start=10  Px_hits=80  closure=True  np1_div=False d_band=False
+  m_68136219762267330330447797276 m=68136219762267330330447797276  G_contains=500 G_start=7  Px_hits=79  closure=True  np1_div=False d_band=False
+  m_72889909513123190586060434294 m=72889909513123190586060434294  G_contains=501 G_start=5  Px_hits=78  closure=True  np1_div=False d_band=False
+  m_61005685135983539947028841749 m=61005685135983539947028841749  G_contains=503 G_start=3  Px_hits=82  closure=True  np1_div=False d_band=False
+  m_65759374886839400202641478767 m=65759374886839400202641478767  G_contains=504 G_start=3  Px_hits=77  closure=True  np1_div=False d_band=False
+  m_43575489382845385676449172683 m=43575489382845385676449172683  G_contains=505 G_start=4  Px_hits=84  closure=True  np1_div=False d_band=False
+
+=== Most G-tainted (prune first) ===
+  m_56251995385127679691416204731 m=56251995385127679691416204731  G_contains=540  top_G_pat=p-y
+  m_63382530011411470074835160258 m=63382530011411470074835160258  G_contains=542  top_G_pat=Py
+  LO           m=39614081257132168796771975168  G_contains=542  top_G_pat=x inv N
+  m_59421121885698253195157962743 m=59421121885698253195157962743  G_contains=544  top_G_pat=p-y
+  m_48329179133701245932061809701 m=48329179133701245932061809701  G_contains=544  top_G_pat=Px
+  m_64174811636554113450770599761 m=64174811636554113450770599761  G_contains=549  top_G_pat=x inv p
+  m_72097627887980547210124994791 m=72097627887980547210124994791  G_contains=551  top_G_pat=Py
+  m_67343938137124686954512357773 m=67343938137124686954512357773  G_contains=552  top_G_pat=p-x
+  m_60213403510840896571093402246 m=60213403510840896571093402246  G_contains=554  top_G_pat=x inv p
+  B            m=59421121885698253195157962752  G_contains=572  top_G_pat=Px
+
+=== KeyHunt d-seeds from clean shells with np1_div ===
+  no exact m|(N+1) with d in band in this sample
+  use clean m + d_center = (N+1)//m (integer division) for ±harvest
+
+Wrap with KeyHunt:
+  1) KeyHunt BSGS d in [2^159, 2^160-1] for P_160 (main)
+  2) Prefer d windows around (N+1)//m for clean m shells above
+  3) Skip d seeds from G-heavy m shells (high G_contains)

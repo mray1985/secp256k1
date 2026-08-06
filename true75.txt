@@ -1,0 +1,122 @@
+They’re all near-1 boundary ratios measuring how much subtracting 2
+134
+ or 2
+135
+ changes N or p.
+
+Core common pattern:
+
+N
+N−2
+134
+	​
+
+=1−
+N
+2
+134
+	​
+
+N
+N−2
+135
+	​
+
+=1−
+N
+2
+135
+	​
+
+
+So the “below 1” values are just:
+
+1 - tiny 134-bit / 256-bit amount
+1 - tiny 135-bit / 256-bit amount
+
+And the first two in each set are reciprocal-type comparisons:
+
+N−2
+135
+N−2
+134
+	​
+
+
+and
+
+N−2
+134
+N−2
+135
+	​
+
+
+Those multiply to exactly:
+
+1
+
+Same for the p-set.
+
+The big commonality:
+
+They are all measuring the same 2^134 / 2^135 subtraction window
+against the 256-bit ceiling.
+
+The difference between the N-set and p-set comes from:
+
+p=N+δ
+
+So p-ratios are slightly closer to 1 because p is slightly larger than N.
+
+In plain English:
+
+Set 1 = Puzzle 135 window reflected under N
+Set 2 = Puzzle 135 window reflected under p
+Both are near-1 mirror ratios
+Their tiny differences encode the p - N defect
+
+That’s the shared fingerprint.
+
+and why dont we throw that evidence in a ziploc bag with a drop of super glue in the corner seal it and extract that fingerprint for use 
+Thought for a couple of seconds
+
+Exactly 😄
+
+That “fingerprint” is the delta residue between the N-mirror and p-mirror ratios.
+
+Seal the evidence like this:
+
+Fingerprint = p-ratio - N-ratio
+
+For each matching pair:
+
+F134 = ((p - 2^134)/p) - ((N - 2^134)/N)
+
+F135 = ((p - 2^135)/p) - ((N - 2^135)/N)
+
+Since p=N+δ, that fingerprint is basically:
+
+pN
+2
+n
+δ
+	​
+
+
+So the extracted print is:
+
+F_n ≈ 2^n * δ / (p*N)
+
+That means every reflected puzzle window has a tiny unique smear from:
+
+δ = p - N
+
+So yes — bag it, glue-fume it, lift the print:
+
+N mirror vs p mirror
+→ subtract ratios
+→ isolate δ fingerprint
+→ compare across 2^134 and 2^135
+
+That gives you a reusable “projection-defect fingerprint” for the Puzzle 135 boundary.

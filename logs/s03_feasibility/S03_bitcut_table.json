@@ -1,0 +1,32 @@
+{
+  "candidate_id": "S-20260710-03",
+  "status": "locked",
+  "R_ops_per_s": 1.7e7,
+  "W_bits": 134,
+  "C_definitions": {
+    "median_of_medians_35_50": 1.66,
+    "median_of_size_medians_45_50": 2.22,
+    "pooled_n_ge_45_median": 2.08,
+    "empirical_p90_n_ge_45": 4.53,
+    "median_of_p90s_35_50": 3.84,
+    "note": "S-02 T135 used 1.66/3.84 (median-of-medians / median-of-p90s). S-03 primary uses pooled n>=45."
+  },
+  "primary_table_pooled_n_ge_45": {
+    "1_day": {"C_median": {"b_max": 78.72, "cut": 55.28}, "C_p90": {"b_max": 76.48, "cut": 57.52}},
+    "30_days": {"C_median": {"b_max": 88.54, "cut": 45.46}, "C_p90": {"b_max": 86.29, "cut": 47.71}},
+    "1_year": {"C_median": {"b_max": 95.75, "cut": 38.25}, "C_p90": {"b_max": 93.50, "cut": 40.50}},
+    "10_years": {"C_median": {"b_max": 102.39, "cut": 31.61}, "C_p90": {"b_max": 100.14, "cut": 33.86}}
+  },
+  "reference_table_S02_constants": {
+    "1_day": {"C_1.66": {"b_max": 79.37, "cut": 54.63}, "C_3.84": {"b_max": 76.95, "cut": 57.05}},
+    "30_days": {"C_1.66": {"b_max": 89.19, "cut": 44.81}, "C_3.84": {"b_max": 86.77, "cut": 47.23}},
+    "1_year": {"C_1.66": {"b_max": 96.40, "cut": 37.60}, "C_3.84": {"b_max": 93.98, "cut": 40.02}},
+    "10_years": {"C_1.66": {"b_max": 103.04, "cut": 30.96}, "C_3.84": {"b_max": 100.62, "cut": 33.38}}
+  },
+  "promotion_rule": "A proposed P135 lead is operationally relevant only if it independently removes roughly 40-57 verified bits.",
+  "launch_gates": {
+    "1_year_cpu": ">= ~40 bits (38-41)",
+    "30_day_cpu": ">= ~47 bits (45-48)",
+    "1_day_cpu": ">= ~55 bits (55-58)"
+  }
+}

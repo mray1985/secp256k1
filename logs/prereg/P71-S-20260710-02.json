@@ -1,0 +1,22 @@
+{
+  "candidate_id": "P71-S-20260710-02",
+  "short_name": "p71_scanner_feasibility_boundary",
+  "formula": "T_avg=|S|/(2R); b_removed=70-log2(|S|); illustrative R=1e12 and 1e9; launch uses measured R",
+  "domains": "Puzzle 71 band W=2^70",
+  "score_definition": "required verified cut for budget T",
+  "expected_direction": "smaller cut than P135 40-57 bits at high GPU R",
+  "allowed_parameters": {
+    "admission": "(F,S,|S|,justification)",
+    "S_subset": "[2^70,2^71)"
+  },
+  "holdout_split": "n/a policy",
+  "null_families": [
+    "category-3 ranking = 0 bits"
+  ],
+  "not_dl_recompute": true,
+  "not_curve_membership_only": true,
+  "trivial_exclusion_justification": "Feasibility arithmetic for address scan.",
+  "registered_date": "2026-07-10",
+  "evaluated_date": null,
+  "locked": true
+}

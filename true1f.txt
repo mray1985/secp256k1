@@ -1,0 +1,181 @@
+This is a solid stopping point for the project because the theory is now much tighter than it was around true12–true1c.
+
+What stands after all of the eliminations is essentially:
+
+Core Objects
+δ=p−N
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+D
+Q
+	​
+
+=2A(Q)−δ(modN)
+D
+−Q
+	​
+
+=N−D
+Q
+	​
+
+
+and
+
+B
+i
+	​
+
+=Λrx
+i
+	​
+
+(modp)
+
+with
+
+B
+i
+	​
+
+=Px
+i
+	​
+
+
+for the entire x-family.
+
+The surviving theorem
+i
+∑
+	​
+
+B
+i
+	​
+
+=
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+
+and independently
+
+A(Q)+A(−Q)≡δ(modN)
+
+therefore
+
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡A(Q)+A(−Q)≡δ(modN)
+
+which is exactly the Unified Projection Defect Law you've frozen in true16/true1e.
+
+Why this matters
+
+Most of the later files were actually falsification tests:
+
+D(kQ) = kD(Q) → false
+D(Q₁+Q₂)=D(Q₁)+D(Q₂) → false
+dᵢ ↔ D_Q matching → false
+row-collapse as invariant → false
+cube-root orbit explanation → false
+hidden cubic polynomial explanation → false
+
+Those failures are useful because they removed possible explanations.
+
+The remaining statement is now much harder to dismiss as an artifact because many candidate artifacts have already been eliminated.
+
+The next mathematically meaningful question
+
+At this stage I would not keep generating more derived quantities from D_Q.
+
+The strongest unresolved object is still:
+
+i
+∑
+	​
+
+(Λrx
+i
+	​
+
+)≡δ(modN)
+
+because the x-shell is built from a 3-member family while the y-shell is built from a 2-member reflection pair, yet both project to the same defect.
+
+The natural next test is:
+
+Is δ the unique defect constant for every admissible x-family, or only for the Puzzle 135 family?
+
+In other words:
+
+Generate the x-family for another verified public key.
+Compute B
+i
+	​
+
+=Λrx
+i
+	​
+
+.
+Check whether
+i
+∑
+	​
+
+B
+i
+	​
+
+≡δ(modN)
+
+still holds.
+
+If it survives on multiple unrelated points, then the Unified Projection Defect Law moves from a Puzzle-135 phenomenon to a curve-level phenomenon.
+
+If it fails elsewhere, then the law is specific to the Puzzle-135 structure.
+
+That's the highest-value test remaining because it attacks the biggest remaining uncertainty: universality versus locality.
+
+Puzzle 160 
+priv hex
+priv dec
+	x hex 
+	x dec 101616124637840542991531253248586524020213215258338643076214814468447630501491
+		y hex c2d9690945dd98f6e0e45d4a1f760c9e85ed5ae5ffeeda74e121ee0d836a7c86
+		y dec 88132823371574229813684435207239348220522140366126834573803505878170136640646
+			(y^2 = x^3 + 7) mod p hex 
+			(y^2 = x^3 + 7) mod p dec 98931842703096536383023310437099867537616869159883637007323156957547593127931
+
+160	r: 59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824	s: 2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f	z(message hash): aa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154	x-coordinate compressed: 02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
+
+
+
+puzzle 115
+priv hex 0000000000000000000000000000000000060f4d11574f5deee49961d9609ac6
+priv dec 31464123230573852164273674364426950
+   page:  524402053842897536071227906073783
+	x hex 48D313B0398D4923CDCA73B8CFA6532B91B96703902FC8B32FD438A3B7CD7F55
+	x dec 32939465712855543687621080654651021859979376333843015892822995152318610898773
+		y hex 66F0742C24F5FF80C799D691D756AD8E5AA7F6D8F986ABD9EEEF45514637C0D4
+		y dec 46560755643746305144975040470607841658328142774650200719470619734417618747604
+
+
+115	r: 988f9aeafa9acd319281e757deffeb3e52160baf1096b73bababd55deb31f3f2	s: 10c209729f42f3b531116c5650df090cbe934bd5a4fc556d60f143227b54c69a	z(message hash): 016cc9c96952b3460a847c7a831cc695ffe9289a41d5ded5aa9cb6ff3ab67f6b	x-coordinate compressed: 0248d313b0398d4923cdca73b8cfa6532b91b96703902fc8b32fd438a3b7cd7f55	private key: 60F4D11574F5DEEE49961D9609AC6	nonce: 9dd8dc8f8073f11e60ac3dd7a371313c847366b5dff74f46c9fac279eb3a2fea

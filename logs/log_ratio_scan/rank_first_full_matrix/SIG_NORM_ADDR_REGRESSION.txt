@@ -1,0 +1,19 @@
+PERMUTATION-TESTED REGRESSION: address continuity vs (a,b)
+Targets: u=addr_y/2^32  and  v=A/2^32=rmd160+u
+Features: a/N, b/N, (a+b)/N mod 1
+No d in features. Held-out R^2 vs feature-permutation null.
+
+[all_rsz] u=addr_y/2^32 ~ (a/N,b/N,(a+b)/N mod1): held_R2=-0.1204  pearson=-0.5741  null_p95=+0.0040  beats_p95=False
+[all_rsz] v=A/2^32=h160+u ~ (a/N,b/N,(a+b)/N mod1): held_R2=-0.0768  pearson=-0.3728  null_p95=+0.0029  beats_p95=False
+[all_rsz] u ~ a/N: R2=-0.0688  null_p95=+0.0038  beats=False
+[all_rsz] u ~ b/N: R2=-0.0558  null_p95=+0.0004  beats=False
+[all_rsz] u ~ (a+b)/N mod 1: R2=-0.0833  null_p95=+0.0113  beats=False
+[solved_only] u=addr_y/2^32 ~ (a/N,b/N,(a+b)/N mod1): held_R2=-0.1215  pearson=-0.4698  null_p95=+0.0091  beats_p95=False
+[solved_only] v=A/2^32=h160+u ~ (a/N,b/N,(a+b)/N mod1): held_R2=-0.0857  pearson=-0.5049  null_p95=+0.0091  beats_p95=False
+[solved_only] u ~ a/N: R2=-0.0627  null_p95=+0.0040  beats=False
+[solved_only] u ~ b/N: R2=-0.0617  null_p95=+0.0079  beats=False
+[solved_only] u ~ (a+b)/N mod 1: R2=-0.0776  null_p95=+0.0109  beats=False
+
+RULING: if held-out R^2 does not beat permutation null, (a,b) do not linearly
+explain address checksum fraction or A/2^32. Signature normalization remains
+valid ECDSA rewrite; address linearity claim stays unproven.

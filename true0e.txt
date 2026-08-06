@@ -1,0 +1,32 @@
+Yes — rerun with:
+
+X
+i
+	​
+
+=Px
+i
+	​
+
+
+for all three.
+
+That’s the real test:
+
+Λrx
+i
+	​
+
+=
+?
+Px
+i
+	​
+
+(modp)
+
+for:
+
+i=1,2,3
+
+If all three pass, then the x-family bridge is real. If only rx3 passes, it’s a single-hit bridge.

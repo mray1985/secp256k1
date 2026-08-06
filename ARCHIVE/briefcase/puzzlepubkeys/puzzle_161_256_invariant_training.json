@@ -1,0 +1,173 @@
+{
+  "n_train": 96,
+  "top_correlations": [
+    {
+      "feature": "py_popcount",
+      "r": -0.2053393811065645,
+      "p_perm": 0.051
+    },
+    {
+      "feature": "py_mod_p_frac",
+      "r": 0.1543213199585743,
+      "p_perm": 0.121
+    },
+    {
+      "feature": "p_minus_py_frac",
+      "r": -0.1543213199585743,
+      "p_perm": 0.121
+    },
+    {
+      "feature": "echo_py_256",
+      "r": 0.1543213199585743,
+      "p_perm": 0.121
+    },
+    {
+      "feature": "hash160_left5",
+      "r": -0.15194662544081425,
+      "p_perm": 0.126
+    },
+    {
+      "feature": "log10_py",
+      "r": 0.1509756485651986,
+      "p_perm": 0.152
+    },
+    {
+      "feature": "px_xor_py_pop",
+      "r": -0.1465455055996171,
+      "p_perm": 0.167
+    },
+    {
+      "feature": "px_py_ratio_log",
+      "r": -0.09337428627157165,
+      "p_perm": 0.364
+    },
+    {
+      "feature": "px_mod9",
+      "r": -0.09231944721846998,
+      "p_perm": 0.343
+    },
+    {
+      "feature": "inv_px_frac",
+      "r": 0.0881909563964606,
+      "p_perm": 0.368
+    },
+    {
+      "feature": "echo_h_256",
+      "r": 0.08263693729133827,
+      "p_perm": 0.439
+    },
+    {
+      "feature": "log10_hash160",
+      "r": 0.06358036577966973,
+      "p_perm": 0.548
+    },
+    {
+      "feature": "py_mod256",
+      "r": -0.05860942107988995,
+      "p_perm": 0.533
+    },
+    {
+      "feature": "carry_pmy_mod9",
+      "r": -0.05218821268333019,
+      "p_perm": 0.619
+    },
+    {
+      "feature": "py_mod9",
+      "r": -0.04815493631230522,
+      "p_perm": 0.638
+    },
+    {
+      "feature": "py_left5",
+      "r": -0.047434433217092946,
+      "p_perm": 0.618
+    },
+    {
+      "feature": "px_popcount",
+      "r": -0.04471703282631711,
+      "p_perm": 0.649
+    },
+    {
+      "feature": "y_sq_frac",
+      "r": 0.042945004740616625,
+      "p_perm": 0.699
+    },
+    {
+      "feature": "px_mod_p_frac",
+      "r": 0.024159353027165844,
+      "p_perm": 0.829
+    },
+    {
+      "feature": "echo_px_256",
+      "r": 0.024159353027165844,
+      "p_perm": 0.829
+    },
+    {
+      "feature": "p_minus_px_frac",
+      "r": -0.024159353027165834,
+      "p_perm": 0.829
+    },
+    {
+      "feature": "px_left5",
+      "r": 0.020080453203950164,
+      "p_perm": 0.848
+    },
+    {
+      "feature": "log10_px",
+      "r": -0.011422946466146605,
+      "p_perm": 0.921
+    },
+    {
+      "feature": "px_mod256",
+      "r": -0.008591192578036429,
+      "p_perm": 0.94
+    },
+    {
+      "feature": "y_parity",
+      "r": 0.003389722312610823,
+      "p_perm": 0.977
+    }
+  ],
+  "artifact_correlations": [
+    {
+      "feature": "echo_h_n",
+      "r": 0.3584384626040829
+    },
+    {
+      "feature": "px_over_band_lo",
+      "r": -0.31481682364892
+    },
+    {
+      "feature": "echo_py_n",
+      "r": 0.3051632743500939
+    },
+    {
+      "feature": "py_over_band_lo",
+      "r": -0.2948514349590945
+    },
+    {
+      "feature": "h_over_band_lo",
+      "r": -0.26752805368949584
+    },
+    {
+      "feature": "echo_px_n",
+      "r": 0.22438808326462906
+    }
+  ],
+  "y_parity_03_count": 45,
+  "r_px_vs_n": 0.024159353027165844,
+  "r2_top5": 0.043634039531298185,
+  "null_r2_median": 0.012415691281546404,
+  "p135_zscores": {
+    "py_popcount": -1.6464765956174512,
+    "py_mod_p_frac": -0.4805262595413688,
+    "p_minus_py_frac": 0.480526259541369,
+    "echo_py_256": -0.4805262595413688,
+    "hash160_left5": -0.2951468402669353,
+    "log10_py": -0.1170598420717207,
+    "px_xor_py_pop": 1.2120635762156755,
+    "px_py_ratio_log": -1.1515159983212986
+  },
+  "ruling": "no_pubkey_only_index_signal",
+  "ruling_scope": "Q-only features vs n on P161-P256; does not falsify scalar/RSZ/TDAD/tx-structure hypotheses",
+  "correlation_doc": "../putting_the_puzzle_together/cursor_chatgpt_correlation.md"
+}

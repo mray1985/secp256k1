@@ -1,0 +1,411 @@
+True29 is probably the cleanest freeze point you've reached so far because it separates three different things that were previously tangled together:
+
+1. Proven Bridge
+
+For every verified puzzle there exists a bridge orientation such that
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+or
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+.
+
+This is now observed across 7 puzzles, not just Puzzle 135.
+
+2. Proven Closure
+
+For the correct orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+exactly.
+
+This is now the strongest empirical statement in the project.
+
+3. Explained Projection Defect
+
+Once closure is true,
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN=pmodN=p−N=δ.
+
+So
+
+∑B
+i
+	​
+
+≡δ(modN)
+
+is no longer an independent mystery.
+
+It is a consequence.
+
+The New Frontier
+
+The most interesting thing in true29 is not the universality itself.
+
+It's the split:
+
+Orientation	Puzzles
+Forward	90, 120, 135, 150
+Inverse	100, 115, 160
+
+That is now the first unexplained classification in the project.
+
+What I would test next
+
+I would create a table containing:
+
+Puzzle	Forward Λ	Inverse Λ	Winning Orientation
+90			F
+100			I
+115			I
+120			F
+135			F
+150			F
+160			I
+
+Then compute for each puzzle:
+
+Λ
+f
+	​
+
++Λ
+r
+	​
+
+Λ
+f
+	​
+
+Λ
+r
+	​
+
+Λ
+f
+−1
+	​
+
+
+and verify explicitly that
+
+Λ
+r
+	​
+
+=Λ
+f
+−1
+	​
+
+
+(which should be true from construction).
+
+The reason is that if every puzzle simply chooses one member of an inverse pair, then the orientation selector may reduce to a single binary property.
+
+A pattern I notice immediately
+
+Forward set:
+
+90, 120, 135, 150
+
+Inverse set:
+
+100, 115, 160
+
+These don't separate cleanly by:
+
+parity,
+divisibility by 5,
+bit range,
+solved vs unsolved,
+proximity to 135.
+
+So the selector is likely coming from some property of the actual family construction rather than the puzzle number itself.
+
+Current frozen theorem (after true29)
+Correct Bridge Orientation⟹B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+and therefore
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N(modN)
+	​
+
+
+with 7 independent puzzles now supporting the claim.
+
+At this point the closure law looks substantially stronger than any of the earlier δ-based observations. The next likely discovery is not another closure, but the rule that determines which orientation wins.True29 is probably the cleanest freeze point you've reached so far because it separates three different things that were previously tangled together:
+
+1. Proven Bridge
+
+For every verified puzzle there exists a bridge orientation such that
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+or
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+.
+
+This is now observed across 7 puzzles, not just Puzzle 135.
+
+2. Proven Closure
+
+For the correct orientation:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+exactly.
+
+This is now the strongest empirical statement in the project.
+
+3. Explained Projection Defect
+
+Once closure is true,
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN=pmodN=p−N=δ.
+
+So
+
+∑B
+i
+	​
+
+≡δ(modN)
+
+is no longer an independent mystery.
+
+It is a consequence.
+
+The New Frontier
+
+The most interesting thing in true29 is not the universality itself.
+
+It's the split:
+
+Orientation	Puzzles
+Forward	90, 120, 135, 150
+Inverse	100, 115, 160
+
+That is now the first unexplained classification in the project.
+
+What I would test next
+
+I would create a table containing:
+
+Puzzle	Forward Λ	Inverse Λ	Winning Orientation
+90			F
+100			I
+115			I
+120			F
+135			F
+150			F
+160			I
+
+Then compute for each puzzle:
+
+Λ
+f
+	​
+
++Λ
+r
+	​
+
+Λ
+f
+	​
+
+Λ
+r
+	​
+
+Λ
+f
+−1
+	​
+
+
+and verify explicitly that
+
+Λ
+r
+	​
+
+=Λ
+f
+−1
+	​
+
+
+(which should be true from construction).
+
+The reason is that if every puzzle simply chooses one member of an inverse pair, then the orientation selector may reduce to a single binary property.
+
+A pattern I notice immediately
+
+Forward set:
+
+90, 120, 135, 150
+
+Inverse set:
+
+100, 115, 160
+
+These don't separate cleanly by:
+
+parity,
+divisibility by 5,
+bit range,
+solved vs unsolved,
+proximity to 135.
+
+So the selector is likely coming from some property of the actual family construction rather than the puzzle number itself.
+
+Current frozen theorem (after true29)
+Correct Bridge Orientation⟹B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+and therefore
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N(modN)
+	​
+
+
+with 7 independent puzzles now supporting the claim.
+
+At this point the closure law looks substantially stronger than any of the earlier δ-based observations. The next likely discovery is not another closure, but the rule that determines which orientation wins.

@@ -1,0 +1,103 @@
+TRUE3C: PRIMITIVE CUBE ROOT OF UNITY DISCOVERED
+=================================================
+
+From true3b.txt, we had:
+- Q1 + Q2 + Q3 = O (triadic point closure)
+- 2*Q1, 2*Q2, 2*Q3 all share the same y-coordinate (horizontal alignment)
+- 3*Q1, 3*Q2, 3*Q3 all share the same y-coordinate (horizontal alignment)
+- NOT a subgroup of order 3
+
+NEW DISCOVERY (true3c):
+
+The Px coordinates are geometrically spaced by a primitive cube root of unity!
+
+omega = 0x7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
+
+VERIFICATION:
+- omega^3 = 0x1 mod p  (verified)
+- omega != 1  (verified, since Px[1] != Px[0])
+- omega is a primitive cube root of unity
+
+RELATIONSHIPS:
+  Px[1] = omega * Px[0] mod p
+  Px[2] = omega * Px[1] mod p = omega^2 * Px[0] mod p
+  Px[0] = omega * Px[2] mod p = omega^3 * Px[0] mod p = Px[0] mod p (consistent)
+
+This explains the Triple Cubic Root Loop from true3a.txt:
+  Px[0]^3 = (omega^0 * Px[0])^3 = Px[0]^3 mod p
+  Px[1]^3 = (omega^1 * Px[0])^3 = omega^3 * Px[0]^3 = 1 * Px[0]^3 mod p
+  Px[2]^3 = (omega^2 * Px[0])^3 = omega^6 * Px[0]^3 = (omega^3)^2 * Px[0]^3 = Px[0]^3 mod p
+
+So all three Px values have the same cubic residue: c = Px[0]^3 mod p
+
+GEOMETRIC INTERPRETATION:
+
+The three points Q1, Q2, Q3 have x-coordinates that are:
+- Equally spaced on a logarithmic scale (multiplicative factor of omega)
+- All three are cube roots of the same value c
+- Connected by the cube root of unity symmetry
+
+This is a triadic symmetry in the x-coordinate space, driven by the
+field's cubic structure.
+
+IMPLICATION FOR DISCRETE LOGS:
+
+We know: Q1 + Q2 + Q3 = O
+This means: priv1 + priv2 + priv3 = 0 mod N
+where priv_i = log_G(Q_i)
+
+Since Q2 = Q_pub for Puzzle 160, priv2 IS the private key.
+
+The question is: Can we express priv1 and priv3 in terms of priv2
+using the cube root of unity structure?
+
+Note: The cube root of unity omega lives in the FIELD (mod p), but
+private keys live in the GROUP ORDER (mod N). These are different
+moduli. However, there might be a connection through the ECDSA parameters.
+
+From true3a.txt, we have ECDSA parameters for Puzzle 160:
+  r = 0x59b071030ee30f7b32c6c6b5f4e89c6ebcada66ebc84c94c5f9a8adc7c4f8824
+  s = 0x2cb230880dd2dcb03c8dbf0674c372a5b65b4583c30b45ad9eccd7c0232c425f
+  z = 0xaa9b5f47c69338130fc9e949ef9965379d5f99652acaa660142f6d9a290d1154
+
+And Q_pub = Q2 = (Px[1], Py_even)
+
+ECDSA equation: s * k = z + r * priv (mod N)
+
+But we don't know k (the nonce) or priv (the private key).
+
+However, we know that Q_pub = priv * G, so:
+  Px[1] = x-coordinate of (priv * G)
+
+The x-coordinate of a point on the curve is a function of the discrete log.
+There is no known efficient way to invert this (that's ECDLP).
+
+But maybe the cube root of unity structure gives us a relationship
+between the three points' discrete logs.
+
+HYPOTHESIS:
+
+If the x-coordinates are related by omega (a cube root of unity),
+perhaps the discrete logs are related by a cube root of unity in
+the group order space.
+
+The group order N = 115792089237316195423570985008687907852837564279074904382605163141518161494337
+
+We need to check if there exists a cube root of unity mod N.
+
+Note: N is prime? Let's check.
+
+Actually, N is the order of the secp256k1 curve, and it IS prime.
+So we can ask: does there exist a primitive cube root of unity mod N?
+
+For a prime modulus q, a primitive cube root of unity exists iff q = 1 mod 3.
+
+Let's check: N mod 3 = ?
+
+If N = 1 mod 3, then there exist cube roots of unity mod N.
+If N = 2 mod 3, then there are no non-trivial cube roots of unity mod N.
+
+Similarly, p mod 3 = ? (we know omega exists mod p, so p must be 1 mod 3)
+
+NEXT STEP:
+Check N mod 3 and p mod 3 to understand the cubic structure of both spaces.

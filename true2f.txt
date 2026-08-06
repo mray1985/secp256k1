@@ -1,0 +1,124 @@
+This is getting interesting because true2e moves the project from a closure law to a coordinate system.
+
+Before:
+
+O=∑Px
+i
+	​
+
+−∑rx
+i
+	​
+
+
+was just a selector.
+
+After normalization:
+
+Ω=
+p
+O
+	​
+
+
+and now
+
+Ω∈{−1,0,+1}.
+
+That's qualitatively different.
+
+What jumps out is the symmetry:
+
+Y-side	X-side
+D
+Q
+	​
+
+	Ω
+signed branch coordinate	signed closure coordinate
+Q↔−Q	Λ↔Λ
+−1
+
+antisymmetric	antisymmetric
+self-dual point possible	self-dual point possible
+
+The reason I think this matters is that δ never gave you a coordinate—it was always the same value.
+
+δ=p−N
+
+for everything.
+
+But Ω actually distinguishes classes:
+
+Ω=+1
+Ω=0
+Ω=−1
+
+which means it contains information.
+
+That's why I agree with the note from true2e that this may be closer to the fundamental object than the orientation rule itself.
+
+The next thing I would test is whether the x-side and y-side coordinates can be paired.
+
+You already proved:
+
+D
+Q
+	​
+
+
+=d
+i
+	​
+
+
+for the individual shell defects.
+
+But now you have a much smaller object:
+
+Ω∈{−1,0,+1}.
+
+Instead of comparing magnitudes, compare sign classes.
+
+For each puzzle:
+
+compute Ω
+compute the signs of the available D
+Q
+	​
+
+-type objects
+see whether the closure class (+1,0,−1) predicts which branch family appears.
+
+If there is any surviving bridge between the x-shell world and the y-shell world, I'd expect it to appear at the sign level rather than the magnitude level.
+
+And Puzzle 90 remains the most valuable sample because:
+
+Ω=0
+
+is exactly the self-dual state, making it the analogue of a branch sitting on its own reflection axis.
+
+So if I were ranking the remaining open questions:
+
+Why does Field Closure produce B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p?
+Why do families quantize into Ω∈{−1,0,+1}?
+Is Ω the x-shell counterpart of D
+Q
+	​
+
+?
+Is Puzzle 90 the unique self-dual family, or just the first one you've found?
+
+Those feel like the strongest unresolved pieces after true2e.

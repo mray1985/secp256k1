@@ -1,0 +1,197 @@
+{
+  "candidate_id": "P71-S-20260710-03",
+  "status": "native_pass",
+  "native_gpu_evaluated": true,
+  "promotion_gate": {
+    "native_eq_python_eq_known": true,
+    "python_self_checks": true,
+    "R_reproducible": null,
+    "scanner_ready": true,
+    "launch_depends_on": "measured GPU R or proved |S| cut"
+  },
+  "band_inclusive": {
+    "min": 1180591620717411303424,
+    "max": 2361183241434822606847
+  },
+  "path": "HASH160(compressed SEC([d]G)); Base58 only after hit",
+  "correctness": [
+    {
+      "check": "solved_n1",
+      "status": "PASS",
+      "python_d": 1,
+      "native_d": 1,
+      "notes": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH"
+    },
+    {
+      "check": "solved_n5",
+      "status": "PASS",
+      "python_d": 21,
+      "native_d": 21,
+      "notes": "1E6NuFjCi27W5zoXg8TRdcSRq84zJeBW3k"
+    },
+    {
+      "check": "solved_n10",
+      "status": "PASS",
+      "python_d": 514,
+      "native_d": 514,
+      "notes": "1LeBZP5QCwwgXRtmVUvTVrraqPUokyLHqe"
+    },
+    {
+      "check": "solved_n20",
+      "status": "PASS",
+      "python_d": 863317,
+      "native_d": 863317,
+      "notes": "1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum"
+    },
+    {
+      "check": "solved_n30",
+      "status": "PASS",
+      "python_d": 1033162084,
+      "native_d": 1033162084,
+      "notes": "1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps"
+    },
+    {
+      "check": "solved_n40",
+      "status": "PASS",
+      "python_d": 1003651412950,
+      "native_d": 1003651412950,
+      "notes": "1EeAxcprB2PpCnr34VfZdFrkUWuxyiNEFv"
+    },
+    {
+      "check": "solved_n50",
+      "status": "PASS",
+      "python_d": 611140496167764,
+      "native_d": 611140496167764,
+      "notes": "1MEzite4ReNuWaL5Ds17ePKt2dCxWEofwk"
+    },
+    {
+      "check": "solved_n65",
+      "status": "PASS",
+      "python_d": 30568377312064202855,
+      "native_d": 30568377312064202855,
+      "notes": "18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe"
+    },
+    {
+      "check": "solved_n70",
+      "status": "PASS",
+      "python_d": 970436974005023690481,
+      "native_d": 970436974005023690481,
+      "notes": "19YZECXj3SxEZMoUeJ1yiPsw8xANe7M7QR"
+    },
+    {
+      "check": "boundary_band_lo",
+      "status": "PASS",
+      "python_d": 1180591620717411303424,
+      "native_d": 1180591620717411303424,
+      "notes": "0e137b1e6bb72c5c..."
+    },
+    {
+      "check": "boundary_band_lo_plus_1",
+      "status": "PASS",
+      "python_d": 1180591620717411303425,
+      "native_d": 1180591620717411303425,
+      "notes": "455b36ce7ea25bd6..."
+    },
+    {
+      "check": "boundary_band_hi",
+      "status": "PASS",
+      "python_d": 2361183241434822606847,
+      "native_d": 2361183241434822606847,
+      "notes": "8ed13061aa5c37e2..."
+    },
+    {
+      "check": "boundary_band_hi_minus_1",
+      "status": "PASS",
+      "python_d": 2361183241434822606846,
+      "native_d": 2361183241434822606846,
+      "notes": "9b1468aea2ea0c6b..."
+    },
+    {
+      "check": "inclusive_endpoints",
+      "status": "PASS",
+      "python_d": 1180591620717411303424,
+      "native_d": 2361183241434822606847,
+      "notes": "[1180591620717411303424, 2361183241434822606847]"
+    },
+    {
+      "check": "partitions_8",
+      "status": "PASS",
+      "python_d": null,
+      "native_d": null,
+      "notes": "n_parts=8 covered=True"
+    },
+    {
+      "check": "p71_target_identity",
+      "status": "PASS",
+      "python_d": null,
+      "native_d": null,
+      "notes": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU"
+    },
+    {
+      "check": "checkpoint_resume",
+      "status": "PASS",
+      "python_d": 269921,
+      "native_d": 269921,
+      "notes": "phase1_hit=None"
+    }
+  ],
+  "throughput": null,
+  "feasibility_from_sustained_R": null,
+  "external": null,
+  "native_calibration": {
+    "status": "PASS",
+    "puzzle": 1,
+    "expect_d": 1,
+    "expect_match": true,
+    "verified_hits": [
+      {
+        "d": 1,
+        "d_hex": "1",
+        "in_range": true,
+        "h160": "751e76e8199196d454941c45d1b3a323f1433bd6",
+        "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+        "accepted": true,
+        "reason": "hash160_match"
+      }
+    ],
+    "rejected_hits": [],
+    "R_peak": null,
+    "R_sustained": null,
+    "command": [
+      "C:\\tools\\BitCrack\\bin\\clBitCrack.exe",
+      "-c",
+      "--keyspace",
+      "1:20",
+      "-o",
+      "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\native_calib\\found_n1.txt",
+      "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH"
+    ],
+    "output": "C:\\Users\\mitch\\Desktop\\secp256k1\\logs\\p71_s03\\native_calib\\s03_calib_n1.json",
+    "device_notes": "OpenCL BitCrack \u2014 EXPERIMENTAL per upstream docs",
+    "s03_calibration_gate": {
+      "expected_seen": true,
+      "expected_verified": true,
+      "inside_requested_range": true,
+      "hash160_match": true,
+      "all_reported_hits_verified": true,
+      "calibration_range": {
+        "start": 1,
+        "end": 32,
+        "inclusive": true
+      },
+      "allow_outside_p71_band": true,
+      "throughput_timeout_is_failure": false,
+      "known_hit_timeout_is_failure": true
+    }
+  },
+  "pool_figures_not_local": {
+    "current_Bkeys_s": 45.9,
+    "high_Tkeys_s": 1160
+  },
+  "frozen_zero_bit_lanes": [
+    "shelf2",
+    "GAP",
+    "barcode",
+    "creator-pattern"
+  ]
+}

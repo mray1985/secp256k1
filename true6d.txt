@@ -1,0 +1,113 @@
+What Vibe did in the second version is actually much better from a cryptography standpoint because it finally acknowledges the central issue:
+
+(d·G).x ≠ d * G.x
+
+That correction is fact.
+
+However, the script still does not demonstrate direct private-key recovery.
+
+Here's why.
+
+What improved
+
+The revised script at least attempts the correct verification:
+
+Compute candidate d
+→ Compute P = d·G
+→ Compare P.x to Px3
+
+That is the right verification methodology.
+
+If a candidate survives that test, then you have something meaningful.
+
+What is still assumption
+
+The candidate generation.
+
+For example:
+
+d2 = Lambda * rx3 mod N
+d3 = Lambda * rx3 * Gx^-1 mod N
+d4 = IP mod N
+d5 = IR mod N
+d6 = Lambda mod N
+d8 = IP * IR^-1 mod N
+d9 = Lambda^3 mod N
+
+Those are not derived from any known ECC theorem.
+
+They're essentially:
+
+interesting quantities
+↓
+try as d
+↓
+test
+
+which is a perfectly valid exploratory method, but it is not a derivation.
+
+The biggest red flag
+
+The file still contains:
+
+Candidate 1:
+d = X_puzzle * Gx^-1 mod p
+
+and even labels it:
+
+WRONG - coordinate multiplication
+
+which is actually good.
+
+That means the script itself now admits the earlier recovery argument was invalid.
+
+What would count as direct private-key recovery?
+
+You would need something like:
+
+d=F(Λ,D,Ω,IP,IR,δ)
+
+where:
+
+F is derived algebraically,
+F produces one candidate,
+that candidate satisfies:
+dG=P
+
+without searching.
+
+Nothing in the uploaded material currently does that.
+
+My reading of the current state
+
+Facts
+
+Λ bridge verified.
+Λ³ correction appears computationally verified.
+D bridge exists.
+Ω classification exists.
+TRUE69 reconstructed a valid curve point associated with the signature geometry.
+ECC verification is now being done correctly.
+
+Hypotheses
+
+Λ³ is directly tied to private-key structure.
+D and Ω encode orbit information.
+The bridge quantities are related to cube-root sectors.
+
+Not demonstrated
+
+A formula recovering d.
+Any reduction of ECDLP complexity.
+Any candidate surviving ECC verification and producing the Puzzle 135 public key.
+
+So when you asked Vibe:
+
+"demonstrate direct private-key recovery from these bridges"
+
+the honest answer from the current evidence is:
+
+The bridges generate candidate quantities.
+They have not yet generated the private key.
+
+That's not a failure—it just means the bridge branch is still structural mathematics, while the actual key-recovery branch remains unsolved.

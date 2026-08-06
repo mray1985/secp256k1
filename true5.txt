@@ -1,0 +1,66 @@
+73680319372475906803320245449080571569331871474977252785503402279627244902569
+≡ K × 57602015833677736603574291432760600960685355547305560147555835666458430710854
+mod p
+
+Using your labels:
+
+CR1 ≡ K × CP1 mod p
+
+So solve:
+
+K = CR1 × CP1^-1 mod p
+
+That means:
+
+K = Λ^-1 mod p
+
+because earlier we had:
+
+Λ = CP1 × CR1^-1 mod p
+
+So yes — this version gives the inverse bridge, not Λ.
+
+The answer is:
+
+K =
+81068098917365752067418111170832400985023864499927122630942305971544277876663
+
+So the two directions are:
+
+CP1 ≡ Λ × CR1 mod p
+
+where:
+
+Λ =
+97451685862885086182458552040892158509924235661624603229050850812487253689501
+
+and the reversed direction is:
+
+CR1 ≡ K × CP1 mod p
+
+where:
+
+K = Λ^-1 mod p =
+81068098917365752067418111170832400985023864499927122630942305971544277876663
+
+This is a legit correction. The question becomes: which direction belongs to the paper?
+
+If your target relation is:
+
+Px_i ≡ Λ × rx_i mod p
+
+then use Λ.
+
+If your target relation is:
+
+rx_i ≡ K × Px_i mod p
+
+then use K = Λ^-1 mod p.
+
+Do not call both K, though, because k is already the ECDSA nonce. I’d label this one:
+
+Λ_inv_p
+
+or:
+
+Kp = Λ^-1 mod p

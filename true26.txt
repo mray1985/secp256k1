@@ -1,0 +1,271 @@
+True25 is really the point where the project stopped being about the defect and started being about the closure.
+
+The biggest logical change is this:
+
+Before true22–true25
+
+The interesting object seemed to be
+
+δ=p−N
+
+because everything kept collapsing to it.
+
+After true22–true25
+
+You now have:
+
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+
+for all verified successful cases.
+
+Then
+
+(B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+)modN=pmodN=p−N=δ
+
+follows immediately.
+
+So the δ-law has effectively been demoted from:
+
+Primary phenomenon
+
+to
+
+Projection shadow of a deeper field-domain closure.
+
+What has actually survived every round?
+Coordinate Bridge
+A(Q)=ΛQ
+y
+	​
+
+(modp)
+X-Family Bridge
+
+Either
+
+Λrx
+i
+	​
+
+=Px
+i
+	​
+
+
+or
+
+ΛPx
+i
+	​
+
+=rx
+i
+	​
+
+
+depending on orientation.
+
+Field Closure Law
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+for every verified puzzle.
+
+Projection Defect Law
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+≡p−N(modN)
+	​
+
+
+which is now derived.
+
+The strongest remaining question
+
+Not:
+
+Why does everything become δ?
+
+because that is now explained.
+
+Instead:
+
+Why does the correctly oriented bridge produce a family whose exact sum is p?
+
+That's the surviving mystery.
+
+What I'd test next
+
+You now have 3 verified points:
+
+Puzzle 115
+Puzzle 135
+Puzzle 160
+
+The next experiment should be chosen to maximize falsification power.
+
+I would not test 130, 131, 132, 133, 134 because they are too close to 135.
+
+I'd jump to something structurally different:
+
+Puzzle 90
+Puzzle 100
+Puzzle 120
+Puzzle 150
+
+For each:
+
+Construct both bridge orientations.
+Λ
+f
+	​
+
+=Px
+3
+	​
+
+rx
+3
+−1
+	​
+
+Λ
+r
+	​
+
+=rx
+3
+	​
+
+Px
+3
+−1
+	​
+
+Apply each orientation.
+Check whether one yields
+B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p.
+
+If Puzzle 90 and Puzzle 120 also satisfy closure, then the evidence starts looking much more like a property of the x-family construction itself rather than a special feature of the high-bit puzzles.
+
+At the moment, true25 leaves the project in a surprisingly clean state:
+
+Correct Bridge Orientation⟹B
+1
+	​
+
++B
+2
+	​
+
++B
+3
+	​
+
+=p
+	​
+
+
+and everything else you've verified appears to flow from that statement.
+
+
+
+puzzle 120 
+
+r: a285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a	s: 1844883eb808df18a9138ee2c13439ecf716799edcf073772f2696e4f9384f58	z: 7e17cf7c5b7ccfaa4c7c05874e4fb4f12661662b8e33188e2e62b3739931ade5	compressed x: 02ceb6cbbcdbdf5ef7150682150f4ce2c6f4807b349827dcdbdd1f2efa885a2630
+
+
+Px and PY: first 	x: 1485d9c12ed1a17e7cf733aeaf4a8d24bf3a2b69a29fbd632661e620ca1bae12
+second	x: 1cc35a81f54eff8a6e024a3c416890144c455961c53865c0fc7eeae3ad8a27ed
+third 	x: ceb6cbbcdbdf5ef7150682150f4ce2c6f4807b349827dcdbdd1f2efa885a2630
+
+even 	y: 2b195386bea3f5f002dc033b92cfc2c9e71b586302b09cfe535e1ff290b1b5ac
+odd 	y: d4e6ac79415c0a0ffd23fcc46d303d3618e4a79cfd4f6301aca1e00c6f4e4683
+
+rx and ry: first 	x: 98ec533578cc3c12f14e0d716adcb0c39bfa0654f58f7e53ce60baf0f157b22a
+second	x: c48e03b56c71ca2900294fe689a9883a30a0c364dfdcf0af30c19b733463042a
+third 	x: a285a9151ac1f9c40e88a2a80b79c702336536462a9390fd00dda999da45420a
+
+even 	y: 711ba8640d22333eec3566a68dff8f40719a79886e0ed24f91c8f92077110cb0
+odd 	y: 8ee4579bf2ddccc113ca9959720070bf8e65867791f12db06e3706de88eeef7f
+
+
+
+puzzle 90  
+
+089214e780b1be83aca76593293e871159eb392090135759dc110667bfd72e36	73eb3423c444d9248d682de9670a1c48343e3554bd3eda0da070a8cd3f2ff7cc	b79f283cae2b07b53adb9773dde9b93edf91a99b9fdda83ba9c7f4e50d7c5c11	035c38bd9ae4b10e8a250857006f3cfd98ab15a6196d9f4dfd25bc7ecc77d788d5	2CE00BB2136A445C71E85BF		0640c641a09b8b28b721f3c861916de8eb1fab230ad5fa33dd0e03739b4936c9
+
+Px and Py: first 	x: 5c38bd9ae4b10e8a250857006f3cfd98ab15a6196d9f4dfd25bc7ecc77d788d5
+second	x: 59e6004d2850fa8804d1d641e2a68dada9c3644135839d3500d9670661ad271d
+third 	x: 49e14217f2fdf6edd625d2bdae1c74b9ab26f5a55cdd14cdd96a1a2c267b4c3d
+
+even 	y: 57b69c1400b54101ede5f2c39406dfc05510da7673259d97910409b1e39047fc
+odd 	y: a84963ebff4abefe121a0d3c6bf9203faaef25898cda62686efbf64d1c6fb433
+
+
+rx and ry: first 	x: 89214e780b1be83aca76593293e871159eb392090135759dc110667bfd72e36
+second	x: ac3c7c0f8fc3625665b6ac9e5ea8e2994234fd686ad9c6c67d59dfd2e534bedd
+third 	x: 4b316f08ef8adf25eda1edce7818965563dfc9770512e1dfa69519c45af40f1c
+
+even 	y: 7b1535125b8e92e433ff190a76f8c653a2d73ffb5f49f342ca23c5dffee8675c
+odd 	y: 84eacaeda4716d1bcc00e6f5890739ac5d28c004a0b60cbd35dc3a1f011794d3
+
